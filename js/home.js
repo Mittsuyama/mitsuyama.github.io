@@ -26,7 +26,7 @@ window.onload = function() {
 
     function waterfall() {
         var pageWidth = document.getElementsByClassName("text_container")[0].offsetWidth;
-        var gap = 10;
+        var gap = 20;
         var columns = parseInt(pageWidth / (itermWidth + gap));
         var arr = [];
         for(var i = 0; i < iterms.length; i++) {

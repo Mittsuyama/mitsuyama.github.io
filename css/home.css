@@ -61,7 +61,7 @@ div.home_background {
 
 div.text_container {
     position: relative;
-    left: 13%;
+    left: 12%;
     width: 80%;
 }
 
@@ -71,8 +71,8 @@ button.box {
     border-radius: 5px;
     width: 274px;
     background-color: white;
-    transition-duration: 0.4s;
-    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.2s;
+    -webkit-transition-duration: 0.2s;
     padding : 0px;
 }
 
