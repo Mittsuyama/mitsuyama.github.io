@@ -59,18 +59,17 @@ div.home_background {
     background-color: #fafafa;
 }
 
-button.article_block {
-    float: left;
+button.box {
+    position: absolute;
     border: 0;
     border-radius: 10px;
-    margin: 10px;
-    width: 18%;
+    width: 274px;
     background-color: white;
     transition-duration: 0.4s;
     -webkit-transition-duration: 0.4s;
 }
 
-button.article_block:hover {
+button.box:hover {
     box-shadow: 0 6px 8px 0 rgba(0,0,0,0.24), 0 8px 25px 0 rgba(0,0,0,0.19);
 }
 
