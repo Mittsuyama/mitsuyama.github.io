@@ -89,6 +89,43 @@ img.boxUpImg {
     position: relative;
 }
 
+div.briefIntro {
+    position: relative;
+    width: 100%;
+    height: 67px;
+    padding: 7px;
+}
+
+p.briefIntroContext {
+    position: absolute;
+    font-size: 15px;
+    width: 94%;
+    color: gray;
+    margin: 0px;
+    text-align: left;
+}
+
+div.sawNumBox {
+    position: relative;
+    width: 100%;
+    height: 30px;
+    color: gray;
+}
+
+img.eyeImg {
+    position: absolute;
+    width: 7%;
+    top: 4px;
+    left: 6px;
+}
+
+p.sawNum {
+    position: absolute;
+    left: 29px;
+    top: 0px;
+    margin: 0px;
+}
+
 div.boxDown {
     position: relative;
     width: 100%;

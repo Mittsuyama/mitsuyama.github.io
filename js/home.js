@@ -12,7 +12,7 @@ window.onload = function() {
         }
         else {
             var randHeight = Math.floor(Math.random() * 100) + 350;
-            iterms[i].style.height = randHeight + "px";    
+            iterms[i].style.height = randHeight + "px";
         }
     }
  
@@ -22,11 +22,11 @@ window.onload = function() {
         boxUp[i].style.height = iterms[i].offsetHeight - boxDownHeight - boxInterHeight + "px";
     }
 
-    waterfull();
+    waterfall();
 
-    function waterfull() {
+    function waterfall() {
         var pageWidth = document.getElementsByClassName("text_container")[0].offsetWidth;
-        var gap = 15;
+        var gap = 10;
         var columns = parseInt(pageWidth / (itermWidth + gap));
         var arr = [];
         for(var i = 0; i < iterms.length; i++) {
@@ -52,6 +52,6 @@ window.onload = function() {
     }
 
     window.onresize = function() {
-        waterfull();
+        waterfall();
     };
 };
