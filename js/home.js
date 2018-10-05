@@ -28,5 +28,8 @@ window.onload = function() {
                 arr[index] = arr[index] + iterms[i].offsetHeight + gap;
             }
         }
+        window.onresize = function() {
+            waterFall();
+        };
     }
 }
