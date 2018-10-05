@@ -68,7 +68,7 @@ div.text_container {
 button.box {
     position: absolute;
     border: 0;
-    border-radius: 5px;
+    border-radius: 7px;
     width: 274px;
     background-color: white;
     transition-duration: 0.2s;
@@ -87,6 +87,8 @@ div.boxUp {
 
 img.boxUpImg {
     position: relative;
+    width: 100%;
+    border-radius: 7px 7px 0px 0px;
 }
 
 div.briefIntro {
@@ -142,28 +144,28 @@ div.boxInter {
 div.inf1 {
     position: relative;
     width: 100%;
-    height: 50px;
+    height: 60px;
 }
 
 div.inf2 {
     position: relative;
     width: 100%;
-    height: 50px;
+    height: 40px;
 }
 
 p.infoText {
     position: absolute;
-    font-size: 20px;
+    text-align: left;
+    font-size: 18px;
     color: black;
-    left: 10px;
-    top: 10px;
+    padding: 10px;
     margin: 0px;
 }
 
 p.tagText {
     position: absolute;
     font-size: 13px;
-    left: 10px;
+    left: 13px;
     top: 5px;
     color: gray;
 }

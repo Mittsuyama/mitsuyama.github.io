@@ -7,7 +7,6 @@ window.onload = function() {
     for(var i = 0; i < iterms.length; i++) {
         var boxImg = boxUp[i].getElementsByClassName("boxUpImg");
         if(boxImg.length > 0) {
-            boxImg[0].style.width = "100%";
             iterms[i].style.height = boxImg[0].offsetHeight + 200 + "px";
         }
         else {
@@ -26,7 +25,7 @@ window.onload = function() {
 
     function waterfall() {
         var pageWidth = document.getElementsByClassName("text_container")[0].offsetWidth;
-        var gap = 20;
+        var gap = 19;
         var columns = parseInt(pageWidth / (itermWidth + gap));
         var arr = [];
         for(var i = 0; i < iterms.length; i++) {
