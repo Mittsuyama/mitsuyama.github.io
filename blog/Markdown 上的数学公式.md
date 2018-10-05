@@ -1,0 +1,65 @@
+# Markdown 上的数学公式
+
+Tag: `数学`
+
+---
+
+[TOC]
+
+---
+
+[如果想知道一些符号的书写这里却没有，点这里！！！][1]
+
+使用 `$****$` 来书写数学公式
+
+##基本的表达方式
+
+- 上标 ： `e^{x}` $e^{x}$
+- 下标： `a_{1}` $a_{1}$
+- 分数： `\frac{1}{x}` $\frac{1}{x}$
+- 换行： `\\`
+- 括号的自动调整：`\left( ... \right)`
+  - 例如，`(\frac{\sqrt x}{y^3})` $(\frac{\sqrt x}{y^3})$ 括号看起来很奇怪，`\left(\frac{\sqrt x}{y^3}\right)` $\left(\frac{\sqrt x}{y^3}\right)$
+  - 其他的括号也使用，例如：$\vert$, $\Vert$, $\langle$, $\rangle$ ... 更多括号请跳转 **符号 : 括号**
+
+剩余的大部分表达方式都是用这些拼出来的
+
+##常用符号
+
+>不常用符号见博客顶部
+
+###括号
+
+- 圆括号，绝对值，中括号键盘上有
+- 花括号：`\{` $\{$
+- 双竖线：`Vert` $\Vert$
+- 不同于键盘上的尖括号：`\langle x \rangle` $\langle x \rangle$ 
+- 向上取整：`\lceil x \rceil` $\lceil x \rceil$
+- 向下取整：`\lfloor x \rfloor` $\lfloor x \rfloor$
+
+###几个常用括号
+
+- 大小关系：`\lt \gt \le \ge \neq` $\lt \; \gt \; \le \; \ge \; \neq$
+- 四则运算：`\times \div \pm \mp \cdot` $\times \; \div \; \pm \; \mp \; \cdot$
+
+###其他
+
+- 求和：`\sum_{0}^{\infty}a_{i}^{2}` $\sum_{0}^{\infty}a_{i}^{2}$
+- 求积：`\prod` $\prod$
+- 积分：`\int` $\int$ `\iint` $\iint$
+- 交并：`\bigcup` $\bigcup$ `\bigcap` $\bigcap$
+
+##形式
+
+###字体
+
+- 空心：`\mathbb` $\mathbb{ABCDEFGHIJKLMNOPQRSTUVWXYZas}$
+- 特技加粗：`\mathbf` $\mathbf{ABCDEFGHIJKLMNOPQRSTUVWXYZ}$
+- 老式打字机：`\mathtt` $\mathtt{ABCDEFGHIJKLMNOPQRSTUVWXYZ}$
+- 罗马文字：`\mathrm` $\mathrm{ABCDEFGHIJKLMNOPQRSTUVWXYZ}$
+- 无衬线：`\mathsf` $\mathsf{ABCDEFGHIJKLMNOPQRSTUVWXYZ}$
+- 书法：`\mathcal` $\mathcal{ABCDEFGHIJKLMNOPQRSTUVWXYZ}$
+- 花体：`\mathscr` $\mathscr{ABCDEFGHIJKLMNOPQRSTUVWXYZ}$
+- 老式德国字体：`\mathfrak` $\mathfrak{ABCDEFGHIJKLMNOPQRSTUVWXYZ}$
+
+  [1]: http://detexify.kirelabs.org/classify.html
