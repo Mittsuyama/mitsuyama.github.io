@@ -315,7 +315,7 @@ class makeHTML:
                 </a>        
             </div>
             <div class = "navigation_content2">
-                <a href = "../about.html" style = "color: #999999">
+                <a href = "blog/about.html" style = "color: #999999">
                 <div class = "nav_text">
                     About
                 </div>
