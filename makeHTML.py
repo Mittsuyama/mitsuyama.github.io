@@ -129,7 +129,7 @@ class makeHTML:
         <link rel = "icon" href = "../img/favicon.ico" mce_href = "../img/favicon.ico" type = "image/x-icon">
         <link rel = "shortcut icon" href = "../img/favicon.ico" mce_href = "../img/favicon.ico" type = "image/x-icon">
 
-        <title>Mitsuyama | %s</title>
+        <title>MITSUYAMA | %s</title>
     </head>
     
     <body>
@@ -254,8 +254,8 @@ class makeHTML:
             </div>
 
         <div class = "feet">
-            <div class = "copyrigt">Mitsuyama © 2018</div>
-            <div class = "callme">Email mitsuyama@163.com</div>
+            <div class = "copyrigt">MITSUYAMA © 2018</div>
+            <div class = "callme">Email MITSUYAMA@163.com</div>
         </div>
 
         </div>
@@ -296,13 +296,13 @@ class makeHTML:
         <link rel = "icon" href = "img/favicon.ico" mce_href = "img/favicon.ico" type = "image/x-icon">
         <link rel = "shortcut icon" href = "img/favicon.ico" mce_href = "img/favicon.ico" type = "image/x-icon">
 
-        <title>Mitsuyama | SITE</title>
+        <title>MITSUYAMA | SITE</title>
     </head>
     
     <body>
         <div clas = "container-fluid" id = "homeBackground">
             <div class = "homeTitle">
-                Mitsuyama | SITE
+                MITSUYAMA | SITE
             </div>
         </div>
 
@@ -370,8 +370,8 @@ class makeHTML:
         </div>
 
         <div class = "feet">
-            <div class = "copyrigt">Mitsuyama © 2018</div>
-            <div class = "callme">Email mitsuyama@163.com</div>
+            <div class = "copyrigt">MITSUYAMA © 2018</div>
+            <div class = "callme">Email MITSUYAMA@163.com</div>
         </div>
 
         <!-- Optional JavaScript -->
