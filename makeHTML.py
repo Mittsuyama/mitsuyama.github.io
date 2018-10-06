@@ -104,9 +104,9 @@ class makeHTML:
 
     def pHtml(self, order):
         if not os.path.exists('blog/' + str(order) + '.md'):
-            self.blogInfo[0] = '未找到文件 ' + str(order) + '\n'
+            self.blogInfo[0] = '未找到第  ' + str(order) + ' 个可爱的文件\n'
             self.blogInfo[1] = 'Article\n'
-            self.blogInfo[2] = '简介\n'
+            self.blogInfo[2] = '也没有找到简介在哪\n'
             self.blogInfo[3] = '1999 / 5 / 11\n'
             return
 
