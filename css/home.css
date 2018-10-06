@@ -29,28 +29,55 @@ div.nevigation {
 div.nevigation_content1 {
     position: absolute;
     left: 100px;
-    top: 10px;
     width: 200px;
+    height: 50px;
     color: #999999;
 }
 
 div.navigation_content2 {
     position: absolute;
     right: 100px;
-    top: 10px;
     width: 600px;
+    height: 50px;
     color: #999999;
 }
 
+div.nav_text_home {
+    float: left;
+    font-family: "Arial";
+    border-radius: 5px;
+    border: 2px solid white;
+    font-size: 23px;
+    height: 50px;
+    padding-top: 8px;
+    width: 100px;
+    text-align: center;
+    transition-duration: 0.2s;
+    -webkit-transition-duration: 0.2s;
+}
+
+
 div.nav_text {
     float: left;
-    margin-right: 0px;
     font-family: "Arial";
-    left: 0px;
-    font-size: 20px;
-    width: 150px;
-    height: 30px;
+    border-radius: 5px;
+    border: 2px solid white;
+    font-size: 23px;
+    height: 50px;
+    padding-top: 8px;
+    width: 100px;
+    margin-right: 50px;
     text-align: center;
+    transition-duration: 0.2s;
+    -webkit-transition-duration: 0.2s;
+}
+
+div.nav_text:hover {
+    border: 2px solid #f0f0f0;
+}
+
+div.nav_text_home:hover {
+    border: 2px solid #f0f0f0;
 }
 
 div.home_background {
@@ -95,14 +122,14 @@ img.boxUpImg {
 div.briefIntro {
     position: relative;
     width: 100%;
-    height: 67px;
-    padding: 7px;
+    height: 77px;
+    padding: 8px 10px 0px 10px;
 }
 
 p.briefIntroContext {
     opacity: 1;
     position: absolute;
-    font-size: 13px;
+    font-size: 14px;
     width: 94%;
     color: gray;
     margin: 0px;
@@ -113,22 +140,22 @@ div.sawNumBox {
     opacity: 1;
     position: relative;
     width: 100%;
-    height: 30px;
+    height: 20px;
     color: gray;
 }
 
 img.eyeImg {
     position: absolute;
-    width: 7%;
-    top: 4px;
+    width: 6%;
+    top: 3.5px;
     left: 6px;
 }
 
 p.sawNum {
     position: absolute;
     left: 29px;
-    top: 0px;
-    margin: 0px;
+    margin-bottom: 0px;
+    margin-top: -1.5px;
 }
 
 div.boxDown {
@@ -162,6 +189,8 @@ p.infoText {
     position: absolute;
     text-align: left;
     font-size: 18px;
+    font-family: "等线";
+    src: url('../fonts/Deng.ttf');
     color: black;
     padding: 10px 10px 10px 12px;
     margin: 0px;
