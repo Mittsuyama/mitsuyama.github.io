@@ -35,7 +35,7 @@ function mouseOutButton(obj) {
     }
 }*/
 
-window.onload = function() {
+function pageLoading() {
     for(var i = 0; i < iterms.length; i++) {
         var boxImg = boxUp[i].getElementsByClassName("boxUpImg");
         if(boxImg.length > 0) {
@@ -100,4 +100,17 @@ window.onload = function() {
     window.onresize = function() {
         waterfall();
     };
-};
+}
+
+$(document).ready(function(){
+    $("#homeBackground").hide();
+    $(".nevigation").hide();
+    $(".home_background").hide();
+    $(window).load(function(){
+        $("#homeBackground").fadeIn();
+        $(".nevigation").fadeIn();
+        $(".home_background").fadeIn();
+        $(".loading").fadeOut();
+        pageLoading();
+    });
+});

@@ -23,7 +23,7 @@ div.nevigation {
     width: 100%;
     height: 50px;
     background-color: white;
-    z-index: 9999;
+    z-index: 9998;
 }
 
 div.nevigation_content1 {
@@ -82,7 +82,6 @@ div.nav_text_home:hover {
 
 div.home_background {
     width: 100%;
-    height: 5000px;
     background-color: #f4f4f4;
 }
 
