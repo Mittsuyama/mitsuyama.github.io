@@ -24,7 +24,7 @@ class makeHTML:
             line = self.mdFile.readline()
             if not line:
                 break
-            self.Paragraph.append(line)
+            self.Paragraph.append(line.replace('<', '&lt;').replace('>', '&gt;'))
         
         for i in range(0, 4):
             self.blogInfo.append(self.Paragraph[i])
@@ -55,7 +55,7 @@ class makeHTML:
         while i < mLen:
             ch = myStr[i]
             if ch == ' ':
-                newS += '&nbsp&nbsp'
+                newS += '&nbsp'
             elif ch == '*':
                 if i + 1 < mLen and myStr[i + 1] == '*':
                     if not isStrong:
@@ -129,6 +129,10 @@ class makeHTML:
         <link rel = "icon" href = "../img/favicon.ico" mce_href = "../img/favicon.ico" type = "image/x-icon">
         <link rel = "shortcut icon" href = "../img/favicon.ico" mce_href = "../img/favicon.ico" type = "image/x-icon">
 
+        <link href="http://cdn.bootcss.com/highlight.js/8.0/styles/github.min.css" rel="stylesheet">  
+        <script src="http://cdn.bootcss.com/highlight.js/8.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+
         <title>MITSUYAMA | %s</title>
     </head>
     
@@ -177,38 +181,63 @@ class makeHTML:
         ''' % (self.blogInfo[0], order, self.blogInfo[0], self.blogInfo[1]))
 
         pLen = len(self.Paragraph)
-        for i in range(5, pLen):
+        i = 5
+        while i < pLen:
             line = self.Paragraph[i]
-            if len(line) > 5 and line[:5] == '#####':
+            lLen = len(line)
+            if lLen > 3 and line[:3] == '```':
+                if(lLen > 4):
+                    outFIle.write('''                <pre><code class = "%s">''' % (line[3 : -1]) + '\n')
+                else:
+                    outFIle.write('''                <pre><code class = "nohighlight">''' + '\n')
+                while True:
+                    i += 1
+                    if len(self.Paragraph[i]) > 3 and self.Paragraph[i][:3] == '```':
+                        break
+                    outFIle.write(self.Paragraph[i])
+                outFIle.write('''                </code></pre>''' + '\n')
+                i += 1
+            elif lLen > 2 and line[:2] == '$$':
+                #outFIle.write('''                <pre class = "codeBlock">''' + '\n')
+                outFIle.write('$$\n')
+                while True:
+                    i += 1
+                    if len(self.Paragraph[i]) > 2 and self.Paragraph[i][:2] == '$$':
+                        break
+                    outFIle.write(self.Paragraph[i])
+                outFIle.write('$$\n')
+                #outFIle.write('''                </pre>''' + '\n')
+                i += 1
+            elif lLen > 5 and line[:5] == '#####':
                 outFIle.write('''                <div class = "h5">''' + line[5 : -1] + '''</div>''' + '\n')
-                if i + 1 < pLen and self.Paragraph[i + 1] == '\n':
+                if i + 1 < lLen and self.Paragraph[i + 1] == '\n':
                     i += 1
-            elif len(line) > 4 and line[:4] == '####':
+            elif lLen > 4 and line[:4] == '####':
                 outFIle.write('''                <div class = "h4">''' + line[4 : -1] + '''</div>''' + '\n')
-                if i + 1 < pLen and self.Paragraph[i + 1] == '\n':
+                if i + 1 < lLen and self.Paragraph[i + 1] == '\n':
                     i += 1
-            elif len(line) > 3 and line[:3] == '###':
+            elif lLen > 3 and line[:3] == '###':
                 outFIle.write('''                <div class = "h3">''' + line[3 : -1] + '''</div>''' + '\n')
-                if i + 1 < pLen and self.Paragraph[i + 1] == '\n':
+                if i + 1 < lLen and self.Paragraph[i + 1] == '\n':
                     i += 1
-            elif len(line) > 2 and line[:2] == '##':
+            elif lLen > 2 and line[:2] == '##':
                 outFIle.write('''                <div class = "h2">''' + line[2 : -1] + '''</div>''' + '\n')
-                if i + 1 < pLen and self.Paragraph[i + 1] == '\n':
+                if i + 1 < lLen and self.Paragraph[i + 1] == '\n':
                     i += 1
-            elif len(line) > 1 and line[:1] == '#':
+            elif lLen > 1 and line[:1] == '#':
                 pass
                 #outFIle.write('''                <div class = "h1">''' + line[1 : -1] + '''</div>''' + '\n')
-                if i + 1 < pLen and self.Paragraph[i + 1] == '\n':
+                if i + 1 < lLen and self.Paragraph[i + 1] == '\n':
                     i += 1
-            elif len(line) > 1 and line[:1] == '>':
+            elif lLen > 1 and line[:1] == '>':
                 outFIle.write('''                <div class = "quote">''' + line[1 : -1] + '''</div>''' + '\n')
-                if i + 1 < pLen and self.Paragraph[i + 1] == '\n':
+                if i + 1 < lLen and self.Paragraph[i + 1] == '\n':
                     i += 1
-            elif len(line) > 3 and line[:3] == 'Tag':
-                if i + 1 < pLen and self.Paragraph[i + 1] == '\n':
+            elif lLen > 3 and line[:3] == 'Tag':
+                if i + 1 < lLen and self.Paragraph[i + 1] == '\n':
                     i += 1
-            elif len(line) > 5 and line[:5] == '[TOC]':
-                if i + 1 < pLen and self.Paragraph[i + 1] == '\n':
+            elif lLen > 5 and line[:5] == '[TOC]':
+                if i + 1 < lLen and self.Paragraph[i + 1] == '\n':
                     i += 1
             elif line[0] == '[' and line[-2] == ')':
                 context = ''
@@ -249,6 +278,7 @@ class makeHTML:
             else:
                 outFIle.write('                ' + self.getInform(line[:-1]) + '\n')
                 outFIle.write('''                <br>''' + '\n')
+            i += 1
             
         outFIle.write('''
             </div>
@@ -268,12 +298,16 @@ class makeHTML:
         <script src = "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity = "sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin = "anonymous"></script>
         <script src = "https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity = "sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin = "anonymous"></script>
         <script src = "../js/blog.js"></script>
-        <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
         <script type="text/x-mathjax-config">
             MathJax.Hub.Config({
-                tex2jax: {inlineMath: [['$','$']]}
-                });
-            </script>
+                tex2jax: {
+                    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+                    inlineMath: [['$','$']],
+                    processEscapes: true
+                }
+            });
+        </script>
     </body>
 </html>''')
 
