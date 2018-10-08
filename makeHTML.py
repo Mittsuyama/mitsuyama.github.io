@@ -15,11 +15,17 @@ class makeHTML:
         self.blogInfo = []
         self.Paragraph = []
         self.mdFile = open('blog/' + str(order) + '.md')
+        filePoint = 0
         while True:
             line = self.mdFile.readline()
             if not line:
                 break
-            self.Paragraph.append(line.replace('<', '&lt;').replace('>', '&gt;'))
+            filePoint += 1
+            if filePoint > 4:
+                self.Paragraph.append(line.replace('<', '&lt;').replace('>', '&gt;'))
+            else:
+                 self.Paragraph.append(line)
+        
         self.Paragraph[-1] += ' '
         
         for i in range(0, 4):
