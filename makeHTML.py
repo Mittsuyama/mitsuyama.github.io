@@ -6,15 +6,21 @@ class makeHTML:
     blogInfo = []
     Paragraph = []
     indexFile = None
-    num = 11
+    fileName = []
+    num = 0
 
     def __init__(self):
-        pass
+        path = 'md/'  #待读取的文件夹
+        path_list = os.listdir(path)
+        path_list.sort() #对读取的路径进行排序
+        for theName in path_list:
+        	self.fileName.append(os.path.join(path,theName))
+        self.num = len(path_list)
     
     def getTitle(self, order):
         self.blogInfo = []
         self.Paragraph = []
-        self.mdFile = open('blog/' + str(order) + '.md')
+        self.mdFile = open(self.fileName[order])
         filePoint = 0
         while True:
             line = self.mdFile.readline()
@@ -22,7 +28,7 @@ class makeHTML:
                 break
             filePoint += 1
             if filePoint > 4:
-                self.Paragraph.append(line.replace('<', '&lt;').replace('>', '&gt;'))
+                self.Paragraph.append(line)
             else:
                  self.Paragraph.append(line)
         
@@ -108,13 +114,6 @@ class makeHTML:
             
 
     def pHtml(self, order):
-        if not os.path.exists('blog/' + str(order) + '.md'):
-            self.blogInfo[0] = '并没有找到你的第 ' + str(order) + ' 个可爱的文件 ヾ(◍°∇°◍)ﾉﾞ\n'
-            self.blogInfo[1] = 'Article\n'
-            self.blogInfo[2] = '也没有找到简介在哪\n'
-            self.blogInfo[3] = '1989 / 6 / 4\n'
-            return
-
         self.getTitle(order)
         outFIle = open('blog/' + str(order) + '.html', 'w')
         outFIle.write('''
@@ -191,7 +190,7 @@ class makeHTML:
             lLen = len(line)
             if lLen > 3 and line[:3] == '```':
                 if(lLen > 4):
-                    outFIle.write('''                <pre><code class = "%s">''' % (line[3 : -1]) + '\n')
+                    outFIle.write('''                <pre><code class = "%s">''' % (line[3 : -1]).replace('<', '&lt;').replace('>', '&gt;') + '\n')
                 else:
                     outFIle.write('''                <pre><code class = "nohighlight">''' + '\n')
                 while True:
@@ -292,7 +291,7 @@ class makeHTML:
 
             <div class = "feet">
                 <div class = "copyrigt">MITSUYAMA © 2018</div>
-                <div class = "callme">Email MITSUYAMA@163.com</div>
+                <div class = "callme">Email MITSUYAMA@163.COM</div>
             </div>
 
         </div>
@@ -389,7 +388,7 @@ class makeHTML:
         <div class = "home_background">
             <div class = "text_container">
 ''')
-        for i in range(1, self.num + 1):
+        for i in range(0, self.num):
             self.pHtml(i)
             self.indexFile.write('''
                 <a href = "blog/%d.html">
@@ -423,7 +422,7 @@ class makeHTML:
 
         <div class = "feet">
             <div class = "copyrigt">MITSUYAMA © 2018</div>
-            <div class = "callme">Email MITSUYAMA@163.com</div>
+            <div class = "callme">Email MITSUYAMA@163.COM</div>
         </div>
 
         <!-- Optional JavaScript -->

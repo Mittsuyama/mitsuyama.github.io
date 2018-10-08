@@ -1,0 +1,206 @@
+
+<!doctype html>
+<html lang = "en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset = "utf-8">
+        <meta name = "viewport" content = "width = device-width, initial-scale = 1, shrink-to-fit = no">
+
+        <!-- Bootstrap CSS -->
+        <link rel = "stylesheet" href = "https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity = "sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin = "anonymous">
+        <link rel = "stylesheet" href = "../css/home.css">
+        <link rel = "stylesheet" href = "../css/blog.css">
+
+        <link rel = "icon" href = "../img/favicon.ico" mce_href = "../img/favicon.ico" type = "image/x-icon">
+        <link rel = "shortcut icon" href = "../img/favicon.ico" mce_href = "../img/favicon.ico" type = "image/x-icon">
+
+        <link href="http://cdn.bootcss.com/highlight.js/8.0/styles/github.min.css" rel="stylesheet">  
+        <script src="http://cdn.bootcss.com/highlight.js/8.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+
+        <title>MITSUYAMA | 离散数学笔记
+</title>
+    </head>
+    
+    <body>
+        <div class = "container-fluid" id = "blogBackground">
+            <img src = "../img/4.jpg" class = "blogTitleImg">
+            <div class = "glass"></div>
+            <div class = "blogTitle">
+                离散数学笔记
+
+            </div>
+            <div class = "tagContainer">
+                Tag：Mathematics
+
+            </div>
+        </div>
+
+        <div class = "nevigation">
+            <div class = "nevigation_content1">
+                <a href = "http://mitsuyama.top" style = "color: #999999">
+                <div class = "nav_text_home">
+                    HOME
+                </div>
+                </a>            
+            </div>
+            <div class = "navigation_content2">
+                <a href = "about.html" style = "color: #999999">
+                <div class = "nav_text">
+                    About
+                </div>
+                </a>
+                <div class = "nav_text">
+                    Blog
+                </div>
+                <a href = "https://github.com/Mittsuyama" style = "color: #999999">
+                <div class = "nav_text">
+                    GitHub
+                </div>
+                </a>
+                <div class = "nav_text">
+                    Search
+                </div>
+            </div>
+        </div>
+
+        <div class = "blogMainBlock">
+            <div class = "articleContext">
+                        <br>
+                <br>
+                <span class = "normal">集合基础：略</span>
+                <br>
+                <br>
+                <div class = "h2"> 映射</div>
+                <br>
+                <span class = "normal">$f$：为一个法则，$x&nbsp\to&nbspy$，对于一个确定的&nbsp$x$，只有唯一的一个&nbsp$y$&nbsp与之对应</span>
+                <br>
+                <br>
+                <span class = "normal">$y$&nbsp为&nbsp$x$&nbsp的象，$x$&nbsp为原象，记为：$f&nbsp:&nbspx&nbsp\to&nbspy​$</span>
+                <br>
+                <br>
+                <span class = "normal">值域记为&nbsp$Im(f)$</span>
+                <br>
+                <br>
+                <span class = "normal">◇&nbsp&nbsp限制和扩散：$A&nbsp\subsetneq&nbspY$，得到：</span>
+                <br>
+                <span class = "normal">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp◇&nbsp&nbsp$\phi&nbsp:&nbspA&nbsp\to&nbspY，\forall&nbspx&nbsp\in&nbspA，\phi(x)&nbsp=&nbspf(x)，\phi$&nbsp称为在&nbsp$f$&nbsp在&nbsp$A$&nbsp上的限制，常用&nbsp$f_{|A}$&nbsp来代替&nbsp$\phi$，$f$&nbsp是&nbsp$\phi$&nbsp在&nbsp$X$&nbsp上的扩散</span>
+                <br>
+                <span class = "normal">◇&nbsp&nbsp部分映射：$f:&nbspA&nbsp\to&nbspY$</span>
+                <br>
+                <span class = "normal">◇&nbsp&nbsp相等映射：$\forall&nbspx&nbsp\in&nbspX,&nbsp\;&nbspf&nbsp=&nbspg&nbsp\iff&nbspf(x)&nbsp=&nbspg(x)$</span>
+                <br>
+                <span class = "normal">◇&nbsp&nbsp单射：$\forall&nbspx_1,&nbspx_2&nbsp\in&nbspX$，只要&nbsp$x_1&nbsp\neq&nbspx_2$，&nbsp就有&nbsp$f_(x_{1})&nbsp\neq&nbspf_(x_{2})$</span>
+                <br>
+                <span class = "normal">◇&nbsp&nbsp满射：$\forall&nbspy&nbsp\in&nbspY,&nbsp\exists&nbspx&nbsp\in&nbsp&nbspX$,&nbsp使得&nbsp$y&nbsp=&nbspf(x)$</span>
+                <br>
+                <span class = "normal">◇&nbsp&nbsp双射：既是单射又是满射</span>
+                <br>
+                <span class = "normal">◇&nbsp&nbsp恒等映射：$f:&nbspX&nbsp\to&nbspX$，对&nbsp$\forall&nbspx&nbsp\in&nbspX,&nbspf(x)&nbsp=&nbspx$,&nbsp$f$&nbsp为&nbsp$x$&nbsp上的恒等映射，记&nbsp$I_x$</span>
+                <br>
+                <br>
+                <br>
+                <br>
+                <span class = "normal">例1：$S:&nbspN&nbsp\to&nbspN$,&nbsp$\forall&nbspn&nbsp\in&nbspN$,&nbsp$s(n)&nbsp=&nbspn&nbsp+&nbsp1$,&nbsp$s$&nbsp称为&nbsp$N$&nbsp上的后继函数，是单射，不是满射。</span>
+                <br>
+                <br>
+                <hr>
+                <br>
+                <span class = "normal">例2：正偶数集&nbsp$E$,&nbsp$e:&nbspE&nbsp\to&nbspN$,&nbsp$e(2m)&nbsp=&nbspm$,&nbsp$e$&nbsp为双射，但&nbsp$e:&nbspN&nbsp\to&nbspN&nbsp$&nbsp是部分映射。</span>
+                <br>
+                <br>
+                <hr>
+                <br>
+                <span class = "normal">例3：设&nbsp$X$&nbsp为整数的一个有限集合，定义集合&nbsp$X&nbsp-&nbspX&nbsp=&nbsp\{x_1&nbsp-&nbspx&nbsp_2&nbsp|&nbspx_1,&nbspx_2&nbsp\in&nbspX\}$。试证明：若&nbsp$A,&nbspB&nbsp\subset&nbsp&nbsp\{1,&nbsp2,&nbsp\ldots,&nbspn&nbsp\}$&nbsp并且&nbsp$|A|&nbsp\cdot&nbsp|B|&nbsp\ge&nbsp2n&nbsp-&nbsp1,&nbspn&nbsp>&nbsp1$，则&nbsp$(A&nbsp-&nbspA)&nbsp\cap&nbsp(B&nbsp-&nbspB)$&nbsp中有一个正整数。</span>
+                <br>
+                <br>
+                <span class = "normal">证明概要：</span>
+                <br>
+                <br>
+                <span class = "normal">◇&nbsp&nbsp做一个映射</span>
+                <br>
+                <span class = "normal">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp◇&nbsp&nbsp$f:&nbspA&nbsp\times&nbspB&nbsp\to&nbsp\{2,&nbsp3,&nbsp\ldots,&nbsp2n\}$，对&nbsp$\forall&nbsp(a,&nbspb)&nbsp\in&nbspA&nbsp\times&nbspB$，令&nbsp$f(a,&nbspb)&nbsp=&nbspa&nbsp+&nbspb$</span>
+                <br>
+                <span class = "normal">◇&nbsp&nbsp对&nbsp$f$&nbsp是满射证明结论成立。</span>
+                <br>
+                <span class = "normal">◇&nbsp&nbsp对&nbsp$f$&nbsp是单射证明结论成立。</span>
+                <br>
+                <br>
+                <div class = "h3"> 抽屉原理</div>
+                <br>
+                <span class = "normal">原理：$f:&nbspX&nbsp\to&nbspY$,&nbsp$|X|&nbsp=&nbsp|Y|&nbsp+&nbsp1$,&nbsp$\exists&nbspy&nbsp\in&nbspY$,&nbsp$y$&nbsp的原象集至少有&nbsp$2$&nbsp个元素。</span>
+                <br>
+                <br>
+                <br>
+                <br>
+                <span class = "normal">例1：从&nbsp$1,&nbsp\ldots,&nbsp2n$&nbsp中取&nbsp$n&nbsp+&nbsp1$&nbsp个数，这&nbsp$n&nbsp+&nbsp1$&nbsp个数中必有两个数，使得其中一个能整除另一个。</span>
+                <br>
+                <br>
+                <span class = "normal">证明：</span>
+                <br>
+                <span class = "normal">将数写成&nbsp$2^l&nbsp\cdot&nbspd_i$&nbsp的形式，$2n$&nbsp中最多有&nbsp$n$&nbsp个奇数，由于选&nbsp$n&nbsp+&nbsp1$&nbsp个数，则至少两个数&nbsp$a_i,&nbspa_j$，使得&nbsp$d_i&nbsp=&nbspd_j$</span>
+                <br>
+                <br>
+                <hr>
+                <br>
+                <span class = "normal">例2：任何&nbsp$6$&nbsp个人中，或有&nbsp$3$&nbsp个人相互认识，或者&nbsp$3$&nbsp个人相互不认识。</span>
+                <br>
+                <br>
+                <span class = "normal">证明：</span>
+                <br>
+                <br>
+                <span class = "normal">◇&nbsp&nbsp确定一个人&nbsp$A$，根据与&nbsp$A$&nbsp是否认识分成两组，则必有一组有至少三个人。</span>
+                <br>
+                <span class = "normal">◇&nbsp&nbsp若认识&nbsp$A$&nbsp的有三个人，这三个人互相认识或者不认识都符合&nbsp「$3$&nbsp个人相互认识，或者&nbsp$3$&nbsp个人相互不认识」。</span>
+                <br>
+                <span class = "normal">◇&nbsp&nbsp若不认识&nbsp$A$&nbsp的有三人，同理也符合题意。</span>
+                <br>
+                <br>
+                <hr>
+                <br>
+                <span class = "normal">◇&nbsp&nbsp变形&nbsp1：将&nbsp$n$&nbsp个物品放入&nbsp$n$&nbsp个盒子，且没有空盒子，那么每个盒子恰有一个物体</span>
+                <br>
+                <span class = "normal">◇&nbsp&nbsp变形&nbsp2：将&nbsp$n$&nbsp个物品放入&nbsp$n$&nbsp个盒子，没有一个盒子多于一个物品，那么每个盒子恰有一个物体</span>
+                <br>
+                <br>
+                <br>
+                <br>
+                <span class = "normal">例：证明&nbsp$gcd(a,&nbspp)&nbsp=&nbsp1$，则&nbsp$a^{p&nbsp-&nbsp1}&nbsp\equiv&nbsp1&nbsp\pmod{n}$</span>
+                <br>
+                <br>
+                <span class = "normal">-&nbsp</span>
+                <br>
+                <br>
+
+            </div>
+
+            <div class = "myAffix">
+            </div>
+
+            <div class = "feet">
+                <div class = "copyrigt">MITSUYAMA © 2018</div>
+                <div class = "callme">Email MITSUYAMA@163.COM</div>
+            </div>
+
+        </div>
+
+
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src = "https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity = "sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin = "anonymous"></script>
+        <script src = "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity = "sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin = "anonymous"></script>
+        <script src = "https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity = "sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin = "anonymous"></script>
+        <script src = "../js/blog.js"></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({
+                tex2jax: {
+                    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+                    inlineMath: [['$','$']],
+                    processEscapes: true
+                }
+            });
+        </script>
+    </body>
+</html>
