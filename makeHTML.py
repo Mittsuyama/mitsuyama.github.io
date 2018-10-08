@@ -1,9 +1,4 @@
-from jinja2 import Template
 import codecs
-import markdown
-from bs4 import BeautifulSoup
-import mistletoe
-from mistletoe.latex_renderer import LaTeXRenderer
 import os
 
 class makeHTML:
@@ -25,6 +20,7 @@ class makeHTML:
             if not line:
                 break
             self.Paragraph.append(line.replace('<', '&lt;').replace('>', '&gt;'))
+        self.Paragraph[-1] += ' '
         
         for i in range(0, 4):
             self.blogInfo.append(self.Paragraph[i])
@@ -283,10 +279,13 @@ class makeHTML:
         outFIle.write('''
             </div>
 
-        <div class = "feet">
-            <div class = "copyrigt">MITSUYAMA © 2018</div>
-            <div class = "callme">Email MITSUYAMA@163.com</div>
-        </div>
+            <div class = "myAffix">
+            </div>
+
+            <div class = "feet">
+                <div class = "copyrigt">MITSUYAMA © 2018</div>
+                <div class = "callme">Email MITSUYAMA@163.com</div>
+            </div>
 
         </div>
 
