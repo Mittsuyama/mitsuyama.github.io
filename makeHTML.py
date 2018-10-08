@@ -37,7 +37,7 @@ class makeHTML:
         isItalic = False
         isStrike = False
         isEmphasis = False
-        newS = '''<span class = "normal">'''
+        newS = ''
         mLen = len(myStr)
         i = 0
 
@@ -48,11 +48,13 @@ class makeHTML:
             else:
                 break
 
+        newS += '''<span class = "normal">'''
+
         if mLen > spaceLen + 2 and myStr[spaceLen:spaceLen + 2] == '- ':
-            for j in range(0, spaceLen):
-                newS += '&nbsp&nbsp'
-            newS += ' ♦ '
+            for i in range(0, spaceLen):
+                newS += '&nbsp&nbsp&nbsp'
             i = spaceLen + 2
+            newS += '◇&nbsp&nbsp'
 
         while i < mLen:
             ch = myStr[i]
@@ -100,7 +102,7 @@ class makeHTML:
             else:
                 newS += ch
             i += 1
-        newS += '</span>'
+        newS += '''</span>'''
         return newS
 
             
