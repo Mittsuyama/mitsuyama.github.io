@@ -51,6 +51,7 @@ div.articleContext {
     background-color: white;
     color: #555555;
     font-size: 20px;
+    min-height: 300px;
     word-wrap:break-all;
     text-align: left;
 }
