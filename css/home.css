@@ -44,8 +44,7 @@ div.navigation_content2 {
 div.nav_text_home {
     float: left;
     font-family: "Arial";
-    border-radius: 10px;
-    border: 2px solid white;
+    border: 0px;
     font-size: 23px;
     height: 50px;
     padding-top: 8px;
@@ -59,8 +58,7 @@ div.nav_text_home {
 div.nav_text {
     float: left;
     font-family: "Arial";
-    border-radius: 10px;
-    border: 2px solid white;
+    border: 0px;
     font-size: 23px;
     height: 50px;
     padding-top: 8px;

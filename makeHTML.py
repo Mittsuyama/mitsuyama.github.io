@@ -212,19 +212,19 @@ class makeHTML:
                 #outFIle.write('''                </pre>''' + '\n')
                 i += 1
             elif lLen > 5 and line[:5] == '#####':
-                outFIle.write('''                <div class = "h5">''' + line[5 : -1] + '''</div>''' + '\n')
+                outFIle.write('''                <div class = "h5">''' + line[5 : -1].replace(' ', '&nbsp&nbsp') + '''</div>''' + '\n')
                 if i + 1 < lLen and self.Paragraph[i + 1] == '\n':
                     i += 1
             elif lLen > 4 and line[:4] == '####':
-                outFIle.write('''                <div class = "h4">''' + line[4 : -1] + '''</div>''' + '\n')
+                outFIle.write('''                <div class = "h4">''' + line[4 : -1].replace(' ', '&nbsp&nbsp') + '''</div>''' + '\n')
                 if i + 1 < lLen and self.Paragraph[i + 1] == '\n':
                     i += 1
             elif lLen > 3 and line[:3] == '###':
-                outFIle.write('''                <div class = "h3">''' + line[3 : -1] + '''</div>''' + '\n')
+                outFIle.write('''                <div class = "h3">''' + line[3 : -1].replace(' ', '&nbsp&nbsp') + '''</div>''' + '\n')
                 if i + 1 < lLen and self.Paragraph[i + 1] == '\n':
                     i += 1
             elif lLen > 2 and line[:2] == '##':
-                outFIle.write('''                <div class = "h2">''' + line[2 : -1] + '''</div>''' + '\n')
+                outFIle.write('''                <div class = "h2">''' + line[2 : -1].replace(' ', '&nbsp&nbsp') + '''</div>''' + '\n')
                 if i + 1 < lLen and self.Paragraph[i + 1] == '\n':
                     i += 1
             elif lLen > 1 and line[:1] == '#':
@@ -233,7 +233,7 @@ class makeHTML:
                 if i + 1 < lLen and self.Paragraph[i + 1] == '\n':
                     i += 1
             elif lLen > 1 and line[:1] == '>':
-                outFIle.write('''                <div class = "quote">''' + line[1 : -1] + '''</div>''' + '\n')
+                outFIle.write('''                <div class = "quote">''' + line[1 : -1].replace(' ', '&nbsp&nbsp') + '''</div>''' + '\n')
                 if i + 1 < lLen and self.Paragraph[i + 1] == '\n':
                     i += 1
             elif lLen > 3 and line[:3] == 'Tag':
