@@ -43,9 +43,11 @@ Tag: `数学`
 - 大小关系：`\lt \gt \le \ge \neq`： $\lt \; \gt \; \le \; \ge \; \neq$
   - 可以在前面添加 `\not`：`\not\lt` $\not\lt$，但并不优美
 - 四则运算：`\times \div \pm \mp \cdot`： $\times \; \div \; \pm \; \mp \; \cdot$
-- 集合：`\cup \cap \setminus \subset \subseteq \subsetneq \supset \in \notin \emptyset \varnothing` ： $ \cup \cap \setminus \subset \subseteq \subsetneq \supset \in \notin \emptyset \varnothing $
-
-- 组合数：\binom{n+1}{2k} ：$\binom{n+1}{2k}​$
+- 集合：
+  - `\setminus \subset \subseteq \subsetneq \supset \supseteq` ： $\setminus \subset \subseteq \subsetneq \supset \supseteq$
+  - `\cup \cap` ： $\cup \cap $
+  - `\in \notin \emptyset \varnothing`：$\in \notin \emptyset \varnothing$
+- 组合数：\binom{n+1}{2k} ：$\binom{n+1}{2k}$
 - 和与积分：`\sum` $\sum$，`\prod` $\prod$，`\int` $\int$ `\iint` $\iint$，`\bigcup` $\bigcup$ `\bigcap` $\bigcap$
 - 根号：`\sqrt{x^3}`：$\sqrt{x^3}$
   - `\sqrt[3]{\frac xy}`：$\sqrt[3]{\frac xy}$
