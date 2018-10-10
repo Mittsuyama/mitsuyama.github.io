@@ -173,6 +173,8 @@ $$
 \vdots \\
 (p - 1) \cdot a \equiv b_{p - 1} \pmod{p}
 $$
+                <span class = "normal">假设&nbsp$\exists&nbspi,&nbspj(i&nbsp\neq&nbspj)$，使得&nbsp$b_{i}&nbsp=&nbspb_{j}$，由&nbsp<span class = "emphasis">引理</span>&nbsp&nbsp知，因为&nbsp$b_{i}&nbsp\equiv&nbspb_{j}&nbsp\pmod{p}$&nbsp，$i&nbsp\cdot&nbspa&nbsp\equiv&nbspj&nbsp\cdot&nbspa&nbsp\pmod&nbspp$，所以&nbsp$i&nbsp=&nbspj$，假设矛盾，所以不存在&nbsp$b_{i}&nbsp=&nbspb_{j}$；<br>由抽屉原理，&nbspp&nbsp-&nbsp1&nbsp个&nbsp数，放进&nbspp&nbsp-&nbsp1&nbsp个&nbspb&nbsp中，没有一个数被放了两次，&nbsp则&nbspb&nbsp数组为&nbsp$\{1,&nbsp2,&nbsp\ldots,&nbspp&nbsp-&nbsp1\}$&nbsp的重新排列</span>
+                <br>
                 <br>
                 <span class = "normal">等式左边之积&nbsp=&nbsp等式右边之积<br>$(p&nbsp-&nbsp1)!&nbsp\cdot&nbspa^{p&nbsp-&nbsp1}&nbsp\equiv&nbsp(p&nbsp-&nbsp1)&nbsp\pmod&nbspp$<br>所以：$a^{p&nbsp-&nbsp1}&nbsp\equiv&nbsp1&nbsp\pmod&nbspp$</span>
                 <br>
@@ -254,6 +256,78 @@ $$
 $$
 如果： f(n + 1) > f(f(n))
 $$
+                <br>
+                <span class = "normal">证明概要：</span>
+                <br>
+                <br>
+                <span class = "normal">1.&nbsp如果&nbsp$n&nbsp>&nbspk$，则&nbsp$f(n)&nbsp>&nbspk$；<br>2.&nbsp取&nbsp$k&nbsp=&nbspn&nbsp-&nbsp1$&nbsp即知&nbsp$f(n)&nbsp\le&nbspn$；<br>3.&nbsp$f(n&nbsp+&nbsp1)&nbsp>&nbspf(n)$<br>4.&nbsp由上可知&nbsp$f$&nbsp是严格单调上升<br>5.&nbsp$f(n)&nbsp=&nbspn$</span>
+                <br>
+                <br>
+                <span class = "normal">证明：</span>
+                <br>
+                <br>
+                <span class = "normal">1.</span>
+                <br>
+                <span class = "normal">①当&nbsp$k&nbsp=&nbsp1$&nbsp时，$n&nbsp>&nbsp1$，$n&nbsp\ge&nbsp1$，$n&nbsp-&nbsp1&nbsp\in&nbspN$</span>
+                <br>
+                <span class = "normal">$f(n)&nbsp>&nbspf(f(n&nbsp-&nbsp1))&nbsp\ge&nbsp1$</span>
+                <br>
+                <span class = "normal">$\therefore&nbspn&nbsp>&nbsp1$，$f(n)&nbsp>&nbsp1$</span>
+                <br>
+                <span class = "normal">②假设&nbsp$n&nbsp>&nbspk$，则&nbsp$f(n)&nbsp>&nbspk$</span>
+                <br>
+                <span class = "normal">设&nbsp$n&nbsp>&nbspk&nbsp+&nbsp1$，有&nbsp$n&nbsp-&nbsp1&nbsp>&nbspk$，由归纳假设，$f(n&nbsp-&nbsp1)&nbsp>&nbspk$，</span>
+                <br>
+                <span class = "normal">有，$f(f(n&nbsp-&nbsp1))&nbsp>&nbspk$，$n&nbsp-&nbsp1$&nbsp代入原式，$f(n)&nbsp>&nbspf(f(n&nbsp-&nbsp1))$，从而&nbsp$f(n)&nbsp>&nbspk&nbsp+&nbsp1$</span>
+                <br>
+                <span class = "normal">2.</span>
+                <br>
+                <span class = "normal">$n&nbsp>&nbspn&nbsp-&nbsp1$，$f(n)&nbsp>&nbspn&nbsp-&nbsp1&nbsp\Rightarrow&nbspf(n)&nbsp\ge&nbspn$</span>
+                <br>
+                <span class = "normal">3.</span>
+                <br>
+                <span class = "normal">由&nbsp$f(n)&nbsp\ge&nbspn$&nbsp知，$f(f(n))&nbsp\ge&nbspf(n)$，由&nbsp$f(n&nbsp+1)&nbsp>&nbspf(f(n))$，知&nbsp$f(n&nbsp+1)&nbsp>&nbspf(n)$</span>
+                <br>
+                <span class = "normal">4.</span>
+                <br>
+                <span class = "normal">对&nbsp$\forall&nbspm,&nbspk&nbsp\in&nbspN$，若&nbsp$m&nbsp<&nbspk&nbsp\iff&nbspf(m)&nbsp<&nbspf(k)$</span>
+                <br>
+                <span class = "normal">5.</span>
+                <br>
+                <span class = "normal">由&nbsp$f(n&nbsp+&nbsp1)&nbsp>&nbspf(f(n))$，且&nbsp$f(n)$&nbsp为严格递增函数，知&nbsp$n&nbsp+&nbsp1&nbsp>&nbspf(n)$，从而&nbsp$f(n)&nbsp\le&nbspn$，由于&nbsp$f(n)&nbsp\ge&nbspn$，有&nbsp$f(n)&nbsp=&nbspn$</span>
+                <br>
+                <br>
+                <div class = "h3">&nbsp&nbsp逆映射</div>
+                <br>
+                <span class = "normal">◇&nbsp&nbsp逆映射：$f:&nbspx&nbsp\to&nbspy$，$g:&nbspY&nbsp\to&nbspX$，使&nbsp$g&nbsp\circ&nbspf&nbsp=&nbspI_{x}&nbsp\;&nbsp且&nbsp\;&nbspf&nbsp\circ&nbspg&nbsp=&nbspI_{y}$，则称&nbsp$f$&nbsp是可逆的，&nbsp$g$&nbsp称为&nbsp$f$&nbsp的逆映射</span>
+                <br>
+                <br>
+                <span class = "normal">◇&nbsp&nbsp设&nbsp$f:&nbspx&nbsp\to&nbspy$，如果存在一个映射&nbsp$g:&nbspY&nbsp\to&nbspX$，使&nbsp$g&nbsp\circ&nbspf&nbsp=&nbspI_x$，则称&nbsp$f$&nbsp是左可逆的，且&nbsp$g$&nbsp称为&nbsp$f$&nbsp的左逆映射；如果存在一个映射&nbsp$h:&nbspY&nbsp\to&nbspX$，使&nbsp$f&nbsp\circ&nbsph&nbsp=&nbspI_y$，则称&nbsp$f$&nbsp是右可逆的。</span>
+                <br>
+                <br>
+                <span class = "normal">◇&nbsp&nbsp定理：$f&nbsp:&nbspX&nbsp\to&nbspY$，$f$&nbsp可逆&nbsp$\iff$&nbsp$f$&nbsp是双射<br>证明：<br>$\Rightarrow$&nbsp$g&nbsp\circ&nbspf&nbsp=&nbspI_x$，$I_x$&nbsp是双射，所以&nbsp$f$&nbsp是满射，$f&nbsp\circ&nbspg&nbsp=&nbspI_y$，$I_y$&nbsp是双射，所以&nbsp$f$&nbsp是单射<br>$\Leftarrow$&nbsp构造映射&nbsp$g$，使&nbsp$g&nbsp\circ&nbspf&nbsp=&nbspI_x$，$f&nbsp\circ&nbspg&nbsp=&nbspI_y$</span>
+                <br>
+                <br>
+                <span class = "normal">◇&nbsp&nbsp定理：$f:&nbspX&nbsp\to&nbspY$，如果&nbsp$f$&nbsp可逆，则其逆映射唯一<br>证明；<br>由&nbsp$f&nbsp\circ&nbspg_1&nbsp=&nbspf&nbsp\circ&nbspg_2&nbsp=&nbspI_y$，对&nbsp$\forall&nbspy&nbsp\in&nbspY$，$f&nbsp\circ&nbspg_1(y)&nbsp=&nbspf&nbsp\circ&nbspg_2(y)$，由&nbsp$f$&nbsp是单射知，$g_1(y)&nbsp=&nbspg_2(y)$</span>
+                <br>
+                <br>
+                <span class = "normal">◇&nbsp&nbsp定理：$f:&nbspX&nbsp\to&nbspY$，$g:&nbspY&nbsp\to&nbspX$，$f,&nbspg$&nbsp均可逆，则&nbsp$g&nbsp\circ&nbspf$&nbsp可逆，则：$(g&nbsp\circ&nbspf)^{-1}&nbsp=&nbspg^{-1}&nbsp\circ&nbspy^{-1}$<br>证明：<br>$(g&nbsp\circ&nbspf)^{-1}&nbsp\circ&nbsp(g&nbsp\circ&nbspf)&nbsp=&nbspI_x$，$(f^{-1}&nbsp\circ&nbspg^{-1}&nbsp\circ&nbsp(g&nbsp\circ&nbspf)&nbsp=&nbspI_x)$<br>由逆映射唯一得</span>
+                <br>
+                <br>
+                <span class = "normal">◇&nbsp&nbsp穿脱原则：$(f_1&nbsp\circ&nbspf_2&nbsp\circ&nbsp\ldots&nbspf_n)^{-1}&nbsp=&nbspf_n&nbsp\circ&nbspf_{n&nbsp-&nbsp1}&nbsp\circ&nbsp\ldots&nbsp\circ&nbspf_1$</span>
+                <br>
+                <br>
+                <span class = "normal">◇&nbsp&nbsp定理：$f:&nbspX&nbsp\to&nbspY$，$f$&nbsp可逆，$(f^{-1})^{-1}&nbsp=&nbspf$<br>证明：<br>$f^{-1}&nbsp\circ&nbspf&nbsp=&nbspI_x$，$f^{-1}&nbsp\circ&nbsp(f^{-1})^{-1}&nbsp=&nbspI_x$</span>
+                <br>
+                <br>
+                <span class = "normal">◇&nbsp&nbsp定理：</span>
+                <br>
+                <span class = "normal">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp◇&nbsp&nbsp$f$&nbsp左可逆&nbsp$\iff&nbspf$&nbsp是单射</span>
+                <br>
+                <span class = "normal">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp◇&nbsp&nbsp$f$&nbsp左可逆&nbsp$\iff&nbspf$&nbsp是满射</span>
+                <br>
+                <span class = "normal">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp◇&nbsp&nbsp证明：$\Rightarrow$&nbsp映射合成定理，$\Leftarrow$&nbsp构造&nbsp$g:&nbspIm(f)&nbsp\to&nbspX$&nbsp在&nbsp$Y$&nbsp上的扩展</span>
+                <br>
 
             </div>
 
