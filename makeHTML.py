@@ -7,6 +7,9 @@ class makeHTML:
     Paragraph = []
     indexFile = None
     fileName = []
+    homeTemp = []
+    homeBttonTemp = []
+    blogTemp = []
     num = 0
 
     def __init__(self):
@@ -16,7 +19,10 @@ class makeHTML:
         for theName in path_list:
         	self.fileName.append(os.path.join(path,theName))
         self.num = len(path_list)
-    
+        self.homeTemp = open('templates/index.html').read()
+        self.blogTemp = open('templates/blog.html').read()
+        self.homeBttonTemp = open('templates/homeButton.html').read()
+
     def getTitle(self, order):
         self.blogInfo = []
         self.Paragraph = []
@@ -116,72 +122,11 @@ class makeHTML:
     def pHtml(self, order):
         self.getTitle(order)
         outFIle = open('blog/' + str(order) + '.html', 'w')
-        outFIle.write('''
-<!doctype html>
-<html lang = "en">
-    <head>
-        <!-- Required meta tags -->
-        <meta charset = "utf-8">
-        <meta name = "viewport" content = "width = device-width, initial-scale = 1, shrink-to-fit = no">
-
-        <!-- Bootstrap CSS -->
-        <link rel = "stylesheet" href = "https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity = "sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin = "anonymous">
-        <link rel = "stylesheet" href = "../css/home.css">
-        <link rel = "stylesheet" href = "../css/blog.css">
-
-        <link rel = "icon" href = "../img/favicon.ico" mce_href = "../img/favicon.ico" type = "image/x-icon">
-        <link rel = "shortcut icon" href = "../img/favicon.ico" mce_href = "../img/favicon.ico" type = "image/x-icon">
-
-        <link href="http://cdn.bootcss.com/highlight.js/8.0/styles/github.min.css" rel="stylesheet">  
-        <script src="http://cdn.bootcss.com/highlight.js/8.0/highlight.min.js"></script>
-        <script>hljs.initHighlightingOnLoad();</script>
-
-        <title>MITSUYAMA | %s</title>
-    </head>
-    
-    <body>
-        <div class = "container-fluid" id = "blogBackground">
-            <img src = "../img/%d.jpg" class = "blogTitleImg">
-            <div class = "glass"></div>
-            <div class = "blogTitle">
-                %s
-            </div>
-            <div class = "tagContainer">
-                Tag：%s
-            </div>
-        </div>
-
-        <div class = "nevigation">
-            <div class = "nevigation_content1">
-                <a href = "http://mitsuyama.top" style = "color: #999999">
-                <div class = "nav_text_home">
-                    HOME
-                </div>
-                </a>            
-            </div>
-            <div class = "navigation_content2">
-                <a href = "about.html" style = "color: #999999">
-                <div class = "nav_text">
-                    About
-                </div>
-                </a>
-                <div class = "nav_text">
-                    Blog
-                </div>
-                <a href = "https://github.com/Mittsuyama" style = "color: #999999">
-                <div class = "nav_text">
-                    GitHub
-                </div>
-                </a>
-                <div class = "nav_text">
-                    Search
-                </div>
-            </div>
-        </div>
-
-        <div class = "blogMainBlock">
-            <div class = "articleContext">
-        ''' % (self.blogInfo[0], order, self.blogInfo[0], self.blogInfo[1]))
+        blogHtml = self.blogTemp
+        blogHtml = blogHtml.replace('((siteTitle))', self.blogInfo[0])
+        blogHtml = blogHtml.replace('((Title))', self.blogInfo[0])
+        blogHtml = blogHtml.replace('((Tag))', self.blogInfo[1])
+        blogContent = ''
 
         pLen = len(self.Paragraph)
         i = 5
@@ -190,41 +135,41 @@ class makeHTML:
             lLen = len(line)
             if lLen > 3 and line[:3] == '```':
                 if(lLen > 4):
-                    outFIle.write('''                <pre><code class = "%s">''' % (line[3 : -1]).replace('<', '&lt;').replace('>', '&gt;') + '\n')
+                    blogContent += '''                <pre><code class = "%s">''' % (line[3 : -1]).replace('<', '&lt;').replace('>', '&gt;') + '\n'
                 else:
-                    outFIle.write('''                <pre><code class = "nohighlight">''' + '\n')
+                    blogContent += '''                <pre><code class = "nohighlight">''' + '\n'
                 while True:
                     i += 1
                     if len(self.Paragraph[i]) > 3 and self.Paragraph[i][:3] == '```':
                         break
-                    outFIle.write(self.Paragraph[i])
-                outFIle.write('''                </code></pre>''' + '\n')
+                    blogContent += self.Paragraph[i]
+                blogContent += '''                </code></pre>''' + '\n'
                 i += 1
             elif lLen > 2 and line[:2] == '$$':
                 #outFIle.write('''                <pre class = "codeBlock">''' + '\n')
-                outFIle.write('$$\n')
+                blogContent += '$$\n'
                 while True:
                     i += 1
                     if len(self.Paragraph[i]) > 2 and self.Paragraph[i][:2] == '$$':
                         break
-                    outFIle.write(self.Paragraph[i])
-                outFIle.write('$$\n')
+                    blogContent += self.Paragraph[i]
+                blogContent += '$$\n'
                 #outFIle.write('''                </pre>''' + '\n')
                 i += 1
             elif lLen > 5 and line[:5] == '#####':
-                outFIle.write('''                <div class = "h5">''' + line[5 : -1].replace(' ', '&nbsp&nbsp') + '''</div>''' + '\n')
+                blogContent += '''                <div class = "h5">''' + line[5 : -1].replace(' ', '&nbsp&nbsp') + '''</div>''' + '\n'
                 if i + 1 < lLen and self.Paragraph[i + 1] == '\n':
                     i += 1
             elif lLen > 4 and line[:4] == '####':
-                outFIle.write('''                <div class = "h4">''' + line[4 : -1].replace(' ', '&nbsp&nbsp') + '''</div>''' + '\n')
+                blogContent += '''                <div class = "h4">''' + line[4 : -1].replace(' ', '&nbsp&nbsp') + '''</div>''' + '\n'
                 if i + 1 < lLen and self.Paragraph[i + 1] == '\n':
                     i += 1
             elif lLen > 3 and line[:3] == '###':
-                outFIle.write('''                <div class = "h3">''' + line[3 : -1].replace(' ', '&nbsp&nbsp') + '''</div>''' + '\n')
+                blogContent += '''                <div class = "h3">''' + line[3 : -1].replace(' ', '&nbsp&nbsp') + '''</div>''' + '\n'
                 if i + 1 < lLen and self.Paragraph[i + 1] == '\n':
                     i += 1
             elif lLen > 2 and line[:2] == '##':
-                outFIle.write('''                <div class = "h2">''' + line[2 : -1].replace(' ', '&nbsp&nbsp') + '''</div>''' + '\n')
+                blogContent += '''                <div class = "h2">''' + line[2 : -1].replace(' ', '&nbsp&nbsp') + '''</div>''' + '\n'
                 if i + 1 < lLen and self.Paragraph[i + 1] == '\n':
                     i += 1
             elif lLen > 1 and line[:1] == '#':
@@ -233,7 +178,7 @@ class makeHTML:
                 if i + 1 < lLen and self.Paragraph[i + 1] == '\n':
                     i += 1
             elif lLen > 1 and line[:1] == '>':
-                outFIle.write('''                <div class = "quote">''' + line[1 : -1].replace(' ', '&nbsp&nbsp') + '''</div>''' + '\n')
+                blogContent += '''                <div class = "quote">''' + line[1 : -1].replace(' ', '&nbsp&nbsp') + '''</div>''' + '\n'
                 if i + 1 < lLen and self.Paragraph[i + 1] == '\n':
                     i += 1
             elif lLen > 3 and line[:3] == 'Tag':
@@ -257,7 +202,7 @@ class makeHTML:
                         break
                     href += line[tempPos]
                     tempPos += 1
-                outFIle.write('''                <a href = "%s" class = "conncetion">''' % (href) + context + '''</a>''' + '\n')
+                blogContent += '''                <a href = "%s" class = "conncetion">''' % (href) + context + '''</a>''' + '\n'
             elif line[0:2] == '![' and line[-2] == ')':
                 context = ''
                 href = ''
@@ -273,167 +218,39 @@ class makeHTML:
                         break
                     href += line[tempPos]
                     tempPos += 1
-                outFIle.write('''                <img src = "%s" class = "blogImg">''' % (href) + '\n')
+                blogContent += '''                <img src = "%s" class = "blogImg">''' % (href) + '\n'
             elif line[0] == '\n':
-                outFIle.write('''                <br>''' + '\n')
+                blogContent += '''                <br>''' + '\n'
             elif len(line) > 3 and line[:3] == '---':
-                outFIle.write('''                <hr>''' + '\n')
+                blogContent += '''                <hr>''' + '\n'
             else:
-                outFIle.write('                ' + self.getInform(line[:-1]) + '\n')
-                outFIle.write('''                <br>''' + '\n')
+                blogContent += '                ' + self.getInform(line[:-1]) + '\n'
+                blogContent += '''                <br>''' + '\n'
             i += 1
-            
-        outFIle.write('''
-            </div>
-
-            <div class = "myAffix">
-            </div>
-
-            <div class = "feet">
-                <div class = "copyrigt">MITSUYAMA © 2018</div>
-                <div class = "callme">Email MITSUYAMA@163.COM</div>
-            </div>
-
-        </div>
-
-
-
-        <!-- Optional JavaScript -->
-        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-        <script src = "https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity = "sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin = "anonymous"></script>
-        <script src = "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity = "sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin = "anonymous"></script>
-        <script src = "https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity = "sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin = "anonymous"></script>
-        <script src = "../js/blog.js"></script>
-        <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
-        <script type="text/x-mathjax-config">
-            MathJax.Hub.Config({
-                tex2jax: {
-                    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
-                    inlineMath: [['$','$']],
-                    processEscapes: true
-                }
-            });
-        </script>
-    </body>
-</html>''')
+        
+        blogHtml = blogHtml.replace('((content))', blogContent)
+        outFIle.write(blogHtml)
 
     def main(self):
         #start = input()
         #end = input()
         self.indexFile = open('index.html', 'w')
-        self.indexFile.write('''
-<!doctype html>
-<html lang = "en">
-    <head>
-        <!-- Required meta tags -->
-        <meta charset = "utf-8">
-        <meta name = "viewport" content = "width = device-width, initial-scale = 1, shrink-to-fit = no">
-
-        <!-- Bootstrap CSS -->
-        <link rel = "stylesheet" href = "https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity = "sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin = "anonymous">
-        <link rel = "stylesheet" href = "css/home.css">
-        <link rel = "stylesheet" href = "css-loader/css/style.css">
-
-        <link rel = "icon" href = "img/favicon.ico" mce_href = "img/favicon.ico" type = "image/x-icon">
-        <link rel = "shortcut icon" href = "img/favicon.ico" mce_href = "img/favicon.ico" type = "image/x-icon">
-
-        <title>MITSUYAMA | SITE</title>
-    </head>
-    
-    <body>
-        <div class = loading>
-            <div class="loader">
-            <div class="dot"></div>
-            <div class="dot"></div>
-            <div class="dot"></div>
-            <div class="dot"></div>
-            <div class="dot"></div>
-            </div>
-        </div>      
- 
-        <div clas = "container-fluid" id = "homeBackground">
-            <div class = "homeTitle">
-                MITSUYAMA | SITE
-            </div>
-        </div>
-
-        <div class = "nevigation">
-            <div class = "nevigation_content1">
-                <a href = "http://mitsuyama.top" style = "color: #999999">
-                <div class = "nav_text_home">
-                    HOME
-                </div>
-                </a>        
-            </div>
-            <div class = "navigation_content2">
-                <a href = "blog/about.html" style = "color: #999999">
-                <div class = "nav_text">
-                    About
-                </div>
-                </a>
-                <div class = "nav_text">
-                    Blog
-                </div>
-                <a href = "https://github.com/Mittsuyama" style = "color: #999999">
-                <div class = "nav_text">
-                    GitHub
-                </div>
-                </a>
-                <div class = "nav_text">
-                    Search
-                </div>
-            </div>
-        </div>
-
-        <div class = "home_background">
-            <div class = "text_container">
-''')
+        homePage = self.homeTemp
+        content = ''
+        
         for i in range(0, self.num):
             self.pHtml(i)
-            self.indexFile.write('''
-                <a href = "blog/%d.html">
-                    <button class = "box">
-                        <div class = "boxUp">
-                            <img src = "img/%d.jpg" class = "boxUpImg">
-                            <div class = "briefIntro">
-                                <p class = "briefIntroContext">%s</p>
-                            </div>
-                            <div class = "sawNumBox">
-                                <img src = "img/eye.png" class = "eyeImg">
-                                <p class = "sawNum">%s</p>
-                            </div>
-                        </div>
-                        <div class = "boxInter"></div>
-                        <div class = "boxDown">
-                            <div class = "inf1">
-                                <p class = "infoText">%s</p>
-                            </div>
-                            <div class = "inf2">
-                                <p class = "tagText">%s</p>
-                                <a href = "#"></a>
-                            </div>
-                        </div>
-                    </button>
-                </a>''' % (i, i, self.blogInfo[2][:-1], self.blogInfo[3][:-1], self.blogInfo[0][:-1], self.blogInfo[1][:-1]))
+            buttonTemp = self.homeBttonTemp
+            buttonTemp = buttonTemp.replace('((blogHref))', str(i))
+            buttonTemp = buttonTemp.replace('((imgHref))', str(i))
+            buttonTemp = buttonTemp.replace('((Title))', self.blogInfo[2][:-1])
+            buttonTemp = buttonTemp.replace('((Time))', self.blogInfo[3][:-1])
+            buttonTemp = buttonTemp.replace('((brief))', self.blogInfo[0][:-1])
+            buttonTemp = buttonTemp.replace('((Tag))', self.blogInfo[1][:-1])
+            content += buttonTemp
         
-        self.indexFile.write('''
-            </div>
-        </div>
-
-        <div class = "feet">
-            <div class = "copyrigt">MITSUYAMA © 2018</div>
-            <div class = "callme">Email MITSUYAMA@163.COM</div>
-        </div>
-
-        <!-- Optional JavaScript -->
-        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-        <script src = "https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity = "sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin = "anonymous"></script>
-        <script src = "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity = "sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin = "anonymous"></script>
-        <script src = "https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity = "sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin = "anonymous"></script>
-        <script src = "js/home.js"></script>
-        <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
-    </body>
-</html>''')
+        homePage = homePage.replace('((mainContainer))', content)
+        self.indexFile.write(homePage)
 
 if __name__ == '__main__':
     makeHTML().main()
