@@ -27,7 +27,7 @@ div.nevigation {
 
 div.nevigation_content1 {
     position: absolute;
-    left: 100px;
+    left: 130px;
     width: 200px;
     height: 55px;
 }
@@ -41,18 +41,20 @@ div.navigation_content2 {
 
 div.nav_text_home {
     color: #777777;
+    /*
     background-image: url("../img/home_gray_tra.png");
     background-repeat: no-repeat;
     background-position-x: 8px;
     background-position-y: 10px;
+    */
     position: absolute;
     font-family: "Arial";
     border: 0px;
     font-size: 25px;
     height: 55px;
     padding-top: 10px;
-    padding-left: 35px;
-    width: 130px;
+    padding-left: 0px;
+    width: 100px;
     text-align: center;
     transition-duration: 0.2s;
     -webkit-transition-duration: 0.2s;
