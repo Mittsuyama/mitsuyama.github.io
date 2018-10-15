@@ -36,6 +36,8 @@ function mouseOutButton(obj) {
 }*/
 
 function pageLoading() {
+    var screenWidthRate = parseFloat($(document).width()) / 1920.0;
+    $("body").css("zoom", screenWidthRate + "");
     for(var i = 0; i < iterms.length; i++) {
         var boxImg = boxUp[i].getElementsByClassName("boxUpImg");
         if(boxImg.length > 0) {
