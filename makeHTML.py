@@ -245,7 +245,7 @@ class makeHTML:
         homePage = self.homeTemp
         content = ''
         
-        for i in range(0, self.num):
+        for i in range(self.num - 1, -1, -1):
             self.pHtml(i)
             buttonTemp = self.homeBttonTemp
             buttonTemp = buttonTemp.replace('((blogHref))', str(i))
