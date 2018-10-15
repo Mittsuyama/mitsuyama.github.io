@@ -39,7 +39,7 @@ function pageLoading() {
     for(var i = 0; i < iterms.length; i++) {
         var boxImg = boxUp[i].getElementsByClassName("boxUpImg");
         if(boxImg.length > 0) {
-            iterms[i].style.height = boxImg[0].offsetHeight + 200 + "px";
+            iterms[i].style.height = boxImg[0].offsetHeight + 220 + "px";
         }
         else {
             var randHeight = Math.floor(Math.random() * 100) + 350;

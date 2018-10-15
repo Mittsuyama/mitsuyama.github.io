@@ -127,6 +127,7 @@ class makeHTML:
         blogHtml = blogHtml.replace('((siteTitle))', self.blogInfo[0])
         blogHtml = blogHtml.replace('((Title))', self.blogInfo[0])
         blogHtml = blogHtml.replace('((Tag))', self.blogInfo[1])
+        blogHtml = blogHtml.replace('((blogTitleImg))', str(order))
         blogContent = ''
 
         pLen = len(self.Paragraph)
