@@ -120,6 +120,7 @@ class makeHTML:
             
 
     def pHtml(self, order):
+        isQuote = False
         self.getTitle(order)
         outFIle = open('blog/' + str(order) + '.html', 'w')
         blogHtml = self.blogTemp
@@ -178,7 +179,11 @@ class makeHTML:
                 if i + 1 < lLen and self.Paragraph[i + 1] == '\n':
                     i += 1
             elif lLen > 1 and line[:1] == '>':
-                blogContent += '''                <div class = "quote">''' + line[1 : -1].replace(' ', '&nbsp&nbsp') + '''</div>''' + '\n'
+                if isQuote:
+                    blogContent += '''                <div class = "quoteAgain">''' + line[1 : -1].replace(' ', '&nbsp&nbsp') + '''</div>''' + '\n'
+                else:
+                    blogContent += '''                <div class = "quote">''' + line[1 : -1].replace(' ', '&nbsp&nbsp') + '''</div>''' + '\n'
+                    isQuote = True
                 if i + 1 < lLen and self.Paragraph[i + 1] == '\n':
                     i += 1
             elif lLen > 3 and line[:3] == 'Tag':
@@ -226,6 +231,7 @@ class makeHTML:
             else:
                 blogContent += '                ' + self.getInform(line[:-1]) + '\n'
                 blogContent += '''                <br>''' + '\n'
+                isQuote = False
             i += 1
         
         blogHtml = blogHtml.replace('((content))', blogContent)
