@@ -1,4 +1,16 @@
-﻿#homeBackground {
+﻿::selection {
+    background:rgba(255, 230, 70, 0.3); 
+}
+
+::-moz-selection {
+    background:rgb(200, 100, 0); 
+}
+
+::-webkit-selection {
+    background:rgb(200, 100, 0); 
+}
+
+#homeBackground {
     background-image: url("../img/570ca371a945c.jpg");
     background-attachment: fixed;
     background-size: 100%;
@@ -18,11 +30,11 @@ div.homeTitle {
 }
 
 div.nevigation {
-    color: gray;
     position: sticky;
     font-family: "Arial";
     top: 0px;
     height: 55px;
+    border-top: orange solid 2px;
     background-color: white;
     z-index: 9998;
 }
@@ -31,14 +43,14 @@ div.nevigation_content1 {
     position: absolute;
     left: 130px;
     width: 200px;
-    height: 55px;
+    height: 53px;
 }
 
 div.navigation_content2 {
     position: absolute;
     right: 50px;
     width: 600px;
-    height: 55px;
+    height: 53px;
 }
 
 div.nav_text_home {
@@ -53,8 +65,8 @@ div.nav_text_home {
     font-family: "Arial";
     border: 0px;
     font-size: 25px;
-    height: 55px;
-    padding-top: 8.5px;
+    height: 53px;
+    padding-top: 7px;
     padding-left: 0px;
     width: 100px;
     text-align: center;
@@ -71,8 +83,8 @@ div.nav_text {
     font-family: "Arial";
     border: 0px;
     font-size: 25px;
-    height: 55px;
-    padding-top: 8.5px;
+    height: 53px;
+    padding-top: 7px;
     width: 100px;
     margin-left: 50px;
     text-align: center;
