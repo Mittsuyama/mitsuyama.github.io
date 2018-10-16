@@ -130,20 +130,27 @@ class makeHTML:
         blogHtml = blogHtml.replace('((blogTitleImg))', str(order))
         blogContent = ''
 
+        #blogContent = '''<br><span class = "normal" style = "font-size: 25px;">▷目录：</span><br>'''
+        """
         tempOrder = 0
         for j in self.Paragraph:
-            if len(j) > 5 and j[:4] == '####':
+            if len(j) > 6 and j[:5] == '#####':
+                pass
+            elif len(j) > 5 and j[:4] == '####':
                 tempOrder += 1
-                blogContent += '''                <a href = "%s" class = "conncetion" style = "padding-left: 80px;">''' % ('#' + str(tempOrder)) + j[5:-1].replace(' ', '&nbsp&nbsp') + '''</a><br>''' + '\n'
+                blogContent += '''                <a href = "#%s" class = "conncetion" style = "padding-left: 80px;">''' % (str(tempOrder)) + j[5:-1].replace(' ', '&nbsp&nbsp') + '''</a><br>''' + '\n'
             elif len(j) > 4 and j[:3] == '###':
                 tempOrder += 1
-                blogContent += '''                <a href = "%s" class = "conncetion" style = "padding-left: 40px;">□''' % ('#' + str(tempOrder)) + j[3:-1].replace(' ', '&nbsp&nbsp') + '''</a><br>''' + '\n'
+                blogContent += '''                <a href = "#%s" class = "conncetion" style = "padding-left: 40px;">''' % (str(tempOrder)) + j[4:-1].replace(' ', '&nbsp&nbsp') + '''</a><br>''' + '\n'
             elif len(j) > 3 and j[:2] == '##':
                 tempOrder += 1
-                blogContent += '''                <a href = "%s" class = "conncetion">▷''' % ('#' + str(tempOrder)) + j[2:-1].replace(' ', '&nbsp&nbsp') + '''</a><br>''' + '\n'
+                blogContent += '''                <a href = "#%s" class = "conncetion">''' % (str(tempOrder)) + j[3:-1].replace(' ', '&nbsp&nbsp') + '''</a><br>''' + '\n'
+        blogContent += '''<br><br>'''
+        """
 
         pLen = len(self.Paragraph)
         i = 5
+        tempOrder = 0
         while i < pLen:
             line = self.Paragraph[i]
             lLen = len(line)
@@ -175,15 +182,18 @@ class makeHTML:
                 if i + 1 < lLen and self.Paragraph[i + 1] == '\n':
                     i += 1
             elif lLen > 4 and line[:4] == '####':
-                blogContent += '''                <div class = "h4">''' + line[4 : -1].replace(' ', '&nbsp&nbsp') + '''</div>''' + '\n'
+                tempOrder += 1
+                blogContent += '''                <div class = "h4" id = "%s">''' % (tempOrder) + line[4 : -1].replace(' ', '&nbsp&nbsp') + '''</div>''' + '\n'
                 if i + 1 < lLen and self.Paragraph[i + 1] == '\n':
                     i += 1
             elif lLen > 3 and line[:3] == '###':
-                blogContent += '''                <div class = "h3">''' + line[3 : -1].replace(' ', '&nbsp&nbsp') + '''</div>''' + '\n'
+                tempOrder += 1
+                blogContent += '''                <div class = "h3" id = "%s">''' % (tempOrder) + line[3 : -1].replace(' ', '&nbsp&nbsp') + '''</div>''' + '\n'
                 if i + 1 < lLen and self.Paragraph[i + 1] == '\n':
                     i += 1
             elif lLen > 2 and line[:2] == '##':
-                blogContent += '''                <div class = "h2">''' + line[2 : -1].replace(' ', '&nbsp&nbsp') + '''</div>''' + '\n'
+                tempOrder += 1
+                blogContent += '''                <div class = "h2" id = "%s">''' %(tempOrder) + line[2 : -1].replace(' ', '&nbsp&nbsp') + '''</div>''' + '\n'
                 if i + 1 < lLen and self.Paragraph[i + 1] == '\n':
                     i += 1
             elif lLen > 1 and line[:1] == '#':

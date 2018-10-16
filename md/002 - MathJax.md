@@ -15,7 +15,7 @@ Tag: `数学`
 
 使用 `\$ xxx \$` 来书写行间数学公式，左右各两个 `\$` 表示行间数学公式
 
-##简单的表达
+## 简单的表达
 
 - 上标 ： `e^{x}` $e^{x}$
 - 下标： `a_{1}` $a_{1}$
@@ -26,7 +26,7 @@ Tag: `数学`
 
 ## 符号
 
-###括号
+### 括号
 
 - 圆括号，绝对值，中括号键盘上
 - 花括号：`\{` ：$\{$
@@ -38,7 +38,7 @@ Tag: `数学`
   - 例如，`\frac{\sqrt x}{y^3}` $(\frac{\sqrt x}{y^3})$ ，括号看起来很奇怪，`\left(\frac{\sqrt x}{y^3}\right)`： $\left(\frac{\sqrt x}{y^3}\right)$
   - 疯狂的括号套括号 `\Biggl(\biggl(\Bigl(\bigl((x)\bigr)\Bigr)\biggr)\Biggr)`：$\Biggl(\biggl(\Bigl(\bigl((x)\bigr)\Bigr)\biggr)\Biggr)$
 
-###运算符号
+### 运算符号
 
 - 大小关系：`\lt \gt \le \ge \neq`： $\lt \; \gt \; \le \; \ge \; \neq$
   - 可以在前面添加 `\not`：`\not\lt` $\not\lt$，但并不优美
@@ -73,7 +73,7 @@ Tag: `数学`
 - `\hat{xx}`：$\hat{x}$，`\widehat{xy}`：$\widehat{xy}$，`\bar{}`，$\bar{x}$，，`\overline{xyz}`：$\overline{xyz}$，
 - `\vec{x}`：$\vec{x}$，`\overrightarrow{xy}`：$\overrightarrow{xy}$，`\overleftrightarrow{xy}`：$\overleftrightarrow{xy}$，`\dot{x}`：$\dot{x}$，`\ddot{x}`：$\ddot{x}$
 
-##格式
+## 格式
 
 ### 常用表达格式
 
