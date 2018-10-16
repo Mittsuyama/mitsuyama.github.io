@@ -14,8 +14,8 @@
         <link rel = "icon" href = "../img/favicon.ico" mce_href = "../img/favicon.ico" type = "image/x-icon">
         <link rel = "shortcut icon" href = "../img/favicon.ico" mce_href = "../img/favicon.ico" type = "image/x-icon">
 
-        <link href="http://cdn.bootcss.com/highlight.js/8.0/styles/github.min.css" rel="stylesheet">  
-        <script src="http://cdn.bootcss.com/highlight.js/8.0/highlight.min.js"></script>
+        <link rel = "stylesheet" href = "../highlight/styles/rainbow.css">
+        <script src="../highlight/highlight.pack.js"></script>
         <script>hljs.initHighlightingOnLoad();</script>
 
         <title>MITSUYAMA | Markdown 上一些 MathJax
@@ -157,7 +157,7 @@
                 <br>
                 <div class = "h3">&nbsp&nbsp其他符号</div>
                 <br>
-                <span class = "normal">◇&nbsp&nbsp<span class = "emphasis">\infty&nbsp\aleph_0</span>：$\infty&nbsp\;&nbsp\aleph_0$</span>
+                <span class = "normal">◇&nbsp&nbsp<span class = "emphasis">\chi&nbsp\infty&nbsp\aleph_0</span>：$\chi&nbsp\;&nbsp\infty&nbsp\;&nbsp\aleph_0​$</span>
                 <br>
                 <span class = "normal">◇&nbsp&nbsp<span class = "emphasis">\nabla&nbsp\partial</span>：$\nabla&nbsp\partial$</span>
                 <br>
@@ -186,13 +186,11 @@
                 <div class = "h3">&nbsp&nbsp矩阵</div>
                 <br>
                 <pre><code class = "nohighlight">
-$$
-    \begin{matrix}
-    1 & x & x^2 \\
-    1 & y & y^2 \\
-    1 & z & z^2 \\
-    \end{matrix}
-$$
+\begin{matrix}
+1 & x & x^2 \\
+1 & y & y^2 \\
+1 & z & z^2 \\
+\end{matrix}
                 </code></pre>
                 <span class = "normal">◇&nbsp&nbsp效果：</span>
                 <br>
@@ -225,14 +223,12 @@ $$
                 <br>
                 <br>
                 <pre><code class = "nohighlight">
-$$
 \left[
 \begin{array}{cc|c}
   1&2&3\\
   4&5&6
 \end{array}
 \right]
-$$
                 </code></pre>
                 <span class = "normal">◇&nbsp&nbsp效果：</span>
                 <br>
@@ -251,15 +247,13 @@ $$
                 <br>
                 <br>
                 <pre><code class = "nohighlight">
-$$
-  \begin{pmatrix}
-    a & b\\
-    c & d\\
-  \hline
-    1 & 0\\
-    0 & 1
-  \end{pmatrix}
-$$
+\begin{pmatrix}
+a & b\\
+c & d\\
+\hline
+1 & 0\\
+0 & 1
+\end{pmatrix}
                 </code></pre>
                 <span class = "normal">◇&nbsp&nbsp效果：</span>
                 <br>
@@ -314,7 +308,7 @@ $$
                 <br>
                 <br>
                 <pre><code class = "nohighlight">
-  f(n) =
+f(n) =
 \begin{cases}
 n/2,  & \text{if $n$ is even} \\
 3n+1, & \text{if $n$ is odd}
