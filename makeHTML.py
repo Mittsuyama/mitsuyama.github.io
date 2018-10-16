@@ -60,13 +60,14 @@ class makeHTML:
             else:
                 break
 
-        newS += '''<span class = "normal">'''
+        
 
         if mLen > spaceLen + 2 and myStr[spaceLen:spaceLen + 2] == '- ':
-            for i in range(0, spaceLen):
-                newS += '&nbsp&nbsp&nbsp'
+            newS += '''<span class = "normal" style = "padding-left: %spx;">''' % (str(spaceLen * 20))
             i = spaceLen + 2
             newS += '◇&nbsp&nbsp'
+        else:
+            newS += '''<span class = "normal">'''
 
         while i < mLen:
             ch = myStr[i]
@@ -178,37 +179,25 @@ class makeHTML:
                 #outFIle.write('''                </pre>''' + '\n')
                 i += 1
             elif lLen > 5 and line[:5] == '#####':
-                blogContent += '''                <div class = "h5">''' + line[5 : -1].replace(' ', '&nbsp&nbsp') + '''</div>''' + '\n'
-                if i + 1 < lLen and self.Paragraph[i + 1] == '\n':
-                    i += 1
+                blogContent += '''                <div class = "h5">''' + line[6 : -1].replace(' ', '&nbsp&nbsp') + '''</div>''' + '\n'
             elif lLen > 4 and line[:4] == '####':
                 tempOrder += 1
-                blogContent += '''                <div class = "h4" id = "%s">''' % (tempOrder) + line[4 : -1].replace(' ', '&nbsp&nbsp') + '''</div>''' + '\n'
-                if i + 1 < lLen and self.Paragraph[i + 1] == '\n':
-                    i += 1
+                blogContent += '''                <div class = "h4" id = "%s">''' % (tempOrder) + line[5 : -1].replace(' ', '&nbsp&nbsp') + '''</div>''' + '\n'
             elif lLen > 3 and line[:3] == '###':
                 tempOrder += 1
-                blogContent += '''                <div class = "h3" id = "%s">''' % (tempOrder) + line[3 : -1].replace(' ', '&nbsp&nbsp') + '''</div>''' + '\n'
-                if i + 1 < lLen and self.Paragraph[i + 1] == '\n':
-                    i += 1
+                blogContent += '''                <div class = "h3" id = "%s">''' % (tempOrder) + line[4 : -1].replace(' ', '&nbsp&nbsp') + '''</div>''' + '\n'
             elif lLen > 2 and line[:2] == '##':
                 tempOrder += 1
-                blogContent += '''                <div class = "h2" id = "%s">''' %(tempOrder) + line[2 : -1].replace(' ', '&nbsp&nbsp') + '''</div>''' + '\n'
-                if i + 1 < lLen and self.Paragraph[i + 1] == '\n':
-                    i += 1
+                blogContent += '''                <div class = "h2" id = "%s">''' %(tempOrder) + line[3 : -1].replace(' ', '&nbsp&nbsp') + '''</div>''' + '\n'
             elif lLen > 1 and line[:1] == '#':
                 pass
                 #outFIle.write('''                <div class = "h1">''' + line[1 : -1] + '''</div>''' + '\n')
-                if i + 1 < lLen and self.Paragraph[i + 1] == '\n':
-                    i += 1
             elif lLen > 1 and line[:1] == '>':
                 if isQuote:
-                    blogContent += '''                <div class = "quoteAgain">''' + line[1 : -1].replace(' ', '&nbsp&nbsp') + '''</div>''' + '\n'
+                    blogContent += '''                <div class = "quoteAgain">''' + line[2 : -1].replace(' ', '&nbsp&nbsp') + '''</div>''' + '\n'
                 else:
                     blogContent += '''                <div class = "quote">''' + line[1 : -1].replace(' ', '&nbsp&nbsp') + '''</div>''' + '\n'
                     isQuote = True
-                if i + 1 < lLen and self.Paragraph[i + 1] == '\n':
-                    i += 1
             elif lLen > 3 and line[:3] == 'Tag':
                 if i + 1 < lLen and self.Paragraph[i + 1] == '\n':
                     i += 1
@@ -246,7 +235,7 @@ class makeHTML:
                         break
                     href += line[tempPos]
                     tempPos += 1
-                blogContent += '''                <img src = "%s" class = "blogImg">''' % (href) + '\n'
+                blogContent += '''                <div><img src = "%s" class = "blogImg"><div id="blog_large_image"></div></div>''' % (href) + '\n'
             elif line[0] == '\n':
                 blogContent += '''                <br>''' + '\n'
             elif len(line) > 3 and line[:3] == '---':
