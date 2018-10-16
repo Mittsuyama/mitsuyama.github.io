@@ -130,6 +130,18 @@ class makeHTML:
         blogHtml = blogHtml.replace('((blogTitleImg))', str(order))
         blogContent = ''
 
+        tempOrder = 0
+        for j in self.Paragraph:
+            if len(j) > 5 and j[:4] == '####':
+                tempOrder += 1
+                blogContent += '''                <a href = "%s" class = "conncetion" style = "padding-left: 80px;">''' % ('#' + str(tempOrder)) + j[5:-1].replace(' ', '&nbsp&nbsp') + '''</a><br>''' + '\n'
+            elif len(j) > 4 and j[:3] == '###':
+                tempOrder += 1
+                blogContent += '''                <a href = "%s" class = "conncetion" style = "padding-left: 40px;">□''' % ('#' + str(tempOrder)) + j[3:-1].replace(' ', '&nbsp&nbsp') + '''</a><br>''' + '\n'
+            elif len(j) > 3 and j[:2] == '##':
+                tempOrder += 1
+                blogContent += '''                <a href = "%s" class = "conncetion">▷''' % ('#' + str(tempOrder)) + j[2:-1].replace(' ', '&nbsp&nbsp') + '''</a><br>''' + '\n'
+
         pLen = len(self.Paragraph)
         i = 5
         while i < pLen:
