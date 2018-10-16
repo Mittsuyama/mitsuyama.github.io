@@ -63,7 +63,7 @@ Tag: `数学`
 
 ### 其他符号
 
-- `\infty \aleph_0`：$\infty \; \aleph_0$
+- `\chi \infty \aleph_0`：$\chi \; \infty \; \aleph_0​$
 - `\nabla \partial`：$\nabla \partial$
 - `\Im \Re`：$\Im \Re$
 - `\ldots`：$\ldots$
@@ -82,13 +82,11 @@ Tag: `数学`
 ### 矩阵
 
 ```
-$$
-    \begin{matrix}
-    1 & x & x^2 \\
-    1 & y & y^2 \\
-    1 & z & z^2 \\
-    \end{matrix}
-$$
+\begin{matrix}
+1 & x & x^2 \\
+1 & y & y^2 \\
+1 & z & z^2 \\
+\end{matrix}
 ```
 
 - 效果：
@@ -118,14 +116,12 @@ $$
 - 代码分块（垂直）：`{cc | ccc}`
 
 ```
-$$
 \left[
 \begin{array}{cc|c}
   1&2&3\\
   4&5&6
 \end{array}
 \right]
-$$
 ```
 
 - 效果：
@@ -144,15 +140,13 @@ $$
 - 代码分块（水平）
 
 ```
-$$
-  \begin{pmatrix}
-    a & b\\
-    c & d\\
-  \hline
-    1 & 0\\
-    0 & 1
-  \end{pmatrix}
-$$
+\begin{pmatrix}
+a & b\\
+c & d\\
+\hline
+1 & 0\\
+0 & 1
+\end{pmatrix}
 ```
 
 - 效果：
@@ -208,7 +202,7 @@ $$
 
 
 ```
-  f(n) =
+f(n) =
 \begin{cases}
 n/2,  & \text{if $n$ is even} \\
 3n+1, & \text{if $n$ is odd}

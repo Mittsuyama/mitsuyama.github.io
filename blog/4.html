@@ -14,21 +14,21 @@
         <link rel = "icon" href = "../img/favicon.ico" mce_href = "../img/favicon.ico" type = "image/x-icon">
         <link rel = "shortcut icon" href = "../img/favicon.ico" mce_href = "../img/favicon.ico" type = "image/x-icon">
 
-        <link href="http://cdn.bootcss.com/highlight.js/8.0/styles/github.min.css" rel="stylesheet">  
-        <script src="http://cdn.bootcss.com/highlight.js/8.0/highlight.min.js"></script>
+        <link rel = "stylesheet" href = "../highlight/styles/rainbow.css">
+        <script src="../highlight/highlight.pack.js"></script>
         <script>hljs.initHighlightingOnLoad();</script>
 
-        <title>MITSUYAMA | 离散数学 - 学习笔记
+        <title>MITSUYAMA | 离散数学 1 - 学习笔记
 
 </title>
     </head>
     
     <body>
         <div class = "container-fluid" id = "blogBackground">
-            <img src = "../img/4.jpg" class = "blogTitleImg">
+            <img src = "../img/blog-image/4.jpg" class = "blogTitleImg">
             <div class = "glass"></div>
             <div class = "blogTitle">
-                    离散数学 - 学习笔记
+                    离散数学 1 - 学习笔记
 
 
             </div>
@@ -85,7 +85,7 @@
                 <span class = "normal">$y$&nbsp为&nbsp$x$&nbsp的象，$x$&nbsp为原象，记为：$f&nbsp:&nbspx&nbsp\to&nbspy$</span>
                 <br>
                 <br>
-                <span class = "normal">值域记为&nbsp$Im(f)$</span>
+                <span class = "normal">值域记为&nbsp$Im(f)​$</span>
                 <br>
                 <br>
                 <span class = "normal">◇&nbsp&nbsp限制和扩散：$A&nbsp\subsetneq&nbspY$，得到：</span>
@@ -238,7 +238,7 @@ $$
                 <br>
                 <span class = "normal">◇&nbsp&nbsp$f^{-1}(C&nbsp\cup&nbspD)&nbsp=&nbspf^{-1}(C)&nbsp\cup&nbspf^{-1}(D)$</span>
                 <br>
-                <span class = "normal">◇&nbsp&nbsp$f^{-1}(C&nbsp\cap&nbspD)&nbsp=&nbspf^{-1}(C)&nbsp\cap&nbspf^{-1}(D)$</span>
+                <span class = "normal">◇&nbsp&nbsp$f^{-1}(C&nbsp\cap&nbspD)&nbsp=&nbspf^{-1}(C)&nbsp\cap&nbspf^{-1}(D)​$</span>
                 <br>
                 <span class = "normal">◇&nbsp&nbsp$f^{-1}(C&nbsp\triangle&nbspD)&nbsp=&nbspf^{-1}(C)&nbsp\triangle&nbspf^{-1}(D)$</span>
                 <br>
@@ -252,9 +252,9 @@ $$
                 <br>
                 <span class = "normal">◇&nbsp&nbsp$f(A&nbsp\cup&nbspB)&nbsp=&nbspf(A)&nbsp\cup&nbspf(B)$</span>
                 <br>
-                <span class = "normal">◇&nbsp&nbsp$f(A&nbsp\cap&nbspB)&nbsp\subseteq&nbspf(A)&nbsp\cap&nbspf(B)$$</span>
+                <span class = "normal">◇&nbsp&nbsp$f(A&nbsp\cap&nbspB)&nbsp\subseteq&nbspf(A)&nbsp\cap&nbspf(B)$</span>
                 <br>
-                <span class = "normal">◇&nbsp&nbsp$f(A&nbsp\triangle&nbspB)&nbsp\supseteq&nbspf(A)&nbsp\triangle&nbspf(B)$</span>
+                <span class = "normal">◇&nbsp&nbsp$f(A\,&nbsp\triangle\,&nbspB)&nbsp\supseteq&nbspf(A)\,&nbsp\triangle&nbsp\,f(B)$</span>
                 <br>
                 <br>
                 <br>
@@ -306,12 +306,16 @@ $$
 f(n) > f(f(n - 1)) \ge 1 \\
 \therefore n > 1，f(n) > 1
 $$
+                <span class = "normal">(2)&nbsp假设&nbsp$n&nbsp>&nbspk$，则&nbsp$f(n)&nbsp>&nbspk$</span>
+                <br>
 $$
 设 \; n > k + 1，有 n - 1 > k \\
 由归纳假设 \; f(n - 1) > k\\
 有 \; f(f(n - 1)) > k \\
 n - 1 \; 代入原式，f(n) > f(f(n - 1))，从而 f(n) > k + 1
 $$
+                <span class = "normal">2.</span>
+                <br>
 $$
 n > n - 1\\f(n) > n - 1 \Rightarrow f(n) \ge n
 $$
@@ -358,84 +362,14 @@ $$
                 <span class = "normal"><span class = "strong"><u>定理</u></span>：</span>
                 <br>
                 <br>
-                <span class = "normal">◇&nbsp&nbsp$f$&nbsp左可逆&nbsp$\iff&nbspf$&nbsp是单射</span>
+                <span class = "normal">◇&nbsp&nbsp$f$&nbsp左可逆&nbsp$\iff&nbspf​$&nbsp是单射</span>
                 <br>
                 <span class = "normal">◇&nbsp&nbsp$f$&nbsp左可逆&nbsp$\iff&nbspf$&nbsp是满射</span>
                 <br>
                 <span class = "normal">◇&nbsp&nbsp证明：$\Rightarrow$&nbsp映射合成定理，$\Leftarrow$&nbsp构造&nbsp$g:&nbspIm(f)&nbsp\to&nbspX$&nbsp在&nbsp$Y$&nbsp上的扩展</span>
                 <br>
                 <br>
-                <div class = "h2">&nbsp&nbsp置换</div>
-                <br>
-                <span class = "normal">有限集合到其自身的一一对应（双射）就称为该集合的一个置换，$n$&nbsp&nbsp个元素的集合上的置换，称为&nbsp$n$&nbsp阶置换。</span>
-                <br>
-                <br>
-                <span class = "normal">$\sigma(i)&nbsp=&nbspk_i$&nbsp或者：</span>
-                <br>
-$$
-\sigma = 
-\begin{pmatrix}
-1 & 2 & 3 & \ldots & n\\
-k_1 & k_2 & k_3 & \ldots & k_n
-\end{pmatrix}
-$$
-                <br>
-                <span class = "normal"><span class = "strong"><u>定义</u></span>：设&nbsp$X$&nbsp是一个集合，$E&nbsp\subseteq&nbspX$，$X$&nbsp到&nbsp$\{0,&nbsp1\}$&nbsp的一个如下映射&nbsp$\chi_e$&nbsp，称为集合&nbsp$E$&nbsp上的一个特征函数，$\forall&nbspx&nbsp\in&nbspX$：</span>
-                <br>
-$$
-\chi_e(x) = 
-\begin{cases}
-1 & 如果 x \in E \\
-0 & x \not \in E，即 x = X \backslash E
-\end{cases}
-$$
-                <span class = "normal">显然集合&nbsp$E$&nbsp的特征函数&nbsp$\chi_e$&nbsp由&nbsp$E$&nbsp唯一确定。于是&nbsp$E,&nbspF&nbsp\subseteq&nbspX$，但是&nbsp$E&nbsp\neq&nbspF$，则&nbsp$\chi_F&nbsp\neq&nbsp\chi_E$。令&nbsp$Ch(X)&nbsp=&nbsp\{\chi&nbsp|&nbsp\chi:&nbspX&nbsp\to&nbsp\{0,&nbsp1\}\}$，$\Phi:&nbsp2^X&nbsp\to&nbspCh(X)$，$\forall&nbspE&nbsp\in&nbsp2^X$，$\Phi(E)&nbsp=&nbsp\chi_E$，则&nbsp$\Phi$&nbsp是&nbsp$2^X$&nbsp到&nbsp$Ch(X)$&nbsp的一个单射，又若&nbsp$\chi&nbsp\in&nbspCh(X)$，令</span>
-                <br>
-$$
-F = \{X | \chi(X) = 1, x \in X\}
-$$
-                <br>
-                <span class = "normal"><span class = "strong"><u>定义</u></span>：设&nbsp$A,&nbspB$&nbsp是两个集合，一个从&nbsp$A&nbsp\times&nbspB$&nbsp到集合&nbsp{是，否}，的映射&nbsp$R$&nbsp称为一个从&nbsp$A$&nbsp到&nbsp$B$&nbsp的一个二元关系。如果&nbsp$A&nbsp\times&nbspB$&nbsp中的元&nbsp$(a,&nbspb)$&nbsp在&nbsp$R$&nbsp下的象为「是」，则称&nbsp$a$&nbsp与&nbsp$b$&nbsp复合关系&nbsp$R$，记成&nbsp$aRb$。如果&nbsp$(a,&nbspb)$&nbsp在&nbsp$R$&nbsp下的象为「否」，则称&nbsp$a$&nbsp与&nbsp$b$&nbsp不符合关系&nbsp$R$，记为&nbsp$a&nbsp\not&nbspR&nbspb$。如果&nbsp$A&nbsp=&nbspB$&nbsp，则称&nbsp$R$&nbsp为&nbsp$A$&nbsp上的二元关系。</span>
-                <br>
-                <br>
-                <br>
-                <br>
-                <span class = "normal"><span class = "strong"><u>例&nbsp1</u></span>：设&nbsp$Z$&nbsp表示整数之集，整数间的整除关系「|」：$m&nbsp|&nbspn&nbsp\iff&nbspm$&nbsp能整除&nbsp$n,&nbspm,&nbspn&nbsp\in&nbspZ$&nbsp就是&nbsp$Z$&nbsp上的一个二元关系。</span>
-                <br>
-                <br>
-                <hr>
-                <br>
-                <span class = "normal"><span class = "strong"><u>例&nbsp2</u></span>：整数集&nbsp$Z$&nbsp上的模&nbsp$n$&nbsp同余关系&nbsp「$\equiv$」&nbsp是&nbsp$Z$&nbsp上的如下的二元关系：$\forall&nbspm,&nbspk&nbsp\in&nbspZ$：</span>
-                <br>
-$$
-m \equiv k \pmod n \iff n | (m - k)
-$$
-                <hr>
-                <br>
-                <span class = "normal"><span class = "strong"><u>例&nbsp3</u></span>：</span>
-                <br>
-                <br>
-                <span class = "normal">令&nbsp$M_n$&nbsp为复数域&nbsp$C$&nbsp上的&nbsp$n&nbsp\times&nbspn$&nbsp矩阵的全体所形成的集合。$M_n$&nbsp上的二元关系&nbsp~：$\forall&nbspA,&nbspB&nbsp\in&nbspM_n$，</span>
-                <br>
-$$
-A \sim B \iff \exists P \in M_n，使 A = P^{-1}BP
-$$
-                <br>
-                <hr>
-                <br>
-                <span class = "normal"><span class = "strong"><u>例&nbsp4</u></span>：映射&nbsp$f$&nbsp则是一个特殊的二元关系，即存在&nbsp$x$&nbsp，则有唯一的&nbsp$y$&nbsp使得&nbsp$xfy$，而任一一般的二元关系，未必存在&nbsp$x$，而这里的&nbsp$y$&nbsp也未必唯一。</span>
-                <br>
-                <br>
-                <hr>
-                <br>
-                <span class = "normal"><span class = "strong"><u>定义</u></span>：<span class = "emphasis">这是关系最常用的定义方式</span>，设&nbsp$A$&nbsp与&nbsp$B$&nbsp是两个集合，$A&nbsp\times&nbspB$&nbsp&nbsp的任一子集&nbsp$R$&nbsp称为&nbsp$A$&nbsp到&nbsp$B$&nbsp的一个二元关系，如果&nbsp$(a,&nbspb)&nbsp\in&nbspR$，则称&nbsp$a$&nbsp与&nbsp$b$&nbsp符合关系&nbsp$R$，记成&nbsp$aRb$，如果&nbsp$(a,&nbspb)&nbsp\not&nbsp\in&nbspR$，则说&nbsp$a$&nbsp与&nbsp$b$&nbsp不符合关系&nbsp$R$.</span>
-                <br>
-                <br>
-                <span class = "normal"><span class = "strong"><u>定义</u></span>：$x$&nbsp的域为定义域，记为&nbsp$dom(R)$，$y$&nbsp的域为值域，记为&nbsp$Ran(R)$</span>
-                <br>
-                <br>
-                <span class = "normal"><u><span class = "strong">定义</span></u>：</span>
-                <br>
+                <a href = "12.html" class = "conncetion">下一篇：离散数学 2</a>
 
             </div>
             <div class = "myAffix">

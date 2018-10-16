@@ -101,6 +101,7 @@ div.nav_text_home:hover {
 }
 
 div.home_background {
+    zoom: 0.85;
     width: 100%;
     background-color: #f4f4f4;
 }
