@@ -36,7 +36,7 @@ div.nevigation {
     height: 55px;
     /*border-top: rgba(255, 150, 100, 1) solid 3px;*/
     background-color: white;
-    z-index: 9998;
+    z-index: 9990;
 }
 
 div.nevigation_content1 {

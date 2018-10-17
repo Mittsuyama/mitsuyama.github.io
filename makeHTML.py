@@ -235,7 +235,7 @@ class makeHTML:
                         break
                     href += line[tempPos]
                     tempPos += 1
-                blogContent += '''                <div><img src = "%s" class = "blogImg"><div id="blog_large_image"></div></div>''' % (href) + '\n'
+                blogContent += '''                <img src = "%s" class = "blogImg">''' % (href) + '\n'
             elif line[0] == '\n':
                 blogContent += '''                <br>''' + '\n'
             elif len(line) > 3 and line[:3] == '---':
