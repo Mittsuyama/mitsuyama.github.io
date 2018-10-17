@@ -13,10 +13,10 @@ $("img.blogImg").click(function() {
         $('.imgBack').html('<img src = ' + imgSrc + ' class = "biggerImg"></img>');
         //alert($('.imgBack').scrollTop());
         if(imgHeight < $(window).height()) {
-            $('.biggerImg').css("top", $(window).scrollTop() + ($(window).height() - imgHeight) / 2 + 'px');
+            $('.biggerImg').css("top", parseFloat($(window).scrollTop()) * 1.005 + parseFloat(($(window).height() - imgHeight)) / 2.0 + 'px');
         }
         else {
-            $('.biggerImg').css("top", $(window).scrollTop() + 'px');
+            $('.biggerImg').css("top", parseFloat($(window).scrollTop()) * 1.005 + 'px');
         }
         shWitdh = Math.min($(window).width() * 0.8, imgWidth) + 'px';
         $('.biggerImg').animate({width: shWitdh}, tempTime);
