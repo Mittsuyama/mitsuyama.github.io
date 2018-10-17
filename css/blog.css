@@ -13,14 +13,16 @@
 div.imgBack {
     position: absolute;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.8);
     z-index: 9997;
+    cursor: url("../img/bigger2.cur"), auto;
 }
 
 img.biggerImg {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    width: 0px;
 }
 
 body {
@@ -204,6 +206,7 @@ img.blogImg {
     max-width: 60%;
     margin-bottom: 30px;
     padding-top: 30px;
+    cursor: url("../img/bigger2.cur"), auto;
 }
 
 div.myAffix {
