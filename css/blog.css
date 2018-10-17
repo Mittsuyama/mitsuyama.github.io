@@ -186,7 +186,9 @@ span.strike {
 }
 
 span.emphasis {
-    color: rgba(0, 180, 180, 1)
+    background-color:  rgba(0, 180, 180, 0.2);
+    border-radius: 7px;
+    /*color: rgba(0, 180, 180, 1)*/
 }
 
 a.conncetion {
