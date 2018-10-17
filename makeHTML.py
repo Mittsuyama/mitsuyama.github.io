@@ -132,22 +132,21 @@ class makeHTML:
         blogContent = ''
 
         #blogContent = '''<br><span class = "normal" style = "font-size: 25px;">▷目录：</span><br>'''
-        """
         tempOrder = 0
+        contentList = '''            <span>目录</span><br>'''
         for j in self.Paragraph:
             if len(j) > 6 and j[:5] == '#####':
                 pass
             elif len(j) > 5 and j[:4] == '####':
                 tempOrder += 1
-                blogContent += '''                <a href = "#%s" class = "conncetion" style = "padding-left: 80px;">''' % (str(tempOrder)) + j[5:-1].replace(' ', '&nbsp&nbsp') + '''</a><br>''' + '\n'
+                #contentList += '''           <a href = "#%s" class = "contentListCon" style = "padding-left: 80px;">''' % (str(tempOrder)) + j[5:-1].replace(' ', '&nbsp&nbsp') + '''</a><br>''' + '\n'
             elif len(j) > 4 and j[:3] == '###':
                 tempOrder += 1
-                blogContent += '''                <a href = "#%s" class = "conncetion" style = "padding-left: 40px;">''' % (str(tempOrder)) + j[4:-1].replace(' ', '&nbsp&nbsp') + '''</a><br>''' + '\n'
+                contentList += '''            <a href = "#%s" class = "contentListCon" style = "padding-left: 40px;">''' % (str(tempOrder)) + j[4:-1].replace(' ', '&nbsp&nbsp') + '''</a><br>''' + '\n'
             elif len(j) > 3 and j[:2] == '##':
                 tempOrder += 1
-                blogContent += '''                <a href = "#%s" class = "conncetion">''' % (str(tempOrder)) + j[3:-1].replace(' ', '&nbsp&nbsp') + '''</a><br>''' + '\n'
-        blogContent += '''<br><br>'''
-        """
+                contentList += '''            <a href = "#%s" class = "contentListCon">''' % (str(tempOrder)) + j[3:-1].replace(' ', '&nbsp&nbsp') + '''</a><br>''' + '\n'
+        blogHtml = blogHtml.replace('((contentList))', contentList)
 
         pLen = len(self.Paragraph)
         i = 5

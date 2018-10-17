@@ -71,15 +71,35 @@ img.blogTitleImg {
     left: 0px;
 }
 
+div.contentList {
+    position: fixed;
+    width: 20%;
+    min-height: 200px;
+    left: 70px;
+    top: 130px;
+    background-color: white;
+    z-index: 2;
+}
+
+a.contentListCon {
+    max-width: 30px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space:nowrap;
+    color: #888888;
+    font-size: 17px;
+}
+
 div.blogMainBlock {
     position: relative;
     width: 100%;
     background-color: white;
+    z-index: 1;
 }
 
 div.articleContext {
     position: relative;
-    width: 60%;
+    width: 50%;
     margin: auto;
     background-color: white;
     color: #555555;
