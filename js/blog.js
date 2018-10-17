@@ -1,7 +1,17 @@
 var screenWidthRate = parseFloat($(document.body).width()) / 1920.0;
-$("body").css("zoom", screenWidthRate + "");
 var imgWidth = 0;
 var tempTime = 300;
+var minScrollTop = 300;
+
+$(document).ready(function() {
+    if($(window).scrollTop() > minScrollTop) {
+        $('.contentListOut').show();
+    }
+    else {
+        $('.contentListOut').hide();
+    }
+    $("body").css("zoom", screenWidthRate + "");
+});
 
 $("img.blogImg").click(function() {
     imgSrc = $(this).attr("src");
@@ -13,14 +23,23 @@ $("img.blogImg").click(function() {
         $('.imgBack').html('<img src = ' + imgSrc + ' class = "biggerImg"></img>');
         //alert($('.imgBack').scrollTop());
         if(imgHeight < $(window).height()) {
-            $('.biggerImg').css("top", parseFloat($(window).scrollTop()) * 1.005 + parseFloat(($(window).height() - imgHeight)) / 2.0 + 'px');
+            $('.biggerImg').css("top", parseFloat($(window).scrollTop()) / screenWidthRate + parseFloat(($(window).height() - imgHeight)) / 2.0 + 'px');
         }
         else {
-            $('.biggerImg').css("top", parseFloat($(window).scrollTop()) * 1.005 + 'px');
+            $('.biggerImg').css("top", parseFloat($(window).scrollTop()) / screenWidthRate + 'px');
         }
         shWitdh = Math.min($(window).width() * 0.8, imgWidth) + 'px';
         $('.biggerImg').animate({width: shWitdh}, tempTime);
     });
+});
+
+$(window).scroll(function(event){
+    if($(window).scrollTop() > minScrollTop) {
+        $('.contentListOut').fadeIn();
+    }
+    else {
+        $('.contentListOut').hide();
+    }
 });
 
 function imgRemove() {

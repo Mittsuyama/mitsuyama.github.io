@@ -133,7 +133,7 @@ class makeHTML:
 
         #blogContent = '''<br><span class = "normal" style = "font-size: 25px;">▷目录：</span><br>'''
         tempOrder = 0
-        contentList = '''            <span>目录</span><br>'''
+        contentList = ''
         for j in self.Paragraph:
             if len(j) > 6 and j[:5] == '#####':
                 pass

@@ -11,7 +11,7 @@ body {
 }
 .loader {
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 40%;
   margin-left: 10%;
   transform: translate3d(-50%, -50%, 0);
