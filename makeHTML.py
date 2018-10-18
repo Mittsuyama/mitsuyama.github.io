@@ -253,7 +253,7 @@ class makeHTML:
         #start = input()
         #end = input()
         self.indexFile = open('index.html', 'w')
-        self.xmlFile = open('xml/waterfall.xml', 'w')
+        self.xmlFile = open('js/waterfall.xml', 'w')
         
         homePage = self.homeTemp
         content = ''
