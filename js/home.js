@@ -117,10 +117,6 @@ $(document).ready(function(){
     $("#homeBackground").hide();
     $(".nevigation").hide();
     $(".home_background").hide();
-<<<<<<< HEAD
-    //loadXml();
-=======
->>>>>>> upstream/master
 
     $(window).load(function(){
         //loadXml();
