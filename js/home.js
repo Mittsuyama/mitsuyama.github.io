@@ -4,6 +4,7 @@ var boxDown = document.getElementsByClassName("boxDown");
 var itermWidth = iterms[0].offsetWidth;
 var infoText = document.getElementsByClassName("infoText");
 var presentHeight = 0;
+var xmlhttp;
 var titleList = new Array();
 var timeList = new Array();
 var briefList = new Array();
@@ -85,19 +86,44 @@ $(window).scroll(function(event){
     }
 });
 
-function loadXml() {
-    var xmlDoc = document.implementation.createDocument("", "", null);
-    xmlDoc.async = "false";
-    xmlDoc.load("../xml/waterfall.xml");
+/*
+function loadXML(){
+    var xmlDoc;
+
+    xmlhttp = null;
+    if (window.XMLHttpRequest) { // code for all new browsers
+        xmlhttp = new XMLHttpRequest();
+    } 
+    else if (window.ActiveXObject) { // code for IE5 and IE6
+        xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    if (xmlhttp != null) {
+        xmlhttp.open("GET", "xml/waterfall.xml", true);
+        alert(xmlhttp.status);
+        //xmlhttp.send(null);
+        xmlDoc = xmlhttp.responseXML;
+    }
+
+    return xmlDoc;
 }
+
+function loadXml() {
+    var xmlDoc = loadXML();
+    //alert(xmlDoc);
+}
+*/
 
 $(document).ready(function(){
     $("#homeBackground").hide();
     $(".nevigation").hide();
     $(".home_background").hide();
+<<<<<<< HEAD
     //loadXml();
+=======
+>>>>>>> upstream/master
 
     $(window).load(function(){
+        //loadXml();
         $("#homeBackground").fadeIn();
         $(".nevigation").fadeIn();
         $(".home_background").fadeIn();

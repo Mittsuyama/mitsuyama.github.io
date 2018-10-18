@@ -74,6 +74,7 @@
                             <a href = "#1" class = "contentListCon">置换</a><br>
             <a href = "#2" class = "contentListCon">关系</a><br>
             <a href = "#3" class = "contentListCon" style = "padding-left: 40px;">关系的性质</a><br>
+            <a href = "#4" class = "contentListCon" style = "padding-left: 40px;">关系的合成</a><br>
 
             </div>
         </div>
@@ -95,7 +96,7 @@ k_1 & k_2 & k_3 & \ldots & k_n
 \end{pmatrix}
 $$
                 <br>
-                <span class = "normal"><span class = "strong"><u>定义</u></span>：设&nbsp$X$&nbsp是一个集合，$E&nbsp\subseteq&nbspX$，$X$&nbsp到&nbsp$\{0,&nbsp1\}$&nbsp的一个如下映射&nbsp$\chi_e$&nbsp，称为集合&nbsp$E$&nbsp上的一个特征函数，$\forall&nbspx&nbsp\in&nbspX$：</span>
+                <span class = "normal"><span class = "strong"><u>特征函数的定义</u></span>：设&nbsp$X$&nbsp是一个集合，$E&nbsp\subseteq&nbspX$，$X$&nbsp到&nbsp$\{0,&nbsp1\}$&nbsp的一个如下映射&nbsp$\chi_e$&nbsp，称为集合&nbsp$E$&nbsp上的一个特征函数，$\forall&nbspx&nbsp\in&nbspX$：</span>
                 <br>
 $$
 \chi_e(x) = 
@@ -112,7 +113,7 @@ $$
                 <br>
                 <div class = "h2" id = "2">关系</div>
                 <br>
-                <span class = "normal"><span class = "strong"><u>定义</u></span>：设&nbsp$A,&nbspB$&nbsp是两个集合，一个从&nbsp$A&nbsp\times&nbspB$&nbsp到集合&nbsp{是，否}，的映射&nbsp$R$&nbsp称为一个从&nbsp$A$&nbsp到&nbsp$B$&nbsp的一个二元关系。如果&nbsp$A&nbsp\times&nbspB$&nbsp中的元&nbsp$(a,&nbspb)$&nbsp在&nbsp$R$&nbsp下的象为「是」，则称&nbsp$a$&nbsp与&nbsp$b$&nbsp复合关系&nbsp$R$，记成&nbsp$aRb$。如果&nbsp$(a,&nbspb)$&nbsp在&nbsp$R$&nbsp下的象为「否」，则称&nbsp$a$&nbsp与&nbsp$b$&nbsp不符合关系&nbsp$R$，记为&nbsp$a&nbsp\not&nbspR&nbspb$。如果&nbsp$A&nbsp=&nbspB$&nbsp，则称&nbsp$R$&nbsp为&nbsp$A$&nbsp上的二元关系。</span>
+                <span class = "normal"><span class = "strong"><u>关系的定义</u></span>：设&nbsp$A,&nbspB$&nbsp是两个集合，一个从&nbsp$A&nbsp\times&nbspB$&nbsp到集合&nbsp{是，否}，的映射&nbsp$R$&nbsp称为一个从&nbsp$A$&nbsp到&nbsp$B$&nbsp的一个二元关系。如果&nbsp$A&nbsp\times&nbspB$&nbsp中的元&nbsp$(a,&nbspb)$&nbsp在&nbsp$R$&nbsp下的象为「是」，则称&nbsp$a$&nbsp与&nbsp$b$&nbsp复合关系&nbsp$R$，记成&nbsp$aRb$。如果&nbsp$(a,&nbspb)$&nbsp在&nbsp$R$&nbsp下的象为「否」，则称&nbsp$a$&nbsp与&nbsp$b$&nbsp不符合关系&nbsp$R$，记为&nbsp$a&nbsp\not&nbspR&nbspb$。如果&nbsp$A&nbsp=&nbspB$&nbsp，则称&nbsp$R$&nbsp为&nbsp$A$&nbsp上的二元关系。</span>
                 <br>
                 <br>
                 <br>
@@ -145,13 +146,13 @@ $$
                 <br>
                 <hr>
                 <br>
-                <span class = "normal"><span class = "strong"><u>定义</u></span>：<span class = "emphasis">这是关系最常用的定义方式</span>，设&nbsp$A$&nbsp与&nbsp$B$&nbsp是两个集合，$A&nbsp\times&nbspB$&nbsp&nbsp的任一子集&nbsp$R$&nbsp称为&nbsp$A$&nbsp到&nbsp$B$&nbsp的一个二元关系，如果&nbsp$(a,&nbspb)&nbsp\in&nbspR$，则称&nbsp$a$&nbsp与&nbsp$b$&nbsp符合关系&nbsp$R$，记成&nbsp$aRb$，如果&nbsp$(a,&nbspb)&nbsp\not&nbsp\in&nbspR$，则说&nbsp$a$&nbsp与&nbsp$b$&nbsp不符合关系&nbsp$R$.</span>
+                <span class = "normal"><span class = "strong"><u>关系的定义</u></span>：<span class = "emphasis">这是关系最常用的定义方式</span>，设&nbsp$A$&nbsp与&nbsp$B$&nbsp是两个集合，$A&nbsp\times&nbspB$&nbsp&nbsp的任一子集&nbsp$R$&nbsp称为&nbsp$A$&nbsp到&nbsp$B$&nbsp的一个二元关系，如果&nbsp$(a,&nbspb)&nbsp\in&nbspR$，则称&nbsp$a$&nbsp与&nbsp$b$&nbsp符合关系&nbsp$R$，记成&nbsp$aRb$，如果&nbsp$(a,&nbspb)&nbsp\not&nbsp\in&nbspR$，则说&nbsp$a$&nbsp与&nbsp$b$&nbsp不符合关系&nbsp$R$.</span>
                 <br>
                 <br>
-                <span class = "normal"><span class = "strong"><u>定义</u></span>：$x$&nbsp的域为定义域，记为&nbsp$dom(R)$，$y$&nbsp的域为值域，记为&nbsp$Ran(R)$</span>
+                <span class = "normal"><span class = "strong"><u>定义域与值域</u></span>：$x$&nbsp的域为定义域，记为&nbsp$dom(R)$，$y$&nbsp的域为值域，记为&nbsp$Ran(R)$</span>
                 <br>
                 <br>
-                <span class = "normal"><u><span class = "strong">定义</span></u>：设&nbsp$A,&nbspB$&nbsp是两个集合，一个从&nbsp$A$&nbsp到&nbsp$2^B$&nbsp的映射&nbsp$R$&nbsp称为一个从&nbsp$A$&nbsp到&nbsp$B$&nbsp的多值部分映射。如果&nbsp$a&nbsp\in&nbspA,&nbspR(a)&nbsp=&nbsp\phi$，那么我们称&nbsp$R$&nbsp在&nbsp$a$&nbsp出无定义；反之为「象」或者「值」</span>
+                <span class = "normal"><u><span class = "strong">关系的定义</span></u>：设&nbsp$A,&nbspB$&nbsp是两个集合，一个从&nbsp$A$&nbsp到&nbsp$2^B$&nbsp的映射&nbsp$R$&nbsp称为一个从&nbsp$A$&nbsp到&nbsp$B$&nbsp的多值部分映射。如果&nbsp$a&nbsp\in&nbspA,&nbspR(a)&nbsp=&nbsp\phi$，那么我们称&nbsp$R$&nbsp在&nbsp$a$&nbsp出无定义；反之为「象」或者「值」</span>
                 <br>
                 <br>
                 <span class = "normal">设&nbsp$R$&nbsp是从&nbsp$A$&nbsp到&nbsp$B$&nbsp的一个二元关系，利用&nbsp$R$&nbsp的构造一个&nbsp$A$&nbsp到&nbsp$2^B$&nbsp的映射&nbsp$f_R:&nbsp\forall&nbspx&nbsp\in&nbspA$</span>
@@ -167,14 +168,14 @@ $$
                 <span class = "normal"><span class = "strong"><u>定理</u></span>：从&nbsp$A$&nbsp到&nbsp$B$&nbsp的所有二元关系的集合&nbsp$2^{A&nbsp\times&nbspB}$&nbsp&nbsp与从&nbsp$A$&nbsp到&nbsp$2^B$&nbsp的所有映射的集合&nbsp$(2^B)^A$&nbsp是对等的（证明映射相同，只需证明&nbsp$\forall&nbspx,&nbspf(x)&nbsp=&nbspg(x)$）。</span>
                 <br>
                 <br>
-                <span class = "normal"><u><span class = "strong">定义</span></u>：设&nbsp$A$&nbsp和&nbsp$B$&nbsp是两个集合，一个从&nbsp&nbsp$A$&nbsp到&nbsp$B$&nbsp的多值部分映射&nbsp$R$，称为一个从&nbsp&nbsp$A$&nbsp到&nbsp$B$&nbsp的所有二元关系的。如果&nbsp$x&nbsp\in&nbspA,&nbspy&nbsp\in&nbspR(x)$，则称&nbsp$x$&nbsp与&nbsp$y$&nbsp符合关系&nbsp$R$，反之不符合。</span>
+                <span class = "normal"><u><span class = "strong">关系的定义</span></u>：设&nbsp$A$&nbsp和&nbsp$B$&nbsp是两个集合，一个从&nbsp&nbsp$A$&nbsp到&nbsp$B$&nbsp的多值部分映射&nbsp$R$，称为一个从&nbsp&nbsp$A$&nbsp到&nbsp$B$&nbsp的所有二元关系的。如果&nbsp$x&nbsp\in&nbspA,&nbspy&nbsp\in&nbspR(x)$，则称&nbsp$x$&nbsp与&nbsp$y$&nbsp符合关系&nbsp$R$，反之不符合。</span>
                 <br>
                 <br>
                 <div class = "quote">&nbsp&nbsp二元关系就是函数概念的推广，从单值性推广到多值性，从处处有定义推广到对部分元素有定义。</div>
                 <div class = "quoteAgain"></div>
                 <div class = "quoteAgain">以上，详细地讨论了二元关系的三证形式定义。它们都是等价的，在数学中，特别是在计算机科学的各个领域中，这三种定义均有人使用。甚至还有人使用另外的等价定义，不过最多的定义是&nbsp&nbsp2&nbsp&nbsp与&nbsp&nbsp3。</div>
                 <br>
-                <span class = "normal"><span class = "strong"><u>定义</u></span>：设&nbsp$M$&nbsp是一个主程序及各程序段（即函数过程和子程序过程）所形成的的集合，程序段间的「直接调用关系」$R$，可用列出&nbsp$R$&nbsp中所有元素对来表示。例，如果：</span>
+                <span class = "normal"><span class = "strong"><u>程序调用关系</u></span>：设&nbsp$M$&nbsp是一个主程序及各程序段（即函数过程和子程序过程）所形成的的集合，程序段间的「直接调用关系」$R$，可用列出&nbsp$R$&nbsp中所有元素对来表示。例，如果：</span>
                 <br>
 $$
 M = \{S_主，F_1，F_2，SUB_1，SUB_2\}
@@ -184,7 +185,7 @@ $$
 R = \{(S_主, F_1),(S_主, F_2), (F_2, F_3), (F_3, SUB_1), (SUB_1, SUB_2)\}
 $$
                 <br>
-                <span class = "normal"><u><span class = "strong">定义</span></u>：设&nbsp$A_1,&nbspA_2,&nbsp\ldots&nbspA_n$&nbsp是&nbsp$n$&nbsp个集合，集合&nbsp$A_1&nbsp\times&nbspA_2&nbsp\times&nbsp\ldots&nbsp\times&nbspA_n$&nbsp的任何一个子集&nbsp$R$&nbsp称为&nbsp$A_1,&nbspA_2&nbsp,&nbsp\ldots&nbspA_n$&nbsp间的一个&nbsp$n$&nbsp元关系。每个集合&nbsp$A_i$&nbsp称为&nbsp$R$&nbsp的一个域。</span>
+                <span class = "normal"><u><span class = "strong">关系的域</span></u>：设&nbsp$A_1,&nbspA_2,&nbsp\ldots&nbspA_n$&nbsp是&nbsp$n$&nbsp个集合，集合&nbsp$A_1&nbsp\times&nbspA_2&nbsp\times&nbsp\ldots&nbsp\times&nbspA_n$&nbsp的任何一个子集&nbsp$R$&nbsp称为&nbsp$A_1,&nbspA_2&nbsp,&nbsp\ldots&nbspA_n$&nbsp间的一个&nbsp$n$&nbsp元关系。每个集合&nbsp$A_i$&nbsp称为&nbsp$R$&nbsp的一个域。</span>
                 <br>
                 <br>
                 <span class = "normal">在数据库中，把&nbsp$n$&nbsp元关系看成一个二维的表，表的每一行对应一个&nbsp$R$&nbsp中的&nbsp$n$&nbsp元组，表中每一列起一个名字，称为&nbsp$R$&nbsp的一个属性，于是，$n$&nbsp元关系就有&nbsp$n$&nbsp个属性。</span>
@@ -192,28 +193,28 @@ $$
                 <br>
                 <div class = "h3" id = "3">关系的性质</div>
                 <br>
-                <span class = "normal"><u><span class = "strong">定义</span></u>：设&nbsp$X$&nbsp是一个集合，$X&nbsp\times&nbspX$&nbsp的子集，$I_X$</span>
+                <span class = "normal"><u><span class = "strong">恒等关系</span></u>：设&nbsp$X$&nbsp是一个集合，$X&nbsp\times&nbspX$&nbsp的子集，$I_X$</span>
                 <br>
 $$
 I_x = \{(x, x) | x \in X\}
 $$
                 <br>
-                <span class = "normal"><u><span class = "strong">定义</span></u>：设&nbsp$R$&nbsp是集合&nbsp$X$&nbsp上的一个二元关系，如果&nbsp$\forall&nbspx&nbsp\in&nbspX$，$xRx$，则称&nbsp$R$&nbsp是自反的。</span>
+                <span class = "normal"><u><span class = "strong">自反的关系</span></u>：设&nbsp$R$&nbsp是集合&nbsp$X$&nbsp上的一个二元关系，如果&nbsp$\forall&nbspx&nbsp\in&nbspX$，$xRx$，则称&nbsp$R$&nbsp是自反的。</span>
                 <br>
                 <br>
                 <span class = "normal">$X$&nbsp上的而关系&nbsp$R$&nbsp是自反的当且仅当&nbsp$I_x&nbsp\subseteq&nbspR$</span>
                 <br>
                 <br>
-                <span class = "normal"><u><span class = "strong">定义</span></u>：集合&nbsp$X$&nbsp上的二元关系&nbsp$R$&nbsp称为反自反的，如果&nbsp$\forall&nbspx&nbsp\in&nbspX$，$x$&nbsp与&nbsp$x$&nbsp不符合关系&nbsp$R$</span>
+                <span class = "normal"><u><span class = "strong">反自反的关系</span></u>：集合&nbsp$X$&nbsp上的二元关系&nbsp$R$&nbsp称为反自反的，如果&nbsp$\forall&nbspx&nbsp\in&nbspX$，$x$&nbsp与&nbsp$x$&nbsp不符合关系&nbsp$R$</span>
                 <br>
                 <br>
                 <span class = "normal">比如「父子」关系是反自反的，实数间「小于」关系是反自反的。</span>
                 <br>
                 <br>
-                <span class = "normal"><u><span class = "strong">定义</span></u>：集合&nbsp$X$&nbsp上的二元关系&nbsp$R$&nbsp称为是对称的，如果对&nbsp$X$&nbsp中任两个元素&nbsp$x,&nbspy$&nbsp只要&nbsp$xRy$，则必有&nbsp$yRx$。</span>
+                <span class = "normal"><u><span class = "strong">对称关系</span></u>：集合&nbsp$X$&nbsp上的二元关系&nbsp$R$&nbsp称为是对称的，如果对&nbsp$X$&nbsp中任两个元素&nbsp$x,&nbspy$&nbsp只要&nbsp$xRy$，则必有&nbsp$yRx$。</span>
                 <br>
                 <br>
-                <span class = "normal"><u><span class = "strong">定义</span></u>：对任一&nbsp$A$&nbsp到&nbsp$B$&nbsp的二元关系&nbsp$S$，伴随这一个&nbsp$B$&nbsp到&nbsp$A$&nbsp的二元关系，称为&nbsp$S$&nbsp的逆关系，用&nbsp$S^{-1}$&nbsp表示其定义为</span>
+                <span class = "normal"><u><span class = "strong">关系的逆</span></u>：对任一&nbsp$A$&nbsp到&nbsp$B$&nbsp的二元关系&nbsp$S$，伴随这一个&nbsp$B$&nbsp到&nbsp$A$&nbsp的二元关系，称为&nbsp$S$&nbsp的逆关系，用&nbsp$S^{-1}$&nbsp表示其定义为</span>
                 <br>
 $$
 S^{-1} = \{(y, x)|(x, y) \in S\}
@@ -221,13 +222,13 @@ $$
                 <br>
                 <br>
                 <br>
-                <span class = "normal"><u><span class = "strong">例</span></u>：设映射&nbsp$f$，则&nbsp$Ker(f)$&nbsp是&nbsp$X$&nbsp上的一个二元关系。其中：</span>
+                <span class = "normal"><u><span class = "strong">例：</span></u>设映射&nbsp$f$，则&nbsp$Ker(f)$&nbsp是&nbsp$X$&nbsp上的一个二元关系。其中：</span>
                 <br>
 $$
 Ker(f) = \{(x, y) | x, y, \in X 并且 f(x) = f(y)\}
 $$
                 <br>
-                <span class = "normal"><u><span class = "strong">定义</span></u>：集合&nbsp$X$&nbsp上的二元关系&nbsp$R$&nbsp称为反对称的，如果&nbsp$xRy$，且&nbsp$yRx$&nbsp则&nbsp$x&nbsp=&nbspy$。</span>
+                <span class = "normal"><u><span class = "strong">反对称</span></u>：集合&nbsp$X$&nbsp上的二元关系&nbsp$R$&nbsp称为反对称的，如果&nbsp$xRy$，且&nbsp$yRx$&nbsp则&nbsp$x&nbsp=&nbspy$。</span>
                 <br>
                 <br>
                 <span class = "normal">意思为，只要&nbsp$x&nbsp\neq&nbspy$，则&nbsp$xRy$&nbsp和&nbsp$yRx$&nbsp就不能同时存在。</span>
@@ -236,6 +237,73 @@ $$
                 <span class = "normal" style = "padding-left: 0px;">◇&nbsp&nbsp整数集上的「整除」关系，实数集上的「小于等于」关系，集合间的「包含」关系是反对称的。</span>
                 <br>
                 <span class = "normal" style = "padding-left: 0px;">◇&nbsp&nbsp恒等关系既是对称的又是反对称的，但反之非真，集合&nbsp$X$&nbsp上的关系&nbspR&nbsp既是对称的又是反对称的，当且仅当&nbsp$R&nbsp\subseteq&nbspI_x$.</span>
+                <br>
+                <br>
+                <span class = "normal"><u><span class = "strong">关系的传递</span></u>：如果&nbsp$xRy$，$yRz$，则&nbsp$xRz$&nbsp则这个二元关系具有传递性</span>
+                <br>
+                <br>
+                <span class = "normal" style = "padding-left: 0px;">◇&nbsp&nbsp定义在人的集合上的「朋友」关系，「相互认识」关系均不是传递关系，集合间的包含关系是传递的</span>
+                <br>
+                <span class = "normal" style = "padding-left: 0px;">◇&nbsp&nbsp$R$&nbsp反自反且对称，$R$&nbsp不传递除非&nbsp$R$&nbsp是空关系</span>
+                <br>
+                <span class = "normal" style = "padding-left: 40px;">◇&nbsp&nbsp证明：因为对称，$(a,&nbspb)&nbsp\in&nbspR$，$(b,&nbspa)&nbsp\in&nbspR$，$\Rightarrow&nbsp(a,&nbspa)&nbsp\in&nbspR$&nbsp，所以自反，矛盾</span>
+                <br>
+                <br>
+                <span class = "normal"><u><span class = "strong">相容的关系</span></u>：自反又对称则为相容（比如定义在人的集合上「朋友」，「相互认识」均是相容的）</span>
+                <br>
+                <br>
+                <br>
+                <br>
+                <span class = "normal"><span class = "strong"><u>例：</u></span>&nbsp$X$&nbsp上的二元关系&nbsp$R$&nbsp是对称的，当且仅当&nbsp$R&nbsp=&nbspR^{-1}$</span>
+                <br>
+                <br>
+                <span class = "normal">证明：</span>
+                <br>
+                <br>
+                <span class = "normal">$\Rightarrow&nbspR&nbsp\in&nbspx^2$，证明：彼此互为子集</span>
+                <br>
+                <br>
+                <span class = "normal">$\Leftarrow$&nbsp有&nbsp$(x,&nbspy)&nbsp\in&nbspR$，必有&nbsp$(y,&nbspx)&nbsp\in&nbspR^{-1}$</span>
+                <br>
+                <br>
+                <div class = "h3" id = "4">关系的合成</div>
+                <br>
+                <span class = "normal"><u><span class = "strong">关系的合成定义</span></u>：$R&nbsp\circ&nbspS&nbsp=&nbsp\{(x,&nbspz)&nbsp|&nbsp(x,&nbspz)&nbsp\in&nbspA&nbsp\times&nbspC&nbsp且&nbsp\exists&nbspy&nbsp\in&nbspB,&nbsp使&nbspxRy,&nbspySz\}$</span>
+                <br>
+                <br>
+                <span class = "normal"><span class = "strong"><u>关系的合成满足结合律</u></span></span>
+                <br>
+                <br>
+                <span class = "normal">证明：</span>
+                <br>
+$$
+xRy, ySz \Rightarrow x(R\circ S)z\\
+x(R \circ S)z \Rightarrow \exists y, xRy, ySz
+$$
+$$
+R_1 \circ (R_2 \cup R_3) = (R_1 \circ R_2) \cup (R_1 \circ R_3) \\
+R_1 \circ (R_2 \cap R_3) = (R_1 \circ R_2) \cap (R_1 \circ R_3)
+$$
+                <br>
+                <span class = "normal" style = "padding-left: 0px;">◇&nbsp&nbsp$(R&nbsp\circ&nbspS)^{-1}&nbsp=&nbspS^{-1}&nbsp\circ&nbspR^{-1}$</span>
+                <br>
+                <span class = "normal" style = "padding-left: 0px;">◇&nbsp&nbsp$R&nbsp\circ&nbspR^{-1}$&nbsp是对称的</span>
+                <br>
+                <br>
+                <span class = "normal"><span class = "strong"><u>关系传递的充分必要条件</u></span>：传递，当且仅当&nbsp$R^2&nbsp\subseteq&nbspR$</span>
+                <br>
+                <br>
+                <span class = "normal"><u><span class = "strong">关系的幂的定义</span></u>：设&nbsp$R$&nbsp是二元关系，递归定义&nbsp$R$&nbsp&nbsp的非负整数次幂如下：</span>
+                <br>
+$$
+R^0 = I_x, \; R^1 = R,\; R^{n + 1} = R^n \circ R
+$$
+                <span class = "normal"><u><span class = "strong">定理</span></u>：设&nbsp$R$，对任意&nbsp$n,&nbspm$，有：</span>
+                <br>
+$$
+R^{m +n} = R^m \circ R^n，(R^m)^n = R^{mn}
+$$
+                <br>
                 <br>
                 <br>
                 <a href = "4.html" class = "conncetion">上一篇：离散数学 1</a>

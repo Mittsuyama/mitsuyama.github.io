@@ -1,5 +1,7 @@
 import codecs
 import os
+import glob
+from PIL import Image
 
 class makeHTML:
     mdFile = None
@@ -11,7 +13,6 @@ class makeHTML:
     homeBttonTemp = []
     blogTemp = []
     num = 0
-    xmlFile = None
 
     def __init__(self):
         path = 'md/'  #待读取的文件夹
@@ -249,17 +250,32 @@ class makeHTML:
         blogHtml = blogHtml.replace('((content))', blogContent)
         outFIle.write(blogHtml)
 
+    def makeSmallJPG(self):
+        path = 'img/blog-image/'  #待读取的文件夹
+        path_list = os.listdir(path)
+        path_list.sort() #对读取的路径进行排序
+        imgList = []
+        for theName in path_list:
+        	imgList.append(os.path.join(path, theName))
+        for i in imgList:
+            img = Image.open(i)
+            width = float(img.size[0])
+            height = float(img.size[1])
+            smallerRate = width / 300.0
+            width /= smallerRate
+            height /= smallerRate
+            img.thumbnail((width, height))
+            img.save('img/smaller-blog-image/' + i[15 : ])
+
     def main(self):
-        #start = input()
-        #end = input()
+        self.makeSmallJPG()
         self.indexFile = open('index.html', 'w')
-        self.xmlFile = open('xml/waterfall.xml', 'w')
+        self.xmlFile = open('js/waterfall.xml', 'w')
         
         homePage = self.homeTemp
         content = ''
         
-        maxNum = 10
-        for i in range(self.num - 1, max(self.num - maxNum, 0) -1, -1):
+        for i in range(self.num - 1, -1, -1):
             self.pHtml(i)
             buttonTemp = self.homeBttonTemp
             buttonTemp = buttonTemp.replace('((blogHref))', str(i))
@@ -269,29 +285,6 @@ class makeHTML:
             buttonTemp = buttonTemp.replace('((brief))', self.blogInfo[0][:-1])
             buttonTemp = buttonTemp.replace('((Tag))', self.blogInfo[1][:-1])
             content += buttonTemp
-        
-        self.xmlFile.write('<content>\n')
-        if self.num > maxNum:
-            for i in range(self.num - maxNum - 1, -1, -1):
-                self.pHtml(i)
-                self.xmlFile.write('<box>\n')
-                self.xmlFile.write('<order>')
-                self.xmlFile.write(str(i))
-                self.xmlFile.write('</order>\n')
-                self.xmlFile.write('<title>')
-                self.xmlFile.write(self.blogInfo[2][:-1])
-                self.xmlFile.write('</title>\n')
-                self.xmlFile.write('<time>')
-                self.xmlFile.write(self.blogInfo[3][:-1])
-                self.xmlFile.write('</time>\n')
-                self.xmlFile.write('<brief>')
-                self.xmlFile.write(self.blogInfo[0][:-1])
-                self.xmlFile.write('</brief>\n')
-                self.xmlFile.write('<tag>')
-                self.xmlFile.write(self.blogInfo[1][:-1 ])
-                self.xmlFile.write('</tag>\n')
-                self.xmlFile.write('</box>\n')
-        self.xmlFile.write('</content>')
         
         homePage = homePage.replace('((mainContainer))', content)
         self.indexFile.write(homePage)
