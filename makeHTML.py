@@ -1,7 +1,7 @@
 import codecs
 import os
 import glob
-#from PIL import Image
+from PIL import Image
 
 class makeHTML:
     mdFile = None
@@ -268,7 +268,7 @@ class makeHTML:
             img.save('img/smaller-blog-image/' + i[15 : ])
 
     def main(self):
-        #self.makeSmallJPG()
+        self.makeSmallJPG()
         self.indexFile = open('index.html', 'w')
         self.xmlFile = open('js/waterfall.xml', 'w')
         
