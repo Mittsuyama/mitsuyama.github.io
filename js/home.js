@@ -86,6 +86,7 @@ $(window).scroll(function(event){
     }
 });
 
+/*
 function loadXML(){
     var xmlDoc;
 
@@ -110,6 +111,7 @@ function loadXml() {
     var xmlDoc = loadXML();
     //alert(xmlDoc);
 }
+*/
 
 $(document).ready(function(){
     $("#homeBackground").hide();
@@ -117,7 +119,7 @@ $(document).ready(function(){
     $(".home_background").hide();
 
     $(window).load(function(){
-        loadXml();
+        //loadXml();
         $("#homeBackground").fadeIn();
         $(".nevigation").fadeIn();
         $(".home_background").fadeIn();
