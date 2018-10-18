@@ -148,7 +148,11 @@ class makeHTML:
             elif len(j) > 3 and j[:2] == '##':
                 tempOrder += 1
                 contentList += '''            <a href = "#%s" class = "contentListCon">''' % (str(tempOrder)) + j[3:-1].replace(' ', '&nbsp&nbsp') + '''</a><br>''' + '\n'
-        blogHtml = blogHtml.replace('((contentList))', contentList)
+        if(tempOrder > 0):
+            blogHtml = blogHtml.replace('((contentList))', contentList)
+        else:
+            contentList += '''            <a href = "#" class = "contentListCon">无目录...</a>\n'''
+            blogHtml = blogHtml.replace('((contentList))', contentList)
 
         pLen = len(self.Paragraph)
         i = 5
