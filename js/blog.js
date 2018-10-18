@@ -16,7 +16,7 @@ $("img.blogImg").click(function() {
     $("<img/>").attr("src", imgSrc).load(function() {
         imgWidth = this.width;
         imgHeight = this.height;
-        $('.imgBack').css("height", $(document.body).height() + 'px');
+        $('.imgBack').css("height", $(document.body).height() + 2000 + 'px');
         $('.imgBack').html('<img src = ' + imgSrc + ' class = "biggerImg"></img>');
         //alert($('.imgBack').scrollTop());
         if(imgHeight < $(window).height()) {
