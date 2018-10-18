@@ -117,6 +117,7 @@ div.articleContext {
 }
 
 div.h1 {
+    font-weight: bold;
     font-size: 50px;
     text-align: center;
     width: 100%;
@@ -124,6 +125,7 @@ div.h1 {
 }
 
 div.h2 {
+    font-weight: bold;
     font-size: 40px;
     text-align: center;
     background-image: url("../img/underline.png");
@@ -136,7 +138,8 @@ div.h2 {
 }
 
 div.h3 {
-    font-size: 35px;
+    font-weight: bold;
+    font-size: 37px;
     font-style: italic;
     text-align: center;
     width: 100%;
@@ -145,27 +148,29 @@ div.h3 {
 }
 
 div.h4 {
+    font-weight: bold;
     background-image: url("../img/h4.png");
     background-repeat: no-repeat;
     background-position-x: left;
-    background-position-y: 18px;
-    background-size: 2%;
-    font-size: 30px;
+    background-position-y: 13px;
+    background-size: 4%;
+    font-size: 35px;
     margin: 0px;
-    padding: 10px 0px 0px 30px;
+    padding: 10px 0px 0px 50px;
     width: 100%;
     min-height: 50px;
 }
 
 div.h5 {
+    font-weight: bold;
     background-image: url("../img/h5.png");
     background-repeat: no-repeat;
     background-position-x: left;
-    background-position-y: 14px;
-    background-size: 2%;
-    font-size: 25px;
+    background-position-y: 9px;
+    background-size: 4%;
+    font-size: 30px;
     margin: 0px;
-    padding: 10px 0px 0px 30px;
+    padding: 10px 0px 0px 50px;
     width: 100%;
     min-height: 50px; 
 }

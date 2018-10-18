@@ -95,7 +95,7 @@ $(document).ready(function(){
     $("#homeBackground").hide();
     $(".nevigation").hide();
     $(".home_background").hide();
-    loadXml();
+    //loadXml();
 
     $(window).load(function(){
         $("#homeBackground").fadeIn();
