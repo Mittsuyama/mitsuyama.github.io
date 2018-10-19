@@ -253,7 +253,7 @@ $$
 
 
 
-##字体
+## 字体
 
 - 空心：`\mathbb` $\mathbb{ABCDEFGHIJKLMNOPQRSTUVWXYZas}$
 - 特技加粗：`\mathbf` $\mathbf{ABCDEFGHIJKLMNOPQRSTUVWXYZ}$
