@@ -201,7 +201,7 @@ class makeHTML:
                 if isQuote:
                     blogContent += '''                <div class = "quoteAgain">''' + line[2 : -1].replace(' ', '&nbsp&nbsp') + '''</div>''' + '\n'
                 else:
-                    blogContent += '''                <div class = "quote">''' + line[1 : -1].replace(' ', '&nbsp&nbsp') + '''</div>''' + '\n'
+                    blogContent += '''                <div class = "quote">''' + line[2 : -1].replace(' ', '&nbsp&nbsp') + '''</div>''' + '\n'
                     isQuote = True
             elif lLen > 3 and line[:3] == 'Tag':
                 if i + 1 < lLen and self.Paragraph[i + 1] == '\n':

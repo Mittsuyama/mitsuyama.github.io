@@ -11,7 +11,7 @@
 }
 
 #homeBackground {
-    background-image: url("../img/570ca371a945c.jpg");
+    background-image: url("../img/background-img/3.jpg");
     background-attachment: fixed;
     background-size: 100%;
     width: 100%;
@@ -94,12 +94,12 @@ div.nav_text {
 
 div.nav_text:hover {
     color: white;
-    background-color: rgba(0, 0, 0, 0.13);
+    background-color: rgba(0, 0, 0, 0.1);
 }
 
 div.nav_text_home:hover {
     color: white;
-    background-color: rgba(255, 180, 50, 0.5);
+    background-color: rgba(255, 190, 30, 0.5);
 }
 
 div.home_background {

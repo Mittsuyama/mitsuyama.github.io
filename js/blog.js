@@ -2,6 +2,7 @@ var screenWidthRate = parseFloat($(document.body).width()) / 1920.0;
 var imgWidth = 0;
 var tempTime = 300;
 var minScrollTop = 500;
+var contentIsFade = true;
 
 $(document).ready(function() {
     if($(window).scrollTop() > minScrollTop) {
@@ -28,6 +29,18 @@ $("img.blogImg").click(function() {
         shWitdh = Math.min($(window).width() * 0.8, imgWidth) + 'px';
         $('.biggerImg').animate({width: shWitdh}, tempTime);
     });
+});
+
+$(".contentTitile").click(function() {
+    /*if(contentIsFade) {
+        $(".contentList").slideDown("slow");
+        contentIsFade = false;
+    }
+    else {
+        $(".contentList").slideUp("slow");
+        contentIsFade = true;
+    }*/
+    $(".contentList").slideToggle(400);
 });
 
 $(window).scroll(function(event){
