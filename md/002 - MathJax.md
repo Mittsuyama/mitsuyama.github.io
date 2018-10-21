@@ -72,6 +72,7 @@ Tag: `数学`
 - `LaTeX`：$\LaTeX$
 - `\hat{xx}`：$\hat{x}$，`\widehat{xy}`：$\widehat{xy}$，`\bar{}`，$\bar{x}$，，`\overline{xyz}`：$\overline{xyz}$，
 - `\vec{x}`：$\vec{x}$，`\overrightarrow{xy}`：$\overrightarrow{xy}$，`\overleftrightarrow{xy}`：$\overleftrightarrow{xy}$，`\dot{x}`：$\dot{x}$，`\ddot{x}`：$\ddot{x}$
+- `\flat \sharp`：$\flat \quad \sharp$
 
 ## 格式
 
