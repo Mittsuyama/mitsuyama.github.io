@@ -76,7 +76,7 @@ div.contentListOut {
     position: fixed;
     padding: 15px;
     width: 20%;
-    left: 30px;
+    left: 10px;
     top: 60px;
     z-index: 2;
 }
