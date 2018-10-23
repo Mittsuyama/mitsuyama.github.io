@@ -1,7 +1,7 @@
 var screenWidthRate = parseFloat($(document.body).width()) / 1920.0;
 var imgWidth = 0;
 var tempTime = 300;
-var minScrollTop = 500;
+var minScrollTop = 430;
 var contentIsFade = true;
 
 $(document).ready(function() {
@@ -53,7 +53,7 @@ $(".contentTitile").click(function() {
 
 $(window).scroll(function(event){
     if($(window).scrollTop() > minScrollTop) {
-        $('.contentListOut').fadeIn();
+        $('.contentListOut').show();
     }
     else {
         $('.contentListOut').hide();
