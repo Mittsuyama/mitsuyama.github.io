@@ -39,6 +39,14 @@ div.nevigation {
     z-index: 9990;
 }
 
+img.siteImg {
+    position: absolute;
+    width: 40px;
+    top: 7px;
+    left: 80px;
+    opacity: 0.5;
+}
+
 div.nevigation_content1 {
     position: absolute;
     left: 130px;

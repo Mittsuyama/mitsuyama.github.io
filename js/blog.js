@@ -35,7 +35,7 @@ $("img.blogImg").click(function() {
 $('.contentListCon').click(function() {
     $('html, body').animate ({
         scrollTop: $( $.attr(this, 'href') ).offset().top - 60
-    }, 500);
+    }, 500, "easeInOutCubic");
     return false;
 });
 
