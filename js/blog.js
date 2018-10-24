@@ -51,11 +51,11 @@ function getOffset(Node, offset) {
 $('.contentListCon').click(function() {
     var pos = $($.attr(this, 'href')).offset().top - 50;
     var myST = $(window).scrollTop();
-    var deriv =  (myST - pos) / 115 / screenWidthRate;
+    var deriv =  (myST - pos) / 113 / (screenWidthRate * screenWidthRate);
     //alert(deriv);
     $('html, body').animate ({
         scrollTop: pos + deriv
-    }, 500, "swing");
+    }, 400, "swing");
     return false;
 });
 
