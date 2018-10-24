@@ -1,8 +1,13 @@
-var screenWidthRate = parseFloat($(document.body).width()) / 1920.0;
+﻿var screenWidthRate = parseFloat($(document.body).width()) / 1920.0;
 var imgWidth = 0;
 var tempTime = 300;
 var minScrollTop = 430;
 var contentIsFade = true;
+var screenWidthRate2 = screenWidthRate;
+for(var i = 0; i < 13; i++) {
+	screenWidthRate2 *= screenWidthRate;
+}
+screenWidthRate2 *= Math.sqrt(Math.sqrt(screenWidthRate)) * Math.sqrt(Math.sqrt(Math.sqrt(Math.sqrt(screenWidthRate))));
 
 $(document).ready(function() {
     if($(window).scrollTop() > minScrollTop) {
@@ -49,9 +54,10 @@ function getOffset(Node, offset) {
 }
 
 $('.contentListCon').click(function() {
+	//alert(screenWidthRate2);
     var pos = $($.attr(this, 'href')).offset().top - 50;
     var myST = $(window).scrollTop();
-    var deriv =  (myST - pos) / 113 / (screenWidthRate * screenWidthRate);
+    var deriv =  (myST - pos) / 113 / screenWidthRate2;
     //alert(deriv);
     $('html, body').animate ({
         scrollTop: pos + deriv
