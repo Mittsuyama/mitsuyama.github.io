@@ -67,7 +67,7 @@ class makeHTML:
         if mLen > spaceLen + 2 and myStr[spaceLen:spaceLen + 2] == '- ':
             newS += '''<span class = "normal" style = "padding-left: %spx;">''' % (str(spaceLen * 20))
             i = spaceLen + 2
-            newS += '◇&nbsp&nbsp'
+            newS += '•&nbsp&nbsp'
         else:
             newS += '''<span class = "normal">'''
 

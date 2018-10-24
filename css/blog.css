@@ -75,8 +75,8 @@ div.contentListOut {
     display: none;
     position: fixed;
     padding: 15px;
-    width: 20%;
-    left: 30px;
+    width: 23%;
+    left: 10px;
     top: 60px;
     z-index: 2;
 }
@@ -84,11 +84,11 @@ div.contentListOut {
 div.contentTitile {
     padding-top: 5px;
     text-align: center;
-    width: 130px;
+    width: 110px;
     height: 50px;
     font-size: 25px;
     font-family: serif;
-    color: rgba(200, 200, 200, 0.9);
+    color: rgba(100, 100, 100, 0.5);
     border-radius: 7px;
     border: 3px solid rgba(200, 200, 200, 0.2);
     transition-duration: 0.2s;
@@ -102,7 +102,7 @@ div.contentTitile:hover {
 }
 
 div.contentList {
-    display: none;
+    display: block;
     padding-left: 20px;
     border-left: rgba(200, 200, 200, 0.5) solid 3px;
 }
