@@ -51,7 +51,7 @@ function getOffset(Node, offset) {
 $('.contentListCon').click(function() {
     var pos = $($.attr(this, 'href')).offset().top - 50;
     var myST = $(window).scrollTop();
-    var deriv =  (myST - pos) / 113 / (screenWidthRate * screenWidthRate);
+    var deriv = (myST - pos) / 113 / (screenWidthRate * screenWidthRate);
     //alert(deriv);
     $('html, body').animate ({
         scrollTop: pos + deriv
