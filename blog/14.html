@@ -31,16 +31,14 @@
             <div class = "blogTitle">
                     管理信息系统 - 学习笔记
 
-
             </div>
             <div class = "tagContainer">
                 Tag：Learning
 
-
             </div>
         </div>
-
-        <div class = "nevigation">
+        
+        <div class = "nevigation" style = "background-color: white">
             <div class = "nevigation_content1">
                 <a href = "http://mitsuyama.top" style = "color: #999999">
                 <div class = "nav_text_home">
@@ -77,6 +75,8 @@
             <a href = "#3" class = "contentListCon" style = "padding-left: 40px;">管理信息系统概述</a><br>
             <a href = "#9" class = "contentListCon" style = "padding-left: 40px;">业务流程&nbsp&nbsp信息与信息系统</a><br>
             <a href = "#16" class = "contentListCon" style = "padding-left: 40px;">组织战略&nbsp&nbsp信息系统和竞争优势</a><br>
+            <a href = "#23" class = "contentListCon">第二部分&nbsp&nbsp信息系统技术基础</a><br>
+            <a href = "#24" class = "contentListCon" style = "padding-left: 40px;">硬件与软件</a><br>
 
                 </div>
             </div>
@@ -847,14 +847,14 @@ $$
                 <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp行业结构的五力模型：五种力量模型将大量不同的因素汇集在一个简便的模型中，以此分析一个行业的基本竞争态势。五种力量模型确定了竞争的五种影响力的主要来源，即供应商和购买者的讨价还价&nbsp能力，新进入者的威胁，替代品的威胁，以及最后一点，来自目前在同一行业的公司间的&nbsp竞争。一种可行战略的提出首先应该包括确认并评价这五种力量，不同力量的特性和重要&nbsp性因行业和公司的不同而变化。如下图：</span>
                 <br>
                 <br>
-                <img src = "../img/1540264019383.png" class = "blogImg">
+                <img src = "../img/MIS/1540264019383.png" class = "blogImg">
                 <br>
                 <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp竞争战略：一个公司的竞争战略是指公司管理层所指制定的长远的发展规划和具体的目标措施，其目的在于发展公司的业务并建立公司的市场地位。即组织对于其行业竞争结构（五种力量模型）的对应措施。</span>
                 <br>
                 <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbspPorter&nbsp的&nbsp4&nbsp种竞争策略：整个行业的成本优势；（聚焦）行业特定区域（人群）的成本优势；行业的差异化；（聚焦）行业特定区域（人群）的差异化。如下：</span>
                 <br>
                 <br>
-                <img src = "../img/1540264233817.png" class = "blogImg">
+                <img src = "../img/MIS/1540264233817.png" class = "blogImg">
                 <br>
                 <div class = "h4" id = "18">信息系统以及竞争优势&nbsp&nbsp——&nbsp&nbsp价值链与业务流程再造</div>
                 <br>
@@ -867,12 +867,12 @@ $$
                 <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp波特的一般价值链模型：通常包括五个主要活动和三个辅助支持活动（从系统的角度）。</span>
                 <br>
                 <br>
-                <img src = "../img/1540264403452.png" class = "blogImg">
+                <img src = "../img/MIS/1540264403452.png" class = "blogImg">
                 <br>
                 <span class = "normal"><u><span class = "strong">价值链中的主要活动</span></u>：</span>
                 <br>
                 <br>
-                <img src = "../img/1540264426890.png" class = "blogImg">
+                <img src = "../img/MIS/1540264426890.png" class = "blogImg">
                 <br>
                 <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp价值链上的每个阶段都会使产品积累成本，增加价值。</span>
                 <br>
@@ -882,7 +882,7 @@ $$
                 <span class = "normal"><u><span class = "strong">价值链中的辅助活动</span></u></span>
                 <br>
                 <br>
-                <img src = "../img/1540264513515.png" class = "blogImg">
+                <img src = "../img/MIS/1540264513515.png" class = "blogImg">
                 <br>
                 <span class = "normal"><u><span class = "strong">辅助的作用</span></u>：辅助活动主要对产品的生产、销售和售后服务等起间接作用</span>
                 <br>
@@ -1001,6 +1001,203 @@ $$
                 <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp增加市场进入者的障碍</span>
                 <br>
                 <br>
+                <div class = "h2" id = "23">第二部分&nbsp&nbsp信息系统技术基础</div>
+                <br>
+                <div class = "h3" id = "24">硬件与软件</div>
+                <br>
+                <div class = "h4" id = "25">开篇案例：</div>
+                <br>
+                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp因为业务需要，迪伊要建立博客系统来支持销售业务</span>
+                <br>
+                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp迪伊不了解技术细节，邀请信息系统专家唐.格担任技术&nbsp顾问</span>
+                <br>
+                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp唐.格知道最好不要抛给迪伊技术性的问题</span>
+                <br>
+                <br>
+                <div class = "h5">为了解需求，唐.格需要问一些基本问题：</div>
+                <br>
+                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp你的博客是基于内部环境运行还是与外部的服务机构合作运行？</span>
+                <br>
+                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp你会选择WINDOWS或者LINUX&nbsp系统？&nbsp</span>
+                <br>
+                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp你想怎么样编码你的整个博客？</span>
+                <br>
+                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp你是想要用软件还是让我给你建立一个&nbspHTML编译器在你的博客软件里？&nbsp</span>
+                <br>
+                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp你想使用哪种网页浏览器？IE、Firebox、Chrome，还是其他的？&nbsp</span>
+                <br>
+                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp你是否介意你的博客在某一浏览器里不能被完美地呈现出来？</span>
+                <br>
+                <br>
+                <div class = "h5">迪伊的困惑</div>
+                <br>
+                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp迪伊不知道这些问题的答案</span>
+                <br>
+                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp她甚至不知道其中某些问题的意思</span>
+                <br>
+                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp她公司里的IT人员曾经告诉过她这个工程几乎不可能按&nbsp时完成。他们也不会为迪伊提供任何技术支持</span>
+                <br>
+                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp由于潜在的利益冲突，唐.格不可能免费解答迪伊提出&nbsp的所有问题</span>
+                <br>
+                <br>
+                <div class = "h4" id = "26">本章学习目标</div>
+                <br>
+                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp作为一个经理需要掌握哪些计算机硬件和软件的知识？</span>
+                <br>
+                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp计算机由哪几部分组成？</span>
+                <br>
+                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp客户机和服务器之间的区别有哪些？</span>
+                <br>
+                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp计算机中的数据是如何存储的？</span>
+                <br>
+                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp如何理解胖客户端和瘦客户端？</span>
+                <br>
+                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp有哪些常见的操作系统？</span>
+                <br>
+                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp如何对应用软件进行分类？</span>
+                <br>
+                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp本章学习的知识如何帮助迪伊？</span>
+                <br>
+                <br>
+                <div class = "h4" id = "27">计算机硬件的知识</div>
+                <br>
+                <div class = "h5">硬件</div>
+                <br>
+                <span class = "normal">由电子元件及相关配件组成的,能根据编入计算机程序和&nbsp软件中的指令实现数据的输入、处理、输出和存储。</span>
+                <br>
+                <br>
+                <span class = "normal"><u><span class = "strong">计算机的一般组成</span></u>：</span>
+                <br>
+                <br>
+                <img src = "../img/MIS/1540347264063.png" class = "blogImg">
+                <br>
+                <span class = "normal">中央处理器（CPU）：计算机的大脑：能够从<span class = "emphasis">主存储器(内存)</span>&nbsp中调用指令、处理指令&nbsp、执行运算并将结果写&nbsp入到主存储器中。</span>
+                <br>
+                <br>
+                <span class = "normal">特殊功能卡：提升计算机性能的特殊&nbsp功能卡。&nbsp例如显卡，提高计算机&nbsp显示器的清晰程度。</span>
+                <br>
+                <br>
+                <span class = "normal"><u><span class = "strong">计算机的工作原理</span></u></span>
+                <br>
+                <br>
+                <img src = "../img/MIS/1540347378332.png" class = "blogImg">
+                <br>
+                <span class = "normal">CPU&nbsp把程序或数据从磁盘或光盘等设备读取到<span class = "emphasis">内存</span>中</span>
+                <br>
+                <br>
+                <span class = "normal">内存：</span>
+                <br>
+                <br>
+                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp包含操作系统指令</span>
+                <br>
+                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp包含程序指令</span>
+                <br>
+                <br>
+                <span class = "normal">CPU&nbsp通过数据信道或总线从内存中读出指令和数据并处理</span>
+                <br>
+                <br>
+                <span class = "normal">缓存：CPU&nbsp中有小容量的能快速存储的存储系统，使用频率较高的指令要求保存在缓存</span>
+                <br>
+                <br>
+                <span class = "normal">CPU&nbsp处理完后通过&nbsp输出设备如显示器&nbsp把结果反馈给用户</span>
+                <br>
+                <br>
+                <div class = "h4" id = "28">计算机中的数据</div>
+                <br>
+                <div class = "h5">二进制数字</div>
+                <br>
+                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp计算机中存储的数据可以是数字、字符、金额、图片、录音等多&nbsp种格式</span>
+                <br>
+                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp计算机用二进制表示数据，称为比特（Bit），一比特不是&nbsp0&nbsp就是&nbsp1</span>
+                <br>
+                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp用&nbsp0&nbsp表示开关「开」的状态</span>
+                <br>
+                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp用&nbsp1&nbsp表示开关「关」的状态</span>
+                <br>
+                <br>
+                <div class = "h5">字节是计算机中的最小存储单位</div>
+                <br>
+                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp8&nbsp个比特构成一个字节（Byte）</span>
+                <br>
+                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp主存、磁盘或者其他计算机设备容量大小都就是用字节表示</span>
+                <br>
+                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp存储量规格：</span>
+                <br>
+                <span class = "normal" style = "padding-left: 40px;">•&nbsp&nbsp1&nbspKB&nbsp=&nbsp1,024&nbspBytes</span>
+                <br>
+                <span class = "normal" style = "padding-left: 40px;">•&nbsp&nbsp1&nbspPB&nbsp=&nbsp1,024&nbspTB</span>
+                <br>
+                <span class = "normal" style = "padding-left: 40px;">•&nbsp&nbsp1&nbspEB&nbsp=&nbsp1,024&nbspPB</span>
+                <br>
+                <span class = "normal" style = "padding-left: 40px;">•&nbsp&nbsp1&nbspZB&nbsp=&nbsp1,024&nbspEB</span>
+                <br>
+                <br>
+                <div class = "h4" id = "29">为什么管理者需要了解计算机原理</div>
+                <br>
+                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbspCPU&nbsp的性能：</span>
+                <br>
+                <span class = "normal" style = "padding-left: 40px;">•&nbsp&nbsp运行速度用&nbspHz&nbsp表示：1.8G&nbspHz&nbspor&nbsp3.6G&nbspHz&nbspor&nbsp……&nbsp?</span>
+                <br>
+                <span class = "normal" style = "padding-left: 40px;">•&nbsp&nbsp单核&nbspor&nbsp双核&nbsp（个人计算机）&nbspor&nbsp四核（服务器）?</span>
+                <br>
+                <span class = "normal" style = "padding-left: 40px;">•&nbsp&nbsp只处理简单文字的员工不需要速度快的CPU</span>
+                <br>
+                <span class = "normal" style = "padding-left: 40px;">•&nbsp&nbsp处理复杂任务占用更多CPU</span>
+                <br>
+                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp需要多大的内存空间？</span>
+                <br>
+                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp内存太小导致经常交换内存。</span>
+                <br>
+                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp缓存和内存是易失的&nbsp：管理者需要及时保存</span>
+                <br>
+                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp磁盘和光盘是稳定的</span>
+                <br>
+                <br>
+                <div class = "h4" id = "30">客户端和服务器端</div>
+                <br>
+                <img src = "../img/MIS/1540347987507.png" class = "blogImg">
+                <br>
+                <div class = "h5">区别</div>
+                <br>
+                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp客户端计算机</span>
+                <br>
+                <span class = "normal" style = "padding-left: 40px;">•&nbsp&nbsp用于文字处理、数据库访问、应用程序请求、网络连接等操作</span>
+                <br>
+                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp服务器端计算机</span>
+                <br>
+                <span class = "normal" style = "padding-left: 40px;">•&nbsp&nbsp执行复杂、大容量的任务</span>
+                <br>
+                <span class = "normal" style = "padding-left: 40px;">•&nbsp&nbsp更快的处理速度和处理能力</span>
+                <br>
+                <span class = "normal" style = "padding-left: 40px;">•&nbsp&nbsp更大的数据存储容量</span>
+                <br>
+                <span class = "normal" style = "padding-left: 40px;">•&nbsp&nbsp没有视频显示，通过网络远程读取</span>
+                <br>
+                <br>
+                <div class = "h5">瘦客户端和胖客户端</div>
+                <br>
+                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp瘦客户端</span>
+                <br>
+                <span class = "normal" style = "padding-left: 40px;">•&nbsp&nbsp客户端仅仅需要安装浏览器</span>
+                <br>
+                <span class = "normal" style = "padding-left: 40px;">•&nbsp&nbsp不需要安装和管理客户端应用软件</span>
+                <br>
+                <span class = "normal" style = "padding-left: 40px;">•&nbsp&nbsp绝大部分工作由服务器承担，对服务器要求较高</span>
+                <br>
+                <span class = "normal" style = "padding-left: 40px;">•&nbsp&nbsp客户端维护与升级的成本较低</span>
+                <br>
+                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp胖客户端&nbsp</span>
+                <br>
+                <span class = "normal" style = "padding-left: 40px;">•&nbsp&nbsp在客户端计算机需要安装并运行应用软件</span>
+                <br>
+                <span class = "normal" style = "padding-left: 40px;">•&nbsp&nbsp客户端和服务器端都能够处理任务</span>
+                <br>
+                <span class = "normal" style = "padding-left: 40px;">•&nbsp&nbsp对客户机的要求较高，但可以减轻服务器的压力</span>
+                <br>
+                <span class = "normal" style = "padding-left: 40px;">•&nbsp&nbsp客户端软件安装、维护和升级成本较大困难</span>
+                <br>
+                <br>
+                <div class = "h4" id = "31">服务器农场</div>
 
             </div>
             <div class = "myAffix">
