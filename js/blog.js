@@ -31,21 +31,43 @@ $("img.blogImg").click(function() {
     });
 });
 
+function getOffset(Node, offset) {
+    if (!offset) {
+        offset = {};
+        offset.top = 0;
+        offset.left = 0;
+    }
+
+    if (Node == document.body) {//当该节点为body节点时，结束递归
+        return offset;
+    }
+
+    offset.top += Node.offsetTop;
+    offset.left += Node.offsetLeft;
+
+    return getOffset(Node.parentNode, offset);//向上累加offset里的值
+}
 
 $('.contentListCon').click(function() {
+    var pos = $($.attr(this, 'href')).offset().top - 50;
+    var myST = $(window).scrollTop();
+    var deriv =  (myST - pos) / 5.15;
+    //alert(deriv);
     $('html, body').animate ({
-        scrollTop: $( $.attr(this, 'href') ).offset().top - 60
-    }, 500, "easeInOutCubic");
+        scrollTop: pos + deriv
+    }, 500, "swing");
     return false;
 });
 
 $(".contentTitile").click(function() {
     /*if(contentIsFade) {
-        $(".contentList").slideDown("slow");
+        $(".contentList").slideToggle(400);
+        $(".contentTitile").html("▽  目录");
         contentIsFade = false;
     }
     else {
-        $(".contentList").slideUp("slow");
+        $(".contentList").slideToggle(400);
+        $(".contentTitile").html("△  目录");
         contentIsFade = true;
     }*/
     $(".contentList").slideToggle(400);
