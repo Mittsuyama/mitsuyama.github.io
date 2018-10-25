@@ -113,11 +113,10 @@ function loadXml() {
 }
 */
 
-$(document).ready(function(){
+$(document).ready(function() {
     $("#homeBackground").hide();
     $(".nevigation").hide();
     $(".home_background").hide();
-
     $(window).load(function(){
         //loadXml();
         $("#homeBackground").fadeIn();
