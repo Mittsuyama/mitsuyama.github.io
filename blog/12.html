@@ -76,6 +76,7 @@
             <a href = "#4" class = "contentListCon" style = "padding-left: 40px;">关系的合成</a><br>
             <a href = "#5" class = "contentListCon" style = "padding-left: 40px;">关系的闭包</a><br>
             <a href = "#6" class = "contentListCon" style = "padding-left: 40px;">关系矩阵和关系图</a><br>
+            <a href = "#9" class = "contentListCon" style = "padding-left: 40px;">等价关系与集合的划分</a><br>
 
                 </div>
             </div>
@@ -98,7 +99,7 @@ k_1 & k_2 & k_3 & \ldots & k_n
 \end{pmatrix}
 $$
                 <br>
-                <span class = "normal"><span class = "strong"><u>特征函数的定义</u></span>：设&nbsp$X$&nbsp是一个集合，$E&nbsp\subseteq&nbspX$，$X$&nbsp到&nbsp$\{0,&nbsp1\}$&nbsp的一个如下映射&nbsp$\chi_e$&nbsp，称为集合&nbsp$E$&nbsp上的一个特征函数，$\forall&nbspx&nbsp\in&nbspX$：</span>
+                <span class = "normal">设&nbsp$X$&nbsp是一个集合，$E&nbsp\subseteq&nbspX$，$X$&nbsp到&nbsp$\{0,&nbsp1\}$&nbsp的一个如下映射&nbsp$\chi_e$&nbsp，称为集合&nbsp$E$&nbsp上的一个特征函数，$\forall&nbspx&nbsp\in&nbspX$：</span>
                 <br>
 $$
 \chi_e(x) = 
@@ -115,10 +116,15 @@ $$
                 <br>
                 <div class = "h2" id = "2">关系</div>
                 <br>
-                <span class = "normal"><span class = "strong"><u>关系的定义</u></span>：设&nbsp$A,&nbspB$&nbsp是两个集合，一个从&nbsp$A&nbsp\times&nbspB$&nbsp到集合&nbsp{是，否}，的映射&nbsp$R$&nbsp称为一个从&nbsp$A$&nbsp到&nbsp$B$&nbsp的一个二元关系。如果&nbsp$A&nbsp\times&nbspB$&nbsp中的元&nbsp$(a,&nbspb)$&nbsp在&nbsp$R$&nbsp下的象为「是」，则称&nbsp$a$&nbsp与&nbsp$b$&nbsp复合关系&nbsp$R$，记成&nbsp$aRb$。如果&nbsp$(a,&nbspb)$&nbsp在&nbsp$R$&nbsp下的象为「否」，则称&nbsp$a$&nbsp与&nbsp$b$&nbsp不符合关系&nbsp$R$，记为&nbsp$a&nbsp\not&nbspR&nbspb$。如果&nbsp$A&nbsp=&nbspB$&nbsp，则称&nbsp$R$&nbsp为&nbsp$A$&nbsp上的二元关系。</span>
+                <div class = "h5">关系的定义</div>
+                <br>
+                <span class = "normal">设&nbsp$A,&nbspB$&nbsp是两个集合，一个从&nbsp$A&nbsp\times&nbspB$&nbsp到集合&nbsp{是，否}，的映射&nbsp$R$&nbsp称为一个从&nbsp$A$&nbsp到&nbsp$B$&nbsp的一个二元关系。如果&nbsp$A&nbsp\times&nbspB$&nbsp中的元&nbsp$(a,&nbspb)$&nbsp在&nbsp$R$&nbsp下的象为「是」，则称&nbsp$a$&nbsp与&nbsp$b$&nbsp复合关系&nbsp$R$，记成&nbsp$aRb$。如果&nbsp$(a,&nbspb)$&nbsp在&nbsp$R$&nbsp下的象为「否」，则称&nbsp$a$&nbsp与&nbsp$b$&nbsp不符合关系&nbsp$R$，记为&nbsp$a&nbsp\not&nbspR&nbspb$。如果&nbsp$A&nbsp=&nbspB$&nbsp，则称&nbsp$R$&nbsp为&nbsp$A$&nbsp上的二元关系。</span>
                 <br>
                 <br>
-                <span class = "normal"><span class = "strong"><u>例&nbsp1</u></span>：设&nbsp$Z$&nbsp表示整数之集，整数间的整除关系&nbsp|&nbsp：$m&nbsp|&nbspn&nbsp\iff&nbspm$&nbsp能整除&nbsp$n,&nbspm,&nbspn&nbsp\in&nbspZ$&nbsp就是&nbsp$Z$&nbsp上的一个二元关系。</span>
+                <span class = "normal"><span class = "strong"><u>例&nbsp1</u></span></span>
+                <br>
+                <br>
+                <span class = "normal">：设&nbsp$Z$&nbsp表示整数之集，整数间的整除关系&nbsp|&nbsp：$m&nbsp|&nbspn&nbsp\iff&nbspm$&nbsp能整除&nbsp$n,&nbspm,&nbspn&nbsp\in&nbspZ$&nbsp就是&nbsp$Z$&nbsp上的一个二元关系。</span>
                 <br>
                 <br>
                 <br>
@@ -146,13 +152,13 @@ $$
                 <br>
                 <br>
                 <br>
-                <span class = "normal"><span class = "strong"><u>关系的定义</u></span>：<span class = "emphasis">这是关系最常用的定义方式</span>，设&nbsp$A$&nbsp与&nbsp$B$&nbsp是两个集合，$A&nbsp\times&nbspB$&nbsp&nbsp的任一子集&nbsp$R$&nbsp称为&nbsp$A$&nbsp到&nbsp$B$&nbsp的一个二元关系，如果&nbsp$(a,&nbspb)&nbsp\in&nbspR$，则称&nbsp$a$&nbsp与&nbsp$b$&nbsp符合关系&nbsp$R$，记成&nbsp$aRb$，如果&nbsp$(a,&nbspb)&nbsp\not&nbsp\in&nbspR$，则说&nbsp$a$&nbsp与&nbsp$b$&nbsp不符合关系&nbsp$R$.</span>
+                <span class = "normal"><span class = "strong"><u>关系的第二种定义</u></span>：<span class = "emphasis">这是关系最常用的定义方式</span>，设&nbsp$A$&nbsp与&nbsp$B$&nbsp是两个集合，$A&nbsp\times&nbspB$&nbsp&nbsp的任一子集&nbsp$R$&nbsp称为&nbsp$A$&nbsp到&nbsp$B$&nbsp的一个二元关系，如果&nbsp$(a,&nbspb)&nbsp\in&nbspR$，则称&nbsp$a$&nbsp与&nbsp$b$&nbsp符合关系&nbsp$R$，记成&nbsp$aRb$，如果&nbsp$(a,&nbspb)&nbsp\not&nbsp\in&nbspR$，则说&nbsp$a$&nbsp与&nbsp$b$&nbsp不符合关系&nbsp$R$.</span>
                 <br>
                 <br>
                 <span class = "normal"><span class = "strong"><u>定义域与值域</u></span>：$x$&nbsp的域为定义域，记为&nbsp$dom(R)$，$y$&nbsp的域为值域，记为&nbsp$Ran(R)$</span>
                 <br>
                 <br>
-                <span class = "normal"><u><span class = "strong">关系的定义</span></u>：设&nbsp$A,&nbspB$&nbsp是两个集合，一个从&nbsp$A$&nbsp到&nbsp$2^B$&nbsp的映射&nbsp$R$&nbsp称为一个从&nbsp$A$&nbsp到&nbsp$B$&nbsp的多值部分映射。如果&nbsp$a&nbsp\in&nbspA,&nbspR(a)&nbsp=&nbsp\phi$，那么我们称&nbsp$R$&nbsp在&nbsp$a$&nbsp出无定义；反之为「象」或者「值」</span>
+                <span class = "normal"><u><span class = "strong">定义</span></u>：设&nbsp$A,&nbspB$&nbsp是两个集合，一个从&nbsp$A$&nbsp到&nbsp$2^B$&nbsp的映射&nbsp$R$&nbsp称为一个从&nbsp$A$&nbsp到&nbsp$B$&nbsp的多值部分映射。如果&nbsp$a&nbsp\in&nbspA,&nbspR(a)&nbsp=&nbsp\phi$，那么我们称&nbsp$R$&nbsp在&nbsp$a$&nbsp出无定义；反之为「象」或者「值」</span>
                 <br>
                 <br>
                 <span class = "normal">设&nbsp$R$&nbsp是从&nbsp$A$&nbsp到&nbsp$B$&nbsp的一个二元关系，利用&nbsp$R$&nbsp的构造一个&nbsp$A$&nbsp到&nbsp$2^B$&nbsp的映射&nbsp$f_R:&nbsp\forall&nbspx&nbsp\in&nbspA$</span>
@@ -168,7 +174,7 @@ $$
                 <span class = "normal"><span class = "strong"><u>定理</u></span>：从&nbsp$A$&nbsp到&nbsp$B$&nbsp的所有二元关系的集合&nbsp$2^{A&nbsp\times&nbspB}$&nbsp&nbsp与从&nbsp$A$&nbsp到&nbsp$2^B$&nbsp的所有映射的集合&nbsp$(2^B)^A$&nbsp是对等的（证明映射相同，只需证明&nbsp$\forall&nbspx,&nbspf(x)&nbsp=&nbspg(x)$）。</span>
                 <br>
                 <br>
-                <span class = "normal"><u><span class = "strong">关系的定义</span></u>：设&nbsp$A$&nbsp和&nbsp$B$&nbsp是两个集合，一个从&nbsp&nbsp$A$&nbsp到&nbsp$B$&nbsp的多值部分映射&nbsp$R$，称为一个从&nbsp&nbsp$A$&nbsp到&nbsp$B$&nbsp的所有二元关系的。如果&nbsp$x&nbsp\in&nbspA,&nbspy&nbsp\in&nbspR(x)$，则称&nbsp$x$&nbsp与&nbsp$y$&nbsp符合关系&nbsp$R$，反之不符合。</span>
+                <span class = "normal"><u><span class = "strong">关系的第三种定义</span></u>：设&nbsp$A$&nbsp和&nbsp$B$&nbsp是两个集合，一个从&nbsp&nbsp$A$&nbsp到&nbsp$B$&nbsp的多值部分映射&nbsp$R$，称为一个从&nbsp&nbsp$A$&nbsp到&nbsp$B$&nbsp的所有二元关系的。如果&nbsp$x&nbsp\in&nbspA,&nbspy&nbsp\in&nbspR(x)$，则称&nbsp$x$&nbsp与&nbsp$y$&nbsp符合关系&nbsp$R$，反之不符合。</span>
                 <br>
                 <br>
                 <div class = "quote">二元关系就是函数概念的推广，从单值性推广到多值性，从处处有定义推广到对部分元素有定义。</div>
@@ -344,13 +350,14 @@ $$
                 <span class = "normal">概要：$(x,&nbspy)&nbsp\in&nbspR^n$，$(x,&nbspx_1),&nbsp(x_1,&nbspx_2)&nbsp\ldots&nbsp(x_n&nbsp-&nbsp1,&nbspy)&nbsp\in&nbspR$，$R&nbsp\subseteq&nbspR^+$，$R^+$&nbsp具有传递性可证。</span>
                 <br>
                 <br>
-                <br>
-                <br>
                 <span class = "normal"><u><span class = "strong">定理</span></u>：关系&nbspR，则&nbsp$R^+&nbsp=&nbspR&nbsp\cup&nbspR^2&nbsp\cup&nbsp\ldots&nbsp\cup&nbspR^n$，此时&nbsp$n$&nbsp&nbsp是有限的</span>
                 <br>
 $$
 R \cup R^2 \cup \ldots \cup R^n \subseteq \bigcup_{n = 1}^{\infty}R^n = R^+
 $$
+                <span class = "normal">只需证明&nbsp$R^{n&nbsp+&nbspk}&nbsp\subseteq&nbspR&nbsp\cup&nbspR^2&nbsp\cup&nbsp\ldots&nbsp\cup&nbspR^n$，则&nbsp$\bigcup_{n&nbsp=&nbsp1}^{\infty}R^n&nbsp\subseteq&nbspR^n$，$k&nbsp>&nbsp1$</span>
+                <br>
+                <br>
 $$
 (x, x_1), (x_1, x_2), \ldots, (x_{n + k - 1}, y) \in R\\
 |x| = n\\
@@ -360,6 +367,8 @@ s.t. \quad x_i = x_j\\
 则能压缩成 (x, x_1) \ldots (x_{i - 1}, x_i),(x_i, x_j + 1) \ldots (x_{n + k - 1}, y)
 使得 (x, y) \in R^{n + k -  1 - j - i} \subseteq R^1 \cup R^2 \ldots R^n
 $$
+                <span class = "normal"><u><span class = "strong">定理</span></u>：</span>
+                <br>
                 <br>
                 <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp$\phi^+&nbsp=&nbsp\phi$</span>
                 <br>
@@ -446,6 +455,84 @@ $$
                 <br>
                 <span class = "normal">$(x&nbsp,y)&nbsp\in&nbspR$&nbsp表示为&nbsp$x&nbsp\to&nbspy$&nbsp的一条有向线段。</span>
                 <br>
+                <br>
+                <div class = "h3" id = "9">等价关系与集合的划分</div>
+                <br>
+                <span class = "normal">$R$&nbsp为等价关系&nbsp$\iff$</span>
+                <br>
+                <br>
+                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp自反性</span>
+                <br>
+                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp对称性</span>
+                <br>
+                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp传递性</span>
+                <br>
+                <br>
+                <span class = "normal">通常用&nbsp$\cong$&nbsp表示全等关系</span>
+                <br>
+                <br>
+                <span class = "normal"><u><span class = "strong">例&nbsp1</span></u>：集合&nbsp$X$&nbsp上的恒等关系（$I_x$）是等价关系</span>
+                <br>
+                <br>
+                <span class = "normal"><u><span class = "strong">例&nbsp2</span></u>：整数集合&nbsp$Z$&nbsp上的膜&nbsp$n$&nbsp同余是等价关系</span>
+                <br>
+                <br>
+                <span class = "normal"><u><span class = "strong">例&nbsp3</span></u>：实&nbsp$n$&nbsp阶矩阵的相似关系是等价关系</span>
+                <br>
+                <br>
+                <span class = "normal"><u><span class = "strong">例&nbsp4</span></u>：设&nbsp$f:&nbspX&nbsp\to&nbspY$，则&nbsp$ker(f)$&nbsp是等价关系，其中：</span>
+                <br>
+$$
+ker(f) = \{(x, y) | x, y \in X 并且 f(x) = f(y)\}
+$$
+                <br>
+                <span class = "normal"><span class = "strong"><u>命题</u></span>：$x'&nbsp\in&nbsp[x]&nbsp\iff&nbsp[x']&nbsp=&nbsp[x]$</span>
+                <br>
+                <br>
+                <span class = "normal"><span class = "emphasis">定义</span>：设&nbsp$X$&nbsp是非空集合，$X$&nbsp的一些非空子集构成的集族&nbsp&nbsp$\mathscr{A}$&nbsp称为&nbsp$X$&nbsp的一个划分，如果&nbsp$\mathscr{A}$&nbsp具有如下性质：</span>
+                <br>
+                <br>
+                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp对&nbsp$\forall&nbspA,&nbspB&nbsp\in&nbsp\mathscr{A}$，若&nbsp$A&nbsp=&nbspB$，则&nbsp$A&nbsp\cap&nbspB&nbsp=&nbsp\phi$</span>
+                <br>
+                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp$\bigcup_{A&nbsp\in&nbsp\mathscr{A}}&nbspA&nbsp=&nbspX$</span>
+                <br>
+                <br>
+                <span class = "normal"><u><span class = "strong">例如</span></u>：模&nbsp$2$&nbsp同余的等价关系，$\mathscr{A}&nbsp=&nbsp\{[1],&nbsp[8]\}$&nbsp就是&nbsp$Z$&nbsp的划分。</span>
+                <br>
+                <br>
+                <span class = "normal"><u><span class = "strong">定理</span></u>：设&nbsp$\cong$&nbsp是集合上的一个等价关系，则&nbsp$\cong$&nbsp的所有等价类构成的集合是&nbsp$X$&nbsp的一个划分。</span>
+                <br>
+                <br>
+                <span class = "normal">证明：</span>
+                <br>
+                <br>
+$$
+1. X = \bigcup_{x \in X}[x] \\
+2. 不相交，反证法
+$$
+                <span class = "normal"><u><span class = "strong">定理</span></u>：设&nbsp$\mathscr{A}$&nbsp是&nbsp$X$&nbsp的一个划分，令</span>
+                <br>
+$$
+\cong = \bigcup_{A \in \mathscr{A}}(A \times A)
+$$
+                <br>
+                <span class = "normal"><u><span class = "strong">定理</span></u>：集合&nbsp$X$&nbsp上的一个二元关系是等价关系&nbsp$\iff$&nbsp存在&nbsp$X$&nbsp的一个划分&nbsp$\mathscr{A}$&nbsp使得&nbsp$x&nbsp\cong&nbspy$&nbsp的充分必要条件是存在&nbsp$A&nbsp\in&nbsp\mathscr{A}$，使得&nbsp$x,&nbspy&nbsp\in&nbspA$</span>
+                <br>
+                <br>
+                <span class = "normal"><u><span class = "strong">商集的定义</span></u>：设&nbsp$\cong$&nbsp是集合&nbsp$X$&nbsp上的等价关系，由&nbsp$\cong$&nbsp的所有等价类构成的集族称为&nbsp$X$&nbsp的商集，记为&nbsp$X&nbsp/&nbsp\cong$</span>
+                <br>
+                <br>
+                <span class = "normal"><u><span class = "strong">等价闭包的定义</span></u>：设&nbsp$R$&nbsp是&nbsp$X$&nbsp上的二元关系，$X$&nbsp上的所有包含&nbsp$R$&nbsp的等价关系的交称为&nbsp$R$&nbsp的等价闭包，记为&nbsp$e(R)$.</span>
+                <br>
+                <br>
+                <span class = "normal"><u><span class = "strong">定理</span></u>：设&nbsp$R$&nbsp是&nbsp$X$&nbsp上的一个二元关系，则：</span>
+                <br>
+$$
+e(R) = (R \cup R^{-1})^*
+$$
+$$
+R \circ S = S \circ R
+$$
                 <br>
                 <a href = "4.html" class = "conncetion">上一篇：离散数学 1</a>
 
