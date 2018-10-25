@@ -1,13 +1,19 @@
-﻿var screenWidthRate = parseFloat($(document.body).width()) / 1920.0;
+﻿var screenWidthRate = parseFloat($(document.body).width() / 1920.0);
 var imgWidth = 0;
 var tempTime = 300;
 var minScrollTop = 430;
 var contentIsFade = true;
 var screenWidthRate2 = screenWidthRate;
-for(var i = 0; i < 13; i++) {
-	screenWidthRate2 *= screenWidthRate;
+
+if(screenWidthRate < 1.1 && screenWidthRate > 0.96) {
+    screenWidthRate2 = 1;
 }
-screenWidthRate2 *= Math.sqrt(Math.sqrt(screenWidthRate)) * Math.sqrt(Math.sqrt(Math.sqrt(Math.sqrt(screenWidthRate))));
+else {
+    for(var i = 0; i < 13; i++) {
+        screenWidthRate2 *= screenWidthRate;
+    }
+    screenWidthRate2 *= Math.sqrt(Math.sqrt(screenWidthRate)) * Math.sqrt(Math.sqrt(Math.sqrt(Math.sqrt(screenWidthRate))));
+}
 
 $(document).ready(function() {
     if($(window).scrollTop() > minScrollTop) {
