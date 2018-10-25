@@ -57,7 +57,11 @@ $('.contentListCon').click(function() {
 	//alert(screenWidthRate2);
     var pos = $($.attr(this, 'href')).offset().top - 50;
     var myST = $(window).scrollTop();
+<<<<<<< HEAD
     var deriv =  (myST - pos) / 113 / screenWidthRate2;
+=======
+    var deriv = (myST - pos) / 113 / (screenWidthRate * screenWidthRate);
+>>>>>>> upstream/master
     //alert(deriv);
     $('html, body').animate ({
         scrollTop: pos + deriv
