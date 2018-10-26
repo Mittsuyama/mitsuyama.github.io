@@ -18,7 +18,7 @@
         <script src="../highlight/highlight.pack.js"></script>
         <script>hljs.initHighlightingOnLoad();</script>
 
-        <title>MITSUYAMA | 管理信息系统 - 学习笔记
+        <title>MITSUYAMA | ﻿管理信息系统 - 学习笔记
 
 </title>
     </head>
@@ -29,7 +29,7 @@
             <img src = "../img/blog-image/14.jpg" class = "blogTitleImg">
             <div class = "glass"></div>
             <div class = "blogTitle">
-                    管理信息系统 - 学习笔记
+                    ﻿管理信息系统 - 学习笔记
 
             </div>
             <div class = "tagContainer">
@@ -77,7 +77,8 @@
             <a href = "#16" class = "contentListCon" style = "padding-left: 40px;">组织战略&nbsp&nbsp信息系统和竞争优势</a><br>
             <a href = "#23" class = "contentListCon">第二部分&nbsp&nbsp信息系统技术基础</a><br>
             <a href = "#24" class = "contentListCon" style = "padding-left: 40px;">硬件与软件</a><br>
-            <a href = "#33" class = "contentListCon" style = "padding-left: 40px;">数据库应用</a><br>
+            <a href = "#33" class = "contentListCon" style = "padding-left: 40px;">数据库</a><br>
+            <a href = "#38" class = "contentListCon" style = "padding-left: 40px;">数据库应用</a><br>
 
                 </div>
             </div>
@@ -1364,9 +1365,138 @@ $$
                 <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp作为一个用户代表参加技术会议</span>
                 <br>
                 <br>
-                <div class = "h3" id = "33">数据库应用</div>
+                <div class = "h3" id = "33">数据库</div>
                 <br>
-                <div class = "h4" id = "34">开篇案例</div>
+                <span class = "normal"><u><span class = "strong">数据处理</span></u>：数据处理是指将数据转换成信息的过程。它包括对数据的收集、存储、分&nbsp类、计算、加工、检索和传输等一系列活动。</span>
+                <br>
+                <br>
+                <span class = "normal"><u><span class = "strong">数据管理</span></u>：数据管理是指数据的收集、组织、存储、检索和维护等操作。</span>
+                <br>
+                <br>
+                <div class = "h4" id = "34">数据管理的几个阶段</div>
+                <br>
+                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp人工管理阶段（1940s-1950s）</span>
+                <br>
+                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp文件系统阶段（1950s-1960s）</span>
+                <br>
+                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp数据库管理阶段（1960s-）&nbsp</span>
+                <br>
+                <br>
+                <div class = "h4" id = "35">数据库的基本概念&nbsp&nbsp</div>
+                <br>
+                <div class = "h5">数据（Data）</div>
+                <br>
+                <span class = "normal">人类生存的世界是一个物质的世界，同时也是一个信息的世界，描述&nbsp现实世界信息最准确的工具是数据。</span>
+                <br>
+                <br>
+                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp定义：描述事物的符号记录</span>
+                <br>
+                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp种类：文本、图形、图像、音频、视频、学生的档案记录、货物的运输情况等</span>
+                <br>
+                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp特点：数据与其语义是不可分的</span>
+                <br>
+                <br>
+                <div class = "h5">数据库（Database）</div>
+                <br>
+                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp定义：数据库（Database，简称&nbspDB）是长期储存在计算机内、有组织的、可共享的大&nbsp量数据的集合。数据（Data）是数据库中存储的基本对象</span>
+                <br>
+                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp基本特征：</span>
+                <br>
+                <span class = "normal" style = "padding-left: 40px;">•&nbsp&nbsp数据按一定的数据模型组织、描述和储存</span>
+                <br>
+                <span class = "normal" style = "padding-left: 40px;">•&nbsp&nbsp可为各种用户共享冗余度较小</span>
+                <br>
+                <span class = "normal" style = "padding-left: 40px;">•&nbsp&nbsp数据独立性较高</span>
+                <br>
+                <span class = "normal" style = "padding-left: 40px;">•&nbsp&nbsp易扩展</span>
+                <br>
+                <br>
+                <div class = "h5">据库管理系统（DBMS）</div>
+                <br>
+                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp定义：位于用户与操作系统之间的一层数据管理软件，是基础软件，是一个大型复&nbsp杂的软件系统</span>
+                <br>
+                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp用途：科学地组织和存储数据、高效地获取和维护数据</span>
+                <br>
+                <br>
+                <div class = "h5">数据库系统（DBS）</div>
+                <br>
+                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp定义：在计算机系统中引入数据库后的系统构成</span>
+                <br>
+                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp数据库系统的构成：</span>
+                <br>
+                <span class = "normal" style = "padding-left: 40px;">•&nbsp&nbsp数据库</span>
+                <br>
+                <span class = "normal" style = "padding-left: 40px;">•&nbsp&nbsp数据库管理系统</span>
+                <br>
+                <span class = "normal" style = "padding-left: 40px;">•&nbsp&nbsp应用系统</span>
+                <br>
+                <span class = "normal" style = "padding-left: 40px;">•&nbsp&nbsp数据库管理员</span>
+                <br>
+                <br>
+                <div class = "h4" id = "36">数据库管理系统的主要功能&nbsp&nbsp</div>
+                <br>
+                <div class = "h5">数据定义功能&nbsp&nbsp</div>
+                <br>
+                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp提供数据定义语言（DDL）</span>
+                <br>
+                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp定义数据库中的数据对象&nbsp</span>
+                <br>
+                <br>
+                <div class = "h5">数据组织、存储和管理</div>
+                <br>
+                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp分类组织、存储和管理各种数据</span>
+                <br>
+                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp确定组织数据的文件结构和存取方式</span>
+                <br>
+                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp实现数据之间的联系</span>
+                <br>
+                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp提供多种存取方法提高存取效率</span>
+                <br>
+                <br>
+                <div class = "h5">数据操纵功能&nbsp&nbsp</div>
+                <br>
+                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp提供数据操纵语言（DML）</span>
+                <br>
+                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp实现对数据库的基本操作&nbsp&nbsp（查询、插入、删除和修改）</span>
+                <br>
+                <br>
+                <div class = "h5">数据库的事务管理和运行管理&nbsp&nbsp</div>
+                <br>
+                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp数据库在建立、运行和维护时由&nbspDBMS&nbsp统一管理和控制</span>
+                <br>
+                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp保证数据的安全性、完整性、多用户对数据的并发使用</span>
+                <br>
+                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp发生故障后的系统恢复&nbsp</span>
+                <br>
+                <br>
+                <div class = "h5">数据库的建立和维护功能</div>
+                <br>
+                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp数据库初始数据装载转换</span>
+                <br>
+                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp数据库转储</span>
+                <br>
+                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp介质故障恢复</span>
+                <br>
+                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp数据库的重组织</span>
+                <br>
+                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp性能监视分析等</span>
+                <br>
+                <br>
+                <span class = "normal">其他功能：DBMS&nbsp与网络中其它软件系统的通信、两个&nbspDBMS&nbsp系统的数据转换、&nbsp异构数据库之间的互访和互操作</span>
+                <br>
+                <br>
+                <div class = "h4" id = "37">数据库与管理信息系统（MIS）</div>
+                <br>
+                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp数据处理系统</span>
+                <br>
+                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp数据管理工具</span>
+                <br>
+                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp应用方式（桌面系统，中央数据库，分布式数据库）</span>
+                <br>
+                <br>
+                <div class = "h3" id = "38">数据库应用</div>
+                <br>
+                <div class = "h4" id = "39">开篇案例</div>
                 <br>
                 <span class = "normal">迪伊&nbsp和她的顾问经过反复商量，最终为她的博客选择了一款叫做&nbspMovable&nbspType&nbsp的应用软件。尽管这个软件操作起来有一点复杂，但是在博客的用户界面管理方面却有独到之处。她的顾问介绍说这是一款专业级别的软件。</span>
                 <br>
@@ -1383,7 +1513,7 @@ $$
                 <span class = "normal">&nbsp唐.格&nbsp建议迪伊再和&nbspIT&nbsp部门谈谈。然而当迪伊再一次给&nbspIT&nbsp部门打电话时，遭到了强烈的反对，IT&nbsp部门的反对理由包含了很多她听不懂的术语，看来迪伊需要本章的知识了。</span>
                 <br>
                 <br>
-                <div class = "h4" id = "35">本节学习目标</div>
+                <div class = "h4" id = "40">本节学习目标</div>
                 <br>
                 <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp数据库的用途是什么？</span>
                 <br>
@@ -1396,7 +1526,7 @@ $$
                 <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp企业&nbspDBMS&nbsp和个人&nbspDBMS&nbsp的区别是什么？</span>
                 <br>
                 <br>
-                <div class = "h4" id = "36">数据库的用途</div>
+                <div class = "h4" id = "41">数据库的用途</div>
                 <br>
                 <span class = "normal">数据库的用途是保存事物记录</span>
                 <br>
@@ -1410,11 +1540,318 @@ $$
                 <span class = "normal" style = "padding-left: 40px;">•&nbsp&nbsp记录多个主题的事务</span>
                 <br>
                 <br>
-                <div class = "h4" id = "37">数据库的构成</div>
+                <div class = "h4" id = "42">数据库的构成</div>
                 <br>
 $$
 数据库 = 表或文件 + 表中各行的关系 + 元数据
 $$
+                <div class = "h5">表或文件</div>
+                <br>
+                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp数据库是表格的集合</span>
+                <br>
+                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp数据库表格</span>
+                <br>
+                <br>
+                <img src = "../img/1540529633436.png" class = "blogImg">
+                <br>
+                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp-&nbsp关键字（主键）</span>
+                <br>
+                <span class = "normal" style = "padding-left: 80px;">•&nbsp&nbsp可以在表中确认唯&nbsp一行的字段</span>
+                <br>
+                <span class = "normal" style = "padding-left: 80px;">•&nbsp&nbsp每个表有一个主键</span>
+                <br>
+                <span class = "normal" style = "padding-left: 80px;">•&nbsp&nbsp学号是学生信息表的主键</span>
+                <br>
+                <span class = "normal" style = "padding-left: 80px;">•&nbsp&nbsp邮件号是电子邮件表的主键</span>
+                <br>
+                <span class = "normal" style = "padding-left: 80px;">•&nbsp&nbsp访问号是来访记录&nbsp表的主键</span>
+                <br>
+                <br>
+                <img src = "../img/1540529977196.png" class = "blogImg">
+                <br>
+                <div class = "h5">表中各行的关系</div>
+                <br>
+                <span class = "normal">学号在表与表之间&nbsp建立起来联系（如上图）</span>
+                <br>
+                <br>
+                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp外部关键字（外键）</span>
+                <br>
+                <span class = "normal" style = "padding-left: 40px;">•&nbsp&nbsp表中的一个字段是另一个表的关键字</span>
+                <br>
+                <span class = "normal" style = "padding-left: 40px;">•&nbsp&nbsp通过外键建立起表&nbsp中各行的关系</span>
+                <br>
+                <span class = "normal" style = "padding-left: 40px;">•&nbsp&nbsp上图中「电子邮件表」的<span class = "emphasis">学号</span>是「学生信息表」的关键字</span>
+                <br>
+                <br>
+                <div class = "h5">元数据</div>
+                <br>
+                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp描述数据库中的数据</span>
+                <br>
+                <span class = "normal" style = "padding-left: 40px;">•&nbsp&nbsp数据类型</span>
+                <br>
+                <span class = "normal" style = "padding-left: 40px;">•&nbsp&nbsp数据的存储长度</span>
+                <br>
+                <span class = "normal" style = "padding-left: 40px;">•&nbsp&nbsp是否是主键</span>
+                <br>
+                <br>
+                <div class = "h4" id = "43">数据库管理系统</div>
+                <br>
+                <div class = "h5">数据库管理系统（DBMS）</div>
+                <br>
+                <span class = "normal">用来建立、处理和管理数据库的程序</span>
+                <br>
+                <br>
+                <span class = "normal">通常从软件提供商购买许可</span>
+                <br>
+                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbspOracle</span>
+                <br>
+                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbspMySQL</span>
+                <br>
+                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbspAccess</span>
+                <br>
+                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbspDB2</span>
+                <br>
+                <br>
+                <span class = "normal">DBMS&nbsp的第一个功能是建立数据库中的表、关系以及结构</span>
+                <br>
+                <br>
+                <span class = "normal">DBMS&nbsp的第二个功能是处理数据库</span>
+                <br>
+                <br>
+                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp用户通过&nbspDBMS&nbsp完成：</span>
+                <br>
+                <span class = "normal" style = "padding-left: 40px;">•&nbsp&nbsp数据访问</span>
+                <br>
+                <span class = "normal" style = "padding-left: 40px;">•&nbsp&nbsp数据插入</span>
+                <br>
+                <span class = "normal" style = "padding-left: 40px;">•&nbsp&nbsp数据修改</span>
+                <br>
+                <span class = "normal" style = "padding-left: 40px;">•&nbsp&nbsp数据删除</span>
+                <br>
+                <br>
+                <div class = "h5">结构化查询语言（SQL）&nbsp&nbsp</div>
+                <br>
+                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbspSQL&nbsp是处理数据库的国际标准化语言,&nbsp被美国国家标准化组织确定，为数据库系统的工业标准</span>
+                <br>
+                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp大部分的&nbspDBMS&nbsp产品都支持&nbspSQL&nbsp语言</span>
+                <br>
+                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp基于&nbspSQL&nbsp的&nbspDBMS&nbsp产品可以运行在各种计算机系统上，具有良好的可移植性</span>
+                <br>
+                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp利用&nbspSQL，用户可以用相同的语句在不同的数据库系统上执行同样的操作</span>
+                <br>
+                <br>
+                <span class = "normal"><span class = "strong"><u>数据表的创建</u></span></span>
+                <br>
+                <br>
+                <br>
+                <pre><code class = "sql">
+Create Table  表名 (字段 1 数据类型 1, ..., 字段 n 数据类型 n)
+
+Create Table Student
+(stu_id varchar(8), stu_name varchar(8), stu_sex varchar(2), stu_birthday date)
+                </code></pre>
+                <span class = "normal"><u>数据表的删除</u>&nbsp</span>
+                <br>
+                <br>
+                <pre><code class = "sql">
+Drop Table  表名
+
+Drop Table Student
+                </code></pre>
+                <span class = "normal"><span class = "strong"><u>数据表的修改</u></span>&nbsp</span>
+                <br>
+                <br>
+                <span class = "normal">在表名为「student」的数据表中增加&nbspstu_depart&nbsp的字段。</span>
+                <br>
+                <br>
+                <pre><code class = "sql">
+Alter Table Student Add stu_depart varchar(8) 
+                </code></pre>
+                <span class = "normal">在表名为「student」的数据表中去掉&nbspstu_birthday&nbsp的字段</span>
+                <br>
+                <br>
+                <pre><code class = "sql">
+ Alter Table Student Drop stu_birthday date
+                </code></pre>
+                <span class = "normal">将表名为「student」的数据表中的&nbspstu_name&nbsp字符长度修改为&nbsp10</span>
+                <br>
+                <br>
+                <pre><code class = "sql">
+Alter Table Student Alter stu_name varchar(10)
+                </code></pre>
+                <span class = "normal"><span class = "strong"><u>数据的插入</u></span></span>
+                <br>
+                <br>
+                <pre><code class = "sql">
+INSERT INTO 表名 (字段 1, 字段 2, ...) VALUES(字段 1 的值, 字段 2 的值, ...)
+
+INSERT INTO Student
+(stu_id, stu_name, stu_sex, stu_birthday) VALUES (‘1021001’, ‘Lei Wang’, ‘Male’, ‘19890210’)
+                </code></pre>
+                <span class = "normal"><span class = "strong"><u>数据的修改</u></span></span>
+                <br>
+                <br>
+                <pre><code class = "sql">
+UPDATE 表名 SET 字段 1 = 表达式 1， SET 字段 2 = 表达式 2
+WHERE 条件
+
+UPDATE  Student, stu_birthday = ‘20010210’
+WHERE stu_id = ‘1021001’
+                </code></pre>
+                <span class = "normal"><span class = "strong"><u>数据的删除</u></span></span>
+                <br>
+                <br>
+                <pre><code class = "sql">
+DELETE FROM 表名 WHERE 条件
+
+DELETE FROM Student WHERE stu_id = ‘1021001’
+                </code></pre>
+                <span class = "normal"><u><span class = "strong">数据的查询</span></u></span>
+                <br>
+                <br>
+                <pre><code class = "sql">
+Select 列 From 表 Where 条件
+
+SELECT stu_name FROM Student WHERE stu_sex = ‘Female’
+                </code></pre>
+                <div class = "h5">DBMS&nbsp&nbsp的第三个功能是管理数据库&nbsp&nbsp</div>
+                <br>
+                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbspDBMS用来定期备份数据库、移除不再需要保存的数据</span>
+                <br>
+                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbspDBMS建立、管理并维护用户账号并设置密码</span>
+                <br>
+                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbspDBMS根据用户的等级设置操作权限，保证数据安全性&nbsp</span>
+                <br>
+                <br>
+                <span class = "normal">例如：</span>
+                <br>
+                <br>
+                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp老师可以读取学生数据库中的所有考试记录</span>
+                <br>
+                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp学生只可以读取自己相关的考试记录</span>
+                <br>
+                <br>
+                <div class = "h4" id = "44">数据库应用程序</div>
+                <br>
+                <div class = "h5">数据库应用</div>
+                <br>
+                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp是产生数据库的表单、报表、查询和应用程序的集合</span>
+                <br>
+                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp是用户和&nbspDBMS&nbsp之间的中间层</span>
+                <br>
+                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp可以面向企业或个人的需求</span>
+                <br>
+                <br>
+                <div class = "h5">报表</div>
+                <br>
+                <span class = "normal">在结构化的表中显示经过处理的数据。</span>
+                <br>
+                <br>
+                <img src = "../img/1540531329545.png" class = "blogImg">
+                <br>
+                <div class = "h5">查询</div>
+                <br>
+                <span class = "normal">面向个人的需求，从数据库数据中得到需要的信息。</span>
+                <br>
+                <br>
+                <div class = "h5">面向企业特定的需求，针对特定的业务需求开发</div>
+                <br>
+                <img src = "../img/1540531467249.png" class = "blogImg">
+                <br>
+                <div class = "h5">网络服务器应用程序</div>
+                <br>
+                <span class = "normal">用户使用浏览器通过互联网连接到网络服务器上，由网络服务器上的&nbsp应用程序处理用户的请求，执行必要的数据库操作。</span>
+                <br>
+                <br>
+                <img src = "../img/1540531537494.png" class = "blogImg">
+                <br>
+                <div class = "h5">多用户处理</div>
+                <br>
+                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp多用户同时访问数据库时，会产生数据冲突问题</span>
+                <br>
+                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp数据冲突产生不确定的结果</span>
+                <br>
+                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsplost-update（丢失&nbsp-&nbsp更新）问题</span>
+                <br>
+                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp加锁用来协调多用户的活动</span>
+                <br>
+                <span class = "normal" style = "padding-left: 40px;">•&nbsp&nbsp如错误提示</span>
+                <br>
+                <br>
+                <div class = "h4" id = "45">企业级&nbsp&nbspDBMS&nbsp&nbsp和个人&nbsp&nbspDBMS</div>
+                <br>
+                <div class = "h5">企业级&nbsp&nbspDBMS</div>
+                <br>
+                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp处理大型组织和工作团队的数据</span>
+                <br>
+                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp支持多用户（成千上万）和不同的数据应用</span>
+                <br>
+                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp支持全天候运作</span>
+                <br>
+                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp能够管理GB、TB字节的数据库</span>
+                <br>
+                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp例如：</span>
+                <br>
+                <span class = "normal" style = "padding-left: 40px;">•&nbsp&nbspIBM&nbsp的&nbspDB2，微软的&nbspSQL&nbspServer,&nbsp甲骨文公司的&nbspOracle</span>
+                <br>
+                <br>
+                <div class = "h5">个人&nbsp&nbspDBMS</div>
+                <br>
+                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp针对小型的简单数据应用设计</span>
+                <br>
+                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp大多数情况下用户少于&nbsp100&nbsp人</span>
+                <br>
+                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp大多个人&nbspDBMS&nbsp往往只有一个用户</span>
+                <br>
+                <span class = "normal" style = "padding-left: 40px;">•&nbsp&nbsp如教授建立并维护的学生信息表</span>
+                <br>
+                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp例如：微软的&nbspAccess，dBase，FoxPro，Paradox</span>
+                <br>
+                <br>
+                <div class = "h4" id = "46">本章的内容对&nbsp&nbspDee&nbsp&nbsp有什么帮助</div>
+                <br>
+                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp迪伊将了解什么是&nbspDBMS&nbsp以及它的作用</span>
+                <br>
+                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp她要建立一个以&nbspMySQL&nbsp为数据库的独立系统</span>
+                <br>
+                <br>
+                <div class = "h4" id = "47">案例讨论</div>
+                <br>
+                <span class = "normal">Kelly&nbsp主要负责服务器维护和数据库的存储备份</span>
+                <br>
+                <br>
+                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp拷贝了数据库资料来练习</span>
+                <br>
+                <span class = "normal" style = "padding-left: 40px;">•&nbsp&nbsp访问SQL&nbspServer中的元数据</span>
+                <br>
+                <span class = "normal" style = "padding-left: 40px;">•&nbsp&nbsp发现表中关于订单、客户和销售人员的数据</span>
+                <br>
+                <span class = "normal" style = "padding-left: 40px;">•&nbsp&nbsp揭示异常：一个记录员给予一个买主其他人没有的&nbsp折扣</span>
+                <br>
+                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp向那个记录员提起这件事</span>
+                <br>
+                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp因访问数据库被解雇</span>
+                <br>
+                <br>
+                <span class = "normal">思考：</span>
+                <br>
+                <br>
+                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbspKelly&nbsp的问题出在哪里了？</span>
+                <br>
+                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbspKelly&nbsp把数据带回家是违法的吗？</span>
+                <br>
+                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp公司应该如何处理&nbspKelly？</span>
+                <br>
+                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp公司是否应该和&nbspKelly&nbsp一起承担过失？</span>
+                <br>
+                <br>
+                <span class = "normal">道德指南：</span>
+                <br>
+                <br>
+                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp数据隐私</span>
+                <br>
+                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp数据使用权限的问题</span>
+                <br>
 
             </div>
             <div class = "myAffix">
