@@ -274,7 +274,6 @@ class makeHTML:
     def main(self):
         self.makeSmallJPG()
         self.indexFile = open('index.html', 'w')
-        self.xmlFile = open('js/waterfall.xml', 'w')
         
         homePage = self.homeTemp
         content = ''
