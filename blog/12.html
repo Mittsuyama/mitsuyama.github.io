@@ -77,6 +77,9 @@
             <a href = "#5" class = "contentListCon" style = "padding-left: 40px;">关系的闭包</a><br>
             <a href = "#6" class = "contentListCon" style = "padding-left: 40px;">关系矩阵和关系图</a><br>
             <a href = "#9" class = "contentListCon" style = "padding-left: 40px;">等价关系与集合的划分</a><br>
+            <a href = "#10" class = "contentListCon">近世代数</a><br>
+            <a href = "#11" class = "contentListCon" style = "padding-left: 40px;">运算律</a><br>
+            <a href = "#12" class = "contentListCon" style = "padding-left: 40px;">幺元</a><br>
 
                 </div>
             </div>
@@ -533,6 +536,124 @@ $$
 $$
 R \circ S = S \circ R
 $$
+                <div class = "h2" id = "10">近世代数</div>
+                <br>
+                <span class = "normal"><u><span class = "strong">二元代数运算的定义</span></u>：</span>
+                <br>
+                <br>
+                <span class = "normal">设&nbsp$X$&nbsp是一个集合，一个从&nbsp$X&nbsp\times&nbspX$&nbsp到&nbsp$X$&nbsp的一个映射&nbsp$\phi$&nbsp称为&nbsp$X$&nbsp上的一个二元代数运算。</span>
+                <br>
+                <br>
+                <span class = "normal">有前缀表示、中缀表示、后缀表示法，通常用中缀表示法。</span>
+                <br>
+                <br>
+                <span class = "normal"><u><span class = "strong">一元代数运算的定义</span></u>：</span>
+                <br>
+                <br>
+                <span class = "normal">一个从集合&nbsp$X$&nbsp到集合&nbsp$Y$&nbsp的映射称为&nbsp$X$&nbsp到&nbsp$Y$&nbsp的一个一元代数运算，当&nbsp$X&nbsp=&nbspY$&nbsp时，称此一为一元代数运算。</span>
+                <br>
+                <br>
+                <span class = "normal">$X$&nbsp上的一元代数运算对于运算时封闭的。</span>
+                <br>
+                <br>
+                <span class = "normal">$n$&nbsp元代数运算类似定义：$X^n&nbsp\to&nbspX$</span>
+                <br>
+                <br>
+                <div class = "h3" id = "11">运算律</div>
+                <br>
+                <span class = "normal">若满足</span>
+                <br>
+$$
+\begin{align}
+(a \circ b) \circ c = \;& a \circ (b \circ c), &则，满足结合律\\
+a \circ b = \; & b \circ a, &则满足交换律
+\end{align}
+$$
+                <br>
+                <span class = "normal">$\circ$&nbsp为&nbsp$S$&nbsp上的二元代数运算，则二元组&nbsp$(S,&nbsp\circ)$&nbsp为一个代数系（或称作代数系统&nbsp/&nbsp代数结构）</span>
+                <br>
+                <br>
+                <span class = "normal"><u><span class = "strong">定理</span></u>：$(S,&nbsp\circ)$&nbsp满足结合律，则&nbsp$n$&nbsp个元素的乘积只与次序有关而且由次序唯一确定，方案数&nbsp$\frac{1}{n}C{2n&nbsp-&nbsp2&nbsp\choose&nbspn&nbsp-&nbsp1}$</span>
+                <br>
+                <br>
+                <span class = "normal"><u><span class = "strong">定理</span></u>：代数系满足交换律，则&nbsp$n$&nbsp&nbsp个元素的乘积只与这&nbsp$n$&nbsp个元素有关，与次序无关。</span>
+                <br>
+                <br>
+                <span class = "normal"><u><span class = "strong">定义分配率</span></u>：</span>
+                <br>
+$$
+(a + b) \circ c = a \circ c + b \circ c, 满足右分配\\
+c \circ (a + b) = c \circ a + c \circ b, 满足左分配 
+$$
+                <br>
+                <div class = "h3" id = "12">幺元</div>
+                <br>
+                <span class = "normal"><u><span class = "strong">幺元的定义</span></u>：$(S,&nbsp\circ)$&nbsp代数系，$a_l&nbsp\in&nbspS$，使&nbsp$\forall&nbspa&nbsp\in&nbspS$：</span>
+                <br>
+$$
+a_l \circ a = a
+$$
+                <br>
+                <span class = "normal">类似定义右幺元。</span>
+                <br>
+                <br>
+                <span class = "normal"><u><span class = "strong">定理</span></u>：若既有左幺元，又有右幺元，则左右幺元相等，称为单位元素（幺元）</span>
+                <br>
+                <br>
+                <span class = "normal">证明：</span>
+                <br>
+$$
+\begin{cases}
+a_l \circ a = a\\
+b \circ a_r = b\\
+\end{cases}
+\\
+令 a = a_r, \; b = a_l\\
+则有：
+\begin{cases}
+a_l \circ a_r = a_r \\
+a_l \circ a_r = a_l \\
+\end{cases}
+\\
+则 a_l = a_r
+$$
+                <br>
+                <span class = "normal"><u><span class = "strong">零元素定义</span></u>：代数系中，$\exists&nbspz&nbsp\in&nbspS,&nbsp\forall&nbspa&nbsp\in&nbspS$，则：</span>
+                <br>
+$$
+z \circ a = a \circ z = z
+$$
+                <br>
+                <div class = "h4" id = "13">记号：</div>
+                <br>
+$$
+A \circ B = AB \\
+a \circ b = ab \\
+A = \{a\}, AB = \{a\}B = aB
+$$
+                <span class = "normal"><u><span class = "strong">半群的定义</span></u>：满足结合律的代数系称为一个半群。</span>
+                <br>
+                <br>
+                <span class = "normal">同样定义：</span>
+                <br>
+                <br>
+                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp交换半群或可换半群（满足交换率）</span>
+                <br>
+                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp有限半群，无限半群（$S$&nbsp是否有限）</span>
+                <br>
+                <br>
+                <span class = "normal"><span class = "strong"><u>半群的例子</u></span>，模&nbsp$n$&nbsp剩余类：</span>
+                <br>
+                <br>
+                <span class = "normal">模&nbsp$n$&nbsp同余等价类：</span>
+                <br>
+$$
+Z_n = \{[0], [1], ..., [n - 1]\}\\
+[i] = \{m | m \in Z, m \equiv i \pmod{n}\}
+$$
+                <br>
+                <span class = "normal">则&nbsp$(Z_n,&nbsp+)$&nbsp是个半群</span>
+                <br>
                 <br>
                 <a href = "4.html" class = "conncetion">上一篇：离散数学 1</a>
 
