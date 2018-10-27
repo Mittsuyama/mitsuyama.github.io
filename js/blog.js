@@ -3,23 +3,14 @@ var imgWidth = 0;
 var tempTime = 300;
 var minScrollTop = 530;
 var contentIsFade = true;
-var screenWidthRate2 = screenWidthRate;
-
-if(screenWidthRate < 1.1 && screenWidthRate > 0.96) {
-    screenWidthRate2 = 1;
-}
-else {
-    for(var i = 0; i < 13; i++) {
-        screenWidthRate2 *= screenWidthRate;
-    }
-    screenWidthRate2 *= Math.sqrt(Math.sqrt(screenWidthRate)) * Math.sqrt(Math.sqrt(Math.sqrt(Math.sqrt(screenWidthRate))));
-}
 
 $(document).ready(function() {
     if($(window).scrollTop() > minScrollTop) {
         $('.contentListOut').show();
     }
     $("body").css("zoom", screenWidthRate + "");
+    $(".articleContext").css("zoom", 1 / screenWidthRate + '');
+    $(".contentListOut").css("zoom", 1 / screenWidthRate + '');
 });
 
 $("img.blogImg").click(function() {
@@ -63,7 +54,7 @@ $('.contentListCon').click(function() {
 	//alert(screenWidthRate2);
     var pos = $($.attr(this, 'href')).offset().top - 50;
     var myST = $(window).scrollTop();
-    var deriv =  (myST - pos) / 113 / screenWidthRate2;
+    var deriv =  (myST - pos) / 113;
     //alert(deriv);
     $('html, body').animate ({
         scrollTop: pos + deriv
