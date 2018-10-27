@@ -86,9 +86,5 @@ $(document).ready(function() {
                 $(".imgBack").css("height", "0%");
             }, tempTime)
         });
-
-        $(".lastBlog").hover(function() {
-
-        });
     });
 });

@@ -33,6 +33,7 @@ div.nevigation {
     position: sticky;
     font-family: "Arial";
     top: 0px;
+    font-size: 20px;
     height: 55px;
     /*border-top: rgba(255, 150, 100, 1) solid 3px;*/
     background-color: rgba(255, 255, 255, 0.9);
@@ -50,7 +51,7 @@ img.siteImg {
 div.nevigation_content1 {
     position: absolute;
     left: 0px;
-    width: 250px;
+    width: 230px;
     height: 55px;
 }
 
@@ -73,11 +74,10 @@ div.nav_text_home {
     position: absolute;
     font-family: "Arial";
     border: 0px;
-    font-size: 25px;
     height: 55px;
-    padding-top: 8px;
+    padding-top: 12px;
     padding-left: 0px;
-    width: 100px;
+    width: 170px;
     text-align: center;
     transition-duration: 0.2s;
     -webkit-transition-duration: 0.2s;
@@ -91,9 +91,8 @@ div.nav_text {
     float: left;
     font-family: "Arial";
     border: 0px;
-    font-size: 25px;
     height: 55px;
-    padding-top: 8px;
+    padding-top: 12px;
     width: 100px;
     margin-left: 50px;
     text-align: center;

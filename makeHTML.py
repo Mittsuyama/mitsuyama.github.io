@@ -249,7 +249,8 @@ class makeHTML:
                     tempPos += 1
                 blogContent += '''                <img src = "%s" class = "blogImg"><br>''' % (href) + '\n'
             elif line[0] == '\n':
-                blogContent += '''                <br>''' + '\n'
+                if self.Paragraph[i - 1][0] == '\n' and self.Paragraph[i - 2][0] != '\n':
+                    blogContent += '''                <br>''' + '\n'
             elif len(line) > 3 and line[:3] == '---':
                 blogContent += '''                <hr>''' + '\n'
             else:

@@ -33,7 +33,7 @@
 
             </div>
             <div class = "tagContainer">
-                Tag：Computer
+                分类于：Computer
 
             </div>
         </div>
@@ -43,7 +43,7 @@
                 <div class = "contentTitile">≡</div>
                 <a href = "http://mitsuyama.top" style = "color: #999999">
                 <div class = "nav_text_home">
-                    Home
+                    MITSUYAMA
                 </div>
                 </a>            
             </div>
@@ -80,11 +80,8 @@
         <div class = "blogMainBlock">
             <div class = "articleContext">
                                 <br>
-                <br>
                 <div class = "h2" id = "1">先配置一个&nbsp&nbspupstream</div>
-                <br>
                 <span class = "normal">1.&nbsp使用&nbspgit&nbspremote&nbsp-v&nbsp查看远程状态</span>
-                <br>
                 <br>
                 <pre><code class = "nohighlight">
 git remote -v
@@ -93,12 +90,10 @@ origin  git@github.com:yourname/yourname_rep.git (push)
                 </code></pre>
                 <span class = "normal">2.&nbsp添加一个将被同步给&nbspfork&nbsp远程的上游仓库</span>
                 <br>
-                <br>
                 <pre><code class = "nohighlight">
 git remote add upstream git@github.com:yourname/yourname_rep.git
                 </code></pre>
                 <span class = "normal">3.&nbsp使用&nbspgit&nbspremote&nbsp-v&nbsp查看是否成功</span>
-                <br>
                 <br>
                 <pre><code class = "nohighlight">
 origin  git@github.com:yourname/yourname_rep.git (fetch)
@@ -107,9 +102,7 @@ upstream        git@github.com:yourname/yourname_rep.git (fetch)
 upstream        git@github.com:yourname/yourname_rep.git (push)
                 </code></pre>
                 <div class = "h2" id = "2">从远程同步同步</div>
-                <br>
                 <span class = "normal">4.&nbsp从上游仓库&nbspfetch&nbsp分支和提交点&nbspgit&nbspfetch&nbspupstream，传送到本地，并会被存储在本地分支&nbspupstream/master</span>
-                <br>
                 <br>
                 <pre><code class = "nohighlight">
 git fetch upstream
@@ -118,18 +111,16 @@ From github.com:yourname/yourname_rep
                 </code></pre>
                 <span class = "normal">5.&nbsp切换到本地主分支</span>
                 <br>
-                <br>
                 <pre><code class = "nohighlight">
 git checkout master
                 </code></pre>
                 <span class = "normal">6.&nbsp把&nbspupstream/master&nbsp分支合并到本地&nbspmaster&nbsp上，这样就完成了同步，并不会丢掉本地修改的内容。</span>
                 <br>
-                <br>
                 <pre><code class = "nohighlight">
 git merge upstream/master
                 </code></pre>
 
-                <br><br><br><br><br><br>
+                <br><br><br><br><br>
                 <!--<div class = "blogTrans">
                     <div class = "lastBlogTitle"></div>
                     <div class = "nextBlogTitle"></div>
@@ -138,7 +129,7 @@ git merge upstream/master
                 </div>
                 <hr>-->
             </div>
-            <div id = "disqus_thread" style = "margin: auto; width: 50%;"></div>
+            <div id = "disqus_thread" style = "position: relative; margin: auto; width: 50%;"></div>
             <div class = "myAffix">
                 <div class = "feet">
                     <div class = "copyrigt">MITSUYAMA © 2018</div>
@@ -169,7 +160,7 @@ git merge upstream/master
             })();
         </script>
         <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-        
+
         <script src = "https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity = "sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin = "anonymous"></script>
         <script src = "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity = "sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin = "anonymous"></script>
         <script src = "https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity = "sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin = "anonymous"></script>
