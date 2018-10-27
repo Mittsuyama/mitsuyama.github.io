@@ -1,4 +1,4 @@
-::selection {
+﻿::selection {
     background:rgba(255, 230, 70, 0.3); 
 }
 
@@ -141,9 +141,13 @@ div.h1 {
 
 div.h2 {
     font-weight: bold;
+<<<<<<< HEAD
     font-size: 30px;
+=======
+    font-size: 43px;
+>>>>>>> upstream/master
     text-align: center;
-    background-image: url("../img/underline.png");
+    background-image: url("../img/icon/underline.png");
     background-repeat: no-repeat;
     background-position-x: center;
     background-position-y: 52px;
@@ -154,7 +158,11 @@ div.h2 {
 
 div.h3 {
     font-weight: bold;
+<<<<<<< HEAD
     font-size: 28px;
+=======
+    font-size: 35px;
+>>>>>>> upstream/master
     font-style: italic;
     text-align: center;
     width: 100%;
@@ -232,7 +240,7 @@ span.strike {
 }
 
 span.emphasis {
-    background-color:  rgba(0, 180, 180, 0.2);
+    background-color:  rgba(0, 180, 180, 0.15);
     border-radius: 7px;
     /*color: rgba(0, 180, 180, 1)*/
 }

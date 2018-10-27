@@ -224,7 +224,7 @@ class makeHTML:
                         break
                     href += line[tempPos]
                     tempPos += 1
-                blogContent += '''                <a href = "%s" class = "conncetion">''' % (href) + context + '''</a>''' + '\n'
+                blogContent += '''                <a href = "%s" class = "conncetion">''' % (href) + context + '''</a><br>''' + '\n'
             elif line[0:2] == '![' and line[-2] == ')':
                 context = ''
                 href = ''
@@ -240,7 +240,7 @@ class makeHTML:
                         break
                     href += line[tempPos]
                     tempPos += 1
-                blogContent += '''                <img src = "%s" class = "blogImg">''' % (href) + '\n'
+                blogContent += '''                <img src = "%s" class = "blogImg"><br>''' % (href) + '\n'
             elif line[0] == '\n':
                 blogContent += '''                <br>''' + '\n'
             elif len(line) > 3 and line[:3] == '---':
