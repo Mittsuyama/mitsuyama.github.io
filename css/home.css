@@ -49,8 +49,8 @@ img.siteImg {
 
 div.nevigation_content1 {
     position: absolute;
-    left: 130px;
-    width: 200px;
+    left: 0px;
+    width: 250px;
     height: 55px;
 }
 
@@ -69,6 +69,7 @@ div.nav_text_home {
     background-position-x: 8px;
     background-position-y: 10px;
     */
+    left: 150px;
     position: absolute;
     font-family: "Arial";
     border: 0px;

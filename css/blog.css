@@ -82,22 +82,23 @@ div.contentListOut {
 }
 
 div.contentTitile {
-    padding-top: 3px;
-    text-align: center;
-    width: 90px;
+    margin-top: -7px;
+    top: 0px;
+    left: 25px;
+    position: absolute;
+    width: 50px;
     height: 40px;
-    font-size: 20px;
+    
+    text-align: center;
+    font-size: 50px;
     font-family: serif;
     color: rgba(100, 100, 100, 0.5);
-    border-radius: 7px;
-    border: 3px solid rgba(200, 200, 200, 0.2);
     transition-duration: 0.2s;
     -webkit-transition-duration: 0.2s;
 }
 
 div.contentTitile:hover {
-    background-color: rgba(200, 200, 200, 0.68);
-    color: white;
+    color: rgba(255, 190, 30, 0.5);
     cursor: pointer;
 }
 

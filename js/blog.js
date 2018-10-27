@@ -9,6 +9,7 @@ var homeShow = true;
 $(document).ready(function() {
     if($(window).scrollTop() > minScrollTop) {
         $('.contentListOut').show();
+        $('.contentTitile').show();
     }
     $("body").css("zoom", screenWidthRate + "");
     $(".articleContext").css("zoom", 1 / screenWidthRate + '');
@@ -53,6 +54,7 @@ $(document).ready(function() {
         //监视滚动
         $(window).scroll(function(event){
             if($(window).scrollTop() > minScrollTop) {
+                /*
                 var nowScroll = $(window).scrollTop();
                 if(nowScroll > lastScroll + 20 && homeShow) {
                     homeShow = false;
@@ -64,12 +66,15 @@ $(document).ready(function() {
                 }
                 setTimeout(function(){
                     lastScroll = nowScroll;
-                }, 0);                  
+                }, 0);
+                */
                 $('.contentListOut').show();
+                $('.contentTitile').show();
             }
             else {
                 $('.contentListOut').hide();
-                $(".nevigation").slideDown(400);
+                $('.contentTitile').hide();
+                //$(".nevigation").slideDown(400);
             }
         });
         
