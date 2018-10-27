@@ -131,6 +131,8 @@ class makeHTML:
         blogHtml = blogHtml.replace('((Title))', self.blogInfo[0])
         blogHtml = blogHtml.replace('((Tag))', self.blogInfo[1])
         blogHtml = blogHtml.replace('((blogTitleImg))', str(order))
+        blogHtml = blogHtml.replace('((pageUrl))', "http://www.mitsuyama.top/blog/" + str(order) + ".html")
+        blogHtml = blogHtml.replace('((pageId))', "blog" + str(order))
         blogContent = ''
 
         #blogContent = '''<br><span class = "normal" style = "font-size: 25px;">▷目录：</span><br>'''

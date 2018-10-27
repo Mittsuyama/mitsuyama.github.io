@@ -146,10 +146,11 @@ div.h2 {
     background-image: url("../img/icon/underline.png");
     background-repeat: no-repeat;
     background-position-x: center;
-    background-position-y: 52px;
+    background-position-y: 90px;
     margin: 0px;
     width: 100%;
-    min-height: 70px;
+    padding-top: 40px;
+    min-height: 100px;
 }
 
 div.h3 {
