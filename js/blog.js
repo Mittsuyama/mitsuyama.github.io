@@ -37,9 +37,9 @@ $(document).ready(function() {
         
         //隐藏目录
         $('.contentListCon').click(function() {
-            var pos = $($.attr(this, 'href')).offset().top - 50;
+            var pos = $($.attr(this, 'href')).offset().top - 52;
             var myST = $(window).scrollTop();
-            var deriv =  (myST - pos) / 113;
+            var deriv = 0;
             $('html, body').animate ({
                 scrollTop: pos + deriv
             }, 400, "swing");
@@ -85,6 +85,10 @@ $(document).ready(function() {
                 $('.biggerImg').remove();
                 $(".imgBack").css("height", "0%");
             }, tempTime)
+        });
+
+        $(".lastBlog").hover(function() {
+
         });
     });
 });

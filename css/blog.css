@@ -82,12 +82,12 @@ div.contentListOut {
 }
 
 div.contentTitile {
-    margin-top: -7px;
+    margin-top: -8px;
     top: 0px;
     left: 25px;
     position: absolute;
     width: 50px;
-    height: 40px;
+    height: 0px;
     
     text-align: center;
     font-size: 50px;
@@ -169,11 +169,11 @@ div.h4 {
     background-image: url("../img/icon/h4.png");
     background-repeat: no-repeat;
     background-position-x: left;
-    background-position-y: 12px;
-    background-size: 2.8%;
+    background-position-y: 14px;
+    background-size: 2.5%;
     font-size: 24px;
     margin: 0px;
-    padding: 10px 0px 0px 40px;
+    padding: 10px 0px 0px 30px;
     width: 100%;
     min-height: 50px;
 }
@@ -182,11 +182,11 @@ div.h5 {
     background-image: url("../img/icon/h5.png");
     background-repeat: no-repeat;
     background-position-x: left;
-    background-position-y: 13px;
-    background-size: 1.9%;
-    font-size: 21px;
+    background-position-y: 14px;
+    background-size: 2%;
+    font-size: 22px;
     margin: 0px;
-    padding: 10px 0px 0px 30px;
+    padding: 10px 0px 0px 23px;
     width: 100%;
     min-height: 50px; 
 }
@@ -213,7 +213,7 @@ div.quoteAgain {
 }
 
 span.normal {
-    font-size: 17px;
+    font-size: 18px;
     width: 100%;
 }
 
@@ -259,10 +259,45 @@ img.blogImg {
     cursor: url("../img/icon/bigger2.cur"), auto;
 }
 
+a.noStyle {
+    color: rgba(0, 0, 0, 0.3);
+}
+
+a.noStyle:hover {
+    text-decoration: none;
+}
+
+div.blogTrans {
+    height: 50px;
+    font-size: 18px;
+}
+
+div.lastBlog {
+    position: absolute;
+    left: 0px;
+    padding-top: 6px;
+    text-align: center;
+    width: 120px;
+    height: 40px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+}
+
+div.nextBlog {
+    position: absolute;
+    right: 0px;
+    padding-top: 6px;
+    text-align: center;
+    width: 120px;
+    height: 40px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+}
+
 div.myAffix {
     background-color: white;
     width: 100%;
-    height: 150px;    
+    height: 100px;    
 }
 
 div.feet {
