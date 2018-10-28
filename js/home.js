@@ -12,7 +12,7 @@ var orderList = new Array();
 
 function waterfall() {
     var pageWidth = document.getElementsByClassName("text_container")[0].offsetWidth;
-    var gap = 25;
+    var gap = 20;
     var columns = parseInt(pageWidth / (itermWidth + gap));
     var arr = [];
     var maxHeight = 0;

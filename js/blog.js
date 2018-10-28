@@ -5,8 +5,28 @@ var minScrollTop = 530;
 var contentIsFade = true;
 var lastScroll = $(window).scrollTop();
 var homeShow = true;
+var titleList = new Array();
+
+function cmp(a, b) {
+    return a > b;
+}
 
 $(document).ready(function() {
+    /*
+    var title2s = document.getElementsByClassName("h2");
+    var title3s = document.getElementsByClassName("h3");
+    for(var i = 0; i < title2s.length; i++) {
+        titleList.push($(title2s[i]).offset().top);
+    }
+    for(var i = 0; i < title3s.length; i++) {
+        titleList.push($(title3s[i]).offset().top);
+    }
+    titleList.sort(cmp);
+    for(var i = 0; i < titleList.length; i++) {
+        alert(titleList[i]);
+    }
+    */
+
     if($(window).scrollTop() > minScrollTop) {
         $('.contentListOut').show();
         $('.contentTitile').show();
@@ -35,7 +55,7 @@ $(document).ready(function() {
             });
         });
         
-        //隐藏目录
+        //目录跳转
         $('.contentListCon').click(function() {
             var pos = $($.attr(this, 'href')).offset().top - 52;
             var myST = $(window).scrollTop();

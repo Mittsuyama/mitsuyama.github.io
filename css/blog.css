@@ -75,7 +75,7 @@ div.contentListOut {
     display: none;
     position: fixed;
     padding: 15px;
-    width: 23%;
+    width: 20%;
     left: 10px;
     top: 60px;
     z-index: 2;
@@ -123,10 +123,10 @@ div.blogMainBlock {
 
 div.articleContext {
     position: relative;
-    width: 50%;
+    width: 55%;
     margin: auto;
     background-color: white;
-    color: #555555;
+    color: #777777;
     font-size: 20px;
     min-height: 600px;
     /*word-wrap: break-all;*/
@@ -172,7 +172,7 @@ div.h4 {
     background-position-x: left;
     background-position-y: 44px;
     background-size: 2.5%;
-    font-size: 24px;
+    font-size: 25px;
     margin: 0px;
     padding: 40px 0px 0px 30px;
     width: 100%;
@@ -185,23 +185,24 @@ div.h5 {
     background-position-x: left;
     background-position-y: 28px;
     background-size: 2.3%;
-    font-size: 22px;
+    font-size: 23px;
     margin: 0px;
-    padding: 25px 0px 0px 25px;
+    padding: 25px 0px 0px 30px;
     width: 100%;
     min-height: 70px; 
 }
 
 div.quote {
-    background-image: url("../img/icon/quote.png");
+    /*background-image: url("../img/icon/quote.png");
     background-repeat: no-repeat;
     background-position-x: 10px;
     background-position-y: 0px;
-    background-size: 3%;
-    color: #888888;
+    background-size: 3%;*/
+    border-left: 2px solid #777777;
+    color: #999999;
     font-size: 18px;
-    margin: 30px 0px 30px 0px;
-    padding: 0px 0px 0px 40px;
+    margin: 30px 0px 30px 10px;
+    padding: 0px 0px 0px 20px;
     width: 100%;
 }
 
@@ -235,7 +236,7 @@ span.strike {
 }
 
 span.emphasis {
-    background-color:  rgba(0, 180, 180, 0.15);
+    background-color:  rgba(255, 130, 100, 0.2);
     border-radius: 7px;
     /*color: rgba(0, 180, 180, 1)*/
 }
@@ -321,6 +322,7 @@ div.copyrigt {
 }
 
 div.callme {
+    height: 35px;
     position: absolute;
     font-size: 17px;
     right: 50px;
