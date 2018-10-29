@@ -164,7 +164,7 @@ div.h2 {
     src: url('../fonts/Deng.ttf');
     font-family: "等线";
     font-weight: bold;
-    font-size: 30px;
+    font-size: 38px;
     text-align: center;
     background-image: url("../img/icon/underline.png");
     background-repeat: no-repeat;
@@ -180,10 +180,10 @@ div.h3 {
     src: url('../fonts/Deng.ttf');
     font-family: "等线";
     font-weight: bold;
-    font-size: 28px;
+    font-size: 30px;
     font-style: italic;
     text-align: center;
-    padding-top: 30px;
+    padding-top: 40px;
     width: 100%;
     min-height: 110px;
     margin: 0px;
@@ -202,11 +202,11 @@ div.h4 {
     margin-left: 0px;
     margin-top: 35px;
     margin-bottom: 25px;
-    border-left: 5px solid rgba(120, 220, 190, 0.7);
-    /*background-color: rgba(120, 220, 190, 0.07);*/
+    /*background-color: rgba(120, 220, 190, 0.05);*/
+    border-left: 5px solid rgba(120, 220, 190, 1);
     border-radius: 0px 5px 5px 0px;
-    padding: 10px 0px 10px 20px;
-    width: 100%;
+    padding: 10px 20px 10px 20px;
+    min-width: 10px;
     min-height: 30px;
 }
 
@@ -222,16 +222,16 @@ div.h5 {
     margin-left: 0px;
     margin-top: 40px;
     margin-bottom: 20px;
-    border-left: 4px solid rgba(110, 220, 250, 0.4);
     /*background-color: rgba(110, 220, 250, 0.05);*/
-    padding-left: 21px;
-    width: 100%;
+    border-left: 4px solid rgba(110, 220, 250, 0.6);
+    padding: 2px 0px 2px 21px;
+    border-radius: 0px 5px 5px 0px;
+    min-width: 10px;
     min-height: 21px; 
 }
 
 #quoteIcon {
-    margin-left: 40px;
-    margin-right: 13px;
+    margin-right: 30px;
 }
 
 div.quote {
@@ -244,7 +244,8 @@ div.quote {
     color: #999999;
     font-size: 18px;
     margin: 30px 0px 30px 0px;
-    padding: 0px 0px 0px 0px;
+    text-indent: -30px;
+    padding-left: 70px;    
     width: 100%;
 }
 
@@ -279,8 +280,11 @@ span.strike {
 }
 
 span.emphasis {
-    padding: 1px 5px 1px 5px;
-    background-color:rgba(255, 150, 60, 0.09);
+    padding: 0px 5px 0px 5px;
+    background-color:rgba(0, 0, 0, 0.07);
+    /*border: 1.5px solid rgba(0, 0, 0, 0.2);*/
+    /*border: 2px solid rgba(255, 150, 60, 0.3);*/
+    /*background-color:rgba(255, 150, 60, 0.06);*/
     border-radius: 7px;
 }
 
