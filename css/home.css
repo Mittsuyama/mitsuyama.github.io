@@ -33,7 +33,7 @@ div.nevigation {
     position: sticky;
     font-family: "Arial";
     top: 0px;
-    font-size: 20px;
+    font-size: 22px;
     height: 55px;
     /*border-top: rgba(255, 150, 100, 1) solid 3px;*/
     background-color: rgba(255, 255, 255, 0.9);
@@ -134,7 +134,7 @@ button.box {
 }
 
 button.box:hover {
-    margin-top: -5px;
+    margin-top: -8px;
     box-shadow: 0px 12px 16px 5px rgba(0,0,0,0.10), 0px 16px 25px 5px rgba(0,0,0,0.20);
 }
 
@@ -146,7 +146,7 @@ div.boxUp {
 img.boxUpImg {
     position: relative;
     width: 100%;
-    border-radius: 7px 7px 0px 0px;
+    border-radius: 10px 10px 0px 0px;
 }
 
 div.briefIntro {
@@ -218,7 +218,7 @@ div.inf2 {
 p.infoText {
     position: absolute;
     text-align: left;
-    font-size: 21px;
+    font-size: 22px;
     src: url('../fonts/Deng.ttf');
     font-family: "等线";
     color: black;
