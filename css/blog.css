@@ -36,7 +36,7 @@ body {
 
 div.glass {
     position: absolute;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.5);
     left: 0px;
     width: 100%;
     height: 600px;
@@ -110,8 +110,14 @@ div.contentList {
 }
 
 a.contentListCon {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 100%;
+    max-height: 33px;
+    display: block;
     color: rgba(0, 0, 0, 0.5);
-    font-size: 19px;
+    font-size: 18px;
 }
 
 div.blogMainBlock {

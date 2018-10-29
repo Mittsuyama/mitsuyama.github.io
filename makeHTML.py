@@ -151,10 +151,10 @@ class makeHTML:
                 #contentList += '''           <a href = "#%s" class = "contentListCon" style = "padding-left: 80px;">''' % (str(tempOrder)) + j[5:-1].replace(' ', '&nbsp&nbsp') + '''</a><br>''' + '\n'
             elif len(j) > 4 and j[:3] == '###':
                 tempOrder += 1
-                contentList += '''            <a href = "#%s" class = "contentListCon" style = "padding-left: 40px;">''' % (str(tempOrder)) + j[4:-1].replace(' ', '&nbsp&nbsp') + '''</a><br>''' + '\n'
+                contentList += '''            <a href = "#%s" class = "contentListCon" style = "padding-left: 40px;">''' % (str(tempOrder)) + j[4:-1].replace(' ', '&nbsp&nbsp') + '''</a>''' + '\n'
             elif len(j) > 3 and j[:2] == '##':
                 tempOrder += 1
-                contentList += '''            <a href = "#%s" class = "contentListCon">''' % (str(tempOrder)) + j[3:-1].replace(' ', '&nbsp&nbsp') + '''</a><br>''' + '\n'
+                contentList += '''            <a href = "#%s" class = "contentListCon">''' % (str(tempOrder)) + j[3:-1].replace(' ', '&nbsp&nbsp') + '''</a>''' + '\n'
         if(tempOrder > 0):
             blogHtml = blogHtml.replace('((contentList))', contentList)
         else:
