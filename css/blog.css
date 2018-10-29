@@ -257,6 +257,7 @@ div.quoteAgain {
 }
 
 div.normal {
+    margin: 4px 0px 4px 0px;
     font-size: 18px;
     width: 100%;
 }
