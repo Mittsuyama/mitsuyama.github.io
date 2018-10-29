@@ -71,7 +71,7 @@
         <div class = "contentListOut">
             <div class = "contentList">
                 <div class = "contentBorder">
-                            <a href = "#1" class = "contentListCon">夫回答纠察使传讯时的诉述&nbsp&nbsp</a>
+                                <a href = "#1" class = "contentListCon">夫回答纠察使传讯时的诉述&nbsp&nbsp</a>
             <a href = "#2" class = "contentListCon">脚僧回答纠察使传讯时的诉述&nbsp&nbsp</a>
             <a href = "#3" class = "contentListCon">快回答纠察使问话时的诉述&nbsp&nbsp</a>
             <a href = "#4" class = "contentListCon">鬼借巫婆之口的诉述&nbsp&nbsp</a>
@@ -82,11 +82,12 @@
         
         <div class = "blogMainBlock">
             <div class = "articleContext">
-                                <span class = "normal">日本&nbsp-&nbsp芥川龙之介&nbsp</span>
+                <div class = "articleBorder">
+                                    <span class = "normal">日本&nbsp-&nbsp芥川龙之介&nbsp</span>
                 <br>
                 <span class = "normal">钱稻孙&nbsp译&nbsp</span>
                 <br>
-                <i class = "fa fa-quote-left fa-1x fa-pull-left" aria-hidden = "true" id = "quoteIcon"></i><div class = "quote">软弱何在，谎言就何在</div>
+                <div class = "quote"><i class = "fa fa-quote-left fa-1x fa-pull-left" aria-hidden = "true" id = "quoteIcon"></i>软弱何在，谎言就何在</div>
                 <div class = "h2" id = "1">夫回答纠察使传讯时的诉述&nbsp&nbsp</div>
                 <span class = "normal">是的。看到那尸首的，确实就是小人。小的今儿早上照例去后山砍柴。就在后山一个小竹林里看到那口尸首。您问什么地段么？那，大概离着山科驿道有个一、二里路吧，是个竹林子里夹杂着细杉树的、人迹罕到的地方。&nbsp</span>
                 <br>
@@ -172,14 +173,15 @@
                 <span class = "normal">（译自讲谈社版《日本现代文学全集》第56卷，《芥川龙之介集》191页《薮の中》一文）&nbsp</span>
                 <br>
 
-                <br><br><br><br><br>
-                <!--<div class = "blogTrans">
-                    <div class = "lastBlogTitle"></div>
-                    <div class = "nextBlogTitle"></div>
-                    <div class = "lastBlog"><a href = "0.html" class = "noStyle">◁&nbsp&nbspPreviois</a></div>
-                    <div class = "nextBlog"><a href = "2.html" class = "noStyle">Next&nbsp&nbsp▷</a></div>
+                    <br><br><br><br><br>
+                    <!--<div class = "blogTrans">
+                        <div class = "lastBlogTitle"></div>
+                        <div class = "nextBlogTitle"></div>
+                        <div class = "lastBlog"><a href = "0.html" class = "noStyle">◁&nbsp&nbspPreviois</a></div>
+                        <div class = "nextBlog"><a href = "2.html" class = "noStyle">Next&nbsp&nbsp▷</a></div>
+                    </div>
+                    <hr>-->
                 </div>
-                <hr>-->
             </div>
             <div id = "disqus_thread" style = "position: relative; margin: auto; width: 50%;"></div>
             <div class = "myAffix">
@@ -198,18 +200,19 @@
             /**
             *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
             *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
-            
-            var disqus_config = function () {
-            this.page.url = 'http://www.mitsuyama.top/blog/1.html';  // Replace PAGE_URL with your page's canonical URL variable
-            this.page.identifier = 'blog1'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-            };
-            
-            (function() { // DON'T EDIT BELOW THIS LINE
-            var d = document, s = d.createElement('script');
-            s.src = 'https://mitsuyama.disqus.com/embed.js';
-            s.setAttribute('data-timestamp', + new Date());
-            (d.head || d.body).appendChild(s);
-            })();
+
+                    //加载 disqus
+                var disqus_config = function () {
+                    this.page.url = 'http://www.mitsuyama.top/blog/1.html';  // Replace PAGE_URL with your page's canonical URL variable
+                    this.page.identifier = 'blog1'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                    };
+                    
+                    (function() { // DON'T EDIT BELOW THIS LINE
+                    var d = document, s = d.createElement('script');
+                    s.src = 'https://mitsuyama.disqus.com/embed.js';
+                    s.setAttribute('data-timestamp', + new Date());
+                    (d.head || d.body).appendChild(s);
+                    })();
         </script>
         <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
@@ -220,7 +223,6 @@
         <script src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
         <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.0.js"></script>
         <script type = "text/x-mathjax-config">
-
             MathJax.Hub.Config({
                 tex2jax: {
                     skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],

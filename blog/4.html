@@ -71,10 +71,10 @@
         <div class = "contentListOut">
             <div class = "contentList">
                 <div class = "contentBorder">
-                            <a href = "#1" class = "contentListCon">映射</a>
-            <a href = "#2" class = "contentListCon" style = "padding-left: 40px;">抽屉原理</a>
-            <a href = "#3" class = "contentListCon" style = "padding-left: 40px;">映射的合成</a>
-            <a href = "#4" class = "contentListCon" style = "padding-left: 40px;">逆映射</a>
+                                <a href = "#1" class = "contentListCon">映射</a>
+            <a href = "#2" class = "contentListCon" style = "padding-left: 60px;">抽屉原理</a>
+            <a href = "#3" class = "contentListCon" style = "padding-left: 60px;">映射的合成</a>
+            <a href = "#4" class = "contentListCon" style = "padding-left: 60px;">逆映射</a>
 
                 </div>
             </div>
@@ -82,18 +82,22 @@
         
         <div class = "blogMainBlock">
             <div class = "articleContext">
-                                <span class = "normal">集合基础：略</span>
+                <div class = "articleBorder">
+                                    <br>
+                <a href = "12.html" class = "conncetion"><i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp&nbsp&nbsp下一篇：离散数学 2</a>
+                <br>
+                <span class = "normal">集合基础：略</span>
                 <br>
                 <div class = "h2" id = "1">映射</div>
                 <span class = "normal">$f：为一个法则，$$x&nbsp\to&nbspy$，对于一个确定的&nbsp$x$，只有唯一的一个&nbsp$y$&nbsp与之对应</span>
                 <br>
                 <span class = "normal">$y$&nbsp为&nbsp$x$&nbsp的象，$x$&nbsp为原象，记为：$f&nbsp:&nbspx&nbsp\to&nbspy$</span>
                 <br>
-                <span class = "normal">值域记为&nbsp$Im(f)​$</span>
+                <span class = "normal">值域记为&nbsp$Im(f)$</span>
                 <br>
                 <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp限制和扩散：$A&nbsp\subsetneq&nbspY$，得到：</span>
                 <br>
-                <span class = "normal" style = "padding-left: 40px;">•&nbsp&nbsp$\phi&nbsp:&nbspA&nbsp\to&nbspY，\forall&nbspx&nbsp\in&nbspA,&nbsp\phi(x)&nbsp=&nbspf(x)，\phi&nbsp称为在&nbspf&nbsp在&nbspA&nbsp上的限制，常用&nbspf_{|A}&nbsp来代替&nbsp\phi，f&nbsp是&nbsp\phi&nbsp在&nbspX&nbsp上的扩散$</span>
+                <span class = "normal" style = "padding-left: 40px;">•&nbsp&nbsp$\phi&nbsp:&nbspA&nbsp\to&nbspY，\forall&nbspx&nbsp\in&nbspA,&nbsp\phi(x)&nbsp=&nbspf(x)，\phi$&nbsp$称为在&nbspf&nbsp在&nbspA&nbsp上的限制$，$常用&nbspf_{|A}&nbsp来代替&nbsp\phi$，$f&nbsp是&nbsp\phi&nbsp在&nbspX&nbsp上的扩散$</span>
                 <br>
                 <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp部分映射：$f:&nbspA&nbsp\to&nbspY$</span>
                 <br>
@@ -106,6 +110,7 @@
                 <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp双射：既是单射又是满射</span>
                 <br>
                 <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp恒等映射：$f:&nbspX&nbsp\to&nbspX，对&nbsp\forall&nbspx&nbsp\in&nbspX,&nbspf(x)&nbsp=&nbspx,&nbspf&nbsp为&nbspx&nbsp上的恒等映射，记&nbspI_x$</span>
+                <br>
                 <br>
                 <span class = "normal"><span class = "strong"><u>例1</u></span>：$S:&nbspN&nbsp\&nbspto&nbspN$,&nbsp$\forall&nbspn&nbsp\in&nbspN$,&nbsp$s(n)&nbsp=&nbspn&nbsp+&nbsp1$,&nbsp$s$&nbsp称为&nbsp$N$&nbsp上的后继函数，是单射，不是满射</span>
                 <br>
@@ -128,6 +133,7 @@
                 <div class = "h3" id = "2">抽屉原理</div>
                 <span class = "normal">$f:&nbspX&nbsp\to&nbspY$,&nbsp$|X|&nbsp=&nbsp|Y|&nbsp+&nbsp1$,&nbsp$\exists&nbspy&nbsp\in&nbspY$,&nbsp$y$&nbsp的原象集至少有&nbsp$2$&nbsp个元素</span>
                 <br>
+                <br>
                 <span class = "normal"><span class = "strong"><u>例1</u></span>：从&nbsp$1,&nbsp\ldots,&nbsp2n$&nbsp中取&nbsp$n&nbsp+&nbsp1$&nbsp个数，这&nbsp$n&nbsp+&nbsp1$&nbsp个数中必有两个数，使得其中一个能整除另一个</span>
                 <br>
                 <span class = "normal">证明：<br>将&nbsp$2n$&nbsp个数表示成&nbsp$2^{l}&nbsp\cdot&nbspd_{i}$&nbsp的形式，而&nbsp$2n$&nbsp个数只有&nbsp$n&nbsp+&nbsp1$&nbsp个奇数，所以取&nbsp$n&nbsp+&nbsp1$&nbsp个数必有一个奇数&nbsp$d_{i}$&nbsp被提及到两次（即，一定有两个数&nbsp$a_{i},&nbspa_{j}$，使得&nbsp$d_{i}&nbsp=&nbspd_{j}$），那么其中一个能整除另一个。</span>
@@ -139,6 +145,7 @@
                 <br>
                 <br>
                 <span class = "normal"><span class = "strong"><u>变形&nbsp1</u></span>：将&nbsp$n$&nbsp个物体放入&nbsp$n$&nbsp个盒子，且没有一个空盒子，那么每个盒子恰有一个物体</span>
+                <br>
                 <br>
                 <span class = "normal"><span class = "strong"><u>变形&nbsp2</u></span>：将&nbsp$n$&nbsp个物体放入&nbsp$n$&nbsp个盒子，没有一个盒子多于一个物体，那么每个盒子恰有一个物体</span>
                 <br>
@@ -165,9 +172,12 @@ $$
                 <br>
                 <span class = "normal"><span class = "strong"><u>加强</u></span>：设&nbsp$q_{1},&nbspq_{2}&nbsp\ldots&nbspq_{n}$&nbsp为&nbsp$n$&nbsp个正整数，如果&nbsp$q_{1}&nbsp+&nbspq_{2}&nbsp+&nbsp\ldots&nbsp+&nbspq_{n}$&nbsp个物体放到&nbsp$n$&nbsp个盒子中，则或者第&nbsp$i$&nbsp个盒子中至少有&nbsp$q_{i}$&nbsp个物体</span>
                 <br>
+                <br>
                 <span class = "normal"><u><span class = "strong">推论&nbsp1</span></u>：如果把&nbsp$n(r&nbsp-&nbsp1)&nbsp+&nbsp1$&nbsp个物体放到&nbsp$n$&nbsp&nbsp个盒子中，则必有一个盒子至少有&nbsp$r$&nbsp个物体</span>
                 <br>
+                <br>
                 <span class = "normal"><span class = "strong"><u>推论&nbsp2</u></span>：如果&nbsp$n$&nbsp个正整数平均数&nbsp$>&nbsp&nbspr&nbsp-&nbsp1$，则至少有一个正整数不小于&nbsp$r$</span>
+                <br>
                 <br>
                 <span class = "normal"><span class = "strong"><u>推论&nbsp3</u></span>：把&nbsp$m$&nbsp&nbsp个物体放到&nbsp$n$&nbsp&nbsp个盒子中，则必有一个盒子至少含有&nbsp$\lfloor&nbsp\frac{m&nbsp-&nbsp1}{n}&nbsp\rfloor&nbsp+&nbsp1$&nbsp个物体</span>
                 <br>
@@ -192,7 +202,9 @@ $$
                 <br>
                 <span class = "normal"><span class = "strong"><u>象定义</u></span>：$f(A)&nbsp=&nbsp\{f(x)&nbsp|&nbspx&nbsp\in&nbspA\}$，$f(x)$&nbsp称为&nbsp$A$&nbsp在&nbsp$f$&nbsp下的象</span>
                 <br>
+                <br>
                 <span class = "normal"><span class = "strong"><u>逆的定义</u></span>：$f^{-1}(B)&nbsp=&nbsp\{x&nbsp|&nbspf(x)&nbsp\in&nbspB,&nbspx&nbsp\in&nbspX\}$</span>
+                <br>
                 <br>
                 <span class = "normal"><span class = "strong"><u>逆的分配率</u></span>：</span>
                 <br>
@@ -204,6 +216,7 @@ $$
 &f^{-1}(c^{c}) = (f^{-1}(c))^{c}
 \end{align}
 $$
+                <br>
                 <span class = "normal"><span class = "strong"><u>定理&nbsp2</u></span>：</span>
                 <br>
 $$
@@ -217,11 +230,15 @@ $$
                 <div class = "h3" id = "3">映射的合成</div>
                 <span class = "normal">$h&nbsp=&nbspg&nbsp\circ&nbspf$，简记：$h&nbsp=&nbspgf$</span>
                 <br>
+                <br>
                 <span class = "normal"><span class = "strong"><u>映射的合成满足结合律</u></span></span>
+                <br>
                 <br>
                 <span class = "normal"><span class = "strong"><u>定理&nbsp2</u></span>：$f:&nbspX&nbsp\to&nbspY$，则：$f&nbsp=&nbspf&nbsp\circ&nbspI_{x}&nbsp=&nbspI_{y}&nbsp\circ&nbspf$</span>
                 <br>
+                <br>
                 <span class = "normal"><span class = "strong"><u>定理&nbsp3</u></span>：若&nbsp$f$&nbsp和&nbsp$g$&nbsp都是满射&nbsp/&nbsp单射&nbsp/&nbsp双射，则&nbsp$g&nbsp\circ&nbspf$&nbsp也是满射&nbsp/&nbsp单射/&nbsp双射</span>
+                <br>
                 <br>
                 <span class = "normal"><span class = "strong"><u>定理&nbsp4</u></span>：</span>
                 <br>
@@ -273,6 +290,8 @@ $$
 $$
 对 \; \forall m, k \in N，若 \; m < k \iff f(m) < f(k)
 $$
+                <span class = "normal">.</span>
+                <br>
 $$
 由 \; f(n + 1) > f(f(n))，且 \; f(n) \; 为严格递增函数，知\; n + 1 > f(n)\\
 从而 f(n) \le n，由于 \; f(n) \ge n，有 f(n) = n
@@ -281,17 +300,24 @@ $$
                 <div class = "h3" id = "4">逆映射</div>
                 <span class = "normal"><span class = "strong"><u>逆映射</u></span>：&nbsp$g&nbsp\circ&nbspf&nbsp=&nbspI_{x}&nbsp\;&nbsp且&nbsp\;&nbspf&nbsp\circ&nbspg&nbsp=&nbspI_{y}$，则称&nbsp$f$&nbsp是可逆的，&nbsp$g$&nbsp称为&nbsp$f$&nbsp的逆映射</span>
                 <br>
+                <br>
                 <span class = "normal"><span class = "strong"><u>左右可逆</u></span>：$g&nbsp\circ&nbspf&nbsp=&nbspI_x$，则称&nbsp$f$&nbsp是左可逆的，且&nbsp$g$&nbsp称为&nbsp$f$&nbsp的左逆映射；&nbsp$f&nbsp\circ&nbsph&nbsp=&nbspI_y$，则称&nbsp$f$&nbsp是右可逆的。</span>
+                <br>
                 <br>
                 <span class = "normal"><span class = "strong"><u>可逆的充分必要条件</u></span>：$f&nbsp:&nbspX&nbsp\to&nbspY$，$f$&nbsp可逆&nbsp$\iff$&nbsp$f$&nbsp是双射<br>证明：<br>$\Rightarrow$左可逆证明满射，右可逆证明单射<br>$\Leftarrow$&nbsp构造映射，则可证明</span>
                 <br>
+                <br>
                 <span class = "normal"><span class = "strong"><u>逆映射唯一定理</u></span>：$f:&nbspX&nbsp\to&nbspY$，如果&nbsp$f$&nbsp可逆，则其逆映射唯一<br>证明；<br>由&nbsp$f&nbsp\circ&nbspg_1&nbsp=&nbspf&nbsp\circ&nbspg_2&nbsp=&nbspI_y$，对&nbsp$\forall&nbspy&nbsp\in&nbspY$，$f&nbsp\circ&nbspg_1(y)&nbsp=&nbspf&nbsp\circ&nbspg_2(y)$，由&nbsp$f$&nbsp是单射知，$g_1(y)&nbsp=&nbspg_2(y)$</span>
+                <br>
                 <br>
                 <span class = "normal"><span class = "strong"><u>逆映射合成的逆</u></span>：$(g&nbsp\circ&nbspf)^{-1}&nbsp=&nbspg^{-1}&nbsp\circ&nbspy^{-1}​$<br>证明：<br>$(g&nbsp\circ&nbspf)^{-1}&nbsp\circ&nbsp(g&nbsp\circ&nbspf)&nbsp=&nbspI_x​$，$(f^{-1}&nbsp\circ&nbspg^{-1}&nbsp\circ&nbsp(g&nbsp\circ&nbspf)&nbsp=&nbspI_x)​$<br>由逆映射唯一得</span>
                 <br>
+                <br>
                 <span class = "normal"><span class = "strong"><u>穿脱原则</u></span>：先穿袜子再拖鞋，先脱鞋再拖袜子</span>
                 <br>
+                <br>
                 <span class = "normal"><span class = "strong"><u>映射等于自己逆的逆</u></span>：$f:&nbspX&nbsp\to&nbspY$，$f$&nbsp可逆，$(f^{-1})^{-1}&nbsp=&nbspf$<br>证明：逆映射唯一可证</span>
+                <br>
                 <br>
                 <span class = "normal"><span class = "strong"><u>左右可逆的充分必要条件</u></span>：</span>
                 <br>
@@ -301,16 +327,16 @@ $$
                 <br>
                 <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp证明：$\Rightarrow$&nbsp映射合成定理，$\Leftarrow$&nbsp构造&nbsp$g:&nbspIm(f)&nbsp\to&nbspX$&nbsp在&nbsp$Y$&nbsp上的扩展</span>
                 <br>
-                <a href = "12.html" class = "conncetion">下一篇：离散数学 2</a><br>
 
-                <br><br><br><br><br>
-                <!--<div class = "blogTrans">
-                    <div class = "lastBlogTitle"></div>
-                    <div class = "nextBlogTitle"></div>
-                    <div class = "lastBlog"><a href = "3.html" class = "noStyle">◁&nbsp&nbspPreviois</a></div>
-                    <div class = "nextBlog"><a href = "5.html" class = "noStyle">Next&nbsp&nbsp▷</a></div>
+                    <br><br><br><br><br>
+                    <!--<div class = "blogTrans">
+                        <div class = "lastBlogTitle"></div>
+                        <div class = "nextBlogTitle"></div>
+                        <div class = "lastBlog"><a href = "3.html" class = "noStyle">◁&nbsp&nbspPreviois</a></div>
+                        <div class = "nextBlog"><a href = "5.html" class = "noStyle">Next&nbsp&nbsp▷</a></div>
+                    </div>
+                    <hr>-->
                 </div>
-                <hr>-->
             </div>
             <div id = "disqus_thread" style = "position: relative; margin: auto; width: 50%;"></div>
             <div class = "myAffix">
@@ -329,18 +355,19 @@ $$
             /**
             *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
             *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
-            
-            var disqus_config = function () {
-            this.page.url = 'http://www.mitsuyama.top/blog/4.html';  // Replace PAGE_URL with your page's canonical URL variable
-            this.page.identifier = 'blog4'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-            };
-            
-            (function() { // DON'T EDIT BELOW THIS LINE
-            var d = document, s = d.createElement('script');
-            s.src = 'https://mitsuyama.disqus.com/embed.js';
-            s.setAttribute('data-timestamp', + new Date());
-            (d.head || d.body).appendChild(s);
-            })();
+
+                    //加载 disqus
+                var disqus_config = function () {
+                    this.page.url = 'http://www.mitsuyama.top/blog/4.html';  // Replace PAGE_URL with your page's canonical URL variable
+                    this.page.identifier = 'blog4'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                    };
+                    
+                    (function() { // DON'T EDIT BELOW THIS LINE
+                    var d = document, s = d.createElement('script');
+                    s.src = 'https://mitsuyama.disqus.com/embed.js';
+                    s.setAttribute('data-timestamp', + new Date());
+                    (d.head || d.body).appendChild(s);
+                    })();
         </script>
         <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
@@ -351,7 +378,6 @@ $$
         <script src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
         <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.0.js"></script>
         <script type = "text/x-mathjax-config">
-
             MathJax.Hub.Config({
                 tex2jax: {
                     skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],

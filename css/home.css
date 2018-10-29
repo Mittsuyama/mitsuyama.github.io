@@ -11,7 +11,7 @@
 }
 
 #homeBackground {
-    background-image: url("../img/background-img/3.jpg");
+    background-image: url("../img/background-img/1.jpg");
     background-attachment: fixed;
     background-size: 100%;
     width: 100%;
@@ -27,6 +27,15 @@ div.homeTitle {
     color: white;
     font-size: 80px;
     text-align: center;
+}
+
+
+div.glass {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    left: 0px;
+    width: 100%;
+    height: 600px;
 }
 
 div.nevigation {
@@ -63,13 +72,13 @@ div.navigation_content2 {
 }
 
 div.nav_text_home {
-    color: #999999;
     /*
     background-image: url("../img/home_gray_tra.png");
     background-repeat: no-repeat;
     background-position-x: 8px;
     background-position-y: 10px;
     */
+    color: #999999;
     left: 150px;
     position: absolute;
     font-family: "Arial";
@@ -86,8 +95,8 @@ div.nav_text_home {
 
 
 div.nav_text {
-    border-radius: 0px;
     color: #999999;
+    border-radius: 0px;
     float: left;
     font-family: "Arial";
     border: 0px;
@@ -113,7 +122,7 @@ div.nav_text_home:hover {
 div.home_background {
     zoom: 0.85;
     width: 100%;
-    background-color: #f4f4f4;
+    background-color: #f9f9f9f9;
 }
 
 div.text_container {
@@ -170,7 +179,7 @@ div.sawNumBox {
     opacity: 1;
     position: relative;
     width: 100%;
-    height: 24px;
+    height: 23px;
     color: rgb(160, 160, 160);
 }
 
@@ -237,7 +246,7 @@ p.tagText {
 
 div.feet {
     color: #999999;
-    background-color: #f4f4f4;
+    background-color: #f9f9f9f9;
     width: 100%;
     height: 35px;
 }
@@ -249,7 +258,7 @@ div.copyrigt {
     left: 50px;
     text-align: center;
     padding: 5px;
-    background-color: #f4f4f4;
+    background-color: #f9f9f9f9;
 }
 
 div.callme {
@@ -258,5 +267,5 @@ div.callme {
     right: 50px;
     text-align: center;
     padding: 5px;
-    background-color: #f4f4f4;
+    background-color: #f9f9f9f9;
 }

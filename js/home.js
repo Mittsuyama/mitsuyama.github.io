@@ -46,7 +46,7 @@ function waterfall() {
     }
     for(var i = 0; i < infoText.length; i++) {
         if(infoText[i].offsetHeight < 60) {
-            infoText[i].style.top = 19 + "px";
+            infoText[i].style.top = 17 + "px";
         }
     }
     document.getElementsByClassName("home_background")[0].style.height = maxHeight + 100 + "px";

@@ -68,22 +68,24 @@
         <div class = "contentListOut">
             <div class = "contentList">
                 <div class = "contentBorder">
-                ((contentList))
+                    ((contentList))
                 </div>
             </div>
         </div>
         
         <div class = "blogMainBlock">
             <div class = "articleContext">
-                ((content))
-                <br><br><br><br><br>
-                <!--<div class = "blogTrans">
-                    <div class = "lastBlogTitle"></div>
-                    <div class = "nextBlogTitle"></div>
-                    <div class = "lastBlog"><a href = "((lastBlog)).html" class = "noStyle">◁&nbsp&nbspPreviois</a></div>
-                    <div class = "nextBlog"><a href = "((nextBlog)).html" class = "noStyle">Next&nbsp&nbsp▷</a></div>
+                <div class = "articleBorder">
+                    ((content))
+                    <br><br><br><br><br>
+                    <!--<div class = "blogTrans">
+                        <div class = "lastBlogTitle"></div>
+                        <div class = "nextBlogTitle"></div>
+                        <div class = "lastBlog"><a href = "((lastBlog)).html" class = "noStyle">◁&nbsp&nbspPreviois</a></div>
+                        <div class = "nextBlog"><a href = "((nextBlog)).html" class = "noStyle">Next&nbsp&nbsp▷</a></div>
+                    </div>
+                    <hr>-->
                 </div>
-                <hr>-->
             </div>
             <div id = "disqus_thread" style = "position: relative; margin: auto; width: 50%;"></div>
             <div class = "myAffix">
@@ -102,18 +104,19 @@
             /**
             *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
             *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
-            
-            var disqus_config = function () {
-            this.page.url = '((pageUrl))';  // Replace PAGE_URL with your page's canonical URL variable
-            this.page.identifier = '((pageId))'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-            };
-            
-            (function() { // DON'T EDIT BELOW THIS LINE
-            var d = document, s = d.createElement('script');
-            s.src = 'https://mitsuyama.disqus.com/embed.js';
-            s.setAttribute('data-timestamp', + new Date());
-            (d.head || d.body).appendChild(s);
-            })();
+
+                    //加载 disqus
+                var disqus_config = function () {
+                    this.page.url = '((pageUrl))';  // Replace PAGE_URL with your page's canonical URL variable
+                    this.page.identifier = '((pageId))'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                    };
+                    
+                    (function() { // DON'T EDIT BELOW THIS LINE
+                    var d = document, s = d.createElement('script');
+                    s.src = 'https://mitsuyama.disqus.com/embed.js';
+                    s.setAttribute('data-timestamp', + new Date());
+                    (d.head || d.body).appendChild(s);
+                    })();
         </script>
         <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
@@ -124,7 +127,6 @@
         <script src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
         <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.0.js"></script>
         <script type = "text/x-mathjax-config">
-
             MathJax.Hub.Config({
                 tex2jax: {
                     skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],

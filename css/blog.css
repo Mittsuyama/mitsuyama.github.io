@@ -1,13 +1,13 @@
 ﻿::selection {
-    background:rgba(255, 230, 70, 0.3); 
+    background:rgba(255, 230, 70, 0.2); 
 }
 
 ::-moz-selection {
-    background:rgb(200, 100, 0); 
+    background:rgba(255, 230, 70, 0.2);
 }
 
 ::-webkit-selection {
-    background:rgb(200, 100, 0); 
+    background:rgba(255, 230, 70, 0.2);
 }
 
 div.imgBack {
@@ -30,14 +30,6 @@ body {
 }
 
 #blogBackground {
-    width: 100%;
-    height: 600px;
-}
-
-div.glass {
-    position: absolute;
-    background-color: rgba(0, 0, 0, 0.5);
-    left: 0px;
     width: 100%;
     height: 600px;
 }
@@ -105,19 +97,30 @@ div.contentTitile:hover {
 
 div.contentList {
     display: none;
-    padding-left: 20px;
-    border-left: rgba(200, 200, 200, 0.5) solid 3px;
+    padding-left: 5px;
+    border-left: rgba(0, 0, 0, 0.4) solid 3px;
 }
 
 a.contentListCon {
+    padding-left: 20px;
+    padding-top: 3px;;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
     max-width: 100%;
-    max-height: 33px;
+    height: 32px;
+    margin: 2px 0px 2px 0px;
     display: block;
     color: rgba(0, 0, 0, 0.5);
     font-size: 18px;
+    transition-duration: 0.2s;
+    -webkit-transition-duration: 0.2s;
+    border-radius: 5px;
+}
+
+a.contentListCon:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    text-decoration: none;
 }
 
 div.blogMainBlock {
@@ -129,14 +132,24 @@ div.blogMainBlock {
 
 div.articleContext {
     position: relative;
-    width: 55%;
+    width: 100%;
     margin: auto;
     background-color: white;
-    color: #777777;
     font-size: 20px;
     min-height: 600px;
+    padding-top: 50px;
+    padding-bottom: 50px;
     /*word-wrap: break-all;*/
     text-align: left;
+}
+
+div.articleBorder {    
+    margin: auto;
+    width: 50%;
+    padding: 50px;
+    border-radius: 10px;
+    background-color: white;
+    color: #777777;
 }
 
 div.h1 {
@@ -189,7 +202,9 @@ div.h4 {
     margin-left: 0px;
     margin-top: 35px;
     margin-bottom: 25px;
-    border-left: 5px solid rgba(120, 220, 190, 0.8);
+    border-left: 5px solid rgba(120, 220, 190, 0.7);
+    /*background-color: rgba(120, 220, 190, 0.07);*/
+    border-radius: 0px 5px 5px 0px;
     padding: 10px 0px 10px 20px;
     width: 100%;
     min-height: 30px;
@@ -203,19 +218,20 @@ div.h5 {
     background-position-x: left;
     background-position-y: 28px;
     background-size: 2.3%;*/
-    font-size: 23px;
+    font-size: 26px;
     margin-left: 0px;
     margin-top: 40px;
     margin-bottom: 20px;
-    border-left: 4px solid rgba(110, 220, 250, 0.7);
+    border-left: 4px solid rgba(110, 220, 250, 0.4);
+    /*background-color: rgba(110, 220, 250, 0.05);*/
     padding-left: 21px;
     width: 100%;
     min-height: 21px; 
 }
 
 #quoteIcon {
-    margin-top: 27px;
     margin-left: 40px;
+    margin-right: 13px;
 }
 
 div.quote {
@@ -227,8 +243,8 @@ div.quote {
     border-left: 2px solid #aaaaaa;*/
     color: #999999;
     font-size: 18px;
-    margin: 30px 0px 30px 30px;
-    padding: 0px 0px 0px 40px;
+    margin: 30px 0px 30px 0px;
+    padding: 0px 0px 0px 0px;
     width: 100%;
 }
 
@@ -262,14 +278,26 @@ span.strike {
 }
 
 span.emphasis {
-    background-color:  rgba(255, 170, 80, 0.2);
+    padding: 1px 5px 1px 5px;
+    background-color:rgba(255, 150, 60, 0.09);
     border-radius: 7px;
-    /*color: rgba(0, 180, 180, 1)*/
 }
 
 a.conncetion {
+    padding: 20px;
+    display: block;
+    margin: 10px 0px 10px 0px;
     font-size: 20px;
     width: 100%;
+    color: rgba(158, 149, 104, 1);
+    min-height: 50px;
+    border-radius: 5px;
+    transition-duration: 0.2s;
+    -webkit-transition-duration: 0.2s;
+}
+a.conncetion:hover {
+    text-decoration: none;
+    background-color: rgba(100, 109, 44, 0.1);
 }
 
 pre.codeBlock {

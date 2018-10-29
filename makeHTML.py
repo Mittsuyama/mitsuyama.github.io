@@ -151,7 +151,7 @@ class makeHTML:
                 #contentList += '''           <a href = "#%s" class = "contentListCon" style = "padding-left: 80px;">''' % (str(tempOrder)) + j[5:-1].replace(' ', '&nbsp&nbsp') + '''</a><br>''' + '\n'
             elif len(j) > 4 and j[:3] == '###':
                 tempOrder += 1
-                contentList += '''            <a href = "#%s" class = "contentListCon" style = "padding-left: 40px;">''' % (str(tempOrder)) + j[4:-1].replace(' ', '&nbsp&nbsp') + '''</a>''' + '\n'
+                contentList += '''            <a href = "#%s" class = "contentListCon" style = "padding-left: 60px;">''' % (str(tempOrder)) + j[4:-1].replace(' ', '&nbsp&nbsp') + '''</a>''' + '\n'
             elif len(j) > 3 and j[:2] == '##':
                 tempOrder += 1
                 contentList += '''            <a href = "#%s" class = "contentListCon">''' % (str(tempOrder)) + j[3:-1].replace(' ', '&nbsp&nbsp') + '''</a>''' + '\n'
@@ -208,7 +208,7 @@ class makeHTML:
                 if isQuote:
                     blogContent += '''                <div class = "quoteAgain">''' + line[2 : -1].replace(' ', '&nbsp&nbsp') + '''</div>''' + '\n'
                 else:
-                    blogContent += '''                <i class = "fa fa-quote-left fa-1x fa-pull-left" aria-hidden = "true" id = "quoteIcon"></i><div class = "quote">''' + line[2 : -1].replace(' ', '&nbsp&nbsp') + '''</div>''' + '\n'
+                    blogContent += '''                <div class = "quote"><i class = "fa fa-quote-left fa-1x fa-pull-left" aria-hidden = "true" id = "quoteIcon"></i>''' + line[2 : -1].replace(' ', '&nbsp&nbsp') + '''</div>''' + '\n'
                     isQuote = True
             elif lLen > 3 and line[:3] == 'Tag':
                 if i + 1 < lLen and self.Paragraph[i + 1] == '\n':
@@ -231,7 +231,7 @@ class makeHTML:
                         break
                     href += line[tempPos]
                     tempPos += 1
-                blogContent += '''                <a href = "%s" class = "conncetion">''' % (href) + context + '''</a><br>''' + '\n'
+                blogContent += '''                <a href = "%s" class = "conncetion"><i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp&nbsp&nbsp''' % (href) + context + '''</a>''' + '\n'
             elif line[0:2] == '![' and line[-2] == ')':
                 context = ''
                 href = ''

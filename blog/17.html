@@ -71,15 +71,15 @@
         <div class = "contentListOut">
             <div class = "contentList">
                 <div class = "contentBorder">
-                            <a href = "#1" class = "contentListCon">前言</a>
+                                <a href = "#1" class = "contentListCon">前言</a>
             <a href = "#2" class = "contentListCon">单词</a>
-            <a href = "#3" class = "contentListCon" style = "padding-left: 40px;">漢字书写错误</a>
-            <a href = "#4" class = "contentListCon" style = "padding-left: 40px;">清浊音易混</a>
-            <a href = "#5" class = "contentListCon" style = "padding-left: 40px;">长短音易混</a>
-            <a href = "#6" class = "contentListCon" style = "padding-left: 40px;">其他读音易错</a>
-            <a href = "#7" class = "contentListCon" style = "padding-left: 40px;">动词易错</a>
-            <a href = "#8" class = "contentListCon" style = "padding-left: 40px;">不能识别</a>
-            <a href = "#9" class = "contentListCon" style = "padding-left: 40px;">意义易错</a>
+            <a href = "#3" class = "contentListCon" style = "padding-left: 60px;">漢字书写错误</a>
+            <a href = "#4" class = "contentListCon" style = "padding-left: 60px;">清浊音易混</a>
+            <a href = "#5" class = "contentListCon" style = "padding-left: 60px;">长短音易混</a>
+            <a href = "#6" class = "contentListCon" style = "padding-left: 60px;">其他读音易错</a>
+            <a href = "#7" class = "contentListCon" style = "padding-left: 60px;">动词易错</a>
+            <a href = "#8" class = "contentListCon" style = "padding-left: 60px;">不能识别</a>
+            <a href = "#9" class = "contentListCon" style = "padding-left: 60px;">意义易错</a>
             <a href = "#10" class = "contentListCon">语法</a>
 
                 </div>
@@ -88,9 +88,10 @@
         
         <div class = "blogMainBlock">
             <div class = "articleContext">
-                                <br>
+                <div class = "articleBorder">
+                                    <br>
                 <div class = "h2" id = "1">前言</div>
-                <a href = "11.html" class = "conncetion">日语学习准备篇</a><br>
+                <a href = "11.html" class = "conncetion"><i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp&nbsp&nbsp日语学习准备篇</a>
                 <span class = "normal">这一已经是第三次学习《中日交流标准日本语》初级上了，用了各式各样的方法（日语红蓝宝书，背单词&nbspAPP，看课文中文翻译句子），最后发现还是上述链接中的听写课文和单词最有效果。</span>
                 <br>
                 <div class = "h2" id = "2">单词</div>
@@ -577,14 +578,15 @@
                 <span class = "normal">二类形容词和名次的并列后面加「で」、而不是「て」</span>
                 <br>
 
-                <br><br><br><br><br>
-                <!--<div class = "blogTrans">
-                    <div class = "lastBlogTitle"></div>
-                    <div class = "nextBlogTitle"></div>
-                    <div class = "lastBlog"><a href = "16.html" class = "noStyle">◁&nbsp&nbspPreviois</a></div>
-                    <div class = "nextBlog"><a href = "18.html" class = "noStyle">Next&nbsp&nbsp▷</a></div>
+                    <br><br><br><br><br>
+                    <!--<div class = "blogTrans">
+                        <div class = "lastBlogTitle"></div>
+                        <div class = "nextBlogTitle"></div>
+                        <div class = "lastBlog"><a href = "16.html" class = "noStyle">◁&nbsp&nbspPreviois</a></div>
+                        <div class = "nextBlog"><a href = "18.html" class = "noStyle">Next&nbsp&nbsp▷</a></div>
+                    </div>
+                    <hr>-->
                 </div>
-                <hr>-->
             </div>
             <div id = "disqus_thread" style = "position: relative; margin: auto; width: 50%;"></div>
             <div class = "myAffix">
@@ -603,18 +605,19 @@
             /**
             *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
             *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
-            
-            var disqus_config = function () {
-            this.page.url = 'http://www.mitsuyama.top/blog/17.html';  // Replace PAGE_URL with your page's canonical URL variable
-            this.page.identifier = 'blog17'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-            };
-            
-            (function() { // DON'T EDIT BELOW THIS LINE
-            var d = document, s = d.createElement('script');
-            s.src = 'https://mitsuyama.disqus.com/embed.js';
-            s.setAttribute('data-timestamp', + new Date());
-            (d.head || d.body).appendChild(s);
-            })();
+
+                    //加载 disqus
+                var disqus_config = function () {
+                    this.page.url = 'http://www.mitsuyama.top/blog/17.html';  // Replace PAGE_URL with your page's canonical URL variable
+                    this.page.identifier = 'blog17'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                    };
+                    
+                    (function() { // DON'T EDIT BELOW THIS LINE
+                    var d = document, s = d.createElement('script');
+                    s.src = 'https://mitsuyama.disqus.com/embed.js';
+                    s.setAttribute('data-timestamp', + new Date());
+                    (d.head || d.body).appendChild(s);
+                    })();
         </script>
         <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
@@ -625,7 +628,6 @@
         <script src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
         <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.0.js"></script>
         <script type = "text/x-mathjax-config">
-
             MathJax.Hub.Config({
                 tex2jax: {
                     skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],

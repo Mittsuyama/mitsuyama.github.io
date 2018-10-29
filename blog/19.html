@@ -71,7 +71,8 @@
         <div class = "contentListOut">
             <div class = "contentList">
                 <div class = "contentBorder">
-                            <a href = "#1" class = "contentListCon">前言</a>
+                                <a href = "#1" class = "contentListCon">前言</a>
+            <a href = "#2" class = "contentListCon">吉他和弦</a>
 
                 </div>
             </div>
@@ -79,17 +80,28 @@
         
         <div class = "blogMainBlock">
             <div class = "articleContext">
-                                <br>
+                <div class = "articleBorder">
+                                    <br>
                 <div class = "h2" id = "1">前言</div>
+                <span class = "normal">阅读此篇文章，默认你拥有一些基本乐理的知识：音律，音程，和弦，若未掌握可查看之前的文章：</span>
+                <br>
+                <a href = "16.html" class = "conncetion"><i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp&nbsp&nbsp音乐理论基础</a>
+                <span class = "normal">学习音乐理论基础。</span>
+                <br>
+                <div class = "h2" id = "2">吉他和弦</div>
+                <br>
+                <span class = "normal">从演奏者的角度看，从下打上分别是一、二、三、四、五、六弦，</span>
+                <br>
 
-                <br><br><br><br><br>
-                <!--<div class = "blogTrans">
-                    <div class = "lastBlogTitle"></div>
-                    <div class = "nextBlogTitle"></div>
-                    <div class = "lastBlog"><a href = "18.html" class = "noStyle">◁&nbsp&nbspPreviois</a></div>
-                    <div class = "nextBlog"><a href = "20.html" class = "noStyle">Next&nbsp&nbsp▷</a></div>
+                    <br><br><br><br><br>
+                    <!--<div class = "blogTrans">
+                        <div class = "lastBlogTitle"></div>
+                        <div class = "nextBlogTitle"></div>
+                        <div class = "lastBlog"><a href = "18.html" class = "noStyle">◁&nbsp&nbspPreviois</a></div>
+                        <div class = "nextBlog"><a href = "20.html" class = "noStyle">Next&nbsp&nbsp▷</a></div>
+                    </div>
+                    <hr>-->
                 </div>
-                <hr>-->
             </div>
             <div id = "disqus_thread" style = "position: relative; margin: auto; width: 50%;"></div>
             <div class = "myAffix">
@@ -108,18 +120,19 @@
             /**
             *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
             *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
-            
-            var disqus_config = function () {
-            this.page.url = 'http://www.mitsuyama.top/blog/19.html';  // Replace PAGE_URL with your page's canonical URL variable
-            this.page.identifier = 'blog19'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-            };
-            
-            (function() { // DON'T EDIT BELOW THIS LINE
-            var d = document, s = d.createElement('script');
-            s.src = 'https://mitsuyama.disqus.com/embed.js';
-            s.setAttribute('data-timestamp', + new Date());
-            (d.head || d.body).appendChild(s);
-            })();
+
+                    //加载 disqus
+                var disqus_config = function () {
+                    this.page.url = 'http://www.mitsuyama.top/blog/19.html';  // Replace PAGE_URL with your page's canonical URL variable
+                    this.page.identifier = 'blog19'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                    };
+                    
+                    (function() { // DON'T EDIT BELOW THIS LINE
+                    var d = document, s = d.createElement('script');
+                    s.src = 'https://mitsuyama.disqus.com/embed.js';
+                    s.setAttribute('data-timestamp', + new Date());
+                    (d.head || d.body).appendChild(s);
+                    })();
         </script>
         <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
@@ -130,7 +143,6 @@
         <script src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
         <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.0.js"></script>
         <script type = "text/x-mathjax-config">
-
             MathJax.Hub.Config({
                 tex2jax: {
                     skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],

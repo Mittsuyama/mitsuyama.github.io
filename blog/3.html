@@ -71,7 +71,7 @@
         <div class = "contentListOut">
             <div class = "contentList">
                 <div class = "contentBorder">
-                            <a href = "#1" class = "contentListCon">歌词</a>
+                                <a href = "#1" class = "contentListCon">歌词</a>
             <a href = "#2" class = "contentListCon">吉他谱</a>
 
                 </div>
@@ -80,7 +80,8 @@
         
         <div class = "blogMainBlock">
             <div class = "articleContext">
-                                <img src = "../img/image_1amlvba7o1n6613bd1jsi12giu6m9.png" class = "blogImg"><br>
+                <div class = "articleBorder">
+                                    <img src = "../img/image_1amlvba7o1n6613bd1jsi12giu6m9.png" class = "blogImg"><br>
                 <div class = "h2" id = "1">歌词</div>
                 <span class = "normal">君と夏の終わり&nbsp将来の夢</span>
                 <br>
@@ -276,14 +277,15 @@
                 <img src = "../img/secret-base/8.png" class = "blogImg"><br>
                 <img src = "" class = "blogImg"><br>
 
-                <br><br><br><br><br>
-                <!--<div class = "blogTrans">
-                    <div class = "lastBlogTitle"></div>
-                    <div class = "nextBlogTitle"></div>
-                    <div class = "lastBlog"><a href = "2.html" class = "noStyle">◁&nbsp&nbspPreviois</a></div>
-                    <div class = "nextBlog"><a href = "4.html" class = "noStyle">Next&nbsp&nbsp▷</a></div>
+                    <br><br><br><br><br>
+                    <!--<div class = "blogTrans">
+                        <div class = "lastBlogTitle"></div>
+                        <div class = "nextBlogTitle"></div>
+                        <div class = "lastBlog"><a href = "2.html" class = "noStyle">◁&nbsp&nbspPreviois</a></div>
+                        <div class = "nextBlog"><a href = "4.html" class = "noStyle">Next&nbsp&nbsp▷</a></div>
+                    </div>
+                    <hr>-->
                 </div>
-                <hr>-->
             </div>
             <div id = "disqus_thread" style = "position: relative; margin: auto; width: 50%;"></div>
             <div class = "myAffix">
@@ -302,18 +304,19 @@
             /**
             *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
             *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
-            
-            var disqus_config = function () {
-            this.page.url = 'http://www.mitsuyama.top/blog/3.html';  // Replace PAGE_URL with your page's canonical URL variable
-            this.page.identifier = 'blog3'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-            };
-            
-            (function() { // DON'T EDIT BELOW THIS LINE
-            var d = document, s = d.createElement('script');
-            s.src = 'https://mitsuyama.disqus.com/embed.js';
-            s.setAttribute('data-timestamp', + new Date());
-            (d.head || d.body).appendChild(s);
-            })();
+
+                    //加载 disqus
+                var disqus_config = function () {
+                    this.page.url = 'http://www.mitsuyama.top/blog/3.html';  // Replace PAGE_URL with your page's canonical URL variable
+                    this.page.identifier = 'blog3'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                    };
+                    
+                    (function() { // DON'T EDIT BELOW THIS LINE
+                    var d = document, s = d.createElement('script');
+                    s.src = 'https://mitsuyama.disqus.com/embed.js';
+                    s.setAttribute('data-timestamp', + new Date());
+                    (d.head || d.body).appendChild(s);
+                    })();
         </script>
         <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
@@ -324,7 +327,6 @@
         <script src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
         <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.0.js"></script>
         <script type = "text/x-mathjax-config">
-
             MathJax.Hub.Config({
                 tex2jax: {
                     skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
