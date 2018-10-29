@@ -15,7 +15,7 @@
         <link rel = "shortcut icon" href = "../img/icon/favicon.ico" mce_href = "../img/favicon.ico" type = "image/x-icon">
         
         <link rel = "stylesheet" href = "../highlight/styles/rainbow.css">
-        <link rel="stylesheet" href="../font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="../font-awesome/css/font-awesome.css">
         <script src="../highlight/highlight.pack.js"></script>
         <script>hljs.initHighlightingOnLoad();</script>
 
@@ -86,78 +86,47 @@
                                     <br>
                 <a href = "12.html" class = "conncetion"><i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp&nbsp&nbsp下一篇：离散数学 2</a>
                 <br>
-                <span class = "normal">集合基础：略</span>
-                <br>
+                <div class = "normal">集合基础：略</div>
                 <div class = "h2" id = "1">映射</div>
-                <span class = "normal">$f：为一个法则，$$x&nbsp\to&nbspy$，对于一个确定的&nbsp$x$，只有唯一的一个&nbsp$y$&nbsp与之对应</span>
+                <div class = "normal">$f：为一个法则，$$x&nbsp\to&nbspy$，对于一个确定的&nbsp$x$，只有唯一的一个&nbsp$y$&nbsp与之对应</div>
+                <div class = "normal">$y$&nbsp为&nbsp$x$&nbsp的象，$x$&nbsp为原象，记为：$f&nbsp:&nbspx&nbsp\to&nbspy$</div>
+                <div class = "normal">值域记为&nbsp$Im(f)$</div>
+                <div class = "normal" style = "padding-left: 20px; text-indent:-9px;"><i class = "fa fa-chevron-right"></i>&nbsp限制和扩散：$A&nbsp\subsetneq&nbspY$，得到：</div>
+                <div class = "normal" style = "padding-left: 44px; text-indent:-9px;"><i class = "fa fa-chevron-right"></i>&nbsp$\phi&nbsp:&nbspA&nbsp\to&nbspY，\forall&nbspx&nbsp\in&nbspA,&nbsp\phi(x)&nbsp=&nbspf(x)，\phi$&nbsp$称为在&nbspf&nbsp在&nbspA&nbsp上的限制$，$常用&nbspf_{|A}&nbsp来代替&nbsp\phi$，$f&nbsp是&nbsp\phi&nbsp在&nbspX&nbsp上的扩散$</div>
+                <div class = "normal" style = "padding-left: 20px; text-indent:-9px;"><i class = "fa fa-chevron-right"></i>&nbsp部分映射：$f:&nbspA&nbsp\to&nbspY$</div>
+                <div class = "normal" style = "padding-left: 20px; text-indent:-9px;"><i class = "fa fa-chevron-right"></i>&nbsp相等映射：$\forall&nbspx&nbsp\in&nbspX,&nbsp\;&nbspf&nbsp=&nbspg&nbsp\iff&nbspf(x)&nbsp=&nbspg(x)$</div>
+                <div class = "normal" style = "padding-left: 20px; text-indent:-9px;"><i class = "fa fa-chevron-right"></i>&nbsp单射：$\forall&nbspx_1,&nbspx_2&nbsp\in&nbspX，只要&nbspx_1&nbsp\neq&nbspx_2，&nbsp就有&nbspf_(x_{1})&nbsp\neq&nbspf_(x_{2})$</div>
+                <div class = "normal" style = "padding-left: 20px; text-indent:-9px;"><i class = "fa fa-chevron-right"></i>&nbsp满射：$\forall&nbspy&nbsp\in&nbspY,&nbsp\exists&nbspx&nbsp\in&nbsp&nbspX,&nbsp使得&nbspy&nbsp=&nbspf(x)$</div>
+                <div class = "normal" style = "padding-left: 20px; text-indent:-9px;"><i class = "fa fa-chevron-right"></i>&nbsp双射：既是单射又是满射</div>
+                <div class = "normal" style = "padding-left: 20px; text-indent:-9px;"><i class = "fa fa-chevron-right"></i>&nbsp恒等映射：$f:&nbspX&nbsp\to&nbspX，对&nbsp\forall&nbspx&nbsp\in&nbspX,&nbspf(x)&nbsp=&nbspx,&nbspf&nbsp为&nbspx&nbsp上的恒等映射，记&nbspI_x$</div>
                 <br>
-                <span class = "normal">$y$&nbsp为&nbsp$x$&nbsp的象，$x$&nbsp为原象，记为：$f&nbsp:&nbspx&nbsp\to&nbspy$</span>
+                <div class = "normal"><span class = "strong"><u>例1</u></span>：$S:&nbspN&nbsp\&nbspto&nbspN$,&nbsp$\forall&nbspn&nbsp\in&nbspN$,&nbsp$s(n)&nbsp=&nbspn&nbsp+&nbsp1$,&nbsp$s$&nbsp称为&nbsp$N$&nbsp上的后继函数，是单射，不是满射</div>
                 <br>
-                <span class = "normal">值域记为&nbsp$Im(f)$</span>
+                <div class = "normal"><span class = "strong"><u>例2</u></span>：正偶数集&nbsp$E$,&nbsp$e:&nbspE&nbsp\to&nbspN$,&nbsp$e(2m)&nbsp=&nbspm$,&nbsp$e$&nbsp为双射，但&nbsp$e:&nbspN&nbsp\to&nbspN&nbsp$&nbsp是部分映射</div>
                 <br>
-                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp限制和扩散：$A&nbsp\subsetneq&nbspY$，得到：</span>
-                <br>
-                <span class = "normal" style = "padding-left: 40px;">•&nbsp&nbsp$\phi&nbsp:&nbspA&nbsp\to&nbspY，\forall&nbspx&nbsp\in&nbspA,&nbsp\phi(x)&nbsp=&nbspf(x)，\phi$&nbsp$称为在&nbspf&nbsp在&nbspA&nbsp上的限制$，$常用&nbspf_{|A}&nbsp来代替&nbsp\phi$，$f&nbsp是&nbsp\phi&nbsp在&nbspX&nbsp上的扩散$</span>
-                <br>
-                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp部分映射：$f:&nbspA&nbsp\to&nbspY$</span>
-                <br>
-                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp相等映射：$\forall&nbspx&nbsp\in&nbspX,&nbsp\;&nbspf&nbsp=&nbspg&nbsp\iff&nbspf(x)&nbsp=&nbspg(x)$</span>
-                <br>
-                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp单射：$\forall&nbspx_1,&nbspx_2&nbsp\in&nbspX，只要&nbspx_1&nbsp\neq&nbspx_2，&nbsp就有&nbspf_(x_{1})&nbsp\neq&nbspf_(x_{2})$</span>
-                <br>
-                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp满射：$\forall&nbspy&nbsp\in&nbspY,&nbsp\exists&nbspx&nbsp\in&nbsp&nbspX,&nbsp使得&nbspy&nbsp=&nbspf(x)$</span>
-                <br>
-                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp双射：既是单射又是满射</span>
-                <br>
-                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp恒等映射：$f:&nbspX&nbsp\to&nbspX，对&nbsp\forall&nbspx&nbsp\in&nbspX,&nbspf(x)&nbsp=&nbspx,&nbspf&nbsp为&nbspx&nbsp上的恒等映射，记&nbspI_x$</span>
-                <br>
-                <br>
-                <span class = "normal"><span class = "strong"><u>例1</u></span>：$S:&nbspN&nbsp\&nbspto&nbspN$,&nbsp$\forall&nbspn&nbsp\in&nbspN$,&nbsp$s(n)&nbsp=&nbspn&nbsp+&nbsp1$,&nbsp$s$&nbsp称为&nbsp$N$&nbsp上的后继函数，是单射，不是满射</span>
-                <br>
-                <br>
-                <span class = "normal"><span class = "strong"><u>例2</u></span>：正偶数集&nbsp$E$,&nbsp$e:&nbspE&nbsp\to&nbspN$,&nbsp$e(2m)&nbsp=&nbspm$,&nbsp$e$&nbsp为双射，但&nbsp$e:&nbspN&nbsp\to&nbspN&nbsp$&nbsp是部分映射</span>
-                <br>
-                <br>
-                <span class = "normal"><span class = "strong"><u>例3</u></span>：设&nbsp$X$&nbsp为整数的一个有限集合，定义集合&nbsp$X&nbsp-&nbspX&nbsp=&nbsp\{x_1&nbsp-&nbspx&nbsp_2&nbsp|&nbspx_1,&nbspx_2&nbsp\in&nbspX\}$。试证明：若&nbsp$A,&nbspB&nbsp\subset&nbsp&nbsp\{1,&nbsp2,&nbsp\ldots,&nbspn&nbsp\}$&nbsp并且&nbsp$|A|&nbsp\cdot&nbsp|B|&nbsp\ge&nbsp2n&nbsp-&nbsp1,&nbspn&nbsp>&nbsp1$，则&nbsp$(A&nbsp-&nbspA)&nbsp\cap&nbsp(B&nbsp-&nbspB)$&nbsp中有一个正整数</span>
-                <br>
-                <span class = "normal">证明概要：</span>
-                <br>
-                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp做一个映射</span>
-                <br>
-                <span class = "normal" style = "padding-left: 40px;">•&nbsp&nbsp$f:&nbspA&nbsp\times&nbspB&nbsp\to&nbsp\{2,&nbsp3,&nbsp\ldots,&nbsp2n\}$，对&nbsp$\forall&nbsp(a,&nbspb)&nbsp\in&nbspA&nbsp\times&nbspB$，令&nbsp$f(a,&nbspb)&nbsp=&nbspa&nbsp+&nbspb$</span>
-                <br>
-                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp对&nbsp$f$&nbsp是满射证明结论成立</span>
-                <br>
-                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp对&nbsp$f$&nbsp是单射证明结论成立</span>
-                <br>
+                <div class = "normal"><span class = "strong"><u>例3</u></span>：设&nbsp$X$&nbsp为整数的一个有限集合，定义集合&nbsp$X&nbsp-&nbspX&nbsp=&nbsp\{x_1&nbsp-&nbspx&nbsp_2&nbsp|&nbspx_1,&nbspx_2&nbsp\in&nbspX\}$。试证明：若&nbsp$A,&nbspB&nbsp\subset&nbsp&nbsp\{1,&nbsp2,&nbsp\ldots,&nbspn&nbsp\}$&nbsp并且&nbsp$|A|&nbsp\cdot&nbsp|B|&nbsp\ge&nbsp2n&nbsp-&nbsp1,&nbspn&nbsp>&nbsp1$，则&nbsp$(A&nbsp-&nbspA)&nbsp\cap&nbsp(B&nbsp-&nbspB)$&nbsp中有一个正整数</div>
+                <div class = "normal">证明概要：</div>
+                <div class = "normal" style = "padding-left: 20px; text-indent:-9px;"><i class = "fa fa-chevron-right"></i>&nbsp做一个映射</div>
+                <div class = "normal" style = "padding-left: 44px; text-indent:-9px;"><i class = "fa fa-chevron-right"></i>&nbsp$f:&nbspA&nbsp\times&nbspB&nbsp\to&nbsp\{2,&nbsp3,&nbsp\ldots,&nbsp2n\}$，对&nbsp$\forall&nbsp(a,&nbspb)&nbsp\in&nbspA&nbsp\times&nbspB$，令&nbsp$f(a,&nbspb)&nbsp=&nbspa&nbsp+&nbspb$</div>
+                <div class = "normal" style = "padding-left: 20px; text-indent:-9px;"><i class = "fa fa-chevron-right"></i>&nbsp对&nbsp$f$&nbsp是满射证明结论成立</div>
+                <div class = "normal" style = "padding-left: 20px; text-indent:-9px;"><i class = "fa fa-chevron-right"></i>&nbsp对&nbsp$f$&nbsp是单射证明结论成立</div>
                 <div class = "h3" id = "2">抽屉原理</div>
-                <span class = "normal">$f:&nbspX&nbsp\to&nbspY$,&nbsp$|X|&nbsp=&nbsp|Y|&nbsp+&nbsp1$,&nbsp$\exists&nbspy&nbsp\in&nbspY$,&nbsp$y$&nbsp的原象集至少有&nbsp$2$&nbsp个元素</span>
+                <div class = "normal">$f:&nbspX&nbsp\to&nbspY$,&nbsp$|X|&nbsp=&nbsp|Y|&nbsp+&nbsp1$,&nbsp$\exists&nbspy&nbsp\in&nbspY$,&nbsp$y$&nbsp的原象集至少有&nbsp$2$&nbsp个元素</div>
                 <br>
+                <div class = "normal"><span class = "strong"><u>例1</u></span>：从&nbsp$1,&nbsp\ldots,&nbsp2n$&nbsp中取&nbsp$n&nbsp+&nbsp1$&nbsp个数，这&nbsp$n&nbsp+&nbsp1$&nbsp个数中必有两个数，使得其中一个能整除另一个</div>
+                <div class = "normal">证明：<br>将&nbsp$2n$&nbsp个数表示成&nbsp$2^{l}&nbsp\cdot&nbspd_{i}$&nbsp的形式，而&nbsp$2n$&nbsp个数只有&nbsp$n&nbsp+&nbsp1$&nbsp个奇数，所以取&nbsp$n&nbsp+&nbsp1$&nbsp个数必有一个奇数&nbsp$d_{i}$&nbsp被提及到两次（即，一定有两个数&nbsp$a_{i},&nbspa_{j}$，使得&nbsp$d_{i}&nbsp=&nbspd_{j}$），那么其中一个能整除另一个。</div>
                 <br>
-                <span class = "normal"><span class = "strong"><u>例1</u></span>：从&nbsp$1,&nbsp\ldots,&nbsp2n$&nbsp中取&nbsp$n&nbsp+&nbsp1$&nbsp个数，这&nbsp$n&nbsp+&nbsp1$&nbsp个数中必有两个数，使得其中一个能整除另一个</span>
+                <div class = "normal"><span class = "strong"><u>例&nbsp2</u></span>：任何&nbsp$6$&nbsp个人中，或有三个人相互认识，或有三个人互相不认识。</div>
+                <div class = "normal">证明：<br>确定一个人&nbsp$a$，根据与&nbsp$a$&nbsp是否相互认识分成两组，由抽屉原理知一定有一组至少有三个人；<br>若与&nbsp$a$&nbsp认识的有三个（$b$，$c$，$d$），那这三个人不管如何相互认识或不认识，都满足题意（如果&nbsp$bcd$&nbsp互相不认识，那么满足有三人互相不认识，只要其中两人相互认识（比如&nbsp$bc$&nbsp互相认识），那么&nbsp$abc$&nbsp三人相互认识）；<br>若与&nbsp$a$&nbsp不认识的有三人，&nbsp同理满足题意</div>
                 <br>
-                <span class = "normal">证明：<br>将&nbsp$2n$&nbsp个数表示成&nbsp$2^{l}&nbsp\cdot&nbspd_{i}$&nbsp的形式，而&nbsp$2n$&nbsp个数只有&nbsp$n&nbsp+&nbsp1$&nbsp个奇数，所以取&nbsp$n&nbsp+&nbsp1$&nbsp个数必有一个奇数&nbsp$d_{i}$&nbsp被提及到两次（即，一定有两个数&nbsp$a_{i},&nbspa_{j}$，使得&nbsp$d_{i}&nbsp=&nbspd_{j}$），那么其中一个能整除另一个。</span>
+                <div class = "normal"><span class = "strong"><u>变形&nbsp1</u></span>：将&nbsp$n$&nbsp个物体放入&nbsp$n$&nbsp个盒子，且没有一个空盒子，那么每个盒子恰有一个物体</div>
                 <br>
+                <div class = "normal"><span class = "strong"><u>变形&nbsp2</u></span>：将&nbsp$n$&nbsp个物体放入&nbsp$n$&nbsp个盒子，没有一个盒子多于一个物体，那么每个盒子恰有一个物体</div>
                 <br>
-                <span class = "normal"><span class = "strong"><u>例&nbsp2</u></span>：任何&nbsp$6$&nbsp个人中，或有三个人相互认识，或有三个人互相不认识。</span>
-                <br>
-                <span class = "normal">证明：<br>确定一个人&nbsp$a$，根据与&nbsp$a$&nbsp是否相互认识分成两组，由抽屉原理知一定有一组至少有三个人；<br>若与&nbsp$a$&nbsp认识的有三个（$b$，$c$，$d$），那这三个人不管如何相互认识或不认识，都满足题意（如果&nbsp$bcd$&nbsp互相不认识，那么满足有三人互相不认识，只要其中两人相互认识（比如&nbsp$bc$&nbsp互相认识），那么&nbsp$abc$&nbsp三人相互认识）；<br>若与&nbsp$a$&nbsp不认识的有三人，&nbsp同理满足题意</span>
-                <br>
-                <br>
-                <span class = "normal"><span class = "strong"><u>变形&nbsp1</u></span>：将&nbsp$n$&nbsp个物体放入&nbsp$n$&nbsp个盒子，且没有一个空盒子，那么每个盒子恰有一个物体</span>
-                <br>
-                <br>
-                <span class = "normal"><span class = "strong"><u>变形&nbsp2</u></span>：将&nbsp$n$&nbsp个物体放入&nbsp$n$&nbsp个盒子，没有一个盒子多于一个物体，那么每个盒子恰有一个物体</span>
-                <br>
-                <br>
-                <span class = "normal"><span class = "strong"><u>例（费马小定理证明）</u></span>：证明：$(a,&nbspp)&nbsp=&nbsp1$，则&nbsp$a^{p-1}&nbsp\equiv&nbsp1&nbsp\pmod{p}$</span>
-                <br>
-                <span class = "normal">引理：<br>若&nbsp$(c,&nbspm)&nbsp=&nbsp1$，当&nbsp$a&nbsp\cdot&nbspc&nbsp\equiv&nbspb&nbsp\cdot&nbspc&nbsp\pmod{m}$，则有&nbsp$a&nbsp\equiv&nbspb&nbsp\pmod{m}$</span>
-                <br>
-                <span class = "normal">证明：<br>$a&nbsp\cdot&nbspc&nbsp\equiv&nbspb&nbsp\cdot&nbspc&nbsp\pmod{m}$，则有&nbsp$(a&nbsp-&nbspb)&nbsp\cdot&nbspc&nbsp\equiv&nbsp0&nbsp\pmod{m}$，因为&nbsp$(c,&nbspm)&nbsp=&nbsp1$，所以&nbsp$a&nbsp-&nbspb&nbsp\equiv&nbsp0&nbsp\pmod{m}$，$a&nbsp\equiv&nbspb&nbsp\pmod{m}$</span>
-                <br>
-                <span class = "normal">构造：</span>
-                <br>
+                <div class = "normal"><span class = "strong"><u>例（费马小定理证明）</u></span>：证明：$(a,&nbspp)&nbsp=&nbsp1$，则&nbsp$a^{p-1}&nbsp\equiv&nbsp1&nbsp\pmod{p}$</div>
+                <div class = "normal">引理：<br>若&nbsp$(c,&nbspm)&nbsp=&nbsp1$，当&nbsp$a&nbsp\cdot&nbspc&nbsp\equiv&nbspb&nbsp\cdot&nbspc&nbsp\pmod{m}$，则有&nbsp$a&nbsp\equiv&nbspb&nbsp\pmod{m}$</div>
+                <div class = "normal">证明：<br>$a&nbsp\cdot&nbspc&nbsp\equiv&nbspb&nbsp\cdot&nbspc&nbsp\pmod{m}$，则有&nbsp$(a&nbsp-&nbspb)&nbsp\cdot&nbspc&nbsp\equiv&nbsp0&nbsp\pmod{m}$，因为&nbsp$(c,&nbspm)&nbsp=&nbsp1$，所以&nbsp$a&nbsp-&nbspb&nbsp\equiv&nbsp0&nbsp\pmod{m}$，$a&nbsp\equiv&nbspb&nbsp\pmod{m}$</div>
+                <div class = "normal">构造：</div>
 $$
 1 \cdot a \equiv b_{1} \pmod{p}\\
 2 \cdot a \equiv b_{2} \pmod{p}\\
@@ -165,27 +134,19 @@ $$
 \vdots \\
 (p - 1) \cdot a \equiv b_{p - 1} \pmod{p}
 $$
-                <span class = "normal">假设&nbsp$\exists&nbspi,&nbspj(i&nbsp\neq&nbspj)$，使得&nbsp$b_{i}&nbsp=&nbspb_{j}$，由&nbsp<span class = "emphasis">引理</span>&nbsp&nbsp知，因为&nbsp$b_{i}&nbsp\equiv&nbspb_{j}&nbsp\pmod{p}$&nbsp，$i&nbsp\cdot&nbspa&nbsp\equiv&nbspj&nbsp\cdot&nbspa&nbsp\pmod&nbspp$，所以&nbsp$i&nbsp=&nbspj$，假设矛盾，所以不存在&nbsp$b_{i}&nbsp=&nbspb_{j}$；<br>由抽屉原理，&nbspp&nbsp-&nbsp1&nbsp个&nbsp数，放进&nbspp&nbsp-&nbsp1&nbsp个&nbspb&nbsp中，没有一个数被放了两次，&nbsp则&nbspb&nbsp数组为&nbsp$\{1,&nbsp2,&nbsp\ldots,&nbspp&nbsp-&nbsp1\}$&nbsp的重新排列</span>
+                <div class = "normal">假设&nbsp$\exists&nbspi,&nbspj(i&nbsp\neq&nbspj)$，使得&nbsp$b_{i}&nbsp=&nbspb_{j}$，由&nbsp<span class = "emphasis">引理</span>&nbsp&nbsp知，因为&nbsp$b_{i}&nbsp\equiv&nbspb_{j}&nbsp\pmod{p}$&nbsp，$i&nbsp\cdot&nbspa&nbsp\equiv&nbspj&nbsp\cdot&nbspa&nbsp\pmod&nbspp$，所以&nbsp$i&nbsp=&nbspj$，假设矛盾，所以不存在&nbsp$b_{i}&nbsp=&nbspb_{j}$；<br>由抽屉原理，&nbspp&nbsp-&nbsp1&nbsp个&nbsp数，放进&nbspp&nbsp-&nbsp1&nbsp个&nbspb&nbsp中，没有一个数被放了两次，&nbsp则&nbspb&nbsp数组为&nbsp$\{1,&nbsp2,&nbsp\ldots,&nbspp&nbsp-&nbsp1\}$&nbsp的重新排列</div>
+                <div class = "normal">等式左边之积&nbsp=&nbsp等式右边之积<br>$(p&nbsp-&nbsp1)!&nbsp\cdot&nbspa^{p&nbsp-&nbsp1}&nbsp\equiv&nbsp(p&nbsp-&nbsp1)&nbsp\pmod&nbspp$<br>所以：$a^{p&nbsp-&nbsp1}&nbsp\equiv&nbsp1&nbsp\pmod&nbspp$</div>
                 <br>
-                <span class = "normal">等式左边之积&nbsp=&nbsp等式右边之积<br>$(p&nbsp-&nbsp1)!&nbsp\cdot&nbspa^{p&nbsp-&nbsp1}&nbsp\equiv&nbsp(p&nbsp-&nbsp1)&nbsp\pmod&nbspp$<br>所以：$a^{p&nbsp-&nbsp1}&nbsp\equiv&nbsp1&nbsp\pmod&nbspp$</span>
+                <div class = "normal"><span class = "strong"><u>加强</u></span>：设&nbsp$q_{1},&nbspq_{2}&nbsp\ldots&nbspq_{n}$&nbsp为&nbsp$n$&nbsp个正整数，如果&nbsp$q_{1}&nbsp+&nbspq_{2}&nbsp+&nbsp\ldots&nbsp+&nbspq_{n}$&nbsp个物体放到&nbsp$n$&nbsp个盒子中，则或者第&nbsp$i$&nbsp个盒子中至少有&nbsp$q_{i}$&nbsp个物体</div>
                 <br>
+                <div class = "normal"><u><span class = "strong">推论&nbsp1</span></u>：如果把&nbsp$n(r&nbsp-&nbsp1)&nbsp+&nbsp1$&nbsp个物体放到&nbsp$n$&nbsp&nbsp个盒子中，则必有一个盒子至少有&nbsp$r$&nbsp个物体</div>
                 <br>
-                <span class = "normal"><span class = "strong"><u>加强</u></span>：设&nbsp$q_{1},&nbspq_{2}&nbsp\ldots&nbspq_{n}$&nbsp为&nbsp$n$&nbsp个正整数，如果&nbsp$q_{1}&nbsp+&nbspq_{2}&nbsp+&nbsp\ldots&nbsp+&nbspq_{n}$&nbsp个物体放到&nbsp$n$&nbsp个盒子中，则或者第&nbsp$i$&nbsp个盒子中至少有&nbsp$q_{i}$&nbsp个物体</span>
+                <div class = "normal"><span class = "strong"><u>推论&nbsp2</u></span>：如果&nbsp$n$&nbsp个正整数平均数&nbsp$>&nbsp&nbspr&nbsp-&nbsp1$，则至少有一个正整数不小于&nbsp$r$</div>
                 <br>
+                <div class = "normal"><span class = "strong"><u>推论&nbsp3</u></span>：把&nbsp$m$&nbsp&nbsp个物体放到&nbsp$n$&nbsp&nbsp个盒子中，则必有一个盒子至少含有&nbsp$\lfloor&nbsp\frac{m&nbsp-&nbsp1}{n}&nbsp\rfloor&nbsp+&nbsp1$&nbsp个物体</div>
                 <br>
-                <span class = "normal"><u><span class = "strong">推论&nbsp1</span></u>：如果把&nbsp$n(r&nbsp-&nbsp1)&nbsp+&nbsp1$&nbsp个物体放到&nbsp$n$&nbsp&nbsp个盒子中，则必有一个盒子至少有&nbsp$r$&nbsp个物体</span>
-                <br>
-                <br>
-                <span class = "normal"><span class = "strong"><u>推论&nbsp2</u></span>：如果&nbsp$n$&nbsp个正整数平均数&nbsp$>&nbsp&nbspr&nbsp-&nbsp1$，则至少有一个正整数不小于&nbsp$r$</span>
-                <br>
-                <br>
-                <span class = "normal"><span class = "strong"><u>推论&nbsp3</u></span>：把&nbsp$m$&nbsp&nbsp个物体放到&nbsp$n$&nbsp&nbsp个盒子中，则必有一个盒子至少含有&nbsp$\lfloor&nbsp\frac{m&nbsp-&nbsp1}{n}&nbsp\rfloor&nbsp+&nbsp1$&nbsp个物体</span>
-                <br>
-                <br>
-                <span class = "normal"><span class = "strong"><u>例：</u></span>&nbsp$n^{2}&nbsp+&nbsp1$&nbsp个士兵排成一排，可以使&nbsp$n&nbsp+&nbsp1$&nbsp个士兵往前走一步，形成一个身高递增或递减（非严格）的序列。</span>
-                <br>
-                <span class = "normal">证明：</span>
-                <br>
+                <div class = "normal"><span class = "strong"><u>例：</u></span>&nbsp$n^{2}&nbsp+&nbsp1$&nbsp个士兵排成一排，可以使&nbsp$n&nbsp+&nbsp1$&nbsp个士兵往前走一步，形成一个身高递增或递减（非严格）的序列。</div>
+                <div class = "normal">证明：</div>
 $$
 \begin{align}
 &用 \; a_{i} 表示第 \; i \;个士兵的身高\\
@@ -200,14 +161,11 @@ $$
 \end{align}
 $$
                 <br>
-                <span class = "normal"><span class = "strong"><u>象定义</u></span>：$f(A)&nbsp=&nbsp\{f(x)&nbsp|&nbspx&nbsp\in&nbspA\}$，$f(x)$&nbsp称为&nbsp$A$&nbsp在&nbsp$f$&nbsp下的象</span>
+                <div class = "normal"><span class = "strong"><u>象定义</u></span>：$f(A)&nbsp=&nbsp\{f(x)&nbsp|&nbspx&nbsp\in&nbspA\}$，$f(x)$&nbsp称为&nbsp$A$&nbsp在&nbsp$f$&nbsp下的象</div>
                 <br>
+                <div class = "normal"><span class = "strong"><u>逆的定义</u></span>：$f^{-1}(B)&nbsp=&nbsp\{x&nbsp|&nbspf(x)&nbsp\in&nbspB,&nbspx&nbsp\in&nbspX\}$</div>
                 <br>
-                <span class = "normal"><span class = "strong"><u>逆的定义</u></span>：$f^{-1}(B)&nbsp=&nbsp\{x&nbsp|&nbspf(x)&nbsp\in&nbspB,&nbspx&nbsp\in&nbspX\}$</span>
-                <br>
-                <br>
-                <span class = "normal"><span class = "strong"><u>逆的分配率</u></span>：</span>
-                <br>
+                <div class = "normal"><span class = "strong"><u>逆的分配率</u></span>：</div>
 $$
 \begin{align}
 &f^{-1}(C \cup D) = f^{-1}(C) \cup f^{-1}(D)\\
@@ -217,8 +175,7 @@ $$
 \end{align}
 $$
                 <br>
-                <span class = "normal"><span class = "strong"><u>定理&nbsp2</u></span>：</span>
-                <br>
+                <div class = "normal"><span class = "strong"><u>定理&nbsp2</u></span>：</div>
 $$
 \begin{align}
 &f(A \cup B) = f(A) \cup f(B)\\
@@ -228,105 +185,76 @@ $$
 $$
                 <br>
                 <div class = "h3" id = "3">映射的合成</div>
-                <span class = "normal">$h&nbsp=&nbspg&nbsp\circ&nbspf$，简记：$h&nbsp=&nbspgf$</span>
+                <div class = "normal">$h&nbsp=&nbspg&nbsp\circ&nbspf$，简记：$h&nbsp=&nbspgf$</div>
                 <br>
+                <div class = "normal"><span class = "strong"><u>映射的合成满足结合律</u></span></div>
                 <br>
-                <span class = "normal"><span class = "strong"><u>映射的合成满足结合律</u></span></span>
+                <div class = "normal"><span class = "strong"><u>定理&nbsp2</u></span>：$f:&nbspX&nbsp\to&nbspY$，则：$f&nbsp=&nbspf&nbsp\circ&nbspI_{x}&nbsp=&nbspI_{y}&nbsp\circ&nbspf$</div>
                 <br>
+                <div class = "normal"><span class = "strong"><u>定理&nbsp3</u></span>：若&nbsp$f$&nbsp和&nbsp$g$&nbsp都是满射&nbsp/&nbsp单射&nbsp/&nbsp双射，则&nbsp$g&nbsp\circ&nbspf$&nbsp也是满射&nbsp/&nbsp单射/&nbsp双射</div>
                 <br>
-                <span class = "normal"><span class = "strong"><u>定理&nbsp2</u></span>：$f:&nbspX&nbsp\to&nbspY$，则：$f&nbsp=&nbspf&nbsp\circ&nbspI_{x}&nbsp=&nbspI_{y}&nbsp\circ&nbspf$</span>
+                <div class = "normal"><span class = "strong"><u>定理&nbsp4</u></span>：</div>
+                <div class = "normal" style = "padding-left: 20px; text-indent:-9px;"><i class = "fa fa-chevron-right"></i>&nbsp$g&nbsp\circ&nbspf$&nbsp是满射，则&nbsp$g$&nbsp是满射</div>
+                <div class = "normal" style = "padding-left: 20px; text-indent:-9px;"><i class = "fa fa-chevron-right"></i>&nbsp$g&nbsp\circ&nbspf$&nbsp是单射，则&nbsp$f$&nbsp是单射</div>
+                <div class = "normal" style = "padding-left: 20px; text-indent:-9px;"><i class = "fa fa-chevron-right"></i>&nbsp$g&nbsp\circ&nbspf$&nbsp是双射，则&nbsp$g$&nbsp是满射，则&nbsp$f$&nbsp是单射</div>
                 <br>
-                <br>
-                <span class = "normal"><span class = "strong"><u>定理&nbsp3</u></span>：若&nbsp$f$&nbsp和&nbsp$g$&nbsp都是满射&nbsp/&nbsp单射&nbsp/&nbsp双射，则&nbsp$g&nbsp\circ&nbspf$&nbsp也是满射&nbsp/&nbsp单射/&nbsp双射</span>
-                <br>
-                <br>
-                <span class = "normal"><span class = "strong"><u>定理&nbsp4</u></span>：</span>
-                <br>
-                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp$g&nbsp\circ&nbspf$&nbsp是满射，则&nbsp$g$&nbsp是满射</span>
-                <br>
-                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp$g&nbsp\circ&nbspf$&nbsp是单射，则&nbsp$f$&nbsp是单射</span>
-                <br>
-                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp$g&nbsp\circ&nbspf$&nbsp是双射，则&nbsp$g$&nbsp是满射，则&nbsp$f$&nbsp是单射</span>
-                <br>
-                <br>
-                <span class = "normal"><span class = "strong"><u>例&nbsp1</u></span>：$f:&nbspN&nbsp\to&nbspN$，如果&nbsp$\forall&nbspn&nbsp\in&nbspN$：</span>
-                <br>
+                <div class = "normal"><span class = "strong"><u>例&nbsp1</u></span>：$f:&nbspN&nbsp\to&nbspN$，如果&nbsp$\forall&nbspn&nbsp\in&nbspN$：</div>
 $$
 如果： f(n + 1) > f(f(n))
 $$
-                <span class = "normal">证明概要：</span>
-                <br>
-                <span class = "normal">1.&nbsp如果&nbsp$n&nbsp>&nbspk$，则&nbsp$f(n)&nbsp>&nbspk$；<br>2.&nbsp取&nbsp$k&nbsp=&nbspn&nbsp-&nbsp1$&nbsp即知&nbsp$f(n)&nbsp\le&nbspn$；<br>3.&nbsp$f(n&nbsp+&nbsp1)&nbsp>&nbspf(n)$<br>4.&nbsp由上可知&nbsp$f$&nbsp是严格单调上升<br>5.&nbsp$f(n)&nbsp=&nbspn$</span>
-                <br>
-                <span class = "normal">证明：</span>
-                <br>
-                <span class = "normal">1.<br>(1)&nbsp当&nbsp$k&nbsp=&nbsp1$&nbsp时，$n&nbsp>&nbsp1$，$n&nbsp\ge&nbsp1$，$n&nbsp-&nbsp1&nbsp\in&nbspN$</span>
-                <br>
+                <div class = "normal">证明概要：</div>
+                <div class = "normal" style = "padding-left: 20px; text-indent:-15px;"><span class = "strong">1.&nbsp</span>如果&nbsp$n&nbsp>&nbspk$，则&nbsp$f(n)&nbsp>&nbspk$；<br>2.&nbsp取&nbsp$k&nbsp=&nbspn&nbsp-&nbsp1$&nbsp即知&nbsp$f(n)&nbsp\le&nbspn$；<br>3.&nbsp$f(n&nbsp+&nbsp1)&nbsp>&nbspf(n)$<br>4.&nbsp由上可知&nbsp$f$&nbsp是严格单调上升<br>5.&nbsp$f(n)&nbsp=&nbspn$</div>
+                <div class = "normal">证明：</div>
+                <div class = "normal">1.<br>(1)&nbsp当&nbsp$k&nbsp=&nbsp1$&nbsp时，$n&nbsp>&nbsp1$，$n&nbsp\ge&nbsp1$，$n&nbsp-&nbsp1&nbsp\in&nbspN$</div>
 $$
 f(n) > f(f(n - 1)) \ge 1 \\
 \therefore n > 1，f(n) > 1
 $$
-                <span class = "normal">(2)&nbsp假设&nbsp$n&nbsp>&nbspk$，则&nbsp$f(n)&nbsp>&nbspk$</span>
-                <br>
+                <div class = "normal">(2)&nbsp假设&nbsp$n&nbsp>&nbspk$，则&nbsp$f(n)&nbsp>&nbspk$</div>
 $$
 设 \; n > k + 1，有 n - 1 > k \\
 由归纳假设 \; f(n - 1) > k\\
 有 \; f(f(n - 1)) > k \\
 n - 1 \; 代入原式，f(n) > f(f(n - 1))，从而 f(n) > k + 1
 $$
-                <span class = "normal">2.</span>
-                <br>
+                <div class = "normal">2.</div>
 $$
 n > n - 1\\f(n) > n - 1 \Rightarrow f(n) \ge n
 $$
-                <span class = "normal">3.</span>
-                <br>
+                <div class = "normal">3.</div>
 $$
 由 \; f(n) \ge n\;知，f(f(n)) \ge f(n) \\ 
 由 \; f(n +1) > f(f(n))，知 \; f(n +1) > f(n)
 $$
-                <span class = "normal">4.</span>
-                <br>
+                <div class = "normal">4.</div>
 $$
 对 \; \forall m, k \in N，若 \; m < k \iff f(m) < f(k)
 $$
-                <span class = "normal">.</span>
-                <br>
+                <div class = "normal">.</div>
 $$
 由 \; f(n + 1) > f(f(n))，且 \; f(n) \; 为严格递增函数，知\; n + 1 > f(n)\\
 从而 f(n) \le n，由于 \; f(n) \ge n，有 f(n) = n
 $$
                 <br>
                 <div class = "h3" id = "4">逆映射</div>
-                <span class = "normal"><span class = "strong"><u>逆映射</u></span>：&nbsp$g&nbsp\circ&nbspf&nbsp=&nbspI_{x}&nbsp\;&nbsp且&nbsp\;&nbspf&nbsp\circ&nbspg&nbsp=&nbspI_{y}$，则称&nbsp$f$&nbsp是可逆的，&nbsp$g$&nbsp称为&nbsp$f$&nbsp的逆映射</span>
+                <div class = "normal"><span class = "strong"><u>逆映射</u></span>：&nbsp$g&nbsp\circ&nbspf&nbsp=&nbspI_{x}&nbsp\;&nbsp且&nbsp\;&nbspf&nbsp\circ&nbspg&nbsp=&nbspI_{y}$，则称&nbsp$f$&nbsp是可逆的，&nbsp$g$&nbsp称为&nbsp$f$&nbsp的逆映射</div>
                 <br>
+                <div class = "normal"><span class = "strong"><u>左右可逆</u></span>：$g&nbsp\circ&nbspf&nbsp=&nbspI_x$，则称&nbsp$f$&nbsp是左可逆的，且&nbsp$g$&nbsp称为&nbsp$f$&nbsp的左逆映射；&nbsp$f&nbsp\circ&nbsph&nbsp=&nbspI_y$，则称&nbsp$f$&nbsp是右可逆的。</div>
                 <br>
-                <span class = "normal"><span class = "strong"><u>左右可逆</u></span>：$g&nbsp\circ&nbspf&nbsp=&nbspI_x$，则称&nbsp$f$&nbsp是左可逆的，且&nbsp$g$&nbsp称为&nbsp$f$&nbsp的左逆映射；&nbsp$f&nbsp\circ&nbsph&nbsp=&nbspI_y$，则称&nbsp$f$&nbsp是右可逆的。</span>
+                <div class = "normal"><span class = "strong"><u>可逆的充分必要条件</u></span>：$f&nbsp:&nbspX&nbsp\to&nbspY$，$f$&nbsp可逆&nbsp$\iff$&nbsp$f$&nbsp是双射<br>证明：<br>$\Rightarrow$左可逆证明满射，右可逆证明单射<br>$\Leftarrow$&nbsp构造映射，则可证明</div>
                 <br>
+                <div class = "normal"><span class = "strong"><u>逆映射唯一定理</u></span>：$f:&nbspX&nbsp\to&nbspY$，如果&nbsp$f$&nbsp可逆，则其逆映射唯一<br>证明；<br>由&nbsp$f&nbsp\circ&nbspg_1&nbsp=&nbspf&nbsp\circ&nbspg_2&nbsp=&nbspI_y$，对&nbsp$\forall&nbspy&nbsp\in&nbspY$，$f&nbsp\circ&nbspg_1(y)&nbsp=&nbspf&nbsp\circ&nbspg_2(y)$，由&nbsp$f$&nbsp是单射知，$g_1(y)&nbsp=&nbspg_2(y)$</div>
                 <br>
-                <span class = "normal"><span class = "strong"><u>可逆的充分必要条件</u></span>：$f&nbsp:&nbspX&nbsp\to&nbspY$，$f$&nbsp可逆&nbsp$\iff$&nbsp$f$&nbsp是双射<br>证明：<br>$\Rightarrow$左可逆证明满射，右可逆证明单射<br>$\Leftarrow$&nbsp构造映射，则可证明</span>
+                <div class = "normal"><span class = "strong"><u>逆映射合成的逆</u></span>：$(g&nbsp\circ&nbspf)^{-1}&nbsp=&nbspg^{-1}&nbsp\circ&nbspy^{-1}​$<br>证明：<br>$(g&nbsp\circ&nbspf)^{-1}&nbsp\circ&nbsp(g&nbsp\circ&nbspf)&nbsp=&nbspI_x​$，$(f^{-1}&nbsp\circ&nbspg^{-1}&nbsp\circ&nbsp(g&nbsp\circ&nbspf)&nbsp=&nbspI_x)​$<br>由逆映射唯一得</div>
                 <br>
+                <div class = "normal"><span class = "strong"><u>穿脱原则</u></span>：先穿袜子再拖鞋，先脱鞋再拖袜子</div>
                 <br>
-                <span class = "normal"><span class = "strong"><u>逆映射唯一定理</u></span>：$f:&nbspX&nbsp\to&nbspY$，如果&nbsp$f$&nbsp可逆，则其逆映射唯一<br>证明；<br>由&nbsp$f&nbsp\circ&nbspg_1&nbsp=&nbspf&nbsp\circ&nbspg_2&nbsp=&nbspI_y$，对&nbsp$\forall&nbspy&nbsp\in&nbspY$，$f&nbsp\circ&nbspg_1(y)&nbsp=&nbspf&nbsp\circ&nbspg_2(y)$，由&nbsp$f$&nbsp是单射知，$g_1(y)&nbsp=&nbspg_2(y)$</span>
+                <div class = "normal"><span class = "strong"><u>映射等于自己逆的逆</u></span>：$f:&nbspX&nbsp\to&nbspY$，$f$&nbsp可逆，$(f^{-1})^{-1}&nbsp=&nbspf$<br>证明：逆映射唯一可证</div>
                 <br>
-                <br>
-                <span class = "normal"><span class = "strong"><u>逆映射合成的逆</u></span>：$(g&nbsp\circ&nbspf)^{-1}&nbsp=&nbspg^{-1}&nbsp\circ&nbspy^{-1}​$<br>证明：<br>$(g&nbsp\circ&nbspf)^{-1}&nbsp\circ&nbsp(g&nbsp\circ&nbspf)&nbsp=&nbspI_x​$，$(f^{-1}&nbsp\circ&nbspg^{-1}&nbsp\circ&nbsp(g&nbsp\circ&nbspf)&nbsp=&nbspI_x)​$<br>由逆映射唯一得</span>
-                <br>
-                <br>
-                <span class = "normal"><span class = "strong"><u>穿脱原则</u></span>：先穿袜子再拖鞋，先脱鞋再拖袜子</span>
-                <br>
-                <br>
-                <span class = "normal"><span class = "strong"><u>映射等于自己逆的逆</u></span>：$f:&nbspX&nbsp\to&nbspY$，$f$&nbsp可逆，$(f^{-1})^{-1}&nbsp=&nbspf$<br>证明：逆映射唯一可证</span>
-                <br>
-                <br>
-                <span class = "normal"><span class = "strong"><u>左右可逆的充分必要条件</u></span>：</span>
-                <br>
-                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp$f$&nbsp左可逆&nbsp$\iff&nbspf$&nbsp是单射</span>
-                <br>
-                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp$f$&nbsp右可逆&nbsp$\iff&nbspf$&nbsp是满射</span>
-                <br>
-                <span class = "normal" style = "padding-left: 0px;">•&nbsp&nbsp证明：$\Rightarrow$&nbsp映射合成定理，$\Leftarrow$&nbsp构造&nbsp$g:&nbspIm(f)&nbsp\to&nbspX$&nbsp在&nbsp$Y$&nbsp上的扩展</span>
-                <br>
+                <div class = "normal"><span class = "strong"><u>左右可逆的充分必要条件</u></span>：</div>
+                <div class = "normal" style = "padding-left: 20px; text-indent:-9px;"><i class = "fa fa-chevron-right"></i>&nbsp$f$&nbsp左可逆&nbsp$\iff&nbspf$&nbsp是单射</div>
+                <div class = "normal" style = "padding-left: 20px; text-indent:-9px;"><i class = "fa fa-chevron-right"></i>&nbsp$f$&nbsp右可逆&nbsp$\iff&nbspf$&nbsp是满射</div>
+                <div class = "normal" style = "padding-left: 20px; text-indent:-9px;"><i class = "fa fa-chevron-right"></i>&nbsp证明：$\Rightarrow$&nbsp映射合成定理，$\Leftarrow$&nbsp构造&nbsp$g:&nbspIm(f)&nbsp\to&nbspX$&nbsp在&nbsp$Y$&nbsp上的扩展</div>
 
                     <br><br><br><br><br>
                     <!--<div class = "blogTrans">

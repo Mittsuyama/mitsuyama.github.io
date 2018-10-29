@@ -61,15 +61,17 @@ class makeHTML:
                 spaceLen += 1
             else:
                 break
-
         
-
-        if mLen > spaceLen + 2 and myStr[spaceLen:spaceLen + 2] == '- ':
-            newS += '''<span class = "normal" style = "padding-left: %spx;">''' % (str(spaceLen * 20))
+        if mLen > spaceLen + 2 and myStr[spaceLen : spaceLen + 2] == '- ':
+            newS += '''<div class = "normal" style = "padding-left: %spx; text-indent:-9px;">''' % (str(spaceLen * 12 + 20))
             i = spaceLen + 2
-            newS += '•&nbsp&nbsp'
+            newS += '''<i class = "fa fa-chevron-right"></i>&nbsp'''
+        elif mLen > spaceLen + 2 and myStr[spaceLen + 1 : spaceLen + 3] == '. ':
+            newS += '''<div class = "normal" style = "padding-left: %spx; text-indent:-15px;">''' % (str(spaceLen * 12 + 20))
+            i = spaceLen + 3
+            newS += '''<span class = "strong">%s.&nbsp</span>''' % (myStr[spaceLen])
         else:
-            newS += '''<span class = "normal">'''
+            newS += '''<div class = "normal">'''
 
         while i < mLen:
             ch = myStr[i]
@@ -117,7 +119,8 @@ class makeHTML:
             else:
                 newS += ch
             i += 1
-        newS += '''</span>'''
+        
+        newS += '''</div>'''
         return newS
 
             
@@ -255,7 +258,7 @@ class makeHTML:
                 blogContent += '''                <hr>''' + '\n'
             else:
                 blogContent += '                ' + self.getInform(line[:-1]) + '\n'
-                blogContent += '''                <br>''' + '\n'
+                #blogContent += '''                <br>''' + '\n'
                 isQuote = False
             i += 1
         
