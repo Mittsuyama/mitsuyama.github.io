@@ -185,12 +185,12 @@ div.h4 {
     background-position-x: left;
     background-position-y: 44px;
     background-size: 2.5%;*/
-    font-size: 25px;
+    font-size: 26px;
     margin-left: 0px;
     margin-top: 35px;
-    margin-bottom: 15px;
+    margin-bottom: 25px;
     border-left: 5px solid rgba(120, 220, 190, 0.8);
-    padding: 7px 0px 7px 20px;
+    padding: 10px 0px 10px 20px;
     width: 100%;
     min-height: 30px;
 }
@@ -262,7 +262,7 @@ span.strike {
 }
 
 span.emphasis {
-    background-color:  rgba(255, 130, 100, 0.13);
+    background-color:  rgba(255, 170, 80, 0.2);
     border-radius: 7px;
     /*color: rgba(0, 180, 180, 1)*/
 }
