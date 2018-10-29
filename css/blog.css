@@ -201,19 +201,24 @@ div.h5 {
     margin-left: 0px;
     margin-top: 40px;
     margin-bottom: 20px;
-    border-left: 4px solid rgba(110, 220, 250, 0.3);
+    border-left: 4px solid rgba(110, 220, 250, 0.7);
     padding-left: 21px;
     width: 100%;
     min-height: 21px; 
 }
 
+#quoteIcon {
+    margin-top: 27px;
+    margin-left: 40px;
+}
+
 div.quote {
-    background-image: url("../img/icon/quote.png");
+    /*background-image: url("../img/icon/quote.png");
     background-repeat: no-repeat;
     background-position-x: 0px;
     background-position-y: 0px;
     background-size: 3%;
-    /*border-left: 2px solid #aaaaaa;*/
+    border-left: 2px solid #aaaaaa;*/
     color: #999999;
     font-size: 18px;
     margin: 30px 0px 30px 30px;
