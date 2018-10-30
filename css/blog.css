@@ -304,7 +304,8 @@ a.conncetion {
 }
 a.conncetion:hover {
     text-decoration: none;
-    background-color: rgba(100, 109, 44, 0.1);
+    background-color: rgba(150, 149, 84, 0.5);
+    color: white;
 }
 
 pre.codeBlock {

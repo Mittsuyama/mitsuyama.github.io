@@ -31,7 +31,9 @@ $(document).ready(function() {
         $('.contentListOut').show();
         $('.contentTitile').show();
     }
-    $("body").css("zoom", screenWidthRate + "");
+    if(screenWidthRate < 0.9 && screenWidthRate > 1.1) {
+        $("body").css("zoom", screenWidthRate + "");
+    }
     //$(".articleContext").css("zoom", 1 / screenWidthRate + '');
     //$(".contentListOut").css("zoom", 1 / screenWidthRate + '');
     $(window).load(function(){

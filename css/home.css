@@ -161,7 +161,7 @@ img.boxUpImg {
 div.briefIntro {
     position: relative;
     width: 100%;
-    height: 93px;
+    height: 85px;
     padding: 11px 8px 0px 8px;
 }
 
@@ -186,7 +186,7 @@ div.sawNumBox {
 img.eyeImg {
     position: absolute;
     width: 6%;
-    top: 3.5px;
+    margin-top: 3px;
     left: 6px;
 }
 
@@ -194,14 +194,14 @@ p.sawNum {
     position: absolute;
     left: 29px;
     margin-bottom: 0px;
-    margin-top: -1.5px;
+    margin-top: -3px;
 }
 
 div.boxDown {
     opacity: 1;
     position: relative;
     width: 100%;
-    height: 100px;
+    height: 120px;
 }
 
 div.boxInter {
@@ -215,7 +215,7 @@ div.boxInter {
 div.inf1 {
     position: relative;
     width: 100%;
-    height: 65px;
+    height: 73px;
 }
 
 div.inf2 {
@@ -227,20 +227,19 @@ div.inf2 {
 p.infoText {
     position: absolute;
     text-align: left;
-    font-size: 23px;
-    font-weight: 450;
+    font-size: 25px;
     src: url('../fonts/Deng.ttf');
     font-family: "等线";
     font-weight: bold;
-    color: #606060;
-    padding: 7px 12px 10px 12px;
+    color: #666666;
+    padding: 11px 15px 10px 12px;
     margin: 0px;
 }
 
 p.tagText {
     position: absolute;
     font-size: 13px;
-    left: 15px;
+    left: 14px;
     top: 10px;
     color: gray;
 }

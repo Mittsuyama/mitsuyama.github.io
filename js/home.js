@@ -67,7 +67,7 @@ function pageLoading() {
         }
     }
  
-    var boxDownHeight = 100;
+    var boxDownHeight = 110;
     var boxInterHeight = 1;
     for(var i = 0; i < boxDown.length; i++) {
         boxUp[i].style.height = iterms[i].offsetHeight - boxDownHeight - boxInterHeight + "px";
