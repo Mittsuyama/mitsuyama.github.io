@@ -41,7 +41,7 @@
         
         <div class = "nevigation" style = "background-color: white">
             <div class = "nevigation_content1">
-                <div class = "contentTitile">≡</div>
+                <div class = "contentTitile"><i class = "fa fa-align-justify" aria-hidden = "true"></i></div>
                 <a href = "http://mitsuyama.top" style = "color: #999999">
                 <div class = "nav_text_home">
                     MITSUYAMA
@@ -83,17 +83,17 @@
                 <div class = "articleBorder">
                                     <br>
                 <div class = "h2" id = "1">先配置一个&nbsp&nbspupstream</div>
-                <div class = "normal" style = "padding-left: 22px; text-indent:-25px;"><span class = "strong">1.&nbsp&nbsp</span>使用&nbspgit&nbspremote&nbsp-v&nbsp查看远程状态</div>
+                <div class = "normal" style = "padding-left: 27px; text-indent:-27px;"><span class = "strong">1.&nbsp&nbsp</span>使用&nbspgit&nbspremote&nbsp-v&nbsp查看远程状态</div>
                 <pre><code class = "nohighlight">
 git remote -v
 origin  git@github.com:yourname/yourname_rep.git (fetch)
 origin  git@github.com:yourname/yourname_rep.git (push)
                 </code></pre>
-                <div class = "normal" style = "padding-left: 22px; text-indent:-25px;"><span class = "strong">2.&nbsp&nbsp</span>添加一个将被同步给&nbspfork&nbsp远程的上游仓库</div>
+                <div class = "normal" style = "padding-left: 27px; text-indent:-27px;"><span class = "strong">2.&nbsp&nbsp</span>添加一个将被同步给&nbspfork&nbsp远程的上游仓库</div>
                 <pre><code class = "nohighlight">
 git remote add upstream git@github.com:yourname/yourname_rep.git
                 </code></pre>
-                <div class = "normal" style = "padding-left: 22px; text-indent:-25px;"><span class = "strong">3.&nbsp&nbsp</span>使用&nbspgit&nbspremote&nbsp-v&nbsp查看是否成功</div>
+                <div class = "normal" style = "padding-left: 27px; text-indent:-27px;"><span class = "strong">3.&nbsp&nbsp</span>使用&nbspgit&nbspremote&nbsp-v&nbsp查看是否成功</div>
                 <pre><code class = "nohighlight">
 origin  git@github.com:yourname/yourname_rep.git (fetch)
 origin  git@github.com:yourname/yourname_rep.git (push)
@@ -101,17 +101,17 @@ upstream        git@github.com:yourname/yourname_rep.git (fetch)
 upstream        git@github.com:yourname/yourname_rep.git (push)
                 </code></pre>
                 <div class = "h2" id = "2">从远程同步同步</div>
-                <div class = "normal" style = "padding-left: 22px; text-indent:-25px;"><span class = "strong">4.&nbsp&nbsp</span>从上游仓库&nbspfetch&nbsp分支和提交点&nbspgit&nbspfetch&nbspupstream，传送到本地，并会被存储在本地分支&nbspupstream/master</div>
+                <div class = "normal" style = "padding-left: 27px; text-indent:-27px;"><span class = "strong">4.&nbsp&nbsp</span>从上游仓库&nbspfetch&nbsp分支和提交点&nbspgit&nbspfetch&nbspupstream，传送到本地，并会被存储在本地分支&nbspupstream/master</div>
                 <pre><code class = "nohighlight">
 git fetch upstream
 From github.com:yourname/yourname_rep
  * [new branch]      master     -> upstream/master
                 </code></pre>
-                <div class = "normal" style = "padding-left: 22px; text-indent:-25px;"><span class = "strong">5.&nbsp&nbsp</span>切换到本地主分支</div>
+                <div class = "normal" style = "padding-left: 27px; text-indent:-27px;"><span class = "strong">5.&nbsp&nbsp</span>切换到本地主分支</div>
                 <pre><code class = "nohighlight">
 git checkout master
                 </code></pre>
-                <div class = "normal" style = "padding-left: 22px; text-indent:-25px;"><span class = "strong">6.&nbsp&nbsp</span>把&nbspupstream/master&nbsp分支合并到本地&nbspmaster&nbsp上，这样就完成了同步，并不会丢掉本地修改的内容。</div>
+                <div class = "normal" style = "padding-left: 27px; text-indent:-27px;"><span class = "strong">6.&nbsp&nbsp</span>把&nbspupstream/master&nbsp分支合并到本地&nbspmaster&nbsp上，这样就完成了同步，并不会丢掉本地修改的内容。</div>
                 <pre><code class = "nohighlight">
 git merge upstream/master
                 </code></pre>
