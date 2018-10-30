@@ -32,8 +32,8 @@ $(document).ready(function() {
         $('.contentTitile').show();
     }
     $("body").css("zoom", screenWidthRate + "");
-    $(".articleContext").css("zoom", 1 / screenWidthRate + '');
-    $(".contentListOut").css("zoom", 1 / screenWidthRate + '');
+    //$(".articleContext").css("zoom", 1 / screenWidthRate + '');
+    //$(".contentListOut").css("zoom", 1 / screenWidthRate + '');
     $(window).load(function(){
         //图片放大
         $("img.blogImg").click(function() {
@@ -59,7 +59,7 @@ $(document).ready(function() {
         $('.contentListCon').click(function() {
             var pos = $($.attr(this, 'href')).offset().top - 52;
             var myST = $(window).scrollTop();
-            var deriv = 0;
+            var deriv = (myST - pos) * (1 - screenWidthRate);
             $('html, body').animate ({
                 scrollTop: pos + deriv
             }, 400, "swing");
