@@ -204,7 +204,7 @@ div.h4 {
     margin-top: 35px;
     margin-bottom: 25px;
     /*background-color: rgba(120, 220, 190, 0.05);*/
-    border-left: 6px solid rgba(120, 220, 190, 1);
+    border-left: 7px solid rgba(120, 220, 190, 1);
     border-radius: 0px 5px 5px 0px;
     padding: 10px 20px 10px 20px;
     min-width: 10px;
@@ -224,7 +224,7 @@ div.h5 {
     margin-top: 40px;
     margin-bottom: 20px;
     /*background-color: rgba(110, 220, 250, 0.05);*/
-    border-left: 6px solid rgba(110, 220, 250, 0.4);
+    border-left: 7px solid rgba(110, 220, 250, 0.7);
     padding: 2px 0px 2px 21px;
     border-radius: 0px 5px 5px 0px;
     min-width: 10px;
@@ -283,7 +283,7 @@ span.strike {
 
 span.emphasis {
     padding: 0px 5px 0px 5px;
-    background-color:rgba(0, 0, 0, 0.07);
+    background-color:rgba(0, 0, 0, 0.1);
     /*border: 1.5px solid rgba(0, 0, 0, 0.2);*/
     /*border: 2px solid rgba(255, 150, 60, 0.3);*/
     /*background-color:rgba(255, 150, 60, 0.06);*/

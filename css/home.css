@@ -231,7 +231,8 @@ p.infoText {
     font-weight: 450;
     src: url('../fonts/Deng.ttf');
     font-family: "等线";
-    color: black;
+    font-weight: bold;
+    color: #606060;
     padding: 7px 12px 10px 12px;
     margin: 0px;
 }
