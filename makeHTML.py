@@ -66,10 +66,14 @@ class makeHTML:
             newS += '''<div class = "normal" style = "padding-left: %spx; text-indent:-12px;">''' % (str(spaceLen * 12 + 25))
             i = spaceLen + 2
             newS += '''<i class = "fa fa-chevron-right" style = "color: #e9e9e9"></i>&nbsp&nbsp'''
-        elif mLen > spaceLen + 2 and myStr[spaceLen + 1 : spaceLen + 3] == '. ':
+        elif mLen > spaceLen + 3 and myStr[spaceLen + 1 : spaceLen + 3] == '. ':
             newS += '''<div class = "normal" style = "padding-left: %spx; text-indent:-27px;">''' % (str(spaceLen * 12 + 27))
             i = spaceLen + 3
             newS += '''<span class = "strong">%s.&nbsp&nbsp</span>''' % (myStr[spaceLen])
+        elif mLen > spaceLen + 4 and myStr[spaceLen + 2 : spaceLen + 4] == '. ':
+            newS += '''<div class = "normal" style = "padding-left: %spx; text-indent:-27px;">''' % (str(spaceLen * 12 + 27))
+            i = spaceLen + 4
+            newS += '''<span class = "strong">%s.&nbsp&nbsp</span>''' % (myStr[spaceLen : spaceLen + 2])
         else:
             newS += '''<div class = "normal">'''
 

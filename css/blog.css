@@ -81,8 +81,8 @@ div.contentTitile {
     width: 80px;
     height: 55px;
     
-    border-radius: 0px 0px 5px 5px;
     text-align: center;
+    border-radius: 0px 0px 5px 5px;
     font-size: 30px;
     font-family: serif;
     color: rgba(100, 100, 100, 0.5);
@@ -150,7 +150,7 @@ div.articleBorder {
     padding: 50px;
     border-radius: 10px;
     background-color: white;
-    color: #777777;
+    color: #666666;
 }
 
 div.h1 {
@@ -260,7 +260,7 @@ div.quoteAgain {
 
 div.normal {
     word-wrap: break-word;
-    margin: 4px 0px 4px 0px;
+    margin: 5px 0px 5px 0px;
     font-size: 18px;
     width: 100%;
 }
@@ -316,7 +316,7 @@ img.blogImg {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    max-width: 60%;
+    max-width: 90%;
     margin-bottom: 30px;
     padding-top: 30px;
     cursor: url("../img/icon/bigger2.cur"), auto;
