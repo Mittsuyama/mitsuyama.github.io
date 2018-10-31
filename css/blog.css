@@ -304,7 +304,7 @@ a.conncetion {
 }
 a.conncetion:hover {
     text-decoration: none;
-    background-color: rgba(150, 149, 84, 0.5);
+    background-color: rgba(150, 149, 84, 0.4);
     color: white;
 }
 
