@@ -77,11 +77,15 @@ class makeHTML:
         else:
             newS += '''<div class = "normal">'''
 
+        isMath = 0
         while i < mLen:
             ch = myStr[i]
             if ch == ' ':
                 newS += '&nbsp'
-            elif ch == '*':
+            elif ch == '$':
+                isMath = 1 - isMath
+                newS += '$'
+            elif ch == '*' and isMath == 0:
                 if i + 1 < mLen and myStr[i + 1] == '*':
                     if not isStrong:
                         newS += '''<span class = "strong">'''
@@ -98,20 +102,20 @@ class makeHTML:
                     else:
                         newS += '''</span>'''
                         isItalic = False
-            elif ch == '<' and i + 2 < mLen and myStr[i + 1] == 'u' and myStr[i + 2] == '\>':
+            elif isMath == 0 and ch == '<' and i + 2 < mLen and myStr[i + 1] == 'u' and myStr[i + 2] == '\>':
                 newS += '''<span class = "underline">'''
                 i += 2
-            elif ch == '<' and i + 3 < mLen and myStr[i + 1] == '/' and myStr[i + 2] == 'u' and myStr[i + 3] == '\>':
+            elif isMath == 0 and ch == '<' and i + 3 < mLen and myStr[i + 1] == '/' and myStr[i + 2] == 'u' and myStr[i + 3] == '\>':
                 newS += '''</span>'''
                 i += 3
-            elif ch == '`':
+            elif isMath == 0 and ch == '`':
                 if isEmphasis == False:
                     newS += '''<span class = "emphasis">'''
                     isEmphasis = True
                 else:
                     newS += '''</span>'''
                     isEmphasis = False
-            elif ch == '~'  and i + 1 < mLen and myStr[i + 1] == '~':
+            elif isMath == 0 and ch == '~'  and i + 1 < mLen and myStr[i + 1] == '~':
                 if not isStrike:
                     newS += '''<span class = "strike">'''
                     isStrike = True

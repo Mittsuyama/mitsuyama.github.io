@@ -1,4 +1,4 @@
-﻿var screenWidthRate = parseFloat($(document.body).width() / 1920.0);
+﻿var screenWidthRate = parseFloat($(document.body).width() / 1915.0);
 var imgWidth = 0;
 var tempTime = 300;
 var minScrollTop = 530;
@@ -31,7 +31,7 @@ $(document).ready(function() {
         $('.contentListOut').show();
         $('.contentTitile').show();
     }
-    if(screenWidthRate < 0.9 && screenWidthRate > 1.1) {
+    if(screenWidthRate < 0.9 || screenWidthRate > 1.1) {
         $("body").css("zoom", screenWidthRate + "");
     }
     //$(".articleContext").css("zoom", 1 / screenWidthRate + '');
@@ -39,7 +39,7 @@ $(document).ready(function() {
     $(window).load(function(){
         //图片放大
         $("img.blogImg").click(function() {
-            imgSrc = $(this).attr("src");
+            imgSrc = $(this).attr("src");   
             Dis = $(this).offset().top;
             $("<img/>").attr("src", imgSrc).load(function() {
                 imgWidth = this.width;

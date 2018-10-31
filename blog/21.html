@@ -74,6 +74,7 @@
                                 <a href = "#1" class = "contentListCon">近世代数</a>
             <a href = "#2" class = "contentListCon">运算律</a>
             <a href = "#3" class = "contentListCon">幺元</a>
+            <a href = "#4" class = "contentListCon">幺半群</a>
 
                 </div>
             </div>
@@ -85,11 +86,10 @@
                                     <br>
                 <a href = "12.html" class = "conncetion"><i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp&nbsp&nbsp上一篇：离散数学 2 - 关系</a>
                 <div class = "h2" id = "1">近世代数</div>
-                <div class = "normal"><u><span class = "strong">二元代数运算的定义</span></u>：</div>
+                <div class = "h5">二元代数运算的定义：</div>
                 <div class = "normal">设&nbsp$X$&nbsp是一个集合，一个从&nbsp$X&nbsp\times&nbspX$&nbsp到&nbsp$X$&nbsp的一个映射&nbsp$\phi$&nbsp称为&nbsp$X$&nbsp上的一个二元代数运算。</div>
                 <div class = "normal">有前缀表示、中缀表示、后缀表示法，通常用中缀表示法。</div>
-                <br>
-                <div class = "normal"><u><span class = "strong">一元代数运算的定义</span></u>：</div>
+                <div class = "h5">一元代数运算的定义：</div>
                 <div class = "normal">一个从集合&nbsp$X$&nbsp到集合&nbsp$Y$&nbsp的映射称为&nbsp$X$&nbsp到&nbsp$Y$&nbsp的一个一元代数运算，当&nbsp$X&nbsp=&nbspY$&nbsp时，称此一为一元代数运算。</div>
                 <div class = "normal">$X$&nbsp上的一元代数运算对于运算时封闭的。</div>
                 <div class = "normal">$n$&nbsp元代数运算类似定义：$X^n&nbsp\to&nbspX$</div>
@@ -102,26 +102,26 @@ a \circ b = \; & b \circ a, &则满足交换律
 \end{align}
 $$
                 <div class = "normal">$\circ$&nbsp为&nbsp$S$&nbsp上的二元代数运算，则二元组&nbsp$(S,&nbsp\circ)$&nbsp为一个代数系（或称作代数系统&nbsp/&nbsp代数结构）</div>
-                <br>
-                <div class = "normal"><u><span class = "strong">定理</span></u>：$(S,&nbsp\circ)$&nbsp满足结合律，则&nbsp$n$&nbsp个元素的乘积只与次</div>
+                <div class = "h5">定理：</div>
+                <div class = "normal">$(S,&nbsp\circ)$&nbsp满足结合律，则&nbsp$n$&nbsp个元素的乘积只与次</div>
                 <div class = "normal">序有关而且由次序唯一确定，方案数&nbsp$\frac{1}{n}C{2n&nbsp-&nbsp2&nbsp\choose&nbspn&nbsp-&nbsp1}$</div>
-                <br>
-                <div class = "normal"><u><span class = "strong">定理</span></u>：代数系满足交换律，则&nbsp$n$&nbsp&nbsp个元素的乘积只与这&nbsp$n$&nbsp个元素有关，与次序无关。</div>
-                <div class = "normal"><u><span class = "strong">定义分配率</span></u>：</div>
+                <div class = "h5">定理：</div>
+                <div class = "normal">代数系满足交换律，则&nbsp$n$&nbsp&nbsp个元素的乘积只与这&nbsp$n$&nbsp个元素有关，与次序无关。</div>
+                <div class = "h5">定义分配率：</div>
 $$
 (a + b) \circ c = a \circ c + b \circ c, 满足右分配\\
 c \circ (a + b) = c \circ a + c \circ b, 满足左分配 
 $$
-                <br>
                 <div class = "normal"><u><span class = "strong">多元素之和乘以单元素分配率</span></u>：略</div>
                 <div class = "h2" id = "3">幺元</div>
-                <div class = "normal"><u><span class = "strong">幺元的定义</span></u>：$(S,&nbsp\circ)$&nbsp代数系，$a_l&nbsp\in&nbspS$，使&nbsp$\forall&nbspa&nbsp\in&nbspS$：</div>
+                <div class = "h5">幺元的定义</div>
+                <div class = "normal">$(S,&nbsp\circ)$&nbsp代数系，$a_l&nbsp\in&nbspS$，使&nbsp$\forall&nbspa&nbsp\in&nbspS$：</div>
 $$
 a_l \circ a = a
 $$
                 <div class = "normal">类似定义右幺元。</div>
-                <br>
-                <div class = "normal"><u><span class = "strong">定理</span></u>：若既有左幺元，又有右幺元，则左右幺元相等，称为单位元素（幺元）</div>
+                <div class = "h5">定理</div>
+                <div class = "normal">若既有左幺元，又有右幺元，则左右幺元相等，称为单位元素（幺元）</div>
                 <div class = "normal">证明：</div>
 $$
 \begin{cases}
@@ -138,30 +138,56 @@ a_l \circ a_r = a_l \\
 \\
 则 a_l = a_r
 $$
-                <br>
-                <div class = "normal"><u><span class = "strong">零元素定义</span></u>：代数系中，$\exists&nbspz&nbsp\in&nbspS,&nbsp\forall&nbspa&nbsp\in&nbspS$，则：</div>
+                <div class = "h5">零元素定义</div>
+                <div class = "normal">代数系中，$\exists&nbspz&nbsp\in&nbspS,&nbsp\forall&nbspa&nbsp\in&nbspS$，则：</div>
 $$
 z \circ a = a \circ z = z
 $$
-                <div class = "h4" id = "4">记号：</div>
+                <div class = "h5">记号：</div>
 $$
 A \circ B = AB \\
 a \circ b = ab \\
 A = \{a\}, AB = \{a\}B = aB
 $$
-                <br>
-                <div class = "normal"><u><span class = "strong">半群的定义</span></u>：满足结合律的代数系称为一个半群。</div>
+                <div class = "h5">半群的定义</div>
+                <div class = "normal">满足结合律的代数系称为一个半群。</div>
                 <div class = "normal">同样定义：</div>
                 <div class = "normal" style = "padding-left: 37px; text-indent:-17px;"><i class = "fa fa-chevron-right" style = "color: #d0d0d0"></i>&nbsp&nbsp&nbsp交换半群或可换半群（满足交换率）</div>
                 <div class = "normal" style = "padding-left: 37px; text-indent:-17px;"><i class = "fa fa-chevron-right" style = "color: #d0d0d0"></i>&nbsp&nbsp&nbsp有限半群，无限半群（$S$&nbsp是否有限）</div>
-                <br>
-                <div class = "normal"><span class = "strong"><u>半群的例子</u></span>，模&nbsp$n$&nbsp剩余类：</div>
+                <div class = "h5">半群的例子：</div>
+                <div class = "normal">模&nbsp$n$&nbsp剩余类：</div>
                 <div class = "normal">模&nbsp$n$&nbsp同余等价类：</div>
 $$
 Z_n = \{[0], [1], ..., [n - 1]\}\\
 [i] = \{m | m \in Z, m \equiv i \pmod{n}\}
 $$
                 <div class = "normal">则&nbsp$(Z_n,&nbsp+)$&nbsp是个半群</div>
+                <div class = "h2" id = "4">幺半群</div>
+                <div class = "h5">幺半群的定义：</div>
+                <div class = "normal">一个半群有单位元&nbsp$e$，称&nbsp$(S,&nbsp\circ&nbspe)$&nbsp为幺半群，如果&nbsp$S$&nbsp是有限集合，则称为有限幺半群，$S$&nbsp的基数称为幺半群的阶，阶&nbsp$o(S)&nbsp=&nbsp|S|$.</div>
+                <div class = "h5">例：</div>
+                <div class = "normal">设&nbsp$S$&nbsp是一个非空集合，则&nbsp$(2^S,&nbsp\cup,&nbsp\phi)$&nbsp和&nbsp$(2^S,&nbsp\cap,&nbspS)$&nbsp都是幺半群。</div>
+                <div class = "h5">例&nbsp&nbsp2：</div>
+                <div class = "normal">$S$&nbsp是一个非空集合，$M(S)&nbsp=&nbsp\{f&nbsp|&nbspf:&nbspS&nbsp\to&nbspS\}$，则&nbsp$M(S)$&nbsp对映射的合成构成了一个以&nbsp$I_S$&nbsp为单位元的幺半群（映射的合成自然满足结合律），它是不可交换幺半群。</div>
+                <div class = "normal">易证：</div>
+$$
+I_S \circ f = f \\
+f \circ I_S = f
+$$
+                <div class = "h5">定理：</div>
+                <div class = "normal">有限半群&nbsp$(S,&nbsp\circ)$&nbsp是一个幺半群的&nbsp$\iff$&nbsp$\exists&nbsps,&nbspt&nbsp\in&nbspS$，使得：</div>
+$$
+sS = S，St = S
+$$
+                <div class = "normal">证明：</div>
+$$
+\Rightarrow 平凡的 \\
+\Leftarrow 构造法，\forall x, s ^ k \circ x = x \Rightarrow s^k 是左幺元，同理 t^k 是右幺元。
+$$
+                <div class = "h5">元素的幂的定义：</div>
+                <div class = "normal">半群中：$a^1&nbsp=&nbspa,&nbsp\quad&nbspa^{n&nbsp+&nbsp1}&nbsp=&nbspa^n&nbsp\circ&nbspa$</div>
+                <div class = "normal">幺半群中：$a^0&nbsp=&nbspe,&nbsp\quad&nbspa^{n&nbsp+&nbsp1}&nbsp=&nbspa^n&nbsp\circ&nbspa$</div>
+                <div class = "normal">定理：$a^m&nbsp\circ&nbspa^n&nbsp=&nbspa^{m&nbsp+n}$，$(a^m)^n&nbsp=&nbspa^{mn}$</div>
 
                     <br><br><br><br><br>
                     <!--<div class = "blogTrans">
