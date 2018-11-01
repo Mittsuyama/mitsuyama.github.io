@@ -1,4 +1,4 @@
-﻿var screenWidthRate = parseFloat($(document.body).width() / 1915.0);
+﻿var screenWidthRate = parseFloat($(document.body).width() / 1903.0);
 var imgWidth = 0;
 var tempTime = 300;
 var minScrollTop = 530;
