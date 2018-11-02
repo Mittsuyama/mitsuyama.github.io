@@ -32,7 +32,7 @@ $(document).ready(function() {
         $('.contentListOut').show();
         $('.contentTitile').show();
     }
-    if(screenWidthRate < 0.9 || screenWidthRate > 1.1) {
+    if(screenWidthRate < 0.95 || screenWidthRate > 1.05) {
         $("body").css("zoom", screenWidthRate + "");
     }
     //$(".articleContext").css("zoom", 1 / screenWidthRate + '');

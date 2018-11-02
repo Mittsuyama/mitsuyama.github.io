@@ -134,8 +134,8 @@ div.articleContext {
     position: relative;
     width: 100%;
     margin: auto;
-    background-color: white;
-    font-size: 20px;
+    background-color: rgba(253, 253, 253, 1);
+    font-size: 18px;
     min-height: 600px;
     padding-top: 50px;
     padding-bottom: 50px;
@@ -143,13 +143,14 @@ div.articleContext {
     text-align: left;
 }
 
-div.articleBorder {    
+div.articleBorder {
+    box-shadow: 5px 10px 12px 5px rgba(0,0,0,0.03), 5px 12px 20px 5px rgba(0,0,0,0.01);
     margin: auto;
-    width: 50%;
-    padding: 50px;
-    border-radius: 10px;
+    width: 60%;
+    padding: 0px 100px 100px 100px;
+    border-radius: 0px;
     background-color: white;
-    color: #666666;
+    color: #777777;
 }
 
 div.h1 {
@@ -164,28 +165,28 @@ div.h2 {
     src: url('../fonts/Deng.ttf');
     font-family: "等线";
     font-weight: bold;
-    font-size: 38px;
+    font-size: 31px;
     text-align: center;
     background-image: url("../img/icon/underline.png");
     background-repeat: no-repeat;
     background-position-x: center;
-    background-position-y: 100px;
+    background-position-y: 78px;
     margin: 0px;
     width: 100%;
-    padding-top: 45px;
-    min-height: 120px;
+    padding-top: 35px;
+    min-height: 100px;
 }
 
 div.h3 {
     src: url('../fonts/Deng.ttf');
     font-family: "等线";
     font-weight: bold;
-    font-size: 35px;
+    font-size: 28px;
     font-style: italic;
     text-align: center;
-    padding-top: 40px;
+    padding-top: 30px;
     width: 100%;
-    min-height: 110px;
+    min-height: 80px;
     margin: 0px;
 }
 
@@ -198,12 +199,12 @@ div.h4 {
     background-position-x: left;
     background-position-y: 44px;
     background-size: 2.5%;*/
-    font-size: 26px;
+    font-size: 24px;
     margin-left: 0px;
     margin-top: 35px;
     margin-bottom: 25px;
     /*background-color: rgba(120, 220, 190, 0.05);*/
-    color: #444444;
+    color: #888888;
     border-left: 7px solid rgba(120, 220, 190, 1);
     border-radius: 0px 5px 5px 0px;
     padding: 10px 20px 10px 20px;
@@ -219,13 +220,13 @@ div.h5 {
     background-position-x: left;
     background-position-y: 28px;
     background-size: 2.3%;*/
-    font-size: 26px;
+    font-size: 24px;
     margin-left: 0px;
     margin-top: 40px;
     margin-bottom: 20px;
-    color: #222222;
+    color: #666666;
     /*background-color: rgba(110, 220, 250, 0.05);*/
-    border-left: 7px solid rgba(110, 220, 250, 0.7);
+    border-left: 7px solid rgba(110, 220, 250, 0.3);
     padding: 2px 0px 2px 21px;
     border-radius: 0px 5px 5px 0px;
     min-width: 10px;
@@ -244,7 +245,6 @@ div.quote {
     background-size: 3%;
     border-left: 2px solid #aaaaaa;*/
     color: #999999;
-    font-size: 20px;
     margin: 30px 0px 30px 0px;
     text-indent: -30px;
     padding-left: 70px;    
@@ -253,7 +253,6 @@ div.quote {
 
 div.quoteAgain {
     color: #888888;
-    font-size: 20px;
     margin: 30px 0px 30px 0px;
     padding: 0px 0px 0px 70px;   
     width: 100%; 
@@ -262,7 +261,6 @@ div.quoteAgain {
 div.normal {
     word-wrap: break-word;
     margin: 2px 0px 2px 0px;
-    font-size: 19px;
     width: 100%;
 }
 
@@ -310,7 +308,6 @@ a.conncetion:hover {
 }
 
 pre.codeBlock {
-    font-size: 19px;
     width: 100%;
 }
 
@@ -318,7 +315,7 @@ img.blogImg {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    max-width: 90%;
+    max-width: 50%;
     margin-bottom: 30px;
     padding-top: 30px;
     cursor: url("../img/icon/bigger2.cur"), auto;
@@ -334,7 +331,7 @@ a.noStyle:hover {
 
 div.blogTrans {
     height: 50px;
-    font-size: 19px;
+    font-size: 18px;
 }
 
 div.lastBlog {
