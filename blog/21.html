@@ -75,6 +75,7 @@
             <a href = "#2" class = "contentListCon">运算律</a>
             <a href = "#3" class = "contentListCon">幺元</a>
             <a href = "#4" class = "contentListCon">幺半群</a>
+            <a href = "#7" class = "contentListCon">子半群和子幺半群</a>
 
                 </div>
             </div>
@@ -163,7 +164,7 @@ Z_n = \{[0], [1], ..., [n - 1]\}\\
 $$
                 <div class = "normal">则&nbsp$(Z_n,&nbsp+)$&nbsp是个半群</div>
                 <div class = "h2" id = "4">幺半群</div>
-                <div class = "h5">幺半群的定义：</div>
+                <div class = "h4" id = "5">幺半群的定义：</div>
                 <div class = "normal">一个半群有单位元&nbsp$e$，称&nbsp$(S,&nbsp\circ&nbspe)$&nbsp为幺半群，如果&nbsp$S$&nbsp是有限集合，则称为有限幺半群，$S$&nbsp的基数称为幺半群的阶，阶&nbsp$o(S)&nbsp=&nbsp|S|$.</div>
                 <div class = "h5">例：</div>
                 <div class = "normal">设&nbsp$S$&nbsp是一个非空集合，则&nbsp$(2^S,&nbsp\cup,&nbsp\phi)$&nbsp和&nbsp$(2^S,&nbsp\cap,&nbspS)$&nbsp都是幺半群。</div>
@@ -188,6 +189,71 @@ $$
                 <div class = "normal">半群中：$a^1&nbsp=&nbspa,&nbsp\quad&nbspa^{n&nbsp+&nbsp1}&nbsp=&nbspa^n&nbsp\circ&nbspa$</div>
                 <div class = "normal">幺半群中：$a^0&nbsp=&nbspe,&nbsp\quad&nbspa^{n&nbsp+&nbsp1}&nbsp=&nbspa^n&nbsp\circ&nbspa$</div>
                 <div class = "normal">定理：$a^m&nbsp\circ&nbspa^n&nbsp=&nbspa^{m&nbsp+n}$，$(a^m)^n&nbsp=&nbspa^{mn}$</div>
+                <div class = "h5">&nbsp&nbsp逆元素定义：</div>
+                <div class = "normal">在幺半群中，对于&nbsp$a$，有&nbsp$b$&nbsp使得&nbsp$b&nbsp\circ&nbspa&nbsp=&nbspe$，我们称&nbsp$b$&nbsp为左逆元，同理定义右逆元，若&nbsp$\exists&nbspb$&nbsp使得&nbsp$a&nbsp\circ&nbspb&nbsp=&nbspb&nbsp\circ&nbspa&nbsp=&nbspe$，称&nbsp$a$&nbsp有逆元素，$b$&nbsp为&nbsp$a$&nbsp的逆元。</div>
+                <div class = "h4" id = "6">群的定义：</div>
+                <div class = "normal">每个元素都有逆元素的幺半群，称为群。</div>
+                <div class = "normal">所以，群要满足以下要求：</div>
+                <div class = "normal" style = "padding-left: 31px; text-indent: -30px;"><span class = "strong">1.&nbsp&nbsp</span>运算封闭（代数系统）</div>
+                <div class = "normal" style = "padding-left: 31px; text-indent: -30px;"><span class = "strong">2.&nbsp&nbsp</span>满足结合律（半群）</div>
+                <div class = "normal" style = "padding-left: 31px; text-indent: -30px;"><span class = "strong">3.&nbsp&nbsp</span>有幺元（幺半群）</div>
+                <div class = "normal" style = "padding-left: 31px; text-indent: -30px;"><span class = "strong">4.&nbsp&nbsp</span>每个元素都有逆元素（群）</div>
+                <div class = "h5">定理：</div>
+                <div class = "normal">有左逆元并且有右逆元，那么左右逆相等且逆唯一。记为&nbsp$a^{-1}$。</div>
+                <div class = "normal">证明：</div>
+                <div class = "normal" style = "padding-left: 31px; text-indent: -30px;"><span class = "strong">1.&nbsp&nbsp</span>左右逆相等：</div>
+$$
+a_r = e \circ a_r = (a_l \circ a) \circ a_r = a_l \circ (a \circ a_r) = a_l \circ e = a_l
+$$
+                <div class = "normal" style = "padding-left: 31px; text-indent: -30px;"><span class = "strong">2.&nbsp&nbsp</span>唯一：</div>
+$$
+b, c 是 a 的逆元，b \circ a = a \circ c = e \Rightarrow b = c
+$$
+                <div class = "h5">定理：</div>
+                <div class = "normal">有限半群是群&nbsp$\iff$</div>
+                <br>
+$$
+\forall s \in S，有 sS = S \\
+\exists t \in S，有 St = S
+$$
+                <div class = "normal">$\Rightarrow$&nbsp平凡</div>
+                <div class = "normal">$\Leftarrow$&nbsp由上面的定理（有限半群是幺半群的充分必要条件证明）知，肯定是幺半群，即：有幺元&nbsp$e$，对于&nbsp$\forall&nbsps&nbsp\in&nbspS$，由&nbsp$sS&nbsp=&nbspS$&nbsp和上述定理的证明知：有一个&nbsp$k$，使得&nbsp$s^k$&nbsp为&nbsp$S$&nbsp一个左幺元，因为是幺半群，所以左右幺元相等并唯一，那么&nbsp$s^k$&nbsp一定是幺元。</div>
+$$
+s^k = e \Rightarrow \\
+s \circ s^{k - 1} = e \; 并且 \; s^{k - 1} \circ s = e
+$$
+                <div class = "h5">习题：</div>
+                <div class = "normal">求证：有限半群&nbsp$(S,&nbsp\circ)$&nbsp中一定有一个元素&nbsp$a&nbsp\in&nbspS$，使得&nbsp$a&nbsp\circ&nbspa&nbsp=&nbspa$</div>
+                <div class = "normal"><span class = "emphasis">法一</span>：</div>
+                <div class = "normal">设序列&nbsp$b^{2^0},&nbspb^{2^1},&nbspb^{2^2},&nbsp\ldots,&nbspb^{2^n}$，由于封闭性，此&nbsp$n&nbsp-&nbsp1$个表达式只有&nbsp$n$&nbsp个结果（假设&nbsp$|S|&nbsp=&nbspn$），那么一定有&nbsp$m&nbsp<&nbspn$，使得&nbsp$b^{2^m}&nbsp=&nbsp&nbspb^{2^n}$。</div>
+                <div class = "normal" style = "padding-left: 31px; text-indent: -30px;"><span class = "strong">1.&nbsp&nbsp</span>如果&nbsp$m&nbsp+&nbsp1&nbsp<&nbspn$，</div>
+$$
+b^{2^n - 2^m} \circ b^{2^n - 2^m} = b^{2^n} \circ b^{2^n - 2^m - 2^m}\\
+\because b^{2^m} = b^{2^n} \\
+\therefore 原式 = b^{2^m} \circ b^{2^n - 2^m - 2^m} = b^{2^n - 2^m}
+$$
+                <div class = "normal">令&nbsp$b$，则&nbsp$a&nbsp\circ&nbspa&nbsp=&nbspa$；</div>
+                <div class = "normal" style = "padding-left: 31px; text-indent: -30px;"><span class = "strong">2.&nbsp&nbsp</span>如果&nbsp$m&nbsp+&nbsp1&nbsp=&nbspn$，</div>
+$$
+b^{2^m} \circ b^{2^m} = b^{2^{m + 1}} = b^{2^n} = b^{2^m}
+$$
+                <div class = "normal">令&nbsp$a&nbsp=&nbspb^{2^m}$，则&nbsp$a&nbsp\circ&nbspa&nbsp=&nbspa$；</div>
+                <div class = "normal"><span class = "emphasis">法二</span>：</div>
+                <div class = "normal">设序列为为&nbsp$b^{3^0},&nbspb^{3^1},&nbspb^{3^2},&nbsp\ldots,&nbspb^{3^n}$，同上方法即可证明，无需判断是否有&nbsp$m&nbsp+&nbsp1&nbsp=&nbspn$。</div>
+                <div class = "normal">此定理可得：一个有限代数系不存在&nbsp$a$，使得$a&nbsp\circ&nbspa&nbsp=&nbspa$，那一定不是有限半群。</div>
+                <div class = "h2" id = "7">子半群和子幺半群</div>
+                <div class = "h4" id = "8">子半群定义：</div>
+                <div class = "normal">设&nbsp$(S,&nbsp\circ)$&nbsp是一个半群，$B$&nbsp是一个非空子集，对于&nbsp$\forall&nbspa,&nbspb&nbsp\in&nbspB$，都有&nbsp$a&nbsp\circ&nbspb&nbsp\in&nbspB$，$(B,&nbsp\circ)$&nbsp是&nbsp$(S,&nbsp\circ)$&nbsp的子半群。（即子半群同样满足运算封闭。）</div>
+                <div class = "normal"><span class = "emphasis">注意</span>：子半群的乘法定义必须与原半群相同。</div>
+                <div class = "h4" id = "9">子幺半群定义：</div>
+                <div class = "normal">同理于子半群的定义，$P$&nbsp是非空子集，且幺元&nbsp$e&nbsp\in&nbspP$，$P$&nbsp满足运算封闭，那么&nbsp$P$&nbsp是子幺半群。</div>
+                <div class = "h5">例：</div>
+                <div class = "normal">$(Z,&nbsp\cdot)$，$\cdot$&nbsp是通常定义的乘法。</div>
+                <div class = "normal" style = "padding-left: 31px; text-indent: -30px;"><span class = "strong">1.&nbsp&nbsp</span>$(E,&nbsp\cdot)$&nbsp是子半群</div>
+                <div class = "normal" style = "padding-left: 31px; text-indent: -30px;"><span class = "strong">2.&nbsp&nbsp</span>$(O,&nbsp\cdot)$&nbsp是子幺半群</div>
+                <div class = "h5">例&nbsp&nbsp2：</div>
+                <div class = "normal">设&nbsp$(S,&nbsp\circ)$&nbsp是一个半群，$a&nbsp\in&nbspS$，$B&nbsp=&nbsp\{a^n&nbsp|&nbspn&nbsp\ge&nbsp1\}$&nbsp是子半群。</div>
+                <div class = "normal">设&nbsp$(M,&nbsp\circ,&nbspe)$&nbsp是幺半群，$a&nbsp\in&nbspM$，$P&nbsp=&nbsp\{a^n&nbsp|&nbspn&nbsp\ge&nbsp0\}$&nbsp是子幺半群，设&nbsp$Q$&nbsp是&nbsp$(M,&nbsp\circ,&nbspe)$&nbsp的可逆元素的集合，则&nbsp$(Q,&nbsp\circ&nbspe)$&nbsp也是子幺半群。</div>
 
                     <br><br><br><br><br>
                     <!--<div class = "blogTrans">
