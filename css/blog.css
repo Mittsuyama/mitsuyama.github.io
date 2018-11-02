@@ -245,7 +245,7 @@ div.quote {
     background-size: 3%;
     border-left: 2px solid #aaaaaa;*/
     color: #999999;
-    font-size: 18px;
+    font-size: 20px;
     margin: 30px 0px 30px 0px;
     text-indent: -30px;
     padding-left: 70px;    
@@ -254,7 +254,7 @@ div.quote {
 
 div.quoteAgain {
     color: #888888;
-    font-size: 18px;
+    font-size: 20px;
     margin: 30px 0px 30px 0px;
     padding: 0px 0px 0px 70px;   
     width: 100%; 
@@ -263,7 +263,7 @@ div.quoteAgain {
 div.normal {
     word-wrap: break-word;
     margin: 2px 0px 2px 0px;
-    font-size: 18px;
+    font-size: 20px;
     width: 100%;
 }
 
@@ -311,7 +311,7 @@ a.conncetion:hover {
 }
 
 pre.codeBlock {
-    font-size: 19px;
+    font-size: 20px;
     width: 100%;
 }
 
