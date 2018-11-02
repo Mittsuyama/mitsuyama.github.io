@@ -1,5 +1,5 @@
 ﻿::selection {
-    background:rgba(255, 240, 150, 0.4); 
+    background:rgba(255, 200, 150, 0.6); 
 }
 
 ::-moz-selection {
@@ -134,7 +134,7 @@ div.articleContext {
     position: relative;
     width: 100%;
     margin: auto;
-    background-color: rgba(253, 253, 253, 1);
+    background-color: rgba(250, 250, 250, 1);
     font-size: 16px;
     min-height: 600px;
     padding-top: 50px;
@@ -172,10 +172,10 @@ div.h2 {
     background-image: url("../img/icon/underline.png");
     background-repeat: no-repeat;
     background-position-x: center;
-    background-position-y: 79px;
+    background-position-y: 59px;
     margin: 0px;
     width: 100%;
-    padding-top: 45px;
+    padding-top: 25px;
     min-height: 80px;
 }
 
@@ -183,7 +183,7 @@ div.h3 {
     src: url('../fonts/Deng.ttf');
     font-family: "等线";
     font-weight: bold;
-    font-size: 24px;
+    font-size: 26px;
     font-style: italic;
     text-align: center;
     padding-top: 20px;
@@ -201,7 +201,7 @@ div.h4 {
     background-position-x: left;
     background-position-y: 44px;
     background-size: 2.5%;*/
-    font-size: 22px;
+    font-size: 24px;
     margin-left: -101px;
     margin-top: 30px;
     margin-bottom: 15px;
@@ -222,7 +222,7 @@ div.h5 {
     background-size: 2.3%;*/
     font-weight: bold;
     color: rgba(0, 0, 0, 0.7);
-    font-size: 22px;
+    font-size: 24px;
     margin-left: -101px;
     margin-top: 20px;
     margin-bottom: 20px;
