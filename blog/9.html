@@ -39,35 +39,6 @@
             </div>
         </div>
         
-        <div class = "nevigation" style = "background-color: white">
-            <div class = "nevigation_content1">
-                <div class = "contentTitile"><i class = "fa fa-bars" aria-hidden = "true"></i></div>
-                <a href = "http://mitsuyama.top" style = "color: #999999">
-                <div class = "nav_text_home">
-                    MITSUYAMA
-                </div>
-                </a>            
-            </div>
-            <div class = "navigation_content2">
-                <a href = "about.html" style = "color: #999999">
-                <div class = "nav_text">
-                    About
-                </div>
-                </a>
-                <div class = "nav_text">
-                    Blog
-                </div>
-                <a href = "https://github.com/Mittsuyama" style = "color: #999999">
-                <div class = "nav_text">
-                    GitHub
-                </div>
-                </a>
-                <div class = "nav_text">
-                    Search
-                </div>
-            </div>
-        </div>
-        
         <div class = "contentListOut">
             <div class = "contentList">
                 <div class = "contentBorder">
@@ -84,6 +55,34 @@
         </div>
         
         <div class = "blogMainBlock">
+            <div class = "nevigation">
+                    <div class = "nevigation_content1">
+                        <div class = "contentTitile"><i class = "fa fa-bars" aria-hidden = "true"></i></div>
+                        <a href = "http://mitsuyama.top" style = "color: #999999">
+                        <div class = "nav_text_home">
+                            MITSUYAMA
+                        </div>
+                        </a>            
+                    </div>
+                    <div class = "navigation_content2">
+                        <a href = "about.html" style = "color: #999999">
+                        <div class = "nav_text">
+                            About
+                        </div>
+                        </a>
+                        <div class = "nav_text">
+                            Blog
+                        </div>
+                        <a href = "https://github.com/Mittsuyama" style = "color: #999999">
+                        <div class = "nav_text">
+                            GitHub
+                        </div>
+                        </a>
+                        <div class = "nav_text">
+                            Search
+                        </div>
+                    </div>
+                </div>
             <div class = "articleContext">
                 <div class = "articleBorder">
                                     <div class = "h2" id = "1">导论</div>
@@ -748,9 +747,15 @@ $$
                 <div class = "h5">人口增长</div>
                 <div class = "normal">劳动力数量不再是固定不变的，而是不断增长的。因此，人均资本变化率&nbsp$\Delta&nbspk&nbsp/&nbspk$&nbsp为：</div>
 $$
-\frac{\Delta k}{k} = \frac{\Delta K}{K} - \frac{\Delta L}{L}
+\frac{\Delta k}{k} = \frac{\Delta K}{K} - \frac{\Delta L}{L} \\
+---------------\\
+推导过程：\\
+人均资本使用量 k = K / L \\
+两边取对数：lnk = lnK - lnL \\
+再对时间 t 求导：\frac{dk/dt}{k} = \frac{dK/dt}{K} - \frac{dL/dt}{L} \\
+令 dX/dt = \Delta X 则可得人均资本变化率.
 $$
-                <div class = "normal">代入&nbsp$I&nbsp=&nbsp(\frac{\Delta&nbspK}{K}&nbsp+&nbsp\delta)K$&nbsp整理得：</div>
+                <div class = "normal">代入&nbsp$I=&nbsp(\frac{\Delta&nbspK}{K}&nbsp+&nbsp\delta)K$&nbsp整理得：</div>
 $$
 i = (\frac{\Delta k}{k} + \delta + n)k
 $$
@@ -793,9 +798,9 @@ $$
                         <div class = "nextBlog"><a href = "10.html" class = "noStyle">Next&nbsp&nbsp▷</a></div>
                     </div>
                     <hr>-->
+                    <div id = "disqus_thread"></div>
                 </div>
             </div>
-            <div id = "disqus_thread" style = "position: relative; margin: auto; width: 50%;"></div>
             <div class = "myAffix">
                 <div class = "feet">
                     <div class = "copyrigt">MITSUYAMA © 2018</div>

@@ -1,13 +1,13 @@
 ﻿::selection {
-    background:rgba(255, 230, 70, 0.2); 
+    background:rgba(255, 240, 150, 0.4); 
 }
 
 ::-moz-selection {
-    background:rgba(255, 230, 70, 0.2);
+    background:rgba(255, 240, 150, 0.4);
 }
 
 ::-webkit-selection {
-    background:rgba(255, 230, 70, 0.2);
+    background:rgba(255, 240, 150, 0.4);
 }
 
 div.imgBack {
@@ -66,7 +66,7 @@ img.blogTitleImg {
 div.contentListOut {
     display: none;
     position: fixed;
-    padding: 15px;
+    padding: 10px;
     width: 20%;
     left: 10px;
     top: 60px;
@@ -76,13 +76,12 @@ div.contentListOut {
 div.contentTitile {
     display: none;
     padding-top: 6px;
-    left: 15px;
+    left: 30px;
     position: absolute;
     width: 80px;
     height: 55px;
     
     padding-left: 27px;
-    border-radius: 0px 0px 5px 5px;
     font-size: 30px;
     font-family: serif;
     color: rgba(100, 100, 100, 0.5);
@@ -263,7 +262,7 @@ div.quoteAgain {
 div.normal {
     word-wrap: break-word;
     margin: 2px 0px 2px 0px;
-    font-size: 20px;
+    font-size: 19px;
     width: 100%;
 }
 
@@ -296,7 +295,7 @@ a.conncetion {
     padding: 20px;
     display: block;
     margin: 10px 0px 10px 0px;
-    font-size: 20px;
+    font-size: 19px;
     width: 100%;
     color: rgba(158, 149, 104, 1);
     min-height: 50px;
@@ -311,7 +310,7 @@ a.conncetion:hover {
 }
 
 pre.codeBlock {
-    font-size: 20px;
+    font-size: 19px;
     width: 100%;
 }
 
@@ -335,7 +334,7 @@ a.noStyle:hover {
 
 div.blogTrans {
     height: 50px;
-    font-size: 18px;
+    font-size: 19px;
 }
 
 div.lastBlog {

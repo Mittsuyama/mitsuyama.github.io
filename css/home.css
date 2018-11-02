@@ -41,11 +41,12 @@ div.glass {
 div.nevigation {
     position: sticky;
     font-family: "Arial";
+    margin: auto;
     top: 0px;
     font-size: 22px;
     height: 55px;
     /*border-top: rgba(255, 150, 100, 1) solid 3px;*/
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.8);
     z-index: 9990;
 }
 
@@ -78,7 +79,8 @@ div.nav_text_home {
     background-position-x: 8px;
     background-position-y: 10px;
     */
-    color: #999999;
+    color: rgba(255, 120, 30, 0.4);
+    font-weight: bold;
     left: 150px;
     position: absolute;
     font-family: "Arial";
