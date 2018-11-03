@@ -1,5 +1,5 @@
 ﻿::selection {
-    background:rgba(255, 240, 160, 0.6); 
+    background:rgba(255, 240, 160, 0.6);
 }
 
 ::-moz-selection {
@@ -248,7 +248,7 @@ p.infoText {
 
 p.tagText {
     position: absolute;
-    font-size: 13px;
+    font-size: 15px;
     left: 14px;
     top: 10px;
     color: gray;

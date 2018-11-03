@@ -2,7 +2,7 @@
 var screenWidthRate = 1;
 var imgWidth = 0;
 var tempTime = 300;
-var minScrollTop = 200;
+var minScrollTop = 500;
 var contentIsFade = true;
 var lastScroll = $(window).scrollTop();
 var homeShow = true;
@@ -30,9 +30,7 @@ $(document).ready(function() {
 
     if($(window).scrollTop() > minScrollTop) {
         $('.funButtonBox').show();
-    }
-    if(screenWidthRate < 0.95 || screenWidthRate > 1.05) {
-        $("body").css("zoom", screenWidthRate + "");
+        $('.contentListOut').show();
     }
 
     $('#funUp').click(function() {
@@ -77,7 +75,7 @@ $(document).ready(function() {
         
         //目录跳转
         $('.contentListCon').click(function() {
-            var pos = $($.attr(this, 'href')).offset().top - 52;
+            var pos = $($.attr(this, 'href')).offset().top;
             var myST = $(window).scrollTop();
             var deriv = (myST - pos) * (1 - screenWidthRate);
             $('html, body').animate ({
@@ -87,7 +85,7 @@ $(document).ready(function() {
         });
 
         //收起目录
-        $(".contentTitile").click(function() {
+        $("#funList").click(function() {
             $(".contentList").slideToggle(400);
         });
         
