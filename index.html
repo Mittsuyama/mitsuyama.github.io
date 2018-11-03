@@ -580,35 +580,11 @@
 
             </div>
         </div>
-
+        
         <div class = "feet">
             <div class = "copyrigt">MITSUYAMA © 2018</div>
             <div class = "callme">Email MITSUYAMA@163.COM</div>
         </div>
-
-        <header>
-            <div>
-                <input id = "search-input" placeholder = "Search for products">
-                <!-- We use a specific placeholder in the input to guides users in their search. -->
-            </div>
-        </header>
-        <main>
-            <div id = "hits"></div>
-            <div id = "pagination"></div>
-        </main>
-        
-        <script type="text/html" id="hit-template">
-            <div class="hit">
-                <div class="hit-image">
-                    <img src="{{image}}" alt="{{name}}">
-                </div>
-                <div class="hit-content">
-                    <h3 class="hit-price">${{price}}</h3>
-                    <h2 class="hit-name">{{{_highlightResult.name.value}}}</h2>
-                    <p class="hit-description">{{{_highlightResult.description.value}}}</p>
-                </div>
-            </div>
-        </script>
 
         <script src = "https://cdn.jsdelivr.net/npm/instantsearch.js@2.3/dist/instantsearch.min.js"></script>
         <script src = "js/app.js"></script>

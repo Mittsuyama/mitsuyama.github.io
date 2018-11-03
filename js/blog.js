@@ -80,7 +80,7 @@ $(document).ready(function() {
             var deriv = (myST - pos) * (1 - screenWidthRate);
             $('html, body').animate ({
                 scrollTop: pos + deriv
-            }, 400, "swing");
+            }, 500, "swing");
             return false;
         });
 
