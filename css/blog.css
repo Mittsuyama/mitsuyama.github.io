@@ -43,7 +43,8 @@ div.funButtonCir {
 
 div.funButtonCir:hover {
     cursor: pointer;
-    background-color: rgba(255, 130, 70, 0.8);
+    background-color: rgba(255, 130, 70, 0.9);
+    box-shadow: 2px 2px 12px 7px rgba(255, 130, 70, 0.1), 2px 2px 20px 5px rgba(255, 255, 255, 0.1);
     color: white;
 }
 
@@ -92,30 +93,21 @@ div.contentListOut {
     transform: translate(0%, -50%);
 }
 
-div.contentTitile {
+div.contentBorder {
     display: none;
-    padding-top: 6px;
-    left: 30px;
-    position: absolute;
-    width: 80px;
-    height: 55px;
-    
-    padding-left: 27px;
-    font-size: 30px;
-    font-family: serif;
-    color: rgba(100, 100, 100, 0.5);
-    transition-duration: 0.2s;
-    -webkit-transition-duration: 0.2s;
 }
 
-div.contentTitile:hover {
-    color: white;
-    background-color: rgba(100, 100, 100, 0.2);
-    cursor: pointer;
+div.contentTitile {
+    padding-left: 4px;
+    width: 100%;
+    height: 18px;
+    margin-bottom: 25px;
+
+    font-size: 22px;
+    color: rgba(100, 100, 100, 0.5);
 }
 
 div.contentList {
-    display: none;
     padding: 10px;
     border-left: 3px solid rgba(120, 180, 220, 0);
 }
@@ -159,7 +151,7 @@ div.articleContext {
     position: relative;
     width: 100%;
     margin: auto;
-    background-color: rgba(250, 250, 250, 1);
+    background-color: rgba(255, 255, 255, 1);
     font-size: 18px;
     min-height: 600px;
     padding-top: 80px;
@@ -175,24 +167,16 @@ div.articleBorder {
     padding: 30px 60px 100px 60px;
     border-radius: 0px;
     background-color: white;
-    color: rgba(80, 80, 80, 1);
+    color: rgba(80, 80, 80, 0.9);
     src: url('../fonts/Deng.ttf');
     font-family: "等线";
-}
-
-div.h1 {
-    font-weight: bold;
-    font-size: 40px;
-    text-align: center;
-    width: 100%;
-    min-height: 70px;
 }
 
 div.h2 {
     src: url('../fonts/Deng.ttf');
     font-family: "等线";
     font-weight: bold;
-    font-size: 27px;
+    font-size: 30px;
     text-align: center;
     background-image: url("../img/icon/underline.png");
     background-repeat: no-repeat;
@@ -208,7 +192,7 @@ div.h3 {
     src: url('../fonts/Deng.ttf');
     font-family: "等线";
     font-weight: bold;
-    font-size: 25px;
+    font-size: 28px;
     font-style: italic;
     text-align: center;
     padding-top: 10px;
@@ -226,15 +210,15 @@ div.h4 {
     background-position-x: left;
     background-position-y: 44px;
     background-size: 2.5%;*/
-    font-size: 24px;
+    font-size: 28px;
     margin-left: -61px;
-    margin-top: 5px;
-    margin-bottom: 7px;
+    margin-top: 10px;
+    margin-bottom: 20px;
     /*background-color: rgba(120, 220, 190, 0.05);*/
-    border-left: 8px solid rgba(120, 220, 190, 0.6);
+    border-left: 8px solid rgba(120, 220, 190, 1);
     border-radius: 0px 5px 5px 0px;
-    padding: 12px 20px 3px 53px;
-    min-height: 55px;
+    padding: 10px 20px 3px 53px;
+    min-height: 50px;
 }
 
 div.h5 {
@@ -246,16 +230,16 @@ div.h5 {
     background-position-y: 28px;
     background-size: 2.3%;*/
     font-weight: bold;
-    color: rgba(0, 0, 0, 0.7);
-    font-size: 22px;
+    color: rgba(70, 150, 160, 0.8);
+    font-size: 23px;
     margin-left: -61px;
-    margin-top: 10px;
+    margin-top: 15px;
     margin-bottom: 10px;
     /*background-color: rgba(110, 220, 250, 0.05);*/
-    border-left: 8px solid rgba(110, 220, 200, 0.3);
-    padding: 2px 0px 2px 53px;
+    border-left: 8px solid rgba(200, 200, 200, 0);
+    padding: 5px 0px 2px 53px;
     border-radius: 0px 5px 5px 0px;
-    min-height: 19px; 
+    min-height: 25px; 
 }
 
 #quoteIcon {
@@ -269,7 +253,7 @@ div.quote {
     background-position-y: 0px;
     background-size: 3%;
     border-left: 2px solid #aaaaaa;*/
-    color: #999999;
+    color: #888888;
     margin: 30px 0px 30px 0px;
     text-indent: -30px;
     padding-left: 70px;    
@@ -307,7 +291,7 @@ span.strike {
 
 span.emphasis {
     padding: 0px 5px 0px 5px;
-    background-color:rgba(100, 100, 100, 0.15);
+    background-color:rgba(100, 100, 100, 0.18);
     /*border: 1.5px solid rgba(0, 0, 0, 0.2);*/
     /*border: 2px solid rgba(255, 150, 60, 0.3);*/
     /*background-color:rgba(255, 150, 60, 0.06);*/
@@ -320,15 +304,16 @@ a.conncetion {
     margin: 10px 0px 10px 0px;
     font-size: 19px;
     width: 100%;
-    color: rgba(158, 149, 104, 1);
+    color: rgba(100, 200, 230, 1);
     min-height: 50px;
-    border-radius: 5px;
+    border-radius: 10px;
     transition-duration: 0.2s;
     -webkit-transition-duration: 0.2s;
 }
 a.conncetion:hover {
     text-decoration: none;
-    background-color: rgba(160, 169, 84, 0.2);
+    background-color: rgba(100, 210, 250, 0.3);
+    color: white;
 }
 
 pre.codeBlock {
@@ -381,7 +366,7 @@ div.nextBlog {
 }
 
 div.myAffix {
-    background-color: rgba(250, 250, 250, 1);
+    background-color: rgba(255, 255, 255, 1);
     width: 100%;
     height: 100px;    
 }

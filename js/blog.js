@@ -86,7 +86,7 @@ $(document).ready(function() {
 
         //收起目录
         $("#funList").click(function() {
-            $(".contentList").slideToggle(400);
+            $(".contentBorder").slideToggle(400);
         });
         
         //监视滚动
