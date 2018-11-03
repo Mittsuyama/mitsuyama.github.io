@@ -2,6 +2,7 @@ import codecs
 import os
 import glob
 from PIL import Image
+from algoliasearch import algoliasearch
 
 class makeHTML:
     mdFile = None
@@ -13,6 +14,9 @@ class makeHTML:
     homeBttonTemp = []
     blogTemp = []
     num = 0
+    client = None
+    index = None
+    isUpdate = False
 
     def __init__(self):
         path = 'md/'  #待读取的文件夹
@@ -24,6 +28,10 @@ class makeHTML:
         self.homeTemp = open('templates/index.html').read()
         self.blogTemp = open('templates/blog.html').read()
         self.homeBttonTemp = open('templates/homeButton.html').read()
+        self.client = algoliasearch.Client("PKH2B42HCE", '3c713b49beef813c568cc0395b171d31')
+        self.index = self.client.init_index('MITSUYAMA_SITE')
+        print("Push web database?")
+        self.isUpdate = input()
 
     def getTitle(self, order):
         self.blogInfo = []
@@ -134,8 +142,30 @@ class makeHTML:
             
 
     def pHtml(self, order):
-        isQuote = False
         self.getTitle(order)
+
+        #update search data
+        if self.isUpdate == '1':
+            print(self.fileName[order])
+            htmlContent = open(self.fileName[order]).read()
+            htmlContent = htmlContent.replace('**', ' ')
+            htmlContent = htmlContent.replace('<u>', ' ')
+            htmlContent = htmlContent.replace('</u>', ' ')
+            htmlContent = htmlContent.replace('*', ' ')
+            htmlContent = htmlContent.replace('#####', ' ')
+            htmlContent = htmlContent.replace('####', ' ')
+            htmlContent = htmlContent.replace('###', ' ')
+            htmlContent = htmlContent.replace('##', ' ')
+            htmlContent = htmlContent.replace('#', ' ')
+            htmlContent = htmlContent.replace('~~', ' ')
+            htmlContent = htmlContent.replace('$$', ' ')
+            htmlContent = htmlContent.replace('$', ' ')
+            htmlContent = htmlContent.replace('\n', ' ')
+            res = self.index.add_object(
+                {"objectID": str(order), "Title": self.blogInfo[0], "Time": self.blogInfo[3].replace(' ', '').replace('/', '-'), "Tag": self.blogInfo[1], "brief": self.blogInfo[0][:-1], "content": htmlContent[:1000]}
+            )
+
+        #Make blog page
         outFIle = open('blog/' + str(order) + '.html', 'w')
         blogHtml = self.blogTemp
         blogHtml = blogHtml.replace('((siteTitle))', self.blogInfo[0])
@@ -166,13 +196,14 @@ class makeHTML:
                 contentList += '''            <a href = "#%s" class = "contentListCon" style = "padding-left: 40px; color: rgba(0, 0, 0, 0.5);">''' % (str(tempOrder)) + j[4:-1].replace(' ', '&nbsp&nbsp') + '''</a>''' + '\n'
             elif len(j) > 3 and j[:2] == '##':
                 tempOrder += 1
-                contentList += '''            <a href = "#%s" class = "contentListCon" style = "color: rgba(0, 0, 0, 0.65); font-weight: bold;">''' % (str(tempOrder)) + j[3:-1].replace(' ', '&nbsp&nbsp') + '''</a>''' + '\n'
+                contentList += '''            <a href = "#%s" class = "contentListCon" style = "color: rgba(0, 0, 0, 0.5); font-weight: bold;">''' % (str(tempOrder)) + j[3:-1].replace(' ', '&nbsp&nbsp') + '''</a>''' + '\n'
         if(tempOrder > 0):
             blogHtml = blogHtml.replace('((contentList))', contentList)
         else:
             contentList += '''            <a href = "#" class = "contentListCon">无目录...</a>\n'''
             blogHtml = blogHtml.replace('((contentList))', contentList)
 
+        isQuote = False
         pLen = len(self.Paragraph)
         i = 5
         tempOrder = 0

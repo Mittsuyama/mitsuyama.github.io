@@ -34,6 +34,7 @@ div.funButtonCir {
     width: 51px;
     height: 51px;
     background-color: white;
+    box-shadow: 2px 2px 12px 7px rgba(200, 200, 200, 0.1), 2px 2px 20px 5px rgba(200, 200, 200, 0.1);
     border-radius: 50px;
     font-size: 25px;
     transition-duration: 0.2s;
@@ -215,7 +216,7 @@ div.h4 {
     margin-top: 10px;
     margin-bottom: 20px;
     /*background-color: rgba(120, 220, 190, 0.05);*/
-    border-left: 8px solid rgba(120, 220, 190, 1);
+    border-left: 8px solid rgba(120, 210, 230, 1);
     border-radius: 0px 5px 5px 0px;
     padding: 10px 20px 3px 53px;
     min-height: 50px;
@@ -269,7 +270,7 @@ div.quoteAgain {
 
 div.normal {
     word-wrap: break-word;
-    margin: 2px 0px 2px 0px;
+    padding: 2px 0px 2px 0px;
     width: 100%;
 }
 
