@@ -65,7 +65,7 @@ class makeHTML:
         if mLen > spaceLen + 2 and myStr[spaceLen : spaceLen + 2] == '- ':
             newS += '''<div class = "normal" style = "padding-left: %spx; text-indent:-17px;">''' % (str(spaceLen * 12 + 37))
             i = spaceLen + 2
-            newS += '''<i class = "fa fa-chevron-right" style = "color: #d0d0d0"></i>&nbsp'''
+            newS += '''<i class = "fa fa-chevron-right" style = "top: 3px; font-size: 14px; color: #cccccc"></i>&nbsp'''
         elif mLen > spaceLen + 3 and myStr[spaceLen + 1 : spaceLen + 3] == '. ':
             newS += '''<div class = "normal" style = "padding-left: %spx; text-indent: -30px;">''' % (str(spaceLen * 12 + 31))
             i = spaceLen + 3
@@ -140,6 +140,7 @@ class makeHTML:
         blogHtml = self.blogTemp
         blogHtml = blogHtml.replace('((siteTitle))', self.blogInfo[0])
         blogHtml = blogHtml.replace('((Title))', self.blogInfo[0])
+        blogHtml = blogHtml.replace('((Time))', self.blogInfo[3].replace(' ', '').replace('/', '-'))
         blogHtml = blogHtml.replace('((Tag))', self.blogInfo[1])
         blogHtml = blogHtml.replace('((blogTitleImg))', str(order))
         blogHtml = blogHtml.replace('((pageUrl))', "http://www.mitsuyama.top/blog/" + str(order) + ".html")

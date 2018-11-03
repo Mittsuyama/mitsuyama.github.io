@@ -2,7 +2,7 @@
 var screenWidthRate = 1;
 var imgWidth = 0;
 var tempTime = 300;
-var minScrollTop = 530;
+var minScrollTop = 200;
 var contentIsFade = true;
 var lastScroll = $(window).scrollTop();
 var homeShow = true;
@@ -29,14 +29,24 @@ $(document).ready(function() {
     */
 
     if($(window).scrollTop() > minScrollTop) {
-        $('.contentListOut').show();
-        $('.contentTitile').show();
+        $('.funButtonBox').show();
     }
     if(screenWidthRate < 0.95 || screenWidthRate > 1.05) {
         $("body").css("zoom", screenWidthRate + "");
     }
-    //$(".articleContext").css("zoom", 1 / screenWidthRate + '');
-    //$(".contentListOut").css("zoom", 1 / screenWidthRate + '');
+
+    $('#funUp').click(function() {
+        $('html, body').animate ({
+            scrollTop: 0
+        }, 1000, "swing");
+    });
+
+    $('#funCom').click(function() {
+        $('html, body').animate ({
+            scrollTop: $("body").height()
+        }, 1000, "swing");
+    });
+
     $(window).load(function(){
         //图片放大
         $("img.blogImg").click(function() {
@@ -57,6 +67,13 @@ $(document).ready(function() {
                 $('.biggerImg').animate({width: shWitdh}, tempTime);
             });
         });
+
+        (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = 'https://mitsuyama.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', + new Date());
+        (d.head || d.body).appendChild(s);
+        })();
         
         //目录跳转
         $('.contentListCon').click(function() {
@@ -92,11 +109,11 @@ $(document).ready(function() {
                 }, 0);
                 */
                 $('.contentListOut').show();
-                $('.contentTitile').show();
+                $('.funButtonBox').show();
             }
             else {
                 $('.contentListOut').hide();
-                $('.contentTitile').hide();
+                $('.funButtonBox').hide();
                 //$(".nevigation").slideDown(400);
             }
         });

@@ -1,16 +1,4 @@
-﻿::selection {
-    background:rgba(255, 200, 150, 0.6); 
-}
-
-::-moz-selection {
-    background:rgba(255, 240, 150, 0.4);
-}
-
-::-webkit-selection {
-    background:rgba(255, 240, 150, 0.4);
-}
-
-div.imgBack {
+﻿div.imgBack {
     position: absolute;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.8);
@@ -29,6 +17,36 @@ body {
     height: 100%;
 }
 
+div.funButtonBox{
+    display: none;
+    position: fixed;
+    top: 500px;
+    right: 330px;
+    width: 50px;
+    height: 300px;
+    color: rgba(255, 130, 70, 0.5);
+}
+
+div.funButtonCir {
+    margin-bottom: 15px;
+    text-align: center;
+    padding-top: 5px;
+    width: 51px;
+    height: 51px;
+    background-color: white;
+    border-radius: 50px;
+    font-size: 25px;
+    transition-duration: 0.2s;
+    -webkit-transition-duration: 0.2s;
+    -moz-transition-duration: 0.2s;
+}
+
+div.funButtonCir:hover {
+    cursor: pointer;
+    background-color: rgba(255, 130, 70, 0.8);
+    color: white;
+}
+
 #blogBackground {
     width: 100%;
     height: 600px;
@@ -38,23 +56,23 @@ div.blogTitle {
     src: url('../fonts/Deng.ttf');
     font-family: "等线";
     position: absolute;
-    left: 0;
+    left: 22%;
     top: 330px;
-    width: 100%;
+    width: 50%;
     color: white;
-    font-size: 80px;
-    text-align: center;
+    font-size: 65px;
+    text-align: left;
 }
 
 div.tagContainer {
     position: absolute;
-    left: 0;
+    left: 22%;
     top: 435px;
-    width: 100%;
+    width: 50%;
     height: 50px;
-    color: #aaaaaa;
-    font-size: 25px;
-    text-align: center;
+    color: #cccccc;
+    font-size: 20px;
+    text-align: left;
 }
 
 img.blogTitleImg {
@@ -118,6 +136,10 @@ a.contentListCon {
     border-radius: 5px;
 }
 
+div.glass {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
 a.contentListCon:hover {
     background-color: rgba(0, 0, 0, 0.06);
     text-decoration: none;
@@ -134,10 +156,10 @@ div.articleContext {
     position: relative;
     width: 100%;
     margin: auto;
-    background-color: rgba(250, 250, 250, 1);
-    font-size: 16px;
+    background-color: rgba(253, 253, 253, 1);
+    font-size: 18px;
     min-height: 600px;
-    padding-top: 50px;
+    padding-top: 80px;
     padding-bottom: 50px;
     /*word-wrap: break-all;*/
     text-align: left;
@@ -146,11 +168,11 @@ div.articleContext {
 div.articleBorder {
     box-shadow: 2px 10px 12px 5px rgba(0,0,0,0.05), 2px 12px 20px 5px rgba(0,0,0,0.03);
     margin: auto;
-    width: 60%;
-    padding: 0px 100px 100px 100px;
+    width: 55%;
+    padding: 30px 100px 100px 100px;
     border-radius: 0px;
     background-color: white;
-    color: black;
+    color: rgba(80, 80, 80, 1);
     src: url('../fonts/Deng.ttf');
     font-family: "等线";
 }
@@ -203,13 +225,13 @@ div.h4 {
     background-size: 2.5%;*/
     font-size: 24px;
     margin-left: -101px;
-    margin-top: 30px;
+    margin-top: 10px;
     margin-bottom: 15px;
     /*background-color: rgba(120, 220, 190, 0.05);*/
-    border-left: 7px solid rgba(120, 220, 190, 1);
+    border-left: 8px solid rgba(120, 220, 190, 0.9);
     border-radius: 0px 5px 5px 0px;
-    padding: 5px 20px 5px 94px;
-    min-height: 25px;
+    padding: 15px 20px 5px 93px;
+    min-height: 55px;
 }
 
 div.h5 {
@@ -227,8 +249,8 @@ div.h5 {
     margin-top: 20px;
     margin-bottom: 20px;
     /*background-color: rgba(110, 220, 250, 0.05);*/
-    border-left: 7px solid rgba(110, 220, 250, 0.6);
-    padding: 2px 0px 2px 94px;
+    border-left: 8px solid rgba(110, 220, 200, 0.3);
+    padding: 2px 0px 2px 93px;
     border-radius: 0px 5px 5px 0px;
     min-height: 19px; 
 }
@@ -282,7 +304,7 @@ span.strike {
 
 span.emphasis {
     padding: 0px 5px 0px 5px;
-    background-color:rgba(0, 0, 0, 0.1);
+    background-color:rgba(100, 100, 100, 0.15);
     /*border: 1.5px solid rgba(0, 0, 0, 0.2);*/
     /*border: 2px solid rgba(255, 150, 60, 0.3);*/
     /*background-color:rgba(255, 150, 60, 0.06);*/
@@ -303,8 +325,7 @@ a.conncetion {
 }
 a.conncetion:hover {
     text-decoration: none;
-    background-color: rgba(150, 149, 84, 0.4);
-    color: white;
+    background-color: rgba(160, 169, 84, 0.2);
 }
 
 pre.codeBlock {
@@ -357,7 +378,7 @@ div.nextBlog {
 }
 
 div.myAffix {
-    background-color: white;
+    background-color: rgba(253, 253, 253, 1);
     width: 100%;
     height: 100px;    
 }
@@ -366,7 +387,7 @@ div.feet {
     position: absolute;
     bottom: 0px;
     color: #999999;
-    background-color: white;
+    background-color: rgba(253, 253, 253, 1);
     width: 100%;
     height: 35px;
 }
@@ -378,7 +399,7 @@ div.copyrigt {
     left: 50px;
     text-align: center;
     padding: 5px;
-    background-color: white;
+    background-color: rgba(253, 253, 253, 1);
 }
 
 div.callme {
@@ -388,5 +409,5 @@ div.callme {
     right: 50px;
     text-align: center;
     padding: 5px;
-    background-color: white;
+    background-color: rgba(253, 253, 253, 1);
 }

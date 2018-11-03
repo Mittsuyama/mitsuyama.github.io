@@ -24,6 +24,35 @@
     </head>
     
     <body>
+        <div class = "nevigation">
+                <div class = "nevigation_content1">
+                    <div class = "contentTitile"><i class = "fa fa-bars" aria-hidden = "true"></i></div>
+                    <a href = "http://mitsuyama.top">
+                    <div class = "nav_text_home">
+                        MITSUYAMA
+                    </div>
+                    </a>            
+                </div>
+                <div class = "navigation_content2">
+                    <a href = "about.html">
+                    <div class = "nav_text">
+                        ABOUT
+                    </div>
+                    </a>
+                    <div class = "nav_text">
+                        BLOG
+                    </div>
+                    <a href = "https://github.com/Mittsuyama">
+                    <div class = "nav_text">
+                        GITHUB
+                    </div>
+                    </a>
+                    <div class = "nav_text">
+                        SEARCH
+                    </div>
+                </div>
+            </div>
+            
         <div class = "imgBack"></div>
         <div class = "container-fluid" id = "blogBackground">
             <img src = "../img/blog-image/((blogTitleImg)).jpg" class = "blogTitleImg">
@@ -32,7 +61,7 @@
                     ((Title))
             </div>
             <div class = "tagContainer">
-                TAG：((Tag))
+                &nbsp&nbsp((Tag))&nbsp&nbsp|&nbsp&nbsp&nbsp((Time))
             </div>
         </div>
         
@@ -45,35 +74,18 @@
         </div>
         
         <div class = "blogMainBlock">
-            <div class = "nevigation">
-                    <div class = "nevigation_content1">
-                        <div class = "contentTitile"><i class = "fa fa-bars" aria-hidden = "true"></i></div>
-                        <a href = "http://mitsuyama.top" style = "color: #999999">
-                        <div class = "nav_text_home">
-                            MITSUYAMA
-                        </div>
-                        </a>            
-                    </div>
-                    <div class = "navigation_content2">
-                        <a href = "about.html" style = "color: #999999">
-                        <div class = "nav_text">
-                            About
-                        </div>
-                        </a>
-                        <div class = "nav_text">
-                            Blog
-                        </div>
-                        <a href = "https://github.com/Mittsuyama" style = "color: #999999">
-                        <div class = "nav_text">
-                            GitHub
-                        </div>
-                        </a>
-                        <div class = "nav_text">
-                            Search
-                        </div>
-                    </div>
-                </div>
             <div class = "articleContext">
+                    <div class = "funButtonBox">
+                        <div class = "funButtonCir" id = "funUp">
+                            <i class = "fa fa-arrow-up" aria-hidden = "true"></i>
+                        </div>
+                        <div class = "funButtonCir" id = "funCom">
+                            <i class = "fa fa-comments" aria-hidden = "true"></i>
+                        </div>
+                        <div class = "funButtonCir" id = "funList">
+                            <i class = "fa fa-list" aria-hidden = "true"></i>
+                        </div>
+                    </div>
                 <div class = "articleBorder">
                     ((content))
                     <!--<div class = "blogTrans">
@@ -84,7 +96,7 @@
                     </div>
                     <hr>-->
                 </div>
-                <div id = "disqus_thread" style = "width: 60%; margin: auto; margin-top: 100px;"></div>
+                <div id = "disqus_thread" style = "width: 55%; margin: auto; margin-top: 100px;"></div>
             </div>
             <div class = "myAffix">
                 <div class = "feet">
@@ -109,12 +121,6 @@
                     this.page.identifier = '((pageId))'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
                     };
                     
-                    (function() { // DON'T EDIT BELOW THIS LINE
-                    var d = document, s = d.createElement('script');
-                    s.src = 'https://mitsuyama.disqus.com/embed.js';
-                    s.setAttribute('data-timestamp', + new Date());
-                    (d.head || d.body).appendChild(s);
-                    })();
         </script>
         <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
