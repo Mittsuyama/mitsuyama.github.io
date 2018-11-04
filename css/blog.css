@@ -291,12 +291,12 @@ span.strike {
 }
 
 span.emphasis {
-    padding: 0px 5px 0px 5px;
+    padding: 0px 2px 0px 2px;
     background-color:rgba(100, 100, 100, 0.18);
     /*border: 1.5px solid rgba(0, 0, 0, 0.2);*/
     /*border: 2px solid rgba(255, 150, 60, 0.3);*/
     /*background-color:rgba(255, 150, 60, 0.06);*/
-    border-radius: 7px;
+    border-radius: 4px;
 }
 
 a.conncetion {
