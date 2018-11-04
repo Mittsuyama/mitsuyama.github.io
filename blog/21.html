@@ -76,6 +76,7 @@
             <a href = "#3" class = "contentListCon" style = "color: rgba(0, 0, 0, 0.5); font-weight: bold;">幺元</a>
             <a href = "#4" class = "contentListCon" style = "color: rgba(0, 0, 0, 0.5); font-weight: bold;">幺半群</a>
             <a href = "#7" class = "contentListCon" style = "color: rgba(0, 0, 0, 0.5); font-weight: bold;">子半群和子幺半群</a>
+            <a href = "#11" class = "contentListCon" style = "color: rgba(0, 0, 0, 0.5); font-weight: bold;">半群关系</a>
 
                 </div>
             </div>
@@ -177,9 +178,9 @@ $$
                 <div class = "h2" id = "4">幺半群</div>
                 <div class = "h4" id = "5">幺半群的定义：</div>
                 <div class = "normal">一个半群有单位元&nbsp$e$，称&nbsp$(S,&nbsp\circ&nbspe)$&nbsp为幺半群，如果&nbsp$S$&nbsp是有限集合，则称为有限幺半群，$S$&nbsp的基数称为幺半群的阶，阶&nbsp$o(S)&nbsp=&nbsp|S|$.</div>
-                <div class = "h5">例：</div>
+                <div class = "h5">例题：</div>
                 <div class = "normal">设&nbsp$S$&nbsp是一个非空集合，则&nbsp$(2^S,&nbsp\cup,&nbsp\phi)$&nbsp和&nbsp$(2^S,&nbsp\cap,&nbspS)$&nbsp都是幺半群。</div>
-                <div class = "h5">例&nbsp&nbsp2：</div>
+                <div class = "h5">例题&nbsp&nbsp2：</div>
                 <div class = "normal">$S$&nbsp是一个非空集合，$M(S)&nbsp=&nbsp\{f&nbsp|&nbspf:&nbspS&nbsp\to&nbspS\}$，则&nbsp$M(S)$&nbsp对映射的合成构成了一个以&nbsp$I_S$&nbsp为单位元的幺半群（映射的合成自然满足结合律），它是不可交换幺半群。</div>
                 <div class = "normal">易证：</div>
 $$
@@ -265,6 +266,31 @@ $$
                 <div class = "h5">例&nbsp&nbsp2：</div>
                 <div class = "normal">设&nbsp$(S,&nbsp\circ)$&nbsp是一个半群，$a&nbsp\in&nbspS$，$B&nbsp=&nbsp\{a^n&nbsp|&nbspn&nbsp\ge&nbsp1\}$&nbsp是子半群。</div>
                 <div class = "normal">设&nbsp$(M,&nbsp\circ,&nbspe)$&nbsp是幺半群，$a&nbsp\in&nbspM$，$P&nbsp=&nbsp\{a^n&nbsp|&nbspn&nbsp\ge&nbsp0\}$&nbsp是子幺半群，设&nbsp$Q$&nbsp是&nbsp$(M,&nbsp\circ,&nbspe)$&nbsp的可逆元素的集合，则&nbsp$(Q,&nbsp\circ&nbspe)$&nbsp也是子幺半群。</div>
+                <div class = "h5">定理：</div>
+                <div class = "normal">一个要半群的任意多个子幺半群的交集仍是子幺半群。</div>
+                <div class = "normal">证明：设&nbsp$(M,&nbsp\circ&nbspe)$&nbsp是幺半群，令&nbsp$I$&nbsp为一个指标集，对&nbsp$\forall&nbsp\alpha&nbsp\in&nbspI$，$M_{\alpha}$&nbsp为子幺半群。</div>
+$$
+P = \bigcap_{\alpha \in I}M_{\alpha}
+$$
+                <div class = "normal" style = "padding-left: 31px; text-indent: -30px;"><span class = "strong">1.&nbsp&nbsp</span>&nbsp运算封闭：$\forall&nbspx,&nbspy,&nbsp\in&nbspP&nbsp=&nbsp\bigcap_{\alpha&nbsp\in&nbspI}M_{\alpha}$，从而&nbsp$x,&nbspy&nbsp\in&nbspM_{\alpha}$，对&nbsp$\forall&nbsp\alpha&nbsp\in&nbspI&nbsp\Rightarrow&nbspx&nbsp\circ&nbspy&nbsp\in&nbspM_{\alpha}&nbsp\Rightarrow&nbspx&nbsp\circ&nbspy&nbsp\in&nbspP$</div>
+                <div class = "normal" style = "padding-left: 31px; text-indent: -30px;"><span class = "strong">2.&nbsp&nbsp</span>&nbsp显然有幺元</div>
+                <div class = "h5">定理：</div>
+                <div class = "normal">$A$&nbsp是半群&nbsp$S$&nbsp的非空子集，则&nbsp$S$&nbsp的一切包含&nbsp$A$&nbsp（避免交集为空）的子半群的交集&nbsp$Q$&nbsp也是子半群，由&nbsp$A$&nbsp生成（张成）的子半群，记为&nbsp$(A)$。子幺半群&nbsp$(A)$&nbsp同理。</div>
+                <div class = "h4" id = "10">定义：</div>
+                <div class = "normal">（幺）半群为循环（幺）半群，如果是由某个元素生成的，记为&nbsp$(a)$.</div>
+                <div class = "normal">$(a)&nbsp=&nbsp\{a^n&nbsp|&nbspn&nbsp\ge&nbsp1\}$.</div>
+                <div class = "h5">定理：</div>
+                <div class = "normal">循环（幺）半群必定是可交换半群。</div>
+$$
+x \circ y = a^m \circ a^n = a^{m + n} = a^{n + m} = a^n \circ a^m = y \circ x
+$$
+                <div class = "h2" id = "11">半群关系</div>
+                <div class = "h4" id = "12">1.&nbsp&nbsp同构：</div>
+                <div class = "normal">定义：$(S,&nbsp\circ)$,&nbsp$(T,&nbsp*)$&nbsp是个半群，若&nbsp$\exists&nbsp\phi:&nbspS&nbsp\to&nbspT$，是双射，使得&nbsp$\forall&nbspa,&nbspb&nbsp\in&nbspS$&nbsp有：</div>
+$$
+\phi(a \circ b) = \phi(a) * \phi(b)
+$$
+                <div class = "normal">同理定义：外加条件&nbsp$\phi(e)&nbsp=&nbspe'$，为同构幺半群。</div>
 
                     <!--<div class = "blogTrans">
                         <div class = "lastBlogTitle"></div>

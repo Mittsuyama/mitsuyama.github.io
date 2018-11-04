@@ -162,7 +162,7 @@ div.articleContext {
 }
 
 div.articleBorder {
-    box-shadow: 2px 10px 12px 5px rgba(0,0,0,0.05), 2px 12px 20px 5px rgba(0,0,0,0.03);
+    box-shadow: 2px 10px 12px 5px rgba(0,0,0,0.03), 2px 12px 20px 5px rgba(0,0,0,0.01);
     margin: auto;
     width: 55%;
     padding: 30px 60px 100px 60px;
