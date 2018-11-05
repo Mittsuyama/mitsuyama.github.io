@@ -14,10 +14,7 @@
         <link rel = "icon" href = "../img/favicon.ico" mce_href = "../img/favicon.ico" type = "image/x-icon">
         <link rel = "shortcut icon" href = "../img/icon/favicon.ico" mce_href = "../img/favicon.ico" type = "image/x-icon">
         
-        <link rel="stylesheet" href = "https://cdn.jsdelivr.net/npm/instantsearch.js@2.3/dist/instantsearch.min.css">
-        <!-- Always use `2.x` versions in production rather than `2` to mitigate any side effects on your website,
-        Find the latest version on InstantSearch.js website: https://community.algolia.com/instantsearch.js/v2/guides/usage.html -->
-        <link rel = "stylesheet" type = "text/css" href = "css/search.css">
+        <link rel = "stylesheet" type = "text/css" href = "../css/search.css">
         
         <link rel = "stylesheet" href = "../highlight/styles/rainbow.css">
         <link rel = "stylesheet" href = "../font-awesome/css/font-awesome.css">
@@ -36,25 +33,25 @@
                     <div class = "nav_text_home">
                         MITSUYAMA
                     </div>
-                    </a>            
+                    </a>        
                 </div>
                 <div class = "navigation_content2">
-                    <a href = "about.html">
-                    <div class = "nav_text">
-                        ABOUT
+                    <div class = "nav_text" id = "searchButton">
+                        <i class = "fa fa-search"></i>
                     </div>
+                    <a href = "blog/about.html">
+                        <div class = "nav_text">
+                            ABOUT
+                        </div>
                     </a>
                     <div class = "nav_text">
-                        BLOG
+                        BLOG    
                     </div>
                     <a href = "https://github.com/Mittsuyama">
-                    <div class = "nav_text">
-                        GITHUB
-                    </div>
+                        <div class = "nav_text">
+                            GITHUB
+                        </div>
                     </a>
-                    <div class = "nav_text">
-                        <i class="fa fa-search" aria-hidden = "true"></i>
-                    </div>
                 </div>
             </div>
             
@@ -91,6 +88,22 @@
             </div>
         </div>
         
+        <div id = "searchImg">
+            <div class = "searchBox">
+                <header>
+                    <div id = "inputBox">
+                        <input id = "my-search-input" placeholder = "SEARCH">
+                        <i class = "fa fa-search" aria-hidden = "true" id = "searchIcon"></i>
+                        <!-- We use a specific placeholder in the input to guides users in their search. -->
+                    </div>
+                </header>
+                <main>
+                    <div id = "hits"></div>
+                    <div id = "pagination"></div>
+                </main>
+            </div>
+        </div>
+        
         <div class = "blogMainBlock">
             <div class = "articleContext">
                     <div class = "funButtonBox">
@@ -108,26 +121,26 @@
                         </div>
                     </div>
                 <div class = "articleBorder">
-                                    <div class = "h2" id = "1">谱</div>
+                                    <div class = "h2" id = "1">谱</div><div id = "hUnderline"></div>
                 <div class = "normal">谱子全为&nbspC&nbsp调谱，有半音阶的部分，为了吹奏方便曲子有部分改动，原曲请自行百度。</div>
-                <div class = "h2" id = "2">记忆&nbsp&nbsp——缘之空</div>
+                <div class = "h2" id = "2">记忆&nbsp&nbsp——缘之空</div><div id = "hUnderline"></div>
                 <img src = "..\img\harmonica\memory.jpg" class = "blogImg"><br>
-                <div class = "h2" id = "3">我心永恒</div>
+                <div class = "h2" id = "3">我心永恒</div><div id = "hUnderline"></div>
                 <img src = "..\img\harmonica\myHearWiilGoOn.jpg" class = "blogImg"><br>
-                <div class = "h2" id = "4">万里の长城</div>
+                <div class = "h2" id = "4">万里の长城</div><div id = "hUnderline"></div>
                 <img src = "..\img\harmonica\bangrinocyojyopng.png" class = "blogImg"><br>
-                <div class = "h2" id = "5">斯卡布罗集市&nbsp&nbspScarboroughFail</div>
+                <div class = "h2" id = "5">斯卡布罗集市&nbsp&nbspScarboroughFail</div><div id = "hUnderline"></div>
                 <div class = "normal">可以选择降低八度吹奏。</div>
                 <img src = "..\img\harmonica\ScarboroughFail.png" class = "blogImg"><br>
-                <div class = "h2" id = "6">送别</div>
+                <div class = "h2" id = "6">送别</div><div id = "hUnderline"></div>
                 <img src = "..\img\harmonica\songbie.png" class = "blogImg"><br>
-                <div class = "h2" id = "7">Always&nbsp&nbspwith&nbsp&nbspme（千与千寻）</div>
+                <div class = "h2" id = "7">Always&nbsp&nbspwith&nbsp&nbspme（千与千寻）</div><div id = "hUnderline"></div>
                 <div class = "normal">原曲是&nbspF&nbsp调，直接吹&nbspC&nbsp调好像还行。</div>
                 <img src = "..\img\harmonica\alwayWithMe.png" class = "blogImg"><br>
-                <div class = "h2" id = "8">天空之城</div>
+                <div class = "h2" id = "8">天空之城</div><div id = "hUnderline"></div>
                 <div class = "normal">原曲为降&nbspb，可以选择直接吹成&nbspC&nbsp调，或者升高八度吹&nbspC&nbsp调</div>
                 <img src = "..\img\harmonica\skyCity.png" class = "blogImg"><br>
-                <div class = "h2" id = "9">雪之华</div>
+                <div class = "h2" id = "9">雪之华</div><div id = "hUnderline"></div>
                 <img src = "../img/harmonica/xuezhihua.jpg" class = "blogImg"><br>
 
                     <!--<div class = "blogTrans">
@@ -138,7 +151,7 @@
                     </div>
                     <hr>-->
                 </div>
-                <div id = "disqus_thread" style = "width: 55%; margin: auto; margin-top: 100px;"></div>  
+                <div id = "disqus_thread"></div>  
             </div>
             <div class = "myAffix">
                 <div class = "feet">
@@ -152,6 +165,17 @@
         </div>>
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+        <script type = "text/html" id = "hit-template">
+            <div class = "hit">
+                <div class = "hit-content">
+                    <div class = "hit-title">{{title}}</div>
+                    <div class = "hit-tag">{{{_highlightResult.tag.value}}} &nbsp|&nbsp&nbsp {{{_highlightResult.time.value}}}</div>
+                    <div class = "hit-brief">{{{_highlightResult.brief.value}}}</div>
+                </div>
+            </div>
+        </script>        
+        
         <script>
 
             /**
@@ -173,7 +197,7 @@
         <script src = "../js/blog.js"></script>
 
         <script src = "https://cdn.jsdelivr.net/npm/instantsearch.js@2.3/dist/instantsearch.min.js"></script>
-        <script src = "js/app.js"></script>
+        <script src = "../js/app.js"></script>
                 
         <script src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
         <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.0.js"></script>

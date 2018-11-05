@@ -14,10 +14,7 @@
         <link rel = "icon" href = "../img/favicon.ico" mce_href = "../img/favicon.ico" type = "image/x-icon">
         <link rel = "shortcut icon" href = "../img/icon/favicon.ico" mce_href = "../img/favicon.ico" type = "image/x-icon">
         
-        <link rel="stylesheet" href = "https://cdn.jsdelivr.net/npm/instantsearch.js@2.3/dist/instantsearch.min.css">
-        <!-- Always use `2.x` versions in production rather than `2` to mitigate any side effects on your website,
-        Find the latest version on InstantSearch.js website: https://community.algolia.com/instantsearch.js/v2/guides/usage.html -->
-        <link rel = "stylesheet" type = "text/css" href = "css/search.css">
+        <link rel = "stylesheet" type = "text/css" href = "../css/search.css">
         
         <link rel = "stylesheet" href = "../highlight/styles/rainbow.css">
         <link rel = "stylesheet" href = "../font-awesome/css/font-awesome.css">
@@ -36,25 +33,25 @@
                     <div class = "nav_text_home">
                         MITSUYAMA
                     </div>
-                    </a>            
+                    </a>        
                 </div>
                 <div class = "navigation_content2">
-                    <a href = "about.html">
-                    <div class = "nav_text">
-                        ABOUT
+                    <div class = "nav_text" id = "searchButton">
+                        <i class = "fa fa-search"></i>
                     </div>
+                    <a href = "blog/about.html">
+                        <div class = "nav_text">
+                            ABOUT
+                        </div>
                     </a>
                     <div class = "nav_text">
-                        BLOG
+                        BLOG    
                     </div>
                     <a href = "https://github.com/Mittsuyama">
-                    <div class = "nav_text">
-                        GITHUB
-                    </div>
+                        <div class = "nav_text">
+                            GITHUB
+                        </div>
                     </a>
-                    <div class = "nav_text">
-                        <i class="fa fa-search" aria-hidden = "true"></i>
-                    </div>
                 </div>
             </div>
             
@@ -85,6 +82,22 @@
             </div>
         </div>
         
+        <div id = "searchImg">
+            <div class = "searchBox">
+                <header>
+                    <div id = "inputBox">
+                        <input id = "my-search-input" placeholder = "SEARCH">
+                        <i class = "fa fa-search" aria-hidden = "true" id = "searchIcon"></i>
+                        <!-- We use a specific placeholder in the input to guides users in their search. -->
+                    </div>
+                </header>
+                <main>
+                    <div id = "hits"></div>
+                    <div id = "pagination"></div>
+                </main>
+            </div>
+        </div>
+        
         <div class = "blogMainBlock">
             <div class = "articleContext">
                     <div class = "funButtonBox">
@@ -105,7 +118,7 @@
                                     <br>
                 <div class = "normal">摘自知乎@程序猎人</div>
                 <a href = "https://www.zhihu.com/question/19793912" class = "conncetion"><i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp&nbsp&nbsp文章链接</a>
-                <div class = "h2" id = "1">学习前先认识几个问题</div>
+                <div class = "h2" id = "1">学习前先认识几个问题</div><div id = "hUnderline"></div>
                 <div class = "normal" style = "padding-left: 37px; text-indent:-17px;"><i class = "fa fa-chevron-right" style = "top: 3px; font-size: 14px; color: #cccccc"></i>&nbsp语言学习是一个长期过程，但是短期提高是可能的</div>
                 <div class = "normal" style = "padding-left: 37px; text-indent:-17px;"><i class = "fa fa-chevron-right" style = "top: 3px; font-size: 14px; color: #cccccc"></i>&nbsp中国人学日语有优势，日语单词发音可能写法相同，但是发音不同，汉语是汉语，日语是日语，所以都需要从头学</div>
                 <div class = "normal" style = "padding-left: 37px; text-indent:-17px;"><i class = "fa fa-chevron-right" style = "top: 3px; font-size: 14px; color: #cccccc"></i>&nbsp语法就是带参数的函数</div>
@@ -116,7 +129,7 @@
                 <div class = "normal" style = "padding-left: 37px; text-indent:-17px;"><i class = "fa fa-chevron-right" style = "top: 3px; font-size: 14px; color: #cccccc"></i>&nbsp日语的发音也很重要，比如「橋」和「箸」都读作「はし」，只是音调不同</div>
                 <div class = "normal" style = "padding-left: 37px; text-indent:-17px;"><i class = "fa fa-chevron-right" style = "top: 3px; font-size: 14px; color: #cccccc"></i>&nbsp不能死记硬背，必须活学活用，多动脑经</div>
                 <div class = "normal" style = "padding-left: 37px; text-indent:-17px;"><i class = "fa fa-chevron-right" style = "top: 3px; font-size: 14px; color: #cccccc"></i>&nbsp不要想着背完这本书，就达到&nbspXX&nbsp级了。</div>
-                <div class = "h2" id = "2">开始学习</div>
+                <div class = "h2" id = "2">开始学习</div><div id = "hUnderline"></div>
                 <div class = "normal">五十音图和发音基础就不提了。</div>
                 <div class = "normal">自学的核心：<span class = "strong">听写</span>！！！</div>
                 <div class = "normal"><u><span class = "strong">首先找一本教材，带磁带或者是&nbspCD</span></u></div>
@@ -154,7 +167,7 @@
                 <br>
                 <div class = "normal">《标日》每课后面还有练习题目，适当的练习的也很必要。</div>
                 <div class = "normal">把这些做完后，对这本书心里面也就有数了，然后再根据薄弱点，知道错在哪里，进行反复的复习。</div>
-                <div class = "h2" id = "3">学习中期</div>
+                <div class = "h2" id = "3">学习中期</div><div id = "hUnderline"></div>
                 <div class = "normal">学习了一段时间之后，除了听写，就可以用写作文来快速提高能力，不需要什么文采，甚至写流水账日记就行，活用语法和单词，写的时候尽量去写，语法尽量去用就行。</div>
                 <br>
                 <div class = "normal">学的是在无聊了，可以看看动画或者漫画来调节调节。但是能看懂的要求挺高，特别是像「名侦探柯南」这种推理和高级词汇很多的动画，对词汇量的要求特别高。</div>
@@ -168,7 +181,7 @@
                     </div>
                     <hr>-->
                 </div>
-                <div id = "disqus_thread" style = "width: 55%; margin: auto; margin-top: 100px;"></div>  
+                <div id = "disqus_thread"></div>  
             </div>
             <div class = "myAffix">
                 <div class = "feet">
@@ -182,6 +195,17 @@
         </div>>
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+        <script type = "text/html" id = "hit-template">
+            <div class = "hit">
+                <div class = "hit-content">
+                    <div class = "hit-title">{{title}}</div>
+                    <div class = "hit-tag">{{{_highlightResult.tag.value}}} &nbsp|&nbsp&nbsp {{{_highlightResult.time.value}}}</div>
+                    <div class = "hit-brief">{{{_highlightResult.brief.value}}}</div>
+                </div>
+            </div>
+        </script>        
+        
         <script>
 
             /**
@@ -203,7 +227,7 @@
         <script src = "../js/blog.js"></script>
 
         <script src = "https://cdn.jsdelivr.net/npm/instantsearch.js@2.3/dist/instantsearch.min.js"></script>
-        <script src = "js/app.js"></script>
+        <script src = "../js/app.js"></script>
                 
         <script src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
         <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.0.js"></script>

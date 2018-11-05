@@ -14,10 +14,7 @@
         <link rel = "icon" href = "../img/favicon.ico" mce_href = "../img/favicon.ico" type = "image/x-icon">
         <link rel = "shortcut icon" href = "../img/icon/favicon.ico" mce_href = "../img/favicon.ico" type = "image/x-icon">
         
-        <link rel="stylesheet" href = "https://cdn.jsdelivr.net/npm/instantsearch.js@2.3/dist/instantsearch.min.css">
-        <!-- Always use `2.x` versions in production rather than `2` to mitigate any side effects on your website,
-        Find the latest version on InstantSearch.js website: https://community.algolia.com/instantsearch.js/v2/guides/usage.html -->
-        <link rel = "stylesheet" type = "text/css" href = "css/search.css">
+        <link rel = "stylesheet" type = "text/css" href = "../css/search.css">
         
         <link rel = "stylesheet" href = "../highlight/styles/rainbow.css">
         <link rel = "stylesheet" href = "../font-awesome/css/font-awesome.css">
@@ -36,25 +33,25 @@
                     <div class = "nav_text_home">
                         MITSUYAMA
                     </div>
-                    </a>            
+                    </a>        
                 </div>
                 <div class = "navigation_content2">
-                    <a href = "about.html">
-                    <div class = "nav_text">
-                        ABOUT
+                    <div class = "nav_text" id = "searchButton">
+                        <i class = "fa fa-search"></i>
                     </div>
+                    <a href = "blog/about.html">
+                        <div class = "nav_text">
+                            ABOUT
+                        </div>
                     </a>
                     <div class = "nav_text">
-                        BLOG
+                        BLOG    
                     </div>
                     <a href = "https://github.com/Mittsuyama">
-                    <div class = "nav_text">
-                        GITHUB
-                    </div>
+                        <div class = "nav_text">
+                            GITHUB
+                        </div>
                     </a>
-                    <div class = "nav_text">
-                        <i class="fa fa-search" aria-hidden = "true"></i>
-                    </div>
                 </div>
             </div>
             
@@ -84,6 +81,22 @@
             </div>
         </div>
         
+        <div id = "searchImg">
+            <div class = "searchBox">
+                <header>
+                    <div id = "inputBox">
+                        <input id = "my-search-input" placeholder = "SEARCH">
+                        <i class = "fa fa-search" aria-hidden = "true" id = "searchIcon"></i>
+                        <!-- We use a specific placeholder in the input to guides users in their search. -->
+                    </div>
+                </header>
+                <main>
+                    <div id = "hits"></div>
+                    <div id = "pagination"></div>
+                </main>
+            </div>
+        </div>
+        
         <div class = "blogMainBlock">
             <div class = "articleContext">
                     <div class = "funButtonBox">
@@ -102,7 +115,7 @@
                     </div>
                 <div class = "articleBorder">
                                     <br>
-                <div class = "h2" id = "1">先配置一个&nbsp&nbspupstream</div>
+                <div class = "h2" id = "1">先配置一个&nbsp&nbspupstream</div><div id = "hUnderline"></div>
                 <div class = "normal" style = "padding-left: 31px; text-indent: -30px;"><span class = "strong">1.&nbsp&nbsp</span>使用&nbspgit&nbspremote&nbsp-v&nbsp查看远程状态</div>
                 <pre><code class = "nohighlight">
 git remote -v
@@ -120,7 +133,7 @@ origin  git@github.com:yourname/yourname_rep.git (push)
 upstream        git@github.com:yourname/yourname_rep.git (fetch)
 upstream        git@github.com:yourname/yourname_rep.git (push)
                 </code></pre>
-                <div class = "h2" id = "2">从远程同步同步</div>
+                <div class = "h2" id = "2">从远程同步同步</div><div id = "hUnderline"></div>
                 <div class = "normal" style = "padding-left: 31px; text-indent: -30px;"><span class = "strong">4.&nbsp&nbsp</span>从上游仓库&nbspfetch&nbsp分支和提交点&nbspgit&nbspfetch&nbspupstream，传送到本地，并会被存储在本地分支&nbspupstream/master</div>
                 <pre><code class = "nohighlight">
 git fetch upstream
@@ -144,7 +157,7 @@ git merge upstream/master
                     </div>
                     <hr>-->
                 </div>
-                <div id = "disqus_thread" style = "width: 55%; margin: auto; margin-top: 100px;"></div>  
+                <div id = "disqus_thread"></div>  
             </div>
             <div class = "myAffix">
                 <div class = "feet">
@@ -158,6 +171,17 @@ git merge upstream/master
         </div>>
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+        <script type = "text/html" id = "hit-template">
+            <div class = "hit">
+                <div class = "hit-content">
+                    <div class = "hit-title">{{title}}</div>
+                    <div class = "hit-tag">{{{_highlightResult.tag.value}}} &nbsp|&nbsp&nbsp {{{_highlightResult.time.value}}}</div>
+                    <div class = "hit-brief">{{{_highlightResult.brief.value}}}</div>
+                </div>
+            </div>
+        </script>        
+        
         <script>
 
             /**
@@ -179,7 +203,7 @@ git merge upstream/master
         <script src = "../js/blog.js"></script>
 
         <script src = "https://cdn.jsdelivr.net/npm/instantsearch.js@2.3/dist/instantsearch.min.js"></script>
-        <script src = "js/app.js"></script>
+        <script src = "../js/app.js"></script>
                 
         <script src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
         <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.0.js"></script>

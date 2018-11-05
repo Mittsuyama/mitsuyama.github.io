@@ -14,10 +14,7 @@
         <link rel = "icon" href = "../img/favicon.ico" mce_href = "../img/favicon.ico" type = "image/x-icon">
         <link rel = "shortcut icon" href = "../img/icon/favicon.ico" mce_href = "../img/favicon.ico" type = "image/x-icon">
         
-        <link rel="stylesheet" href = "https://cdn.jsdelivr.net/npm/instantsearch.js@2.3/dist/instantsearch.min.css">
-        <!-- Always use `2.x` versions in production rather than `2` to mitigate any side effects on your website,
-        Find the latest version on InstantSearch.js website: https://community.algolia.com/instantsearch.js/v2/guides/usage.html -->
-        <link rel = "stylesheet" type = "text/css" href = "css/search.css">
+        <link rel = "stylesheet" type = "text/css" href = "../css/search.css">
         
         <link rel = "stylesheet" href = "../highlight/styles/rainbow.css">
         <link rel = "stylesheet" href = "../font-awesome/css/font-awesome.css">
@@ -36,25 +33,25 @@
                     <div class = "nav_text_home">
                         MITSUYAMA
                     </div>
-                    </a>            
+                    </a>        
                 </div>
                 <div class = "navigation_content2">
-                    <a href = "about.html">
-                    <div class = "nav_text">
-                        ABOUT
+                    <div class = "nav_text" id = "searchButton">
+                        <i class = "fa fa-search"></i>
                     </div>
+                    <a href = "blog/about.html">
+                        <div class = "nav_text">
+                            ABOUT
+                        </div>
                     </a>
                     <div class = "nav_text">
-                        BLOG
+                        BLOG    
                     </div>
                     <a href = "https://github.com/Mittsuyama">
-                    <div class = "nav_text">
-                        GITHUB
-                    </div>
+                        <div class = "nav_text">
+                            GITHUB
+                        </div>
                     </a>
-                    <div class = "nav_text">
-                        <i class="fa fa-search" aria-hidden = "true"></i>
-                    </div>
                 </div>
             </div>
             
@@ -88,6 +85,22 @@
             </div>
         </div>
         
+        <div id = "searchImg">
+            <div class = "searchBox">
+                <header>
+                    <div id = "inputBox">
+                        <input id = "my-search-input" placeholder = "SEARCH">
+                        <i class = "fa fa-search" aria-hidden = "true" id = "searchIcon"></i>
+                        <!-- We use a specific placeholder in the input to guides users in their search. -->
+                    </div>
+                </header>
+                <main>
+                    <div id = "hits"></div>
+                    <div id = "pagination"></div>
+                </main>
+            </div>
+        </div>
+        
         <div class = "blogMainBlock">
             <div class = "articleContext">
                     <div class = "funButtonBox">
@@ -107,7 +120,7 @@
                 <div class = "articleBorder">
                                     <br>
                 <a href = "12.html" class = "conncetion"><i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp&nbsp&nbsp上一篇：离散数学 2 - 关系</a>
-                <div class = "h2" id = "1">近世代数</div>
+                <div class = "h2" id = "1">近世代数</div><div id = "hUnderline"></div>
                 <div class = "h5">二元代数运算的定义：</div>
                 <div class = "normal">设&nbsp$X$&nbsp是一个集合，一个从&nbsp$X&nbsp\times&nbspX$&nbsp到&nbsp$X$&nbsp的一个映射&nbsp$\phi$&nbsp称为&nbsp$X$&nbsp上的一个二元代数运算。</div>
                 <div class = "normal">有前缀表示、中缀表示、后缀表示法，通常用中缀表示法。</div>
@@ -115,7 +128,7 @@
                 <div class = "normal">一个从集合&nbsp$X$&nbsp到集合&nbsp$Y$&nbsp的映射称为&nbsp$X$&nbsp到&nbsp$Y$&nbsp的一个一元代数运算，当&nbsp$X&nbsp=&nbspY$&nbsp时，称此一为一元代数运算。</div>
                 <div class = "normal">$X$&nbsp上的一元代数运算对于运算时封闭的。</div>
                 <div class = "normal">$n$&nbsp元代数运算类似定义：$X^n&nbsp\to&nbspX$</div>
-                <div class = "h2" id = "2">运算律</div>
+                <div class = "h2" id = "2">运算律</div><div id = "hUnderline"></div>
                 <div class = "normal">若满足</div>
 $$
 \begin{align}
@@ -135,7 +148,7 @@ $$
 c \circ (a + b) = c \circ a + c \circ b, 满足左分配 
 $$
                 <div class = "normal"><u><span class = "strong">多元素之和乘以单元素分配率</span></u>：略</div>
-                <div class = "h2" id = "3">幺元</div>
+                <div class = "h2" id = "3">幺元</div><div id = "hUnderline"></div>
                 <div class = "h5">幺元的定义</div>
                 <div class = "normal">$(S,&nbsp\circ)$&nbsp代数系，$a_l&nbsp\in&nbspS$，使&nbsp$\forall&nbspa&nbsp\in&nbspS$：</div>
 $$
@@ -184,7 +197,7 @@ Z_n = \{[0], [1], ..., [n - 1]\}\\
 [i] = \{m | m \in Z, m \equiv i \pmod{n}\}
 $$
                 <div class = "normal">则&nbsp$(Z_n,&nbsp+)$&nbsp是个半群</div>
-                <div class = "h2" id = "4">幺半群</div>
+                <div class = "h2" id = "4">幺半群</div><div id = "hUnderline"></div>
                 <div class = "h4" id = "5">幺半群的定义：</div>
                 <div class = "normal">一个半群有单位元&nbsp$e$，称&nbsp$(S,&nbsp\circ&nbspe)$&nbsp为幺半群，如果&nbsp$S$&nbsp是有限集合，则称为有限幺半群，$S$&nbsp的基数称为幺半群的阶，阶&nbsp$o(S)&nbsp=&nbsp|S|$.</div>
                 <div class = "h5">例题：</div>
@@ -262,7 +275,7 @@ $$
                 <div class = "normal"><span class = "emphasis">法二</span>：</div>
                 <div class = "normal">设序列为为&nbsp$b^{3^0},&nbspb^{3^1},&nbspb^{3^2},&nbsp\ldots,&nbspb^{3^n}$，同上方法即可证明，无需判断是否有&nbsp$m&nbsp+&nbsp1&nbsp=&nbspn$。</div>
                 <div class = "normal">此定理可得：一个有限代数系不存在&nbsp$a$，使得$a&nbsp\circ&nbspa&nbsp=&nbspa$，那一定不是有限半群。</div>
-                <div class = "h2" id = "7">子半群和子幺半群</div>
+                <div class = "h2" id = "7">子半群和子幺半群</div><div id = "hUnderline"></div>
                 <div class = "h4" id = "8">子半群定义：</div>
                 <div class = "normal">设&nbsp$(S,&nbsp\circ)$&nbsp是一个半群，$B$&nbsp是一个非空子集，对于&nbsp$\forall&nbspa,&nbspb&nbsp\in&nbspB$，都有&nbsp$a&nbsp\circ&nbspb&nbsp\in&nbspB$，$(B,&nbsp\circ)$&nbsp是&nbsp$(S,&nbsp\circ)$&nbsp的子半群。（即子半群同样满足运算封闭。）</div>
                 <div class = "normal"><span class = "emphasis">注意</span>：子半群的乘法定义必须与原半群相同。</div>
@@ -293,7 +306,7 @@ $$
 $$
 x \circ y = a^m \circ a^n = a^{m + n} = a^{n + m} = a^n \circ a^m = y \circ x
 $$
-                <div class = "h2" id = "11">半群关系</div>
+                <div class = "h2" id = "11">半群关系</div><div id = "hUnderline"></div>
                 <div class = "h4" id = "12">1.&nbsp&nbsp同构：</div>
                 <div class = "normal">定义：$(S,&nbsp\circ)$,&nbsp$(T,&nbsp*)$&nbsp是个半群，若&nbsp$\exists&nbsp\phi:&nbspS&nbsp\to&nbspT$，是双射，使得&nbsp$\forall&nbspa,&nbspb&nbsp\in&nbspS$&nbsp有：</div>
 $$
@@ -309,7 +322,7 @@ $$
                     </div>
                     <hr>-->
                 </div>
-                <div id = "disqus_thread" style = "width: 55%; margin: auto; margin-top: 100px;"></div>  
+                <div id = "disqus_thread"></div>  
             </div>
             <div class = "myAffix">
                 <div class = "feet">
@@ -323,6 +336,17 @@ $$
         </div>>
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+        <script type = "text/html" id = "hit-template">
+            <div class = "hit">
+                <div class = "hit-content">
+                    <div class = "hit-title">{{title}}</div>
+                    <div class = "hit-tag">{{{_highlightResult.tag.value}}} &nbsp|&nbsp&nbsp {{{_highlightResult.time.value}}}</div>
+                    <div class = "hit-brief">{{{_highlightResult.brief.value}}}</div>
+                </div>
+            </div>
+        </script>        
+        
         <script>
 
             /**
@@ -344,7 +368,7 @@ $$
         <script src = "../js/blog.js"></script>
 
         <script src = "https://cdn.jsdelivr.net/npm/instantsearch.js@2.3/dist/instantsearch.min.js"></script>
-        <script src = "js/app.js"></script>
+        <script src = "../js/app.js"></script>
                 
         <script src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
         <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.0.js"></script>

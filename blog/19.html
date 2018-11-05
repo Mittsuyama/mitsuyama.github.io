@@ -14,10 +14,7 @@
         <link rel = "icon" href = "../img/favicon.ico" mce_href = "../img/favicon.ico" type = "image/x-icon">
         <link rel = "shortcut icon" href = "../img/icon/favicon.ico" mce_href = "../img/favicon.ico" type = "image/x-icon">
         
-        <link rel="stylesheet" href = "https://cdn.jsdelivr.net/npm/instantsearch.js@2.3/dist/instantsearch.min.css">
-        <!-- Always use `2.x` versions in production rather than `2` to mitigate any side effects on your website,
-        Find the latest version on InstantSearch.js website: https://community.algolia.com/instantsearch.js/v2/guides/usage.html -->
-        <link rel = "stylesheet" type = "text/css" href = "css/search.css">
+        <link rel = "stylesheet" type = "text/css" href = "../css/search.css">
         
         <link rel = "stylesheet" href = "../highlight/styles/rainbow.css">
         <link rel = "stylesheet" href = "../font-awesome/css/font-awesome.css">
@@ -36,25 +33,25 @@
                     <div class = "nav_text_home">
                         MITSUYAMA
                     </div>
-                    </a>            
+                    </a>        
                 </div>
                 <div class = "navigation_content2">
-                    <a href = "about.html">
-                    <div class = "nav_text">
-                        ABOUT
+                    <div class = "nav_text" id = "searchButton">
+                        <i class = "fa fa-search"></i>
                     </div>
+                    <a href = "blog/about.html">
+                        <div class = "nav_text">
+                            ABOUT
+                        </div>
                     </a>
                     <div class = "nav_text">
-                        BLOG
+                        BLOG    
                     </div>
                     <a href = "https://github.com/Mittsuyama">
-                    <div class = "nav_text">
-                        GITHUB
-                    </div>
+                        <div class = "nav_text">
+                            GITHUB
+                        </div>
                     </a>
-                    <div class = "nav_text">
-                        <i class="fa fa-search" aria-hidden = "true"></i>
-                    </div>
                 </div>
             </div>
             
@@ -89,6 +86,22 @@
             </div>
         </div>
         
+        <div id = "searchImg">
+            <div class = "searchBox">
+                <header>
+                    <div id = "inputBox">
+                        <input id = "my-search-input" placeholder = "SEARCH">
+                        <i class = "fa fa-search" aria-hidden = "true" id = "searchIcon"></i>
+                        <!-- We use a specific placeholder in the input to guides users in their search. -->
+                    </div>
+                </header>
+                <main>
+                    <div id = "hits"></div>
+                    <div id = "pagination"></div>
+                </main>
+            </div>
+        </div>
+        
         <div class = "blogMainBlock">
             <div class = "articleContext">
                     <div class = "funButtonBox">
@@ -107,11 +120,11 @@
                     </div>
                 <div class = "articleBorder">
                                     <br>
-                <div class = "h2" id = "1">前言</div>
+                <div class = "h2" id = "1">前言</div><div id = "hUnderline"></div>
                 <div class = "normal">阅读此篇文章，默认你拥有一些基本乐理的知识（<span class = "emphasis">音律，音程，和弦</span>）和吉他（弦，品等）的基本知识，若未掌握可查看之前的文章的音律，音程，和弦的内容：</div>
                 <a href = "16.html" class = "conncetion"><i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp&nbsp&nbsp音乐理论基础</a>
                 <div class = "normal">学习音乐理论基础。</div>
-                <div class = "h2" id = "2">吉他和弦的构成</div>
+                <div class = "h2" id = "2">吉他和弦的构成</div><div id = "hUnderline"></div>
                 <br>
                 <div class = "normal">从音乐理论基础中可以了解到，和弦是由三个及三个以上的音叠加而形成的。最低的音我们称为根音。</div>
                 <br>
@@ -181,7 +194,7 @@
                 <div class = "normal" style = "padding-left: 37px; text-indent:-17px;"><i class = "fa fa-chevron-right" style = "top: 3px; font-size: 14px; color: #cccccc"></i>&nbsp&nbsp&nbspCmaj9(#5)：降五音升高半音</div>
                 <div class = "normal" style = "padding-left: 37px; text-indent:-17px;"><i class = "fa fa-chevron-right" style = "top: 3px; font-size: 14px; color: #cccccc"></i>&nbsp&nbsp&nbspC7(b9)：增加一个小九度</div>
                 <img src = "../img/music-theory/1540886939216.png" class = "blogImg"><br>
-                <div class = "h2" id = "13">色彩</div>
+                <div class = "h2" id = "13">色彩</div><div id = "hUnderline"></div>
                 <div class = "normal">除了在构造上的不同，和弦很大的不同在于和弦的色彩上。</div>
                 <br>
                 <div class = "normal" style = "padding-left: 31px; text-indent: -30px;"><span class = "strong">1.&nbsp&nbsp</span>&nbsp大三和弦是&nbspC&nbspE&nbspG，C&nbsp与&nbspG&nbsp是完全协和音程，C&nbsp与&nbspE&nbsp是不完全协和音程，没有不协和音程的存在，让大三和弦显得非常丰满，稳定，明亮。</div>
@@ -189,14 +202,14 @@
                 <div class = "normal" style = "padding-left: 31px; text-indent: -30px;"><span class = "strong">3.&nbsp&nbsp</span>&nbsp七和弦中有不协和的七度音程，会使这个和弦听起来非常不稳定，有一种还没有把话说完，急于进入稳定和弦的状态。</div>
                 <br>
                 <div class = "normal">所以大部分的歌一般会以稳定和弦开头，并以稳定的和弦结尾。根据歌曲的情感，在作品中加入不同色彩的和弦。</div>
-                <div class = "h2" id = "14">级数</div>
+                <div class = "h2" id = "14">级数</div><div id = "hUnderline"></div>
                 <div class = "normal">在&nbspC&nbsp调中，以&nbspC&nbspD&nbspE&nbspF&nbspG&nbspA&nbspB&nbsp分别为根音构成的和弦就位&nbsp1&nbsp2&nbsp3&nbsp4&nbsp5&nbsp6&nbsp7&nbsp级和弦。</div>
                 <div class = "normal">通常用罗马数字&nbspⅠ&nbspⅡ&nbspⅢ&nbspⅣ&nbspⅤ&nbspⅥ&nbspⅦ&nbsp来表。</div>
                 <div class = "normal">这七个和弦分别是：C,&nbspDm,&nbspEm,&nbspF,&nbspG,&nbspAm,&nbspBdim（最后一个减三和弦不常用）</div>
                 <br>
                 <div class = "normal">而在&nbspD&nbsp调中，这七个和弦分别是：D,&nbspEm,&nbsp#Fm,&nbspG,&nbspA,&nbspBm,&nbsp#C，也就是把每个音升高两个半音再构成新的大三和弦。</div>
                 <div class = "normal">余此类推。</div>
-                <div class = "h2" id = "15">简单的和弦编配</div>
+                <div class = "h2" id = "15">简单的和弦编配</div><div id = "hUnderline"></div>
                 <div class = "normal">此节来自：</div>
                 <a href = "https://www.jianshu.com/p/7952aee61ae2" class = "conncetion"><i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp&nbsp&nbsp用心感受，和弦也有它们各自的色彩！</a>
                 <div class = "normal">这里介绍一下简单的编配规律：</div>
@@ -221,7 +234,7 @@
                     </div>
                     <hr>-->
                 </div>
-                <div id = "disqus_thread" style = "width: 55%; margin: auto; margin-top: 100px;"></div>  
+                <div id = "disqus_thread"></div>  
             </div>
             <div class = "myAffix">
                 <div class = "feet">
@@ -235,6 +248,17 @@
         </div>>
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+        <script type = "text/html" id = "hit-template">
+            <div class = "hit">
+                <div class = "hit-content">
+                    <div class = "hit-title">{{title}}</div>
+                    <div class = "hit-tag">{{{_highlightResult.tag.value}}} &nbsp|&nbsp&nbsp {{{_highlightResult.time.value}}}</div>
+                    <div class = "hit-brief">{{{_highlightResult.brief.value}}}</div>
+                </div>
+            </div>
+        </script>        
+        
         <script>
 
             /**
@@ -256,7 +280,7 @@
         <script src = "../js/blog.js"></script>
 
         <script src = "https://cdn.jsdelivr.net/npm/instantsearch.js@2.3/dist/instantsearch.min.js"></script>
-        <script src = "js/app.js"></script>
+        <script src = "../js/app.js"></script>
                 
         <script src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
         <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.0.js"></script>

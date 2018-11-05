@@ -14,10 +14,7 @@
         <link rel = "icon" href = "../img/favicon.ico" mce_href = "../img/favicon.ico" type = "image/x-icon">
         <link rel = "shortcut icon" href = "../img/icon/favicon.ico" mce_href = "../img/favicon.ico" type = "image/x-icon">
         
-        <link rel="stylesheet" href = "https://cdn.jsdelivr.net/npm/instantsearch.js@2.3/dist/instantsearch.min.css">
-        <!-- Always use `2.x` versions in production rather than `2` to mitigate any side effects on your website,
-        Find the latest version on InstantSearch.js website: https://community.algolia.com/instantsearch.js/v2/guides/usage.html -->
-        <link rel = "stylesheet" type = "text/css" href = "css/search.css">
+        <link rel = "stylesheet" type = "text/css" href = "../css/search.css">
         
         <link rel = "stylesheet" href = "../highlight/styles/rainbow.css">
         <link rel = "stylesheet" href = "../font-awesome/css/font-awesome.css">
@@ -36,25 +33,25 @@
                     <div class = "nav_text_home">
                         MITSUYAMA
                     </div>
-                    </a>            
+                    </a>        
                 </div>
                 <div class = "navigation_content2">
-                    <a href = "about.html">
-                    <div class = "nav_text">
-                        ABOUT
+                    <div class = "nav_text" id = "searchButton">
+                        <i class = "fa fa-search"></i>
                     </div>
+                    <a href = "blog/about.html">
+                        <div class = "nav_text">
+                            ABOUT
+                        </div>
                     </a>
                     <div class = "nav_text">
-                        BLOG
+                        BLOG    
                     </div>
                     <a href = "https://github.com/Mittsuyama">
-                    <div class = "nav_text">
-                        GITHUB
-                    </div>
+                        <div class = "nav_text">
+                            GITHUB
+                        </div>
                     </a>
-                    <div class = "nav_text">
-                        <i class="fa fa-search" aria-hidden = "true"></i>
-                    </div>
                 </div>
             </div>
             
@@ -89,6 +86,22 @@
             </div>
         </div>
         
+        <div id = "searchImg">
+            <div class = "searchBox">
+                <header>
+                    <div id = "inputBox">
+                        <input id = "my-search-input" placeholder = "SEARCH">
+                        <i class = "fa fa-search" aria-hidden = "true" id = "searchIcon"></i>
+                        <!-- We use a specific placeholder in the input to guides users in their search. -->
+                    </div>
+                </header>
+                <main>
+                    <div id = "hits"></div>
+                    <div id = "pagination"></div>
+                </main>
+            </div>
+        </div>
+        
         <div class = "blogMainBlock">
             <div class = "articleContext">
                     <div class = "funButtonBox">
@@ -107,14 +120,14 @@
                     </div>
                 <div class = "articleBorder">
                                     <br>
-                <div class = "h2" id = "1">前言</div>
+                <div class = "h2" id = "1">前言</div><div id = "hUnderline"></div>
                 <div class = "normal">姊妹篇：</div>
                 <a href = "11.html" class = "conncetion"><i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp&nbsp&nbsp日语学习准备篇</a>
                 <a href = "17.html" class = "conncetion"><i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp&nbsp&nbsp标日初级（上）学习笔记</a>
                 <br>
                 <div class = "normal">单词死记硬背容易出现长短音，促音，清浊音混淆的情况。所以死记硬背不能解决问题，如下提出一些日语发音的规律。</div>
                 <div class = "normal"><span class = "emphasis">都是通常的规律，特护情况特殊记忆。</span></div>
-                <div class = "h2" id = "2">音读</div>
+                <div class = "h2" id = "2">音读</div><div id = "hUnderline"></div>
                 <div class = "h3" id = "3">长音规律</div>
                 <div class = "h4" id = "4">前鼻音后鼻音</div>
                 <div class = "normal" style = "padding-left: 37px; text-indent:-17px;"><i class = "fa fa-chevron-right" style = "top: 3px; font-size: 14px; color: #cccccc"></i>&nbsp汉字的汉语拼音是<u><span class = "strong">前鼻音</span></u>，日语发音最后带「ん」。</div>
@@ -153,7 +166,7 @@
                 <div class = "normal" style = "padding-left: 37px; text-indent:-17px;"><i class = "fa fa-chevron-right" style = "top: 3px; font-size: 14px; color: #cccccc"></i>&nbsp先（せん）＋&nbsp輩（はい）→&nbsp&nbsp先輩（せん<span class = "emphasis">ぱ</span>い）</div>
                 <div class = "normal" style = "padding-left: 37px; text-indent:-17px;"><i class = "fa fa-chevron-right" style = "top: 3px; font-size: 14px; color: #cccccc"></i>&nbsp心（しん）＋&nbsp配（はい）→&nbsp&nbsp心配（しん<span class = "emphasis">ぱ</span>い）</div>
                 <div class = "normal" style = "padding-left: 37px; text-indent:-17px;"><i class = "fa fa-chevron-right" style = "top: 3px; font-size: 14px; color: #cccccc"></i>&nbsp何（なん）＋&nbsp分（ふん）→&nbsp&nbsp何分（なん<span class = "emphasis">ぷ</span>ん）</div>
-                <div class = "h2" id = "12">训读</div>
+                <div class = "h2" id = "12">训读</div><div id = "hUnderline"></div>
                 <div class = "h4" id = "13">复合词浊化</div>
                 <div class = "normal">若是复合词（复合名词&nbsp/&nbsp复合动词&nbsp/&nbsp复合形容词），第二个字起，若是送气音，常<u><span class = "strong">浊化</span></u></div>
                 <div class = "normal">例如：</div>
@@ -170,7 +183,7 @@
                 <div class = "normal">漢字最后落在「え段」，复合后落在「あ段」</div>
                 <div class = "normal" style = "padding-left: 37px; text-indent:-17px;"><i class = "fa fa-chevron-right" style = "top: 3px; font-size: 14px; color: #cccccc"></i>&nbsp雨（あめ）＋&nbsp水（みず）→&nbsp&nbsp雨水（あ<span class = "emphasis">ま</span>みず）</div>
                 <div class = "normal" style = "padding-left: 37px; text-indent:-17px;"><i class = "fa fa-chevron-right" style = "top: 3px; font-size: 14px; color: #cccccc"></i>&nbsp稲（いね）+&nbsp&nbsp光（ひかり）→&nbsp&nbsp稲光（い<span class = "emphasis">ね</span>ひかり）</div>
-                <div class = "h2" id = "15">外来词</div>
+                <div class = "h2" id = "15">外来词</div><div id = "hUnderline"></div>
                 <div class = "h4" id = "16">通常规律</div>
                 <div class = "normal">在辅音&nbsp+&nbsp元音的结构下：</div>
                 <div class = "normal" style = "padding-left: 37px; text-indent:-17px;"><i class = "fa fa-chevron-right" style = "top: 3px; font-size: 14px; color: #cccccc"></i>&nbsp辅音为&nbspl，r&nbsp用「ラ行」：<span class = "emphasis">ラ</span>ジオ（radio）</div>
@@ -210,7 +223,7 @@
                     </div>
                     <hr>-->
                 </div>
-                <div id = "disqus_thread" style = "width: 55%; margin: auto; margin-top: 100px;"></div>  
+                <div id = "disqus_thread"></div>  
             </div>
             <div class = "myAffix">
                 <div class = "feet">
@@ -224,6 +237,17 @@
         </div>>
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+        <script type = "text/html" id = "hit-template">
+            <div class = "hit">
+                <div class = "hit-content">
+                    <div class = "hit-title">{{title}}</div>
+                    <div class = "hit-tag">{{{_highlightResult.tag.value}}} &nbsp|&nbsp&nbsp {{{_highlightResult.time.value}}}</div>
+                    <div class = "hit-brief">{{{_highlightResult.brief.value}}}</div>
+                </div>
+            </div>
+        </script>        
+        
         <script>
 
             /**
@@ -245,7 +269,7 @@
         <script src = "../js/blog.js"></script>
 
         <script src = "https://cdn.jsdelivr.net/npm/instantsearch.js@2.3/dist/instantsearch.min.js"></script>
-        <script src = "js/app.js"></script>
+        <script src = "../js/app.js"></script>
                 
         <script src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
         <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.0.js"></script>

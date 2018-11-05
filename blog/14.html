@@ -14,10 +14,7 @@
         <link rel = "icon" href = "../img/favicon.ico" mce_href = "../img/favicon.ico" type = "image/x-icon">
         <link rel = "shortcut icon" href = "../img/icon/favicon.ico" mce_href = "../img/favicon.ico" type = "image/x-icon">
         
-        <link rel="stylesheet" href = "https://cdn.jsdelivr.net/npm/instantsearch.js@2.3/dist/instantsearch.min.css">
-        <!-- Always use `2.x` versions in production rather than `2` to mitigate any side effects on your website,
-        Find the latest version on InstantSearch.js website: https://community.algolia.com/instantsearch.js/v2/guides/usage.html -->
-        <link rel = "stylesheet" type = "text/css" href = "css/search.css">
+        <link rel = "stylesheet" type = "text/css" href = "../css/search.css">
         
         <link rel = "stylesheet" href = "../highlight/styles/rainbow.css">
         <link rel = "stylesheet" href = "../font-awesome/css/font-awesome.css">
@@ -36,25 +33,25 @@
                     <div class = "nav_text_home">
                         MITSUYAMA
                     </div>
-                    </a>            
+                    </a>        
                 </div>
                 <div class = "navigation_content2">
-                    <a href = "about.html">
-                    <div class = "nav_text">
-                        ABOUT
+                    <div class = "nav_text" id = "searchButton">
+                        <i class = "fa fa-search"></i>
                     </div>
+                    <a href = "blog/about.html">
+                        <div class = "nav_text">
+                            ABOUT
+                        </div>
                     </a>
                     <div class = "nav_text">
-                        BLOG
+                        BLOG    
                     </div>
                     <a href = "https://github.com/Mittsuyama">
-                    <div class = "nav_text">
-                        GITHUB
-                    </div>
+                        <div class = "nav_text">
+                            GITHUB
+                        </div>
                     </a>
-                    <div class = "nav_text">
-                        <i class="fa fa-search" aria-hidden = "true"></i>
-                    </div>
                 </div>
             </div>
             
@@ -93,6 +90,22 @@
             </div>
         </div>
         
+        <div id = "searchImg">
+            <div class = "searchBox">
+                <header>
+                    <div id = "inputBox">
+                        <input id = "my-search-input" placeholder = "SEARCH">
+                        <i class = "fa fa-search" aria-hidden = "true" id = "searchIcon"></i>
+                        <!-- We use a specific placeholder in the input to guides users in their search. -->
+                    </div>
+                </header>
+                <main>
+                    <div id = "hits"></div>
+                    <div id = "pagination"></div>
+                </main>
+            </div>
+        </div>
+        
         <div class = "blogMainBlock">
             <div class = "articleContext">
                     <div class = "funButtonBox">
@@ -110,7 +123,7 @@
                         </div>
                     </div>
                 <div class = "articleBorder">
-                                    <div class = "h2" id = "1">学习内容</div>
+                                    <div class = "h2" id = "1">学习内容</div><div id = "hUnderline"></div>
                 <div class = "h5">第一部分&nbsp&nbsp信息系统概念基础</div>
                 <div class = "normal" style = "padding-left: 37px; text-indent:-17px;"><i class = "fa fa-chevron-right" style = "top: 3px; font-size: 14px; color: #cccccc"></i>&nbsp管理新系统概述（定义与结构）</div>
                 <div class = "normal" style = "padding-left: 37px; text-indent:-17px;"><i class = "fa fa-chevron-right" style = "top: 3px; font-size: 14px; color: #cccccc"></i>&nbsp业务流程&nbsp——&nbsp信息和信息系统</div>
@@ -141,7 +154,7 @@
                 <div class = "normal" style = "padding-left: 61px; text-indent:-17px;"><i class = "fa fa-chevron-right" style = "top: 3px; font-size: 14px; color: #cccccc"></i>&nbsp信息系统预算</div>
                 <div class = "normal" style = "padding-left: 37px; text-indent:-17px;"><i class = "fa fa-chevron-right" style = "top: 3px; font-size: 14px; color: #cccccc"></i>&nbsp信息安全管理</div>
                 <div class = "h5">第五部分&nbsp&nbsp信息系统发展前沿（技术发展前沿和应用前沿等）</div>
-                <div class = "h2" id = "2">第一部分&nbsp&nbsp信息系统概念基础</div>
+                <div class = "h2" id = "2">第一部分&nbsp&nbsp信息系统概念基础</div><div id = "hUnderline"></div>
                 <div class = "h3" id = "3">管理信息系统概述</div>
                 <div class = "h4" id = "4">全球视角下的信息系统学科</div>
                 <div class = "h5">信息系统的定义</div>
@@ -506,7 +519,7 @@ $$
                 <div class = "normal" style = "padding-left: 37px; text-indent:-17px;"><i class = "fa fa-chevron-right" style = "top: 3px; font-size: 14px; color: #cccccc"></i>&nbsp帮助销售团队实现与竞争对手差异化</div>
                 <div class = "normal" style = "padding-left: 37px; text-indent:-17px;"><i class = "fa fa-chevron-right" style = "top: 3px; font-size: 14px; color: #cccccc"></i>&nbsp锁住顾客群体（获取更有利的说服数据）</div>
                 <div class = "normal" style = "padding-left: 37px; text-indent:-17px;"><i class = "fa fa-chevron-right" style = "top: 3px; font-size: 14px; color: #cccccc"></i>&nbsp增加市场进入者的障碍</div>
-                <div class = "h2" id = "23">第二部分&nbsp&nbsp信息系统技术基础</div>
+                <div class = "h2" id = "23">第二部分&nbsp&nbsp信息系统技术基础</div><div id = "hUnderline"></div>
                 <div class = "h3" id = "24">硬件与软件</div>
                 <div class = "h4" id = "25">开篇案例：</div>
                 <div class = "normal" style = "padding-left: 37px; text-indent:-17px;"><i class = "fa fa-chevron-right" style = "top: 3px; font-size: 14px; color: #cccccc"></i>&nbsp因为业务需要，迪伊要建立博客系统来支持销售业务</div>
@@ -1044,7 +1057,7 @@ SELECT stu_name FROM Student WHERE stu_sex = ‘Female’
                 <div class = "normal" style = "padding-left: 31px; text-indent: -30px;"><span class = "strong">7.&nbsp&nbsp</span>&nbsp分层软件：栈。当根据分层模型设计协议时，目标协议软件按层次组织，每台计算机上的协议软件被分成许多模块，每个模块对应一层。更重要的是，分层决定了模块间的相互作用，理论上说，当协议软送或接收数据时，每个模块只同它紧邻的上层模块和下层模块通信。因此，送出的数据向下通过每一层接收的数据向上通过每一层。如下图</div>
                 <img src = "../img/MIS/1540967739854.png" class = "blogImg"><br>
                 <div class = "normal">正如图中所显示的那样，每台计算机包含了为实现整套协议的软件。</div>
-                <div class = "h2" id = "51">第三部分&nbsp&nbsp信息系统应用&nbsp&nbsp——&nbsp&nbsp面向组织的运营管理</div>
+                <div class = "h2" id = "51">第三部分&nbsp&nbsp信息系统应用&nbsp&nbsp——&nbsp&nbsp面向组织的运营管理</div><div id = "hUnderline"></div>
                 <div class = "h3" id = "52">业务流程管理</div>
                 <div class = "h4" id = "53">开篇案例</div>
                 <div class = "normal" style = "padding-left: 31px; text-indent: -30px;"><span class = "strong">1.&nbsp&nbsp</span>&nbspMajestic&nbspRiver&nbspVenture（MRV）公司是一家漂流旅游公司。MRV&nbsp公司有两个永久设施:位于爱达荷州博弈西市的一间小办公室,以及位于俄勒冈州贝克市的设备仓库。</div>
@@ -1073,7 +1086,7 @@ SELECT stu_name FROM Student WHERE stu_sex = ‘Female’
                     </div>
                     <hr>-->
                 </div>
-                <div id = "disqus_thread" style = "width: 55%; margin: auto; margin-top: 100px;"></div>  
+                <div id = "disqus_thread"></div>  
             </div>
             <div class = "myAffix">
                 <div class = "feet">
@@ -1087,6 +1100,17 @@ SELECT stu_name FROM Student WHERE stu_sex = ‘Female’
         </div>>
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+        <script type = "text/html" id = "hit-template">
+            <div class = "hit">
+                <div class = "hit-content">
+                    <div class = "hit-title">{{title}}</div>
+                    <div class = "hit-tag">{{{_highlightResult.tag.value}}} &nbsp|&nbsp&nbsp {{{_highlightResult.time.value}}}</div>
+                    <div class = "hit-brief">{{{_highlightResult.brief.value}}}</div>
+                </div>
+            </div>
+        </script>        
+        
         <script>
 
             /**
@@ -1108,7 +1132,7 @@ SELECT stu_name FROM Student WHERE stu_sex = ‘Female’
         <script src = "../js/blog.js"></script>
 
         <script src = "https://cdn.jsdelivr.net/npm/instantsearch.js@2.3/dist/instantsearch.min.js"></script>
-        <script src = "js/app.js"></script>
+        <script src = "../js/app.js"></script>
                 
         <script src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
         <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.0.js"></script>

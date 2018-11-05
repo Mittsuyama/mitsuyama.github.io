@@ -14,10 +14,7 @@
         <link rel = "icon" href = "../img/favicon.ico" mce_href = "../img/favicon.ico" type = "image/x-icon">
         <link rel = "shortcut icon" href = "../img/icon/favicon.ico" mce_href = "../img/favicon.ico" type = "image/x-icon">
         
-        <link rel="stylesheet" href = "https://cdn.jsdelivr.net/npm/instantsearch.js@2.3/dist/instantsearch.min.css">
-        <!-- Always use `2.x` versions in production rather than `2` to mitigate any side effects on your website,
-        Find the latest version on InstantSearch.js website: https://community.algolia.com/instantsearch.js/v2/guides/usage.html -->
-        <link rel = "stylesheet" type = "text/css" href = "css/search.css">
+        <link rel = "stylesheet" type = "text/css" href = "../css/search.css">
         
         <link rel = "stylesheet" href = "../highlight/styles/rainbow.css">
         <link rel = "stylesheet" href = "../font-awesome/css/font-awesome.css">
@@ -36,25 +33,25 @@
                     <div class = "nav_text_home">
                         MITSUYAMA
                     </div>
-                    </a>            
+                    </a>        
                 </div>
                 <div class = "navigation_content2">
-                    <a href = "about.html">
-                    <div class = "nav_text">
-                        ABOUT
+                    <div class = "nav_text" id = "searchButton">
+                        <i class = "fa fa-search"></i>
                     </div>
+                    <a href = "blog/about.html">
+                        <div class = "nav_text">
+                            ABOUT
+                        </div>
                     </a>
                     <div class = "nav_text">
-                        BLOG
+                        BLOG    
                     </div>
                     <a href = "https://github.com/Mittsuyama">
-                    <div class = "nav_text">
-                        GITHUB
-                    </div>
+                        <div class = "nav_text">
+                            GITHUB
+                        </div>
                     </a>
-                    <div class = "nav_text">
-                        <i class="fa fa-search" aria-hidden = "true"></i>
-                    </div>
                 </div>
             </div>
             
@@ -102,6 +99,22 @@
             </div>
         </div>
         
+        <div id = "searchImg">
+            <div class = "searchBox">
+                <header>
+                    <div id = "inputBox">
+                        <input id = "my-search-input" placeholder = "SEARCH">
+                        <i class = "fa fa-search" aria-hidden = "true" id = "searchIcon"></i>
+                        <!-- We use a specific placeholder in the input to guides users in their search. -->
+                    </div>
+                </header>
+                <main>
+                    <div id = "hits"></div>
+                    <div id = "pagination"></div>
+                </main>
+            </div>
+        </div>
+        
         <div class = "blogMainBlock">
             <div class = "articleContext">
                     <div class = "funButtonBox">
@@ -120,7 +133,7 @@
                     </div>
                 <div class = "articleBorder">
                                     <br>
-                <div class = "h2" id = "1">案例分析要求</div>
+                <div class = "h2" id = "1">案例分析要求</div><div id = "hUnderline"></div>
                 <div class = "normal" style = "padding-left: 31px; text-indent: -30px;"><span class = "strong">1.&nbsp&nbsp</span>案例简介</div>
                 <div class = "normal" style = "padding-left: 31px; text-indent: -30px;"><span class = "strong">2.&nbsp&nbsp</span>问题及其原因</div>
                 <div class = "normal" style = "padding-left: 31px; text-indent: -30px;"><span class = "strong">3.&nbsp&nbsp</span>解决方案及实施</div>
@@ -128,7 +141,7 @@
                 <div class = "normal" style = "padding-left: 31px; text-indent: -30px;"><span class = "strong">5.&nbsp&nbsp</span>总结归纳</div>
                 <div class = "normal" style = "padding-left: 31px; text-indent: -30px;"><span class = "strong">6.&nbsp&nbsp</span>运用《组织行为学》的概念及理论</div>
                 <div class = "normal" style = "padding-left: 31px; text-indent: -30px;"><span class = "strong">7.&nbsp&nbsp</span>参考文献的使用和标注使用</div>
-                <div class = "h2" id = "2">绪论</div>
+                <div class = "h2" id = "2">绪论</div><div id = "hUnderline"></div>
                 <div class = "h3" id = "3">组织与组织行为</div>
                 <div class = "h4" id = "4">什么是组织</div>
                 <div class = "normal">是指两个或两个以上的人，通过有计划的协作所组成的为达到共同目标的正式结构（罗宾斯）</div>
@@ -221,7 +234,7 @@
                 <div class = "normal"><u><span class = "strong">实验法、访谈法、案例研究法</span></u></div>
                 <div class = "h4" id = "13">常用统计方法</div>
                 <div class = "normal">回归分析，相关分析，方差分析，因素分析</div>
-                <div class = "h2" id = "14">个体行为基础</div>
+                <div class = "h2" id = "14">个体行为基础</div><div id = "hUnderline"></div>
                 <div class = "normal">个人传记特点：年龄、性别、婚姻状况、工作年限（个体特点）</div>
                 <div class = "normal">能力、人格&nbsp/&nbsp个性、情绪、价值观、态度、知觉、学习</div>
                 <div class = "normal">能力：个体在某一工作成功完成各种任务的可能性</div>
@@ -331,7 +344,7 @@
                 <div class = "normal" style = "padding-left: 37px; text-indent:-17px;"><i class = "fa fa-chevron-right" style = "top: 3px; font-size: 14px; color: #cccccc"></i>&nbsp自我激励</div>
                 <div class = "normal" style = "padding-left: 37px; text-indent:-17px;"><i class = "fa fa-chevron-right" style = "top: 3px; font-size: 14px; color: #cccccc"></i>&nbsp感情投入</div>
                 <div class = "normal" style = "padding-left: 37px; text-indent:-17px;"><i class = "fa fa-chevron-right" style = "top: 3px; font-size: 14px; color: #cccccc"></i>&nbsp社交能力</div>
-                <div class = "h2" id = "17">知觉</div>
+                <div class = "h2" id = "17">知觉</div><div id = "hUnderline"></div>
                 <div class = "normal">知觉：是个体对直接作用于自己感觉器官的客观事物赋予意义并解释感觉印象的过程</div>
                 <div class = "normal">知觉的过程：环境刺激&nbsp→&nbsp各种感觉&nbsp→&nbsp选择性注意&nbsp→&nbsp知觉的组织和翻译&nbsp→&nbsp情感和行为</div>
                 <div class = "normal">影响知觉准确性的因素：</div>
@@ -371,7 +384,7 @@
                 <div class = "normal" style = "padding-left: 37px; text-indent:-17px;"><i class = "fa fa-chevron-right" style = "top: 3px; font-size: 14px; color: #cccccc"></i>&nbsp基本归因错误：在评价他人，低估外部因素，高估内部或个人因素</div>
                 <div class = "normal" style = "padding-left: 37px; text-indent:-17px;"><i class = "fa fa-chevron-right" style = "top: 3px; font-size: 14px; color: #cccccc"></i>&nbsp自我服务偏见：评价自己，相反</div>
                 <br>
-                <div class = "h2" id = "23">价值观、态度和工作满意度</div>
+                <div class = "h2" id = "23">价值观、态度和工作满意度</div><div id = "hUnderline"></div>
                 <div class = "h3" id = "24">价值观</div>
                 <div class = "normal"><u><span class = "strong">价值观</span></u>：一个人对周围的客观事物（包括人、事、物）的意义、重要性的总评价和总看法，是一个人基本的信念和判断。</div>
                 <div class = "normal"><u><span class = "strong">价值观体系</span></u>：一个人对于各种事物的看法和评价在心目中的主次、轻重的排列次序。</div>
@@ -463,7 +476,7 @@
                 <div class = "normal" style = "padding-left: 37px; text-indent:-17px;"><i class = "fa fa-chevron-right" style = "top: 3px; font-size: 14px; color: #cccccc"></i>&nbsp快乐的员工效率总是高的（×）</div>
                 <div class = "normal" style = "padding-left: 37px; text-indent:-17px;"><i class = "fa fa-chevron-right" style = "top: 3px; font-size: 14px; color: #cccccc"></i>&nbsp招聘面谈可以有效区分出未来的高绩员工与低绩效员工（×）</div>
                 <div class = "normal" style = "padding-left: 37px; text-indent:-17px;"><i class = "fa fa-chevron-right" style = "top: 3px; font-size: 14px; color: #cccccc"></i>&nbsp人们在稍有压力时，才会把工作做好（√）</div>
-                <div class = "h2" id = "33">激励</div>
+                <div class = "h2" id = "33">激励</div><div id = "hUnderline"></div>
                 <div class = "h4" id = "34">需要、动机与行为</div>
                 <div class = "normal" style = "padding-left: 37px; text-indent:-17px;"><i class = "fa fa-chevron-right" style = "top: 3px; font-size: 14px; color: #cccccc"></i>&nbsp需要：个体缺乏某种东西时产生的一种主观状态</div>
                 <div class = "normal" style = "padding-left: 37px; text-indent:-17px;"><i class = "fa fa-chevron-right" style = "top: 3px; font-size: 14px; color: #cccccc"></i>&nbsp动机：愿意时引起动作，心理学上把引起个人行为，维持该行为并将此行为导向满足某种需要的欲望、愿望、信息等心理因素叫动机</div>
@@ -638,7 +651,7 @@ $$
                 <div class = "normal" style = "padding-left: 37px; text-indent:-17px;"><i class = "fa fa-chevron-right" style = "top: 3px; font-size: 14px; color: #cccccc"></i>&nbsp激励的三个关键要素</div>
                 <div class = "normal" style = "padding-left: 37px; text-indent:-17px;"><i class = "fa fa-chevron-right" style = "top: 3px; font-size: 14px; color: #cccccc"></i>&nbsp早期的激励理论</div>
                 <div class = "normal" style = "padding-left: 37px; text-indent:-17px;"><i class = "fa fa-chevron-right" style = "top: 3px; font-size: 14px; color: #cccccc"></i>&nbsp现代激励理论</div>
-                <div class = "h2" id = "47">群体心理和群体行为</div>
+                <div class = "h2" id = "47">群体心理和群体行为</div><div id = "hUnderline"></div>
                 <div class = "h3" id = "48">群体概念</div>
                 <div class = "h5">定义</div>
                 <div class = "normal">群体是指由两个或两个以上成员组成的，具有共同目标&nbsp/&nbsp任务&nbsp/&nbsp活动，在行为上相互作用，在心理上相互影响的人群的集合体。</div>
@@ -860,7 +873,7 @@ $$
                 <div class = "normal" style = "padding-left: 31px; text-indent: -30px;"><span class = "strong">5.&nbsp&nbsp</span>激励与其他群体的竞争</div>
                 <div class = "normal" style = "padding-left: 31px; text-indent: -30px;"><span class = "strong">6.&nbsp&nbsp</span>群体而非对个体给予奖酬</div>
                 <div class = "normal" style = "padding-left: 31px; text-indent: -30px;"><span class = "strong">7.&nbsp&nbsp</span>将群体与外界隔离</div>
-                <div class = "h2" id = "51">组织行为学主要内容回顾</div>
+                <div class = "h2" id = "51">组织行为学主要内容回顾</div><div id = "hUnderline"></div>
                 <div class = "h4" id = "52">第一讲&nbsp&nbsp绪论</div>
                 <div class = "normal" style = "padding-left: 31px; text-indent: -30px;"><span class = "strong">1.&nbsp&nbsp</span>组织与组织行为学：</div>
                 <div class = "normal" style = "padding-left: 67px; text-indent: -30px;"><span class = "strong">1.&nbsp&nbsp</span>概念</div>
@@ -915,7 +928,7 @@ $$
                     </div>
                     <hr>-->
                 </div>
-                <div id = "disqus_thread" style = "width: 55%; margin: auto; margin-top: 100px;"></div>  
+                <div id = "disqus_thread"></div>  
             </div>
             <div class = "myAffix">
                 <div class = "feet">
@@ -929,6 +942,17 @@ $$
         </div>>
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+        <script type = "text/html" id = "hit-template">
+            <div class = "hit">
+                <div class = "hit-content">
+                    <div class = "hit-title">{{title}}</div>
+                    <div class = "hit-tag">{{{_highlightResult.tag.value}}} &nbsp|&nbsp&nbsp {{{_highlightResult.time.value}}}</div>
+                    <div class = "hit-brief">{{{_highlightResult.brief.value}}}</div>
+                </div>
+            </div>
+        </script>        
+        
         <script>
 
             /**
@@ -950,7 +974,7 @@ $$
         <script src = "../js/blog.js"></script>
 
         <script src = "https://cdn.jsdelivr.net/npm/instantsearch.js@2.3/dist/instantsearch.min.js"></script>
-        <script src = "js/app.js"></script>
+        <script src = "../js/app.js"></script>
                 
         <script src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
         <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.0.js"></script>

@@ -21,7 +21,7 @@ div.funButtonBox{
     display: none;
     position: fixed;
     top: 500px;
-    right: 17%;
+    right: 18%;
     width: 50px;
     height: 300px;
     color: rgba(255, 130, 70, 0.5);
@@ -162,7 +162,7 @@ div.articleContext {
 }
 
 div.articleBorder {
-    box-shadow: 2px 10px 12px 5px rgba(0,0,0,0.03), 2px 12px 20px 5px rgba(0,0,0,0.01);
+    box-shadow: 2px 10px 12px 5px rgba(0,0,0,0.05), 2px 12px 20px 10px rgba(0,0,0,0.05);
     margin: auto;
     width: 55%;
     padding: 30px 60px 100px 60px;
@@ -177,16 +177,20 @@ div.h2 {
     src: url('../fonts/Deng.ttf');
     font-family: "等线";
     font-weight: bold;
-    font-size: 30px;
+    font-size: 35px;
     text-align: center;
-    background-image: url("../img/icon/underline.png");
-    background-repeat: no-repeat;
-    background-position-x: center;
-    background-position-y: 65px;
     margin: 0px;
     width: 100%;
-    padding-top: 25px;
-    min-height: 80px;
+    margin-top: 80px;
+}
+
+#hUnderline {
+    transform: translate(-50%, 0);
+    margin-left: 50%;
+    width: 100px;
+    border-top: 2px solid gray;
+    margin-top: 5px;
+    margin-bottom: 15px;
 }
 
 div.h3 {
@@ -196,10 +200,8 @@ div.h3 {
     font-size: 28px;
     font-style: italic;
     text-align: center;
-    padding-top: 10px;
     width: 100%;
-    min-height: 60px;
-    margin: 0px;
+    margin: 50px 0px 5px 0px;
 }
 
 div.h4 {
@@ -211,7 +213,7 @@ div.h4 {
     background-position-x: left;
     background-position-y: 44px;
     background-size: 2.5%;*/
-    font-size: 28px;
+    font-size: 26px;
     margin-left: -61px;
     margin-top: 10px;
     margin-bottom: 20px;
@@ -440,4 +442,15 @@ div.callme {
 #shareClose:hover {
     background-color: rgba(0, 0, 0, 0.7);
     cursor: pointer;
+}
+
+.ais-search-box--magnifier-wrapper {
+    display: none;
+}
+
+#disqus_thread {
+    padding-top: 50px;
+    width: 55%;
+    margin: auto;
+    margin-top: 100px;
 }

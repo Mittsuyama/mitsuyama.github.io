@@ -1,9 +1,3 @@
-/*var search = instantsearch({
-    appId: 'PKH2B42HCE',
-    apiKey: 'bb62c5db50ca8b2c581aac06ed127758', // search only API key, no ADMIN key
-    indexName: 'MITSUYAMA_SITE'
-});*/
-
 var search = instantsearch({
     // Replace with your own values
     appId: 'PKH2B42HCE',
@@ -11,33 +5,50 @@ var search = instantsearch({
     indexName: 'MITSUYAMA_SITE',
     urlSync: true,
     searchParameters: {
-      hitsPerPage: 10
-    }
-  });
+        hitsPerPage: 5
+      }
+});
 
-// Add this after the previous JavaScript code
-search.addWidget(
-    instantsearch.widgets.searchBox({
-      container: '#search-input'
-    })
-);
+var isFocus = 0;
 
-// Add this after the previous JavaScript code
-search.addWidget(
-    instantsearch.widgets.hits({
-        container: '#hits',
-        hitsPerPage: 10,
-        templates: {
-        item: document.getElementById('hit-template').innerHTML,
-        empty: "We didn't find any results for the search <em>\"{{query}}\"</em>"
-        }
-    })
-);
+function mainFunction() {
+    search.start();
+    $('#searchButton').click(function() {
+        $('#searchImg').fadeIn();
+    });
+}
 
-search.addWidget(
-    instantsearch.widgets.pagination({
-        container: '#pagination'
-    })
-);
+function init() {
+    // Add this after the previous JavaScript code
+    search.addWidget(
+        instantsearch.widgets.searchBox({
+        container: '#my-search-input',
+        })
+    );
 
-search.start();
+    // Add this after the previous JavaScript code
+    search.addWidget(
+        instantsearch.widgets.hits({
+            container: '#hits',
+            hitsPerPage: 5,
+            templates: {
+            item: document.getElementById('hit-template').innerHTML,
+            empty: "We didn't find any results for the search <em>\"{{query}}\"</em>"
+            }
+        })
+    );
+
+    search.addWidget(
+        instantsearch.widgets.pagination({
+            container: '#pagination'
+        })
+    );
+}
+
+
+$(document).ready(function() {
+    init();
+    $(window).load(function(){
+       mainFunction();
+    });
+});

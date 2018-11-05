@@ -162,7 +162,8 @@ class makeHTML:
             htmlContent = htmlContent.replace('$', ' ')
             htmlContent = htmlContent.replace('\n', ' ')
             self.index.add_object(
-                {"url": str(order), "title": self.blogInfo[0], "time": self.blogInfo[3].replace(' ', '').replace('/', '-'), "tag": self.blogInfo[1], "brief": self.blogInfo[2][:-1], "content": htmlContent[:1000]}
+                {"url": str(order), "title": self.blogInfo[0], "time": self.blogInfo[3].replace(' ', '').replace('/', '-'), "tag": self.blogInfo[1], "brief": self.blogInfo[2][:-1], "content": htmlContent[:1000]},
+                str(order)
             )
 
         #Make blog page
@@ -243,7 +244,7 @@ class makeHTML:
                 blogContent += '''                <div class = "h3" id = "%s">''' % (tempOrder) + line[4 : -1].replace(' ', '&nbsp&nbsp') + '''</div>''' + '\n'
             elif lLen > 2 and line[:2] == '##':
                 tempOrder += 1
-                blogContent += '''                <div class = "h2" id = "%s">''' %(tempOrder) + line[3 : -1].replace(' ', '&nbsp&nbsp') + '''</div>''' + '\n'
+                blogContent += '''                <div class = "h2" id = "%s">''' %(tempOrder) + line[3 : -1].replace(' ', '&nbsp&nbsp') + '''</div><div id = "hUnderline"></div>''' + '\n'
             elif lLen > 1 and line[:1] == '#':
                 pass
                 #outFIle.write('''                <div class = "h1">''' + line[1 : -1] + '''</div>''' + '\n')

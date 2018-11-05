@@ -14,10 +14,7 @@
         <link rel = "icon" href = "../img/favicon.ico" mce_href = "../img/favicon.ico" type = "image/x-icon">
         <link rel = "shortcut icon" href = "../img/icon/favicon.ico" mce_href = "../img/favicon.ico" type = "image/x-icon">
         
-        <link rel="stylesheet" href = "https://cdn.jsdelivr.net/npm/instantsearch.js@2.3/dist/instantsearch.min.css">
-        <!-- Always use `2.x` versions in production rather than `2` to mitigate any side effects on your website,
-        Find the latest version on InstantSearch.js website: https://community.algolia.com/instantsearch.js/v2/guides/usage.html -->
-        <link rel = "stylesheet" type = "text/css" href = "css/search.css">
+        <link rel = "stylesheet" type = "text/css" href = "../css/search.css">
         
         <link rel = "stylesheet" href = "../highlight/styles/rainbow.css">
         <link rel = "stylesheet" href = "../font-awesome/css/font-awesome.css">
@@ -36,25 +33,25 @@
                     <div class = "nav_text_home">
                         MITSUYAMA
                     </div>
-                    </a>            
+                    </a>        
                 </div>
                 <div class = "navigation_content2">
-                    <a href = "about.html">
-                    <div class = "nav_text">
-                        ABOUT
+                    <div class = "nav_text" id = "searchButton">
+                        <i class = "fa fa-search"></i>
                     </div>
+                    <a href = "blog/about.html">
+                        <div class = "nav_text">
+                            ABOUT
+                        </div>
                     </a>
                     <div class = "nav_text">
-                        BLOG
+                        BLOG    
                     </div>
                     <a href = "https://github.com/Mittsuyama">
-                    <div class = "nav_text">
-                        GITHUB
-                    </div>
+                        <div class = "nav_text">
+                            GITHUB
+                        </div>
                     </a>
-                    <div class = "nav_text">
-                        <i class="fa fa-search" aria-hidden = "true"></i>
-                    </div>
                 </div>
             </div>
             
@@ -94,6 +91,22 @@
             </div>
         </div>
         
+        <div id = "searchImg">
+            <div class = "searchBox">
+                <header>
+                    <div id = "inputBox">
+                        <input id = "my-search-input" placeholder = "SEARCH">
+                        <i class = "fa fa-search" aria-hidden = "true" id = "searchIcon"></i>
+                        <!-- We use a specific placeholder in the input to guides users in their search. -->
+                    </div>
+                </header>
+                <main>
+                    <div id = "hits"></div>
+                    <div id = "pagination"></div>
+                </main>
+            </div>
+        </div>
+        
         <div class = "blogMainBlock">
             <div class = "articleContext">
                     <div class = "funButtonBox">
@@ -111,7 +124,7 @@
                         </div>
                     </div>
                 <div class = "articleBorder">
-                                    <div class = "h2" id = "1">读的活力与艺术</div>
+                                    <div class = "h2" id = "1">读的活力与艺术</div><div id = "hUnderline"></div>
                 <div class = "h4" id = "2">主动的阅读</div>
                 <div class = "normal"><u>阅读越主动，效果越好</u></div>
                 <div class = "normal">听众或者读者的&nbsp“接收”，应该像是棒球赛中的捕手才对，捕手的艺术就在能接住任何球的技巧，而阅读的艺术也在尽可能地掌握每一总讯息地技巧。</div>
@@ -131,7 +144,7 @@
                 <div class = "normal">阅读的艺术包括了所有非辅助型自我发现学习的技巧：<span class = "strong">敏锐的洞察力、灵敏可靠的记忆、想象的空间、训练有素的分析、省思能力</span></div>
                 <div class = "h4" id = "5">师的出席与缺席</div>
                 <div class = "normal"><u>如果你问了一本书一个问题，那么你必须自己回答这个问题</u></div>
-                <div class = "h2" id = "6">读的层次</div>
+                <div class = "h2" id = "6">读的层次</div><div id = "hUnderline"></div>
                 <div class = "normal" style = "padding-left: 37px; text-indent:-17px;"><i class = "fa fa-chevron-right" style = "top: 3px; font-size: 14px; color: #cccccc"></i>&nbsp基础阅读（elementary&nbspreading）：这个句子在说什么（最简单的那种含义）。</div>
                 <div class = "normal" style = "padding-left: 37px; text-indent:-17px;"><i class = "fa fa-chevron-right" style = "top: 3px; font-size: 14px; color: #cccccc"></i>&nbsp检视阅读（inspectional&nbspreading）：强调短时间，抓住重点，“这本书在谈什么”，“这本书架构如何”，“这是哪一类的书”，也叫系统化略读。</div>
                 <div class = "normal" style = "padding-left: 37px; text-indent:-17px;"><i class = "fa fa-chevron-right" style = "top: 3px; font-size: 14px; color: #cccccc"></i>&nbsp分析阅读（analytical&nbspreading）：无限的时间里面，最好也最完整的阅读</div>
@@ -165,7 +178,7 @@
                 <div class = "normal"><span class = "strong">慢不该慢到不值得，快不该快到有损于满足与理解。</span></div>
                 <div class = "normal">略：逗留与倒退、理解的问题</div>
                 <br>
-                <div class = "h2" id = "13">何做一个高要求的读者</div>
+                <div class = "h2" id = "13">何做一个高要求的读者</div><div id = "hUnderline"></div>
                 <div class = "h4" id = "14">动的阅读基础：一个阅读者要提出的四个基本问题</div>
                 <div class = "normal">这四个问题主要针对<span class = "strong">论说型和非小说型</span>书</div>
                 <div class = "normal" style = "padding-left: 37px; text-indent:-17px;"><i class = "fa fa-chevron-right" style = "top: 3px; font-size: 14px; color: #cccccc"></i>&nbsp这本书到底在谈些什么？</div>
@@ -193,7 +206,7 @@
                 <div class = "normal" style = "padding-left: 37px; text-indent:-17px;"><i class = "fa fa-chevron-right" style = "top: 3px; font-size: 14px; color: #cccccc"></i>&nbsp<span class = "strong">主题阅读</span>：辩证笔记，从很多本书上摘要出来，就一个主题，列出相关的称述和疑问</div>
                 <div class = "normal">略：培养阅读的习惯、由许多规则中养成一个习惯</div>
                 <br>
-                <div class = "h2" id = "17">本书的分类</div>
+                <div class = "h2" id = "17">本书的分类</div><div id = "hUnderline"></div>
                 <div class = "h4" id = "18">书籍分类的重要性</div>
                 <div class = "normal"><u>一定要知道自己在读的是哪一类书，知道的越早越好</u></div>
                 <div class = "normal">如果我们要跟上书本的知道，就应该学习适当的态度来阅读不同的书。</div>
@@ -207,7 +220,7 @@
                 <div class = "normal">历史书、科学书、哲学书等（虽然广义来说科学也是哲学）。</div>
                 <div class = "normal">侠义的科学与哲学的区分方法：哲学更容易出现在日常生活中，科学更像是观察，哲学更偏向思考。</div>
                 <br>
-                <div class = "h2" id = "22">视一本书</div>
+                <div class = "h2" id = "22">视一本书</div><div id = "hUnderline"></div>
                 <div class = "normal">分析阅读的责任：找出书的骨架。</div>
                 <div class = "normal"><span class = "strong">分析阅读的第二个规则</span>：使用简单句或词语叙述整本书的内容。</div>
                 <div class = "normal"><span class = "strong">分析阅读的第三个规则</span>:讲书中重要的篇章列举出来，说明作者如何按照顺序把它们组成一个整体。</div>
@@ -228,7 +241,7 @@
                 <div class = "h4" id = "26">现作者的意图</div>
                 <br>
                 <div class = "normal"><span class = "strong">分析阅读的第四个规则</span>：（其实是上述规则换了一个说法而已）说出整本书想要解答的问题是什么，还要能明智地将这些问题整合出顺序，哪些是主要的，哪些是次要的。</div>
-                <div class = "h2" id = "27">析阅读的第一个阶段</div>
+                <div class = "h2" id = "27">析阅读的第一个阶段</div><div id = "hUnderline"></div>
                 <div class = "normal">上述四个规则一起，能提供读者对一本书构架的认识。</div>
                 <br>
                 <div class = "h3" id = "28">作者找出共通的词义</div>
@@ -308,7 +321,7 @@
                 <div class = "normal" style = "padding-left: 37px; text-indent:-17px;"><i class = "fa fa-chevron-right" style = "top: 3px; font-size: 14px; color: #cccccc"></i>&nbsp使用的工具书的组成方式（怎么编写的）</div>
                 <div class = "normal" style = "padding-left: 37px; text-indent:-17px;"><i class = "fa fa-chevron-right" style = "top: 3px; font-size: 14px; color: #cccccc"></i>&nbsp知道想要找的是什么？在哪能找到？怎样才能找到？</div>
                 <br>
-                <div class = "h2" id = "47">读不同读物的办法</div>
+                <div class = "h2" id = "47">读不同读物的办法</div><div id = "hUnderline"></div>
                 <div class = "h4" id = "48">用型</div>
                 <div class = "normal">两类实用型书：阐述规则、说明规则形成原理；但是这两类书的根本目标是告诉你这个规则是正确的。</div>
                 <div class = "normal">读好实用型的书就是了解规则，评论一本实用型书时，要知道所有的内容都与目标和结果有关（目标不同，再好的建议都不是好建议）。</div>
@@ -359,7 +372,7 @@
                     </div>
                     <hr>-->
                 </div>
-                <div id = "disqus_thread" style = "width: 55%; margin: auto; margin-top: 100px;"></div>  
+                <div id = "disqus_thread"></div>  
             </div>
             <div class = "myAffix">
                 <div class = "feet">
@@ -373,6 +386,17 @@
         </div>>
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+        <script type = "text/html" id = "hit-template">
+            <div class = "hit">
+                <div class = "hit-content">
+                    <div class = "hit-title">{{title}}</div>
+                    <div class = "hit-tag">{{{_highlightResult.tag.value}}} &nbsp|&nbsp&nbsp {{{_highlightResult.time.value}}}</div>
+                    <div class = "hit-brief">{{{_highlightResult.brief.value}}}</div>
+                </div>
+            </div>
+        </script>        
+        
         <script>
 
             /**
@@ -394,7 +418,7 @@
         <script src = "../js/blog.js"></script>
 
         <script src = "https://cdn.jsdelivr.net/npm/instantsearch.js@2.3/dist/instantsearch.min.js"></script>
-        <script src = "js/app.js"></script>
+        <script src = "../js/app.js"></script>
                 
         <script src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
         <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.0.js"></script>

@@ -14,10 +14,7 @@
         <link rel = "icon" href = "../img/favicon.ico" mce_href = "../img/favicon.ico" type = "image/x-icon">
         <link rel = "shortcut icon" href = "../img/icon/favicon.ico" mce_href = "../img/favicon.ico" type = "image/x-icon">
         
-        <link rel="stylesheet" href = "https://cdn.jsdelivr.net/npm/instantsearch.js@2.3/dist/instantsearch.min.css">
-        <!-- Always use `2.x` versions in production rather than `2` to mitigate any side effects on your website,
-        Find the latest version on InstantSearch.js website: https://community.algolia.com/instantsearch.js/v2/guides/usage.html -->
-        <link rel = "stylesheet" type = "text/css" href = "css/search.css">
+        <link rel = "stylesheet" type = "text/css" href = "../css/search.css">
         
         <link rel = "stylesheet" href = "../highlight/styles/rainbow.css">
         <link rel = "stylesheet" href = "../font-awesome/css/font-awesome.css">
@@ -36,25 +33,25 @@
                     <div class = "nav_text_home">
                         MITSUYAMA
                     </div>
-                    </a>            
+                    </a>        
                 </div>
                 <div class = "navigation_content2">
-                    <a href = "about.html">
-                    <div class = "nav_text">
-                        ABOUT
+                    <div class = "nav_text" id = "searchButton">
+                        <i class = "fa fa-search"></i>
                     </div>
+                    <a href = "blog/about.html">
+                        <div class = "nav_text">
+                            ABOUT
+                        </div>
                     </a>
                     <div class = "nav_text">
-                        BLOG
+                        BLOG    
                     </div>
                     <a href = "https://github.com/Mittsuyama">
-                    <div class = "nav_text">
-                        GITHUB
-                    </div>
+                        <div class = "nav_text">
+                            GITHUB
+                        </div>
                     </a>
-                    <div class = "nav_text">
-                        <i class="fa fa-search" aria-hidden = "true"></i>
-                    </div>
                 </div>
             </div>
             
@@ -93,6 +90,22 @@
             </div>
         </div>
         
+        <div id = "searchImg">
+            <div class = "searchBox">
+                <header>
+                    <div id = "inputBox">
+                        <input id = "my-search-input" placeholder = "SEARCH">
+                        <i class = "fa fa-search" aria-hidden = "true" id = "searchIcon"></i>
+                        <!-- We use a specific placeholder in the input to guides users in their search. -->
+                    </div>
+                </header>
+                <main>
+                    <div id = "hits"></div>
+                    <div id = "pagination"></div>
+                </main>
+            </div>
+        </div>
+        
         <div class = "blogMainBlock">
             <div class = "articleContext">
                     <div class = "funButtonBox">
@@ -113,14 +126,14 @@
                                     <br>
                 <a href = "http://detexify.kirelabs.org/classify.html" class = "conncetion"><i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp&nbsp&nbsp如果想知道一些符号的书写这里却没有，点这里！！！</a>
                 <div class = "normal">使用&nbsp<span class = "emphasis">\$&nbspxxx&nbsp\$</span>&nbsp来书写行间数学公式，左右各两个&nbsp<span class = "emphasis">\$`&nbsp表示行间数学公式</div>
-                <div class = "h2" id = "1">简单的表达</div>
+                <div class = "h2" id = "1">简单的表达</div><div id = "hUnderline"></div>
                 <div class = "normal" style = "padding-left: 37px; text-indent:-17px;"><i class = "fa fa-chevron-right" style = "top: 3px; font-size: 14px; color: #cccccc"></i>&nbsp上标&nbsp：&nbsp<span class = "emphasis">e^{x}</span>&nbsp$e^{x}$</div>
                 <div class = "normal" style = "padding-left: 37px; text-indent:-17px;"><i class = "fa fa-chevron-right" style = "top: 3px; font-size: 14px; color: #cccccc"></i>&nbsp下标：&nbsp<span class = "emphasis">a_{1}</span>&nbsp$a_{1}$</div>
                 <div class = "normal" style = "padding-left: 37px; text-indent:-17px;"><i class = "fa fa-chevron-right" style = "top: 3px; font-size: 14px; color: #cccccc"></i>&nbsp分数：&nbsp<span class = "emphasis">\frac{1}{x}</span>&nbsp$\frac{1}{x}$</div>
                 <div class = "normal" style = "padding-left: 37px; text-indent:-17px;"><i class = "fa fa-chevron-right" style = "top: 3px; font-size: 14px; color: #cccccc"></i>&nbsp换行：&nbsp<span class = "emphasis">\\</span></div>
                 <div class = "normal" style = "padding-left: 37px; text-indent:-17px;"><i class = "fa fa-chevron-right" style = "top: 3px; font-size: 14px; color: #cccccc"></i>&nbsp<span class = "emphasis">\alpha,&nbsp\beta,&nbsp…,&nbsp\omega</span>：$\alpha,&nbsp\beta,&nbsp…,&nbsp\omega$，<span class = "emphasis">\Gamma,&nbsp\Delta,&nbsp…,&nbsp\Omega</span>：$\Gamma,&nbsp\Delta,&nbsp…,&nbsp\Omega$</div>
                 <div class = "normal" style = "padding-left: 37px; text-indent:-17px;"><i class = "fa fa-chevron-right" style = "top: 3px; font-size: 14px; color: #cccccc"></i>&nbsp空格：<span class = "emphasis">\,&nbsp\;&nbsp\quad&nbsp\qquad</span>：$a&nbsp\,&nbspb$，$a&nbsp\;&nbspb$，$a&nbsp\quad&nbspb$，$a&nbsp\qquad&nbspb$</div>
-                <div class = "h2" id = "2">符号</div>
+                <div class = "h2" id = "2">符号</div><div id = "hUnderline"></div>
                 <div class = "h3" id = "3">括号</div>
                 <div class = "normal" style = "padding-left: 37px; text-indent:-17px;"><i class = "fa fa-chevron-right" style = "top: 3px; font-size: 14px; color: #cccccc"></i>&nbsp圆括号，绝对值，中括号键盘上</div>
                 <div class = "normal" style = "padding-left: 37px; text-indent:-17px;"><i class = "fa fa-chevron-right" style = "top: 3px; font-size: 14px; color: #cccccc"></i>&nbsp花括号：<span class = "emphasis">\{</span>&nbsp：$\{$</div>
@@ -161,7 +174,7 @@
                 <div class = "normal" style = "padding-left: 37px; text-indent:-17px;"><i class = "fa fa-chevron-right" style = "top: 3px; font-size: 14px; color: #cccccc"></i>&nbsp<span class = "emphasis">\hat{xx}</span>：$\hat{x}$，<span class = "emphasis">\widehat{xy}</span>：$\widehat{xy}$，<span class = "emphasis">\bar{}</span>，$\bar{x}$，，<span class = "emphasis">\overline{xyz}</span>：$\overline{xyz}$，</div>
                 <div class = "normal" style = "padding-left: 37px; text-indent:-17px;"><i class = "fa fa-chevron-right" style = "top: 3px; font-size: 14px; color: #cccccc"></i>&nbsp<span class = "emphasis">\vec{x}</span>：$\vec{x}$，<span class = "emphasis">\overrightarrow{xy}</span>：$\overrightarrow{xy}$，<span class = "emphasis">\overleftrightarrow{xy}</span>：$\overleftrightarrow{xy}$，<span class = "emphasis">\dot{x}</span>：$\dot{x}$，<span class = "emphasis">\ddot{x}</span>：$\ddot{x}$</div>
                 <div class = "normal" style = "padding-left: 37px; text-indent:-17px;"><i class = "fa fa-chevron-right" style = "top: 3px; font-size: 14px; color: #cccccc"></i>&nbsp<span class = "emphasis">\flat&nbsp\sharp</span>：$\flat&nbsp\quad&nbsp\sharp$</div>
-                <div class = "h2" id = "7">格式</div>
+                <div class = "h2" id = "7">格式</div><div id = "hUnderline"></div>
                 <div class = "h3" id = "8">常用表达格式</div>
                 <div class = "normal" style = "padding-left: 37px; text-indent:-17px;"><i class = "fa fa-chevron-right" style = "top: 3px; font-size: 14px; color: #cccccc"></i>&nbsp<span class = "emphasis">\text{…}</span>&nbsp文字说明：$\{x&nbsp\in&nbsps&nbsp|&nbsp\text{x&nbspis&nbspextra&nbsplarge}\}$</div>
                 <div class = "h3" id = "9">矩阵</div>
@@ -296,7 +309,7 @@ $$
 =f(n)
 $$
                 <br>
-                <div class = "h2" id = "11">体</div>
+                <div class = "h2" id = "11">体</div><div id = "hUnderline"></div>
                 <div class = "normal" style = "padding-left: 37px; text-indent:-17px;"><i class = "fa fa-chevron-right" style = "top: 3px; font-size: 14px; color: #cccccc"></i>&nbsp空心：<span class = "emphasis">\mathbb</span>&nbsp$\mathbb{ABCDEFGHIJKLMNOPQRSTUVWXYZas}$</div>
                 <div class = "normal" style = "padding-left: 37px; text-indent:-17px;"><i class = "fa fa-chevron-right" style = "top: 3px; font-size: 14px; color: #cccccc"></i>&nbsp特技加粗：<span class = "emphasis">\mathbf</span>&nbsp$\mathbf{ABCDEFGHIJKLMNOPQRSTUVWXYZ}$</div>
                 <div class = "normal" style = "padding-left: 37px; text-indent:-17px;"><i class = "fa fa-chevron-right" style = "top: 3px; font-size: 14px; color: #cccccc"></i>&nbsp老式打字机：<span class = "emphasis">\mathtt</span>&nbsp$\mathtt{ABCDEFGHIJKLMNOPQRSTUVWXYZ}$</div>
@@ -315,7 +328,7 @@ $$
                     </div>
                     <hr>-->
                 </div>
-                <div id = "disqus_thread" style = "width: 55%; margin: auto; margin-top: 100px;"></div>  
+                <div id = "disqus_thread"></div>  
             </div>
             <div class = "myAffix">
                 <div class = "feet">
@@ -329,6 +342,17 @@ $$
         </div>>
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+        <script type = "text/html" id = "hit-template">
+            <div class = "hit">
+                <div class = "hit-content">
+                    <div class = "hit-title">{{title}}</div>
+                    <div class = "hit-tag">{{{_highlightResult.tag.value}}} &nbsp|&nbsp&nbsp {{{_highlightResult.time.value}}}</div>
+                    <div class = "hit-brief">{{{_highlightResult.brief.value}}}</div>
+                </div>
+            </div>
+        </script>        
+        
         <script>
 
             /**
@@ -350,7 +374,7 @@ $$
         <script src = "../js/blog.js"></script>
 
         <script src = "https://cdn.jsdelivr.net/npm/instantsearch.js@2.3/dist/instantsearch.min.js"></script>
-        <script src = "js/app.js"></script>
+        <script src = "../js/app.js"></script>
                 
         <script src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
         <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.0.js"></script>

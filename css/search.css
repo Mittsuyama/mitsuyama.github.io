@@ -1,19 +1,115 @@
-#searchBox {
-  position: fixed;
-  width: 70%;
-  top: 200px;
-  left: 50%;
-  transform: translate(-50%, 0);
-  background-color: white;
+#searchImg {
+    display: none;
+    position: fixed;
+    top: 0px;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 3000px;
+}
+
+#searchButton:hover {
+    cursor: pointer;
+}
+
+header {
+    position: absolute;
+    width: 100%;
+}
+
+.searchBox {
+    position: absolute;
+    top: 150px;
+    width: 30%;
+    transform: translate(-50%, 0);
+    left: 50%;
+}
+
+#inputBox {
+    position: absolute;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 0px;
+    height: 60px;
+}
+
+#my-search-input {
+    position: absolute;
+    padding: 0px 40px 0px 20px;
+    font-size: 20px;
+    padding-right: 100px;
+    width: 100%;
+    height: 60px;
+    outline: none;
+    border: none;
+    color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(255, 255, 255, 0);
+    transition-duration: 0.2s;
+}
+
+#my-search-input:focus {
+    box-shadow: 2px 2px 20px 3px rgba(255, 255, 255, 0.4);
+}
+
+#searchIcon {
+    position: absolute;
+    right: 20px;
+    top: 14px;
+    font-size: 30px;
+    color: rgba(100, 100, 100, 0.15);
 }
 
 em {
-  background-color: yellow;
+    background-color: rgba(0, 170, 255, 0.2);
+    font-style: normal;
+    padding: 0px 4px 0px 4px;
 }
 
-#search-input {
-  caret-color: auto; /* 預設 */
-  caret-color: transparent; /* 透明 */
-  caret-color: black;
-  outline: rgba(30, 150, 255, 0.7); /* 外框效果 */
+div.ais-hits__empty {
+    padding: 10px;
+}
+
+main {
+    position: absolute;
+    top: 100px;
+    width: 100%;
+}
+
+#hits {
+    background-color: rgba(255, 255, 255, 1);
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
+}
+
+div.hit-content {
+    padding: 10px;
+}
+
+div.hit-title {
+    font-weight: bold;
+    font-size: 16px;
+    src: url('../fonts/Deng.ttf');
+    font-family: "等线";
+}
+
+div.hit-tag {
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 12px;
+}
+
+div.hit-brief {
+    color: rgba(0, 0, 0, 0.3);
+    font-size: 14px;
+}
+
+svg {
+    display: none;
+}
+
+.ais-search-box--reset {
+    display: none;
+}
+
+#sbx-icon-search-13 {
+    width: 10%;
+    fill: rgba(255, 255, 255, 0.8);
 }

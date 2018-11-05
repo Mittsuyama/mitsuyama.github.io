@@ -14,10 +14,7 @@
         <link rel = "icon" href = "../img/favicon.ico" mce_href = "../img/favicon.ico" type = "image/x-icon">
         <link rel = "shortcut icon" href = "../img/icon/favicon.ico" mce_href = "../img/favicon.ico" type = "image/x-icon">
         
-        <link rel="stylesheet" href = "https://cdn.jsdelivr.net/npm/instantsearch.js@2.3/dist/instantsearch.min.css">
-        <!-- Always use `2.x` versions in production rather than `2` to mitigate any side effects on your website,
-        Find the latest version on InstantSearch.js website: https://community.algolia.com/instantsearch.js/v2/guides/usage.html -->
-        <link rel = "stylesheet" type = "text/css" href = "css/search.css">
+        <link rel = "stylesheet" type = "text/css" href = "../css/search.css">
         
         <link rel = "stylesheet" href = "../highlight/styles/rainbow.css">
         <link rel = "stylesheet" href = "../font-awesome/css/font-awesome.css">
@@ -36,25 +33,25 @@
                     <div class = "nav_text_home">
                         MITSUYAMA
                     </div>
-                    </a>            
+                    </a>        
                 </div>
                 <div class = "navigation_content2">
-                    <a href = "about.html">
-                    <div class = "nav_text">
-                        ABOUT
+                    <div class = "nav_text" id = "searchButton">
+                        <i class = "fa fa-search"></i>
                     </div>
+                    <a href = "blog/about.html">
+                        <div class = "nav_text">
+                            ABOUT
+                        </div>
                     </a>
                     <div class = "nav_text">
-                        BLOG
+                        BLOG    
                     </div>
                     <a href = "https://github.com/Mittsuyama">
-                    <div class = "nav_text">
-                        GITHUB
-                    </div>
+                        <div class = "nav_text">
+                            GITHUB
+                        </div>
                     </a>
-                    <div class = "nav_text">
-                        <i class="fa fa-search" aria-hidden = "true"></i>
-                    </div>
                 </div>
             </div>
             
@@ -89,6 +86,22 @@
             </div>
         </div>
         
+        <div id = "searchImg">
+            <div class = "searchBox">
+                <header>
+                    <div id = "inputBox">
+                        <input id = "my-search-input" placeholder = "SEARCH">
+                        <i class = "fa fa-search" aria-hidden = "true" id = "searchIcon"></i>
+                        <!-- We use a specific placeholder in the input to guides users in their search. -->
+                    </div>
+                </header>
+                <main>
+                    <div id = "hits"></div>
+                    <div id = "pagination"></div>
+                </main>
+            </div>
+        </div>
+        
         <div class = "blogMainBlock">
             <div class = "articleContext">
                     <div class = "funButtonBox">
@@ -109,7 +122,7 @@
                                     <br>
                 <a href = "4.html" class = "conncetion"><i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp&nbsp&nbsp上一篇：离散数学 1 - 映射</a>
                 <a href = "21.html" class = "conncetion"><i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp&nbsp&nbsp下一篇：离散数学 3 - 近世代数</a>
-                <div class = "h2" id = "1">置换</div>
+                <div class = "h2" id = "1">置换</div><div id = "hUnderline"></div>
                 <div class = "normal">有限集合到其自身的一一对应（双射）就称为该集合的一个置换，$n$&nbsp&nbsp个元素的集合上的置换，称为&nbsp$n$&nbsp阶置换。$\sigma(i)&nbsp=&nbspk_i$&nbsp或者：</div>
 $$
 \sigma = 
@@ -132,7 +145,7 @@ $$
 F = \{X | \chi(X) = 1, x \in X\}
 $$
                 <div class = "normal">则&nbsp$\chi_F&nbsp=&nbsp\chi$，于是，$\Phi$&nbsp是从&nbsp$2^X$&nbsp到&nbsp$Ch(X)$&nbsp间的一个一一对应。</div>
-                <div class = "h2" id = "3">关系</div>
+                <div class = "h2" id = "3">关系</div><div id = "hUnderline"></div>
                 <div class = "h4" id = "4">关系的定义</div>
                 <div class = "normal">设&nbsp$A,&nbspB$&nbsp是两个集合，一个从&nbsp$A&nbsp\times&nbspB$&nbsp到集合&nbsp{是，否}，的映射&nbsp$R$&nbsp称为一个从&nbsp$A$&nbsp到&nbsp$B$&nbsp的一个二元关系。如果&nbsp$A&nbsp\times&nbspB$&nbsp中的元&nbsp$(a,&nbspb)$&nbsp在&nbsp$R$&nbsp下的象为「是」，则称&nbsp$a$&nbsp与&nbsp$b$&nbsp复合关系&nbsp$R$，记成&nbsp$aRb$。如果&nbsp$(a,&nbspb)$&nbsp在&nbsp$R$&nbsp下的象为「否」，则称&nbsp$a$&nbsp与&nbsp$b$&nbsp不符合关系&nbsp$R$，记为&nbsp$a&nbsp\not&nbspR&nbspb$。如果&nbsp$A&nbsp=&nbspB$&nbsp，则称&nbsp$R$&nbsp为&nbsp$A$&nbsp上的二元关系。</div>
                 <div class = "h5">例&nbsp&nbsp1：</div>
@@ -416,7 +429,7 @@ $$
                     </div>
                     <hr>-->
                 </div>
-                <div id = "disqus_thread" style = "width: 55%; margin: auto; margin-top: 100px;"></div>  
+                <div id = "disqus_thread"></div>  
             </div>
             <div class = "myAffix">
                 <div class = "feet">
@@ -430,6 +443,17 @@ $$
         </div>>
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+        <script type = "text/html" id = "hit-template">
+            <div class = "hit">
+                <div class = "hit-content">
+                    <div class = "hit-title">{{title}}</div>
+                    <div class = "hit-tag">{{{_highlightResult.tag.value}}} &nbsp|&nbsp&nbsp {{{_highlightResult.time.value}}}</div>
+                    <div class = "hit-brief">{{{_highlightResult.brief.value}}}</div>
+                </div>
+            </div>
+        </script>        
+        
         <script>
 
             /**
@@ -451,7 +475,7 @@ $$
         <script src = "../js/blog.js"></script>
 
         <script src = "https://cdn.jsdelivr.net/npm/instantsearch.js@2.3/dist/instantsearch.min.js"></script>
-        <script src = "js/app.js"></script>
+        <script src = "../js/app.js"></script>
                 
         <script src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
         <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.0.js"></script>

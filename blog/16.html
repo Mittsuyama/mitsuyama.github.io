@@ -14,10 +14,7 @@
         <link rel = "icon" href = "../img/favicon.ico" mce_href = "../img/favicon.ico" type = "image/x-icon">
         <link rel = "shortcut icon" href = "../img/icon/favicon.ico" mce_href = "../img/favicon.ico" type = "image/x-icon">
         
-        <link rel="stylesheet" href = "https://cdn.jsdelivr.net/npm/instantsearch.js@2.3/dist/instantsearch.min.css">
-        <!-- Always use `2.x` versions in production rather than `2` to mitigate any side effects on your website,
-        Find the latest version on InstantSearch.js website: https://community.algolia.com/instantsearch.js/v2/guides/usage.html -->
-        <link rel = "stylesheet" type = "text/css" href = "css/search.css">
+        <link rel = "stylesheet" type = "text/css" href = "../css/search.css">
         
         <link rel = "stylesheet" href = "../highlight/styles/rainbow.css">
         <link rel = "stylesheet" href = "../font-awesome/css/font-awesome.css">
@@ -36,25 +33,25 @@
                     <div class = "nav_text_home">
                         MITSUYAMA
                     </div>
-                    </a>            
+                    </a>        
                 </div>
                 <div class = "navigation_content2">
-                    <a href = "about.html">
-                    <div class = "nav_text">
-                        ABOUT
+                    <div class = "nav_text" id = "searchButton">
+                        <i class = "fa fa-search"></i>
                     </div>
+                    <a href = "blog/about.html">
+                        <div class = "nav_text">
+                            ABOUT
+                        </div>
                     </a>
                     <div class = "nav_text">
-                        BLOG
+                        BLOG    
                     </div>
                     <a href = "https://github.com/Mittsuyama">
-                    <div class = "nav_text">
-                        GITHUB
-                    </div>
+                        <div class = "nav_text">
+                            GITHUB
+                        </div>
                     </a>
-                    <div class = "nav_text">
-                        <i class="fa fa-search" aria-hidden = "true"></i>
-                    </div>
                 </div>
             </div>
             
@@ -97,6 +94,22 @@
             </div>
         </div>
         
+        <div id = "searchImg">
+            <div class = "searchBox">
+                <header>
+                    <div id = "inputBox">
+                        <input id = "my-search-input" placeholder = "SEARCH">
+                        <i class = "fa fa-search" aria-hidden = "true" id = "searchIcon"></i>
+                        <!-- We use a specific placeholder in the input to guides users in their search. -->
+                    </div>
+                </header>
+                <main>
+                    <div id = "hits"></div>
+                    <div id = "pagination"></div>
+                </main>
+            </div>
+        </div>
+        
         <div class = "blogMainBlock">
             <div class = "articleContext">
                     <div class = "funButtonBox">
@@ -118,7 +131,7 @@
                 <div class = "normal">文章内使用的免费的作曲的制谱软件</div>
                 <a href = "https://musescore.com/" class = "conncetion"><i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp&nbsp&nbspMuseScore</a>
                 <div class = "normal">摘自<span class = "emphasis">李重光《音乐理论基础》</span>，摘取了其中常用的部分，多声部和记谱法有部分省略。</div>
-                <div class = "h2" id = "1">一&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp音及音高</div>
+                <div class = "h2" id = "1">一&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp音及音高</div><div id = "hUnderline"></div>
                 <div class = "h4" id = "2">音</div>
                 <div class = "normal">音高由频率决定，强度由振幅决定，长短由发声时间决定。</div>
                 <div class = "normal">通常我们听到的都不会是一个音在响，这种声音叫<span class = "emphasis">复音</span>，复音的产生是由于发音体（以弦为例）不仅仅是全段在振动，它的各部分（二分之一、三分之一等）同时在振动。全段振动称为<span class = "emphasis">基音</span>，部分振动称为<span class = "emphasis">泛音</span>。</div>
@@ -139,7 +152,7 @@
                 <div class = "normal" style = "padding-left: 37px; text-indent:-17px;"><i class = "fa fa-chevron-right" style = "top: 3px; font-size: 14px; color: #cccccc"></i>&nbsp<span class = "emphasis">个别的人声或乐器的音域</span>是指在整个音域中所能达到的那一部分，如钢琴的音域是&nbsp$A_2&nbsp-&nbspc^5$。</div>
                 <br>
                 <div class = "normal">小字组、小字一组和小字二组属于中音区，低于这个的叫做低音区，高于叫做低音区。</div>
-                <div class = "h2" id = "6">二&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp音律</div>
+                <div class = "h2" id = "6">二&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp音律</div><div id = "hUnderline"></div>
                 <div class = "normal">乐音体系中各音的绝对准确高度及其相互关系叫做音律，比如&nbsp$a_1&nbsp=&nbsp440&nbspHz$。</div>
                 <div class = "h4" id = "7">十二平均律</div>
                 <div class = "normal">降八度分成十二个均等的部分&nbsp——&nbsp<span class = "emphasis">半音</span>&nbsp——&nbsp的音律叫做十二平均律；世界上最早根据数学来制定十二平均律的是我国明朝大音乐家朱载堉（1584&nbsp年）；<span class = "emphasis">除了&nbspE&nbsp到&nbspF、B&nbsp到&nbspC&nbsp是半音外</span>，其余相邻两音间的距离都是全音。</div>
@@ -165,7 +178,7 @@ $$
 \sharp C - \flat D - \times B, \quad \sharp A - \flat B - \flat \flat C
 $$
                 <br>
-                <div class = "h2" id = "12">三&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp记谱法</div>
+                <div class = "h2" id = "12">三&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp记谱法</div><div id = "hUnderline"></div>
                 <div class = "h4" id = "13">音符</div>
                 <div class = "normal" style = "padding-left: 31px; text-indent: -30px;"><span class = "strong">1.&nbsp&nbsp</span>全音符，二分音符，四分音符，八分音符，十六分音符，三十二分音符。</div>
                 <div class = "normal" style = "padding-left: 31px; text-indent: -30px;"><span class = "strong">2.&nbsp&nbsp</span>全休止符，二分休止符，四分休止符，八分休止符，十六分休止符</div>
@@ -275,15 +288,15 @@ $$
                 <div class = "normal">用连线来标记，表示连线内的不同音高的音要（演奏）唱得连贯，连音奏法的连线大都记载五线谱的上面。</div>
                 <img src = "../img/music-theory/1540436514326.png" class = "blogImg"><br>
                 <div class = "normal">断音奏法、持续音奏法、滑音奏法、琶音奏法略。</div>
-                <div class = "h2" id = "20">四&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp节奏&nbsp&nbsp节拍</div>
+                <div class = "h2" id = "20">四&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp节奏&nbsp&nbsp节拍</div><div id = "hUnderline"></div>
                 <div class = "h4" id = "21">节奏节奏型</div>
                 <div class = "normal">组织起来的音的<span class = "emphasis">长短关系</span>，叫做节奏。</div>
                 <div class = "normal">在整个乐曲或乐曲的部分中，具有典型意义的节奏叫做<span class = "emphasis">节奏型</span>。节奏型在音乐表现中具有重大的意义，但是节奏型本身可以说明乐曲的某些类别，如进行曲、圆舞曲、玛祖卡舞曲等。</div>
                 <div class = "h4" id = "22">节奏划分的特殊形式</div>
                 <div class = "normal">把音值自由均分，其数量与基本划分不一致，叫做节奏划分的特殊形式，也就是通常说的连音符。</div>
-                <div class = "h2" id = "23">五&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp音乐的速度与力度</div>
+                <div class = "h2" id = "23">五&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp音乐的速度与力度</div><div id = "hUnderline"></div>
                 <div class = "normal">情景期待...</div>
-                <div class = "h2" id = "24">六&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp音程</div>
+                <div class = "h2" id = "24">六&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp音程</div><div id = "hUnderline"></div>
                 <div class = "h4" id = "25">音程</div>
                 <div class = "quote"><i class = "fa fa-quote-left fa-1x fa-pull-left" aria-hidden = "true" id = "quoteIcon"></i>两个音在音高上的相互关系叫做音程</div>
                 <div class = "normal">先后弹奏的两个音形成<span class = "emphasis">旋律音程。</span></div>
@@ -354,7 +367,7 @@ $$
                 <div class = "normal">调式总论中会提到，由于和和声的处理不同，稳定音级也可能是各异的。</div>
                 <div class = "h4" id = "34">调式中的音程</div>
                 <div class = "normal">待续...</div>
-                <div class = "h2" id = "35">七&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp和弦</div>
+                <div class = "h2" id = "35">七&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp和弦</div><div id = "hUnderline"></div>
                 <div class = "h4" id = "36">和弦</div>
                 <div class = "normal">在多声部音乐中，可以按照三度关系排列起来的<span class = "emphasis">三个以上音的结合</span>，叫做和弦。</div>
                 <div class = "normal">按三度关系构成的和弦，由于各音间保持着一定的紧张密度，音响谐调丰满，并合平泛音的自然规律。</div>
@@ -419,21 +432,21 @@ $$
                 <div class = "normal">和弦在实际应用中，往往在不同的八度中重复其全部音或其中的某几个音，和弦中的音<span class = "emphasis">全部出现</span>时叫做<span class = "emphasis">完全和弦</span>，和弦中的音没有<span class = "emphasis">全部出现</span>的叫做<span class = "emphasis">不完全和弦</span>。</div>
                 <br>
                 <div class = "normal">和弦可以用来作为旋律的伴奏，或将许多声部组织在一起，并也可以出现旋律本身之中，即旋律按照和弦音而进行。</div>
-                <div class = "h2" id = "44">八&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp调试总论</div>
+                <div class = "h2" id = "44">八&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp调试总论</div><div id = "hUnderline"></div>
                 <div class = "normal">情景期待...</div>
-                <div class = "h2" id = "45">九&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp以五声音阶为基础的各种调式</div>
+                <div class = "h2" id = "45">九&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp以五声音阶为基础的各种调式</div><div id = "hUnderline"></div>
                 <div class = "normal">情景期待...</div>
-                <div class = "h2" id = "46">十&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp大小调式&nbsp&nbsp作品中调的明确法</div>
+                <div class = "h2" id = "46">十&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp大小调式&nbsp&nbsp作品中调的明确法</div><div id = "hUnderline"></div>
                 <div class = "normal">情景期待...</div>
-                <div class = "h2" id = "47">十一&nbsp&nbsp转调及交替调式</div>
+                <div class = "h2" id = "47">十一&nbsp&nbsp转调及交替调式</div><div id = "hUnderline"></div>
                 <div class = "normal">情景期待...</div>
-                <div class = "h2" id = "48">十二&nbsp&nbsp调试变音与半音阶</div>
+                <div class = "h2" id = "48">十二&nbsp&nbsp调试变音与半音阶</div><div id = "hUnderline"></div>
                 <div class = "normal">情景期待...</div>
-                <div class = "h2" id = "49">十三&nbsp&nbsp移调</div>
+                <div class = "h2" id = "49">十三&nbsp&nbsp移调</div><div id = "hUnderline"></div>
                 <div class = "normal">情景期待...</div>
-                <div class = "h2" id = "50">十四&nbsp&nbsp装饰音</div>
+                <div class = "h2" id = "50">十四&nbsp&nbsp装饰音</div><div id = "hUnderline"></div>
                 <div class = "normal">情景期待...</div>
-                <div class = "h2" id = "51">十五&nbsp&nbsp关于旋律的知识</div>
+                <div class = "h2" id = "51">十五&nbsp&nbsp关于旋律的知识</div><div id = "hUnderline"></div>
                 <div class = "normal">情景期待...</div>
 
                     <!--<div class = "blogTrans">
@@ -444,7 +457,7 @@ $$
                     </div>
                     <hr>-->
                 </div>
-                <div id = "disqus_thread" style = "width: 55%; margin: auto; margin-top: 100px;"></div>  
+                <div id = "disqus_thread"></div>  
             </div>
             <div class = "myAffix">
                 <div class = "feet">
@@ -458,6 +471,17 @@ $$
         </div>>
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+        <script type = "text/html" id = "hit-template">
+            <div class = "hit">
+                <div class = "hit-content">
+                    <div class = "hit-title">{{title}}</div>
+                    <div class = "hit-tag">{{{_highlightResult.tag.value}}} &nbsp|&nbsp&nbsp {{{_highlightResult.time.value}}}</div>
+                    <div class = "hit-brief">{{{_highlightResult.brief.value}}}</div>
+                </div>
+            </div>
+        </script>        
+        
         <script>
 
             /**
@@ -479,7 +503,7 @@ $$
         <script src = "../js/blog.js"></script>
 
         <script src = "https://cdn.jsdelivr.net/npm/instantsearch.js@2.3/dist/instantsearch.min.js"></script>
-        <script src = "js/app.js"></script>
+        <script src = "../js/app.js"></script>
                 
         <script src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
         <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.0.js"></script>

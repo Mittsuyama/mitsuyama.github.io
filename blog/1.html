@@ -14,10 +14,7 @@
         <link rel = "icon" href = "../img/favicon.ico" mce_href = "../img/favicon.ico" type = "image/x-icon">
         <link rel = "shortcut icon" href = "../img/icon/favicon.ico" mce_href = "../img/favicon.ico" type = "image/x-icon">
         
-        <link rel="stylesheet" href = "https://cdn.jsdelivr.net/npm/instantsearch.js@2.3/dist/instantsearch.min.css">
-        <!-- Always use `2.x` versions in production rather than `2` to mitigate any side effects on your website,
-        Find the latest version on InstantSearch.js website: https://community.algolia.com/instantsearch.js/v2/guides/usage.html -->
-        <link rel = "stylesheet" type = "text/css" href = "css/search.css">
+        <link rel = "stylesheet" type = "text/css" href = "../css/search.css">
         
         <link rel = "stylesheet" href = "../highlight/styles/rainbow.css">
         <link rel = "stylesheet" href = "../font-awesome/css/font-awesome.css">
@@ -36,25 +33,25 @@
                     <div class = "nav_text_home">
                         MITSUYAMA
                     </div>
-                    </a>            
+                    </a>        
                 </div>
                 <div class = "navigation_content2">
-                    <a href = "about.html">
-                    <div class = "nav_text">
-                        ABOUT
+                    <div class = "nav_text" id = "searchButton">
+                        <i class = "fa fa-search"></i>
                     </div>
+                    <a href = "blog/about.html">
+                        <div class = "nav_text">
+                            ABOUT
+                        </div>
                     </a>
                     <div class = "nav_text">
-                        BLOG
+                        BLOG    
                     </div>
                     <a href = "https://github.com/Mittsuyama">
-                    <div class = "nav_text">
-                        GITHUB
-                    </div>
+                        <div class = "nav_text">
+                            GITHUB
+                        </div>
                     </a>
-                    <div class = "nav_text">
-                        <i class="fa fa-search" aria-hidden = "true"></i>
-                    </div>
                 </div>
             </div>
             
@@ -88,6 +85,22 @@
             </div>
         </div>
         
+        <div id = "searchImg">
+            <div class = "searchBox">
+                <header>
+                    <div id = "inputBox">
+                        <input id = "my-search-input" placeholder = "SEARCH">
+                        <i class = "fa fa-search" aria-hidden = "true" id = "searchIcon"></i>
+                        <!-- We use a specific placeholder in the input to guides users in their search. -->
+                    </div>
+                </header>
+                <main>
+                    <div id = "hits"></div>
+                    <div id = "pagination"></div>
+                </main>
+            </div>
+        </div>
+        
         <div class = "blogMainBlock">
             <div class = "articleContext">
                     <div class = "funButtonBox">
@@ -108,17 +121,17 @@
                                     <div class = "normal">日本&nbsp-&nbsp芥川龙之介&nbsp</div>
                 <div class = "normal">钱稻孙&nbsp译&nbsp</div>
                 <div class = "quote"><i class = "fa fa-quote-left fa-1x fa-pull-left" aria-hidden = "true" id = "quoteIcon"></i>软弱何在，谎言就何在</div>
-                <div class = "h2" id = "1">夫回答纠察使传讯时的诉述&nbsp&nbsp</div>
+                <div class = "h2" id = "1">夫回答纠察使传讯时的诉述&nbsp&nbsp</div><div id = "hUnderline"></div>
                 <div class = "normal">是的。看到那尸首的，确实就是小人。小的今儿早上照例去后山砍柴。就在后山一个小竹林里看到那口尸首。您问什么地段么？那，大概离着山科驿道有个一、二里路吧，是个竹林子里夹杂着细杉树的、人迹罕到的地方。&nbsp</div>
                 <br>
                 <div class = "normal">尸首么，身穿浅蓝褂子，头戴京式软幞头，仰面躺着的，刀伤虽只一处，毕竟是穿透胸口的一刀，所以尸首近旁的枯竹叶儿都染得黑红黑红的。不，血是不流了，伤口也已经干了。记得伤口里还死叮着一只马蝇，连我的脚步声都没听见似的。&nbsp</div>
                 <br>
                 <div class = "normal">问我看没看见长刀什么的？没有，什么也没有看见。只是死尸旁边的杉树根那儿，有一毂辘断绳儿。还有，——对啦对啦，绳子以外还有把梳子。尸首旁边就只有这两样东西。可是，草啊，地上的竹叶儿啊，满都踩得稀乱，可见，那死主被杀以前，准是狠斗过一阵子的。啊？您问那里有没有马么？那地方儿是，压根儿马什么的就进不去。因为和能够走马的道路还隔着一座树林子呢。&nbsp</div>
-                <div class = "h2" id = "2">脚僧回答纠察使传讯时的诉述&nbsp&nbsp</div>
+                <div class = "h2" id = "2">脚僧回答纠察使传讯时的诉述&nbsp&nbsp</div><div id = "hUnderline"></div>
                 <div class = "normal">那个死主，的确是昨天遇见过。昨天，——唉，大概晌午时分吧。地方是我从关山去山科的半道儿上。他同一个骑马的女人一道儿往关山这边来。女的垂着遮脸帔子，看不见是怎么个相貌。我看见的只是淡青莲色的衣裳，马是一匹桃花马，——记得是剪着沙弥鬣的。身高么？怕有个四尺四吧？——我毕竟是沙门中人，那些事儿也说不清楚。男的呢，——唉，不但带着长刀，还带有弓箭。尤其是黑漆的箭壶里插有二十多支大箭，眼下也还记得清清楚楚的。&nbsp</div>
                 <br>
                 <div class = "normal">做梦也想不到此人会得到这样的结果，真是人命如露亦如电啊。唉呀，唉呀！这凶手是作了多大的孽呀！&nbsp</div>
-                <div class = "h2" id = "3">快回答纠察使问话时的诉述&nbsp&nbsp</div>
+                <div class = "h2" id = "3">快回答纠察使问话时的诉述&nbsp&nbsp</div><div id = "hUnderline"></div>
                 <div class = "normal">问我拿获来的这个家伙么？他的确是名叫多襄丸的著名强盗。我拿获他的时候，他大概是刚从马上摔下来，在粟田口（京都城的西门。——译者&nbsp）的石桥上正呻吟。时刻吗？时刻是昨晚初更时分。上一回我没有能逮住他，那时候他身上穿的也是这件蓝褂子、挎着一柄砸花的大刀。此刻嘛，您也看得见，另外还带着弓箭呢。是么？死主携带的也是……，那么，这个杀人案一定是多襄丸干的。皮革卷把的长弓，黑漆的箭壶，鹰羽箭十七支，——这都是死主的东西了。是。马也如您说的，剪着沙弥鬣的桃花马。他叫这畜生给摔了下来，分明是因果报应了。那时候，马还在石桥前边一点拖着长缰绳，在路旁吃青草呢。&nbsp</div>
                 <div class = "normal">多襄丸这小子，在出没于京里的盗伙里，也是个最爱采花的家伙。去年秋天，鸟部寺的宾头卢大殿后面山上，一个像是来烧香的妇女和一个小丫头一块儿被杀的案子，都说是多襄丸干的。如果那汉子是他杀害的，那么，骑桃花马的女人是怎样了？下落如何？这些还都不知道呢。这事儿也许用不着我提，还是请上面追究追究。&nbsp</div>
                 <br>
@@ -129,7 +142,7 @@
                 <div class = "normal">女儿吗？女儿名叫真砂，当年十九岁。是个不劣于男子的刚强女人。除了武弘还没有嫁过别的男子。脸色稍黑，左眼角上有个黑痣，小小的瓜子儿脸。&nbsp</div>
                 <br>
                 <div class = "normal">武弘昨天跟小女一起去若狭，出了这样的事儿，真不知道这是什么因果啊。女婿既然死了也就认了，不过我女儿不知怎么了，这实在让我放心不下。就算我老婆子一辈子的愿望吧，哪怕踏破铁鞋，也求大人给追查个下落。可恨不过的是强盗多襄丸这家伙。岂但女婿呢，连我女儿都……（说到这里已经泣不成声，说不出话来了）&nbsp</div>
-                <div class = "h2" id = "4">多襄丸的供词&nbsp&nbsp</div>
+                <div class = "h2" id = "4">多襄丸的供词&nbsp&nbsp</div><div id = "hUnderline"></div>
                 <div class = "normal">杀死那汉子的确实是我。可是我并没有杀那女的。你问，那么她哪儿去了么？这，我也不知道。啊，请稍等等。不管怎么拷问我，我不知道的事决不瞎说。而且，即使不拷问，我也不想卑鄙地隐瞒。</div>
                 <br>
                 <div class = "normal">我是昨天刚过晌午时分遇见那对夫妇的。那时候，刚巧一阵风刮起了那女人的遮脸帔子，所以一晃看见了女人的相貌。只是一晃——刚看得见的一刹那，就看不见了，也许就是因为只看得这一眼，那女子的容貌，在我眼里简直像一尊女菩萨。我当时就下了决心，哪怕杀了那男的，也一定要把那女的夺到手。&nbsp</div>
@@ -154,7 +167,7 @@
                 <div class = "normal">男的一倒下，我就提着血染的大刀，回头去看那女的。嘿——结果呢，哪儿都不见她。女的逃往哪儿了，我在杉树林里到处找。可是满地的枯竹叶上，丝毫也找不到逃往哪里的痕迹。侧耳细听，只听见男的喉咙里发出临死的喘息而已。&nbsp</div>
                 <br>
                 <div class = "normal">也许是那女的一看我们交起手来，就穿出丛林逃去叫人来救命也未可知。——我这么一想，觉得我的性命要紧，就抢了他的大刀和弓箭，马上又回到原来的山路上去。山路上那女人的马还在安然地吃着草。那以后的事儿就不必再啰嗦了。不过那大刀，在没有进京以前，就已经脱手了。——我的供词就是这些。横竖我这一颗头颅总有一天要枭首示众的。就请处以极刑吧。（态度傲然）&nbsp</div>
-                <div class = "h2" id = "5">托身于清水寺的那女子的忏悔&nbsp&nbsp</div>
+                <div class = "h2" id = "5">托身于清水寺的那女子的忏悔&nbsp&nbsp</div><div id = "hUnderline"></div>
                 <div class = "normal">……那个穿蓝褂子的汉子蹂躏了我之后，就望着我那被捆的丈夫讥嘲似地笑了。可想而知，我丈夫该有多么悔恨。可是，不管怎么挣扎，捆着他的绳子却是更加抽得紧紧的，越发地深深勒进皮肉里。我不由得连滚带爬地跑到丈夫身边。不，我正要跑过去，就立刻叫那男的踢倒在那儿了。就在这个时候，我觉得丈夫眼里含着一种说不出来的亮光。简直没法说——我想起那副眼神来，现在都还禁不住浑身哆嗦呢。一句话也说不出来的丈夫，在一刹那里从他眼神里传出了他那一切的心情。可是那里闪着的既不是恨也不是悲——只是鄙视我的冷酷的眼光。我丈夫的这种眼色给我的打击，比挨那男人踢倒还让人痛心，我不自觉地嚷了一声什么，就立刻晕过去了。&nbsp</div>
                 <br>
                 <div class = "normal">随后醒过来一看的时候，那穿蓝褂子的男人已经不知去向。只剩我丈夫捆在杉树根上。我好容易从枯竹叶的地上爬起来，定睛看丈夫的脸。可是，丈夫的眼色跟刚才一样，一点儿也没改变。依旧是冷酷的鄙视里还带着憎恶的眼色。羞耻，悲伤，愤怒——那时我的心情不知怎么说才好。我晃晃悠悠地站起身来，走近丈夫身边。&nbsp</div>
@@ -165,7 +178,7 @@
                 <div class = "normal">丈夫听了之后，这才动了动嘴唇。当然，他嘴里塞满了枯竹叶，所以声音一点儿也听不见。可是，我看他嘴唇一动，马上就懂了他的意思。丈夫还是那样鄙视我，他是说“杀吧”。我如梦如幻地用短刀噗哧一声穿通了丈夫的浅蓝褂子下的胸口。&nbsp</div>
                 <br>
                 <div class = "normal">大概我那时候又晕过去了。等到我往四周一看的时候，发现被捆着的丈夫早就断气了。一缕斜阳从天上穿过竹杉交错的丛林，落在他那苍白的脸上。我咽下哭声解掉了尸首上的绳子。那以后——那以后我怎么了？这，我可再没有力气来说了。总而言之，我没有死的毅力啊。我也拿短刀刺过喉咙，也曾投过山脚下的池子，试过种种的死法，都没有死得成，既然这样，这些事儿也就没有什么可以自夸的了（凄凉的微笑）。像我这样没心没肺的人，也许是大慈大悲观世音菩萨都遗弃了的。可是，杀了丈夫的我，遭过强盗蹂躏的我，到底怎么才好呢？到底我该……我该……（突然激烈的饮泣）。&nbsp</div>
-                <div class = "h2" id = "6">鬼借巫婆之口的诉述&nbsp&nbsp</div>
+                <div class = "h2" id = "6">鬼借巫婆之口的诉述&nbsp&nbsp</div><div id = "hUnderline"></div>
                 <div class = "normal">……那强盗强奸了我妻子之后，就坐在那里百般地安慰起我妻子来了。不用说，我是无法张口的，身体也被捆在杉树根上。可是，这其间我曾几次向妻子递过眼色，我是想示意给她：可别相信他的话，他说的尽是谎话。可是妻子悄然跪坐在幼竹落叶上，两眼盯着磕膝盖儿。看起来分明是强盗的话听得很入耳。我嫉妒得痛苦不堪。可是，强盗一个劲儿地花言巧语说个不休。这个强盗居然大胆地说出这样的话来：哪怕一回，已经玷污了的身子，跟你那丈夫也未必处得好。与其跟着这样的丈夫，还不如作了我的浑家，你有没有这意思呢？我正是真心爱你，所以才干了这种非常莽撞的事儿。&nbsp</div>
                 <br>
                 <div class = "normal">强盗这么一说，我那妻子居然听得出了神，抬起头来。我从来没有看见过我妻子这时候那么美。可是，我那美貌的妻子当着眼前被捆起来的丈夫是怎么回答强盗的？我虽然傍徨于中阴（佛家言，生死之间的境界。——译者）之中，每想到她这番回话，未尝不憎恚填膺，她的确说过：“好，随便去哪里都行，请你带我去吧。”（长时间的沉默）&nbsp</div>
@@ -188,7 +201,7 @@
                     </div>
                     <hr>-->
                 </div>
-                <div id = "disqus_thread" style = "width: 55%; margin: auto; margin-top: 100px;"></div>  
+                <div id = "disqus_thread"></div>  
             </div>
             <div class = "myAffix">
                 <div class = "feet">
@@ -202,6 +215,17 @@
         </div>>
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+        <script type = "text/html" id = "hit-template">
+            <div class = "hit">
+                <div class = "hit-content">
+                    <div class = "hit-title">{{title}}</div>
+                    <div class = "hit-tag">{{{_highlightResult.tag.value}}} &nbsp|&nbsp&nbsp {{{_highlightResult.time.value}}}</div>
+                    <div class = "hit-brief">{{{_highlightResult.brief.value}}}</div>
+                </div>
+            </div>
+        </script>        
+        
         <script>
 
             /**
@@ -223,7 +247,7 @@
         <script src = "../js/blog.js"></script>
 
         <script src = "https://cdn.jsdelivr.net/npm/instantsearch.js@2.3/dist/instantsearch.min.js"></script>
-        <script src = "js/app.js"></script>
+        <script src = "../js/app.js"></script>
                 
         <script src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
         <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.0.js"></script>

@@ -95,6 +95,13 @@ div.nav_text_home {
     color: rgba(255, 255, 255, 0.9);
 }
 
+div.nav_search {
+    position: relative;
+    float: left;
+    height: 55px;
+    width: 200px;
+}
+
 div.nav_text {
     border-radius: 0px;
     float: left;
@@ -117,7 +124,7 @@ div.nav_text:hover {
 
 div.nav_text_home:hover {
     color: white;
-    background-color: rgba(100, 210, 250, 0.7);
+    background-color: rgba(100, 210, 250, 0.8);
 }
 
 div.home_background {
