@@ -60,13 +60,13 @@ $(document).ready(function() {
     });
 
     $('#funShare').click(function() {
-        if(shareBoxShow == 1) {
+        if(shareBoxShow == 0) {
             $('#shareBigBox').fadeIn();
-            shareBoxShow = 0;
+            shareBoxShow = 1;
         }
         else {
             $('#shareBigBox').fadeOut();
-            shareBoxShow = 1;
+            shareBoxShow = 0;
         }
     });
 
