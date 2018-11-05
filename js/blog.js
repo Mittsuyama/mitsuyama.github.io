@@ -1,5 +1,15 @@
 ﻿//var screenWidthRate = parseFloat($(document.body).width() / 1903.0);
-var screenWidthRate = 1;
+var screenWidthRate;
+if($(document.body).width() < 2000 && $(document.body).width() > 1900) {
+    screenWidthRate = 1;
+}
+else if($(document.body).width() < 1900) {
+    screenWidthRate = parseFloat($(document.body).width() / 1920.0) + (1920 - $(document.body).width()) / 1920 * 0.5;
+}
+else {
+    screenWidthRate = parseFloat($(document.body).width() / 1920.0);
+}
+
 var imgWidth = 0;
 var tempTime = 300;
 var minScrollTop = 500;
@@ -7,6 +17,7 @@ var contentIsFade = true;
 var lastScroll = $(window).scrollTop();
 var homeShow = true;
 var titleList = new Array();
+var shareBoxShow = 0;
 
 function cmp(a, b) {
     return a > b;
@@ -28,6 +39,9 @@ $(document).ready(function() {
     }
     */
 
+    $('#shareBigBox').hide();
+    shareBoxShow = 0;
+    $('body').css("zoom", screenWidthRate);
     if($(window).scrollTop() > minScrollTop) {
         $('.funButtonBox').show();
         $('.contentListOut').show();
@@ -36,13 +50,28 @@ $(document).ready(function() {
     $('#funUp').click(function() {
         $('html, body').animate ({
             scrollTop: 0
-        }, 1000, "swing");
+        }, 1000);
     });
 
     $('#funCom').click(function() {
         $('html, body').animate ({
             scrollTop: $("body").height()
-        }, 1000, "swing");
+        }, 1000);
+    });
+
+    $('#funShare').click(function() {
+        if(shareBoxShow == 1) {
+            $('#shareBigBox').fadeIn();
+            shareBoxShow = 0;
+        }
+        else {
+            $('#shareBigBox').fadeOut();
+            shareBoxShow = 1;
+        }
+    });
+
+    $('#shareClose').click(function() {
+        $('#shareBigBox').fadeOut();
     });
 
     $(window).load(function(){
@@ -126,3 +155,18 @@ $(document).ready(function() {
         });
     });
 });
+
+//一键分享
+var $config = {
+    url                 : window.location.href,// 网址，默认使用 window.location.href
+    source              : '', // 来源（QQ空间会用到）, 默认读取head标签：<meta name="site" content="http://overtrue" />
+    title               : '', // 标题，默认读取 document.title 或者 <meta name="title" content="share.js" />
+    description         : '', // 描述, 默认读取head标签：<meta name="description" content="PHP弱类型的实现原理分析" />
+    image               : '', // 图片, 默认取网页中第一个img标签
+    sites               : ['qzone', 'qq', 'weibo','wechat'], // 启用的站点
+    disabled            : ['google', 'facebook', 'twitter'], // 禁用的站点
+    wechatQrcodeTitle   : '微信扫一扫：分享', // 微信二维码提示文字
+    wechatQrcodeHelper  : '<p>微信里点“发现”，扫一下</p><p>二维码便可将本文分享至朋友圈。</p>',
+    target : '_blank' //打开方式
+};
+$('.social-share').share($config);

@@ -193,18 +193,16 @@ div.sawNumBox {
     color: rgb(160, 160, 160);
 }
 
-img.eyeImg {
-    position: absolute;
-    width: 6%;
-    margin-top: 3px;
-    left: 6px;
+#timeLabel {
+    float: left;
+    padding-left: 8px;
+    padding-top: 3px;
 }
 
 p.sawNum {
     position: absolute;
     left: 29px;
     margin-bottom: 0px;
-    margin-top: -3px;
 }
 
 div.boxDown {

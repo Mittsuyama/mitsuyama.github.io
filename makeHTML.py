@@ -335,7 +335,7 @@ class makeHTML:
             buttonTemp = buttonTemp.replace('((blogHref))', str(i))
             buttonTemp = buttonTemp.replace('((imgHref))', str(i))
             buttonTemp = buttonTemp.replace('((Title))', self.blogInfo[2][:-1])
-            buttonTemp = buttonTemp.replace('((Time))', self.blogInfo[3][:-1])
+            buttonTemp = buttonTemp.replace('((Time))', self.blogInfo[3][:-1].replace('/', '-').replace(' ', ''))
             buttonTemp = buttonTemp.replace('((brief))', self.blogInfo[0][:-1])
             buttonTemp = buttonTemp.replace('((Tag))', self.blogInfo[1][:-1])
             content += buttonTemp
