@@ -72,6 +72,7 @@ $(document).ready(function() {
 
     $('#shareClose').click(function() {
         $('#shareBigBox').fadeOut();
+        shareBoxShow = 0;
     });
 
     $(window).load(function(){

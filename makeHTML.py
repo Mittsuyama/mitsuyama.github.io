@@ -162,7 +162,7 @@ class makeHTML:
             htmlContent = htmlContent.replace('$', ' ')
             htmlContent = htmlContent.replace('\n', ' ')
             self.index.add_object(
-                {"url": str(order), "title": self.blogInfo[0], "time": self.blogInfo[3].replace(' ', '').replace('/', '-'), "tag": self.blogInfo[1], "brief": self.blogInfo[0][:-1], "content": htmlContent[:1000]}
+                {"url": str(order), "title": self.blogInfo[0], "time": self.blogInfo[3].replace(' ', '').replace('/', '-'), "tag": self.blogInfo[1], "brief": self.blogInfo[2][:-1], "content": htmlContent[:1000]}
             )
 
         #Make blog page
