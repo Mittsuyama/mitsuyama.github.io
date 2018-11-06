@@ -126,17 +126,17 @@ li.ais-pagination--item {
     text-align: center;
     float: left;
     font-weight: bold;
-    font-size: 23px;
+    font-size: 20px;
 }
 
 span.ais-pagination--link {
     color: rgba(0, 0, 0, 0.1);
     display: block;
-    margin-top: -5px;
+    margin-top: -2px;
 }
 
 a.ais-pagination--link {
-    margin-top: -5px;
+    margin-top: -2px;
     width: 27px;
     height: 28px;
     border-radius: 4px;

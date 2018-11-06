@@ -14,6 +14,16 @@ var isSearchBox = 0;
 
 function mainFunction() {
     search.start();
+    $('#funSearch').click(function() {
+        if(isSearchBox == 0) {
+            $('#searchImg').fadeIn();
+            isSearchBox = 1;
+        }
+        else {
+            $('#searchImg').fadeOut();
+            isSearchBox = 0;
+        }        
+    });
     $('#searchButton').click(function() {
         if(isSearchBox == 0) {
             $('#searchImg').fadeIn();
