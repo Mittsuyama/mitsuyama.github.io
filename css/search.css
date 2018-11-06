@@ -84,6 +84,7 @@ main {
     width: 100%;
     background-color: rgba(255, 255, 255, 1);
     padding-bottom: 60px;
+    box-shadow: 0px 0px 20px 2px rgba(255, 255, 255, 0.2);
 }
 
 #hits {
@@ -120,7 +121,7 @@ li.ais-pagination--item {
     border-radius: 5px;
     width: 30px;
     height: 30px;
-    border: 2px solid rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(0, 0, 0, 0.15);
     color: rgba(0, 0, 0, 0.4);
     margin: 0px 2px 0px 0px;
     text-align: center;

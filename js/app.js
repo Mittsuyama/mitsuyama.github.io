@@ -11,11 +11,15 @@ var search = instantsearch({
 
 var isFocus = 0;
 var isSearchBox = 0;
+var searchStart = 0;
 
 function mainFunction() {
-    search.start();
     $('#funSearch').click(function() {
         if(isSearchBox == 0) {
+            if(searchStart == 0) {
+                search.start();
+                searchStart = 1;
+            }
             $('#searchImg').fadeIn();
             isSearchBox = 1;
         }
@@ -26,6 +30,10 @@ function mainFunction() {
     });
     $('#searchButton').click(function() {
         if(isSearchBox == 0) {
+            if(searchStart == 0) {
+                search.start();
+                searchStart = 1;
+            }
             $('#searchImg').fadeIn();
             isSearchBox = 1;
         }
