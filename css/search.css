@@ -18,7 +18,7 @@ header {
 
 .searchBox {
     position: absolute;
-    top: 150px;
+    top: 100px;
     width: 30%;
     transform: translate(-50%, 0);
     left: 50%;
@@ -36,12 +36,12 @@ header {
     position: absolute;
     padding: 0px 40px 0px 20px;
     font-size: 20px;
-    padding-right: 100px;
+    padding-right: 80px;
     width: 100%;
     height: 60px;
     outline: none;
     border: none;
-    color: rgba(0, 0, 0, 0.6);
+    color: rgba(255, 130, 100, 1);
     background-color: rgba(255, 255, 255, 0);
     transition-duration: 0.2s;
 }
@@ -52,14 +52,23 @@ header {
 
 #searchIcon {
     position: absolute;
-    right: 20px;
-    top: 14px;
-    font-size: 30px;
-    color: rgba(100, 100, 100, 0.15);
+    right: 10px;
+    top: 7px;
+    font-size: 20px;
+    color: rgba(255, 255, 255, 1);
+    padding: 12px 15px 11px 14px;
+    border-radius: 5px;
+    background-color: rgba(255, 100, 80, 0.5);
+    transition-duration: 0.4s;
+}
+
+#searchIcon:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 15px 3px rgba(255, 100, 80, 0.3);
 }
 
 em {
-    background-color: rgba(0, 170, 255, 0.2);
+    background-color: rgba(255, 130, 100, 0.3);
     font-style: normal;
     padding: 0px 4px 0px 4px;
 }
@@ -69,15 +78,16 @@ div.ais-hits__empty {
 }
 
 main {
+    padding: 10px;
     position: absolute;
-    top: 100px;
+    top: 80px;
     width: 100%;
+    background-color: rgba(255, 255, 255, 1);
+    padding-bottom: 60px;
 }
 
 #hits {
     background-color: rgba(255, 255, 255, 1);
-    border: 1px solid rgba(0, 0, 0, 0.4);
-    border-radius: 5px;
 }
 
 div.hit-content {
@@ -85,20 +95,73 @@ div.hit-content {
 }
 
 div.hit-title {
+    color: rgba(255, 100, 80, 0.6);
     font-weight: bold;
-    font-size: 16px;
+    font-size: 20px;
     src: url('../fonts/Deng.ttf');
     font-family: "等线";
 }
 
 div.hit-tag {
-    color: rgba(0, 0, 0, 0.6);
-    font-size: 12px;
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 15px;
+    src: url('../fonts/Deng.ttf');
+    font-family: "等线";
 }
 
 div.hit-brief {
-    color: rgba(0, 0, 0, 0.3);
-    font-size: 14px;
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 17px;
+    src: url('../fonts/Deng.ttf');
+    font-family: "等线";
+}
+
+li.ais-pagination--item {
+    border-radius: 5px;
+    width: 30px;
+    height: 30px;
+    border: 2px solid rgba(0, 0, 0, 0.15);
+    color: rgba(0, 0, 0, 0.4);
+    margin: 0px 2px 0px 0px;
+    text-align: center;
+    float: left;
+    font-weight: bold;
+    font-size: 23px;
+}
+
+span.ais-pagination--link {
+    color: rgba(0, 0, 0, 0.1);
+    display: block;
+    margin-top: -5px;
+}
+
+a.ais-pagination--link {
+    margin-top: -5px;
+    width: 27px;
+    height: 28px;
+    border-radius: 4px;
+    display: block;
+    color: rgba(0, 0, 0, 0.28);
+    text-decoration: none;
+    transition-duration: 0.2s;
+}
+
+ul.ais-pagination {
+    display: block;
+    list-style-type: none;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    width: 97%;
+    padding: 0px;
+    margin: 0px;
+    transform: translate(-50%, 0);
+}
+
+#pagination {
+    position: absolute;
+    width: 100%;
+    min-height: 50px;
 }
 
 svg {

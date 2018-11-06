@@ -10,11 +10,23 @@ var search = instantsearch({
 });
 
 var isFocus = 0;
+var isSearchBox = 0;
 
 function mainFunction() {
     search.start();
     $('#searchButton').click(function() {
-        $('#searchImg').fadeIn();
+        if(isSearchBox == 0) {
+            $('#searchImg').fadeIn();
+            isSearchBox = 1;
+        }
+        else {
+            $('#searchImg').fadeOut();
+            isSearchBox = 0;
+        }
+    });
+    $('#searchIcon').click(function() {
+        $('#searchImg').fadeOut();
+        isSearchBox = 0;
     });
 }
 
