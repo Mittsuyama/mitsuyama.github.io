@@ -78,7 +78,7 @@ $(document).ready(function() {
     $(window).load(function(){
         //图片放大
         $("img.blogImg").click(function() {
-            imgSrc = $(this).attr("src");   
+            imgSrc = $(this).attr("src"); 
             Dis = $(this).offset().top;
             $("<img/>").attr("src", imgSrc).load(function() {
                 imgWidth = this.width;

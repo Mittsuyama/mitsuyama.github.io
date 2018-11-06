@@ -9,6 +9,11 @@ var search = instantsearch({
       }
 });
 
+$(document).on("click",".hit", function(){
+    var url = $(this).attr("href");
+    self.location = url;
+})
+
 var isFocus = 0;
 var isSearchBox = 0;
 var searchStart = 0;
@@ -17,7 +22,7 @@ function mainFunction() {
     $('#funSearch').click(function() {
         if(isSearchBox == 0) {
             if(searchStart == 0) {
-                search.start();
+                //search.start();
                 searchStart = 1;
             }
             $('#searchImg').fadeIn();
@@ -28,10 +33,11 @@ function mainFunction() {
             isSearchBox = 0;
         }        
     });
+
     $('#searchButton').click(function() {
         if(isSearchBox == 0) {
             if(searchStart == 0) {
-                search.start();
+                //search.start();
                 searchStart = 1;
             }
             $('#searchImg').fadeIn();
@@ -42,6 +48,7 @@ function mainFunction() {
             isSearchBox = 0;
         }
     });
+    
     $('#searchIcon').click(function() {
         $('#searchImg').fadeOut();
         isSearchBox = 0;
@@ -55,7 +62,7 @@ function init() {
         container: '#my-search-input',
         })
     );
-
+    
     // Add this after the previous JavaScript code
     search.addWidget(
         instantsearch.widgets.hits({
@@ -67,18 +74,19 @@ function init() {
             }
         })
     );
-
+    
     search.addWidget(
         instantsearch.widgets.pagination({
             container: '#pagination'
         })
     );
+    search.start();
 }
 
 
 $(document).ready(function() {
     init();
     $(window).load(function(){
-       mainFunction();
+        mainFunction();
     });
 });
