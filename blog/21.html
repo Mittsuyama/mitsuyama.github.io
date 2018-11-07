@@ -107,6 +107,7 @@
                 <div class = "articleBorder">
                                     <br>
                 <a href = "12.html" class = "conncetion"><i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp&nbsp&nbsp上一篇：离散数学 2 - 关系</a>
+                <a href = "23.html" class = "conncetion"><i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp&nbsp&nbsp下一篇：离散数学 4 - 群论</a>
                 <div class = "h2" id = "1">近世代数</div><div id = "hUnderline"></div>
                 <div class = "h5">二元代数运算的定义：</div>
                 <div class = "normal">设&nbsp$X$&nbsp是一个集合，一个从&nbsp$X&nbsp\times&nbspX$&nbsp到&nbsp$X$&nbsp的一个映射&nbsp$\phi$&nbsp称为&nbsp$X$&nbsp上的一个二元代数运算。</div>
@@ -294,12 +295,22 @@ $$
 x \circ y = a^m \circ a^n = a^{m + n} = a^{n + m} = a^n \circ a^m = y \circ x
 $$
                 <div class = "h2" id = "11">半群关系</div><div id = "hUnderline"></div>
-                <div class = "h4" id = "12">1.&nbsp&nbsp同构：</div>
+                <div class = "h4" id = "12">1.&nbsp&nbsp同构的的定义：</div>
                 <div class = "normal">定义：$(S,&nbsp\circ)$,&nbsp$(T,&nbsp*)$&nbsp是个半群，若&nbsp$\exists&nbsp\phi:&nbspS&nbsp\to&nbspT$，是双射，使得&nbsp$\forall&nbspa,&nbspb&nbsp\in&nbspS$&nbsp有：</div>
 $$
-\phi(a \circ b) = \phi(a) * \phi(b)
+\varphi(a \circ b) = \varphi(a) * \varphi(b)
 $$
-                <div class = "normal">同理定义：外加条件&nbsp$\phi(e)&nbsp=&nbspe'$，为同构幺半群。</div>
+                <div class = "normal">同理定义：外加条件&nbsp$\varphi(e)&nbsp=&nbspe'$，为同构幺半群。</div>
+                <div class = "h5">Cayley&nbsp&nbsp定理：</div>
+                <div class = "normal">任何幺半群&nbsp$(M,&nbsp\circ,&nbspe)​$&nbsp同构与变换幺半群&nbsp$(L(M),&nbsp\circ,&nbspI_m)​$.</div>
+                <div class = "h4" id = "13">同态的定义：</div>
+                <div class = "normal">&nbsp设&nbsp$(S,&nbsp\circ)$&nbsp和&nbsp$(T,&nbsp*)$&nbsp是半群，如果存在&nbsp$\varphi:&nbspS&nbsp\to&nbspT$，使得&nbsp$\forall&nbspx,&nbspy&nbsp\in&nbspS$&nbsp有：</div>
+$$
+\varphi(x \circ y) = \varphi(x) *\varphi(y)
+$$
+                <div class = "normal">则称&nbsp$(S,&nbsp\circ)$&nbsp与&nbsp$(T,&nbsp*)$&nbsp是同态的，$\varphi$&nbsp称为&nbsp$S$&nbsp到&nbsp$T$&nbsp的一个同态，$\varphi(S)$&nbsp称为同态象。同态幺半群类似定义。</div>
+                <div class = "h5">定理：</div>
+                <div class = "normal">与半群同构的群为半群。</div>
 
                     <!--<div class = "blogTrans">
                         <div class = "lastBlogTitle"></div>
