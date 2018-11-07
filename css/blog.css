@@ -20,8 +20,8 @@ body {
 div.funButtonBox{
     display: none;
     position: fixed;
-    top: 400px;
-    right: 18%;
+    top: 450px;
+    right: 17%;
     width: 50px;
     height: 300px;
     color: rgba(255, 130, 70, 0.5);
@@ -294,7 +294,7 @@ span.strike {
 
 span.emphasis {
     padding: 0px 2px 0px 2px;
-    background-color:rgba(100, 100, 100, 0.18);
+    background-color:rgba(100, 100, 100, 0.25);
     /*border: 1.5px solid rgba(0, 0, 0, 0.2);*/
     /*border: 2px solid rgba(255, 150, 60, 0.3);*/
     /*background-color:rgba(255, 150, 60, 0.06);*/
