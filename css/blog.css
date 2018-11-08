@@ -58,9 +58,9 @@ div.blogTitle {
     src: url('../fonts/Deng.ttf');
     font-family: "等线";
     position: absolute;
-    left: 22%;
+    left: 22.5%;
     top: 350px;
-    width: 78%;
+    width: 77%;
     color: white;
     font-size: 60px;
     text-align: left;
@@ -68,7 +68,7 @@ div.blogTitle {
 
 div.tagContainer {
     position: absolute;
-    left: 22%;
+    left: 22.5%;
     top: 435px;
     width: 50%;
     height: 50px;
@@ -315,7 +315,7 @@ a.conncetion {
 }
 a.conncetion:hover {
     text-decoration: none;
-    background-color: rgba(100, 210, 250, 0.3);
+    background-color: rgba(100, 210, 250, 0.5);
     color: white;
 }
 

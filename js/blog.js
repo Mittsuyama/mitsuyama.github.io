@@ -85,12 +85,13 @@ $(document).ready(function() {
                 imgHeight = this.height;
                 $('.imgBack').css("height", $(document.body).height() + 2000 + 'px');
                 $('.imgBack').html('<img src = ' + imgSrc + ' class = "biggerImg"></img>');
-                if(imgHeight < $(window).height()) {
+                if(imgHeight * 0.8 < $(window).height()) {
                     $('.biggerImg').css("top", parseFloat($(window).scrollTop()) / screenWidthRate + parseFloat(($(window).height() - imgHeight)) / 2.0 + 'px');
                 }
                 else {
                     $('.biggerImg').css("top", parseFloat($(window).scrollTop()) / screenWidthRate + 'px');
                 }
+                alert(imgHeight * 0.8 + ' & ' + $(window).height());
                 shWitdh = Math.min($(window).width() * 0.8, imgWidth) + 'px';
                 $('.biggerImg').animate({width: shWitdh}, tempTime);
             });

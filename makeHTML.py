@@ -71,15 +71,15 @@ class makeHTML:
                 break
         
         if mLen > spaceLen + 2 and myStr[spaceLen : spaceLen + 2] == '- ':
-            newS += '''<div class = "normal" style = "padding-left: %spx; text-indent:-17px;">''' % (str(spaceLen * 12 + 37))
+            newS += '''<div class = "normal" style = "padding-left: %spx; text-indent: -9px;">''' % (str(spaceLen * 8 + 20))
             i = spaceLen + 2
-            newS += '''<i class = "fa fa-chevron-right" style = "top: 3px; font-size: 14px; color: #cccccc"></i>&nbsp'''
+            newS += '''<i class = "fa fa-chevron-right" style = "top: 3px; margin-right: 3px; font-size: 14px; color: #cccccc"></i>&nbsp'''
         elif mLen > spaceLen + 3 and myStr[spaceLen + 1 : spaceLen + 3] == '. ':
-            newS += '''<div class = "normal" style = "padding-left: %spx; text-indent: -30px;">''' % (str(spaceLen * 12 + 31))
+            newS += '''<div class = "normal" style = "padding-left: %spx; text-indent: -28px;">''' % (str(spaceLen * 8 + 28))
             i = spaceLen + 3
             newS += '''<span class = "strong">%s.&nbsp&nbsp</span>''' % (myStr[spaceLen])
         elif mLen > spaceLen + 4 and myStr[spaceLen + 2 : spaceLen + 4] == '. ':
-            newS += '''<div class = "normal" style = "padding-left: %spx; text-indent:-43px;">''' % (str(spaceLen * 12 + 31))
+            newS += '''<div class = "normal" style = "padding-left: %spx; text-indent:-25px;">''' % (str(spaceLen * 8 + 26))
             i = spaceLen + 4
             newS += '''<span class = "strong">%s.&nbsp&nbsp</span>''' % (myStr[spaceLen : spaceLen + 2])
         else:

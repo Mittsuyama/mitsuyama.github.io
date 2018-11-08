@@ -22,7 +22,7 @@
         <script src = "../highlight/highlight.pack.js"></script>
         <script>hljs.initHighlightingOnLoad();</script>
 
-        <title>MITSUYAMA | GitHub 从远程仓库同步
+        <title>MITSUYAMA | 静态网页小功能的实现
 </title>
     </head>
     
@@ -57,15 +57,15 @@
             
         <div class = "imgBack"></div>
         <div class = "container-fluid" id = "blogBackground">
-            <img src = "../img/blog-image/13.jpg" class = "blogTitleImg">
+            <img src = "../img/blog-image/24.jpg" class = "blogTitleImg">
             <div class = "glass"></div>
             <div class = "blogTitle">
-                    GitHub 从远程仓库同步
+                    静态网页小功能的实现
 
             </div>
             <div class = "tagContainer">
-                &nbspComputer
-&nbsp&nbsp|&nbsp&nbsp&nbsp2018-10-16
+                &nbspWebsite
+&nbsp&nbsp|&nbsp&nbsp&nbsp2018-11-8
 
             </div>
         </div>
@@ -74,8 +74,7 @@
             <div class = "contentList">
                 <div class = "contentBorder">
                     <div class = "contentTitile">┌─ 目录 ───────</div>
-                                <a href = "#1" class = "contentListCon" style = "color: rgba(0, 0, 0, 0.5); font-weight: bold;">先配置一个&nbsp&nbspupstream</a>
-            <a href = "#2" class = "contentListCon" style = "color: rgba(0, 0, 0, 0.5); font-weight: bold;">从远程同步同步</a>
+                                <a href = "#1" class = "contentListCon" style = "color: rgba(0, 0, 0, 0.5); font-weight: bold;">Algolia&nbsp&nbsp实现搜索功能</a>
 
                 </div>
             </div>
@@ -101,46 +100,27 @@
                         </div>
                     </div>
                 <div class = "articleBorder">
-                                    <br>
-                <div class = "h2" id = "1">先配置一个&nbsp&nbspupstream</div><div id = "hUnderline"></div>
-                <div class = "normal" style = "padding-left: 28px; text-indent: -28px;"><span class = "strong">1.&nbsp&nbsp</span>使用&nbspgit&nbspremote&nbsp-v&nbsp查看远程状态</div>
-                <pre><code class = "nohighlight">
-git remote -v
-origin  git@github.com:yourname/yourname_rep.git (fetch)
-origin  git@github.com:yourname/yourname_rep.git (push)
-                </code></pre>
-                <div class = "normal" style = "padding-left: 28px; text-indent: -28px;"><span class = "strong">2.&nbsp&nbsp</span>添加一个将被同步给&nbspfork&nbsp远程的上游仓库</div>
-                <pre><code class = "nohighlight">
-git remote add upstream git@github.com:yourname/yourname_rep.git
-                </code></pre>
-                <div class = "normal" style = "padding-left: 28px; text-indent: -28px;"><span class = "strong">3.&nbsp&nbsp</span>使用&nbspgit&nbspremote&nbsp-v&nbsp查看是否成功</div>
-                <pre><code class = "nohighlight">
-origin  git@github.com:yourname/yourname_rep.git (fetch)
-origin  git@github.com:yourname/yourname_rep.git (push)
-upstream        git@github.com:yourname/yourname_rep.git (fetch)
-upstream        git@github.com:yourname/yourname_rep.git (push)
-                </code></pre>
-                <div class = "h2" id = "2">从远程同步同步</div><div id = "hUnderline"></div>
-                <div class = "normal" style = "padding-left: 28px; text-indent: -28px;"><span class = "strong">4.&nbsp&nbsp</span>从上游仓库&nbspfetch&nbsp分支和提交点&nbspgit&nbspfetch&nbspupstream，传送到本地，并会被存储在本地分支&nbspupstream/master</div>
-                <pre><code class = "nohighlight">
-git fetch upstream
-From github.com:yourname/yourname_rep
- * [new branch]      master     -> upstream/master
-                </code></pre>
-                <div class = "normal" style = "padding-left: 28px; text-indent: -28px;"><span class = "strong">5.&nbsp&nbsp</span>切换到本地主分支</div>
-                <pre><code class = "nohighlight">
-git checkout master
-                </code></pre>
-                <div class = "normal" style = "padding-left: 28px; text-indent: -28px;"><span class = "strong">6.&nbsp&nbsp</span>把&nbspupstream/master&nbsp分支合并到本地&nbspmaster&nbsp上，这样就完成了同步，并不会丢掉本地修改的内容。</div>
-                <pre><code class = "nohighlight">
-git merge upstream/master
-                </code></pre>
+                                    <div class = "normal">Github&nbsp是一个静态网页，所以不能用例如&nbspPython、PHP&nbsp等动态语言。其实网上有很多优秀的静态网页生成器：Jekyll，Hugo，Hexo，Hitbook，Gatsby&nbsp等等。但为了学习&nbspHTML、CSS、JavaScript&nbsp等前端语言，于是决定自动动手写写。以下总结了一些功能的实现。</div>
+                <div class = "h2" id = "1">Algolia&nbsp&nbsp实现搜索功能</div><div id = "hUnderline"></div>
+                <div class = "normal">由于静态网页，无法使用动态语言进行对数据库内容的读取，直接搜索&nbspHTML&nbsp文件似乎又不太方便，于是我选择了一个通过&nbspSaaS&nbsp模式提供的搜索的&nbsp<span class = "emphasis">Algolia</span>.</div>
+                <a href = "https://www.algolia.com/" class = "conncetion"><i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp&nbsp&nbspAlgolia | Fast, Reliable and Modern Search and Discovery</a>
+                <div class = "normal">本地向&nbspAlgolia&nbsp的服务器提交数据，然后通过&nbspJavaScript&nbsp获取你提交的数据，并且&nbspAlgolia&nbsp提供了一些默认&nbspCSS&nbsp样式等功能，从而帮助你实现搜索功能。</div>
+                <div class = "normal">实现过程：</div>
+                <div class = "h4" id = "2">注册并登陆</div>
+                <div class = "normal">上面的链接，<span class = "strike">点击就送屠龙宝刀</span>，注册并登录。</div>
+                <br>
+                <div class = "normal">登陆后可能会有一些官方教程，最后进入&nbspDashboard，如下界面：</div>
+                <img src = "../img/1541685074182.png" class = "blogImg"><br>
+                <div class = "normal">图中：</div>
+                <div class = "normal" style = "padding-left: 28px; text-indent: -28px;"><span class = "strong">1.&nbsp&nbsp</span>API&nbspkey，新建&nbspApps&nbsp时会随机给一个（新建的时候需要你选择一个&nbspmain&nbspregion，中国选择香港即可，延迟比较低）</div>
+                <div class = "normal" style = "padding-left: 28px; text-indent: -28px;"><span class = "strong">2.&nbsp&nbsp</span>Apps&nbsp中一个&nbspIndex&nbsp的名字，这个&nbspIndex&nbsp也是你自己建立的</div>
+                <div class = "normal" style = "padding-left: 28px; text-indent: -28px;"><span class = "strong">3.&nbsp&nbsp</span>你上传的内容，上传以&nbspobject&nbsp为一个单位，每个&nbspobject&nbsp中都有你设定的键值对，启用搜索时，通过键值对来获得你需要的搜索结果。</div>
 
                     <!--<div class = "blogTrans">
                         <div class = "lastBlogTitle"></div>
                         <div class = "nextBlogTitle"></div>
-                        <div class = "lastBlog"><a href = "12.html" class = "noStyle">◁&nbsp&nbspPreviois</a></div>
-                        <div class = "nextBlog"><a href = "14.html" class = "noStyle">Next&nbsp&nbsp▷</a></div>
+                        <div class = "lastBlog"><a href = "23.html" class = "noStyle">◁&nbsp&nbspPreviois</a></div>
+                        <div class = "nextBlog"><a href = "-1.html" class = "noStyle">Next&nbsp&nbsp▷</a></div>
                     </div>
                     <hr>-->
                 </div>
@@ -194,8 +174,8 @@ git merge upstream/master
 
                     //加载 disqus
                 var disqus_config = function () {
-                    this.page.url = 'http://www.mitsuyama.top/blog/13.html';  // Replace PAGE_URL with your page's canonical URL variable
-                    this.page.identifier = 'blog13'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                    this.page.url = 'http://www.mitsuyama.top/blog/24.html';  // Replace PAGE_URL with your page's canonical URL variable
+                    this.page.identifier = 'blog24'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
                     };
                     
         </script>
