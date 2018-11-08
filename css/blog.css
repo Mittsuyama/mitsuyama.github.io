@@ -20,8 +20,8 @@ body {
 div.funButtonBox{
     display: none;
     position: fixed;
-    top: 450px;
-    right: 17%;
+    top: 480px;
+    right: 16%;
     width: 50px;
     height: 300px;
     color: rgba(255, 130, 70, 0.5);
@@ -34,7 +34,7 @@ div.funButtonCir {
     width: 53px;
     height: 53px;
     background-color: white;
-    box-shadow: 2px 2px 12px 7px rgba(200, 200, 200, 0.1), 2px 2px 20px 5px rgba(200, 200, 200, 0.2);
+    box-shadow: 1px 1px 15px 5px rgba(200, 200, 200, 0.2), 1px 1px 20px 7px rgba(200, 200, 200, 0.1);
     border-radius: 50px;
     font-size: 25px;
     transition-duration: 0.2s;
@@ -162,7 +162,7 @@ div.articleContext {
 }
 
 div.articleBorder {
-    box-shadow: 2px 10px 12px 5px rgba(0,0,0,0.05), 2px 12px 20px 10px rgba(0,0,0,0.05);
+    box-shadow: 1px 1px 15px 5px rgba(0,0,0,0.01), 1px 1px 20px 7px rgba(0,0,0,0.05);
     margin: auto;
     width: 55%;
     padding: 30px 60px 100px 60px;
