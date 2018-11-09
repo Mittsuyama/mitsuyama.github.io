@@ -22,7 +22,7 @@
         <script src = "../highlight/highlight.pack.js"></script>
         <script>hljs.initHighlightingOnLoad();</script>
 
-        <title>MITSUYAMA | 静态网页小功能的实现
+        <title>MITSUYAMA | 我要成为这个世界的英雄
 </title>
     </head>
     
@@ -57,15 +57,15 @@
             
         <div class = "imgBack"></div>
         <div class = "container-fluid" id = "blogBackground">
-            <img src = "../img/blog-image/24.jpg" class = "blogTitleImg">
+            <img src = "../img/blog-image/25.jpg" class = "blogTitleImg">
             <div class = "glass"></div>
             <div class = "blogTitle">
-                    静态网页小功能的实现
+                    我要成为这个世界的英雄
 
             </div>
             <div class = "tagContainer">
-                &nbspWebsite
-&nbsp&nbsp|&nbsp&nbsp&nbsp2018-11-8
+                &nbspArticle
+&nbsp&nbsp|&nbsp&nbsp&nbsp2018-11-9
 
             </div>
         </div>
@@ -74,7 +74,7 @@
             <div class = "contentList">
                 <div class = "contentBorder">
                     <div class = "contentTitile">┌─ 目录 ───────</div>
-                                <a href = "#1" class = "contentListCon" style = "color: rgba(0, 0, 0, 0.5); font-weight: bold;">Algolia&nbsp&nbsp实现搜索功能</a>
+                                <a href = "#" class = "contentListCon">无目录...</a>
 
                 </div>
             </div>
@@ -100,50 +100,28 @@
                         </div>
                     </div>
                 <div class = "articleBorder">
-                                    <div class = "quote"><i class = "fa fa-quote-left fa-1x fa-pull-left" aria-hidden = "true" id = "quoteIcon"></i>Github&nbsp&nbsp是一个静态网页，所以不能用例如&nbsp&nbspPython、PHP&nbsp&nbsp等动态语言。其实网上有很多优秀的静态网页生成器：Jekyll，Hugo，Hexo，Hitbook，Gatsby&nbsp&nbsp等等。但为了学习&nbsp&nbspHTML、CSS、JavaScript&nbsp&nbsp等前端语言，于是决定自动动手写写。以下总结了一些功能的实现。</div>
-                <div class = "h2" id = "1">Algolia&nbsp&nbsp实现搜索功能</div><div id = "hUnderline"></div>
-                <div class = "normal">由于静态网页，无法使用动态语言进行对数据库内容的读取，直接搜索&nbspHTML&nbsp文件似乎又不太方便，于是我选择了一个通过&nbspSaaS&nbsp模式提供的搜索的&nbsp<span class = "emphasis">Algolia</span>.</div>
-                <a href = "https://www.algolia.com/" class = "conncetion"><i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp&nbsp&nbspAlgolia | Fast, Reliable and Modern Search and Discovery</a>
-                <div class = "normal">本地向&nbspAlgolia&nbsp的服务器提交数据，然后通过&nbspJavaScript&nbsp获取你提交的数据，并且&nbspAlgolia&nbsp提供了一些默认&nbspCSS&nbsp样式等功能，从而帮助你实现搜索功能。</div>
-                <div class = "normal">实现过程：</div>
-                <div class = "h4" id = "2">注册并登陆</div>
-                <div class = "normal">上面的链接，<span class = "strike">点击就送屠龙宝刀</span>，注册并登录。</div>
+                                    <br>
+                <div class = "quote"><i class = "fa fa-quote-left fa-1x fa-pull-left" aria-hidden = "true" id = "quoteIcon"></i>文&nbsp&nbsp/&nbsp&nbsp李泓雨</div>
+                <div class = "normal">&nbsp树叶随风摆动着，阳光透过层层遮拦在地上投出点点光斑，石砖砌成的大街上，人影晃动，一切都透出平静，安详。这是一座城镇，位于大陆角落，东方是一望无际的海洋，而北方是一片又一片连绵的山脉。此时，一座山峰的顶峰，正站着一个少年，略显瘦削却又不失挺拔的身躯配上那在黑衣车呢脱下苍白的脸给人以冷漠的感觉。少年手中握着一柄闪着黑色光芒的长剑，面对着绿色无边的森林，长剑流畅的滑落，一片嫩绿的树叶化成两半随风飘去。</div>
                 <br>
-                <div class = "normal">登陆后可能会有一些官方教程，最后进入&nbspDashboard，如下界面：</div>
-                <img src = "../img/1541685074182.png" class = "blogImg"><br>
-$$
-^{（图一）}
-$$
-                <div class = "normal" style = "padding-left: 25px; text-indent: -24px;"><span class = "strong">1.&nbsp&nbsp</span>Application&nbspID，新建&nbspApps&nbsp时会随机给一个（新建的时候需要你选择一个&nbspmain&nbspregion，中国选择香港即可，延迟比较低）</div>
-                <div class = "normal" style = "padding-left: 25px; text-indent: -24px;"><span class = "strong">2.&nbsp&nbsp</span>Apps&nbsp中一个&nbspIndex&nbsp的名字，这个&nbspIndex&nbsp也是你自己建立的</div>
-                <div class = "normal" style = "padding-left: 25px; text-indent: -24px;"><span class = "strong">3.&nbsp&nbsp</span>你上传的内容，上传以&nbspobject&nbsp为一个单位，每个&nbspobject&nbsp中都有你设定的键值对，启用搜索时，通过键值对来获得你需要的搜索结果。</div>
-                <div class = "h4" id = "3">上传你的数据</div>
-                <div class = "normal">我使用的&nbspPython&nbsp来上传的数据（还可以手动添加数据，或者手动上传&nbspjson&nbsp文件添加数据）。</div>
-                <a href = "https://www.algolia.com/doc/api-reference/" class = "conncetion"><i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp&nbsp&nbsp你可以选择其他的语言来上传</a>
-                <div class = "h5">下载&nbsp&nbspAlgolia&nbsp&nbsp客户端</div>
-                <pre><code class = "bash">
-$ pip install --upgrade algoliasearch
-                </code></pre>
-                <div class = "h5">初始化你的客户端</div>
-                <pre><code class = "python">
-from algoliasearch import algoliasearch
-
-client = algoliasearch.Client("Application ID", 'Admin API Key')
-index = client.init_index('index_name')
-                </code></pre>
-                <div class = "normal">Dashboard&nbsp中点击&nbspAPI&nbspkeys&nbsp就能获得上面需要的信息。</div>
-                <div class = "normal" style = "padding-left: 25px; text-indent: -24px;"><span class = "strong">1.&nbsp&nbsp</span>Application&nbspID：每一个&nbspApps&nbsp的认证编码，This&nbspis&nbspyour&nbspunique&nbspapplication&nbspidentifier.&nbspIt's&nbspused&nbspto&nbspidentify&nbspyou&nbspwhen&nbspusing&nbspAlgolia's&nbspAPI</div>
-                <div class = "normal" style = "padding-left: 25px; text-indent: -24px;"><span class = "strong">2.&nbsp&nbsp</span>Admin&nbspAPI&nbspKey：管理数据的秘钥，与&nbspSearch-Only&nbspAPI&nbspKey&nbsp不同，Search-Only&nbsp只能查询不能修改。</div>
-                <div class = "normal" style = "padding-left: 25px; text-indent: -24px;"><span class = "strong">3.&nbsp&nbsp</span>index_name：图一中的编号&nbsp2，就是&nbspindex_name。</div>
-                <div class = "h5">正式上传数据</div>
-                <a href = "https://www.algolia.com/doc/api-client/indexing/" class = "conncetion"><i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp&nbsp&nbsp上传数据的官方文档</a>
-                <div class = "normal">上传的每一个&nbspobject&nbsp都与一个&nbspobjectID&nbsp一一对应，如果没有设置&nbspobjectID，algolia&nbsp会自动给你随机一个&nbspID。</div>
+                <div class = "normal">“我要成为这个世界的英雄！”</div>
+                <br>
+                <div class = "normal">天色渐暗，城镇中亮起了火光，夜晚的城镇更加的喧闹。酒馆里不时传出来豪放的笑骂声，广场上，小孩子们嬉戏打闹，三两妇女站在一旁，充满爱意的看着她们的心上肉。少年走到了城镇门口，看着三五成对，来来往往的人们叹了一口气，静静地按照早已习惯的路线走去。</div>
+                <br>
+                <div class = "normal">“快看啊，又是这个人整天背着一把剑，搞得自己很酷似的，在这么和平的年代，怎么可能会有战争。”少年走过的路旁，不时的有人指指点点。“欧呦，小哥，今天打败魔物了吗？哈哈哈……”酒馆里的几个壮汉举着酒瓶，满嘴酒气的躲着路过的少年嚷嚷道。“哎，是那位大哥哥，真的帅气啊！我也想像他一样呢！”广场上的小孩子们看着正打算横穿广场的少年兴奋地说。少年的脸上露出了点点笑容，这应该是他一天中少有的几次在人们面前露出笑容。然而他没有转向去接近那群眼睛里闪着崇拜的孩子，因为他知道，不远处的妇女们会惊慌的把她们的心上肉搂在怀里，然后恶狠狠的盯着他，好像他会吃掉她们的这块心上肉一样。</div>
+                <br>
+                <div class = "normal">转过一个街角，一片房子出现在眼前。在月光的照耀下，这些房子显得有些吓人，一股清冷阴森的感觉充斥在空气中。</div>
+                <br>
+                <div class = "normal">“你回来了，我们都等你好久了。”一个身影从旁边的阴影里走了出来，少年松了口气，看着眼前这个比他高一点，胖一点的人，露出了笑容。“快进屋吧饭已经做好了，”那身影将手中的剑插回背后，用手推开身旁的门。黄色的光应设在少年的脸上，暖洋洋的。里面还有两三个和少年年龄差不多的人，正微笑的看着门外的少年。</div>
+                <br>
+                <div class = "normal">“也许只有这里才能找到家的感觉吧。”
+</div>
 
                     <!--<div class = "blogTrans">
                         <div class = "lastBlogTitle"></div>
                         <div class = "nextBlogTitle"></div>
-                        <div class = "lastBlog"><a href = "23.html" class = "noStyle">◁&nbsp&nbspPreviois</a></div>
-                        <div class = "nextBlog"><a href = "25.html" class = "noStyle">Next&nbsp&nbsp▷</a></div>
+                        <div class = "lastBlog"><a href = "24.html" class = "noStyle">◁&nbsp&nbspPreviois</a></div>
+                        <div class = "nextBlog"><a href = "-1.html" class = "noStyle">Next&nbsp&nbsp▷</a></div>
                     </div>
                     <hr>-->
                 </div>
@@ -197,8 +175,8 @@ index = client.init_index('index_name')
 
                     //加载 disqus
                 var disqus_config = function () {
-                    this.page.url = 'http://www.mitsuyama.top/blog/24.html';  // Replace PAGE_URL with your page's canonical URL variable
-                    this.page.identifier = 'blog24'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                    this.page.url = 'http://www.mitsuyama.top/blog/25.html';  // Replace PAGE_URL with your page's canonical URL variable
+                    this.page.identifier = 'blog25'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
                     };
                     
         </script>

@@ -144,28 +144,6 @@ class makeHTML:
     def pHtml(self, order):
         self.getTitle(order)
 
-        #update search data
-        if self.isUpdate == '1':
-            print(self.fileName[order])
-            htmlContent = open(self.fileName[order]).read()
-            htmlContent = htmlContent.replace('**', ' ')
-            htmlContent = htmlContent.replace('<u>', ' ')
-            htmlContent = htmlContent.replace('</u>', ' ')
-            htmlContent = htmlContent.replace('*', ' ')
-            htmlContent = htmlContent.replace('#####', ' ')
-            htmlContent = htmlContent.replace('####', ' ')
-            htmlContent = htmlContent.replace('###', ' ')
-            htmlContent = htmlContent.replace('##', ' ')
-            htmlContent = htmlContent.replace('#', ' ')
-            htmlContent = htmlContent.replace('~~', ' ')
-            htmlContent = htmlContent.replace('$$', ' ')
-            htmlContent = htmlContent.replace('$', ' ')
-            htmlContent = htmlContent.replace('\n', ' ')
-            self.index.add_object(
-                {"url": str(order), "title": self.blogInfo[0], "time": self.blogInfo[3].replace(' ', '').replace('/', '-'), "tag": self.blogInfo[1], "brief": self.blogInfo[2][:-1], "content": htmlContent[:1000]},
-                str(order)
-            )
-
         #Make blog page
         outFIle = open('blog/' + str(order) + '.html', 'w')
         blogHtml = self.blogTemp
@@ -183,19 +161,22 @@ class makeHTML:
             blogHtml = blogHtml.replace('((nextBlog))', str(order + 1))
         blogContent = ''
 
-        #blogContent = '''<br><span class = "normal" style = "font-size: 25px;">▷目录：</span><br>'''
+        contentAll = ''
         tempOrder = 0
         contentList = ''
         for j in self.Paragraph:
             if len(j) > 6 and j[:5] == '#####':
-                pass
+                contentAll = contentAll + j[6:-1] + ','
             elif len(j) > 5 and j[:4] == '####':
+                contentAll = contentAll + j[5:-1] + ','
                 tempOrder += 1
                 #contentList += '''           <a href = "#%s" class = "contentListCon" style = "padding-left: 80px;">''' % (str(tempOrder)) + j[5:-1].replace(' ', '&nbsp&nbsp') + '''</a><br>''' + '\n'
             elif len(j) > 4 and j[:3] == '###':
+                contentAll = contentAll + j[4:-1] + ','
                 tempOrder += 1
                 contentList += '''            <a href = "#%s" class = "contentListCon" style = "padding-left: 40px; color: rgba(0, 0, 0, 0.5);">''' % (str(tempOrder)) + j[4:-1].replace(' ', '&nbsp&nbsp') + '''</a>''' + '\n'
             elif len(j) > 3 and j[:2] == '##':
+                contentAll = contentAll + j[3:-1] + ','
                 tempOrder += 1
                 contentList += '''            <a href = "#%s" class = "contentListCon" style = "color: rgba(0, 0, 0, 0.5); font-weight: bold;">''' % (str(tempOrder)) + j[3:-1].replace(' ', '&nbsp&nbsp') + '''</a>''' + '\n'
         if(tempOrder > 0):
@@ -203,6 +184,36 @@ class makeHTML:
         else:
             contentList += '''            <a href = "#" class = "contentListCon">无目录...</a>\n'''
             blogHtml = blogHtml.replace('((contentList))', contentList)
+
+        #update search data
+        if self.isUpdate == '1':
+            print(self.fileName[order])
+            #print(contentAll)
+            #print('over')
+            htmlContent = open(self.fileName[order]).read()
+            htmlContent = htmlContent.replace('**', ' ')
+            htmlContent = htmlContent.replace('<u>', ' ')
+            htmlContent = htmlContent.replace('</u>', ' ')
+            htmlContent = htmlContent.replace('*', ' ')
+            htmlContent = htmlContent.replace('#####', ' ')
+            htmlContent = htmlContent.replace('####', ' ')
+            htmlContent = htmlContent.replace('###', ' ')
+            htmlContent = htmlContent.replace('##', ' ')
+            htmlContent = htmlContent.replace('#', ' ')
+            htmlContent = htmlContent.replace('~~', ' ')
+            htmlContent = htmlContent.replace('$$', ' ')
+            htmlContent = htmlContent.replace('$', ' ')
+            htmlContent = htmlContent.replace('\n', ' ')
+            if len(htmlContent) > 1000 and len(contentAll) > 400:
+                self.index.add_object(
+                    {"url": str(order), "title": self.blogInfo[0], "time": self.blogInfo[3].replace(' ', '').replace('/', '-'), "tag": self.blogInfo[1], "brief": self.blogInfo[2][:-1], "content": contentAll[:1000]},
+                    str(order)
+                )
+            else:
+                self.index.add_object(
+                    {"url": str(order), "title": self.blogInfo[0], "time": self.blogInfo[3].replace(' ', '').replace('/', '-'), "tag": self.blogInfo[1], "brief": self.blogInfo[2][:-1], "content": htmlContent[:1000]},
+                    str(order)
+                )
 
         isQuote = False
         pLen = len(self.Paragraph)
