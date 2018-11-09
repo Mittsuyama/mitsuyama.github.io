@@ -200,7 +200,7 @@ else {
 
         $('#shareBigBox').hide();
         shareBoxShow = 0;
-        screenWidthRate = parseFloat($(document.body).width() / 1920.0) + (1920 - $(document.body).width()) / 1920 * 0.75;
+        screenWidthRate = 1;
         $('body').css("zoom", screenWidthRate);
         $('.articleBorder').css("width", "100%");
         $('.blogTitle').css("left", "10%");
