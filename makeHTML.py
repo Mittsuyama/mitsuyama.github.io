@@ -30,7 +30,7 @@ class makeHTML:
         self.homeBttonTemp = open('templates/homeButton.html').read()
         self.client = algoliasearch.Client("PKH2B42HCE", '3c713b49beef813c568cc0395b171d31')
         self.index = self.client.init_index('MITSUYAMA_SITE')
-        print("Push web database?")
+        print("Push database to Algolia?")
         self.isUpdate = input()
 
     def getTitle(self, order):
@@ -75,7 +75,7 @@ class makeHTML:
             i = spaceLen + 2
             newS += '''<i class = "fa fa-chevron-right" style = "top: 3px; margin-right: 3px; font-size: 14px; color: #cccccc"></i>&nbsp'''
         elif mLen > spaceLen + 3 and myStr[spaceLen + 1 : spaceLen + 3] == '. ':
-            newS += '''<div class = "normal" style = "padding-left: %spx; text-indent: -28px;">''' % (str(spaceLen * 8 + 28))
+            newS += '''<div class = "normal" style = "padding-left: %spx; text-indent: -25px;">''' % (str(spaceLen * 8 + 26))
             i = spaceLen + 3
             newS += '''<span class = "strong">%s.&nbsp&nbsp</span>''' % (myStr[spaceLen])
         elif mLen > spaceLen + 4 and myStr[spaceLen + 2 : spaceLen + 4] == '. ':

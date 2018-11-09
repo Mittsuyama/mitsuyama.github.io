@@ -14,25 +14,26 @@
 header {
     position: absolute;
     width: 100%;
+    height: 60px;
 }
 
 .searchBox {
     position: absolute;
-    top: 100px;
+    top: 60px;
     width: 30%;
     transform: translate(-50%, 0);
     left: 50%;
+    background-color: rgba(255, 255, 255, 1);
 }
 
 #inputBox {
     position: absolute;
-    width: 100%;
-    background-color: rgba(255, 255, 255, 1);
-    border-radius: 0px;
+    width: 100%;  
     height: 60px;
 }
 
 #my-search-input {
+    border-radius: 5px;
     position: absolute;
     padding: 0px 40px 0px 20px;
     font-size: 20px;
@@ -42,7 +43,6 @@ header {
     outline: none;
     border: none;
     color: rgba(100, 100, 100, 0.8);
-    background-color: rgba(255, 255, 255, 0);
     transition-duration: 0.2s;
     src: url('../fonts/Deng.ttf');
     font-family: "等线";
@@ -80,20 +80,20 @@ div.ais-hits__empty {
 }
 
 main {
+    border-radius: 5px;
     position: absolute;
     top: 80px;
     width: 100%;
-    background-color: rgba(255, 255, 255, 1);
     padding-bottom: 60px;
-    box-shadow: 0px 0px 20px 2px rgba(255, 255, 255, 0.2);
 }
 
 #hits {
+    border-radius: 5px;
     background-color: rgba(255, 255, 255, 1);
 }
 
 div.hit-content {
-    padding: 10px 20px 10px 20px;
+    padding: 15px 35px 15px 30px;
     transition-duration: 0.2s;
 }
 
@@ -138,7 +138,7 @@ li.ais-pagination--item {
 }
 
 span.ais-pagination--link {
-    color: rgba(0, 0, 0, 0.1);
+    color: rgba(0, 0, 0, 0.05);
     display: block;
     margin-top: -2px;
 }
@@ -149,7 +149,7 @@ a.ais-pagination--link {
     height: 28px;
     border-radius: 4px;
     display: block;
-    color: rgba(0, 0, 0, 0.28);
+    color: rgba(0, 0, 0, 0.3);
     text-decoration: none;
     transition-duration: 0.2s;
 }
@@ -160,7 +160,7 @@ ul.ais-pagination {
     position: absolute;
     top: 10px;
     left: 50%;
-    width: 94%;
+    width: 90%;
     padding: 0px;
     margin: 0px;
     transform: translate(-50%, 0);

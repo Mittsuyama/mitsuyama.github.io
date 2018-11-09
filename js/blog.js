@@ -81,20 +81,25 @@ $(document).ready(function() {
             imgSrc = $(this).attr("src"); 
             Dis = $(this).offset().top;
             $("<img/>").attr("src", imgSrc).load(function() {
-                imgWidth = this.width;
-                imgHeight = this.height;
+                imgWidth = parseFloat(this.width);
+                imgHeight = parseFloat(this.height);
                 $('.imgBack').css("height", $(document.body).height() + 2000 + 'px');
                 $('.imgBack').html('<img src = ' + imgSrc + ' class = "biggerImg"></img>');
-                var shWitdh = 0;
-                //alert(imgWidth + ' & ' + $(window).width() * 0.8);
+                if(imgWidth > $(window).width() * 0.8) {
+                    imgHeight *= ($(window).width() * 0.8 / imgWidth);
+                    imgWidth = $(window).width() * 0.8;
+                    //alert(imgWidth + ' & ' + imgHeight);
+                }
+                //alert(imgWidth + ' & ' + imgHeight);
                 if(imgHeight < $(window).height()) {
-                    $('.biggerImg').css("top", parseFloat($(window).scrollTop()) / screenWidthRate + parseFloat(($(window).height() - imgHeight)) / 2.0 + 'px');
+                    $('.biggerImg').css("top", parseFloat($(window).scrollTop()) / screenWidthRate + parseFloat(($(window).height() - imgHeight)) / 2.0 / screenWidthRate + 'px');
                 }
                 else {
                     $('.biggerImg').css("top", parseFloat($(window).scrollTop()) / screenWidthRate + 'px');
                 }
-                shWitdh = Math.min($(window).width() * 0.8, imgWidth) + 'px';
-                $('.biggerImg').animate({width: shWitdh}, tempTime);
+                //alert(imgHeight * 0.8 + ' & ' + $(window).height());
+                //shWitdh = Math.min($(window).width() * 0.8, imgWidth) + 'px';
+                $('.biggerImg').animate({width: imgWidth}, tempTime);
             });
         });
 
