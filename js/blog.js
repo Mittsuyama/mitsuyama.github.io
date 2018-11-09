@@ -203,11 +203,17 @@ else {
         screenWidthRate = 1;
         $('body').css("zoom", screenWidthRate);
         $('.articleBorder').css("width", "100%");
-        $('.blogTitle').css("left", "10%");
+        $('.blogTitle').css("left", "10px");
         $('.blogTitle').css("font-size", "50px");
-        $('.tagContainer').css("left", "10%");
-        $('.tagContainer').css("font-size", "20px");
-        $('.articleBorder').css("box-shadow", "10px 1px 20px 5px rgba(0,0,0,0.00), 10px 1px 30px 7px rgba(0,0,0,0.00)")
+        $('.blogTitle').css("top", "100px");
+        $('.tagContainer').css("display", "none");
+        $('.articleBorder').css("box-shadow", "10px 1px 20px 5px rgba(0,0,0,0.00), 10px 1px 30px 7px rgba(0,0,0,0.00)");
+        $('.articleBorder').css("padding", "0px 10px 100px 10px");
+        $('.blogTitleImg').css("display", "none");
+        $('.navigation_content2').css("display", "none");
+        $('.nav_text_home').css("left", "0px");
+        $('#disqus_thread').css("width", "90%");
+        
 
         $(window).load(function(){
             //图片放大
