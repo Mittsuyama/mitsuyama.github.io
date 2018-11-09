@@ -1,13 +1,7 @@
-Markdown 上一些 MathJax
+MathJax 中的常用表达
 Mathematic
 粗略地列了一些常用的 MathJax 公式 —— 未完成
 2018-10-6
-
-# Markdown 上一些 MathJax 语法
-
-Tag: `数学`
-
-[TOC]
 
 
 
