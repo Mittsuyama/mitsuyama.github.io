@@ -259,14 +259,14 @@ div.quote {
     color: #888888;
     margin: 30px 0px 30px 0px;
     text-indent: -30px;
-    padding-left: 70px;    
+    padding-left: 70px;
     width: 100%;
 }
 
 div.quoteAgain {
     color: #888888;
     margin: 30px 0px 30px 0px;
-    padding: 0px 0px 0px 70px;   
+    padding-left: 70px;
     width: 100%; 
 }
 
