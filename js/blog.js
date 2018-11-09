@@ -200,8 +200,14 @@ else {
 
         $('#shareBigBox').hide();
         shareBoxShow = 0;
+        screenWidthRate = parseFloat($(document.body).width() / 1920.0) + (1920 - $(document.body).width()) / 1920 * 0.75;
         $('body').css("zoom", screenWidthRate);
         $('.articleBorder').css("width", "100%");
+        $('.blogTitle').css("left", "10%");
+        $('.blogTitle').css("font-size", "50px");
+        $('.tagContainer').css("left", "10%");
+        $('.tagContainer').css("font-size", "20px");
+        $('.articleBorder').css("box-shadow", "10px 1px 20px 5px rgba(0,0,0,0.00), 10px 1px 30px 7px rgba(0,0,0,0.00)")
 
         $(window).load(function(){
             //图片放大

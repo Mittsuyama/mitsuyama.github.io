@@ -137,7 +137,17 @@ index = client.init_index('index_name')
                 <div class = "normal" style = "padding-left: 25px; text-indent: -24px;"><span class = "strong">3.&nbsp&nbsp</span>index_name：图一中的编号&nbsp2，就是&nbspindex_name。</div>
                 <div class = "h5">正式上传数据</div>
                 <a href = "https://www.algolia.com/doc/api-client/indexing/" class = "conncetion"><i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp&nbsp&nbsp上传数据的官方文档</a>
-                <div class = "normal">上传的每一个&nbspobject&nbsp都与一个&nbspobjectID&nbsp一一对应，如果没有设置&nbspobjectID，algolia&nbsp会自动给你随机一个&nbspID。</div>
+                <div class = "normal">常用的&nbspAPI&nbsp一共有三种，Add（增加），Delete（删除），Update（更新），由于&nbspobjectID&nbsp的存在，其实用不上&nbspUpdate，接下来会解释。</div>
+                <div class = "normal">上传的每一个&nbspobject&nbsp都与一个&nbspobjectID&nbsp一一对应，如果没有设定&nbspobjectID，algolia&nbsp会自动给你随机一个&nbspID。</div>
+                <pre><code class = "python">
+index.add_object({
+	"Key1": "Value1",
+	"Key2": "Vaule2"
+	}, "objectID"
+)
+                </code></pre>
+                <div class = "normal">这是添加单个&nbspobject。</div>
+                <div class = "normal">在自己设定了&nbspobjectID&nbsp的情况下，如果&nbspadd&nbsp一个&nbspobject&nbsp而&nbspobjectID&nbsp之前添加过，就会进行更新操作（Update）而不是添加一个新的。</div>
 
                     <!--<div class = "blogTrans">
                         <div class = "lastBlogTitle"></div>
