@@ -18,9 +18,10 @@ body {
 }
 
 div.funButtonBox{
+    transform: translate(-50%, -50%);
     display: none;
     position: fixed;
-    top: 480px;
+    top: 600px;
     right: 16%;
     width: 50px;
     height: 300px;

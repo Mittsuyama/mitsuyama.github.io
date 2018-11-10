@@ -128,7 +128,7 @@ div.nav_text_home:hover {
 }
 
 div.home_background {
-    zoom: 0.85;
+    zoom: 0.72;
     width: 100%;
     background-color: #f9f9f9f9;
 }
@@ -143,7 +143,8 @@ div.homeInter {
 div.text_container {
     padding-top: 100px;
     position: relative;
-    margin-left: 11%;
+    transform: translate(-50%, 0);
+    left: 50%;
     width: 80%;
 }
 
@@ -180,13 +181,13 @@ div.briefIntro {
     position: relative;
     width: 100%;
     height: 85px;
-    padding: 11px 8px 0px 8px;
+    padding: 5px 8px 0px 8px;
 }
 
 p.briefIntroContext {
     opacity: 1;
     position: absolute;
-    font-size: 16px;
+    font-size: 17px;
     width: 95%;
     color: rgb(160, 160, 160);
     margin: 0px;
