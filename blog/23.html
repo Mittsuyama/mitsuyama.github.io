@@ -76,6 +76,7 @@
                     <div class = "contentTitile">┌─ 目录 ───────</div>
                                 <a href = "#1" class = "contentListCon" style = "color: rgba(0, 0, 0, 0.5); font-weight: bold;">群的定义和例子</a>
             <a href = "#3" class = "contentListCon" style = "color: rgba(0, 0, 0, 0.5); font-weight: bold;">群的简单性质</a>
+            <a href = "#4" class = "contentListCon" style = "color: rgba(0, 0, 0, 0.5); font-weight: bold;">子群&nbsp&nbsp生成子群</a>
 
                 </div>
             </div>
@@ -148,6 +149,60 @@ $$
                 <div class = "normal">$G$&nbsp对二元代数运算&nbsp$\circ$&nbsp构成群的充分必要条件是一下两个条件：</div>
                 <div class = "normal" style = "padding-left: 25px; text-indent: -24px;"><span class = "strong">1.&nbsp&nbsp</span>&nbsp满足交换律</div>
                 <div class = "normal" style = "padding-left: 25px; text-indent: -24px;"><span class = "strong">2.&nbsp&nbsp</span>&nbsp$ax&nbsp=&nbspb$，$ya&nbsp=&nbspb$，$x，y$&nbsp解唯一。</div>
+                <div class = "h5">定理&nbsp&nbsp2.7：</div>
+                <div class = "normal">群&nbsp$G$&nbsp中的乘法满足消去律，即对&nbsp$\forall&nbspx,&nbspy,&nbspa&nbsp\in&nbspG$:</div>
+$$
+ax = ay，那么 x = y，满足左消去律 \\
+xa = ya，那么 x = y，满足右消去律
+$$
+                <div class = "h5">定理&nbsp&nbsp2.8：</div>
+                <div class = "normal">非空有限集合&nbsp$G$&nbsp对二元代数运算&nbsp$\circ$&nbsp构成群的充分必要条件是以下两个条件同时成立：</div>
+                <div class = "normal" style = "padding-left: 25px; text-indent: -24px;"><span class = "strong">1.&nbsp&nbsp</span>$\circ$&nbsp满足结合律</div>
+                <div class = "normal" style = "padding-left: 25px; text-indent: -24px;"><span class = "strong">2.&nbsp&nbsp</span>$\circ$&nbsp满足左消去律</div>
+                <div class = "normal">证明：根据之前的一个定理&nbsp$sS&nbsp=&nbspS，St&nbsp=&nbspt$&nbsp则为群。</div>
+                <div class = "normal">求证：$gG&nbsp=&nbspG$。</div>
+                <div class = "normal">做映射：$f:&nbspG&nbsp\to&nbspgG$&nbsp使得对于&nbsp$\forall&nbspx&nbsp\in&nbspG$，$f(x)&nbsp=&nbspgx$，若双射，则基数相等，再根据：</div>
+$$
+\left.
+\begin{array}{1}
+A \subseteq B \\
+|A| = |B|\\
+\end{array}
+\right\}
+\Rightarrow A = B
+$$
+                <div class = "h5">定义&nbsp&nbsp2.1：</div>
+                <div class = "normal">设&nbsp$G$&nbsp是一个群，$a&nbsp\in&nbspG$，$a^n&nbsp=&nbspe$&nbsp的最小整数&nbsp$n$&nbsp为&nbsp$a$&nbsp的阶，如果这样的正整数不存在，则&nbsp$a$&nbsp的阶无穷大，记&nbsp$a^{o(a)}&nbsp=&nbspe$</div>
+                <div class = "h5">定理&nbsp&nbsp2.9：</div>
+                <div class = "normal">有限群的每个元素的阶不超过有限群的阶</div>
+                <div class = "normal">例&nbsp1：3&nbsp阶群是交换群</div>
+                <div class = "normal">例&nbsp2；4&nbsp阶群中无&nbsp3&nbsp阶元素</div>
+                <div class = "h2" id = "4">子群&nbsp&nbsp生成子群</div><div id = "hUnderline"></div>
+                <div class = "h5">定义&nbsp&nbsp3.1：</div>
+                <div class = "normal">设&nbsp$S$&nbsp是群&nbsp$G$&nbsp的非空子集，如果&nbsp$G$&nbsp的乘法在&nbsp$S$&nbsp中封闭（$S&nbsp\circ&nbspS&nbsp=&nbspS$）且对此乘法也构成一个群，则称&nbsp$S$&nbsp是&nbsp$G$&nbsp的子群（记为&nbsp$S&nbsp<&nbspG$）</div>
+                <div class = "h5">例&nbsp&nbsp1：</div>
+                <div class = "normal">任何一个至少含有两个元素的群&nbsp$G$，至少有两个不同的子群，一个是&nbsp$G$，一个是&nbsp$\{e\}$</div>
+                <div class = "h5">例&nbsp&nbsp2：</div>
+                <div class = "normal">$(Z,&nbsp+)&nbsp<&nbsp(Q,&nbsp+)$</div>
+                <div class = "h5">例&nbsp&nbsp3：</div>
+                <div class = "normal">偶数集合&nbsp$(2Z,&nbsp+)&nbsp<&nbsp(Z,&nbsp+)$</div>
+                <div class = "h5">定理&nbsp&nbsp3.1：</div>
+                <div class = "normal">设&nbsp$G_1&nbsp<&nbspG$&nbsp，那么&nbsp$G_1$&nbsp中单位元是&nbsp$G$&nbsp中的单位元，$a$&nbsp在&nbsp$G_1$&nbsp中的逆元素也是在&nbsp$G$&nbsp中的逆元。</div>
+                <div class = "h5">定理&nbsp&nbsp3.2：</div>
+                <div class = "normal">群&nbsp$G$&nbsp的非空子集&nbsp$S$&nbsp是&nbsp$G$&nbsp子群的充分必要条件：</div>
+                <div class = "normal" style = "padding-left: 25px; text-indent: -24px;"><span class = "strong">1.&nbsp&nbsp</span>$\forall&nbspa,&nbspb&nbsp\in&nbspS，ab&nbsp\in&nbspS$</div>
+                <div class = "normal" style = "padding-left: 25px; text-indent: -24px;"><span class = "strong">2.&nbsp&nbsp</span>$\forall&nbsp&nbspa&nbsp\in&nbspS，a^{-1}&nbsp\in&nbspS$</div>
+                <div class = "h5">定理&nbsp&nbsp3.3：</div>
+                <div class = "normal">群&nbsp$G$&nbsp的任意多个子群的交还是&nbsp$G$&nbsp的子群。</div>
+                <div class = "h5">例&nbsp&nbsp1：</div>
+                <div class = "normal">任何一个子群不能是它的两个真子群的并</div>
+                <div class = "h5">定理&nbsp&nbsp3.5：</div>
+                <div class = "normal">群&nbsp$G$&nbsp的非空有限集合&nbsp$F$&nbsp是&nbsp$G$&nbsp的子群的充分必要条件：</div>
+                <div class = "normal">$FF&nbsp\subseteq&nbspF$，即对&nbsp$\forall&nbspa,&nbspb&nbsp\in&nbspF$，$ab&nbsp\in&nbspF$</div>
+                <div class = "h5">定义&nbsp&nbsp3.6：</div>
+                <div class = "normal">群&nbsp$G$&nbsp的元素&nbsp$a$&nbsp称为&nbsp$G$&nbsp的中心元素，如果&nbsp$a$&nbsp与&nbsp$G$&nbsp的每个元素可交换，即对&nbsp$\forall&nbspx&nbsp\in&nbspG$，$xa&nbsp=&nbspax$，$G$&nbsp的所有种新元素的集合&nbsp$C$&nbsp称为&nbsp$G$&nbsp的中心。</div>
+                <div class = "h5">定理&nbsp&nbsp3.7：</div>
+                <div class = "normal">群&nbsp$G$&nbsp的中心&nbsp$C$&nbsp是&nbsp$G$&nbsp的可交换子群。</div>
 
                     <!--<div class = "blogTrans">
                         <div class = "lastBlogTitle"></div>

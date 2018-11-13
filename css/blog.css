@@ -18,10 +18,9 @@ body {
 }
 
 div.funButtonBox{
-    transform: translate(-50%, -50%);
     display: none;
     position: fixed;
-    top: 600px;
+    bottom: 150px;
     right: 16%;
     width: 50px;
     height: 300px;
@@ -234,7 +233,7 @@ div.h5 {
     background-position-y: 28px;
     background-size: 2.3%;*/
     font-weight: bold;
-    color: rgba(70, 150, 160, 0.8);
+    color: rgba(70, 180, 160, 0.8);
     font-size: 23px;
     margin-left: -61px;
     margin-top: 15px;
