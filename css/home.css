@@ -128,7 +128,7 @@ div.nav_text_home:hover {
 }
 
 div.home_background {
-    zoom: 0.72;
+    zoom: 0.85;
     width: 100%;
     background-color: #f9f9f9f9;
 }
@@ -151,7 +151,7 @@ div.text_container {
 button.box {
     position: absolute;
     border: 0;
-    border-radius: 5px;
+    border-radius: 0px;
     width: 274px;
     background-color: white;
     transition-duration: 0.2s;
@@ -174,7 +174,7 @@ div.boxUp {
 img.boxUpImg {
     position: relative;
     width: 100%;
-    border-radius: 5px 5px 0px 0px;
+    border-radius: 0px 0px 0px 0px;
 }
 
 div.briefIntro {

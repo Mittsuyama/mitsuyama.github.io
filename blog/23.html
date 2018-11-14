@@ -77,6 +77,8 @@
                                 <a href = "#1" class = "contentListCon" style = "color: rgba(0, 0, 0, 0.5); font-weight: bold;">群的定义和例子</a>
             <a href = "#3" class = "contentListCon" style = "color: rgba(0, 0, 0, 0.5); font-weight: bold;">群的简单性质</a>
             <a href = "#4" class = "contentListCon" style = "color: rgba(0, 0, 0, 0.5); font-weight: bold;">子群&nbsp&nbsp生成子群</a>
+            <a href = "#5" class = "contentListCon" style = "color: rgba(0, 0, 0, 0.5); font-weight: bold;">变换群&nbsp&nbsp同构</a>
+            <a href = "#6" class = "contentListCon" style = "color: rgba(0, 0, 0, 0.5); font-weight: bold;">循环群</a>
 
                 </div>
             </div>
@@ -116,14 +118,12 @@
                 <div class = "normal">设&nbsp$(G,&nbsp\circ)$&nbsp是一个群，$\forall&nbsp\in&nbspG$，$a$&nbsp的左逆元也是&nbsp$a$&nbsp的右逆元。</div>
                 <div class = "normal">证明：</div>
 $$
-\begin{align}
-&\forall a \in G，有 a_l \circ a = e，则 a_{l_l} \circ a = e \\
-&a_l \circ (a \circ a_l) = (a_l \circ a) \circ a_l = e \circ a_l = a_l \\
-&两边同乘 a_{a_l}，得：a_{l_l} \circ (a_l \circ (a \circ a_l)) = a_{l_l} \circ a_l \\
-&(a_{l_l} \circ a_l) \circ (a \circ a_l) = a_{l_l} \circ a_l \\
-&e \circ (a \circ a_l) = e \\
-&a \circ a_l = e
-\end{align}
+\forall a \in G，有 a_l \circ a = e，则 a_{l_l} \circ a = e \\
+a_l \circ (a \circ a_l) = (a_l \circ a) \circ a_l = e \circ a_l = a_l \\
+两边同乘 a_{a_l}，得：a_{l_l} \circ (a_l \circ (a \circ a_l)) = a_{l_l} \circ a_l \\
+(a_{l_l} \circ a_l) \circ (a \circ a_l) = a_{l_l} \circ a_l \\
+e \circ (a \circ a_l) = e \\
+a \circ a_l = e
 $$
                 <div class = "h5">定理&nbsp&nbsp2.2：</div>
                 <div class = "normal">左幺元就是右幺元：</div>
@@ -203,6 +203,51 @@ $$
                 <div class = "normal">群&nbsp$G$&nbsp的元素&nbsp$a$&nbsp称为&nbsp$G$&nbsp的中心元素，如果&nbsp$a$&nbsp与&nbsp$G$&nbsp的每个元素可交换，即对&nbsp$\forall&nbspx&nbsp\in&nbspG$，$xa&nbsp=&nbspax$，$G$&nbsp的所有种新元素的集合&nbsp$C$&nbsp称为&nbsp$G$&nbsp的中心。</div>
                 <div class = "h5">定理&nbsp&nbsp3.7：</div>
                 <div class = "normal">群&nbsp$G$&nbsp的中心&nbsp$C$&nbsp是&nbsp$G$&nbsp的可交换子群。</div>
+                <div class = "h2" id = "5">变换群&nbsp&nbsp同构</div><div id = "hUnderline"></div>
+                <div class = "h5">定义&nbsp&nbsp4.1：</div>
+                <div class = "normal">设&nbsp$(G_1,&nbsp\circ)$&nbsp$(G_2,&nbsp*)$&nbsp是群，如果存在一个一一对应&nbsp$\phi:&nbspG_1&nbsp\to&nbspG_2$，使得对&nbsp$\forall&nbspa,&nbspb&nbsp\in&nbspG$，都有&nbsp$\phi(a&nbsp\circ&nbspb)&nbsp=&nbsp\phi(a)&nbsp*&nbsp\phi(b)$，则称群&nbsp$G_1$与&nbsp$G_2$&nbsp同构，记为&nbsp$G_1&nbsp\cong&nbspG_2$，此时&nbsp$\phi$&nbsp称为&nbsp$G_1$&nbsp到&nbsp$G_2$&nbsp上的一个同构。</div>
+                <div class = "h5">定义&nbsp&nbsp4.2：</div>
+                <div class = "normal">设&nbsp$S$&nbsp是一个非空集合，$Sym(S)$&nbsp是从&nbsp$S$&nbsp到&nbsp$S$&nbsp的一一对应关系，对映射的合成，构成一个群，当&nbsp$S&nbsp=&nbsp\{1,&nbsp2,&nbsp\ldots,&nbspn\}$&nbsp时，记&nbsp$Sym(S)&nbsp=&nbspS_n$，$Sym(s)$&nbsp的任一子群称为&nbsp$S$&nbsp的一个变换群，$S_n$&nbsp的任一子群称为置换群。</div>
+                <div class = "h5">定理&nbsp&nbsp4.1：</div>
+                <div class = "normal">任何一个群都同构一个变换群</div>
+                <div class = "h5">定理&nbsp&nbsp4.2：</div>
+                <div class = "normal">任何一个&nbsp$n$&nbsp阶有限群都同构&nbsp$n$&nbsp次置换群&nbsp$S_n$&nbsp的一个&nbsp$n$&nbsp阶子群。</div>
+                <div class = "h5">定义&nbsp&nbsp4.3&nbsp&nbsp：</div>
+                <div class = "normal">设&nbsp$(G,&nbsp\circ)$&nbsp是一个群，如果存在一个从&nbsp$G$&nbsp到&nbsp$G$&nbsp的一一对应&nbsp$\phi$，使得对&nbsp$\forall&nbspa,&nbspb&nbsp\in&nbspG$，都有：</div>
+$$
+\phi(a \circ b) = \phi(a) \circ \phi(b)
+$$
+                <div class = "normal">则称&nbsp$\phi$&nbsp是&nbsp$G$&nbsp的一个自同构。</div>
+                <div class = "h2" id = "6">循环群</div><div id = "hUnderline"></div>
+                <div class = "h5">定义&nbsp&nbsp5.1：</div>
+                <div class = "normal">群&nbsp$G$&nbsp称为循环群，如果&nbsp$G$&nbsp是由其中某个元素&nbsp$a$&nbsp生成的，即&nbsp$(a)&nbsp&nbsp=&nbspG$</div>
+                <div class = "normal">如：整数加法群&nbsp$(Z,&nbsp+)$&nbsp是循环群，其生成元为&nbsp1.</div>
+                <div class = "h5">定理&nbsp&nbsp5.2：</div>
+                <div class = "normal">循环群&nbsp$G&nbsp=&nbsp(a)$&nbsp是无穷循环群的充分必要条件是&nbsp$a$&nbsp的阶无穷大，此时：</div>
+$$
+G = \{\ldots, a_n, \ldots, a^{-2}, a^{-1}, e, a^1, a^2, \ldots, a^n, \ldots\}
+$$
+                <div class = "normal">循环群&nbsp$G&nbsp=&nbsp(a)$&nbsp是&nbsp$n$&nbsp阶循环群的充分必要条件是&nbsp$a$&nbsp的阶为&nbsp$n$，此时：</div>
+$$
+G = \{e, a, a^2, \ldots, a^{n-1}\}
+$$
+                <div class = "h5">定理&nbsp&nbsp5.2：</div>
+                <div class = "normal" style = "padding-left: 25px; text-indent: -24px;"><span class = "strong">1.&nbsp&nbsp</span>无穷循环群同构于整数加群&nbsp$(Z,&nbsp+)$.</div>
+                <div class = "normal" style = "padding-left: 25px; text-indent: -24px;"><span class = "strong">2.&nbsp&nbsp</span>阶为&nbsp$n$&nbsp的有限循环群同构于膜&nbsp$n$&nbsp剩余类加群&nbsp$(Z_n,&nbsp+)$.&nbsp</div>
+                <div class = "h5">定理&nbsp&nbsp5.3：</div>
+                <div class = "normal">循环群&nbsp$G&nbsp=&nbsp(a)$&nbsp是由&nbsp$a$&nbsp生成的循环群，则：</div>
+                <div class = "normal" style = "padding-left: 25px; text-indent: -24px;"><span class = "strong">1.&nbsp&nbsp</span>循环群的子群还是循环群</div>
+                <div class = "normal" style = "padding-left: 25px; text-indent: -24px;"><span class = "strong">2.&nbsp&nbsp</span>如果&nbsp$G$&nbsp是无穷循环群，则&nbsp$G$&nbsp的子群为&nbsp$H_0&nbsp=&nbsp\{e\}$，或是某个具有最小正整数的元&nbsp$a^m$&nbsp生成的。于是，对&nbsp$m&nbsp=&nbsp1,&nbsp2,&nbsp\ldots,$</div>
+$$
+H_0 = \{e\}，H_m = (a^m)
+$$
+                <div class = "normal">是&nbsp$G$&nbsp的所有子群。</div>
+                <div class = "normal" style = "padding-left: 25px; text-indent: -24px;"><span class = "strong">3.&nbsp&nbsp</span>无穷循环群中，除了&nbsp$H_0&nbsp=&nbsp\{e\}$&nbsp外，都是无穷循环子群，从而都同构于&nbsp$G$&nbsp本身。</div>
+                <div class = "normal" style = "padding-left: 25px; text-indent: -24px;"><span class = "strong">4.&nbsp&nbsp</span>阶为&nbsp$n$&nbsp的循环群中，每个子群的阶整除&nbsp$n$。对&nbsp$n$&nbsp的任一因子&nbsp$q$&nbsp必有一个阶为&nbsp$q$&nbsp的子群。于是&nbsp$G$&nbsp的全部子群为：</div>
+$$
+H_0 = \{e\}，H_m = (a^m)， m | n
+$$
+                <div class = "normal">每个子群&nbsp$H_m$&nbsp的阶为&nbsp$n&nbsp/&nbspm$.</div>
 
                     <!--<div class = "blogTrans">
                         <div class = "lastBlogTitle"></div>
