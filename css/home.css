@@ -249,7 +249,7 @@ p.infoText {
     font-family: "等线";
     font-weight: bold;
     color: #666666;
-    padding: 11px 9px 0px 11px;
+    padding: 7px 9px 0px 11px;
     margin: 0px;
 }
 
@@ -257,7 +257,7 @@ p.tagText {
     position: absolute;
     font-size: 15px;
     left: 14px;
-    top: 10px;
+    top: 5px;
     color: gray;
 }
 
