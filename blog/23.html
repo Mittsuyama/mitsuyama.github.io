@@ -76,6 +76,9 @@
                     <div class = "contentTitile">┌─ 目录 ───────</div>
                                 <a href = "#1" class = "contentListCon" style = "color: rgba(0, 0, 0, 0.5); font-weight: bold;">群的定义和例子</a>
             <a href = "#3" class = "contentListCon" style = "color: rgba(0, 0, 0, 0.5); font-weight: bold;">群的简单性质</a>
+            <a href = "#4" class = "contentListCon" style = "color: rgba(0, 0, 0, 0.5); font-weight: bold;">子群&nbsp&nbsp生成子群</a>
+            <a href = "#5" class = "contentListCon" style = "color: rgba(0, 0, 0, 0.5); font-weight: bold;">变换群&nbsp&nbsp同构</a>
+            <a href = "#6" class = "contentListCon" style = "color: rgba(0, 0, 0, 0.5); font-weight: bold;">循环群</a>
 
                 </div>
             </div>
@@ -115,14 +118,12 @@
                 <div class = "normal">设&nbsp$(G,&nbsp\circ)$&nbsp是一个群，$\forall&nbsp\in&nbspG$，$a$&nbsp的左逆元也是&nbsp$a$&nbsp的右逆元。</div>
                 <div class = "normal">证明：</div>
 $$
-\begin{align}
-&\forall a \in G，有 a_l \circ a = e，则 a_{l_l} \circ a = e \\
-&a_l \circ (a \circ a_l) = (a_l \circ a) \circ a_l = e \circ a_l = a_l \\
-&两边同乘 a_{a_l}，得：a_{l_l} \circ (a_l \circ (a \circ a_l)) = a_{l_l} \circ a_l \\
-&(a_{l_l} \circ a_l) \circ (a \circ a_l) = a_{l_l} \circ a_l \\
-&e \circ (a \circ a_l) = e \\
-&a \circ a_l = e
-\end{align}
+\forall a \in G，有 a_l \circ a = e，则 a_{l_l} \circ a = e \\
+a_l \circ (a \circ a_l) = (a_l \circ a) \circ a_l = e \circ a_l = a_l \\
+两边同乘 a_{a_l}，得：a_{l_l} \circ (a_l \circ (a \circ a_l)) = a_{l_l} \circ a_l \\
+(a_{l_l} \circ a_l) \circ (a \circ a_l) = a_{l_l} \circ a_l \\
+e \circ (a \circ a_l) = e \\
+a \circ a_l = e
 $$
                 <div class = "h5">定理&nbsp&nbsp2.2：</div>
                 <div class = "normal">左幺元就是右幺元：</div>
@@ -148,6 +149,105 @@ $$
                 <div class = "normal">$G$&nbsp对二元代数运算&nbsp$\circ$&nbsp构成群的充分必要条件是一下两个条件：</div>
                 <div class = "normal" style = "padding-left: 25px; text-indent: -24px;"><span class = "strong">1.&nbsp&nbsp</span>&nbsp满足交换律</div>
                 <div class = "normal" style = "padding-left: 25px; text-indent: -24px;"><span class = "strong">2.&nbsp&nbsp</span>&nbsp$ax&nbsp=&nbspb$，$ya&nbsp=&nbspb$，$x，y$&nbsp解唯一。</div>
+                <div class = "h5">定理&nbsp&nbsp2.7：</div>
+                <div class = "normal">群&nbsp$G$&nbsp中的乘法满足消去律，即对&nbsp$\forall&nbspx,&nbspy,&nbspa&nbsp\in&nbspG$:</div>
+$$
+ax = ay，那么 x = y，满足左消去律 \\
+xa = ya，那么 x = y，满足右消去律
+$$
+                <div class = "h5">定理&nbsp&nbsp2.8：</div>
+                <div class = "normal">非空有限集合&nbsp$G$&nbsp对二元代数运算&nbsp$\circ$&nbsp构成群的充分必要条件是以下两个条件同时成立：</div>
+                <div class = "normal" style = "padding-left: 25px; text-indent: -24px;"><span class = "strong">1.&nbsp&nbsp</span>$\circ$&nbsp满足结合律</div>
+                <div class = "normal" style = "padding-left: 25px; text-indent: -24px;"><span class = "strong">2.&nbsp&nbsp</span>$\circ$&nbsp满足左消去律</div>
+                <div class = "normal">证明：根据之前的一个定理&nbsp$sS&nbsp=&nbspS，St&nbsp=&nbspt$&nbsp则为群。</div>
+                <div class = "normal">求证：$gG&nbsp=&nbspG$。</div>
+                <div class = "normal">做映射：$f:&nbspG&nbsp\to&nbspgG$&nbsp使得对于&nbsp$\forall&nbspx&nbsp\in&nbspG$，$f(x)&nbsp=&nbspgx$，若双射，则基数相等，再根据：</div>
+$$
+\left.
+\begin{array}{1}
+A \subseteq B \\
+|A| = |B|\\
+\end{array}
+\right\}
+\Rightarrow A = B
+$$
+                <div class = "h5">定义&nbsp&nbsp2.1：</div>
+                <div class = "normal">设&nbsp$G$&nbsp是一个群，$a&nbsp\in&nbspG$，$a^n&nbsp=&nbspe$&nbsp的最小整数&nbsp$n$&nbsp为&nbsp$a$&nbsp的阶，如果这样的正整数不存在，则&nbsp$a$&nbsp的阶无穷大，记&nbsp$a^{o(a)}&nbsp=&nbspe$</div>
+                <div class = "h5">定理&nbsp&nbsp2.9：</div>
+                <div class = "normal">有限群的每个元素的阶不超过有限群的阶</div>
+                <div class = "normal">例&nbsp1：3&nbsp阶群是交换群</div>
+                <div class = "normal">例&nbsp2；4&nbsp阶群中无&nbsp3&nbsp阶元素</div>
+                <div class = "h2" id = "4">子群&nbsp&nbsp生成子群</div><div id = "hUnderline"></div>
+                <div class = "h5">定义&nbsp&nbsp3.1：</div>
+                <div class = "normal">设&nbsp$S$&nbsp是群&nbsp$G$&nbsp的非空子集，如果&nbsp$G$&nbsp的乘法在&nbsp$S$&nbsp中封闭（$S&nbsp\circ&nbspS&nbsp=&nbspS$）且对此乘法也构成一个群，则称&nbsp$S$&nbsp是&nbsp$G$&nbsp的子群（记为&nbsp$S&nbsp<&nbspG$）</div>
+                <div class = "h5">例&nbsp&nbsp1：</div>
+                <div class = "normal">任何一个至少含有两个元素的群&nbsp$G$，至少有两个不同的子群，一个是&nbsp$G$，一个是&nbsp$\{e\}$</div>
+                <div class = "h5">例&nbsp&nbsp2：</div>
+                <div class = "normal">$(Z,&nbsp+)&nbsp<&nbsp(Q,&nbsp+)$</div>
+                <div class = "h5">例&nbsp&nbsp3：</div>
+                <div class = "normal">偶数集合&nbsp$(2Z,&nbsp+)&nbsp<&nbsp(Z,&nbsp+)$</div>
+                <div class = "h5">定理&nbsp&nbsp3.1：</div>
+                <div class = "normal">设&nbsp$G_1&nbsp<&nbspG$&nbsp，那么&nbsp$G_1$&nbsp中单位元是&nbsp$G$&nbsp中的单位元，$a$&nbsp在&nbsp$G_1$&nbsp中的逆元素也是在&nbsp$G$&nbsp中的逆元。</div>
+                <div class = "h5">定理&nbsp&nbsp3.2：</div>
+                <div class = "normal">群&nbsp$G$&nbsp的非空子集&nbsp$S$&nbsp是&nbsp$G$&nbsp子群的充分必要条件：</div>
+                <div class = "normal" style = "padding-left: 25px; text-indent: -24px;"><span class = "strong">1.&nbsp&nbsp</span>$\forall&nbspa,&nbspb&nbsp\in&nbspS，ab&nbsp\in&nbspS$</div>
+                <div class = "normal" style = "padding-left: 25px; text-indent: -24px;"><span class = "strong">2.&nbsp&nbsp</span>$\forall&nbsp&nbspa&nbsp\in&nbspS，a^{-1}&nbsp\in&nbspS$</div>
+                <div class = "h5">定理&nbsp&nbsp3.3：</div>
+                <div class = "normal">群&nbsp$G$&nbsp的任意多个子群的交还是&nbsp$G$&nbsp的子群。</div>
+                <div class = "h5">例&nbsp&nbsp1：</div>
+                <div class = "normal">任何一个子群不能是它的两个真子群的并</div>
+                <div class = "h5">定理&nbsp&nbsp3.5：</div>
+                <div class = "normal">群&nbsp$G$&nbsp的非空有限集合&nbsp$F$&nbsp是&nbsp$G$&nbsp的子群的充分必要条件：</div>
+                <div class = "normal">$FF&nbsp\subseteq&nbspF$，即对&nbsp$\forall&nbspa,&nbspb&nbsp\in&nbspF$，$ab&nbsp\in&nbspF$</div>
+                <div class = "h5">定义&nbsp&nbsp3.6：</div>
+                <div class = "normal">群&nbsp$G$&nbsp的元素&nbsp$a$&nbsp称为&nbsp$G$&nbsp的中心元素，如果&nbsp$a$&nbsp与&nbsp$G$&nbsp的每个元素可交换，即对&nbsp$\forall&nbspx&nbsp\in&nbspG$，$xa&nbsp=&nbspax$，$G$&nbsp的所有种新元素的集合&nbsp$C$&nbsp称为&nbsp$G$&nbsp的中心。</div>
+                <div class = "h5">定理&nbsp&nbsp3.7：</div>
+                <div class = "normal">群&nbsp$G$&nbsp的中心&nbsp$C$&nbsp是&nbsp$G$&nbsp的可交换子群。</div>
+                <div class = "h2" id = "5">变换群&nbsp&nbsp同构</div><div id = "hUnderline"></div>
+                <div class = "h5">定义&nbsp&nbsp4.1：</div>
+                <div class = "normal">设&nbsp$(G_1,&nbsp\circ)$&nbsp$(G_2,&nbsp*)$&nbsp是群，如果存在一个一一对应&nbsp$\phi:&nbspG_1&nbsp\to&nbspG_2$，使得对&nbsp$\forall&nbspa,&nbspb&nbsp\in&nbspG$，都有&nbsp$\phi(a&nbsp\circ&nbspb)&nbsp=&nbsp\phi(a)&nbsp*&nbsp\phi(b)$，则称群&nbsp$G_1$与&nbsp$G_2$&nbsp同构，记为&nbsp$G_1&nbsp\cong&nbspG_2$，此时&nbsp$\phi$&nbsp称为&nbsp$G_1$&nbsp到&nbsp$G_2$&nbsp上的一个同构。</div>
+                <div class = "h5">定义&nbsp&nbsp4.2：</div>
+                <div class = "normal">设&nbsp$S$&nbsp是一个非空集合，$Sym(S)$&nbsp是从&nbsp$S$&nbsp到&nbsp$S$&nbsp的一一对应关系，对映射的合成，构成一个群，当&nbsp$S&nbsp=&nbsp\{1,&nbsp2,&nbsp\ldots,&nbspn\}$&nbsp时，记&nbsp$Sym(S)&nbsp=&nbspS_n$，$Sym(s)$&nbsp的任一子群称为&nbsp$S$&nbsp的一个变换群，$S_n$&nbsp的任一子群称为置换群。</div>
+                <div class = "h5">定理&nbsp&nbsp4.1：</div>
+                <div class = "normal">任何一个群都同构一个变换群</div>
+                <div class = "h5">定理&nbsp&nbsp4.2：</div>
+                <div class = "normal">任何一个&nbsp$n$&nbsp阶有限群都同构&nbsp$n$&nbsp次置换群&nbsp$S_n$&nbsp的一个&nbsp$n$&nbsp阶子群。</div>
+                <div class = "h5">定义&nbsp&nbsp4.3&nbsp&nbsp：</div>
+                <div class = "normal">设&nbsp$(G,&nbsp\circ)$&nbsp是一个群，如果存在一个从&nbsp$G$&nbsp到&nbsp$G$&nbsp的一一对应&nbsp$\phi$，使得对&nbsp$\forall&nbspa,&nbspb&nbsp\in&nbspG$，都有：</div>
+$$
+\phi(a \circ b) = \phi(a) \circ \phi(b)
+$$
+                <div class = "normal">则称&nbsp$\phi$&nbsp是&nbsp$G$&nbsp的一个自同构。</div>
+                <div class = "h2" id = "6">循环群</div><div id = "hUnderline"></div>
+                <div class = "h5">定义&nbsp&nbsp5.1：</div>
+                <div class = "normal">群&nbsp$G$&nbsp称为循环群，如果&nbsp$G$&nbsp是由其中某个元素&nbsp$a$&nbsp生成的，即&nbsp$(a)&nbsp&nbsp=&nbspG$</div>
+                <div class = "normal">如：整数加法群&nbsp$(Z,&nbsp+)$&nbsp是循环群，其生成元为&nbsp1.</div>
+                <div class = "h5">定理&nbsp&nbsp5.2：</div>
+                <div class = "normal">循环群&nbsp$G&nbsp=&nbsp(a)$&nbsp是无穷循环群的充分必要条件是&nbsp$a$&nbsp的阶无穷大，此时：</div>
+$$
+G = \{\ldots, a_n, \ldots, a^{-2}, a^{-1}, e, a^1, a^2, \ldots, a^n, \ldots\}
+$$
+                <div class = "normal">循环群&nbsp$G&nbsp=&nbsp(a)$&nbsp是&nbsp$n$&nbsp阶循环群的充分必要条件是&nbsp$a$&nbsp的阶为&nbsp$n$，此时：</div>
+$$
+G = \{e, a, a^2, \ldots, a^{n-1}\}
+$$
+                <div class = "h5">定理&nbsp&nbsp5.2：</div>
+                <div class = "normal" style = "padding-left: 25px; text-indent: -24px;"><span class = "strong">1.&nbsp&nbsp</span>无穷循环群同构于整数加群&nbsp$(Z,&nbsp+)$.</div>
+                <div class = "normal" style = "padding-left: 25px; text-indent: -24px;"><span class = "strong">2.&nbsp&nbsp</span>阶为&nbsp$n$&nbsp的有限循环群同构于膜&nbsp$n$&nbsp剩余类加群&nbsp$(Z_n,&nbsp+)$.&nbsp</div>
+                <div class = "h5">定理&nbsp&nbsp5.3：</div>
+                <div class = "normal">循环群&nbsp$G&nbsp=&nbsp(a)$&nbsp是由&nbsp$a$&nbsp生成的循环群，则：</div>
+                <div class = "normal" style = "padding-left: 25px; text-indent: -24px;"><span class = "strong">1.&nbsp&nbsp</span>循环群的子群还是循环群</div>
+                <div class = "normal" style = "padding-left: 25px; text-indent: -24px;"><span class = "strong">2.&nbsp&nbsp</span>如果&nbsp$G$&nbsp是无穷循环群，则&nbsp$G$&nbsp的子群为&nbsp$H_0&nbsp=&nbsp\{e\}$，或是某个具有最小正整数的元&nbsp$a^m$&nbsp生成的。于是，对&nbsp$m&nbsp=&nbsp1,&nbsp2,&nbsp\ldots,$</div>
+$$
+H_0 = \{e\}，H_m = (a^m)
+$$
+                <div class = "normal">是&nbsp$G$&nbsp的所有子群。</div>
+                <div class = "normal" style = "padding-left: 25px; text-indent: -24px;"><span class = "strong">3.&nbsp&nbsp</span>无穷循环群中，除了&nbsp$H_0&nbsp=&nbsp\{e\}$&nbsp外，都是无穷循环子群，从而都同构于&nbsp$G$&nbsp本身。</div>
+                <div class = "normal" style = "padding-left: 25px; text-indent: -24px;"><span class = "strong">4.&nbsp&nbsp</span>阶为&nbsp$n$&nbsp的循环群中，每个子群的阶整除&nbsp$n$。对&nbsp$n$&nbsp的任一因子&nbsp$q$&nbsp必有一个阶为&nbsp$q$&nbsp的子群。于是&nbsp$G$&nbsp的全部子群为：</div>
+$$
+H_0 = \{e\}，H_m = (a^m)， m | n
+$$
+                <div class = "normal">每个子群&nbsp$H_m$&nbsp的阶为&nbsp$n&nbsp/&nbspm$.</div>
 
                     <!--<div class = "blogTrans">
                         <div class = "lastBlogTitle"></div>
