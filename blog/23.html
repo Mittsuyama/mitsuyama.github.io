@@ -79,6 +79,7 @@
             <a href = "#4" class = "contentListCon" style = "color: rgba(0, 0, 0, 0.5); font-weight: bold;">子群&nbsp&nbsp生成子群</a>
             <a href = "#5" class = "contentListCon" style = "color: rgba(0, 0, 0, 0.5); font-weight: bold;">变换群&nbsp&nbsp同构</a>
             <a href = "#6" class = "contentListCon" style = "color: rgba(0, 0, 0, 0.5); font-weight: bold;">循环群</a>
+            <a href = "#7" class = "contentListCon" style = "color: rgba(0, 0, 0, 0.5); font-weight: bold;">子集的陪集&nbsp&nbsp拉格朗日定理</a>
 
                 </div>
             </div>
@@ -248,6 +249,43 @@ $$
 H_0 = \{e\}，H_m = (a^m)， m | n
 $$
                 <div class = "normal">每个子群&nbsp$H_m$&nbsp的阶为&nbsp$n&nbsp/&nbspm$.</div>
+                <div class = "h2" id = "7">子集的陪集&nbsp&nbsp拉格朗日定理</div><div id = "hUnderline"></div>
+                <div class = "h5">定义&nbsp&nbsp6.1：</div>
+                <div class = "normal">设&nbsp$H&nbsp<&nbspG$，$\forall&nbspa&nbsp\in&nbspG$，$aH$&nbsp称为子群&nbsp$H$&nbsp的一个左陪集，同理定义右陪集。</div>
+                <div class = "h5">定理&nbsp&nbsp6.1：</div>
+                <div class = "normal">子群&nbsp$H&nbsp<&nbspG$，$aH&nbsp=&nbspH&nbsp\iff&nbsp&nbspa&nbsp\in&nbsp$H</div>
+                <div class = "normal">证明：</div>
+                <div class = "normal">$\Rightarrow$&nbsp若&nbsp$aH&nbsp=&nbspH$，则&nbsp$a&nbsp=&nbspa&nbsp\circ&nbspe&nbsp\in&nbspaH&nbsp=&nbsp\&nbspH$，所以&nbsp$a&nbsp\in&nbspH$</div>
+                <div class = "normal">$\Leftarrow$&nbsp已知&nbsp$a&nbsp\in&nbspH$，</div>
+                <div class = "normal">①对&nbsp$\forall&nbspx&nbsp\in&nbspaH$，有&nbsp$h&nbsp\in&nbspH$，使&nbsp$x&nbsp=&nbspaH$，由&nbsp$a&nbsp\in&nbspH$，$h&nbsp\in&nbspH$，因为&nbsp$H&nbsp<&nbspG$，知&nbsp$x&nbsp=&nbspa&nbsp\circ&nbsph&nbsp\in&nbspH$，从而&nbsp$aH&nbsp\subseteq&nbspH$</div>
+                <div class = "normal">②&nbsp对&nbsp$\forall&nbspx&nbsp\in&nbspH$，由&nbsp$a&nbsp\in&nbspH$，因为&nbsp$H&nbsp<&nbspG$，知&nbsp$a^{-1}&nbsp&nbsp\in&nbspH$，从而&nbsp$a^{-1}x&nbsp\in&nbspH$，从而&nbsp$x&nbsp=&nbspa(a^{-1}x)&nbsp\in&nbspaH$，有&nbsp$H&nbsp\subseteq&nbspaH$。</div>
+                <div class = "normal">从而&nbsp$aH&nbsp=&nbspH$</div>
+                <div class = "h5">定理&nbsp&nbsp6.2：</div>
+                <div class = "normal">$H&nbsp<&nbspG$，$a,&nbspb&nbsp\in&nbspG$，则&nbsp$aH&nbsp=&nbspbH&nbsp\iff&nbspa^{-1}b&nbsp\in&nbspH$，证明方法用上述定理即可</div>
+                <div class = "h5">定理&nbsp&nbsp6.3：</div>
+                <div class = "normal">$H&nbsp<&nbspG$，$a,&nbspb&nbsp\in&nbspG$，或者&nbsp$aH&nbsp=&nbspbH$，或者&nbsp$aH&nbsp\cap&nbspbH&nbsp=&nbsp\phi$</div>
+                <div class = "h5">定理&nbsp&nbsp6.4：</div>
+                <div class = "normal">$H&nbsp<&nbspG$，$\forall&nbspa,&nbspb&nbsp\in&nbspG$，$|aH|&nbsp=&nbsp|bH|$</div>
+                <div class = "normal">证明；定义&nbsp$\phi(ah_1)&nbsp=&nbspbh_2$，证明&nbsp$\phi$&nbsp单射满射</div>
+                <div class = "h5">定理&nbsp&nbsp6.5：</div>
+                <div class = "normal">设&nbsp$H&nbsp<&nbspG$，$H$&nbsp的所有左陪集构成的集族是&nbsp$G$&nbsp的一个划分。</div>
+                <div class = "normal">证明：</div>
+                <div class = "normal">①不相交</div>
+                <div class = "normal">②$G&nbsp=&nbsp\bigcup_{a&nbsp\in&nbspG}aH$&nbsp（证明互为子集）</div>
+                <div class = "h5">定理&nbsp&nbsp6.6：</div>
+                <div class = "normal">$H&nbsp<&nbspG$，$S_l$，$S_r$&nbsp分别是左右陪集构成的集族&nbsp$|S_l|&nbsp=&nbsp|S_r|$</div>
+                <div class = "h5">定义&nbsp&nbsp6.2：</div>
+                <div class = "normal">$H&nbsp<&nbspG$，$j&nbsp=&nbsp[G&nbsp:&nbspH]$&nbsp表示&nbsp$H$&nbsp的所有不同的左陪集的个数为&nbsp$j$，称为&nbsp$j$&nbsp为&nbsp$H$&nbsp在&nbsp$G$&nbsp中的指数，若&nbsp$j$&nbsp不存在，$H$&nbsp在&nbsp$G$&nbsp中的指数无穷大</div>
+                <div class = "h5">定理&nbsp&nbsp6.7&nbsp&nbsp拉格朗日定理：</div>
+$$
+|G| = |H| \cdot [G : H]
+$$
+                <div class = "h5">推论&nbsp&nbsp6.1：</div>
+                <div class = "normal">有限群中的每个元素的阶整除该有限群的阶</div>
+                <div class = "h5">推论&nbsp&nbsp6.2：</div>
+                <div class = "normal">群&nbsp$G$&nbsp的阶&nbsp$p$&nbsp的素数，则&nbsp$G$&nbsp一定是循环群</div>
+                <div class = "h5">推论&nbsp&nbsp6.3：</div>
+                <div class = "normal">$G$&nbsp是&nbsp$N$&nbsp阶群，$\forall&nbspa&nbsp\in&nbspG$，$a^{N}&nbsp=&nbspe$&nbsp</div>
 
                     <!--<div class = "blogTrans">
                         <div class = "lastBlogTitle"></div>
