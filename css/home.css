@@ -128,16 +128,15 @@ div.nav_text_home:hover {
 }
 
 div.home_background {
-    zoom: 0.85;
+    zoom: 0.72;
     width: 100%;
-    background-color: #f9f9f9f9;
+    background-color: #f0f0f0;
 }
-
 
 div.homeInter {
     width: 100%;
     height: 10px;
-    background-color: #f9f9f9f9;
+    background-color: #f0f0f0;
 }
 
 div.text_container {
@@ -263,7 +262,7 @@ p.tagText {
 
 div.feet {
     color: #999999;
-    background-color: #f9f9f9f9;
+    background-color: #f0f0f0;
     width: 100%;
     height: 35px;
 }
@@ -275,7 +274,7 @@ div.copyrigt {
     left: 50px;
     text-align: center;
     padding: 5px;
-    background-color: #f9f9f9f9;
+    background-color: rgba(0, 0, 0, 0);
 }
 
 div.callme {
@@ -284,5 +283,5 @@ div.callme {
     right: 50px;
     text-align: center;
     padding: 5px;
-    background-color: #f9f9f9f9;
+    background-color: rgba(0, 0, 0, 0);
 }
