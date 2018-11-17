@@ -20,17 +20,132 @@
     </head>
     
     <body>
-        <div id = "slider">
-            <img src = "img/blog-image/t4.jpg" class = "sliderImg">
+        <div id = "slider" onclick = "window.location.href = 'blog/1.html';">
+            <img src = "img/blog-image/t1.jpg" id = "sliderImg1">
+            <img src = "img/blog-image/t2.jpg" id = "sliderImg2">
+            <img src = "img/blog-image/t3.jpg" id = "sliderImg3">
+            <img src = "img/blog-image/t4.jpg" id = "sliderImg4">
+            <img src = "img/blog-image/t5.jpg" id = "sliderImg5">
+            
             <div id = "sliderShadow"></div>
-            <div id = "sliderTitle"></div>
-            <div class = "sliderText">
-                <div class = "sliderTime">11 - 16 二零一八</div>
-                <div class = "sliderTitle">筱竹丛中</div>
+
+            <!--幻灯片文章信息框-->
+            <div id = "sliderShape"></div>
+
+            <div id = "sliderText1">
+                <div class = "sliderTime">十一月&nbsp16&nbsp2018</div>
+                <div class = "sliderTitle">
+                    筱竹丛中
+                </div>
                 <div class = "sliderBrief">故事讲述一名被杀武士的身亡经过，故事中各人对事件的说法不一，令剧情更加迷离.</div>
+                <!--<div id = "readmore">阅读更多</div>-->
+            </div>
+            <div id = "sliderText2">
+                <div class = "sliderTime">十一月&nbsp8&nbsp2018</div>
+                <div class = "sliderTitle">
+                    静态网页小功能的实现
+                </div>
+                <div class = "sliderBrief">Github  是一个静态网页，不能用动态语言，于是决定自动动手写写。以下总结了一些功能的实.</div>
+                <!--<div id = "readmore">阅读更多</div>-->
+            </div>
+            <div id = "sliderText3">
+                <div class = "sliderTime">十月&nbsp20&nbsp2018</div>
+                <div class = "sliderTitle">
+                    音乐理论基础 - 学习笔记
+                </div>
+                <div class = "sliderBrief">摘自李重光《音乐理论基础》，摘取了其中常用的部分，多声部和记谱法有部分省略.</div>
+                <!--<div id = "readmore">阅读更多</div>-->
+            </div>
+            <div id = "sliderText4">
+                <div class = "sliderTime">十月&nbsp7&nbsp2018</div>
+                <div class = "sliderTitle">
+                    初学者容易上手的简单好听的口琴简谱
+                </div>
+                <div class = "sliderBrief">记忆、我心永恒、万里の长城、斯卡布罗集市，送别，千与千寻，天空之城...</div>
+                <!--<div id = "readmore">阅读更多</div>-->
+            </div>
+            <div id = "sliderText5">
+                <div class = "sliderTime">十月&nbsp16&nbsp2018</div>
+                <div class = "sliderTitle">
+                    日语自学准备篇
+                </div>
+                <div class = "sliderBrief">从零开始学日语的计划，摘录自知乎文章@程序猎人.</div>
+                <!--<div id = "readmore">阅读更多</div>-->
+            </div>
+
+            <!--导航栏-->
+            <div class = "navigation">
+                <div id = "siteTitle">
+                    M<span id = "smallSiteTitle">ITSUYAMA</span>
+                </div>
             </div>
         </div>
+
         <div id = "home">
+
+            <!--博客分类-->
+            <div id = "classBox">
+                <div class = "smallClassBox1"></div>
+                <div class = "smallClassBox2"></div>
+                <div class = "smallClassBox"></div>
+                <div class = "smallClassBox"></div>
+                <div class = "smallClassBox"></div>
+                <div class = "smallClassBox"></div>
+                <div class = "smallClassBox"></div>
+                <div class = "smallClassBox"></div>
+                <div class = "smallClassBox"></div>
+                <div class = "smallClassBox"></div>
+            </div>
+
+            <!--最近博客-->
+            <div id = "lastBlog">
+                <div id = "centerLine"></div>
+                <div id = "lastBlogHead"></div>
+                <div class = "articleBox">
+                    <div class = "imgBox">
+                        <img src = "img/blog-image/t4.jpg" class = "articleImg">
+                    </div>
+                    <div class = "inforBoxBoder">
+                        <div class = "inforBox">
+                            <div class = "articleTime">
+                                十一月 8 2018
+                            </div>
+                            <div class = "articleTitle">
+                                静态网页小功能的实现
+                            </div>
+                            <div class = "articleBrief">
+                                GitHub page 是一个静态网页平台，由于没有使用现有的静态网页生成器，列出了一些网页小技巧。
+                            </div>
+                            <div class = "articleDisplay">
+                                <span class = "display1">字</span><span class = "displaytext1">3426</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class = "articleBox">
+                    <div class = "imgBox2">
+                        <img src = "img/blog-image/t3.jpg" class = "articleImg">
+                    </div>
+                    <div class = "inforBoxBoder2">
+                        <div class = "inforBox">
+                            <div class = "articleTime">
+                                十一月 8 2018
+                            </div>
+                            <div class = "articleTitle">
+                                静态网页小功能的实现
+                            </div>
+                            <div class = "articleBrief">
+                                GitHub page 是一个静态网页平台，由于没有使用现有的静态网页生成器，列出了一些网页小技巧。
+                            </div>
+                            <div class = "articleDisplay">
+                                <span class = "display1">字</span><span>3426</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
         </di>
 
 
