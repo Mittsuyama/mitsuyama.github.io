@@ -1,14 +1,18 @@
 var nowSlider = 1;
 var sliderSpeed = 3000;
+var sliderPlay;
 
 $(document).ready(function() {
-    var sliderPlay = setInterval(nextPage, sliderSpeed);
+    sliderPlay = setInterval(nextPage, sliderSpeed);
     $(window).load(function() {
         $('#slider').mouseenter(function() {
             clearInterval(sliderPlay);
         });
         $('#slider').mouseleave(function() {
             sliderPlay = setInterval(nextPage, sliderSpeed);
+        });
+        $('#slider').click(function() {
+            window.location.href = $('#sliderText' + nowSlider).children('a').attr("href");
         });
     });
 });
