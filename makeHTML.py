@@ -17,6 +17,11 @@ class makeHTML:
     client = None
     index = None
     isUpdate = False
+    blogTiTle = ''
+    blogClass = ''
+    blogBrief = ''
+    blogTime = ''
+    sliderDisplay = [1, 2, 3, 4, 5]
 
     def __init__(self):
         path = 'md/'  #待读取的文件夹
@@ -27,7 +32,7 @@ class makeHTML:
         self.num = len(path_list)
         self.homeTemp = open('templates/index.html').read()
         self.blogTemp = open('templates/blog.html').read()
-        self.homeBttonTemp = open('templates/homeButton.html').read()
+        self.homeBttonTemp = open('templates/articleDisplay.html').read()
         self.client = algoliasearch.Client("PKH2B42HCE", '3c713b49beef813c568cc0395b171d31')
         self.index = self.client.init_index('MITSUYAMA_SITE')
         print("Push database to Algolia?")
@@ -49,9 +54,14 @@ class makeHTML:
                  self.Paragraph.append(line)
         
         self.Paragraph[-1] += ' '
-        
+               
         for i in range(0, 4):
             self.blogInfo.append(self.Paragraph[i])
+
+        self.blogTiTle = self.blogInfo[0][:-1]
+        self.blogClass = self.blogInfo[1][:-1]
+        self.blogBrief = self.blogInfo[2][:-1]
+        self.blogTime = self.blogInfo[3][:-1]
         self.mdFile.close()
     
     def getInform(self, myStr):
@@ -147,10 +157,10 @@ class makeHTML:
         #Make blog page
         outFIle = open('blog/' + str(order) + '.html', 'w')
         blogHtml = self.blogTemp
-        blogHtml = blogHtml.replace('((siteTitle))', self.blogInfo[0])
-        blogHtml = blogHtml.replace('((Title))', self.blogInfo[0])
-        blogHtml = blogHtml.replace('((Time))', self.blogInfo[3].replace(' ', '').replace('/', '-'))
-        blogHtml = blogHtml.replace('((Tag))', self.blogInfo[1])
+        blogHtml = blogHtml.replace('((siteTitle))', self.blogTiTle)
+        blogHtml = blogHtml.replace('((Title))', self.blogTiTle)
+        blogHtml = blogHtml.replace('((Time))', self.blogTime)
+        blogHtml = blogHtml.replace('((Tag))', self.blogClass)
         blogHtml = blogHtml.replace('((blogTitleImg))', str(order))
         blogHtml = blogHtml.replace('((pageUrl))', "http://www.mitsuyama.top/blog/" + str(order) + ".html")
         blogHtml = blogHtml.replace('((pageId))', "blog" + str(order))
@@ -317,42 +327,38 @@ class makeHTML:
         blogHtml = blogHtml.replace('((content))', blogContent)
         outFIle.write(blogHtml)
 
-    def makeSmallJPG(self):
-        path = 'img/blog-image/'  #待读取的文件夹
-        path_list = os.listdir(path)
-        path_list.sort() #对读取的路径进行排序
-        imgList = []
-        for theName in path_list:
-        	imgList.append(os.path.join(path, theName))
-        for i in imgList:
-            img = Image.open(i)
-            width = float(img.size[0])
-            height = float(img.size[1])
-            smallerRate = width / 300.0
-            width /= smallerRate
-            height /= smallerRate
-            img.thumbnail((width, height))
-            img.save('img/smaller-blog-image/' + i[15 : ])
-
     def main(self):
-        self.makeSmallJPG()
         self.indexFile = open('index.html', 'w')
         
         homePage = self.homeTemp
         content = ''
+
+        sliderImg = '''
+            <img src = "img/blog-image/order1.jpg" id = "sliderImg1">
+            <img src = "img/blog-image/order2.jpg" id = "sliderImg2">
+            <img src = "img/blog-image/order3.jpg" id = "sliderImg3">
+            <img src = "img/blog-image/order4.jpg" id = "sliderImg4">
+            <img src = "img/blog-image/order5.jpg" id = "sliderImg5">
+        '''
+        sliderImg = sliderImg.replace('order1', str(self.sliderDisplay[0])).replace('order2', str(self.sliderDisplay[1])).replace('order3', str(self.sliderDisplay[0])).replace('order4', str(self.sliderDisplay[2])).replace('order5', str(self.sliderDisplay[3]))
+        
+        homePage = homePage.replace('((sliderImg))', sliderImg)
         
         for i in range(self.num - 1, -1, -1):
             self.pHtml(i)
             buttonTemp = self.homeBttonTemp
-            buttonTemp = buttonTemp.replace('((blogHref))', str(i))
-            buttonTemp = buttonTemp.replace('((imgHref))', str(i))
-            buttonTemp = buttonTemp.replace('((Title))', self.blogInfo[2][:-1])
-            buttonTemp = buttonTemp.replace('((Time))', self.blogInfo[3][:-1].replace('/', '-').replace(' ', ''))
-            buttonTemp = buttonTemp.replace('((brief))', self.blogInfo[0][:-1])
-            buttonTemp = buttonTemp.replace('((Tag))', self.blogInfo[1][:-1])
+            buttonTemp = buttonTemp.replace('((order))', str(i))
+            buttonTemp = buttonTemp.replace('((title))', self.blogTiTle)
+            buttonTemp = buttonTemp.replace('((time))', self.blogTime.replace('/', '-').replace(' ', ''))
+            buttonTemp = buttonTemp.replace('((brief))', self.blogBrief)
+            buttonTemp = buttonTemp.replace('((number))', 'zanwu')
+            if i % 2 == 0:
+                buttonTemp = buttonTemp.replace('((lr))', '')
+            else:
+                buttonTemp = buttonTemp.replace('((lr))', '2')
             content += buttonTemp
         
-        homePage = homePage.replace('((mainContainer))', content)
+        homePage = homePage.replace('((articleBoxs))', content)
         self.indexFile.write(homePage)
 
 if __name__ == '__main__':
