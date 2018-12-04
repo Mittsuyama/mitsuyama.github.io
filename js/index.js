@@ -8,8 +8,8 @@ var img = $('img');
 
 $(document).ready(function() {
     sliderPlay = setInterval(nextPage, sliderSpeed);
-    lazyload();
     $(window).load(function() {
+        lazyload();
         window.addEventListener('scroll', throttle(lazyload, 500, 1000));
         $('#slider').mouseenter(function() {
             clearInterval(sliderPlay);
