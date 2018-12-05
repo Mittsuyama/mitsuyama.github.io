@@ -242,13 +242,14 @@ div.sliderBrief {
 }
 
 #lbhcontent {
+    font-family: Light;
     margin: auto;
     width: 200px;
     height: 40px;
     border: 1px solid #aaaaaa;
     background-color: white;
     text-align: center;
-    font-size: 20px;
+    font-size: 22px;
     line-height: 40px;
 }
 
