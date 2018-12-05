@@ -340,7 +340,7 @@ class makeHTML:
             <img src = "img/blog-image/default.jpg" data-src = "img/blog-image/order4.jpg" id = "sliderImg4">
             <img src = "img/blog-image/default.jpg" data-src = "img/blog-image/order5.jpg" id = "sliderImg5">
         '''
-        sliderImg = sliderImg.replace('order1', str(self.sliderDisplay[0])).replace('order2', str(self.sliderDisplay[1])).replace('order3', str(self.sliderDisplay[0])).replace('order4', str(self.sliderDisplay[2])).replace('order5', str(self.sliderDisplay[3]))
+        sliderImg = sliderImg.replace('order1', str(self.sliderDisplay[0])).replace('order2', str(self.sliderDisplay[1])).replace('order3', str(self.sliderDisplay[2])).replace('order4', str(self.sliderDisplay[3])).replace('order5', str(self.sliderDisplay[4]))
         
         homePage = homePage.replace('((sliderImg))', sliderImg)
         

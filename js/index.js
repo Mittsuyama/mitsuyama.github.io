@@ -1,3 +1,11 @@
+var screenWidthRate;
+if($(document.body).width() < 2000 && $(document.body).width() > 1900) {
+    screenWidthRate = 1;
+}
+else {
+    screenWidthRate = parseFloat($(document.body).width() / 1920.0);
+}
+
 var nowSlider = 1;
 var sliderSpeed = 3000;
 var sliderPlay;
@@ -7,10 +15,9 @@ var imgNum = $("img").length;
 var img = $('img');
 
 $(document).ready(function() {
+    $('body').css("zoom", screenWidthRate);
     sliderPlay = setInterval(nextPage, sliderSpeed);
     $(window).load(function() {
-        lazyload();
-        window.addEventListener('scroll', throttle(lazyload, 500, 1000));
         $('#slider').mouseenter(function() {
             clearInterval(sliderPlay);
         });
@@ -22,6 +29,7 @@ $(document).ready(function() {
                 window.location.href = $('#sliderText' + nowSlider).children('a').attr("href");
             }
         });
+
         $('.subSelectBox').mouseenter(function() {
             inSelectBox = 1;
         });
@@ -32,6 +40,9 @@ $(document).ready(function() {
             var id = $(this).children('div').attr("id");
             locationPage(id[id.length - 1]);
         });
+
+        window.addEventListener('scroll', throttle(lazyload, 500, 1000));
+        lazyload();
     });
 });
 
