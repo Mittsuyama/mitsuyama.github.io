@@ -1,16 +1,37 @@
 @font-face {
     font-family: Light;
-    src: url('../font/Deng.ttf');
+    src: url('../font/Deng.eot');
+    src:
+        url('../font/Deng.eot?#font-spider') format('embedded-opentype'),
+        url('../font/Deng.woff') format('woff'),
+        url('../font/Deng.ttf') format('truetype'),
+        url('../font/Deng.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
 
 @font-face {
     font-family: ChineseFan;
-    src: url('../font/ChineseFan.ttf');
+    src: url('../font/ChineseFan.eot');
+    src:
+        url('../font/ChineseFan.eot?#font-spider') format('embedded-opentype'),
+        url('../font/ChineseFan.woff') format('woff'),
+        url('../font/ChineseFan.ttf') format('truetype'),
+        url('../font/ChineseFan.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
 
 @font-face {
     font-family: MTCORSVA;
-    src: url('../font/MTCORSVA.TTF');
+    src: url('../font/MTCORSVA.eot');
+    src:
+        url('../font/MTCORSVA.eot?#font-spider') format('embedded-opentype'),
+        url('../font/MTCORSVA.woff') format('woff'),
+        url('../font/MTCORSVA.ttf') format('truetype'),
+        url('../font/MTCORSVA.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
 
 #siteTitle {
