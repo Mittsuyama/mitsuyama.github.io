@@ -21,7 +21,8 @@ class makeHTML:
     blogClass = ''
     blogBrief = ''
     blogTime = ''
-    sliderDisplay = [1, 2, 3, 4, 5]
+    sliderDisplay = [0, 1, 9, 16, 24]
+    articleLength = 0
 
     def __init__(self):
         path = 'md/'  #待读取的文件夹
@@ -42,6 +43,7 @@ class makeHTML:
         self.blogInfo = []
         self.Paragraph = []
         self.mdFile = open(self.fileName[order])
+        self.articleLength = len(open(self.fileName[order]).read())
         filePoint = 0
         while True:
             line = self.mdFile.readline()
@@ -51,7 +53,7 @@ class makeHTML:
             if filePoint > 4:
                 self.Paragraph.append(line)
             else:
-                 self.Paragraph.append(line)
+                self.Paragraph.append(line)
         
         self.Paragraph[-1] += ' '
                
@@ -61,7 +63,7 @@ class makeHTML:
         self.blogTiTle = self.blogInfo[0][:-1]
         self.blogClass = self.blogInfo[1][:-1]
         self.blogBrief = self.blogInfo[2][:-1]
-        self.blogTime = self.blogInfo[3][:-1]
+        self.blogTime = self.blogInfo[3][:-1].replace('/', '-').replace(' ', '')
         self.mdFile.close()
     
     def getInform(self, myStr):
@@ -197,6 +199,7 @@ class makeHTML:
 
         #update search data
         if self.isUpdate == '1':
+
             print(self.fileName[order])
             #print(contentAll)
             #print('over')
@@ -344,19 +347,42 @@ class makeHTML:
         
         homePage = homePage.replace('((sliderImg))', sliderImg)
         
+        sliderContent = '''
+            <div id = "sliderText((textOrder))">
+                <a href = "blog/((order)).html"></a>
+                <div class = "sliderTime">((time))</div>
+                <div class = "sliderTitle">
+                    ((title))
+                </div>
+                <div class = "sliderBrief">((brief))</div>
+            </div>        
+        '''
+
         for i in range(self.num - 1, -1, -1):
             self.pHtml(i)
+            for j in range(0, 5):
+                if i == self.sliderDisplay[j]:
+                    tempString = sliderContent
+                    tempString = tempString.replace('((order))', str(i))
+                    tempString = tempString.replace('((time))', self.blogTime)
+                    tempString = tempString.replace('((title))', self.blogTiTle)
+                    tempString = tempString.replace('((brief))', self.blogBrief)
+                    tempString = tempString.replace('((textOrder))', str(j + 1))
+                    homePage = homePage.replace('((sliderContent' + str(j + 1) +  '))', tempString)
+
             buttonTemp = self.homeBttonTemp
             buttonTemp = buttonTemp.replace('((order))', str(i))
             buttonTemp = buttonTemp.replace('((title))', self.blogTiTle)
-            buttonTemp = buttonTemp.replace('((time))', self.blogTime.replace('/', '-').replace(' ', ''))
+            buttonTemp = buttonTemp.replace('((time))', self.blogTime)
             buttonTemp = buttonTemp.replace('((brief))', self.blogBrief)
-            buttonTemp = buttonTemp.replace('((number))', 'zanwu')
+            buttonTemp = buttonTemp.replace('((number))', str(self.articleLength))
             if i % 2 == 0:
                 buttonTemp = buttonTemp.replace('((lr))', '')
             else:
                 buttonTemp = buttonTemp.replace('((lr))', '2')
-            content += buttonTemp
+            
+            if self.num - i <= 3:
+                content += buttonTemp
         
         homePage = homePage.replace('((articleBoxs))', content)
         self.indexFile.write(homePage)
