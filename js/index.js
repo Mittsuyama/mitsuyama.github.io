@@ -1,23 +1,22 @@
 var screenWidthRate;
-if($(document.body).width() < 2000 && $(document.body).width() > 1900) {
-    screenWidthRate = 1;
-}
-else {
-    screenWidthRate = parseFloat($(document.body).width() / 1920.0);
-}
-
 var nowSlider = 1;
 var sliderSpeed = 3000;
 var sliderPlay;
 var inSelectBox = 0;
 var n = 0;
-var imgNum = $("img").length;
-var img = $('img');
 
 $(document).ready(function() {
-    $('body').css("zoom", screenWidthRate);
-    sliderPlay = setInterval(nextPage, sliderSpeed);
     $(window).load(function() {
+        sliderPlay = setInterval(nextPage, sliderSpeed);
+
+        if($(document.body).width() < 2000 && $(document.body).width() > 1900) {
+            screenWidthRate = 1;
+        }
+        else {
+            screenWidthRate = parseFloat($(document.body).width() / 1920.0);
+        }
+        $('body').css("zoom", screenWidthRate);    
+
         $('#slider').mouseenter(function() {
             clearInterval(sliderPlay);
         });
@@ -40,7 +39,6 @@ $(document).ready(function() {
             var id = $(this).children('div').attr("id");
             locationPage(id[id.length - 1]);
         });
-
         window.addEventListener('scroll', throttle(lazyload, 500, 1000));
         lazyload();
     });
@@ -86,6 +84,8 @@ function throttle(fun, delay, time) {
 };
 // 实际想绑定在 scroll 事件上的 handler
 function lazyload(event) {
+    var imgNum = $("img").length;
+    var img = $('img');
     for (var i = n; i < imgNum; i++) {
         if (img.eq(i).offset().top < parseInt($(window).height()) + parseInt($(window).scrollTop())) {
             if (img.eq(i).attr("src") == "img/blog-image/default.jpg") {

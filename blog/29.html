@@ -75,6 +75,10 @@
             <a href = "#8" class = "contentListCon" style = "color: rgba(0, 0, 0, 0.5); font-weight: bold;">补图，偶图</a>
             <a href = "#11" class = "contentListCon" style = "color: rgba(0, 0, 0, 0.5); font-weight: bold;">欧拉图</a>
             <a href = "#12" class = "contentListCon" style = "color: rgba(0, 0, 0, 0.5); font-weight: bold;">哈密顿图定义</a>
+            <a href = "#15" class = "contentListCon" style = "color: rgba(0, 0, 0, 0.5); font-weight: bold;">树</a>
+            <a href = "#16" class = "contentListCon" style = "padding-left: 40px; color: rgba(0, 0, 0, 0.5);">数及其性质</a>
+            <a href = "#17" class = "contentListCon" style = "padding-left: 40px; color: rgba(0, 0, 0, 0.5);">生成树</a>
+            <a href = "#18" class = "contentListCon" style = "padding-left: 40px; color: rgba(0, 0, 0, 0.5);">割点、桥、割集</a>
 
                 </div>
             </div>
@@ -249,6 +253,44 @@ $$
                 <div class = "h4" id = "14">带权图</div>
                 <div class = "normal">三元组&nbsp$(V,&nbspE,&nbspf)$，$f(v)$&nbsp称为顶点&nbsp$v$&nbsp的权，类似的&nbsp$(V,&nbspE,&nbspg)$，$g(e)$&nbsp&nbsp称为边&nbsp$e$&nbsp的权。</div>
                 <div class = "normal">最短路问题的定义：略</div>
+                <div class = "h2" id = "15">树</div><div id = "hUnderline"></div>
+                <div class = "h3" id = "16">数及其性质</div>
+                <div class = "h5">树的定义</div>
+                <div class = "normal">无圈图称为森林，连通的无圈图称为树</div>
+                <div class = "normal">森林的每个连通分支都是树，森林就是由若干棵树组成的图，仅有一个顶点的树称为平凡树。</div>
+                <div class = "normal">树与下面命题等价：</div>
+                <div class = "normal" style = "padding-left: 25px; text-indent: -24px;"><span class = "strong">1.&nbsp&nbsp</span>$G$&nbsp是树</div>
+                <div class = "normal" style = "padding-left: 25px; text-indent: -24px;"><span class = "strong">2.&nbsp&nbsp</span>任两个不同顶点间有唯一的一条路径相连</div>
+                <div class = "normal" style = "padding-left: 25px; text-indent: -24px;"><span class = "strong">3.&nbsp&nbsp</span>顶点&nbsp=&nbsp边&nbsp+&nbsp1</div>
+                <div class = "normal" style = "padding-left: 25px; text-indent: -24px;"><span class = "strong">4.&nbsp&nbsp</span>图无圈</div>
+                <div class = "normal" style = "padding-left: 25px; text-indent: -24px;"><span class = "strong">5.&nbsp&nbsp</span>不相邻两点间加一条边，形成唯一圈的图</div>
+                <div class = "h5">推论</div>
+                <div class = "normal">任一非平凡树至少有两个&nbsp1&nbsp度顶点</div>
+                <div class = "h5">极小连通图</div>
+                <div class = "normal">去掉任意一条边就不连通的图</div>
+                <div class = "h5">偏心率定义</div>
+                <div class = "normal">设&nbsp$G&nbsp=&nbsp(V,&nbspE)$&nbsp是连通图，$v&nbsp\in&nbspV$，数</div>
+$$
+e(v) = max_{u \in v}\{d(u, v)\}
+$$
+                <div class = "normal">称为&nbsp$G$&nbsp的偏心率。数</div>
+$$
+r(G) = min_{v \in V}\{e(v)\}
+$$
+                <div class = "normal">称为&nbsp$G$&nbsp的半径。满足&nbsp$r(G)&nbsp=&nbspe(v)$&nbsp的顶点&nbsp$v$&nbsp称为&nbsp$G$&nbsp的中心点，$G$&nbsp的所有中心点组成的集合称为&nbsp$G$&nbsp的中心，记为&nbsp$C(G)$。</div>
+                <div class = "normal">对于树而言，&nbsp$e(v)&nbsp=&nbspmax_{v&nbsp\in&nbspV}\{d(u,&nbspv)\}&nbsp=&nbspmax_{u&nbsp\in&nbspV,&nbspd(u)&nbsp=&nbsp1}\{d(u,&nbspv)\}$</div>
+                <div class = "h5">定理</div>
+                <div class = "normal">每棵树的中心或含有一个顶点，或含有两个相邻的顶点</div>
+                <div class = "h3" id = "17">生成树</div>
+                <div class = "normal">生成树的定义：略</div>
+                <div class = "normal">生成森林的定义：略</div>
+                <div class = "normal" style = "padding-left: 20px; text-indent: -9px;"><i class = "fa fa-chevron-right" style = "top: 3px; margin-right: 3px; font-size: 14px; color: #cccccc"></i>&nbsp$T_1$，$T_2$&nbsp是&nbsp$G$&nbsp的生成树，是&nbsp$T_1$&nbsp的边而不是&nbsp$T_2$&nbsp的边的条数称为&nbsp$T_1$&nbsp到&nbsp$T_2$&nbsp的距离，记为&nbsp$d(T_1,&nbspT_2)$</div>
+                <div class = "normal" style = "padding-left: 20px; text-indent: -9px;"><i class = "fa fa-chevron-right" style = "top: 3px; margin-right: 3px; font-size: 14px; color: #cccccc"></i>&nbsp基本变换：$T_1&nbsp-&nbspe_1&nbsp+&nbspe_2$</div>
+                <div class = "normal" style = "padding-left: 20px; text-indent: -9px;"><i class = "fa fa-chevron-right" style = "top: 3px; margin-right: 3px; font-size: 14px; color: #cccccc"></i>&nbsp$T_1$，$T_2$&nbsp是&nbsp$G$&nbsp的生成树，距离为&nbsp$k$，则从&nbsp$T_1$&nbsp开始经过&nbsp$k$&nbsp次基本变换就能得到&nbsp$T_2$.</div>
+                <div class = "normal" style = "padding-left: 20px; text-indent: -9px;"><i class = "fa fa-chevron-right" style = "top: 3px; margin-right: 3px; font-size: 14px; color: #cccccc"></i>&nbsp最小生成树：略</div>
+                <div class = "h3" id = "18">割点、桥、割集</div>
+                <div class = "h5">定理</div>
+                <div class = "normal" style = "padding-left: 20px; text-indent: -9px;"><i class = "fa fa-chevron-right" style = "top: 3px; margin-right: 3px; font-size: 14px; color: #cccccc"></i>&nbsp连通图至少有两个顶点不是割点（最长路的两个端点一定不是）</div>
 
                     <!--<div class = "blogTrans">
                         <div class = "lastBlogTitle"></div>
