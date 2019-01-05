@@ -7,8 +7,10 @@ var n = 0;
 
 $(document).ready(function() {
     $(window).load(function() {
+        //让幻灯片滚动起来
         sliderPlay = setInterval(nextPage, sliderSpeed);
 
+        //优化小屏幕
         if($(document.body).width() < 2000 && $(document.body).width() > 1900) {
             screenWidthRate = 1;
         }
@@ -17,6 +19,7 @@ $(document).ready(function() {
         }
         $('body').css("zoom", screenWidthRate);    
 
+        //鼠标放在幻灯片停止播放
         $('#slider').mouseenter(function() {
             clearInterval(sliderPlay);
         });
