@@ -363,8 +363,8 @@ div.sliderBrief {
     top: 40px;
     left: 50%;
     height: 100%;
-    width: 0.3px;
-    background-color: #777777;
+    width: 1px;
+    border-left: 1px solid #777777;
 }
 
 div.articleBox {
