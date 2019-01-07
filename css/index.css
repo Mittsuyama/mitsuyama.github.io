@@ -243,7 +243,7 @@ div.sliderBrief {
     margin-bottom: 80px;
     position: relative;
     width: 55%;
-    box-shadow: 1px 1px 20px 5px rgba(0,0,0,0.03), 1px 1px 30px 7px rgba(0,0,0,0.02);
+    box-shadow: 1px 1px 20px 5px rgba(0,0,0,0.02), 1px 1px 30px 7px rgba(0,0,0,0.01);
     height: 170px;
     background-color: white;
 }
@@ -364,7 +364,7 @@ div.sliderBrief {
     left: 50%;
     height: 100%;
     width: 1px;
-    border-left: 1px solid #777777;
+    border-left: 1px solid #555555;
 }
 
 div.articleBox {
@@ -466,7 +466,7 @@ img.articleImg {
 }
 
 .display1 {
-    font-family: ChineseFan;
+    font-family: MTCORSVA;
     margin-right: 7px;
     font-size: 15px;
 }
@@ -513,7 +513,7 @@ img.articleImg {
     background-color: #333333;
     font-size: 14px;
     font-family: sans-serif;
-    color: #cccccc;
+    color: #eeeeee;
 }
 
 #footEmail {
