@@ -352,6 +352,7 @@ div.sliderBrief {
     height: 40px;
     border-bottom: 1px solid #555555;
     background-color: white;
+    color: #555555;
     text-align: center;
     font-size: 35px;
     line-height: 40px;
@@ -363,8 +364,8 @@ div.sliderBrief {
     top: 40px;
     left: 50%;
     height: 100%;
-    width: 1px;
-    border-left: 1px solid #555555;
+    width: 2px;
+    border-left: 1px solid #777777;
 }
 
 div.articleBox {
@@ -415,9 +416,8 @@ img.articleImg {
     transform: translate(0%, -50%);
     top: 50%;
     left: 55%;
-    border-top: 1px solid #aaaaaa;
-    border-right: 1px solid #aaaaaa;
-    border-bottom: 1px solid #aaaaaa;
+    border: 1px solid #aaaaaa;
+    border-left: 0px solid #aaaaaa;
     transition-duration: 0.3s;
     -moz-transition-duration: 0.3s;
     -o-transition-duration: 0.3s;

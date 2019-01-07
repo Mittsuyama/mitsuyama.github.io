@@ -6,9 +6,11 @@ from algoliasearch import algoliasearch
 
 class makeHTML:
     mdFile = None
+    blogs = None
     blogInfo = []
     Paragraph = []
     indexFile = None
+    blogsFile = None
     fileName = []
     homeTemp = []
     homeBttonTemp = []
@@ -25,6 +27,7 @@ class makeHTML:
     articleLength = 0
 
     def __init__(self):
+        self.blogsFile = open('articles.html', 'w')
         path = 'md/'  #待读取的文件夹
         path_list = os.listdir(path)
         path_list.sort() #对读取的路径进行排序
@@ -33,6 +36,7 @@ class makeHTML:
         self.num = len(path_list)
         self.homeTemp = open('templates/index.html').read()
         self.blogTemp = open('templates/blog.html').read()
+        self.blogs = open('templates/articles.html').read()
         self.homeBttonTemp = open('templates/articleDisplay.html').read()
         self.client = algoliasearch.Client("PKH2B42HCE", '3c713b49beef813c568cc0395b171d31')
         self.index = self.client.init_index('MITSUYAMA_SITE')
@@ -349,7 +353,6 @@ class makeHTML:
         
         sliderContent = '''
             <div id = "sliderText((textOrder))">
-                <a href = "blog/((order)).html"></a>
                 <div class = "sliderTime">((time))</div>
                 <div class = "sliderTitle">
                     ((title))
@@ -357,6 +360,27 @@ class makeHTML:
                 <div class = "sliderBrief">((brief))</div>
             </div>        
         '''
+
+        blogBox = '''
+                <a href = "blog/((order)).html">
+                    <div class = "box">
+                        <div class = "blogTitle">
+                            ((title))
+                            <div class = "selectLine"></div>
+                        </div>
+                        <div class = "titleRight"></div>
+                        <div class = "blogBrieft">
+                            ((short))
+                        </div>
+                        <div class = "blogOther">
+                            ((time))&nbsp•&nbsp((tag))
+                        </div>
+                    </div>
+                </a>
+        
+                <div class = "cuttingLine"></div>
+        '''
+        blogBoxs = ''
 
         for i in range(self.num - 1, -1, -1):
             self.pHtml(i)
@@ -383,9 +407,20 @@ class makeHTML:
             
             if self.num - i <= 3:
                 content += buttonTemp
+
+            tempBlogBox = blogBox
+            tempBlogBox = tempBlogBox.replace('((order))', str(i))
+            tempBlogBox = tempBlogBox.replace('((title))', self.blogTiTle)
+            tempBlogBox = tempBlogBox.replace('((short))', open(self.fileName[i]).read()[:min(250, self.articleLength)].replace('#', '').replace('$', '').replace('*', '').replace('<u>', '').replace('</u>', '') + '...')
+            tempBlogBox = tempBlogBox.replace('((time))', self.blogTime)
+            tempBlogBox = tempBlogBox.replace('((tag))', self.blogClass)
+            blogBoxs += tempBlogBox
+        #end
         
+        self.blogs = self.blogs.replace('((allBLogs))', blogBoxs)
         homePage = homePage.replace('((articleBoxs))', content)
         self.indexFile.write(homePage)
+        self.blogsFile.write(self.blogs)
 
 if __name__ == '__main__':
     makeHTML().main()
