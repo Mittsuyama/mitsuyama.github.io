@@ -42,6 +42,7 @@ $(document).ready(function() {
             var id = $(this).children('div').attr("id");
             locationPage(id[id.length - 1]);
         });
+
         window.addEventListener('scroll', throttle(lazyload, 500, 1000));
         lazyload();
     });
@@ -90,11 +91,11 @@ function lazyload(event) {
     var imgNum = $("img").length;
     var img = $('img');
     for (var i = n; i < imgNum; i++) {
-        if (img.eq(i).offset().top < parseInt($(window).height()) + parseInt($(window).scrollTop())) {
+        if (img.eq(i).offset().top - 500 < parseInt($(window).height()) + parseInt($(window).scrollTop())) {
             if (img.eq(i).attr("src") == "img/blog-image/default.jpg") {
                 var src = img.eq(i).attr("data-src");
+                //alert("战术暂停");
                 img.eq(i).attr("src", src);
-
                 n = i + 1;
             }
         }

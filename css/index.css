@@ -259,7 +259,7 @@ div.sliderBrief {
     cursor: pointer;
 }
 
-.functionArea:hover .functionIcon, {
+.functionArea:hover .functionIcon {
     color: #111111;
 }
 
@@ -304,8 +304,8 @@ div.sliderBrief {
     position: relative;
     color: #777777;
     font-family: Light;
-    font-size: 23px;
-    margin-bottom: 10px;
+    font-size: 30px;
+    margin-bottom: 5px;
 
     transition-duration: 0.3s;
     -moz-transition-duration: 0.2s;
@@ -316,7 +316,8 @@ div.sliderBrief {
 .functionBrieft {
     position: relative;
     color: #777777;
-    font-size: 15px;
+    font-size: 13px;
+    font-family: Light;
 
     transition-duration: 0.3s;
     -moz-transition-duration: 0.2s;
@@ -349,10 +350,10 @@ div.sliderBrief {
     margin: auto;
     width: 200px;
     height: 40px;
-    border-bottom: 1px solid #aaaaaa;
+    border-bottom: 1px solid #555555;
     background-color: white;
     text-align: center;
-    font-size: 30px;
+    font-size: 35px;
     line-height: 40px;
 }
 
@@ -362,14 +363,14 @@ div.sliderBrief {
     top: 40px;
     left: 50%;
     height: 100%;
-    width: 1px;
-    background-color: #cccccc;
+    width: 0.3px;
+    background-color: #777777;
 }
 
 div.articleBox {
     position: relative;
     width: 100%;
-    height: 400px;
+    height: 370px;
     margin-bottom: 100px;
     cursor: pointer;
     transition-duration: 0.3s;
@@ -414,9 +415,9 @@ img.articleImg {
     transform: translate(0%, -50%);
     top: 50%;
     left: 55%;
-    border-top: 2px solid #dddddd;
-    border-right: 2px solid #dddddd;
-    border-bottom: 2px solid #dddddd;
+    border-top: 1px solid #aaaaaa;
+    border-right: 1px solid #aaaaaa;
+    border-bottom: 1px solid #aaaaaa;
     transition-duration: 0.3s;
     -moz-transition-duration: 0.3s;
     -o-transition-duration: 0.3s;
@@ -425,8 +426,8 @@ img.articleImg {
 
 .inforBoxBoder2 {
     left: 0px;
-    border-right: 0px solid #dddddd;
-    border-left: 2px solid #dddddd;
+    border-right: 0px solid #aaaaaa;
+    border-left: 1px solid #aaaaaa;
 }
 
 .inforBox {
