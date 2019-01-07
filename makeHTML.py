@@ -353,6 +353,7 @@ class makeHTML:
         
         sliderContent = '''
             <div id = "sliderText((textOrder))">
+                <a href = "blog/((order)).html"></a>
                 <div class = "sliderTime">((time))</div>
                 <div class = "sliderTitle">
                     ((title))
