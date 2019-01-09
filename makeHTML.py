@@ -6,6 +6,7 @@ from algoliasearch import algoliasearch
 
 class makeHTML:
     mdFile = None
+    tempFile = None
     blogs = None
     blogInfo = []
     Paragraph = []
@@ -25,6 +26,7 @@ class makeHTML:
     blogTime = ''
     sliderDisplay = [0, 1, 9, 16, 24]
     articleLength = 0
+    monthName = ['壹月', '贰月', '叁月', '肆月', '伍月', '陆月', '柒月', '捌月', '玖月', '拾月', '拾壹月', '拾贰月']
 
     def __init__(self):
         self.blogsFile = open('articles.html', 'w')
@@ -47,7 +49,8 @@ class makeHTML:
         self.blogInfo = []
         self.Paragraph = []
         self.mdFile = open(self.fileName[order])
-        self.articleLength = len(open(self.fileName[order]).read())
+        self.tempFile = open(self.fileName[order]).read()
+        self.articleLength = len(self.tempFile)
         filePoint = 0
         while True:
             line = self.mdFile.readline()
@@ -69,6 +72,22 @@ class makeHTML:
         self.blogBrief = self.blogInfo[2][:-1]
         self.blogTime = self.blogInfo[3][:-1].replace('/', '-').replace(' ', '')
         self.mdFile.close()
+
+        tempTime = ''
+        if self.blogTime[6] == '-':
+            tempTime += self.monthName[int(self.blogTime[5])]
+            tempTime += '&nbsp'
+            tempTime += self.blogTime[7:]
+            tempTime += '，'
+            tempTime += self.blogTime[:4]
+        else:
+            tempTime += self.monthName[int(self.blogTime[5:7])]
+            tempTime += '&nbsp'
+            tempTime += self.blogTime[8:]
+            tempTime += '，'
+            tempTime += self.blogTime[:4]
+        
+        self.blogTime = tempTime
     
     def getInform(self, myStr):
         isStrong = False
@@ -207,7 +226,7 @@ class makeHTML:
             print(self.fileName[order])
             #print(contentAll)
             #print('over')
-            htmlContent = open(self.fileName[order]).read()
+            htmlContent = self.tempFile
             htmlContent = htmlContent.replace('**', ' ')
             htmlContent = htmlContent.replace('<u>', ' ')
             htmlContent = htmlContent.replace('</u>', ' ')
@@ -399,12 +418,8 @@ class makeHTML:
             buttonTemp = buttonTemp.replace('((order))', str(i))
             buttonTemp = buttonTemp.replace('((title))', self.blogTiTle)
             buttonTemp = buttonTemp.replace('((time))', self.blogTime)
-            buttonTemp = buttonTemp.replace('((brief))', self.blogBrief)
+            buttonTemp = buttonTemp.replace('((brief))', self.tempFile[:min(250, self.articleLength)].replace('#', '').replace('$', '').replace('*', '').replace('<u>', '').replace('</u>', '') + '...')
             buttonTemp = buttonTemp.replace('((number))', str(self.articleLength))
-            if i % 2 == 0:
-                buttonTemp = buttonTemp.replace('((lr))', '')
-            else:
-                buttonTemp = buttonTemp.replace('((lr))', '2')
             
             if self.num - i <= 3:
                 content += buttonTemp
@@ -412,7 +427,7 @@ class makeHTML:
             tempBlogBox = blogBox
             tempBlogBox = tempBlogBox.replace('((order))', str(i))
             tempBlogBox = tempBlogBox.replace('((title))', self.blogTiTle)
-            tempBlogBox = tempBlogBox.replace('((short))', open(self.fileName[i]).read()[:min(250, self.articleLength)].replace('#', '').replace('$', '').replace('*', '').replace('<u>', '').replace('</u>', '') + '...')
+            tempBlogBox = tempBlogBox.replace('((short))', self.tempFile[:min(250, self.articleLength)].replace('#', '').replace('$', '').replace('*', '').replace('<u>', '').replace('</u>', '') + '...')
             tempBlogBox = tempBlogBox.replace('((time))', self.blogTime)
             tempBlogBox = tempBlogBox.replace('((tag))', self.blogClass)
             blogBoxs += tempBlogBox

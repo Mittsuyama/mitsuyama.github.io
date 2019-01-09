@@ -162,19 +162,17 @@ div.articleContext {
 }
 
 div.articleBorder {
-    box-shadow: 1px 1px 20px 5px rgba(0,0,0,0.03), 1px 1px 30px 7px rgba(0,0,0,0.02);
+    /* box-shadow: 1px 1px 20px 5px rgba(0,0,0,0.03), 1px 1px 30px 7px rgba(0,0,0,0.02); */
     margin: auto;
     width: 55%;
     padding: 30px 60px 100px 60px;
     border-radius: 0px;
     background-color: white;
     color: rgba(80, 80, 80, 0.9);
-    src: url('../fonts/Deng.ttf');
     font-family: "等线";
 }
 
 div.h2 {
-    src: url('../fonts/Deng.ttf');
     font-family: "等线";
     font-weight: bold;
     font-size: 35px;
@@ -194,7 +192,6 @@ div.h2 {
 }
 
 div.h3 {
-    src: url('../fonts/Deng.ttf');
     font-family: "等线";
     font-weight: bold;
     font-size: 28px;
@@ -205,39 +202,26 @@ div.h3 {
 }
 
 div.h4 {
-    src: url('../fonts/Deng.ttf');
     font-family: "等线";
     font-weight: bold;
-    /*background-image: url("../img/icon/h4.png");
-    background-repeat: no-repeat;
-    background-position-x: left;
-    background-position-y: 44px;
-    background-size: 2.5%;*/
     font-size: 26px;
     margin-left: -61px;
     margin-top: 10px;
     margin-bottom: 20px;
-    /*background-color: rgba(120, 220, 190, 0.05);*/
-    border-left: 8px solid rgba(120, 210, 230, 1);
+    color: rgba(50, 150, 180, 1);
+    border-left: 5px solid rgba(120, 210, 230, 1);
     border-radius: 0px 5px 5px 0px;
-    padding: 10px 20px 3px 53px;
-    min-height: 50px;
+    padding: 0px 20px 0px 53px;
 }
 
 div.h5 {
-    src: url('../fonts/Deng.ttf');
     font-family: "等线";
-    /*background-image: url("../img/icon/h5.png");
-    background-repeat: no-repeat;
-    background-position-x: left;
-    background-position-y: 28px;
-    background-size: 2.3%;*/
     font-weight: bold;
-    color: rgba(50, 150, 180, 1);
+    /* color: rgba(50, 150, 180, 1); */
     font-size: 23px;
     margin-left: -61px;
     margin-top: 15px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     /*background-color: rgba(110, 220, 250, 0.05);*/
     border-left: 8px solid rgba(200, 200, 200, 0);
     padding: 5px 0px 2px 53px;
