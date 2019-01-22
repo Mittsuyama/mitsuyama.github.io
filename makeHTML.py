@@ -1,3 +1,4 @@
+# -*- coding: UTF-8 -*-
 import codecs
 import os
 import glob
@@ -421,8 +422,8 @@ class makeHTML:
             buttonTemp = buttonTemp.replace('((brief))', self.tempFile[:min(250, self.articleLength)].replace('#', '').replace('$', '').replace('*', '').replace('<u>', '').replace('</u>', '') + '...')
             buttonTemp = buttonTemp.replace('((number))', str(self.articleLength))
             
-            if self.num - i <= 3:
-                content += buttonTemp
+            #if self.num - i <= 3:
+            content += buttonTemp
 
             tempBlogBox = blogBox
             tempBlogBox = tempBlogBox.replace('((order))', str(i))
