@@ -312,7 +312,7 @@ div.sliderBrief {
 .functionTitle {
     position: relative;
     color: #777777;
-    font-family: Light;
+    font-family: "等线";
     font-size: 30px;
     margin-bottom: 5px;
 
@@ -326,7 +326,7 @@ div.sliderBrief {
     position: relative;
     color: #777777;
     font-size: 13px;
-    font-family: Light;
+    font-family: "等线";
 
     transition-duration: 0.3s;
     -moz-transition-duration: 0.2s;
@@ -356,7 +356,7 @@ div.sliderBrief {
 }
 
 #lbhcontent {
-    font-family: Light;
+    font-family: "等线";
     margin: auto;
     width: 300px;
     height: 40px;
@@ -416,8 +416,8 @@ img.articleImg {
 .inforBox {
     position: relative;
     margin: auto;
-    font-family: Light;
-    color: #666666;
+    font-family: "等线";
+    color: #888888;
 }
 
 .articleTime {
@@ -431,8 +431,7 @@ img.articleImg {
     margin: 10px 0px 5px 0px;
     width: 100%;
     font-size: 30px;
-    font-weight: bold;
-    color: #444444;
+    color: #555555;
 }
 
 .articleBrief {
@@ -459,10 +458,10 @@ img.articleImg {
 
 .cuttingLine {
     position: relative;
-    margin: auto;
+    left: 0;
     width: 40%;
     border-bottom: 1px solid #dddddd;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
     margin-top: 50px;
 }
 
@@ -474,7 +473,7 @@ img.articleImg {
 
 #loadMore {
     margin: auto;
-    font-family: Light;
+    font-family: "等线";
     font-size: 20px;
     width: 100px;
     height: 40px;
