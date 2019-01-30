@@ -421,6 +421,7 @@ class makeHTML:
             buttonTemp = buttonTemp.replace('((time))', self.blogTime)
             buttonTemp = buttonTemp.replace('((brief))', self.tempFile[:min(250, self.articleLength)].replace('#', '').replace('$', '').replace('*', '').replace('<u>', '').replace('</u>', '') + '...')
             buttonTemp = buttonTemp.replace('((number))', str(self.articleLength))
+            buttonTemp = buttonTemp.replace('((tag))', str(self.blogClass))
             
             #if self.num - i <= 3:
             content += buttonTemp
