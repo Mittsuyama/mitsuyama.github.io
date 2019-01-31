@@ -147,7 +147,7 @@ a:hover {
 div.sliderTime {
     position: relative;
     width: 100%;
-    font-size: 20px;
+    font-size: 18px;
     word-break: break-all;
 }
 
@@ -156,7 +156,7 @@ div.sliderTitle {
     width: 100%;
     font-family: ChineseFan;
     line-height: 70px;
-    font-size: 70px;
+    font-size: 60px;
     word-break: break-all;
     margin: 10px 0px 10px -12px;
 }
