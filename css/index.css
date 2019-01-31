@@ -164,8 +164,9 @@ div.sliderTitle {
 div.sliderBrief {
     position: relative;
     width: 100%;
-    font-size: 21px;
+    font-size: 18px;
     word-break: break-all;
+    color: #dddddd;
 }
 
 #readmore {
@@ -500,10 +501,10 @@ img.articleImg {
 .cuttingLine {
     position: relative;
     left: 0;
-    width: 40%;
-    border-bottom: 1px solid #dddddd;
-    margin-bottom: 50px;
-    margin-top: 50px;
+    width: 100%;
+    border-bottom: 1px dashed #cccccc;
+    margin-bottom: 70px;
+    margin-top: 70px;
 }
 
 #moreBox {

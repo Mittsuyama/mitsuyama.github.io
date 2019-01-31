@@ -419,7 +419,7 @@ class makeHTML:
             buttonTemp = buttonTemp.replace('((order))', str(i))
             buttonTemp = buttonTemp.replace('((title))', self.blogTiTle)
             buttonTemp = buttonTemp.replace('((time))', self.blogTime)
-            buttonTemp = buttonTemp.replace('((brief))', self.tempFile[:min(250, self.articleLength)].replace('#', '').replace('$', '').replace('*', '').replace('<u>', '').replace('</u>', '') + '...')
+            buttonTemp = buttonTemp.replace('((brief))', self.blogBrief)
             buttonTemp = buttonTemp.replace('((number))', str(self.articleLength))
             buttonTemp = buttonTemp.replace('((tag))', str(self.blogClass))
             

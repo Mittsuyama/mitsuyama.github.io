@@ -3,10 +3,7 @@ var search = instantsearch({
     appId: 'PKH2B42HCE',
     apiKey: 'bb62c5db50ca8b2c581aac06ed127758', // search only API key, no ADMIN key
     indexName: 'MITSUYAMA_SITE',
-    urlSync: true,
-    searchParameters: {
-        hitsPerPage: 5
-      }
+    urlSync: true
 });
 
 $(document).on("click",".hit", function(){
@@ -67,7 +64,7 @@ function init() {
     search.addWidget(
         instantsearch.widgets.hits({
             container: '#hits',
-            hitsPerPage: 5,
+            hitsPerPage: 4,
             templates: {
             item: document.getElementById('hit-template').innerHTML,
             empty: "We didn't find any results for the search <em>\"{{query}}\"</em>"
