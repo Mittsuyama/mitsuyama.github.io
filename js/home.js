@@ -122,7 +122,7 @@ $(document).ready(function() {
         $("#homeBackground").fadeIn();
         $(".nevigation").fadeIn();
         $(".home_background").fadeIn();
-        $(".loading").fadeOut();
+        $("#loading").fadeOut();
         pageLoading();
     });
 });

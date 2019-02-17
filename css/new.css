@@ -34,9 +34,26 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: Light;
+    src: url('../font/Deng.eot');
+    src:
+        url('../font/Deng.eot?#font-spider') format('embedded-opentype'),
+        url('../font/Deng.woff') format('woff'),
+        url('../font/Deng.ttf') format('truetype'),
+        url('../font/Deng.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
 a {
     text-decoration: none;
 }
+
+a:hover {
+    text-decoration: none;
+}
+
 
 html {
     height: 100%;
@@ -90,7 +107,7 @@ body {
     height: 100%;
     object-fit:cover;
     top: 100px;
-    filter: brightness(0.3)
+    filter: brightness(0.2)
 }
 
 #textWrap {
@@ -107,7 +124,7 @@ body {
     float: left;
     width: 20%;
     height: 100%;
-    padding-left: 300px;
+    padding-left: 230px;
     padding-top: 100px;
 }
 
@@ -124,7 +141,9 @@ body {
 
 .sliderBrief {
     margin-top: 5px;
-    width: 37%;
+    color: #999999;
+    width: 40%;
+    font-family: Light;
 }
 
 .sliderReadmore {
@@ -132,7 +151,7 @@ body {
     text-align: center;
     height: 50px;
     line-height: 47px;
-    margin-top: 70px;
+    margin-top: 40px;
     width: 150px;
     border: 1px solid #dddddd;
     cursor: pointer;
@@ -155,6 +174,12 @@ body {
     -webkit-transition-duration: 0.4s;
 }
 
+.slierReadmoreSmallBox {
+    color: #dddddd;
+    width: 100%;
+    height: 100%;
+}
+
 #imgWrap2 {
     position: absolute;
     width: 500%;
@@ -169,45 +194,56 @@ body {
     height: 100%;
     color: #dddddd;
     font-size: 22px;
-    padding-top: 170px;
+    padding-top: 140px;
     z-index: 5;
 }
 
 #buttonWrap {
     position: absolute;
     height: 100px;
-    width: 200px;
-    right: 200px;
-    bottom: 150px;
+    right: 150px;
+    bottom: 30px;
     z-index: 6;
 }
 
 #sliderPre:hover {
-    color: black;
-    background-color: #dddddd;
+    background-color: rgba(255, 255, 255, 0.3);
 }
 
 #sliderNex:hover {
-    color: black;
-    background-color: #dddddd;
+    background-color: rgba(255, 255, 255, 0.3);
 }
 
-#sliderPre:focus {
-    background-color: white;
+#sliderPlay:hover {
+    background-color: rgba(255, 255, 255, 0.3);
 }
 
-#sliderPre, #sliderNex {
-    width: 50px;
+#sliderPre:hover .sliderButtonText {
+    opacity: 1;
+}
+
+#sliderNex:hover .sliderButtonText {
+    opacity: 1;
+}
+
+#sliderPre:hover .sliderButtonSymbol {
+    opacity: 0;
+}
+
+#sliderNex:hover .sliderButtonSymbol {
+    opacity: 0;
+}
+
+#sliderPre, #sliderNex, #sliderPlay {
+    width: 120px;
     height: 50px;
-    border: 2px solid #dddddd;
-    border-radius: 50px;
+    border: 1px solid #eeeeee;
     float: left;
     margin-right: 20px;
-    font-size: 50px;
+    font-size: 35px;
     color: white;
-    padding-left: 4px;
-    line-height: 35px;
     cursor: pointer;
+    transform: translate(0, -50%);
 
     transition-duration: 0.2s;
     -moz-transition-duration: 0.2s;
@@ -215,8 +251,58 @@ body {
     -webkit-transition-duration: 0.2s;
 }
 
-#sliderNex {
-    padding-left: 8px;
+#sliderPlay {
+    font-size: 23px;
+    width: 50px;
+}
+
+#sliderPlay .sliderButtonSymbol {
+    line-height: 44px;
+}
+
+.sliderButtonText {
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    font-size: 23px;
+    text-align: center;
+    line-height: 47px;
+
+    transition-duration: 0.2s;
+    -moz-transition-duration: 0.2s;
+    -o-transition-duration: 0.2s;
+    -webkit-transition-duration: 0.2s;
+}
+
+.sliderButtonSymbol {
+    opacity: 1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 42px;
+
+    transition-duration: 0.2s;
+    -moz-transition-duration: 0.2s;
+    -o-transition-duration: 0.2s;
+    -webkit-transition-duration: 0.2s;
+}
+
+#sliderBar {
+    position: absolute;
+    width: 100%;
+    height: 10px;
+    z-index: 6;
+    bottom: 0px;
+}
+
+#myBar {
+    position: absolute;
+    bottom: 2px;
+    width: 20%;
+    height: 35%;
+    background-color: white;
 }
 
 #recentPost {

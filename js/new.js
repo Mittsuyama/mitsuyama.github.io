@@ -1,5 +1,7 @@
 var sliderLocation = 0;
 var n = 0;
+var sliderTimer = null;
+var isAutoPlay = 1;
 
 $(document).ready(function() {
     var myRand = Math.round(Math.random() * 5);
@@ -10,19 +12,49 @@ $(document).ready(function() {
     document.getElementById("imgWrap2").style.left = myRand + '%';
     document.getElementById("textWrap").style.left = myRand + '%';
     document.getElementById("textWrap2").style.left = myRand + '%';
+    document.getElementById("myBar").style.left = myRand / -100 * 20 + '%';
     $(window).load(function() {
         $("#sliderContainer").fadeIn();
         $("#recentPost").fadeIn();
         $("#loading").fadeOut();
+
+        $('#sliderContainer').click(function() {
+            if($('#sliderPlay').is(':hover')) {
+                if(isAutoPlay == 0) {
+                    sliderAutoPlay();
+                }
+                else {
+                    sliderStopPlay();
+                }
+            }
+            else {
+                sliderStopPlay();
+            }
+        });
 
         $('#sliderNex').click(sliderNext);
         $('#sliderPre').click(sliderPrev);
 
         window.addEventListener('scroll', throttle(lazyload, 500, 1000));
         lazyload();
+        
+        sliderAutoPlay();
     });
 });
 
+function sliderAutoPlay() {
+    $('#sliderPlay').children('.sliderButtonSymbol').text('| |');
+    isAutoPlay = 1;
+    sliderTimer = setInterval(function() {
+        sliderNext();
+    }, 2500);
+}
+
+function sliderStopPlay() {
+    isAutoPlay = 0;
+    $('#sliderPlay').children('.sliderButtonSymbol').text('▷');
+    clearInterval(sliderTimer);
+}
 
 function sliderNext() {
     sliderLocation -= 100;
@@ -58,6 +90,11 @@ function sliderLocate() {
     );
     $('#textWrap2').animate(
         {left: sliderLocation + '%'},
+        "slow",
+        "swing"
+    );
+    $('#myBar').animate(
+        {left: sliderLocation / -100 * 20 + '%'},
         "slow",
         "swing"
     );
