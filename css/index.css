@@ -1,4 +1,4 @@
-@font-face {
+﻿@font-face {
     font-family: Light;
     src: url('../font/Deng.eot');
     src:
@@ -59,7 +59,7 @@ a:hover {
     position: relative;
     margin: auto;
     width: 100%;
-    height: 700px;
+    height: 800px;
     background-color: rgb(200, 200, 200);
     overflow: hidden;
     cursor: pointer;
