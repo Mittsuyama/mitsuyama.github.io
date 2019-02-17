@@ -37,7 +37,7 @@ class makeHTML:
         for theName in path_list:
         	self.fileName.append(os.path.join(path,theName))
         self.num = len(path_list)
-        self.homeTemp = open('templates/index.html').read()
+        self.homeTemp = open('templates/newPageTest.html').read()
         self.blogTemp = open('templates/blog.html').read()
         self.blogs = open('templates/articles.html').read()
         self.homeBttonTemp = open('templates/articleDisplay.html').read()
@@ -355,32 +355,14 @@ class makeHTML:
         outFIle.write(blogHtml)
 
     def main(self):
-        self.indexFile = open('index.html', 'w')
+        self.indexFile = open('newPageWriteTest.html', 'w')
         
         homePage = self.homeTemp
         content = ''
 
-        sliderImg = '''
-            <img src = "img/blog-image/default.jpg" data-src = "img/blog-image/order1.jpg" id = "sliderImg1">
-            <img src = "img/blog-image/default.jpg" data-src = "img/blog-image/order2.jpg" id = "sliderImg2">
-            <img src = "img/blog-image/default.jpg" data-src = "img/blog-image/order3.jpg" id = "sliderImg3">
-            <img src = "img/blog-image/default.jpg" data-src = "img/blog-image/order4.jpg" id = "sliderImg4">
-            <img src = "img/blog-image/default.jpg" data-src = "img/blog-image/order5.jpg" id = "sliderImg5">
-        '''
-        sliderImg = sliderImg.replace('order1', str(self.sliderDisplay[0])).replace('order2', str(self.sliderDisplay[1])).replace('order3', str(self.sliderDisplay[2])).replace('order4', str(self.sliderDisplay[3])).replace('order5', str(self.sliderDisplay[4]))
-        
-        homePage = homePage.replace('((sliderImg))', sliderImg)
-        
-        sliderContent = '''
-            <div id = "sliderText((textOrder))">
-                <a href = "blog/((order)).html"></a>
-                <div class = "sliderTime">((time))</div>
-                <div class = "sliderTitle">
-                    ((title))
-                </div>
-                <div class = "sliderBrief">((brief))</div>
-            </div>        
-        '''
+        homePage = homePage.replace('order0', str(self.sliderDisplay[0])).replace('order1', str(self.sliderDisplay[1])).replace('order2', str(self.sliderDisplay[2])).replace('order3', str(self.sliderDisplay[3])).replace('order4', str(self.sliderDisplay[4]))
+
+        homePage = homePage.replace('orderb0', 'b' + str(self.sliderDisplay[0])).replace('orderb1', 'b' + str(self.sliderDisplay[1])).replace('orderb2', 'b' + str(self.sliderDisplay[2])).replace('orderb3', 'b' + str(self.sliderDisplay[3])).replace('orderb4', 'b' + str(self.sliderDisplay[4]))
 
         blogBox = '''
                 <a href = "blog/((order)).html">
@@ -407,13 +389,9 @@ class makeHTML:
             self.pHtml(i)
             for j in range(0, 5):
                 if i == self.sliderDisplay[j]:
-                    tempString = sliderContent
-                    tempString = tempString.replace('((order))', str(i))
-                    tempString = tempString.replace('((time))', self.blogTime)
-                    tempString = tempString.replace('((title))', self.blogTiTle)
-                    tempString = tempString.replace('((brief))', self.blogBrief)
-                    tempString = tempString.replace('((textOrder))', str(j + 1))
-                    homePage = homePage.replace('((sliderContent' + str(j + 1) +  '))', tempString)
+                    homePage = homePage.replace('((sliderTime' + str(j) + '))', self.blogTime)
+                    homePage = homePage.replace('((slierTitle' + str(j) + '))', self.blogTiTle)
+                    homePage = homePage.replace('((sliderBrief' + str(j) + '))', self.blogBrief)
 
             buttonTemp = self.homeBttonTemp
             buttonTemp = buttonTemp.replace('((order))', str(i))

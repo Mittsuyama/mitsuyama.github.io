@@ -1,3 +1,39 @@
+@font-face {
+    font-family: lishu;
+    src: url('../font/AaFangFangLiShu-2.eot');
+    src:
+        url('../font/AaFangFangLiShu-2.eot?#font-spider') format('embedded-opentype'),
+        url('../font/AaFangFangLiShu-2.woff') format('woff'),
+        url('../font/AaFangFangLiShu-2.ttf') format('truetype'),
+        url('../font/AaFangFangLiShu-2.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: ChineseFan;
+    src: url('../font/ChineseFan.eot');
+    src:
+        url('../font/ChineseFan.eot?#font-spider') format('embedded-opentype'),
+        url('../font/ChineseFan.woff') format('woff'),
+        url('../font/ChineseFan.ttf') format('truetype'),
+        url('../font/ChineseFan.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: lishu2;
+    src: url('../font/GuFengLiShu.eot');
+    src:
+        url('../font/GuFengLiShu.eot?#font-spider') format('embedded-opentype'),
+        url('../font/GuFengLiShu.woff') format('woff'),
+        url('../font/GuFengLiShu.ttf') format('truetype'),
+        url('../font/GuFengLiShu.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
 html {
     height: 100%;
 }
@@ -32,13 +68,124 @@ body {
     width: 100%;
     height: 100%;
     object-fit:cover;
-    top: 50%;
-    left: 50%;
+    top: 100px;
+    filter: brightness(0.5)
 }
 
 #textWrap {
+    /* font-family: "等线"; */
     position: absolute;
     width: 500%;
     height: 100%;
-    z-index: 2;
+    color: #dddddd;
+    font-size: 22px;
+    z-index: 3;
+}
+
+.sliderTextPage {
+    float: left;
+    width: 20%;
+    height: 100%;
+    padding-left: 200px;
+    padding-top: 120px;
+}
+
+.sliderTitle {
+    font-family: lishu;
+    font-size: 120px;
+}
+
+.sliderTime {
+    font-size: 35px;
+    font-family: lishu2;
+    margin-top: 150px;
+}
+
+.sliderBrief {
+    margin-top: 5px;
+    width: 37%;
+}
+
+.sliderReadmore {
+    font-size: 20px;
+    text-align: center;
+    height: 50px;
+    line-height: 47px;
+    margin-top: 50px;
+    width: 150px;
+    border: 1px solid #dddddd;
+    cursor: pointer;
+}
+
+.sliderReadmore:hover .sliderReadmoreEffect {
+    width: 148px;
+    opacity: 0;
+}
+
+.sliderReadmoreEffect {
+    position: absolute;
+    width: 0%;
+    background-color: #dddddd;
+    height: 48px;
+
+    transition-duration: 0.4s;
+    -moz-transition-duration: 0.4s;
+    -o-transition-duration: 0.4s;
+    -webkit-transition-duration: 0.4s;
+}
+
+#imgWrap2 {
+    position: absolute;
+    width: 500%;
+    height: 100%;
+    z-index: 4;
+}
+
+#textWrap2 {
+    /* font-family: "等线"; */
+    position: absolute;
+    width: 500%;
+    height: 100%;
+    color: #dddddd;
+    font-size: 22px;
+    padding-top: 150px;
+    z-index: 5;
+}
+
+#buttonWrap {
+    position: absolute;
+    height: 100px;
+    width: 200px;
+    right: 200px;
+    bottom: 150px;
+    z-index: 6;
+}
+
+#sliderPre:hover {
+    color: black;
+    background-color: white;
+}
+
+#sliderNex:hover {
+    color: black;
+    background-color: white;
+}
+
+#sliderPre, #sliderNex {
+    width: 50px;
+    height: 50px;
+    border: 2px solid white;
+    border-radius: 50px;
+    float: left;
+    margin-right: 20px;
+    font-size: 50px;
+    color: white;
+    text-align: center;
+    line-height: 35px;
+    cursor: pointer;
+
+    transition-duration: 0.2s;
+    -moz-transition-duration: 0.2s;
+    -o-transition-duration: 0.2s;
+    -webkit-transition-duration: 0.2s;
 }
