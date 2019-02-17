@@ -258,81 +258,11 @@ div.sliderBrief {
     background-color: white;
 }
 
-.functionArea {
+#classification {
     position: relative;
-    float: left;
-    width: 33%;
-    height: 100%;
-}
-
-.functionArea:hover {
-    cursor: pointer;
-}
-
-.functionArea:hover .functionIcon {
-    color: #111111;
-}
-
-.functionArea:hover .functionTitle {
-    color: #111111;
-}
-
-.functionArea:hover .functionBrieft {
-    color: #111111;
-}
-
-.cutLine {
-    background-color: #eeeeee;
-    float: left;
-    width: 1px;
-    height: 100%;
-}
-
-.functionIcon {
-    position: absolute;
-    left: 15%;
-    top: 50%;
-    font-size: 60px;
-    color: #777777;
-    transform: translate(0, -50%);
-
-    transition-duration: 0.3s;
-    -moz-transition-duration: 0.2s;
-    -o-transition-duration: 0.2s;
-    -webkit-transition-duration: 0.2s;
-}
-
-.functionContent {
-    top: 50%;
-    position: absolute;
-    right: 10%;
-    width: 50%;
-    transform: translate(0, -50%);
-}
-
-.functionTitle {
-    position: relative;
-    color: #777777;
-    font-family: "等线";
-    font-size: 30px;
-    margin-bottom: 5px;
-
-    transition-duration: 0.3s;
-    -moz-transition-duration: 0.2s;
-    -o-transition-duration: 0.2s;
-    -webkit-transition-duration: 0.2s;
-}
-
-.functionBrieft {
-    position: relative;
-    color: #777777;
-    font-size: 13px;
-    font-family: "等线";
-
-    transition-duration: 0.3s;
-    -moz-transition-duration: 0.2s;
-    -o-transition-duration: 0.2s;
-    -webkit-transition-duration: 0.2s;
+    margin: auto;
+    margin-top: 80px;
+    width: 45%;    
 }
 
 #classBox {
@@ -356,7 +286,7 @@ div.sliderBrief {
     background-color: transparent;
 }
 
-#lbhcontent {
+.lbhcontent {
     font-family: "等线";
     font-weight: bold;
     margin: auto;
@@ -369,7 +299,7 @@ div.sliderBrief {
     margin-bottom: 20px;
 }
 
-#lbhaffix {
+.lbhaffix {
     font-family: "等线";
     font-weight: bold;
     margin: auto;
@@ -380,7 +310,7 @@ div.sliderBrief {
     margin-bottom: 20px;
 }
 
-#headLine {
+.headLine {
     margin: auto;
     height: 6px;
     width: 60px;
