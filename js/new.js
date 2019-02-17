@@ -3,6 +3,10 @@ var n = 0;
 
 $(document).ready(function() {
     $(window).load(function() {
+        $("#sliderContainer").fadeIn();
+        $("#recentPost").fadeIn();
+        $("#loading").fadeOut();
+
         $('#sliderNex').click(sliderNext);
         $('#sliderPre').click(sliderPrev);
 

@@ -8,6 +8,7 @@
         <!-- Bootstrap CSS -->
         <link rel = "stylesheet" href = "https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity = "sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin = "anonymous">
         <link rel = "stylesheet" href = "css/new.css">
+        <link rel = "stylesheet" href = "css-loader/css/style.css">
 
         <link rel = "icon" href = "img/icon/favicon.ico" mce_href = "img/icon/favicon.ico" type = "image/x-icon">
         <link rel = "shortcut icon" href = "img/icon/favicon.ico" mce_href = "img/icon/favicon.ico" type = "image/x-icon">
@@ -15,23 +16,32 @@
         <title>MITSUYAMA | HOME</title>
     </head>
     <body>
+        <div id = loading>
+            <div class="loader">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            </div>
+        </div>
         
         <div id = "sliderContainer">
             <div id = "imgWrap">
                 <div class = "sliderPage">
-                    <img src = "img/blog-image/default.jpg" data-src = "img/blog-image/0.jpg" class = "sliderImg">
+                    <img src = "img/blog-image/0.jpg" class = "sliderImg">
                 </div>
                 <div class = "sliderPage">
-                    <img src = "img/blog-image/default.jpg" data-src = "img/blog-image/1.jpg" class = "sliderImg">
+                    <img src = "img/blog-image/1.jpg" class = "sliderImg">
                 </div>
                 <div class = "sliderPage">
-                    <img src = "img/blog-image/default.jpg" data-src = "img/blog-image/9.jpg" class = "sliderImg">
+                    <img src = "img/blog-image/9.jpg" class = "sliderImg">
                 </div>
                 <div class = "sliderPage">
-                    <img src = "img/blog-image/default.jpg" data-src = "img/blog-image/16.jpg" class = "sliderImg">
+                    <img src = "img/blog-image/16.jpg" class = "sliderImg">
                 </div>
                 <div class = "sliderPage">
-                    <img src = "img/blog-image/default.jpg" data-src = "img/blog-image/24.jpg" class = "sliderImg">
+                    <img src = "img/blog-image/24.jpg" class = "sliderImg">
                 </div>
             </div>
             <div id = "textWrap">
@@ -63,19 +73,19 @@
             </div>
             <div id = "imgWrap2">
                 <div class = "sliderPage">
-                    <img src = "img/blog-image/default1.png" data-src = "img/blog-image/b0.png" class = "sliderImg">
+                    <img src = "img/blog-image/b0.png" class = "sliderImg">
                 </div>
                 <div class = "sliderPage">
-                    <img src = "img/blog-image/default1.png" data-src = "img/blog-image/b1.png" class = "sliderImg">
+                    <img src = "img/blog-image/b1.png" class = "sliderImg">
                 </div>
                 <div class = "sliderPage">
-                    <img src = "img/blog-image/default1.png" data-src = "img/blog-image/b9.png" class = "sliderImg">
+                    <img src = "img/blog-image/b9.png" class = "sliderImg">
                 </div>
                 <div class = "sliderPage">
-                    <img src = "img/blog-image/default1.png" data-src = "img/blog-image/b16.png" class = "sliderImg">
+                    <img src = "img/blog-image/b16.png" class = "sliderImg">
                 </div>
                 <div class = "sliderPage">
-                    <img src = "img/blog-image/default1.png" data-src = "img/blog-image/b24.png" class = "sliderImg">
+                    <img src = "img/blog-image/b24.png" class = "sliderImg">
                 </div>
             </div>
             <div id = "textWrap2">
@@ -147,6 +157,10 @@
 
         </div>
 
+        <div id = "recentPost">
+
+        </div>
+        
         <script>
             var myRand = Math.round(Math.random() * 5);
             if(myRand == 5) myRand = 0;
@@ -156,10 +170,6 @@
             document.getElementById("textWrap").style.left = myRand + '%';
             document.getElementById("textWrap2").style.left = myRand + '%';
         </script>
-
-        <!-- <div id = "recentPost">
-
-        </div> -->
 
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->

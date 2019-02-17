@@ -42,11 +42,28 @@ html {
     height: 100%;
 }
 
+body::-webkit-scrollbar {
+    display: none;
+}
+
+/* body {
+    -ms-overflow-style: none;
+    height: 100%;
+	width: calc(100vw + 18px);
+	overflow: auto;
+} */
+
 body {
     height: 100%;
 }
 
+#loading {
+    position: relative;
+    top: 50%;
+}
+
 #sliderContainer {
+    display: none;
     position: relative;
     width: 100%;
     height: 100%;
@@ -167,24 +184,24 @@ body {
 
 #sliderPre:hover {
     color: black;
-    background-color: white;
+    background-color: #dddddd;
 }
 
 #sliderNex:hover {
     color: black;
-    background-color: white;
+    background-color: #dddddd;
 }
 
 #sliderPre, #sliderNex {
     width: 50px;
     height: 50px;
-    border: 2px solid white;
+    border: 2px solid #dddddd;
     border-radius: 50px;
     float: left;
     margin-right: 20px;
     font-size: 50px;
     color: white;
-    text-align: center;
+    padding-left: 4px;
     line-height: 35px;
     cursor: pointer;
 
@@ -194,8 +211,12 @@ body {
     -webkit-transition-duration: 0.2s;
 }
 
+#sliderNex {
+    padding-left: 8px;
+}
+
 #recentPost {
-    position: relative;
+    display: none;
     height: 500px;
-    width: 100px;
+    width: 100%;
 }
