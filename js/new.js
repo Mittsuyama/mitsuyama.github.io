@@ -44,15 +44,17 @@ $(document).ready(function() {
 
 function sliderAutoPlay() {
     $('#sliderPlay').children('.sliderButtonSymbol').text('| |');
+    $('#sliderPlay').children('.sliderButtonSymbol').css('line-height', '43px');
     isAutoPlay = 1;
     sliderTimer = setInterval(function() {
         sliderNext();
-    }, 2500);
+    }, 3000);
 }
 
 function sliderStopPlay() {
     isAutoPlay = 0;
     $('#sliderPlay').children('.sliderButtonSymbol').text('▷');
+    $('#sliderPlay').children('.sliderButtonSymbol').css('line-height', '45px');
     clearInterval(sliderTimer);
 }
 

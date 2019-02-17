@@ -124,8 +124,8 @@ body {
     float: left;
     width: 20%;
     height: 100%;
-    padding-left: 230px;
-    padding-top: 100px;
+    padding-left: 235px;
+    padding-top: 110px;
 }
 
 .sliderTitle {
@@ -258,6 +258,11 @@ body {
 
 #sliderPlay .sliderButtonSymbol {
     line-height: 44px;
+
+    transition-duration: 0s;
+    -moz-transition-duration: 0s;
+    -o-transition-duration: 0s;
+    -webkit-transition-duration: 0s;
 }
 
 .sliderButtonText {
