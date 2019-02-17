@@ -1,7 +1,15 @@
-var sliderLocation = 0
+var sliderLocation = 0;
 var n = 0;
 
 $(document).ready(function() {
+    var myRand = Math.round(Math.random() * 5);
+    if(myRand == 5) myRand = 0;
+    myRand *= -100;
+    sliderLocation = myRand;
+    document.getElementById("imgWrap").style.left = myRand + '%';
+    document.getElementById("imgWrap2").style.left = myRand + '%';
+    document.getElementById("textWrap").style.left = myRand + '%';
+    document.getElementById("textWrap2").style.left = myRand + '%';
     $(window).load(function() {
         $("#sliderContainer").fadeIn();
         $("#recentPost").fadeIn();
