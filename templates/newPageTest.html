@@ -19,19 +19,19 @@
         <div id = "sliderContainer">
             <div id = "imgWrap">
                 <div class = "sliderPage">
-                    <img src = "img/blog-image/order0.jpg" class = "sliderImg">
+                    <img src = "img/blog-image/default.jpg" data-src = "img/blog-image/order0.jpg" class = "sliderImg">
                 </div>
                 <div class = "sliderPage">
-                    <img src = "img/blog-image/order1.jpg" class = "sliderImg">
+                    <img src = "img/blog-image/default.jpg" data-src = "img/blog-image/order1.jpg" class = "sliderImg">
                 </div>
                 <div class = "sliderPage">
-                    <img src = "img/blog-image/order2.jpg" class = "sliderImg">
+                    <img src = "img/blog-image/default.jpg" data-src = "img/blog-image/order2.jpg" class = "sliderImg">
                 </div>
                 <div class = "sliderPage">
-                    <img src = "img/blog-image/order3.jpg" class = "sliderImg">
+                    <img src = "img/blog-image/default.jpg" data-src = "img/blog-image/order3.jpg" class = "sliderImg">
                 </div>
                 <div class = "sliderPage">
-                    <img src = "img/blog-image/order4.jpg" class = "sliderImg">
+                    <img src = "img/blog-image/default.jpg" data-src = "img/blog-image/order4.jpg" class = "sliderImg">
                 </div>
             </div>
             <div id = "textWrap">
@@ -63,19 +63,19 @@
             </div>
             <div id = "imgWrap2">
                 <div class = "sliderPage">
-                    <img src = "img/blog-image/orderb0.png" class = "sliderImg">
+                    <img src = "img/blog-image/default1.png" data-src = "img/blog-image/orderb0.png" class = "sliderImg">
                 </div>
                 <div class = "sliderPage">
-                    <img src = "img/blog-image/orderb1.png" class = "sliderImg">
+                    <img src = "img/blog-image/default1.png" data-src = "img/blog-image/orderb1.png" class = "sliderImg">
                 </div>
                 <div class = "sliderPage">
-                    <img src = "img/blog-image/orderb2.png" class = "sliderImg">
+                    <img src = "img/blog-image/default1.png" data-src = "img/blog-image/orderb2.png" class = "sliderImg">
                 </div>
                 <div class = "sliderPage">
-                    <img src = "img/blog-image/orderb3.png" class = "sliderImg">
+                    <img src = "img/blog-image/default1.png" data-src = "img/blog-image/orderb3.png" class = "sliderImg">
                 </div>
                 <div class = "sliderPage">
-                    <img src = "img/blog-image/orderb4.png" class = "sliderImg">
+                    <img src = "img/blog-image/default1.png" data-src = "img/blog-image/orderb4.png" class = "sliderImg">
                 </div>
             </div>
             <div id = "textWrap2">
@@ -144,7 +144,22 @@
                 <div id = "sliderPre">&lt</div>
                 <div id = "sliderNex">&gt</div>
             </div>
+
         </div>
+
+        <script>
+            var myRand = Math.round(Math.random() * 5);
+            if(myRand == 5) myRand = 0;
+            myRand *= -100;
+            document.getElementById("imgWrap").style.left = myRand + '%';
+            document.getElementById("imgWrap2").style.left = myRand + '%';
+            document.getElementById("textWrap").style.left = myRand + '%';
+            document.getElementById("textWrap2").style.left = myRand + '%';
+        </script>
+
+        <!-- <div id = "recentPost">
+
+        </div> -->
 
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->

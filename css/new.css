@@ -34,6 +34,10 @@
     font-style: normal;
 }
 
+a {
+    text-decoration: none;
+}
+
 html {
     height: 100%;
 }
@@ -69,7 +73,7 @@ body {
     height: 100%;
     object-fit:cover;
     top: 100px;
-    filter: brightness(0.5)
+    filter: brightness(0.4)
 }
 
 #textWrap {
@@ -86,13 +90,13 @@ body {
     float: left;
     width: 20%;
     height: 100%;
-    padding-left: 200px;
-    padding-top: 120px;
+    padding-left: 240px;
+    padding-top: 100px;
 }
 
 .sliderTitle {
     font-family: lishu;
-    font-size: 120px;
+    font-size: 140px;
 }
 
 .sliderTime {
@@ -111,7 +115,7 @@ body {
     text-align: center;
     height: 50px;
     line-height: 47px;
-    margin-top: 50px;
+    margin-top: 70px;
     width: 150px;
     border: 1px solid #dddddd;
     cursor: pointer;
@@ -148,7 +152,7 @@ body {
     height: 100%;
     color: #dddddd;
     font-size: 22px;
-    padding-top: 150px;
+    padding-top: 170px;
     z-index: 5;
 }
 
@@ -188,4 +192,10 @@ body {
     -moz-transition-duration: 0.2s;
     -o-transition-duration: 0.2s;
     -webkit-transition-duration: 0.2s;
+}
+
+#recentPost {
+    position: relative;
+    height: 500px;
+    width: 100px;
 }

@@ -19,19 +19,19 @@
         <div id = "sliderContainer">
             <div id = "imgWrap">
                 <div class = "sliderPage">
-                    <img src = "img/blog-image/0.jpg" class = "sliderImg">
+                    <img src = "img/blog-image/default.jpg" data-src = "img/blog-image/0.jpg" class = "sliderImg">
                 </div>
                 <div class = "sliderPage">
-                    <img src = "img/blog-image/1.jpg" class = "sliderImg">
+                    <img src = "img/blog-image/default.jpg" data-src = "img/blog-image/1.jpg" class = "sliderImg">
                 </div>
                 <div class = "sliderPage">
-                    <img src = "img/blog-image/9.jpg" class = "sliderImg">
+                    <img src = "img/blog-image/default.jpg" data-src = "img/blog-image/9.jpg" class = "sliderImg">
                 </div>
                 <div class = "sliderPage">
-                    <img src = "img/blog-image/16.jpg" class = "sliderImg">
+                    <img src = "img/blog-image/default.jpg" data-src = "img/blog-image/16.jpg" class = "sliderImg">
                 </div>
                 <div class = "sliderPage">
-                    <img src = "img/blog-image/24.jpg" class = "sliderImg">
+                    <img src = "img/blog-image/default.jpg" data-src = "img/blog-image/24.jpg" class = "sliderImg">
                 </div>
             </div>
             <div id = "textWrap">
@@ -57,25 +57,25 @@
                 </div>
                 <div class = "sliderTextPage">
                     <div class = "sliderTitle">
-                        静态网页小功能的实现
+                        静态网页小功能
                     </div>
                 </div>
             </div>
             <div id = "imgWrap2">
                 <div class = "sliderPage">
-                    <img src = "img/blog-image/b0.png" class = "sliderImg">
+                    <img src = "img/blog-image/default1.png" data-src = "img/blog-image/b0.png" class = "sliderImg">
                 </div>
                 <div class = "sliderPage">
-                    <img src = "img/blog-image/b1.png" class = "sliderImg">
+                    <img src = "img/blog-image/default1.png" data-src = "img/blog-image/b1.png" class = "sliderImg">
                 </div>
                 <div class = "sliderPage">
-                    <img src = "img/blog-image/b9.png" class = "sliderImg">
+                    <img src = "img/blog-image/default1.png" data-src = "img/blog-image/b9.png" class = "sliderImg">
                 </div>
                 <div class = "sliderPage">
-                    <img src = "img/blog-image/b16.png" class = "sliderImg">
+                    <img src = "img/blog-image/default1.png" data-src = "img/blog-image/b16.png" class = "sliderImg">
                 </div>
                 <div class = "sliderPage">
-                    <img src = "img/blog-image/b24.png" class = "sliderImg">
+                    <img src = "img/blog-image/default1.png" data-src = "img/blog-image/b24.png" class = "sliderImg">
                 </div>
             </div>
             <div id = "textWrap2">
@@ -144,7 +144,22 @@
                 <div id = "sliderPre">&lt</div>
                 <div id = "sliderNex">&gt</div>
             </div>
+
         </div>
+
+        <script>
+            var myRand = Math.round(Math.random() * 5);
+            if(myRand == 5) myRand = 0;
+            myRand *= -100;
+            document.getElementById("imgWrap").style.left = myRand + '%';
+            document.getElementById("imgWrap2").style.left = myRand + '%';
+            document.getElementById("textWrap").style.left = myRand + '%';
+            document.getElementById("textWrap2").style.left = myRand + '%';
+        </script>
+
+        <!-- <div id = "recentPost">
+
+        </div> -->
 
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
