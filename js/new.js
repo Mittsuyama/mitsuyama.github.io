@@ -35,10 +35,12 @@ function sliderPrev() {
 function sliderLocate() {
     $('#imgWrap').animate(
         {left: sliderLocation + '%'},
+        "1000",
         "linear"
     );
     $('#imgWrap2').animate(
         {left: sliderLocation + '%'},
+        "1000",
         "linear"
     );
     $('#textWrap').animate(
