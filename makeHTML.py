@@ -355,7 +355,7 @@ class makeHTML:
         outFIle.write(blogHtml)
 
     def main(self):
-        self.indexFile = open('indext.html', 'w')
+        self.indexFile = open('index.html', 'w')
         
         homePage = self.homeTemp
         content = ''
