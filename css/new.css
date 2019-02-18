@@ -58,6 +58,30 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: geometos;
+    src: url('../font/geometos.eot');
+    src:
+        url('../font/geometos.eot?#font-spider') format('embedded-opentype'),
+        url('../font/geometos.woff') format('woff'),
+        url('../font/geometos.ttf') format('truetype'),
+        url('../font/geometos.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: graydesign;
+    src: url('../font/graydesign.eot');
+    src:
+        url('../font/graydesign.eot?#font-spider') format('embedded-opentype'),
+        url('../font/graydesign.woff') format('woff'),
+        url('../font/graydesign.ttf') format('truetype'),
+        url('../font/graydesign.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
 a {
     text-decoration: none;
 }
@@ -322,17 +346,34 @@ body {
     background-color: white;
 }
 
-#myIntro {
-    display: none;
+#afterSlider {
     width: 100%;
+    position: relative;
+    display: none;
+}
+
+#myIntro {
+    position: relative;
     height: 400px;
-    padding: 100px;
+    width: 100%;
+    margin-top: 50px;
+    /* text-align: center; */
+    padding-left: 100px;
+}
+
+#introTitle {
     font-size: 40px;
-    font-family: vhavan;
+    font-family: geometos;
+}
+
+#introContent {
+    margin-top: 10px;
+    font-size: 30px;
+    font-family: graydesign;
 }
 
 #recentPost {
-    display: none;
+    position: relative;
     height: 500px;
     width: 100%;
 }

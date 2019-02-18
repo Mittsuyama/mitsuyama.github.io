@@ -15,8 +15,7 @@ $(document).ready(function() {
     document.getElementById("myBar").style.left = myRand / -100 * 20 + '%';
     $(window).load(function() {
         $("#sliderContainer").fadeIn();
-        $("#recentPost").fadeIn();
-        $("#myIntro").fadeIn();
+        $("#afterSlider").fadeIn();
         $("#loading").fadeOut();
 
         $('#sliderContainer').click(function() {
@@ -49,7 +48,7 @@ function sliderAutoPlay() {
     isAutoPlay = 1;
     sliderTimer = setInterval(function() {
         sliderNext();
-    }, 3000);
+    }, 2000);
 }
 
 function sliderStopPlay() {
