@@ -16,6 +16,7 @@ $(document).ready(function() {
     $(window).load(function() {
         $("#sliderContainer").fadeIn();
         $("#recentPost").fadeIn();
+        $("#myIntro").fadeIn();
         $("#loading").fadeOut();
 
         $('#sliderContainer').click(function() {

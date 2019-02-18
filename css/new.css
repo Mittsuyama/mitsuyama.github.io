@@ -46,6 +46,18 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: vhavan;
+    src: url('../font/vhavan.eot');
+    src:
+        url('../font/vhavan.eot?#font-spider') format('embedded-opentype'),
+        url('../font/vhavan.woff') format('woff'),
+        url('../font/vhavan.ttf') format('truetype'),
+        url('../font/vhavan.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
 a {
     text-decoration: none;
 }
@@ -308,6 +320,15 @@ body {
     width: 20%;
     height: 35%;
     background-color: white;
+}
+
+#myIntro {
+    display: none;
+    width: 100%;
+    height: 400px;
+    padding: 100px;
+    font-size: 40px;
+    font-family: vhavan;
 }
 
 #recentPost {
