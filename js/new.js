@@ -17,7 +17,7 @@ $(document).ready(function() {
         $("#sliderContainer").fadeIn();
         $("#afterSlider").fadeIn();
         $("#loading").fadeOut();
-
+        
         $('#sliderContainer').click(function() {
             if($('#sliderPlay').is(':hover')) {
                 if(isAutoPlay == 0) {
@@ -31,6 +31,7 @@ $(document).ready(function() {
                 sliderStopPlay();
             }
         });
+        $('.slierReadmoreSmallBox').mouseenter(sliderStopPlay);
 
         $('#sliderNex').click(sliderNext);
         $('#sliderPre').click(sliderPrev);
@@ -48,7 +49,7 @@ function sliderAutoPlay() {
     isAutoPlay = 1;
     sliderTimer = setInterval(function() {
         sliderNext();
-    }, 2000);
+    }, 3000);
 }
 
 function sliderStopPlay() {

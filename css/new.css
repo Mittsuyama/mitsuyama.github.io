@@ -354,11 +354,11 @@ body {
 
 #myIntro {
     position: relative;
-    height: 400px;
     width: 100%;
     margin-top: 50px;
-    /* text-align: center; */
-    padding-left: 100px;
+    margin-bottom: 50px;
+    text-align: center;
+    /* padding-left: 150px; */
 }
 
 #introTitle {
@@ -372,8 +372,97 @@ body {
     font-family: graydesign;
 }
 
+#blogSorts {
+    position: relative;
+    width: 100%;
+    height: 0px;
+    background-color: #eeeeee;
+}
+
 #recentPost {
     position: relative;
     height: 500px;
+    width: 50%;
+    margin: auto;
+}
+
+.articleBox {
+    position: relative;
     width: 100%;
+}
+
+.inforBox {
+    position: relative;
+    margin: auto;
+    font-family: Light;
+    color: #888888;
+}
+
+.inforBox:hover .coverLine {
+    width: 100%;
+}
+
+.articleTime {
+    position: relative;
+    width: 100%;
+    font-size: 15px;
+}
+
+.articleTitle {
+    font-weight: bold;
+    float: left;
+    position: relative;
+    margin: 10px 0px 3px 0px;
+    height: 50px;
+    font-size: 33px;
+    color: #333333;
+}
+
+.coverLine {
+    width: 0%;
+    height: 3px;
+    background-color: rgb(240, 100, 100);
+
+    transition-duration: 0.2s;
+    -moz-transition-duration: 0.2s;
+    -o-transition-duration: 0.2s;
+    -webkit-transition-duration: 0.2s;
+}
+
+.titleRight {
+    width: 1px;
+    height: 67px;
+}
+
+.articleBrief {
+    position: relative;
+    width: 100%;
+    font-size: 19px;
+}
+
+.articleDisplay {
+    position: relative;
+    margin-top: 10px;
+    width: 100%;
+    font-size: 18px;
+    color: #666666;
+}
+
+.display1 {
+    font-family: graydesign;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.displaytext1 {
+    margin-right: 30px;
+}
+
+.cuttingLine {
+    position: relative;
+    left: 0;
+    width: 100%;
+    border-bottom: 1px dashed #cccccc;
+    margin-bottom: 70px;
+    margin-top: 70px;
 }
