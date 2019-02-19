@@ -143,7 +143,7 @@ body {
     height: 100%;
     object-fit:cover;
     top: 100px;
-    filter: brightness(0.2)
+    filter: brightness(0.2);
 }
 
 #textWrap {
@@ -310,10 +310,10 @@ body {
     text-align: center;
     line-height: 47px;
 
-    transition-duration: 0.2s;
-    -moz-transition-duration: 0.2s;
-    -o-transition-duration: 0.2s;
-    -webkit-transition-duration: 0.2s;
+    transition-duration: 0.4s;
+    -moz-transition-duration: 0.4s;
+    -o-transition-duration: 0.4s;
+    -webkit-transition-duration: 0.4s;
 }
 
 .sliderButtonSymbol {
@@ -355,36 +355,169 @@ body {
 #myIntro {
     position: relative;
     width: 100%;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    text-align: center;
-    /* padding-left: 150px; */
+    margin-top: 100px;
+    /* text-align: center; */
 }
 
 #introTitle {
+    padding-left: 200px;
     font-size: 40px;
     font-family: geometos;
 }
 
+#introTitleColor {
+    color: #00b5cc;
+}
+
 #introContent {
-    margin-top: 10px;
+    padding-left: 200px;
+    margin-top: 5px;
     font-size: 30px;
+    color: #888;
     font-family: graydesign;
 }
 
+#aboutMe:hover {
+    background-color: #555;
+    color: white;
+}
+
+#aboutMe {
+    cursor: pointer;
+    margin-left: 200px;
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 6px;
+    border: 1px solid #555;
+    color: #555;
+    font-size: 20px;
+    width: 130px;
+    height: 45px;
+
+    transition-duration: 0.3s;
+    -moz-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+    -webkit-transition-duration: 0.3s;
+}
+
 #blogSorts {
+    padding-left: 200px;
+    margin-top: 120px;
     position: relative;
     width: 100%;
-    height: 0px;
-    background-color: #eeeeee;
+    height: 650px;
+    background-color: #f5f5f5;
+    /* background: linear-gradient(to bottom, white, #f2f2f2); */
+}
+
+#sortTitle {
+    position: absolute;
+    top: 60px;
+    font-size: 40px;
+    /* color: white; */
+    font-family: geometos;    
+}
+
+.mySort:hover {
+    margin-top: 170px;
+    box-shadow: 5px 5px 1px 5px rgba(200, 200, 200, 0.07), 5px 5px 3px 10px rgba(200, 200, 200, 0.06);
+}
+
+.mySort:hover .sortUpLine {
+    opacity: 1;
+}
+
+.mySort:hover .sortdownLine {
+    opacity: 1;
+}
+
+.mySort {
+    position: relative;
+    cursor: pointer;
+    /* border: 1px solid #ccc; */
+    /* box-shadow: 0px 0px 1px 3px rgba(0, 0, 0, 0.05), 0px 0px 3px 5px rgba(0, 0, 0, 0.01); */
+    margin-right: 20px;
+    margin-top: 180px;
+    float: left;
+    width: 195px;
+    height: 330px;
+    background-color: white;
+    overflow: hidden;
+
+    transition-duration: 0.3s;
+    -moz-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+    -webkit-transition-duration: 0.3s;
+}
+
+.sortImg {
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    width: 50%;
+    transform: translate(-50%, -50%);
+    /* filter: contrast(0.8) grayscale(0) brightness(0.95); */
+}
+
+.sortUpLine {
+    left: -30px;
+    top: 15px;
+    opacity: 0;
+    width: 100px;
+    height: 20px;
+    position: absolute;
+    background-color: #f56a6a;
+    box-shadow: 3px 3px 1px 2px rgba(200, 200, 200, 0.3);
+    transform: rotate(-45deg);
+
+    transition-duration: 0.4s;
+    -moz-transition-duration: 0.4s;
+    -o-transition-duration: 0.4s;
+    -webkit-transition-duration: 0.4s;
+}
+
+.sortdownLine {
+    bottom: 0px;
+    opacity: 0;
+    border-radius: 50px;
+    width: 100px;
+    height: 3px;
+    position: absolute;
+    left: 50%;
+    background-color: #666;
+    transform: translate(-50%, 0);
+
+    transition-duration: 0.4s;
+    -moz-transition-duration: 0.4s;
+    -o-transition-duration: 0.4s;
+    -webkit-transition-duration: 0.4s;
+}
+
+.sortText {
+    bottom: 45px;
+    left: 50%;
+    position: absolute;
+    font-size: 18px;
+    color: #444;
+    font-family: geometos;
+    transform: translate(-50%, 0);
 }
 
 #recentPost {
     position: relative;
-    height: 500px;
     width: 50%;
     margin: auto;
+    margin-top: 100px;
 }
+
+.articleBox:hover .articleTitleReadmore {
+    opacity: 1;
+    margin-top: 1px;
+}
+
+/* .articleBox:hover .articleTitleText {
+    color: #111;
+} */
 
 .articleBox {
     position: relative;
@@ -398,30 +531,77 @@ body {
     color: #888888;
 }
 
-.inforBox:hover .coverLine {
-    width: 100%;
-}
-
 .articleTime {
+    padding-left: 2px;
+    font-family: lishu;
     position: relative;
     width: 100%;
-    font-size: 15px;
+    font-size: 20px;
+    color: #bbb;
 }
 
-.articleTitle {
-    font-weight: bold;
+.articleTitleBox {
+    position: relative;
+    height: 50px;
+    width: 100%;
+}
+
+.articleTitleText {
     float: left;
     position: relative;
-    margin: 10px 0px 3px 0px;
+    font-weight: bold;
+    margin: 0px 0px 3px 0px;
+    font-size: 34px;
+    color: #333;
+
+    transition-duration: 0.2s;
+    -moz-transition-duration: 0.2s;
+    -o-transition-duration: 0.2s;
+    -webkit-transition-duration: 0.2s;
+}
+
+.articleTitleReadmore {
+    opacity: 0;
+    margin-left: 10px;
+    margin-top: -15px;
+    float: left;
+    position: relative;
     height: 50px;
-    font-size: 33px;
-    color: #333333;
+    color: white;
+    font-family: geometos;
+    font-size: 15px;
+
+    transition-duration: 0.4s;
+    -moz-transition-duration: 0.4s;
+    -o-transition-duration: 0.4s;
+    -webkit-transition-duration: 0.4s;
+}
+
+.readmoreAngle {
+    position: absolute;
+    top: 15px;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-right: 20px solid #3498db;
+}
+
+.readmoreBox {
+    text-align: center;
+    line-height: 45px;
+    border-radius: 3px;
+    width: 130px;
+    margin-left: 20px;
+    height: 45px;
+    position: absolute;
+    background-color: #3498db;
 }
 
 .coverLine {
+    position: absolute;
+    bottom: 0px;
     width: 0%;
     height: 3px;
-    background-color: rgb(240, 100, 100);
+    background-color: black;
 
     transition-duration: 0.2s;
     -moz-transition-duration: 0.2s;
@@ -435,6 +615,7 @@ body {
 }
 
 .articleBrief {
+    margin-top: 15px;
     position: relative;
     width: 100%;
     font-size: 19px;
@@ -465,4 +646,23 @@ body {
     border-bottom: 1px dashed #cccccc;
     margin-bottom: 70px;
     margin-top: 70px;
+}
+
+#commingSoon {
+    opacity: 0;
+    display: none;
+    position: fixed;
+    top: 0%;
+    left: 50%;
+    font-size: 40px;
+    font-family: graydesign;
+    font-weight: bold;
+    color: #555;
+    background-color: white;
+    text-align: center;
+    line-height: 150px;
+    width: 500px;
+    height: 150px;
+    box-shadow: 5px 5px 3px 5px rgba(200, 200, 200, 0.2), 5px 5px 5px 10px rgba(200, 200, 200, 0.1);
+    transform: translate(-50%, -50%);
 }

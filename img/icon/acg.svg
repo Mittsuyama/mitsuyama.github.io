@@ -1,0 +1,30 @@
+<svg width="512" height="512" xmlns="http://www.w3.org/2000/svg">
+ <g>
+  <title>background</title>
+  <rect x="-1" y="-1" width="514" height="514" id="canvas_background" fill="none"/>
+ </g>
+
+ <g>
+  <title>Layer 1</title>
+  <polygon points="512,392.01993706117355 512,461.9509862169907 0,461.9509862169907 0,392.01993706117355 256,365.7959899902344 " fill="#C2B8B9" id="svg_1" stroke="null"/>
+  <rect y="95.049004" width="512" height="304.88" fill="#1B4145" id="svg_2" stroke="null" x="0"/>
+  <circle stroke="null" cx="258.919996" cy="244.988996" r="107.688004" fill="#F14742" id="svg_3"/>
+  <polygon stroke="null" points="227.36300659179688,195.22500610351562 318.7959899902344,248.01380920410156 227.36300659179688,300.8018798828125 " fill="#FFFFFF" id="svg_4"/>
+  <path d="m466.489,439.06599l-420.978,0c-4.713,0 -8.533,-2.70082 -8.533,-6.033c0,-3.33289 3.821,-6.033 8.533,-6.033l420.978,0c4.714,0 8.533,2.70081 8.533,6.033c0,3.33289 -3.819,6.033 -8.533,6.033z" fill="#ECE7EA" id="svg_5" stroke="null"/>
+  <g id="svg_6"/>
+  <g id="svg_7"/>
+  <g id="svg_8"/>
+  <g id="svg_9"/>
+  <g id="svg_10"/>
+  <g id="svg_11"/>
+  <g id="svg_12"/>
+  <g id="svg_13"/>
+  <g id="svg_14"/>
+  <g id="svg_15"/>
+  <g id="svg_16"/>
+  <g id="svg_17"/>
+  <g id="svg_18"/>
+  <g id="svg_19"/>
+  <g id="svg_20"/>
+ </g>
+</svg>

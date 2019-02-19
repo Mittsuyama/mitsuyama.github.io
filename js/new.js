@@ -16,6 +16,7 @@ $(document).ready(function() {
     $(window).load(function() {
         $("#sliderContainer").fadeIn();
         $("#afterSlider").fadeIn();
+        $("#commingSoon").fadeIn();
         $("#loading").fadeOut();
         
         $('#sliderContainer').click(function() {
@@ -36,12 +37,32 @@ $(document).ready(function() {
         $('#sliderNex').click(sliderNext);
         $('#sliderPre').click(sliderPrev);
 
+        $('.mySort').click(function() {
+            $('#commingSoon').animate(
+                {top: '50%', opacity: '1'},
+                "faster",
+                "swing"
+            );
+            setTimeout(disCcommingSoon, 1500);
+        })
+
+
+        
+        
         window.addEventListener('scroll', throttle(lazyload, 500, 1000));
         lazyload();
         
         sliderAutoPlay();
     });
 });
+
+function disCcommingSoon() {
+    $('#commingSoon').animate(
+        {top: '0%', opacity: '0'},
+        "faster",
+        "swing"
+    );
+}
 
 function sliderAutoPlay() {
     $('#sliderPlay').children('.sliderButtonSymbol').text('| |');
