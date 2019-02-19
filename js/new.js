@@ -13,6 +13,10 @@ $(document).ready(function() {
     document.getElementById("textWrap").style.left = myRand + '%';
     document.getElementById("textWrap2").style.left = myRand + '%';
     document.getElementById("myBar").style.left = myRand / -100 * 20 + '%';
+
+    var screenWidthRate = parseFloat($(document).width()) / 1920.0;
+    $("body").css("zoom", screenWidthRate + "");
+    
     $(window).load(function() {
         $("#sliderContainer").fadeIn();
         $("#afterSlider").fadeIn();
@@ -37,17 +41,7 @@ $(document).ready(function() {
         $('#sliderNex').click(sliderNext);
         $('#sliderPre').click(sliderPrev);
 
-        $('.mySort').click(function() {
-            $('#commingSoon').animate(
-                {top: '50%', opacity: '1'},
-                "faster",
-                "swing"
-            );
-            setTimeout(disCcommingSoon, 1500);
-        })
-
-
-        
+        $('.mySort').click(commingSoon);
         
         window.addEventListener('scroll', throttle(lazyload, 500, 1000));
         lazyload();
@@ -55,6 +49,15 @@ $(document).ready(function() {
         sliderAutoPlay();
     });
 });
+
+function commingSoon() {
+    $('#commingSoon').animate(
+        {top: '50%', opacity: '1'},
+        "faster",
+        "swing"
+    );
+    setTimeout(disCcommingSoon, 1500);
+}
 
 function disCcommingSoon() {
     $('#commingSoon').animate(
