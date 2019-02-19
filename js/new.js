@@ -15,8 +15,8 @@ $(document).ready(function() {
     document.getElementById("myBar").style.left = myRand / -100 * 20 + '%';
 
     var screenWidthRate = parseFloat($(document).width()) / 1920.0;
-    $("body").css("zoom", screenWidthRate + "");
-    
+    $("#afterSlider").css("zoom", screenWidthRate + "");
+
     $(window).load(function() {
         $("#sliderContainer").fadeIn();
         $("#afterSlider").fadeIn();
