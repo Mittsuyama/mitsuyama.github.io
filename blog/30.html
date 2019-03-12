@@ -10,19 +10,22 @@
         <link rel = "stylesheet" href = "https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity = "sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin = "anonymous">
         <link rel = "stylesheet" href = "../css/home.css">
         <link rel = "stylesheet" href = "../css/blog.css">
+        <link rel = "stylesheet" href = "../css/index.css">
 
-        <link rel = "icon" href = "../img/favicon.ico" mce_href = "../img/favicon.ico" type = "image/x-icon">
-        <link rel = "shortcut icon" href = "../img/icon/favicon.ico" mce_href = "../img/favicon.ico" type = "image/x-icon">
+        <link rel = "icon" href = "../img/icon/favicon.ico" mce_href = "../img/icon/favicon.ico" type = "image/x-icon">
+        <link rel = "shortcut icon" href = "../img/icon/favicon.ico" mce_href = "../img/icon/favicon.ico" type = "image/x-icon">
         
         <link rel = "stylesheet" type = "text/css" href = "../css/search.css">
         
         <link rel = "stylesheet" href = "../highlight/styles/atom-one-dark.css">
-        <link rel = "stylesheet" href = "../font-awesome/css/font-awesome.css">
+        
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
         <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css">
         <script src = "../highlight/highlight.pack.js"></script>
         <script>hljs.initHighlightingOnLoad();</script>
 
-        <title>MITSUYAMA | 离散数学 5 - 图论</title>
+        <title>MITSUYAMA | 计算机系统基础</title>
     </head>
     
     <body>
@@ -59,10 +62,10 @@
             <img src = "../img/blog-image/30.jpg" class = "blogTitleImg">
             <div class = "glass"></div>
             <div class = "blogTitle">
-                    离散数学 5 - 图论
+                    计算机系统基础
             </div>
             <div class = "tagContainer">
-                &nbspMathematic&nbsp&nbsp|&nbsp&nbsp&nbsp2018-11-22
+                &nbspComputer&nbsp&nbsp|&nbsp&nbsp&nbsp肆月 11，2019
             </div>
         </div>
         
@@ -70,15 +73,7 @@
             <div class = "contentList">
                 <div class = "contentBorder">
                     <div class = "contentTitile">┌─ 目录 ───────</div>
-                                <a href = "#1" class = "contentListCon" style = "color: rgba(0, 0, 0, 0.5); font-weight: bold;">基本定义</a>
-            <a href = "#6" class = "contentListCon" style = "color: rgba(0, 0, 0, 0.5); font-weight: bold;">路，圈，连通图</a>
-            <a href = "#8" class = "contentListCon" style = "color: rgba(0, 0, 0, 0.5); font-weight: bold;">补图，偶图</a>
-            <a href = "#11" class = "contentListCon" style = "color: rgba(0, 0, 0, 0.5); font-weight: bold;">欧拉图</a>
-            <a href = "#12" class = "contentListCon" style = "color: rgba(0, 0, 0, 0.5); font-weight: bold;">哈密顿图定义</a>
-            <a href = "#15" class = "contentListCon" style = "color: rgba(0, 0, 0, 0.5); font-weight: bold;">树</a>
-            <a href = "#16" class = "contentListCon" style = "padding-left: 40px; color: rgba(0, 0, 0, 0.5);">数及其性质</a>
-            <a href = "#17" class = "contentListCon" style = "padding-left: 40px; color: rgba(0, 0, 0, 0.5);">生成树</a>
-            <a href = "#18" class = "contentListCon" style = "padding-left: 40px; color: rgba(0, 0, 0, 0.5);">割点、桥、割集</a>
+                                <a href = "#1" class = "contentListCon" style = "color: rgba(0, 0, 0, 0.5); font-weight: bold;">信息的标识和处理：位、整数</a>
 
                 </div>
             </div>
@@ -104,210 +99,47 @@
                         </div>
                     </div>
                 <div class = "articleBorder">
-                                    <div class = "h2" id = "1">基本定义</div><div id = "hUnderline"></div>
-                <div class = "normal">$V$&nbsp为一个非空集合，其一切两个元素的子集所形成的的集族记为&nbsp$P_2(V)$&nbsp也就是&nbsp$P_2(V)&nbsp=&nbsp\{A&nbsp|&nbspA&nbsp\subseteq&nbspV,&nbsp|A|&nbsp=&nbsp2\}$</div>
-                <div class = "h4" id = "2">无向图</div>
-                <div class = "normal">$E&nbsp\subseteq&nbspP_2(V)$，二元组&nbsp$(V,&nbspE)$&nbsp就被称为一个无向图。$V$&nbsp是顶点集，$E$&nbsp为边集，如果&nbsp$\{u,&nbspv\}&nbsp\in&nbspE$&nbsp则称&nbsp$u$&nbsp与&nbsp$v$&nbsp相邻接。</div>
-                <div class = "h5">其他定义</div>
-                <div class = "normal" style = "padding-left: 25px; text-indent: -24px;"><span class = "strong">1.&nbsp&nbsp</span>无向图常记为&nbsp$G$，即&nbsp$G&nbsp=&nbsp(V,&nbspE)$。如果&nbsp$|V|&nbsp=&nbspp$，$|E|&nbsp=&nbspq$，也有时说&nbsp$G$&nbsp是一个&nbsp$(p,&nbspq)$&nbsp图，即具有&nbsp$p$&nbsp个顶点&nbsp$q$&nbsp条边的无向图。$(1,&nbsp0)$&nbsp称为平凡图。</div>
-                <div class = "normal" style = "padding-left: 25px; text-indent: -24px;"><span class = "strong">2.&nbsp&nbsp</span>常用小写字母&nbsp$u,&nbspv,&nbspw,&nbsp\ldots$&nbsp表示顶点，而用&nbsp$x,&nbspy,&nbspz,&nbsp\ldots$&nbsp表示边。</div>
-                <div class = "normal" style = "padding-left: 25px; text-indent: -24px;"><span class = "strong">3.&nbsp&nbsp</span>联结：两点之间有边称为联结，简记&nbsp$x&nbsp=&nbspuv$</div>
-                <div class = "normal" style = "padding-left: 25px; text-indent: -24px;"><span class = "strong">4.&nbsp&nbsp</span>邻接：联结两点即邻接两点；有一个共同顶点的边为联结边</div>
-                <div class = "normal" style = "padding-left: 25px; text-indent: -24px;"><span class = "strong">5.&nbsp&nbsp</span>无向图上的边集可以实际上是一个反自反对称的二元关系</div>
-                <div class = "normal" style = "padding-left: 25px; text-indent: -24px;"><span class = "strong">6.&nbsp&nbsp</span>边集为空称为零图</div>
-                <div class = "h5">伪图</div>
-                <div class = "normal" style = "padding-left: 25px; text-indent: -24px;"><span class = "strong">1.&nbsp&nbsp</span>环：联结一个顶点与其自身的边称为环。</div>
-                <div class = "normal" style = "padding-left: 25px; text-indent: -24px;"><span class = "strong">2.&nbsp&nbsp</span>多重边：图中的两个顶点之间不值一条边，这些变称为多重边</div>
-                <div class = "normal" style = "padding-left: 25px; text-indent: -24px;"><span class = "strong">3.&nbsp&nbsp</span>有环或多重边的图称为伪图。（伪图不是图）</div>
-                <div class = "h4" id = "3">有向图</div>
-                <div class = "normal">$A&nbsp\subseteq&nbspV&nbsp\times&nbspV$，二元组&nbsp$(V,&nbspA)$&nbsp称为一个有向图，常记为&nbsp$D&nbsp=&nbsp(V,&nbspA)$，有向图中的边称为有向边或弧。若&nbsp$x&nbsp=&nbsp(u,&nbspv)$&nbsp，$y&nbsp=&nbsp(v,&nbspu)$，$x$&nbsp和&nbsp$y$&nbsp称为对称弧。</div>
-                <div class = "h5">其他定义</div>
-                <div class = "normal" style = "padding-left: 25px; text-indent: -24px;"><span class = "strong">1.&nbsp&nbsp</span>$x&nbsp=&nbsp(u,&nbspv)$，$u$&nbsp称为起点，$v$&nbsp称为终点</div>
-                <div class = "normal" style = "padding-left: 25px; text-indent: -24px;"><span class = "strong">2.&nbsp&nbsp</span>不含对称弧的有向图称为定向图</div>
-                <div class = "h4" id = "4">子图</div>
-                <div class = "normal">图&nbsp$G&nbsp=&nbsp(V,&nbspE)$，图&nbsp$H&nbsp=&nbsp(V_1,&nbspE_1)$&nbsp为&nbsp$G$&nbsp的子图，如果&nbsp$V_1&nbsp\subseteq&nbspV$&nbsp，$E_1&nbsp\subseteq&nbspE$。</div>
-                <div class = "h5">其他基本定义</div>
-                <div class = "normal" style = "padding-left: 25px; text-indent: -24px;"><span class = "strong">1.&nbsp&nbsp</span>生成图：若子图和原图的边集相等，则称子图为<span class = "emphasis">生成图</span>。</div>
-                <div class = "normal" style = "padding-left: 25px; text-indent: -24px;"><span class = "strong">2.&nbsp&nbsp</span>包含：若&nbsp$G$&nbsp的两个子图&nbsp$G_1,&nbspG_2$，$G_2$&nbsp又是&nbsp$G_1$&nbsp的子图，我们称&nbsp$G_1$&nbsp包含&nbsp$G_2$</div>
-                <div class = "normal" style = "padding-left: 25px; text-indent: -24px;"><span class = "strong">3.&nbsp&nbsp</span>真子图：包含不相等，称为真子图</div>
-                <div class = "normal" style = "padding-left: 25px; text-indent: -24px;"><span class = "strong">4.&nbsp&nbsp</span>极大子图：子图&nbsp$H$&nbsp具有某种特征，原图中不存在满足此特征且真包含与此子图的子图&nbsp$S$，则称此子图&nbsp$H$&nbsp为满足某种特征的极大子图</div>
-                <div class = "normal" style = "padding-left: 25px; text-indent: -24px;"><span class = "strong">5.&nbsp&nbsp</span>增减一点，同时减掉与之相连的边</div>
-                <div class = "normal" style = "padding-left: 25px; text-indent: -24px;"><span class = "strong">6.&nbsp&nbsp</span>增减一边</div>
-                <div class = "normal" style = "padding-left: 25px; text-indent: -24px;"><span class = "strong">7.&nbsp&nbsp</span>同构图，记为&nbsp$G&nbsp\cong&nbspH$</div>
-                <div class = "h5">从局部推全部&nbsp&nbsp——&nbsp&nbspUlam&nbsp&nbsp猜想</div>
-                <div class = "normal">设&nbsp$G&nbsp=&nbsp(V,&nbspE)$，$H&nbsp=&nbsp(U,&nbspF)$，对于每个&nbsp$i$，都有&nbsp$G_i&nbsp-&nbspv_i&nbsp\cong&nbspH&nbsp-&nbspu_i$，则&nbsp$G&nbsp\cong&nbspH$</div>
-                <div class = "h4" id = "5">度数</div>
-                <div class = "normal">与顶点&nbsp$v$&nbsp相连的边的数目称为顶点&nbsp$v$&nbsp的度，记作&nbsp$deg&nbspv$&nbsp或者&nbsp$d(v)$，每个顶点的度数之后是个不变量</div>
-                <div class = "h5">欧拉定理</div>
-                <div class = "normal">设&nbsp$G&nbsp=&nbsp(V,&nbspE)$，是一个&nbsp$(p,&nbspq)$&nbsp图，则：</div>
-$$
-\sum_{v \in V} d(v) = 2q
-$$
-                <div class = "normal">此定理对伪图也成立。</div>
+                                    <br>
+                <div class = "h2" id = "1">信息的标识和处理：位、整数</div><div id = "hUnderline"></div>
+                <div class = "normal">主要内容：位、字节、整数型</div>
+                <div class = "normal">其他内容：信息的位标识、位级运算、整形数（标识，无符号与有符号数，扩展与截断，整数运算）、内存、指针、字符串表示</div>
+                <div class = "h5">位、字节、字</div>
+                <div class = "normal"><span class = "emphasis">「位」或者「比特」</span>：<span class = "underline">最底层</span>的二进制数字（数码）称为位（bit，比特），值位 0 或 1；</div>
+                <div class = "normal"><span class = "emphasis">位组合</span>：把位组合在一起，采用某种规则进行解读</div>
+                <div class = "normal"><span class = "emphasis">字节</span>：8-bit 块（1bytes = 8bits）</div>
+                <div class = "normal"><span class = "emphasis">字</span>：CPU 中 ALU（Arithmetic Logic Unit）的数据位数 = CPU 中通用寄存器的位数（通常说计算机是 XX 位的，是指这台计算机 CPU 字的长度 OS 是 XX 位的，是指其 CPU 的工作模式，这与操作系统各 DLL [Dynamic Link Library] 库函数、编译连接环境有关）</div>
                 <br>
-                <div class = "normal">推论：在任意图中，度为奇数的顶点的数目必须为偶数。</div>
-                <div class = "h5">其他定义</div>
-                <div class = "normal" style = "padding-left: 25px; text-indent: -24px;"><span class = "strong">1.&nbsp&nbsp</span>顶点度的范围：$0&nbsp\le&nbspd(v)&nbsp\le&nbspp&nbsp-&nbsp1$</div>
-                <div class = "normal" style = "padding-left: 25px; text-indent: -24px;"><span class = "strong">2.&nbsp&nbsp</span>最大度：$\Delta(G)&nbsp=&nbspmax_{v&nbsp\in&nbspV}\{d(v)\}$</div>
-                <div class = "normal" style = "padding-left: 25px; text-indent: -24px;"><span class = "strong">3.&nbsp&nbsp</span>最小度：$\delta(G)&nbsp=&nbspmin_{v&nbsp\in&nbspV}\{d(v)\}$</div>
-                <div class = "normal" style = "padding-left: 25px; text-indent: -24px;"><span class = "strong">4.&nbsp&nbsp</span>正则图：称图&nbsp$G$&nbsp为&nbsp$r$&nbsp度正则图（也叫做&nbsp$r$&nbsp次图），如果&nbsp$\delta&nbsp(G)&nbsp=&nbsp\Delta&nbsp(G)$。一个具有&nbsp$p$&nbsp个顶点的&nbsp$p&nbsp-&nbsp1$&nbsp度正则图称为完全图，记为&nbsp$K_p$</div>
-                <div class = "normal">三次图有偶数个顶点</div>
+                <div class = "normal">在汇编语言、机器语言编程中，一个字指的是 16 位。数据存放时高字节在高地址、低字节在低地址。</div>
+                <div class = "h5">进制</div>
+                <div class = "normal">MSB（Most Significant Bit）：最高有效位</div>
+                <div class = "normal">LSB（Least Significant Bit）：最低有效位</div>
                 <br>
-                <div class = "normal" style = "padding-left: 25px; text-indent: -24px;"><span class = "strong">1.&nbsp&nbsp</span>度数为&nbsp$0$&nbsp的顶点称为孤立顶点</div>
-                <div class = "h2" id = "6">路，圈，连通图</div><div id = "hUnderline"></div>
-                <div class = "h4" id = "7">路，圈，连通图</div>
-                <div class = "normal" style = "padding-left: 25px; text-indent: -24px;"><span class = "strong">1.&nbsp&nbsp</span>通道：图中的顶点和边的交错序列，称为通道，首尾相连的通道称为闭通道（通道的集合中去掉边也不会引起歧义）</div>
-                <div class = "normal" style = "padding-left: 25px; text-indent: -24px;"><span class = "strong">2.&nbsp&nbsp</span>迹：通到上的边不相同称为一条迹，收尾相连的为闭迹</div>
-                <div class = "normal" style = "padding-left: 25px; text-indent: -24px;"><span class = "strong">3.&nbsp&nbsp</span>路：顶点不同的通道称为路，首尾相连称为圈（有向图中称为贿赂）</div>
-                <div class = "normal" style = "padding-left: 25px; text-indent: -24px;"><span class = "strong">4.&nbsp&nbsp</span>连通图：图&nbsp$G$&nbsp连通，如果&nbsp$G$&nbsp中任意两个不同的顶点至少有一条路连接</div>
-                <div class = "normal" style = "padding-left: 25px; text-indent: -24px;"><span class = "strong">5.&nbsp&nbsp</span>分支：图&nbsp$G$&nbsp的最大连通子图称为&nbsp$G$&nbsp的一个分支（也称为支）</div>
-                <div class = "h5">等价关系</div>
-                <div class = "normal">两点为等价关系&nbsp$u&nbsp\cong&nbspv$&nbsp，如果存在一条联结&nbsp$u$&nbsp和&nbsp$v$&nbsp的路</div>
-                <div class = "h5">定理</div>
-                <div class = "normal" style = "padding-left: 25px; text-indent: -24px;"><span class = "strong">1.&nbsp&nbsp</span>若对于每对&nbsp$u$&nbsp和&nbsp$v$&nbsp都有&nbsp$d(u)&nbsp+&nbspd(v)&nbsp\ge&nbspp&nbsp-&nbsp1$，则&nbsp$G$&nbsp是连通的</div>
-                <div class = "normal" style = "padding-left: 25px; text-indent: -24px;"><span class = "strong">2.&nbsp&nbsp</span>如果图中每个顶点的度数均为偶数，且至少有一个顶点不是孤立点，则图中必有一个圈</div>
-                <div class = "normal" style = "padding-left: 25px; text-indent: -24px;"><span class = "strong">3.&nbsp&nbsp</span>如果&nbsp$u$&nbsp与&nbsp$v$&nbsp间有两条不同的路联结，则图中必有一个圈</div>
-                <div class = "h2" id = "8">补图，偶图</div><div id = "hUnderline"></div>
-                <div class = "h4" id = "9">补图</div>
-                <div class = "normal">设&nbsp$G&nbsp=&nbsp(V,&nbspE)$&nbsp是一个无向图，中：</div>
-$$
-G^c = (V, P_2(V) \backslash E)
-$$
-                <div class = "normal">称为&nbsp$G$&nbsp的补图。如果&nbsp$G&nbsp\cong&nbspG^c$，则称&nbsp$G$&nbsp是自补图。</div>
+                <div class = "normal">二进制（B）：便于存储，算术运算简单，支持逻辑运算</div>
+                <div class = "normal">十六进制（H）：与二进制互转简单，阅读书写方便</div>
+                <div class = "h5">计算机内的数值表示&nbsp&nbsp——&nbsp&nbsp编码</div>
+                <div class = "normal">需要考虑的问题：编码的长度、数的符号、数的运算</div>
                 <br>
-                <div class = "normal">定理：在补图&nbsp$G^c$&nbsp中两个顶点&nbsp$u$&nbsp与&nbsp$v$&nbsp邻接，当且仅当&nbsp$u$&nbsp与&nbsp$v$&nbsp在&nbsp$G$&nbsp中不邻接。</div>
-                <div class = "h5">三角形</div>
-                <div class = "normal">$K_3$（三度正则完全图）称为一个三角形</div>
-                <br>
-                <div class = "normal">定理：图&nbsp$G$&nbsp中包含&nbsp$6$&nbsp个顶点，那么&nbsp$G$&nbsp中有一个三角形或者&nbsp$G^c$&nbsp中有一个三角形（在「关系」中已经证明过）</div>
-                <div class = "h5">Ramsey&nbsp&nbsp数</div>
-                <div class = "normal">找一个最小正整数&nbsp$r(m,&nbspn)$&nbsp，使得任何有&nbsp$r(n,&nbspm)$&nbsp个顶点的图一定含有一个&nbsp$K_m$&nbsp或者含有一个&nbsp$K_n^c$，称&nbsp$r(m,&nbspn)$&nbsp为&nbspRamsey&nbsp数</div>
-                <div class = "normal">由上面那个定理知：$r(3,&nbsp3)&nbsp&nbsp\le&nbsp6$，但顶点为&nbsp$5$&nbsp的图&nbsp$G$&nbsp中，确实存在&nbsp$G$&nbsp和&nbsp$G^c$&nbsp中都没有三角形的图。所以&nbsp$r(3,&nbsp3)&nbsp=&nbsp6$</div>
-                <br>
-                <div class = "normal">证明：$r(3,&nbsp4)&nbsp=&nbsp9$</div>
-                <div class = "h4" id = "10">偶图</div>
-                <div class = "normal">图&nbsp$G&nbsp=&nbsp(V,&nbspE)$&nbsp有一个划分&nbsp$\{V_1,&nbspV_2\}$，划分之间任意两点不能相邻，称这个图为偶图。若偶图中，&nbsp$\forall&nbspv_1&nbsp\in&nbspV_1$&nbsp都&nbsp$\exists&nbspv_2&nbsp\in&nbspV_2$，使得&nbsp$(v_1,&nbspv_2)&nbsp\in&nbspE$，那么称为此偶图为完全偶图</div>
-                <div class = "h5">距离与最短路</div>
-                <div class = "normal">联结&nbsp$u,&nbspv$&nbsp的最短路的长度称为&nbsp$u,&nbspv$&nbsp距离，记为&nbsp$d(u,&nbspv)$，如果&nbsp$u,&nbspv$&nbsp不想联结，则&nbsp$d(u,&nbspv)&nbsp=&nbsp\infty$</div>
-                <div class = "h5">定理</div>
-                <div class = "normal" style = "padding-left: 25px; text-indent: -24px;"><span class = "strong">1.&nbsp&nbsp</span>图&nbsp$G$&nbsp是偶图当且仅当它的所有圈的长度都是偶数</div>
-                <div class = "normal" style = "padding-left: 25px; text-indent: -24px;"><span class = "strong">2.&nbsp&nbsp</span>具有&nbsp$p$&nbsp个顶点无三角形的图中最多有&nbsp$[p^2&nbsp/&nbsp4]$&nbsp条边</div>
-                <div class = "h2" id = "11">欧拉图</div><div id = "hUnderline"></div>
-                <div class = "normal">欧拉闭迹：一条闭迹（边不能重复，点可以）包含所有的顶点和所有边，则称该闭迹为一条欧拉闭迹。</div>
-                <div class = "normal">欧拉图：存在欧拉闭迹的图称为欧拉图</div>
-                <div class = "h5">定理</div>
-                <div class = "normal">图是欧拉图当且仅当图是连通且每个顶点的度都是偶数。</div>
-                <div class = "normal"><span class = "underline">推论</span>：</div>
-                <div class = "normal">$G$&nbsp是一个连通图，下面的命题等价：</div>
-                <div class = "normal" style = "padding-left: 25px; text-indent: -24px;"><span class = "strong">1.&nbsp&nbsp</span>$G$&nbsp是一个欧拉图</div>
-                <div class = "normal" style = "padding-left: 25px; text-indent: -24px;"><span class = "strong">2.&nbsp&nbsp</span>$G$&nbsp的每个点都度数都是偶数</div>
-                <div class = "normal" style = "padding-left: 25px; text-indent: -24px;"><span class = "strong">3.&nbsp&nbsp</span>$G$&nbsp的边集能划分成若干边互不相交的圈</div>
-                <div class = "h5">欧拉迹定义</div>
-                <div class = "normal">包含图的所有顶点和边的迹称为一条欧拉迹（起终点未见得相同，欧拉迹&nbsp=&nbsp欧拉闭迹&nbsp+&nbsp欧拉开迹）</div>
-                <div class = "normal"><span class = "underline">推论</span>：</div>
-                <div class = "normal">图&nbsp$G$&nbsp有一条欧拉迹当且仅当&nbsp$G$&nbsp是连通的并且最多有两个奇数顶点。</div>
-                <div class = "h5">一笔画问题</div>
-                <div class = "normal">能一笔画的充分必要条件是：奇数顶点的个数是&nbsp0&nbsp或&nbsp2.</div>
-                <div class = "h5">定理</div>
-                <div class = "normal">图&nbsp$G$&nbsp是连通图，$G$&nbsp恰有&nbsp$2n$&nbsp个奇数顶点，$n&nbsp\ge&nbsp1$。则&nbsp$G$&nbsp的全部边可以排成&nbsp$n$&nbsp条开迹，而且至少有&nbsp$n$&nbsp条开迹。</div>
-                <div class = "h2" id = "12">哈密顿图定义</div><div id = "hUnderline"></div>
-                <div class = "h5">哈密顿路定义</div>
-                <div class = "normal">图的生成路称为哈密顿路。生成圈称为哈密顿圈，有哈密顿圈的图称为哈密顿图。</div>
-                <div class = "normal">哈密顿图是连通图并且每个顶点的度不小于&nbsp2.&nbsp</div>
-                <div class = "h5">哈密顿图的必要条件</div>
-                <div class = "normal">设&nbsp$G&nbsp=&nbsp(V,&nbspE)$&nbsp是哈密顿图，则对&nbsp$V$&nbsp的每个非空子集&nbsp$S$，则有：</div>
+                <div class = "normal">一般数据类型和运算（略）</div>
+                <div class = "h5">浮点数的表示</div>
+                <div class = "normal">表示有理数的形式：</div>
 $$
-\omega (G - S) \le |S|
+(-1) \; M \; 2^E
 $$
-                <div class = "normal">其中&nbsp$G&nbsp-&nbspS$&nbsp是&nbsp$G$&nbsp中去掉&nbsp$S$&nbsp中的那些点后得到的图，$\omega&nbsp(G&nbsp-&nbspS)$&nbsp表示&nbsp$G&nbsp-&nbspS$&nbsp的分支数目。</div>
-                <br>
-                <div class = "normal"><span class = "underline">必要条件&nbsp2</span>：</div>
-                <div class = "normal">设&nbsp$G$&nbsp是一个有&nbsp$p(p&nbsp\ge&nbsp3)$&nbsp个顶点的图，如果：</div>
-$$
-\delta(G) \ge \frac{p}{2}
-$$
-                <div class = "normal">则&nbsp$G$&nbsp是一个哈密顿图。</div>
-                <br>
-                <div class = "normal"><span class = "underline">必要条件&nbsp3</span>：</div>
-                <div class = "normal">设&nbsp$G$&nbsp是有&nbsp$p(p&nbsp\ge&nbsp3)$&nbsp个顶点的图，如果对&nbsp$G$&nbsp的任意一对不相邻的顶点&nbsp$u,&nbspv$，都有：</div>
-$$
-d(u) + d(v) \ge p
-$$
-                <div class = "normal">则&nbsp$G$&nbsp是一个哈密顿图。</div>
-                <br>
-                <div class = "normal"><span class = "underline">引理</span>：设&nbsp$G$&nbsp是由&nbsp$p(p&nbsp\ge&nbsp3)$&nbsp个顶点的图，$u,&nbspv$&nbsp是&nbsp$G$&nbsp的任意一对不相邻的顶点，如果&nbsp$d(u)&nbsp+&nbspd(v)&nbsp\ge&nbspp$，那么&nbsp$G$&nbsp是哈密顿图当且仅当&nbsp$G&nbsp+&nbspuv$&nbsp是哈密顿图。</div>
-                <div class = "h5">定理</div>
-                <div class = "normal">设&nbsp$G$&nbsp是一个有&nbsp$p$&nbsp个顶点的图，如果对&nbsp$G$&nbsp的任意一对不相邻的顶点&nbsp$u,&nbspv$，都有：</div>
-$$
-d(u) + d(v) \ge p - 1
-$$
-                <div class = "normal">则&nbsp$G$&nbsp有哈密顿路。</div>
-                <div class = "h4" id = "13">图的邻接矩阵</div>
-                <div class = "normal">用矩阵来存图。</div>
-                <div class = "h5">定理</div>
-                <div class = "normal">设&nbsp$A,&nbspB$&nbsp是图&nbsp$G&nbsp=&nbsp(V,&nbspE)$&nbsp对&nbsp$V$&nbsp的元素的两种不同的编号下对应的邻接矩阵，则存在一个置换矩阵&nbsp$P$&nbsp使得&nbsp$A&nbsp=&nbspPBP^T$。亦即适当的交换&nbsp$B$&nbsp的行以及相应的列就会得到&nbsp$A$。</div>
-                <div class = "h5">定理</div>
-                <div class = "normal">设&nbsp$G&nbsp=&nbsp(V,&nbspE)$&nbsp是一个&nbsp$(p,&nbspq)$&nbsp图，$p&nbsp\times&nbspp$&nbsp矩阵&nbsp$A$&nbsp是&nbsp$G$&nbsp的邻接矩阵，则&nbsp$G$&nbsp中&nbsp$v_i$&nbsp和&nbsp$v_j$&nbsp间长为&nbsp$l$&nbsp通道的条数等于&nbsp$A^l$&nbsp的第&nbsp$i$&nbsp行第&nbsp$j$&nbsp列元素的值，其中&nbsp$i&nbsp\neq&nbspj$。</div>
-                <div class = "h5">定理</div>
-                <div class = "normal">设一个有&nbsp$p$&nbsp个顶点的图，$A$&nbsp是他的邻接矩阵，则图示连通，当且仅当&nbsp$(A&nbsp+&nbspI)^{p&nbsp-&nbsp1}&nbsp>&nbsp0$</div>
-                <div class = "h4" id = "14">带权图</div>
-                <div class = "normal">三元组&nbsp$(V,&nbspE,&nbspf)$，$f(v)$&nbsp称为顶点&nbsp$v$&nbsp的权，类似的&nbsp$(V,&nbspE,&nbspg)$，$g(e)$&nbsp&nbsp称为边&nbsp$e$&nbsp的权。</div>
-                <div class = "normal">最短路问题的定义：略</div>
-                <div class = "h2" id = "15">树</div><div id = "hUnderline"></div>
-                <div class = "h3" id = "16">数及其性质</div>
-                <div class = "h5">树的定义</div>
-                <div class = "normal">无圈图称为森林，连通的无圈图称为树</div>
-                <div class = "normal">森林的每个连通分支都是树，森林就是由若干棵树组成的图，仅有一个顶点的树称为平凡树。</div>
-                <div class = "normal">树与下面命题等价：</div>
-                <div class = "normal" style = "padding-left: 25px; text-indent: -24px;"><span class = "strong">1.&nbsp&nbsp</span>$G$&nbsp是树</div>
-                <div class = "normal" style = "padding-left: 25px; text-indent: -24px;"><span class = "strong">2.&nbsp&nbsp</span>任两个不同顶点间有唯一的一条路径相连</div>
-                <div class = "normal" style = "padding-left: 25px; text-indent: -24px;"><span class = "strong">3.&nbsp&nbsp</span>顶点&nbsp=&nbsp边&nbsp+&nbsp1</div>
-                <div class = "normal" style = "padding-left: 25px; text-indent: -24px;"><span class = "strong">4.&nbsp&nbsp</span>图无圈</div>
-                <div class = "normal" style = "padding-left: 25px; text-indent: -24px;"><span class = "strong">5.&nbsp&nbsp</span>不相邻两点间加一条边，形成唯一圈的图</div>
-                <div class = "h5">推论</div>
-                <div class = "normal">任一非平凡树至少有两个&nbsp1&nbsp度顶点</div>
-                <div class = "h5">极小连通图</div>
-                <div class = "normal">去掉任意一条边就不连通的图</div>
-                <div class = "h5">偏心率定义</div>
-                <div class = "normal">设&nbsp$G&nbsp=&nbsp(V,&nbspE)$&nbsp是连通图，$v&nbsp\in&nbspV$，数</div>
-$$
-e(v) = max_{u \in v}\{d(u, v)\}
-$$
-                <div class = "normal">称为&nbsp$G$&nbsp的偏心率。数</div>
-$$
-r(G) = min_{v \in V}\{e(v)\}
-$$
-                <div class = "normal">称为&nbsp$G$&nbsp的半径。满足&nbsp$r(G)&nbsp=&nbspe(v)$&nbsp的顶点&nbsp$v$&nbsp称为&nbsp$G$&nbsp的中心点，$G$&nbsp的所有中心点组成的集合称为&nbsp$G$&nbsp的中心，记为&nbsp$C(G)$。</div>
-                <div class = "normal">对于树而言，&nbsp$e(v)&nbsp=&nbspmax_{v&nbsp\in&nbspV}\{d(u,&nbspv)\}&nbsp=&nbspmax_{u&nbsp\in&nbspV,&nbspd(u)&nbsp=&nbsp1}\{d(u,&nbspv)\}$</div>
-                <div class = "h5">定理</div>
-                <div class = "normal">每棵树的中心或含有一个顶点，或含有两个相邻的顶点</div>
-                <div class = "h3" id = "17">生成树</div>
-                <div class = "normal">生成树的定义：略</div>
-                <div class = "normal">生成森林的定义：略</div>
-                <div class = "normal" style = "padding-left: 20px; text-indent: -9px;"><i class = "fa fa-chevron-right" style = "top: 3px; margin-right: 3px; font-size: 14px; color: #cccccc"></i>&nbsp$T_1$，$T_2$&nbsp是&nbsp$G$&nbsp的生成树，是&nbsp$T_1$&nbsp的边而不是&nbsp$T_2$&nbsp的边的条数称为&nbsp$T_1$&nbsp到&nbsp$T_2$&nbsp的距离，记为&nbsp$d(T_1,&nbspT_2)$</div>
-                <div class = "normal" style = "padding-left: 20px; text-indent: -9px;"><i class = "fa fa-chevron-right" style = "top: 3px; margin-right: 3px; font-size: 14px; color: #cccccc"></i>&nbsp基本变换：$T_1&nbsp-&nbspe_1&nbsp+&nbspe_2$</div>
-                <div class = "normal" style = "padding-left: 20px; text-indent: -9px;"><i class = "fa fa-chevron-right" style = "top: 3px; margin-right: 3px; font-size: 14px; color: #cccccc"></i>&nbsp$T_1$，$T_2$&nbsp是&nbsp$G$&nbsp的生成树，距离为&nbsp$k$，则从&nbsp$T_1$&nbsp开始经过&nbsp$k$&nbsp次基本变换就能得到&nbsp$T_2$.</div>
-                <div class = "normal" style = "padding-left: 20px; text-indent: -9px;"><i class = "fa fa-chevron-right" style = "top: 3px; margin-right: 3px; font-size: 14px; color: #cccccc"></i>&nbsp最小生成树：略</div>
-                <div class = "h3" id = "18">割点、桥、割集</div>
-                <div class = "h5">定理</div>
-                <div class = "normal" style = "padding-left: 20px; text-indent: -9px;"><i class = "fa fa-chevron-right" style = "top: 3px; margin-right: 3px; font-size: 14px; color: #cccccc"></i>&nbsp连通图至少有两个顶点不是割点（最长路的两个端点一定不是）</div>
+                <div class = "normal">其中：</div>
 
-                    <!--<div class = "blogTrans">
-                        <div class = "lastBlogTitle"></div>
-                        <div class = "nextBlogTitle"></div>
-                        <div class = "lastBlog"><a href = "29.html" class = "noStyle">◁&nbsp&nbspPreviois</a></div>
-                        <div class = "nextBlog"><a href = "-1.html" class = "noStyle">Next&nbsp&nbsp▷</a></div>
-                    </div>
-                    <hr>-->
                 </div>
                 <div id = "disqus_thread"></div>  
             </div>
-            <div class = "myAffix">
-                <div class = "feet">
-                    <div class = "copyrigt">MITSUYAMA © 2018</div>
-                    <div class = "callme">Email MITSUYAMA@163.COM</div>
+
+            <div id = "foot">
+                <div id = "footEmail">
+                    Copyright © Mitsuyama | mitsuyama@163.com
+                </div>
+                <div id = "footTime">
+                        UPDATED AT 2019/1/5
                 </div>
             </div>
+            
         <div id = "shareBigBox">
             <div class = "social-share" id = "shareBox"></div>
             <i class = "fa fa-times" aria-hidden = "true" id = "shareClose"></i>

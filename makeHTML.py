@@ -4,6 +4,7 @@ import os
 import glob
 from PIL import Image
 from algoliasearch import algoliasearch
+import datetime
 
 class makeHTML:
     mdFile = None
@@ -28,7 +29,7 @@ class makeHTML:
     sliderDisplay = [0, 1, 9, 16, 24]
     articleLength = 0
     monthName = ['壹月', '贰月', '叁月', '肆月', '伍月', '陆月', '柒月', '捌月', '玖月', '拾月', '拾壹月', '拾贰月']
-
+    
     def __init__(self):
         self.blogsFile = open('articles.html', 'w')
         path = 'md/'  #待读取的文件夹
@@ -77,13 +78,13 @@ class makeHTML:
         tempTime = ''
         if self.blogTime[6] == '-':
             tempTime += self.monthName[int(self.blogTime[5])]
-            tempTime += '&nbsp'
+            tempTime += ' '
             tempTime += self.blogTime[7:]
             tempTime += '，'
             tempTime += self.blogTime[:4]
         else:
             tempTime += self.monthName[int(self.blogTime[5:7])]
-            tempTime += '&nbsp'
+            tempTime += ' '
             tempTime += self.blogTime[8:]
             tempTime += '，'
             tempTime += self.blogTime[:4]
@@ -125,7 +126,7 @@ class makeHTML:
         while i < mLen:
             ch = myStr[i]
             if ch == ' ':
-                newS += '&nbsp'
+                newS += ' '
             elif ch == '$':
                 isMath = 1 - isMath
                 newS += '$'
@@ -270,9 +271,10 @@ class makeHTML:
                         break
                     blogContent += self.Paragraph[i]
                 blogContent += '''                </code></pre>''' + '\n'
-                i += 1
             elif lLen > 2 and line[:2] == '$$':
                 #outFIle.write('''                <pre class = "codeBlock">''' + '\n')
+                # if self.Paragraph[i - 1][0] != '\n':
+                #     blogContent += '''<br>'''
                 blogContent += '$$\n'
                 while True:
                     i += 1
@@ -280,8 +282,9 @@ class makeHTML:
                         break
                     blogContent += self.Paragraph[i]
                 blogContent += '$$\n'
+                # if i < pLen - 1 and self.Paragraph[i + 1][0] != '\n':
+                #     blogContent += '''<br>'''
                 #outFIle.write('''                </pre>''' + '\n')
-                i += 1
             elif lLen > 5 and line[:5] == '#####':
                 blogContent += '''                <div class = "h5">''' + line[6 : -1].replace(' ', '&nbsp&nbsp') + '''</div>''' + '\n'
             elif lLen > 4 and line[:4] == '####':
@@ -360,9 +363,12 @@ class makeHTML:
         homePage = self.homeTemp
         content = ''
 
+        homePage = homePage.replace('((blogNumber))', str(self.num))
+        homePage = homePage.replace('((blogDays))', str((datetime.datetime.now() - datetime.datetime(2018, 10, 1)).days))
+
         homePage = homePage.replace('order0', str(self.sliderDisplay[0])).replace('order1', str(self.sliderDisplay[1])).replace('order2', str(self.sliderDisplay[2])).replace('order3', str(self.sliderDisplay[3])).replace('order4', str(self.sliderDisplay[4]))
 
-        homePage = homePage.replace('orderb0', 'b' + str(self.sliderDisplay[0])).replace('orderb1', 'b' + str(self.sliderDisplay[1])).replace('orderb2', 'b' + str(self.sliderDisplay[2])).replace('orderb3', 'b' + str(self.sliderDisplay[3])).replace('orderb4', 'b' + str(self.sliderDisplay[4]))
+        #homePage = homePage.replace('orderb0', 'b' + str(self.sliderDisplay[0])).replace('orderb1', 'b' + str(self.sliderDisplay[1])).replace('orderb2', 'b' + str(self.sliderDisplay[2])).replace('orderb3', 'b' + str(self.sliderDisplay[3])).replace('orderb4', 'b' + str(self.sliderDisplay[4]))
 
         blogBox = '''
                 <a href = "blog/((order)).html">

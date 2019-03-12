@@ -153,7 +153,7 @@ div.articleContext {
     width: 100%;
     margin: auto;
     background-color: rgba(255, 255, 255, 1);
-    font-size: 18px;
+    font-size: 19px;
     min-height: 600px;
     padding-top: 80px;
     padding-bottom: 50px;
@@ -164,7 +164,7 @@ div.articleContext {
 div.articleBorder {
     /* box-shadow: 1px 1px 20px 5px rgba(0,0,0,0.03), 1px 1px 30px 7px rgba(0,0,0,0.02); */
     margin: auto;
-    width: 55%;
+    width: 60%;
     padding: 30px 60px 100px 60px;
     border-radius: 0px;
     background-color: white;
@@ -187,14 +187,14 @@ div.h2 {
     margin-left: 50%;
     width: 100px;
     border-top: 2px solid gray;
-    margin-top: 5px;
-    margin-bottom: 15px;
+    margin-top: 7px;
+    margin-bottom: 50px;
 }
 
 div.h3 {
     font-family: "等线";
-    font-weight: bold;
-    font-size: 28px;
+    /* font-weight: bold; */
+    font-size: 32px;
     font-style: italic;
     text-align: center;
     width: 100%;
@@ -204,12 +204,15 @@ div.h3 {
 div.h4 {
     font-family: "等线";
     font-weight: bold;
-    font-size: 26px;
-    margin-left: -31px;
-    margin-top: 10px;
-    margin-bottom: 20px;
-    color: rgba(120, 210, 230, 1);
-    border-left: 5px solid rgba(120, 210, 230, 1);
+    font-size: 28px;
+    /* margin-left: -31px; */
+    margin-top: 30px;
+    margin-bottom: 30px;
+    color: #555;
+    border-left: 5px solid #333;
+    /* color: rgba(12, 70, 120, 0.7);
+    border-left: 5px solid rgba(32, 102, 150, 0.7); */
+    /* background-color: rgba(52, 190, 230, 0.03); */
     border-radius: 0px 5px 5px 0px;
     padding: 0px 20px 0px 23px;
 }
@@ -219,12 +222,12 @@ div.h5 {
     font-weight: bold;
     /* color: rgba(50, 150, 180, 1); */
     font-size: 23px;
-    margin-left: -61px;
+    /* margin-left: -61px; */
     margin-top: 15px;
     margin-bottom: 20px;
     /*background-color: rgba(110, 220, 250, 0.05);*/
-    border-left: 8px solid rgba(200, 200, 200, 0);
-    padding: 5px 0px 2px 53px;
+    /* border-left: 8px solid rgba(200, 200, 200, 0); */
+    padding: 5px 0px 2px 0px;
     border-radius: 0px 5px 5px 0px;
     min-height: 25px; 
 }
@@ -255,7 +258,7 @@ div.quoteAgain {
 }
 
 div.normal {
-    word-wrap: break-word;
+    margin-top: -4px;
     padding: 2px 0px 2px 0px;
     width: 100%;
 }
@@ -277,8 +280,11 @@ span.strike {
 }
 
 span.emphasis {
-    padding: 0px 2px 0px 2px;
-    background-color:rgba(100, 100, 100, 0.25);
+    
+    margin: 0px 3px 0px 3px;
+    padding: 0px 5px 0px 5px;
+    border: 1px solid rgba(100, 100, 100, 0.4);
+    background-color: rgba(100, 100, 100, 0.05);
     /*border: 1.5px solid rgba(0, 0, 0, 0.2);*/
     /*border: 2px solid rgba(255, 150, 60, 0.3);*/
     /*background-color:rgba(255, 150, 60, 0.06);*/

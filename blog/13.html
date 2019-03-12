@@ -65,7 +65,7 @@
                     GitHub 从远程仓库同步
             </div>
             <div class = "tagContainer">
-                &nbspComputer&nbsp&nbsp|&nbsp&nbsp&nbsp拾壹月&nbsp16，2018
+                &nbspComputer&nbsp&nbsp|&nbsp&nbsp&nbsp拾壹月 16，2018
             </div>
         </div>
         
@@ -102,17 +102,17 @@
                 <div class = "articleBorder">
                                     <br>
                 <div class = "h2" id = "1">先配置一个&nbsp&nbspupstream</div><div id = "hUnderline"></div>
-                <div class = "normal" style = "padding-left: 25px; text-indent: -24px;"><span class = "strong">1.&nbsp&nbsp</span>使用&nbspgit&nbspremote&nbsp-v&nbsp查看远程状态</div>
+                <div class = "normal" style = "padding-left: 25px; text-indent: -24px;"><span class = "strong">1.&nbsp&nbsp</span>使用 git remote -v 查看远程状态</div>
                 <pre><code class = "nohighlight">
 git remote -v
 origin  git@github.com:yourname/yourname_rep.git (fetch)
 origin  git@github.com:yourname/yourname_rep.git (push)
                 </code></pre>
-                <div class = "normal" style = "padding-left: 25px; text-indent: -24px;"><span class = "strong">2.&nbsp&nbsp</span>添加一个将被同步给&nbspfork&nbsp远程的上游仓库</div>
+                <div class = "normal" style = "padding-left: 25px; text-indent: -24px;"><span class = "strong">2.&nbsp&nbsp</span>添加一个将被同步给 fork 远程的上游仓库</div>
                 <pre><code class = "nohighlight">
 git remote add upstream git@github.com:yourname/yourname_rep.git
                 </code></pre>
-                <div class = "normal" style = "padding-left: 25px; text-indent: -24px;"><span class = "strong">3.&nbsp&nbsp</span>使用&nbspgit&nbspremote&nbsp-v&nbsp查看是否成功</div>
+                <div class = "normal" style = "padding-left: 25px; text-indent: -24px;"><span class = "strong">3.&nbsp&nbsp</span>使用 git remote -v 查看是否成功</div>
                 <pre><code class = "nohighlight">
 origin  git@github.com:yourname/yourname_rep.git (fetch)
 origin  git@github.com:yourname/yourname_rep.git (push)
@@ -120,7 +120,7 @@ upstream        git@github.com:yourname/yourname_rep.git (fetch)
 upstream        git@github.com:yourname/yourname_rep.git (push)
                 </code></pre>
                 <div class = "h2" id = "2">从远程同步同步</div><div id = "hUnderline"></div>
-                <div class = "normal" style = "padding-left: 25px; text-indent: -24px;"><span class = "strong">4.&nbsp&nbsp</span>从上游仓库&nbspfetch&nbsp分支和提交点&nbspgit&nbspfetch&nbspupstream，传送到本地，并会被存储在本地分支&nbspupstream/master</div>
+                <div class = "normal" style = "padding-left: 25px; text-indent: -24px;"><span class = "strong">4.&nbsp&nbsp</span>从上游仓库 fetch 分支和提交点 git fetch upstream，传送到本地，并会被存储在本地分支 upstream/master</div>
                 <pre><code class = "nohighlight">
 git fetch upstream
 From github.com:yourname/yourname_rep
@@ -130,18 +130,11 @@ From github.com:yourname/yourname_rep
                 <pre><code class = "nohighlight">
 git checkout master
                 </code></pre>
-                <div class = "normal" style = "padding-left: 25px; text-indent: -24px;"><span class = "strong">6.&nbsp&nbsp</span>把&nbspupstream/master&nbsp分支合并到本地&nbspmaster&nbsp上，这样就完成了同步，并不会丢掉本地修改的内容。</div>
+                <div class = "normal" style = "padding-left: 25px; text-indent: -24px;"><span class = "strong">6.&nbsp&nbsp</span>把 upstream/master 分支合并到本地 master 上，这样就完成了同步，并不会丢掉本地修改的内容。</div>
                 <pre><code class = "nohighlight">
 git merge upstream/master
                 </code></pre>
 
-                    <!--<div class = "blogTrans">
-                        <div class = "lastBlogTitle"></div>
-                        <div class = "nextBlogTitle"></div>
-                        <div class = "lastBlog"><a href = "12.html" class = "noStyle">◁&nbsp&nbspPreviois</a></div>
-                        <div class = "nextBlog"><a href = "14.html" class = "noStyle">Next&nbsp&nbsp▷</a></div>
-                    </div>
-                    <hr>-->
                 </div>
                 <div id = "disqus_thread"></div>  
             </div>

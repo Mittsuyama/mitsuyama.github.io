@@ -83,7 +83,7 @@
                     </div>
                 </div>
             </div>
-            <div id = "imgWrap2">
+            <!-- <div id = "imgWrap2">
                 <div class = "sliderPage">
                     <img src = "img/blog-image/orderb0.png" class = "sliderImg">
                 </div>
@@ -99,7 +99,7 @@
                 <div class = "sliderPage">
                     <img src = "img/blog-image/orderb4.png" class = "sliderImg">
                 </div>
-            </div>
+            </div> -->
             <div id = "textWrap2">
                 <div class = "sliderTextPage">
                     <div class = "sliderTime">
@@ -205,18 +205,38 @@
 
         <div id = "afterSlider">
             <div id = "myIntro">
-                <div id = "introTitle">
-                    HELLO, THIS IS <span id = "introTitleColor">MITSUYAMA</span>
+                <div id = "introBox">
+                    <img src = "img/background-img/intro.jpeg" id = "introImg">
+                    <div id = "introLeft">
+                        <div id = "introTitle">
+                            HELLO, WELCOME <br> THIS IS <br> <span id = "introTitleColor">MITSUYAMA</span>
+                        </div>
+                        <div id = "introContent">
+                            Please take a seat and have a look. Maybe there's something you like.
+                        </div>
+                        <div id = "aboutMeBox">
+                            <a href = "blog/about.html">
+                                <div id = "aboutMe">ABOUT ME</div>
+                            </a>
+                        </div>
+                    </div>
+                    <div id = "introRight">
+                        <div id = "webInfo">
+                            <div class = "webInfoBox">
+                                <span class = "webInfoCon">((blogNumber))</span>
+                                <span class = "webInfoTitle">BLOGS</span>
+                            </div>
+                            <div class = "webInfoBox">
+                                <span class = "webInfoCon">((blogDays))</span>
+                                <span class = "webInfoTitle">DAYS</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div id = "introLinkTitle">WEB INFORMATION</div>
                 </div>
-                <div id = "introContent">
-                    Please take a seat and have a look.
-                </div>
-                <a href = "blog/about.html">
-                    <div id = "aboutMe">ABOUT ME</div>
-                </a>
-                
-                
+
                 <div id = "blogSorts">
+                    <div id = "sortFilter"></div>
                     <div id = "sortTitle">BLOG CLASSIFICATIONS</div>
                     <div class = "mySort">
                         <img src = "img/icon/notes.svg" class = "sortImg">
@@ -273,8 +293,10 @@
             
             <div id = "recentPost">
 ((articleBoxs))
-            </div>    
+            </div>
         </div>
+
+        <div id = "recentPosts"></div>
 
         <div id = "commingSoon">
             COMING SOON...

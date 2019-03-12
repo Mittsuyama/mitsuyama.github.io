@@ -9,7 +9,7 @@ $(document).ready(function() {
     myRand *= -100;
     sliderLocation = myRand;
     document.getElementById("imgWrap").style.left = myRand + '%';
-    document.getElementById("imgWrap2").style.left = myRand + '%';
+    // document.getElementById("imgWrap2").style.left = myRand + '%';
     document.getElementById("textWrap").style.left = myRand + '%';
     document.getElementById("textWrap2").style.left = myRand + '%';
     document.getElementById("myBar").style.left = myRand / -100 * 20 + '%';
