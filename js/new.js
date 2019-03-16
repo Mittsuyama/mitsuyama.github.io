@@ -6,7 +6,8 @@ var slideOrder = 1;
 var allSlider = 5;
 var animateTime = 1000;
 var transObject = ['Book', 'Bamboo', 'Money', 'Music', 'Computer'];
-var slideTime = 3000;
+var blogLink = [0, 1, 9, 16, 24];
+var slideTime = 4000;
 
 $(document).ready(function() {
     var myRand = Math.round(Math.random() * 5);
@@ -28,6 +29,9 @@ $(document).ready(function() {
         $("#loading").fadeOut();
         
         $("#slideRight").click(nextSlide);
+        $('#slideCircle').click(function() {
+            window.open("blog/" + blogLink[slideOrder - 1] + '.html');
+        });
         setTimeout(slideAuto, slideTime);
         debrisAnimation();
 
