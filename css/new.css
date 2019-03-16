@@ -115,7 +115,7 @@ body {
     top: 50%;
 }
 
-#sliderContainer {
+/* #sliderContainer {
     display: none;
     position: relative;
     width: 100%;
@@ -147,7 +147,7 @@ body {
 }
 
 #textWrap {
-    /* font-family: "等线"; */
+    font-family: "等线";
     position: absolute;
     width: 500%;
     height: 100%;
@@ -345,7 +345,7 @@ body {
     width: 20%;
     height: 35%;
     background-color: white;
-}
+} */
 
 #afterSlider {
     width: 100%;
@@ -369,6 +369,7 @@ body {
     top: 100px;
     left: 50%;
     transform: translate(-50%, 0);
+    border-radius: 13px;
     background-color: white;
     box-shadow: 0px 0px 30px 1px #ddd;
     z-index: 2;
@@ -408,6 +409,7 @@ body {
 #introContent {
     width: 100%;
     text-align: left;
+    letter-spacing: 1px;
     margin: auto;
     margin-top: 5px;
     font-size: 19px;

@@ -113,9 +113,9 @@
 $$
 ^{（图一）}
 $$
-                <div class = "normal" style = "padding-left: 25px; text-indent: -24px;"><span class = "strong">1.&nbsp&nbsp</span>Application ID，新建 Apps 时会随机给一个（新建的时候需要你选择一个 main region，中国选择香港即可，延迟比较低）</div>
-                <div class = "normal" style = "padding-left: 25px; text-indent: -24px;"><span class = "strong">2.&nbsp&nbsp</span>Apps 中一个 Index 的名字，这个 Index 也是你自己建立的</div>
-                <div class = "normal" style = "padding-left: 25px; text-indent: -24px;"><span class = "strong">3.&nbsp&nbsp</span>你上传的内容，上传以 object 为一个单位，每个 object 中都有你设定的键值对，启用搜索时，通过键值对来获得你需要的搜索结果。</div>
+                <div class = "normal" style = "margin: 10px 0px 10px 0px; padding-left: 40px; text-indent: -24px;"><span style = "color: #d94e55">1.&nbsp&nbsp</span>Application ID，新建 Apps 时会随机给一个（新建的时候需要你选择一个 main region，中国选择香港即可，延迟比较低）</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 40px; text-indent: -24px;"><span style = "color: #d94e55">2.&nbsp&nbsp</span>Apps 中一个 Index 的名字，这个 Index 也是你自己建立的</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 40px; text-indent: -24px;"><span style = "color: #d94e55">3.&nbsp&nbsp</span>你上传的内容，上传以 object 为一个单位，每个 object 中都有你设定的键值对，启用搜索时，通过键值对来获得你需要的搜索结果。</div>
                 <div class = "h4" id = "3">上传你的数据</div>
                 <div class = "normal">我使用的 Python 来上传的数据（还可以手动添加数据，或者手动上传 json 文件添加数据）。</div>
                 <a href = "https://www.algolia.com/doc/api-reference/" class = "conncetion"><i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp&nbsp&nbsp你可以选择其他的语言来上传</a>
@@ -131,9 +131,9 @@ client = algoliasearch.Client("Application ID", 'Admin API Key')
 index = client.init_index('index_name')
                 </code></pre>
                 <div class = "normal">Dashboard 中点击 API keys 就能获得上面需要的信息。</div>
-                <div class = "normal" style = "padding-left: 25px; text-indent: -24px;"><span class = "strong">1.&nbsp&nbsp</span>Application ID：每一个 Apps 的认证编码，This is your unique application identifier. It's used to identify you when using Algolia's API</div>
-                <div class = "normal" style = "padding-left: 25px; text-indent: -24px;"><span class = "strong">2.&nbsp&nbsp</span>Admin API Key：管理数据的秘钥，与 Search-Only API Key 不同，Search-Only 只能查询不能修改。</div>
-                <div class = "normal" style = "padding-left: 25px; text-indent: -24px;"><span class = "strong">3.&nbsp&nbsp</span>index_name：图一中的编号 2，就是 index_name。</div>
+                <div class = "normal" style = "margin: 10px 0px 10px 0px; padding-left: 40px; text-indent: -24px;"><span style = "color: #d94e55">1.&nbsp&nbsp</span>Application ID：每一个 Apps 的认证编码，This is your unique application identifier. It's used to identify you when using Algolia's API</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 40px; text-indent: -24px;"><span style = "color: #d94e55">2.&nbsp&nbsp</span>Admin API Key：管理数据的秘钥，与 Search-Only API Key 不同，Search-Only 只能查询不能修改。</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 40px; text-indent: -24px;"><span style = "color: #d94e55">3.&nbsp&nbsp</span>index_name：图一中的编号 2，就是 index_name。</div>
                 <div class = "h5">正式上传数据</div>
                 <a href = "https://www.algolia.com/doc/api-client/indexing/" class = "conncetion"><i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp&nbsp&nbsp上传数据的官方文档</a>
                 <div class = "normal">常用的 API 一共有三种，Add（增加），Delete（删除），Update（更新），由于 objectID 的存在，其实用不上 Update，接下来会解释。</div>
@@ -181,9 +181,6 @@ index.add_object({
                 </main>
             </div>
         </div>
-        
-        <!-- Optional JavaScript -->
-        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 
         <script type = "text/html" id = "hit-template">
             <div class = "hit" href = "{{url}}.html">

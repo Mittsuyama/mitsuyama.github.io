@@ -17,7 +17,7 @@ $(document).ready(function() {
         else {
             screenWidthRate = parseFloat($(document.body).width() / 1920.0);
         }
-        $('body').css("zoom", screenWidthRate);    
+        $('body').css("zoom", screenWidthRate);
 
         //鼠标放在幻灯片停止播放
         $('#slider').mouseenter(function() {

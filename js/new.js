@@ -2,53 +2,46 @@ var sliderLocation = 0;
 var n = 0;
 var sliderTimer = null;
 var isAutoPlay = 1;
+var slideOrder = 1;
+var allSlider = 5;
+var animateTime = 1000;
+var transObject = ['Book', 'Bamboo', 'Money', 'Music', 'Computer'];
+var slideTime = 3000;
 
 $(document).ready(function() {
     var myRand = Math.round(Math.random() * 5);
     if(myRand == 5) myRand = 0;
     myRand *= -100;
     sliderLocation = myRand;
-    document.getElementById("imgWrap").style.left = myRand + '%';
-    // document.getElementById("imgWrap2").style.left = myRand + '%';
-    document.getElementById("textWrap").style.left = myRand + '%';
-    document.getElementById("textWrap2").style.left = myRand + '%';
-    document.getElementById("myBar").style.left = myRand / -100 * 20 + '%';
+    // document.getElementById("imgWrap").style.left = myRand + '%';
+    // document.getElementById("textWrap").style.left = myRand + '%';
+    // document.getElementById("textWrap2").style.left = myRand + '%';
+    // document.getElementById("myBar").style.left = myRand / -100 * 20 + '%';
 
     var screenWidthRate = parseFloat($(document).width()) / 1920.0;
     $("body").css("zoom", screenWidthRate + "");
 
     $(window).load(function() {
-        $("#sliderContainer").fadeIn();
+        $("#slideContainer").fadeIn();
         $("#afterSlider").fadeIn();
         $("#commingSoon").fadeIn();
         $("#loading").fadeOut();
         
-        $('#sliderContainer').click(function() {
-            if($('#sliderPlay').is(':hover')) {
-                if(isAutoPlay == 0) {
-                    sliderAutoPlay();
-                }
-                else {
-                    sliderStopPlay();
-                }
-            }
-            else {
-                sliderStopPlay();
-            }
-        });
-        $('.slierReadmoreSmallBox').mouseenter(sliderStopPlay);
-
-        $('#sliderNex').click(sliderNext);
-        $('#sliderPre').click(sliderPrev);
+        $("#slideRight").click(nextSlide);
+        setTimeout(slideAuto, slideTime);
+        debrisAnimation();
 
         $('.mySort').click(commingSoon);
         
         window.addEventListener('scroll', throttle(lazyload, 500, 1000));
         lazyload();
-        
-        sliderAutoPlay();
     });
 });
+
+function slideAuto() {
+    nextSlide();
+    setTimeout(slideAuto, slideTime);
+}
 
 function commingSoon() {
     $('#commingSoon').animate(
@@ -67,64 +60,65 @@ function disCcommingSoon() {
     );
 }
 
-function sliderAutoPlay() {
-    $('#sliderPlay').children('.sliderButtonSymbol').text('| |');
-    $('#sliderPlay').children('.sliderButtonSymbol').css('line-height', '43px');
-    isAutoPlay = 1;
-    sliderTimer = setInterval(function() {
-        sliderNext();
-    }, 3000);
-}
-
-function sliderStopPlay() {
-    isAutoPlay = 0;
-    $('#sliderPlay').children('.sliderButtonSymbol').text('▷');
-    $('#sliderPlay').children('.sliderButtonSymbol').css('line-height', '45px');
-    clearInterval(sliderTimer);
-}
-
-function sliderNext() {
-    sliderLocation -= 100;
-    if(sliderLocation == -500) {
-        sliderLocation = 0;
+//debris floating animation
+function debrisAnimation() {
+    $('#slideObject').animate(
+        {top: '+=' + '3%'},
+        animateTime,
+        "swing"
+    ).animate(
+        {top: '-=' + '3%'},
+        animateTime,
+        "swing"
+    );
+    for(var i = 1; i < 6; i++) {
+        debrisAnimationAddRand($('#debris' + i));
     }
-    sliderLocate();
 }
 
-function sliderPrev() {
-    sliderLocation += 100;
-    if(sliderLocation == 100) {
-        sliderLocation = -400;
-    }
-    sliderLocate();
+function debrisAnimationAddRand(myDebris) {
+    randTime = parseInt(Math.random() * 2000 + 2000);
+    randDis = parseInt(Math.random() * 60 + -30);
+    myDebris.animate(
+        {top: "+=" + randDis},
+        randTime / 2,
+        "swing",
+    ).animate(
+        {top: "-=" + randDis},
+        randTime / 2,
+        "swing",
+    );
 }
 
-function sliderLocate() {
-    $('#imgWrap').animate(
-        {left: sliderLocation + '%'},
-        "1000",
-        "linear"
-    );
-    $('#imgWrap2').animate(
-        {left: sliderLocation + '%'},
-        "1000",
-        "linear"
-    );
-    $('#textWrap').animate(
-        {left: sliderLocation + '%'},
-        "slow",
+function nextSlide() {
+    debrisAnimation();
+    var temp = slideOrder;
+    if(slideOrder == allSlider) slideOrder = 1;
+    else slideOrder++;
+    posSlider((slideOrder - 1) * -100);
+    $('#slideObject').removeClass('slide' + transObject[temp - 1]).addClass('slide' + transObject[slideOrder - 1]);
+}
+
+function posSlider(myPos) {
+    $("#briefWrap").animate(
+        {top: myPos + '%', opacity: "-3.5"},
+        animateTime / 2,
+        "swing"
+    ).animate(
+        {opacity: "1"},
+        animateTime / 2,
         "swing"
     );
-    $('#textWrap2').animate(
-        {left: sliderLocation + '%'},
-        "slow",
+
+    $("#titleWrap").animate(
+        {top: myPos + '%', opacity: '-3'},
+        animateTime / 2,
         "swing"
-    );
-    $('#myBar').animate(
-        {left: sliderLocation / -100 * 20 + '%'},
-        "slow",
+    ).animate(
+        {opacity: "1"},
+        animateTime / 2,
         "swing"
-    );
+    )
 }
 
 // 简单的节流函数

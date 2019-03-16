@@ -28,6 +28,7 @@ class makeHTML:
     blogTime = ''
     sliderDisplay = [0, 1, 9, 16, 24]
     articleLength = 0
+    isEnterList = 0
     monthName = ['壹月', '贰月', '叁月', '肆月', '伍月', '陆月', '柒月', '捌月', '玖月', '拾月', '拾壹月', '拾贰月']
     
     def __init__(self):
@@ -107,20 +108,29 @@ class makeHTML:
             else:
                 break
         
+        listMargin = '';
+        if self.isEnterList == 1:
+            listMargin = '-12'
+        else:
+            listMargin = '10'
         if mLen > spaceLen + 2 and myStr[spaceLen : spaceLen + 2] == '- ':
-            newS += '''<div class = "normal" style = "padding-left: %spx; text-indent: -9px;">''' % (str(spaceLen * 8 + 20))
+            newS += '''<div class = "normal" style = "margin: %spx 0px 10px 0px; padding-left: %spx; text-indent: -9px;">''' % (listMargin, str(spaceLen * 8 + 35))
+            self.isEnterList = 1
             i = spaceLen + 2
-            newS += '''<i class = "fa fa-chevron-right" style = "top: 3px; margin-right: 3px; font-size: 14px; color: #cccccc"></i>&nbsp'''
+            newS += '''<i class = "fa fa-caret-right" style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55"></i>&nbsp'''
         elif mLen > spaceLen + 3 and myStr[spaceLen + 1 : spaceLen + 3] == '. ':
-            newS += '''<div class = "normal" style = "padding-left: %spx; text-indent: -24px;">''' % (str(spaceLen * 8 + 25))
+            newS += '''<div class = "normal" style = "margin: %spx 0px 10px 0px; padding-left: %spx; text-indent: -24px;">''' % (listMargin, str(spaceLen * 8 + 40))
+            self.isEnterList = 1
             i = spaceLen + 3
-            newS += '''<span class = "strong">%s.&nbsp&nbsp</span>''' % (myStr[spaceLen])
+            newS += '''<span style = "color: #d94e55">%s.&nbsp&nbsp</span>''' % (myStr[spaceLen])
         elif mLen > spaceLen + 4 and myStr[spaceLen + 2 : spaceLen + 4] == '. ':
-            newS += '''<div class = "normal" style = "padding-left: %spx; text-indent:-24px;">''' % (str(spaceLen * 8 + 25))
+            newS += '''<div class = "normal" style = "margin: %spx 0px 10px 0px; padding-left: %spx; text-indent:-24px;">''' % (listMargin, str(spaceLen * 8 + 40))
+            self.isEnterList = 1
             i = spaceLen + 4
-            newS += '''<span class = "strong">%s.&nbsp&nbsp</span>''' % (myStr[spaceLen : spaceLen + 2])
+            newS += '''<span style = "color: #d94e55">%s.&nbsp&nbsp</span>''' % (myStr[spaceLen : spaceLen + 2])
         else:
             newS += '''<div class = "normal">'''
+            self.isEnterList = 0
 
         isMath = 0
         while i < mLen:

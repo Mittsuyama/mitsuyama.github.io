@@ -1,0 +1,775 @@
+div{
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+}
+
+#slideContainer {
+    display: none;
+    position: relative;
+    width: 100%;
+    height: 700px;
+}
+
+#slideLeft {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    background: linear-gradient(45deg, #2a438b, #3ab3ab);
+    overflow: hidden;
+}
+
+#briefWrap {
+    position: absolute;
+    width: 100%;
+    height: 500%;
+}
+
+.brWraps {
+    position: relative;
+    width: 100%;
+    height: 20%;
+}
+
+.slideIntro {
+    position: absolute;
+    width: 80%;
+    top: 220px;
+    right: 100px;
+    font-size: 24px;
+    font-weight: lighter;
+    color: #fff;
+    transform: translate(0, -50%);
+}
+
+.slideBrief {
+    position: relative;
+    width: 100%;
+}
+
+.slideTime {
+    position: relative;
+    width: 100%;
+    margin-top: 30px;
+}
+
+#titleWrapBox {
+    position: absolute;
+    top: 420px;
+    right: 0px;
+    width: 700px;
+    height: 200px;
+    font-size: 50px;
+    color: #fff;
+    font-weight: lighter;
+    box-shadow: -10px 3px 20px 1px #2a638b;
+    border-radius: 3px 0px 0px 3px;
+    overflow: hidden;
+}
+
+#titleWrap1 {
+    position: relative;
+    float: left;;
+    width: 435px;
+    height: 100%;
+    background-color: #52b3d9;
+}
+
+#titleWrap2 {
+    position: relative;
+    float: left;
+    width: 265px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+#titleWrap {
+    position: absolute;
+    top: 400px;
+    right: 0px;
+    width: 700px;
+    height: 200px;
+    font-size: 50px;
+    color: #fff;
+    font-weight: lighter;
+    box-shadow: -10px 3px 15px 1px #127399;
+    border-radius: 5px 0px 0px 5px;
+}
+
+#titleWrap {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 500%;
+}
+
+.ttWraps {
+    position: relative;
+    width: 100%;
+    height: 20%;
+}
+
+.centerText {
+    width: 85%;
+    max-width: -moz-fit-content;
+    max-width: -webkit-fit-content;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+}
+
+.slideTitle {
+    position: absolute;
+    left: 0px;
+    width: 435px;
+    height: 100%;
+}
+
+.slideTitleAfter {
+    position: absolute;
+    width: 265px;
+    height: 100%;
+    right: 0px;
+    padding-left: 70px;
+    padding-top: 115px;
+    letter-spacing: 30px;
+}
+
+#slideRight {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    top: 0px;
+    right: 0px;
+    background: radial-gradient(circle, #22313f, #22211f);
+    overflow: hidden;
+}
+
+.debris {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+}
+
+#debris1 {
+    top: 10%;
+    left: 10%;
+    background-color: #019875;
+    clip-path: polygon(0% 0%, 100% 40%, 90% 100%);
+}
+
+#debris2 {
+    top: 50%;
+    left: 80%;
+    background-color: #eb9532;
+    clip-path: polygon(50% 0%, 100% 40%, 50% 100%);
+}
+
+#debris3 {
+    top: 80%;
+    left: 60%;
+    background-color: #2574a9;
+    clip-path: polygon(20% 0%, 40% 40%, 0% 100%);
+}
+
+#debris4 {
+    top: 10%;
+    left: 75%;
+    background-color: #e08283;
+    clip-path: polygon(0% 0%, 60% 30%, 10% 100%);
+}
+
+#debris5 {
+    top: 70%;
+    left: 15%;
+    background-color: #777;
+    clip-path: polygon(100% 0%, 0% 40%,90% 100%);
+    box-shadow: 0px 0px 15px 1px #000;
+}
+
+#slideCircle {
+    position: absolute;
+    top: 420px;
+    left: 50%;
+    width: 70px;
+    height: 70px;
+    border-radius: 70px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #555;
+    transform: translate(-50%, -50%);
+    background: #ffff7e;
+}
+
+
+
+
+
+/* Animation The Great Project */
+
+#slideObject {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    top: 50%;
+    left: 50%;
+    /* background-color: white; */
+    transform: translate(-50%, -50%);
+}
+
+#slideObject div {
+    position: absolute;
+
+    transition-duration: 1s;
+    -webkit-transition-duration: 1s;
+}
+
+.slideBook div {
+    top: 0px;
+    left: 0px;
+    width: 400px;
+    height: 400px;
+}
+
+.slideBook #a0 {
+    clip-path: polygon(5% 10%, 5% 80%, 70% 70%, 70% 0%);
+    background-color: #eb974e;
+}
+
+.slideBook #a1 {
+    clip-path: polygon(7% 12%, 7% 82%, 70% 68%, 70% 2%);
+    background-color: #ddd;
+}
+
+.slideBook #a2 {
+    clip-path: polygon(12% 17%, 12% 87%, 70% 68%, 70% 2%);
+    background-color: #eee;
+}
+
+.slideBook #a3 {
+    clip-path: polygon(22% 27%, 22% 97%, 70% 68%, 70% 2%);
+    background-color: #fff;
+}
+
+.slideBook #a4 {
+    left: 280px;
+    clip-path: polygon(0% 0%, 0% 70%, 55% 90%, 55% 20%);
+    background-color: #eb974e;
+}
+
+.slideBook #a5 {
+    left: 280px;
+    clip-path: polygon(0% 1.8%, 0% 68.2%, 53% 92%, 53% 22%);
+    background-color: #ddd;
+}
+
+.slideBook #a6 {
+    left: 280px;
+    clip-path: polygon(0% 1.8%, 0% 68.2%, 50% 94%, 50% 24%);
+    background-color: #eee;
+}
+
+.slideBook #a7 {
+    left: 280px;
+    clip-path: polygon(0% 1.8%, 0% 68.2%, 47% 100%, 47% 30%);
+    background-color: #f9f9f9;
+}
+
+.slideBook #a8 {
+    clip-path: polygon(27% 35%, 27% 38%, 60% 20%, 60% 17%);
+    background-color: #ccc;
+}
+
+.slideBook #a9 {
+    top: 40px;
+    clip-path: polygon(27% 35%, 27% 36%, 60% 18%, 60% 17%);
+    background-color: #888;
+}
+
+.slideBook #aa {
+    top: 50px;
+    clip-path: polygon(27% 35%, 27% 36%, 60% 18%, 60% 17%);
+    background-color: #888;
+}
+.slideBook #ab {
+    top: 60px;
+    clip-path: polygon(27% 35%, 27% 36%, 40% 29%, 40% 28%);
+    background-color: #888;
+}
+
+.slideBook #ac {
+    top: 80px;
+    left: 400px;
+    clip-path: polygon(0% 0%, 0% 15%, 3% 7%, 3% 2%);
+    background-color: red;
+}
+.slideBook #ad {
+    top: 80px;
+    left: 400px;
+    clip-path: polygon(3% 7%, 3% 2%, 6% 4%, 6% 19%);
+    background-color: red;
+}
+
+/* .slideMusic */
+.slideMusic div {
+    top: 0px;
+    left: -100px;
+    width: 750px;
+    height: 400px;    
+}
+
+.slideMusic #a0 {
+    clip-path: polygon(0% 30%, 0% 31%, 100% 31%, 100% 30%);
+    background-color: #bdc3c7;
+}
+
+.slideMusic #a1 {
+    top: 30px;
+    clip-path: polygon(0% 30%, 0% 31%, 100% 31%, 100% 30%);
+    background-color: #bdc3c7;
+}
+
+.slideMusic #a2 {
+    top: 60px;
+    clip-path: polygon(0% 30%, 0% 31%, 100% 31%, 100% 30%);
+    background-color: #bdc3c7;
+}
+
+.slideMusic #a3 {
+    top: 90px;
+    clip-path: polygon(0% 30%, 0% 31%, 100% 31%, 100% 30%);
+    background-color: #bdc3c7;
+}
+
+.slideMusic #a4 {
+    top: 120px;
+    clip-path: polygon(0% 30%, 0% 31%, 100% 31%, 100% 30%);
+    background-color: #bdc3c7;
+}
+
+.slideMusic #a5 {
+    top: 155px;
+    left: 0px;
+    clip-path: polygon(1% 18%, 1% 18%, 5% 17%, 3% 12%);
+    background-color: #fff;
+}
+
+.slideMusic #a6 {
+    top: 100px;
+    left: 46px;
+    clip-path: polygon(0% 0%, 0% 25%, 1% 25%, 1% 0%);
+    background-color: #fff;
+}
+
+.slideMusic #a7 {
+    top: 155px;
+    left: 0px;
+    clip-path: polygon(5% 17%, 3% 12%, 7% 10%, 7% 12%);
+    background-color: #fff;
+}
+
+.slideMusic #a8 {
+    top: 130px;
+    left: 126px;
+    clip-path: polygon(0% 0%, 0% 25%, 1% 25%, 1% 0%);
+    background-color: #fff;
+}
+
+.slideMusic #a9 {
+    top: 97px;
+    left: 46px;
+    clip-path: polygon(0% 0%, 0% 2%, 11.7% 9%, 11.7% 7%);
+    background-color: #fff;
+}
+
+.slideMusic #aa {
+    top: 185px;
+    left: 80px;
+    clip-path: polygon(1% 18%, 1% 18%, 5% 17%, 3% 12%);
+    background-color: #fff;
+}
+
+.slideMusic #ab {
+    top: 185px;
+    left: 80px;
+    clip-path: polygon(5% 17%, 3% 12%, 7% 10%, 7% 12%);
+    background-color: #fff;
+}
+
+.slideMusic #ac {
+    top: 92px;
+    left: 250px;
+    clip-path: polygon(0% 20%, 0% 22%, 10% 22%, 10% 20%);
+    background-color: #fff;
+}
+
+.slideMusic #ad {
+    top: 120px;
+    left: 450px;
+    clip-path: polygon(0% 0%, 0% 30%, 1% 30%, 1% 0%);
+    background-color: #fff;
+}
+
+/* .slideMoney */
+.slideMoney div {
+    top: 0px;
+    left: 0px;
+    width: 750px;
+    height: 400px;
+}
+
+.slideMoney #a0 {
+    top: 0px;
+    left: 100px;
+    clip-path: polygon(10% 90%, 15% 90%, 15% 50%, 10% 50%);
+    background-color: #19b5fe;
+}
+
+.slideMoney #a1 {
+    top: 0px;
+    left: 200px;
+    clip-path: polygon(10% 90%, 15% 90%, 15% 40%, 10% 40%);
+    background-color: #19b5fe;
+}
+
+.slideMoney #a2 {
+    top: 0px;
+    left: 300px;
+    clip-path: polygon(10% 90%, 15% 90%, 15% 60%, 10% 60%);
+    background-color: #19b5fe;
+}
+
+.slideMoney #a3 {
+    top: 0px;
+    left: 400px;
+    clip-path: polygon(10% 90%, 15% 90%, 15% 35%, 10% 35%);
+    background-color: #19b5fe;
+}
+
+.slideMoney #a4 {
+    top: 0px;
+    left: 0px;
+    clip-path: polygon(10% 90%, 15% 90%, 15% 70%, 10% 70%);
+    background-color: #19b5fe;
+}
+
+.slideMoney #a5 {
+    top: 0px;
+    left: 0px;
+    clip-path: polygon(0% 70%, 0% 70%, 40% 20%, 40% 15%);
+    background-color: #ffff7e;
+}
+
+.slideMoney #a6 {
+    top: 0px;
+    left: 0px;
+    clip-path: polygon(40% 20%, 40% 15%, 52% 35%, 52% 40%);
+    background-color: #ffff7e;
+}
+
+.slideMoney #a7 {
+    top: 0px;
+    left: 0px;
+    clip-path: polygon(52% 35%, 52% 40%, 65% 20%, 65% 15%);
+    background-color: #ffff7e;
+}
+
+.slideMoney #a8 {
+    top: 0px;
+    left: 0px;
+    clip-path: polygon(64.5% 27%, 60% 15%, 70% 11%, 70% 11%);
+    background-color: #ffff7e;
+}
+
+.slideMoney #a9 {
+    top: 40px;
+    left: 30px;
+    clip-path: polygon(0% 0%, 0% 13%, 2% 13%, 2% 0%);
+    background-color: #ffff7e;
+}
+
+.slideMoney #aa {
+    top: 0px;
+    left: 0px;
+    clip-path: polygon(0% 0%, 0% 3%, 5% 13%, 5% 10%);
+    background-color: #ffff7e;
+}
+
+.slideMoney #ab {
+    top: 0px;
+    left: 0px;
+    clip-path: polygon(5% 13%, 5% 10%, 10% 0%, 10% 3%);
+    background-color: #ffff7e;
+}
+
+.slideMoney #ac {
+    top: 43px;
+    left: 0px;
+    clip-path: polygon(0% 0%, 0% 2%, 10% 2%, 10% 0%);
+    background-color: #ffff7e;
+}
+
+.slideMoney #ad {
+    top: 63px;
+    left: 0px;
+    clip-path: polygon(0% 0%, 0% 2%, 10% 2%, 10% 0%);
+    background-color: #ffff7e;
+}
+
+/* Bamboo */
+.slideBamboo div {
+    top: 0px;
+    left: 0px;
+    width: 700px;
+    height: 400px; 
+}
+
+.slideBamboo #a0 {
+    top: 50px;
+    left: 100px;
+    clip-path: polygon(10% 90%, 13% 90%, 13% 60%, 10% 60%);
+    background-color: #017855;
+}
+
+.slideBamboo #a1 {
+    top: -80px;
+    left: 100px;
+    clip-path: polygon(10% 90%, 13% 90%, 13% 57%, 10% 60%);
+    background-color: #018865;
+}
+
+.slideBamboo #a2 {
+    top: -210px;
+    left: 100px;
+    clip-path: polygon(10% 90%, 13% 87%, 11% 58%, 8% 60%);
+    background-color: #019875;
+}
+
+.slideBamboo #a3 {
+    top: -340px;
+    left: 105px;
+    clip-path: polygon(7% 91%, 10% 89%, 5% 60%, 3% 60%);
+    background-color: #01a885;
+}
+
+.slideBamboo #a4 {
+    top: 200px;
+    left: 145px;
+    transform: rotate(30deg);
+    clip-path: polygon(10% 90%, 13% 90%, 13% 60%, 10% 60%);
+    background-color: #017855;
+}
+
+.slideBamboo #a5 {
+    top: 90px;
+    left: 210px;
+    transform: rotate(30deg);
+    clip-path: polygon(10% 90%, 13% 90%, 13% 60%, 10% 60%);
+    background-color: #019875;
+}
+
+.slideBamboo #a6 {
+    top: -23px;
+    left: 275px;
+    transform: rotate(30deg);
+    clip-path: polygon(10% 90%, 13% 90%, 14% 60%, 12% 60%);
+    background-color: #01d875;
+}
+
+.slideBamboo #a7 {
+    top: 0px;
+    left: -50px;
+    transform: rotate(20deg);
+    clip-path: polygon(52% 35%, 57% 36%, 65% 26%, 56% 27%);
+    background-color: #1e824c;
+}
+
+.slideBamboo #a8 {
+    top: 30px;
+    left: -10px;
+    transform: rotate(-110deg);
+    clip-path: polygon(52% 35%, 57% 36%, 65% 26%, 56% 27%);
+    background-color: #1e824c;
+}
+
+.slideBamboo #a9 {
+    top: 200px;
+    left: -150px;
+    transform: rotate(10deg);
+    clip-path: polygon(52% 35%, 57% 36%, 65% 26%, 56% 27%);
+    background-color: #1e824c;
+}
+
+.slideBamboo #aa {
+    top: -230px;
+    left: -130px;
+    transform: rotate(-120deg);
+    clip-path: polygon(52% 35%, 57% 36%, 65% 26%, 56% 27%);
+    background-color: #1e824c;
+}
+
+.slideBamboo #ab {
+    top: -50px;
+    left: -170px;
+    transform: rotate(-20deg);
+    clip-path: polygon(52% 35%, 57% 36%, 65% 26%, 56% 27%);
+    background-color: #1e824c;
+}
+
+.slideBamboo #ac {
+    top: -50px;
+    left: -130px;
+    transform: rotate(-150deg);
+    clip-path: polygon(52% 35%, 57% 36%, 65% 26%, 56% 27%);
+    background-color: #1e824c;
+}
+
+.slideBamboo #ad {
+    top: -60px;
+    left: 60px;
+    transform: rotate(-80deg);
+    clip-path: polygon(52% 35%, 57% 36%, 65% 26%, 56% 27%);
+    background-color: #1ed24c;
+}
+
+.slideComputer div{
+    top: 0px;
+    left: 0px;
+    width: 700px;
+    height: 400px;
+}
+
+.slideComputer #a0 {
+    top: 0px;
+    left: 20px;
+    width: 400px;
+    height: 250px;
+    border-radius: 30px 30px 0px 0px;
+    clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 0%);
+    background-color: #222;
+}
+
+.slideComputer #a1 {
+    top: 250px;
+    left: 20px;
+    width: 400px;
+    height: 50px;
+    border-radius: 0px 0px 30px 30px;
+    clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 0%);
+    background-color: #bbb;
+}
+
+.slideComputer #a2 {
+    top: 299px;
+    left: 20px;
+    width: 400px;
+    height: 50px;
+    clip-path: polygon(35% 0%, 65% 0%, 68% 80%, 32% 80%);
+    background-color: #888;
+}
+
+.slideComputer #a3 {
+    top: 329px;
+    left: 20px;
+    width: 400px;
+    height: 50px;
+    clip-path: polygon(20% 0%, 80% 0%, 80% 35%, 20% 35%);
+    background-color: #aaa;
+}
+
+.slideComputer #a4 {
+    top: 50px;
+    left: -10px;
+    width: 450px;
+    height: 50px;
+    clip-path: polygon(20% 0%, 80% 0%, 80% 10%, 20% 10%);
+    background-color: #aaa;
+}
+
+.slideComputer #a5 {
+    top: 70px;
+    left: -10px;
+    width: 450px;
+    height: 50px;
+    clip-path: polygon(20% 0%, 60% 0%, 60% 10%, 20% 10%);
+    background-color: #aaa;
+}
+
+.slideComputer #a6 {
+    top: 90px;
+    left: -10px;
+    width: 450px;
+    height: 50px;
+    clip-path: polygon(20% 0%, 40% 0%, 40% 10%, 20% 10%);
+    background-color: #aaa;
+}
+
+.slideComputer #a7 {
+    top: 265px;
+    left: 205px;
+    width: 20px;
+    height: 20px;
+    border-radius: 30px;
+    clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 0%);
+    background-color: #333;
+}
+
+.slideComputer #a8 {
+    top: 150px;
+    left: 370px;
+    width: 120px;
+    height: 200px;
+    border-radius: 20px;
+    clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 0%);
+    background-color: #333;
+}
+
+.slideComputer #a9 {
+    top: 150px;
+    left: 370px;
+    width: 120px;
+    height: 200px;
+    clip-path: polygon(7% 10%, 7% 90%, 93% 90%, 93% 10%);
+    background-color: #222;
+}
+
+.slideComputer #aa {
+    top: 190px;
+    left: 370px;
+    width: 120px;
+    height: 10px;
+    clip-path: polygon(20% 0%, 80% 0%, 80% 35%, 20% 35%);
+    background-color: #ddd;
+}
+
+.slideComputer #ab {
+    top: 220px;
+    left: 370px;
+    width: 120px;
+    height: 10px;
+    clip-path: polygon(20% 0%, 80% 0%, 80% 35%, 20% 35%);
+    background-color: #aaa;
+}
+
+.slideComputer #ac {
+    top: 230px;
+    left: 370px;
+    width: 120px;
+    height: 10px;
+    clip-path: polygon(20% 0%, 80% 0%, 80% 35%, 20% 35%);
+    background-color: #aaa;
+}
+
+.slideComputer #ad {
+    top: 240px;
+    left: 370px;
+    width: 120px;
+    height: 10px;
+    clip-path: polygon(20% 0%, 50% 0%, 50% 35%, 20% 35%);
+    background-color: #aaa;
+}

@@ -8,6 +8,7 @@
         <!-- Bootstrap CSS -->
         <link rel = "stylesheet" href = "https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity = "sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin = "anonymous">
         <link rel = "stylesheet" href = "css/new.css">
+        <link rel = "stylesheet" href = "css/slider.css">
         <link rel = "stylesheet" href = "css-loader/style.css">
         
         <link rel = "icon" href = "img/icon/favicon.ico" mce_href = "img/icon/favicon.ico" type = "image/x-icon">
@@ -37,8 +38,119 @@
                 </div>
             </div>
         </div>
+
+        <div id = "slideContainer">
+            <div id = "slideLeft">
+                <div id = "briefWrap">
+                    <div class = "brWraps">
+                        <div class = "slideIntro">
+                            <div class = "slideBrief">
+                                ((sliderBrief0))
+                            </div>
+                            <div class = "slideTime">((sliderTime0))</div>
+                        </div>
+                    </div>
+                    <div class = "brWraps">
+                        <div class = "slideIntro">
+                            <div class = "slideBrief">
+                                ((sliderBrief1))
+                            </div>
+                            <div class = "slideTime">((sliderTime1))</div>
+                        </div>
+                    </div>
+                    <div class = "brWraps">
+                        <div class = "slideIntro">
+                            <div class = "slideBrief">
+                                ((sliderBrief2))
+                            </div>
+                            <div class = "slideTime">((sliderTime2))</div>
+                        </div>
+                    </div>
+                    <div class = "brWraps">
+                        <div class = "slideIntro">
+                            <div class = "slideBrief">
+                                ((sliderBrief3))
+                            </div>
+                            <div class = "slideTime">((sliderTime3))</div>
+                        </div>
+                    </div>
+                    <div class = "brWraps">
+                        <div class = "slideIntro">
+                            <div class = "slideBrief">
+                                ((sliderBrief4))
+                            </div>
+                            <div class = "slideTime">((sliderTime4))</div>
+                        </div>
+                    </div>
+                </div>
+                <div id = "titleWrapBox">
+                    <div id = "titleWrap1"></div>
+                    <div id = "titleWrap2"></div>
+                    <div id = "titleWrap">
+                        <div class = "ttWraps">
+                            <div class = "slideTitle">
+                                <div class = "centerText">((slierTitle0))</div>
+                            </div>
+                            <div class = "slideTitleAfter">1/5</div>
+                        </div>
+                        <div class = "ttWraps">
+                            <div class = "slideTitle">
+                                <div class = "centerText">((slierTitle1))</div>
+                            </div>
+                            <div class = "slideTitleAfter">2/5</div>
+                        </div>
+                        <div class = "ttWraps">
+                            <div class = "slideTitle">
+                                <div class = "centerText">((slierTitle2))</div>
+                            </div>
+                            <div class = "slideTitleAfter">3/5</div>
+                        </div>
+                        <div class = "ttWraps">
+                            <div class = "slideTitle">
+                                <div class = "centerText">((slierTitle3))</div>
+                            </div>
+                            <div class = "slideTitleAfter">4/5</div>
+                        </div>
+                        <div class = "ttWraps">
+                            <div class = "slideTitle">
+                                <div class = "centerText">((slierTitle4))</div>
+                            </div>
+                            <div class = "slideTitleAfter">5/5</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id = "slideRight">
+                <div id = "debrisContainer">
+                    <div class = "debris" id = "debris1"></div>
+                    <div class = "debris" id = "debris2"></div>
+                    <div class = "debris" id = "debris3"></div>
+                    <div class = "debris" id = "debris4"></div>
+                    <div class = "debris" id = "debris5"></div>
+                </div>
+                <div class = "slideBook" id = "slideObject">
+                    <div id = "a0"></div>
+                    <div id = "a1"></div>
+                    <div id = "a2"></div>
+                    <div id = "a3"></div>
+                    <div id = "a4"></div>
+                    <div id = "a5"></div>
+                    <div id = "a6"></div>
+                    <div id = "a7"></div>
+                    <div id = "a8"></div>
+                    <div id = "a9"></div>
+                    <div id = "aa"></div>
+                    <div id = "ab"></div>
+                    <div id = "ac"></div>
+                    <div id = "ad"></div>
+                </div>
+            </div>
+            <div id = "slideCircle">
+                <div class = "centerText">→</div>
+            </div>
+        </div>
         
-        <div id = "sliderContainer">
+        <!-- <div id = "sliderContainer">
             <div id = "imgWrap">
                 <div class = "sliderPage">
                     <img src = "img/blog-image/order0.jpg" class = "sliderImg">
@@ -83,23 +195,6 @@
                     </div>
                 </div>
             </div>
-            <!-- <div id = "imgWrap2">
-                <div class = "sliderPage">
-                    <img src = "img/blog-image/orderb0.png" class = "sliderImg">
-                </div>
-                <div class = "sliderPage">
-                    <img src = "img/blog-image/orderb1.png" class = "sliderImg">
-                </div>
-                <div class = "sliderPage">
-                    <img src = "img/blog-image/orderb2.png" class = "sliderImg">
-                </div>
-                <div class = "sliderPage">
-                    <img src = "img/blog-image/orderb3.png" class = "sliderImg">
-                </div>
-                <div class = "sliderPage">
-                    <img src = "img/blog-image/orderb4.png" class = "sliderImg">
-                </div>
-            </div> -->
             <div id = "textWrap2">
                 <div class = "sliderTextPage">
                     <div class = "sliderTime">
@@ -201,7 +296,7 @@
                 <div id = "myBar"></div>
             </div>
 
-        </div>
+        </div> -->
 
         <div id = "afterSlider">
             <div id = "myIntro">

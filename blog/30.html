@@ -120,12 +120,47 @@
                 <div class = "normal">需要考虑的问题：编码的长度、数的符号、数的运算</div>
                 <br>
                 <div class = "normal">一般数据类型和运算（略）</div>
-                <div class = "h5">浮点数的表示</div>
+                <div class = "h4" id = "2">浮点数的表示</div>
                 <div class = "normal">表示有理数的形式：</div>
 $$
-(-1) \; M \; 2^E
+(-1)^S \; 2^E \; M 
 $$
                 <div class = "normal">其中：</div>
+                <div class = "normal">S（符号 Sign）：决定正负</div>
+                <div class = "normal">E（Exponent）：用 $2^E$ 将数值加权</div>
+                <div class = "normal">M（位数 Significant）：二进制小数，数据范围 $[1.0, 2.0)$</div>
+                <div class = "h5">浮点编码</div>
+                <div class = "normal" style = "margin: 10px 0px 10px 0px; padding-left: 40px; text-indent: -24px;"><span style = "color: #d94e55">1.&nbsp&nbsp</span>最高有效位（MSB），最为符号位 s</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 40px; text-indent: -24px;"><span style = "color: #d94e55">2.&nbsp&nbsp</span>exp 字段，编码 E（E 与 exp 不相等）</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 40px; text-indent: -24px;"><span style = "color: #d94e55">3.&nbsp&nbsp</span>frac 字段编码尾数 M（与 M 也不一定相等）</div>
+                <div class = "h5">精度选项</div>
+                <div class = "normal">单精度：32 bits（1 + 8 + 23）</div>
+                <div class = "normal">双精度：64 bits（1 + 11 + 52）</div>
+                <div class = "normal">扩展精度：80 bits（1 + 15 + 63/64）</div>
+                <div class = "h5">阶码（移码）</div>
+                <div class = "normal" style = "margin: 10px 0px 10px 0px; padding-left: 40px; text-indent: -24px;"><span style = "color: #d94e55">1.&nbsp&nbsp</span>真值：-126</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 40px; text-indent: -24px;"><span style = "color: #d94e55">2.&nbsp&nbsp</span>补码：10000010</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 40px; text-indent: -24px;"><span style = "color: #d94e55">3.&nbsp&nbsp</span>移码 + 128：00000010</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 40px; text-indent: -24px;"><span style = "color: #d94e55">4.&nbsp&nbsp</span>移码 + 127：00000001</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 40px; text-indent: -24px;"><span style = "color: #d94e55">5.&nbsp&nbsp</span>机器数：1</div>
+                <div class = "normal">没有 -127，-128，空出 0000000 和 1111111</div>
+                <div class = "h5">规格化数</div>
+                <div class = "normal">条件：exp ≠ 000…0 且 exp ≠ 111…1</div>
+                <div class = "normal">阶码采用偏置值编码：E = Exp - Bias</div>
+                <div class = "normal">$T = (-1)^S \times 2^{Bias + E} \times M$</div>
+                <div class = "h5">非规格化数</div>
+                <div class = "normal" style = "margin: 10px 0px 10px 0px; padding-left: 40px; text-indent: -24px;"><span style = "color: #d94e55">1.&nbsp&nbsp</span>exp = 000...0，frac = 000...0：表示 0（<span class = "emphasis">注意</span>：有 +0  和 -0 之分）</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 40px; text-indent: -24px;"><span style = "color: #d94e55">2.&nbsp&nbsp</span>exp = 000...0，frac ≠ 000...0：表示最接近 0.0 的那些数（$frac * 2^{-126}$）</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 40px; text-indent: -24px;"><span style = "color: #d94e55">3.&nbsp&nbsp</span>exp = 111…1，frac = 000...0：表示正负无穷</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 40px; text-indent: -24px;"><span style = "color: #d94e55">4.&nbsp&nbsp</span>exp = 111…1，frac = 000...0：表示 Not a Number (NaN)</div>
+                <div class = "h5">默认的舍入模式</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 40px; text-indent: -24px;"><span style = "color: #d94e55">1.&nbsp&nbsp</span>恰好在两个可能数值中间时（中间值）：舍入后，最低有效位的数码位偶数</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 40px; text-indent: -24px;"><span style = "color: #d94e55">2.&nbsp&nbsp</span>其他的时候，像最近的数值舍入（比中间值小向下舍入，比中间值大向上舍入）</div>
+                <div class = "normal">举例：</div>
+                <div class = "normal">7/8：10.11<span class = "strong">110</span> → 11.0<span class = "strong">0</span> → 3</div>
+                <div class = "normal">5/8：10.10<span class = "strong">110</span> → 10.1<span class = "strong">0</span> → 2</div>
+                <div class = "h5">浮点的运算</div>
+                <div class = "normal">（看书）</div>
 
                 </div>
                 <div id = "disqus_thread"></div>  
@@ -160,9 +195,6 @@ $$
                 </main>
             </div>
         </div>
-        
-        <!-- Optional JavaScript -->
-        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 
         <script type = "text/html" id = "hit-template">
             <div class = "hit" href = "{{url}}.html">

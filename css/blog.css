@@ -128,8 +128,7 @@ a.contentListCon {
     transition-duration: 0.2s;
     -webkit-transition-duration: 0.2s;
     border-radius: 5px;
-    src: url('../fonts/Deng.ttf');
-    font-family: "等线";
+    font-family: sans-serif;
 }
 
 div.glass {
@@ -168,14 +167,13 @@ div.articleBorder {
     padding: 30px 60px 100px 60px;
     border-radius: 0px;
     background-color: white;
-    color: rgba(80, 80, 80, 0.9);
-    font-family: "等线";
+    color: #777;
+    font-family: sans-serif;
 }
 
 div.h2 {
-    font-family: "等线";
-    font-weight: bold;
-    font-size: 35px;
+    font-size: 36px;
+    color: #333;
     text-align: center;
     margin: 0px;
     width: 100%;
@@ -192,9 +190,9 @@ div.h2 {
 }
 
 div.h3 {
-    font-family: "等线";
-    /* font-weight: bold; */
+    font-family: 'Times New Roman', Times, serif;
     font-size: 32px;
+    color: #333;
     font-style: italic;
     text-align: center;
     width: 100%;
@@ -202,31 +200,20 @@ div.h3 {
 }
 
 div.h4 {
-    font-family: "等线";
-    font-weight: bold;
-    font-size: 28px;
-    /* margin-left: -31px; */
+    font-size: 30px;
     margin-top: 30px;
     margin-bottom: 30px;
-    color: #555;
-    border-left: 5px solid #333;
-    /* color: rgba(12, 70, 120, 0.7);
-    border-left: 5px solid rgba(32, 102, 150, 0.7); */
-    /* background-color: rgba(52, 190, 230, 0.03); */
+    color: #333;
+    /* border-left: 5px solid #333; */
     border-radius: 0px 5px 5px 0px;
-    padding: 0px 20px 0px 23px;
+    /* padding: 0px 0px 0px 23px; */
 }
 
 div.h5 {
-    font-family: "等线";
-    font-weight: bold;
-    /* color: rgba(50, 150, 180, 1); */
-    font-size: 23px;
-    /* margin-left: -61px; */
+    font-size: 21px;
+    color: #555;
     margin-top: 15px;
     margin-bottom: 20px;
-    /*background-color: rgba(110, 220, 250, 0.05);*/
-    /* border-left: 8px solid rgba(200, 200, 200, 0); */
     padding: 5px 0px 2px 0px;
     border-radius: 0px 5px 5px 0px;
     min-height: 25px; 
@@ -254,11 +241,13 @@ div.quoteAgain {
     color: #888888;
     margin: 30px 0px 30px 0px;
     padding-left: 70px;
-    width: 100%; 
+    width: 100%;
 }
 
 div.normal {
-    margin-top: -4px;
+    /* line-height: 21px; */
+    letter-spacing: 0.5px;
+    margin-top: 4px;
     padding: 2px 0px 2px 0px;
     width: 100%;
 }
@@ -283,7 +272,7 @@ span.emphasis {
     
     margin: 0px 3px 0px 3px;
     padding: 0px 5px 0px 5px;
-    border: 1px solid rgba(100, 100, 100, 0.4);
+    border: 1px solid rgba(100, 100, 100, 0.5);
     background-color: rgba(100, 100, 100, 0.05);
     /*border: 1.5px solid rgba(0, 0, 0, 0.2);*/
     /*border: 2px solid rgba(255, 150, 60, 0.3);*/
