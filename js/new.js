@@ -1,9 +1,9 @@
 var n = 0;
 var sliderTimer = null;
-
+var contentListDisplay = 0;
 var slideOrder = 1;
 var allSlider = 5;
-var animateTime = 500;
+var animateTime = 800;
 var blogLink = [0, 1, 9, 16, 24];
 var slideTime = 4000;
 
@@ -29,10 +29,34 @@ $(document).ready(function() {
             window.open("blog/" + blogLink[slideOrder - 1] + ".html");
         });
 
+        $("#contentListID").click(function() {
+            if(contentListDisplay == 0) {
+                contentListDisplay = 1;
+                $("#contentListID").addClass("contentList1").removeClass("contentList");
+                $("#contentLisText").fadeIn();
+            }
+            else {
+                contentListDisplay = 0;
+                $("#contentListID").addClass("contentList").removeClass("contentList1");
+                $("#contentLisText").fadeOut();
+            }
+        });
+
         $(".bars").click(function () {
             clearInterval(sliderTimer);
-            slidePosition(slideOrder, $(this).text()[1]);
-            slideOrder = $(this).text()[1];
+            if($(this).text() == '↑') {
+                var temp = slideOrder;
+                if(slideOrder == 1) slideOrder = 5;
+                else slideOrder--;
+                slidePosition(temp, slideOrder);
+            }
+            else if($(this).text() == '↓') {
+                nextSlide();
+            }
+            else {
+                slidePosition(slideOrder, $(this).text()[1]);
+                slideOrder = $(this).text()[1];
+            }
         });
         sliderTimer = setInterval(nextSlide, slideTime);
         
