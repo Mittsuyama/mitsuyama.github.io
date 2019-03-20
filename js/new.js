@@ -25,7 +25,10 @@ $(document).ready(function() {
 
         $('.mySort').click(commingSoon);
 
-        $(".slideReadmore").click(nextSlide);
+        $(".slideReadmore").click(function() {
+            window.open("blog/" + blogLink[slideOrder - 1] + ".html");
+        });
+
         $(".bars").click(function () {
             clearInterval(sliderTimer);
             slidePosition(slideOrder, $(this).text()[1]);
