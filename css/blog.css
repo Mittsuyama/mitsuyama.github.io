@@ -250,10 +250,12 @@ div.normal {
     margin-top: 4px;
     padding: 2px 0px 2px 0px;
     width: 100%;
+    /* font-weight: lighter; */
 }
 
 span.strong {
     font-weight: bold;
+    color: #333;
 }
 
 span.italic {
@@ -269,15 +271,11 @@ span.strike {
 }
 
 span.emphasis {
-    
     margin: 0px 3px 0px 3px;
     padding: 0px 5px 0px 5px;
     border: 1px solid rgba(100, 100, 100, 0.5);
-    background-color: rgba(100, 100, 100, 0.05);
-    /*border: 1.5px solid rgba(0, 0, 0, 0.2);*/
-    /*border: 2px solid rgba(255, 150, 60, 0.3);*/
-    /*background-color:rgba(255, 150, 60, 0.06);*/
-    border-radius: 4px;
+    background-color: #fbfbfb;
+    border-radius: 5px;
 }
 
 a.conncetion {

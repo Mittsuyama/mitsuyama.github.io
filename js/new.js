@@ -1,23 +1,18 @@
-var sliderLocation = 0;
 var n = 0;
 var sliderTimer = null;
-var isAutoPlay = 1;
+
 var slideOrder = 1;
 var allSlider = 5;
-var animateTime = 1000;
-var transObject = ['Book', 'Bamboo', 'Money', 'Music', 'Computer'];
+var animateTime = 500;
 var blogLink = [0, 1, 9, 16, 24];
 var slideTime = 4000;
 
 $(document).ready(function() {
     var myRand = Math.round(Math.random() * 5);
-    if(myRand == 5) myRand = 0;
-    myRand *= -100;
-    sliderLocation = myRand;
-    // document.getElementById("imgWrap").style.left = myRand + '%';
-    // document.getElementById("textWrap").style.left = myRand + '%';
-    // document.getElementById("textWrap2").style.left = myRand + '%';
-    // document.getElementById("myBar").style.left = myRand / -100 * 20 + '%';
+    if(myRand == 0) myRand = 5;
+    slideOrder = myRand;
+    $("#bar" + myRand).css("color", "#666").css("font-size", "30px");
+    $('#wraps').css("top", (slideOrder - 1) * -100 + '%');
 
     var screenWidthRate = parseFloat($(document).width()) / 1920.0;
     $("body").css("zoom", screenWidthRate + "");
@@ -27,24 +22,46 @@ $(document).ready(function() {
         $("#afterSlider").fadeIn();
         $("#commingSoon").fadeIn();
         $("#loading").fadeOut();
-        
-        $("#slideRight").click(nextSlide);
-        $('#slideCircle').click(function() {
-            window.open("blog/" + blogLink[slideOrder - 1] + '.html');
-        });
-        setTimeout(slideAuto, slideTime);
-        debrisAnimation();
 
         $('.mySort').click(commingSoon);
+
+        $(".slideReadmore").click(nextSlide);
+        $(".bars").click(function () {
+            clearInterval(sliderTimer);
+            slidePosition(slideOrder, $(this).text()[1]);
+            slideOrder = $(this).text()[1];
+        });
+        sliderTimer = setInterval(nextSlide, slideTime);
         
         window.addEventListener('scroll', throttle(lazyload, 500, 1000));
         lazyload();
     });
 });
 
-function slideAuto() {
-    nextSlide();
-    setTimeout(slideAuto, slideTime);
+function nextSlide() {
+    var temp = slideOrder;
+    if(slideOrder == 5) slideOrder = 1;
+    else slideOrder++;
+    slidePosition(temp, slideOrder);
+}
+
+function slidePosition(last, order) {
+    var slidePos = (order - 1) * -100;
+    $('#wraps').animate(
+        {opacity: "0"},
+        animateTime / 2,
+        "swing"
+    ).animate(
+        {top: slidePos + '%'},
+        1,
+        "swing"
+    ).animate(
+        {opacity: "1"},
+        animateTime / 2,
+        "swing"
+    );
+    $("#bar" + order).css("color", "#666").css("font-size", "30px");
+    $("#bar" + last).css("color", "#aaa").css("font-size", "20px");
 }
 
 function commingSoon() {
@@ -62,67 +79,6 @@ function disCcommingSoon() {
         "faster",
         "swing"
     );
-}
-
-//debris floating animation
-function debrisAnimation() {
-    $('#slideObject').animate(
-        {top: '+=' + '3%'},
-        animateTime,
-        "swing"
-    ).animate(
-        {top: '-=' + '3%'},
-        animateTime,
-        "swing"
-    );
-    for(var i = 1; i < 6; i++) {
-        debrisAnimationAddRand($('#debris' + i));
-    }
-}
-
-function debrisAnimationAddRand(myDebris) {
-    randTime = parseInt(Math.random() * 2000 + 2000);
-    randDis = parseInt(Math.random() * 60 + -30);
-    myDebris.animate(
-        {top: "+=" + randDis},
-        randTime / 2,
-        "swing",
-    ).animate(
-        {top: "-=" + randDis},
-        randTime / 2,
-        "swing",
-    );
-}
-
-function nextSlide() {
-    debrisAnimation();
-    var temp = slideOrder;
-    if(slideOrder == allSlider) slideOrder = 1;
-    else slideOrder++;
-    posSlider((slideOrder - 1) * -100);
-    $('#slideObject').removeClass('slide' + transObject[temp - 1]).addClass('slide' + transObject[slideOrder - 1]);
-}
-
-function posSlider(myPos) {
-    $("#briefWrap").animate(
-        {top: myPos + '%', opacity: "-3.5"},
-        animateTime / 2,
-        "swing"
-    ).animate(
-        {opacity: "1"},
-        animateTime / 2,
-        "swing"
-    );
-
-    $("#titleWrap").animate(
-        {top: myPos + '%', opacity: '-3'},
-        animateTime / 2,
-        "swing"
-    ).animate(
-        {opacity: "1"},
-        animateTime / 2,
-        "swing"
-    )
 }
 
 // 简单的节流函数

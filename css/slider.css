@@ -10,7 +10,7 @@ body {
     display: none;
     position: relative;
     width: 100%;
-    height: 700px;
+    height: 750px;
 }
 
 #slideLeft {
@@ -147,7 +147,7 @@ body {
     height: 100%;
     top: 0px;
     right: 0px;
-    background: radial-gradient(circle, #22313f, #22211f);
+    background: radial-gradient(circle, #22313f, #22212f);
     overflow: hidden;
 }
 
@@ -334,79 +334,79 @@ body {
 }
 
 .slideMusic #a0 {
-    clip-path: polygon(0% 30%, 0% 31%, 100% 31%, 100% 30%);
+    clip-path: polygon(20% 30%, 20% 31%, 70% 31%, 70% 30%);
     background-color: #bdc3c7;
 }
 
 .slideMusic #a1 {
     top: 30px;
-    clip-path: polygon(0% 30%, 0% 31%, 100% 31%, 100% 30%);
+    clip-path: polygon(20% 30%, 20% 31%, 70% 31%, 70% 30%);
     background-color: #bdc3c7;
 }
 
 .slideMusic #a2 {
     top: 60px;
-    clip-path: polygon(0% 30%, 0% 31%, 100% 31%, 100% 30%);
+    clip-path: polygon(20% 30%, 20% 31%, 70% 31%, 70% 30%);
     background-color: #bdc3c7;
 }
 
 .slideMusic #a3 {
     top: 90px;
-    clip-path: polygon(0% 30%, 0% 31%, 100% 31%, 100% 30%);
+    clip-path: polygon(20% 30%, 20% 31%, 70% 31%, 70% 30%);
     background-color: #bdc3c7;
 }
 
 .slideMusic #a4 {
     top: 120px;
-    clip-path: polygon(0% 30%, 0% 31%, 100% 31%, 100% 30%);
+    clip-path: polygon(20% 30%, 20% 31%, 70% 31%, 70% 30%);
     background-color: #bdc3c7;
 }
 
 .slideMusic #a5 {
     top: 155px;
-    left: 0px;
+    left: 70px;
     clip-path: polygon(1% 18%, 1% 18%, 5% 17%, 3% 12%);
     background-color: #fff;
 }
 
 .slideMusic #a6 {
     top: 100px;
-    left: 46px;
+    left: 116px;
     clip-path: polygon(0% 0%, 0% 25%, 1% 25%, 1% 0%);
     background-color: #fff;
 }
 
 .slideMusic #a7 {
     top: 155px;
-    left: 0px;
+    left: 70px;
     clip-path: polygon(5% 17%, 3% 12%, 7% 10%, 7% 12%);
     background-color: #fff;
 }
 
 .slideMusic #a8 {
     top: 130px;
-    left: 126px;
+    left: 196px;
     clip-path: polygon(0% 0%, 0% 25%, 1% 25%, 1% 0%);
     background-color: #fff;
 }
 
 .slideMusic #a9 {
     top: 97px;
-    left: 46px;
+    left: 116px;
     clip-path: polygon(0% 0%, 0% 2%, 11.7% 9%, 11.7% 7%);
     background-color: #fff;
 }
 
 .slideMusic #aa {
     top: 185px;
-    left: 80px;
+    left: 150px;
     clip-path: polygon(1% 18%, 1% 18%, 5% 17%, 3% 12%);
     background-color: #fff;
 }
 
 .slideMusic #ab {
     top: 185px;
-    left: 80px;
+    left: 150px;
     clip-path: polygon(5% 17%, 3% 12%, 7% 10%, 7% 12%);
     background-color: #fff;
 }
@@ -420,7 +420,7 @@ body {
 
 .slideMusic #ad {
     top: 120px;
-    left: 450px;
+    left: 370px;
     clip-path: polygon(0% 0%, 0% 30%, 1% 30%, 1% 0%);
     background-color: #fff;
 }
@@ -782,4 +782,13 @@ body {
     height: 10px;
     clip-path: polygon(20% 0%, 50% 0%, 50% 35%, 20% 35%);
     background-color: #aaa;
+}
+
+#containerTest {
+    width: 95%;
+    height: 800px;
+    margin: auto;
+    margin-top: 50px;
+    background-color: white;
+    /* box-shadow: 0px 10px 30px 1px #eee; */
 }

@@ -405,6 +405,7 @@ class makeHTML:
             self.pHtml(i)
             for j in range(0, 5):
                 if i == self.sliderDisplay[j]:
+                    homePage = homePage.replace('((sliderTag' + str(j) + '))', self.blogClass)
                     homePage = homePage.replace('((sliderTime' + str(j) + '))', self.blogTime)
                     homePage = homePage.replace('((slierTitle' + str(j) + '))', self.blogTiTle)
                     homePage = homePage.replace('((sliderBrief' + str(j) + '))', self.blogBrief)
