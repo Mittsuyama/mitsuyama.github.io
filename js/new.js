@@ -23,7 +23,7 @@ $(document).ready(function() {
         $("#commingSoon").fadeIn();
         $("#loading").fadeOut();
 
-        $('.mySort').click(commingSoon);
+        $('.cates').click(commingSoon);
 
         $(".slideReadmore").click(function() {
             window.open("blog/" + blogLink[slideOrder - 1] + ".html");
