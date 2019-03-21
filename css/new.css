@@ -681,6 +681,19 @@ img.srtImg {
     right: 0px;
     /* background: radial-gradient(white, rgba(255, 255, 255, 0.9)); */
     background-color: #fff;
+    overflow: hidden;
+}
+
+#cateWater {
+    position: absolute;
+    /* writing-mode: vertical-lr; */
+    right: -55px;
+    bottom: -85px;
+    letter-spacing: 10px;
+    font-family: geometos;
+    font-size: 130px;
+    color: #eee;
+    opacity: 0.5;
 }
 
 #cateCon {
