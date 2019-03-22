@@ -679,21 +679,20 @@ img.srtImg {
     width: 60%;
     height: 100%;
     right: 0px;
-    /* background: radial-gradient(white, rgba(255, 255, 255, 0.9)); */
+    box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.05);
     background-color: #fff;
     overflow: hidden;
 }
 
 #cateWater {
+    display: none;
     position: absolute;
-    /* writing-mode: vertical-lr; */
-    right: -55px;
-    bottom: -85px;
-    letter-spacing: 10px;
-    font-family: geometos;
-    font-size: 130px;
-    color: #eee;
-    opacity: 0.5;
+    top: 0px;
+    right: 0px;
+    width: 150px;
+    height: 150px;
+    clip-path: polygon(0% 0%, 100% 100%, 100% 50%, 50% 0%);
+    background-color: #eee;
 }
 
 #cateCon {
@@ -718,12 +717,16 @@ img.srtImg {
     height: 50%;
     color: #666;
     font-family: sans-serif;
-    font-weight: lighter;
+    /* font-weight: lighter; */
     font-size: 30px;
     cursor: pointer;
 
     transition-duration: 0.4s;
     -webkit-transition-duration: 0.4s;
+}
+
+.cateC {
+    font-weight: lighter;
 }
 
 .cateBox {
@@ -768,9 +771,10 @@ img.srtImg {
     display: none;
     position: absolute;
     top: 1px;
-    width: 100%;
+    right: 0px;
+    width: 30%;
     height: 1px;
-    background: linear-gradient(to right, #999, #fff);
+    background: linear-gradient(to left, #ccc, #fff);
 }
 
 #cateDown {
