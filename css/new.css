@@ -599,9 +599,9 @@ img.srtImg {
 
 #categories {
     position: relative;
-    margin: 100px 0px 30px 0px;
+    margin-top: 100px;
     width: 100%;
-    height: 800px;
+    height: 850px;
     /* background-color: #eee; */
 }
 
@@ -762,7 +762,7 @@ img.cateImg {
     position: relative;
     width: 50%;
     margin: auto;
-    margin-top: 100px;
+    margin-top: 150px;
 }
 
 .articleBox:hover .articleTitleReadmore {

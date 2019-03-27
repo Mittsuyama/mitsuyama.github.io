@@ -19,7 +19,7 @@
         
         <link rel = "stylesheet" href = "../highlight/styles/atom-one-dark.css">
         
-        <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous"> -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 
         <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css">
         <script src = "../highlight/highlight.pack.js"></script>
@@ -102,17 +102,17 @@
                 <div class = "articleBorder">
                                     <br>
                 <div class = "h2" id = "1">先配置一个&nbsp&nbspupstream</div><div id = "hUnderline"></div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 40px; text-indent: -31px;"><span style = "color: #d94e55">1.&nbsp&nbsp</span>使用 git remote -v 查看远程状态</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 47px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">1.</span>使用 git remote -v 查看远程状态</div>
                 <pre><code class = "nohighlight">
 git remote -v
 origin  git@github.com:yourname/yourname_rep.git (fetch)
 origin  git@github.com:yourname/yourname_rep.git (push)
                 </code></pre>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 40px; text-indent: -31px;"><span style = "color: #d94e55">2.&nbsp&nbsp</span>添加一个将被同步给 fork 远程的上游仓库</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 47px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">2.</span>添加一个将被同步给 fork 远程的上游仓库</div>
                 <pre><code class = "nohighlight">
 git remote add upstream git@github.com:yourname/yourname_rep.git
                 </code></pre>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 40px; text-indent: -31px;"><span style = "color: #d94e55">3.&nbsp&nbsp</span>使用 git remote -v 查看是否成功</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 47px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">3.</span>使用 git remote -v 查看是否成功</div>
                 <pre><code class = "nohighlight">
 origin  git@github.com:yourname/yourname_rep.git (fetch)
 origin  git@github.com:yourname/yourname_rep.git (push)
@@ -120,17 +120,17 @@ upstream        git@github.com:yourname/yourname_rep.git (fetch)
 upstream        git@github.com:yourname/yourname_rep.git (push)
                 </code></pre>
                 <div class = "h2" id = "2">从远程同步同步</div><div id = "hUnderline"></div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 40px; text-indent: -31px;"><span style = "color: #d94e55">4.&nbsp&nbsp</span>从上游仓库 fetch 分支和提交点 git fetch upstream，传送到本地，并会被存储在本地分支 upstream/master</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 47px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">4.</span>从上游仓库 fetch 分支和提交点 git fetch upstream，传送到本地，并会被存储在本地分支 upstream/master</div>
                 <pre><code class = "nohighlight">
 git fetch upstream
 From github.com:yourname/yourname_rep
  * [new branch]      master     -> upstream/master
                 </code></pre>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 40px; text-indent: -31px;"><span style = "color: #d94e55">5.&nbsp&nbsp</span>切换到本地主分支</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 47px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">5.</span>切换到本地主分支</div>
                 <pre><code class = "nohighlight">
 git checkout master
                 </code></pre>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 40px; text-indent: -31px;"><span style = "color: #d94e55">6.&nbsp&nbsp</span>把 upstream/master 分支合并到本地 master 上，这样就完成了同步，并不会丢掉本地修改的内容。</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 47px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">6.</span>把 upstream/master 分支合并到本地 master 上，这样就完成了同步，并不会丢掉本地修改的内容。</div>
                 <pre><code class = "nohighlight">
 git merge upstream/master
                 </code></pre>

@@ -19,7 +19,7 @@
         
         <link rel = "stylesheet" href = "../highlight/styles/atom-one-dark.css">
         
-        <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous"> -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 
         <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css">
         <script src = "../highlight/highlight.pack.js"></script>
@@ -132,32 +132,32 @@ $$
                 <div class = "normal">E（Exponent）：用 $2^E$ 将数值加权</div>
                 <div class = "normal">M（位数 Significant）：二进制小数，数据范围 $[1.0, 2.0)$</div>
                 <div class = "h5">浮点编码</div>
-                <div class = "normal" style = "margin: 10px 0px 10px 0px; padding-left: 40px; text-indent: -31px;"><span style = "color: #d94e55">1.&nbsp&nbsp</span>最高有效位（MSB），最为符号位 s</div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 40px; text-indent: -31px;"><span style = "color: #d94e55">2.&nbsp&nbsp</span>exp 字段，编码 E（E 与 exp 不相等）</div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 40px; text-indent: -31px;"><span style = "color: #d94e55">3.&nbsp&nbsp</span>frac 字段编码尾数 M（与 M 也不一定相等）</div>
+                <div class = "normal" style = "margin: 10px 0px 10px 0px; padding-left: 47px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">1.</span>最高有效位（MSB），最为符号位 s</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 47px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">2.</span>exp 字段，编码 E（E 与 exp 不相等）</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 47px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">3.</span>frac 字段编码尾数 M（与 M 也不一定相等）</div>
                 <div class = "h5">精度选项</div>
                 <div class = "normal">单精度：32 bits（1 + 8 + 23）</div>
                 <div class = "normal">双精度：64 bits（1 + 11 + 52）</div>
                 <div class = "normal">扩展精度：80 bits（1 + 15 + 63/64）</div>
                 <div class = "h5">阶码（移码）</div>
-                <div class = "normal" style = "margin: 10px 0px 10px 0px; padding-left: 40px; text-indent: -31px;"><span style = "color: #d94e55">1.&nbsp&nbsp</span>真值：-126</div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 40px; text-indent: -31px;"><span style = "color: #d94e55">2.&nbsp&nbsp</span>补码：10000010</div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 40px; text-indent: -31px;"><span style = "color: #d94e55">3.&nbsp&nbsp</span>移码 + 128：00000010</div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 40px; text-indent: -31px;"><span style = "color: #d94e55">4.&nbsp&nbsp</span>移码 + 127：00000001</div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 40px; text-indent: -31px;"><span style = "color: #d94e55">5.&nbsp&nbsp</span>机器数：1</div>
+                <div class = "normal" style = "margin: 10px 0px 10px 0px; padding-left: 47px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">1.</span>真值：-126</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 47px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">2.</span>补码：10000010</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 47px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">3.</span>移码 + 128：00000010</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 47px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">4.</span>移码 + 127：00000001</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 47px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">5.</span>机器数：1</div>
                 <div class = "normal">没有 -127，-128，空出 0000000 和 1111111</div>
                 <div class = "h5">规格化数</div>
                 <div class = "normal">条件：exp ≠ 000…0 且 exp ≠ 111…1</div>
                 <div class = "normal">阶码采用偏置值编码：E = Exp - Bias</div>
                 <div class = "normal">$T = (-1)^S \times 2^{Bias + E} \times M$</div>
                 <div class = "h5">非规格化数</div>
-                <div class = "normal" style = "margin: 10px 0px 10px 0px; padding-left: 40px; text-indent: -31px;"><span style = "color: #d94e55">1.&nbsp&nbsp</span>exp = 000...0，frac = 000...0：表示 0（<span class = "emphasis">注意</span>：有 +0  和 -0 之分）</div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 40px; text-indent: -31px;"><span style = "color: #d94e55">2.&nbsp&nbsp</span>exp = 000...0，frac ≠ 000...0：表示最接近 0.0 的那些数（$frac * 2^{-126}$）</div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 40px; text-indent: -31px;"><span style = "color: #d94e55">3.&nbsp&nbsp</span>exp = 111…1，frac = 000...0：表示正负无穷</div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 40px; text-indent: -31px;"><span style = "color: #d94e55">4.&nbsp&nbsp</span>exp = 111…1，frac = 000...0：表示 Not a Number (NaN)</div>
+                <div class = "normal" style = "margin: 10px 0px 10px 0px; padding-left: 47px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">1.</span>exp = 000...0，frac = 000...0：表示 0（<span class = "emphasis">注意</span>：有 +0  和 -0 之分）</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 47px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">2.</span>exp = 000...0，frac ≠ 000...0：表示最接近 0.0 的那些数（$frac * 2^{-126}$）</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 47px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">3.</span>exp = 111…1，frac = 000...0：表示正负无穷</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 47px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">4.</span>exp = 111…1，frac = 000...0：表示 Not a Number (NaN)</div>
                 <div class = "h5">默认的舍入模式</div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 40px; text-indent: -31px;"><span style = "color: #d94e55">1.&nbsp&nbsp</span>恰好在两个可能数值中间时（中间值）：舍入后，最低有效位的数码位偶数</div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 40px; text-indent: -31px;"><span style = "color: #d94e55">2.&nbsp&nbsp</span>其他的时候，像最近的数值舍入（比中间值小向下舍入，比中间值大向上舍入）</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 47px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">1.</span>恰好在两个可能数值中间时（中间值）：舍入后，最低有效位的数码位偶数</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 47px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">2.</span>其他的时候，像最近的数值舍入（比中间值小向下舍入，比中间值大向上舍入）</div>
                 <div class = "normal">举例：</div>
                 <div class = "normal">7/8：10.11<span class = "strong">110</span> → 11.0<span class = "strong">0</span> → 3</div>
                 <div class = "normal">5/8：10.10<span class = "strong">110</span> → 10.1<span class = "strong">0</span> → 2</div>
@@ -167,43 +167,43 @@ $$
                 <div class = "h3" id = "4">基础</div>
                 <div class = "h5">Intel&nbsp&nbspx86&nbsp&nbsp处理器</div>
                 <div class = "normal">复杂指令集计算机（Complex instruction set computer，CISC）</div>
-                <div class = "normal" style = "margin: 10px 0px 10px 0px; padding-left: 40px; text-indent: -31px;"><span style = "color: #d94e55">1.&nbsp&nbsp</span>指令多、指令格式多（Linux 程序设计只用到较小子集）</div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 40px; text-indent: -31px;"><span style = "color: #d94e55">2.&nbsp&nbsp</span>性能难与精简指令计算机（Reduced Instruction Set Computer，RISC）相比</div>
+                <div class = "normal" style = "margin: 10px 0px 10px 0px; padding-left: 47px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">1.</span>指令多、指令格式多（Linux 程序设计只用到较小子集）</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 47px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">2.</span>性能难与精简指令计算机（Reduced Instruction Set Computer，RISC）相比</div>
                 <div class = "h4" id = "5">CPU&nbsp&nbsp的功能结构与程序执行</div>
                 <div class = "h5">8086/8</div>
                 <div class = "normal">8086/8 内部有两个功能模块，完成一条指令的取值和执行功能</div>
-                <div class = "normal" style = "margin: 10px 0px 10px 0px; padding-left: 40px; text-indent: -31px;"><span style = "color: #d94e55">1.&nbsp&nbsp</span>模块之一：总线结构单元 BIU，主要负责读取指令和操作数</div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 40px; text-indent: -31px;"><span style = "color: #d94e55">2.&nbsp&nbsp</span>模块之二：执行单元 EU，主要负责指令译码和执行</div>
+                <div class = "normal" style = "margin: 10px 0px 10px 0px; padding-left: 47px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">1.</span>模块之一：总线结构单元 BIU，主要负责读取指令和操作数</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 47px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">2.</span>模块之二：执行单元 EU，主要负责指令译码和执行</div>
                 <div class = "h5">8086&nbsp&nbsp的寄存器组</div>
                 <div class = "normal">对于汇编语言程序来说，8086 内部结构就是可编程的寄存器组</div>
-                <div class = "normal" style = "margin: 10px 0px 10px 0px; padding-left: 40px; text-indent: -31px;"><span style = "color: #d94e55">1.&nbsp&nbsp</span>执行单元 EU 8 个通用寄存器</div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 40px; text-indent: -31px;"><span style = "color: #d94e55">2.&nbsp&nbsp</span>1 个指令指针寄存器</div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 40px; text-indent: -31px;"><span style = "color: #d94e55">3.&nbsp&nbsp</span>1 个标志寄存器</div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 40px; text-indent: -31px;"><span style = "color: #d94e55">4.&nbsp&nbsp</span>4 个段寄存器 / 64 位增加了 fs/gs 也成 16 位</div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 40px; text-indent: -31px;"><span style = "color: #d94e55">5.&nbsp&nbsp</span><span class = "emphasis">注意</span> 32 / 64 位 CPU 对通用寄存器记性了位扩展，64 位增加了 R8 - R15 共 8 个寄存器</div>
+                <div class = "normal" style = "margin: 10px 0px 10px 0px; padding-left: 47px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">1.</span>执行单元 EU 8 个通用寄存器</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 47px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">2.</span>1 个指令指针寄存器</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 47px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">3.</span>1 个标志寄存器</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 47px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">4.</span>4 个段寄存器 / 64 位增加了 fs/gs 也成 16 位</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 47px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">5.</span><span class = "emphasis">注意</span> 32 / 64 位 CPU 对通用寄存器记性了位扩展，64 位增加了 R8 - R15 共 8 个寄存器</div>
                 <div class = "h5">8086&nbsp&nbsp的通用寄存器</div>
                 <div class = "normal">8086 的 16 位通用寄存器是：</div>
-                <div class = "normal" style = "margin: 10px 0px 10px 0px; padding-left: 40px; text-indent: -31px;"><span style = "color: #d94e55">1.&nbsp&nbsp</span>AX（Accumulator Register）：累加寄存器，使用频率最高，常用于运算；在乘除等指令中用来存放操作数，另外，所有的 I/O 指令都使用这一寄存器与外界设备传送数据。</div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 40px; text-indent: -31px;"><span style = "color: #d94e55">2.&nbsp&nbsp</span>BX（Base）：基址寄存器，常用于存放村粗器地址、地址索引，数组首地址</div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 40px; text-indent: -31px;"><span style = "color: #d94e55">3.&nbsp&nbsp</span>CX（Count）：计数寄存器，常用于计数；常用于保存计算值，如在移位指令，循环（Loop）和串处理中用作隐含的计数器。</div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 40px; text-indent: -31px;"><span style = "color: #d94e55">4.&nbsp&nbsp</span>DX（Data）：数据寄存器，常用于数据传递；双字长场数据的高 16 位，或存放</div>
+                <div class = "normal" style = "margin: 10px 0px 10px 0px; padding-left: 47px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">1.</span>AX（Accumulator Register）：累加寄存器，使用频率最高，常用于运算；在乘除等指令中用来存放操作数，另外，所有的 I/O 指令都使用这一寄存器与外界设备传送数据。</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 47px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">2.</span>BX（Base）：基址寄存器，常用于存放村粗器地址、地址索引，数组首地址</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 47px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">3.</span>CX（Count）：计数寄存器，常用于计数；常用于保存计算值，如在移位指令，循环（Loop）和串处理中用作隐含的计数器。</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 47px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">4.</span>DX（Data）：数据寄存器，常用于数据传递；双字长场数据的高 16 位，或存放</div>
                 <div class = "normal">以上这 4 个寄存器，可以分为高 8 位：AH，BH，CH，DH；以及低 8 位：AL，BL，CL，DL。这 2 组 八位寄存器可以分别寻址，并单独使用。</div>
                 <div class = "normal">另一组是<span class = "strong">指针寄存器</span>和<span class = "strong">变址寄存器</span>，包括：</div>
-                <div class = "normal" style = "margin: 10px 0px 10px 0px; padding-left: 40px; text-indent: -31px;"><span style = "color: #d94e55">1.&nbsp&nbsp</span>SP（Stack Pointer）：堆栈指针，与 SS 配合使用，可指向目前的堆栈位置，不能用于其他目的，具有专用目的</div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 40px; text-indent: -31px;"><span style = "color: #d94e55">2.&nbsp&nbsp</span>BP（Base Pointer）：基址指针寄存器，可用作 SS 的一个相对基址位置</div>
+                <div class = "normal" style = "margin: 10px 0px 10px 0px; padding-left: 47px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">1.</span>SP（Stack Pointer）：堆栈指针，与 SS 配合使用，可指向目前的堆栈位置，不能用于其他目的，具有专用目的</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 47px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">2.</span>BP（Base Pointer）：基址指针寄存器，可用作 SS 的一个相对基址位置</div>
                 <div class = "normal">SP 和 BP 寄存器与 SS 段寄存器联合使用以确定堆栈段中的存储单元地址。</div>
                 <br>
-                <div class = "normal" style = "margin: 10px 0px 10px 0px; padding-left: 40px; text-indent: -31px;"><span style = "color: #d94e55">1.&nbsp&nbsp</span>SI（Source Index）：源变址寄存器，可用来存放相对于 DS 段之源变址指针</div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 40px; text-indent: -31px;"><span style = "color: #d94e55">2.&nbsp&nbsp</span>DI（Destination Index）：目的变址寄存器，可以用来存放相对于 ES 段之目的变址指针。</div>
+                <div class = "normal" style = "margin: 10px 0px 10px 0px; padding-left: 47px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">1.</span>SI（Source Index）：源变址寄存器，可用来存放相对于 DS 段之源变址指针</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 47px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">2.</span>DI（Destination Index）：目的变址寄存器，可以用来存放相对于 ES 段之目的变址指针。</div>
                 <div class = "normal">串操作类指令中，SI 和 DI 具有特别的功能。</div>
                 <div class = "h5">堆栈</div>
                 <div class = "normal">采用先进后出 FILO（First In Last Out）或者后进先出 LIFO（Last In Fist Out）的原则进行存取操作，而不是随机存取操作方式。</div>
                 <div class = "normal">堆栈通常由处理器自动维持。在 8086 中，由堆栈段寄存器 SS 和堆栈指针寄存器 SP 共同指示。SP 指向栈顶，BP 指向值参的首地址。</div>
                 <div class = "h5">指令指针&nbsp&nbspIP</div>
-                <div class = "normal" style = "margin: 10px 0px 10px 0px; padding-left: 40px; text-indent: -31px;"><span style = "color: #d94e55">1.&nbsp&nbsp</span>指令指针寄存器 IP，指示代码段中指令的偏移地址</div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 40px; text-indent: -31px;"><span style = "color: #d94e55">2.&nbsp&nbsp</span>它与代码段寄存器 CS 联用，确定下一条指令的物理地址</div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 40px; text-indent: -31px;"><span style = "color: #d94e55">3.&nbsp&nbsp</span>计算机通过 CS：IP 寄存器来控制指令序列的执行流程</div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 40px; text-indent: -31px;"><span style = "color: #d94e55">4.&nbsp&nbsp</span>IP 寄存器是一个专用寄存器</div>
+                <div class = "normal" style = "margin: 10px 0px 10px 0px; padding-left: 47px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">1.</span>指令指针寄存器 IP，指示代码段中指令的偏移地址</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 47px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">2.</span>它与代码段寄存器 CS 联用，确定下一条指令的物理地址</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 47px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">3.</span>计算机通过 CS：IP 寄存器来控制指令序列的执行流程</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 47px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">4.</span>IP 寄存器是一个专用寄存器</div>
                 <div class = "h5">标志寄存器</div>
                 <div class = "normal">标志（Flag）用于反映指令执行结果或控制指令执行形式，8086 处理器的各种标志形成了一个 16 位的标志寄存器 FLAGS（程序状态字 PSW 寄存器）</div>
                 <div class = "normal"><span class = "emphasis">程序设计需要利用标志的状态</span></div>
@@ -213,16 +213,15 @@ $$
                 <div class = "normal">控制标志：可由程序根据需要用指令设置，用于控制处理器执行指令的方式</div>
                 <div class = "normal">DF、IF、TF</div>
                 <br>
-                <div class = "normal" style = "margin: 10px 0px 10px 0px; padding-left: 40px; text-indent: -31px;"><span style = "color: #d94e55">1.&nbsp&nbsp</span>进位标志 CF（Carry Flag）：当运算结果的最高有效进位（加法）或借位（减法）时，进位标志置 1，即 CF = 1；否则 CF = 0</div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 40px; text-indent: -31px;"><span style = "color: #d94e55">2.&nbsp&nbsp</span>零标志 ZF（Zero Flag）：若运算结果为 0，则 ZF = 1，否则 ZF = 0（<span class = "emphasis">注意</span>：ZF 为 1 表示结果是 0）</div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 40px; text-indent: -31px;"><span style = "color: #d94e55">3.&nbsp&nbsp</span>符号标志 SF（Sign Flag）：运算结果最高位为 1，则 SF = 1；否则 SF = 0</div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 40px; text-indent: -31px;"><span style = "color: #d94e55">4.&nbsp&nbsp</span>奇偶标志 PF（Parity Flag）：当运算结果最低字节中「1」的个数为零或偶数时，PF = 1；否则 PF = 0（<span class = "emphasis">注意</span>：PF 标志尽反映最低 8 位中「1」的个数，即使是 16 位字操作）</div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 40px; text-indent: -31px;"><span style = "color: #d94e55">5.&nbsp&nbsp</span>溢出标志 OF（Overflow Flag）：算术运算结果有溢出则为1（<span class = "emphasis">注意</span>：溢出与进位的不同）</div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 40px; text-indent: -31px;"><span style = "color: #d94e55">6.&nbsp&nbsp</span>辅助进位标志 AF（Auxiliary Carry Flag）：运算时 $D_3$ 位（低半子节）有进位或借位时，AF = 1；否则 AF = 0。（这个标志主要由处理器内部使用，用于十进制算数运算调整指令中，用户一般不必关心）</div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 40px; text-indent: -31px;"><span style = "color: #d94e55">7.&nbsp&nbsp</span>方向标志 DF（Direction Flag）：用于串操作指令中，控制地址的变化方向。（设置 DF = 0，存储器地址自动增加；设置 DF = 1，存储器地址自动减少）CLD 指令复位方向标志：DF = 0；STD 指令置位方向标志：DF = 1；</div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 40px; text-indent: -31px;"><span style = "color: #d94e55">8.&nbsp&nbsp</span>中断允许标志 IF（Interrupt-enable Flag）：用于控制外部可屏蔽中断是否可以被处理器相应。（IF = 1，允许中断）CLI 指令复位中断标志：IF = 0；STI 指令置位中断标志：IF = 1</div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 40px; text-indent: -31px;"><span style = "color: #d94e55">9.&nbsp&nbsp</span>陷阱标志 TF（Trap Flag）：用于控制处理器进入但不操作方式（TF = 0：正常；1：单步）
-</div>
+                <div class = "normal" style = "margin: 10px 0px 10px 0px; padding-left: 47px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">1.</span>进位标志 CF（Carry Flag）：当运算结果的最高有效进位（加法）或借位（减法）时，进位标志置 1，即 CF = 1；否则 CF = 0</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 47px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">2.</span>零标志 ZF（Zero Flag）：若运算结果为 0，则 ZF = 1，否则 ZF = 0（<span class = "emphasis">注意</span>：ZF 为 1 表示结果是 0）</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 47px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">3.</span>符号标志 SF（Sign Flag）：运算结果最高位为 1，则 SF = 1；否则 SF = 0</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 47px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">4.</span>奇偶标志 PF（Parity Flag）：当运算结果最低字节中「1」的个数为零或偶数时，PF = 1；否则 PF = 0（<span class = "emphasis">注意</span>：PF 标志尽反映最低 8 位中「1」的个数，即使是 16 位字操作）</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 47px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">5.</span>溢出标志 OF（Overflow Flag）：算术运算结果有溢出则为1（<span class = "emphasis">注意</span>：溢出与进位的不同）</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 47px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">6.</span>辅助进位标志 AF（Auxiliary Carry Flag）：运算时 $D_3$ 位（低半子节）有进位或借位时，AF = 1；否则 AF = 0。（这个标志主要由处理器内部使用，用于十进制算数运算调整指令中，用户一般不必关心）</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 47px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">7.</span>方向标志 DF（Direction Flag）：用于串操作指令中，控制地址的变化方向。（设置 DF = 0，存储器地址自动增加；设置 DF = 1，存储器地址自动减少）CLD 指令复位方向标志：DF = 0；STD 指令置位方向标志：DF = 1；</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 47px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">8.</span>中断允许标志 IF（Interrupt-enable Flag）：用于控制外部可屏蔽中断是否可以被处理器相应。（IF = 1，允许中断）CLI 指令复位中断标志：IF = 0；STI 指令置位中断标志：IF = 1</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 47px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">9.</span>陷阱标志 TF（Trap Flag）：用于控制处理器进入但不操作方式（TF = 0：正常；1：单步）</div>
 
                 </div>
                 <div id = "disqus_thread"></div>  

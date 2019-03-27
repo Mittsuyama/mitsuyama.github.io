@@ -19,7 +19,7 @@
         
         <link rel = "stylesheet" href = "../highlight/styles/atom-one-dark.css">
         
-        <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous"> -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 
         <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css">
         <script src = "../highlight/highlight.pack.js"></script>
@@ -65,7 +65,7 @@
                     离散数学 2 - 关系
             </div>
             <div class = "tagContainer">
-                &nbspMathematic&nbsp&nbsp|&nbsp&nbsp&nbsp拾壹月 8，2018
+                &nbspNotes&nbsp&nbsp|&nbsp&nbsp&nbsp拾壹月 8，2018
             </div>
         </div>
         
@@ -126,11 +126,12 @@ $$
 0 & x \not \in E，即 x = X \backslash E
 \end{cases}
 $$
-                <div class = "normal">显然集合 $E​$ 的特征函数 $\chi_e​$ 由 $E​$ 唯一确定。于是 $E, F \subseteq X​$，但是 $E \neq F​$，则 $\chi_F \neq \chi_E​$。令 $Ch(X) = \{\chi | \chi: X \to \{0, 1\}\}​$，$\Phi: 2^X \to Ch(X)​$，$\forall E \in 2^X​$，$\Phi(E) = \chi_E​$，则 $\Phi​$ 是 $2^X​$ 到 $Ch(X)​$ 的一个单射，又若 $\chi \in Ch(X)​$，令：</div>
+                <div class = "normal">显然集合 $E$ 的特征函数 $\chi_e$ 由 $E$ 唯一确定。于是 $E, F \subseteq X$，但是 $E \neq F$，则 $\chi_F \neq \chi_E$。令 $Ch(X) = \{\chi | \chi: X \to \{0, 1\}\}$，$\Phi: 2^X \to Ch(X)$，$\forall E \in 2^X$，$\Phi(E) = \chi_E$，则 $\Phi$ 是 $2^X$ 到 $Ch(X)$ 的一个单射，又若 $\chi \in Ch(X)​$，令：</div>
 $$
 F = \{X | \chi(X) = 1, x \in X\}
 $$
                 <div class = "normal">则 $\chi_F = \chi$，于是，$\Phi$ 是从 $2^X$ 到 $Ch(X)$ 间的一个一一对应。</div>
+                <br>
                 <div class = "h2" id = "3">关系</div><div id = "hUnderline"></div>
                 <div class = "h4" id = "4">关系的定义</div>
                 <div class = "normal">设 $A, B$ 是两个集合，一个从 $A \times B$ 到集合 {是，否}，的映射 $R$ 称为一个从 $A$ 到 $B$ 的一个二元关系。如果 $A \times B$ 中的元 $(a, b)$ 在 $R$ 下的象为「是」，则称 $a$ 与 $b$ 复合关系 $R$，记成 $aRb$。如果 $(a, b)$ 在 $R$ 下的象为「否」，则称 $a$ 与 $b$ 不符合关系 $R$，记为 $a \not R b$。如果 $A = B$ ，则称 $R$ 为 $A$ 上的二元关系。</div>
@@ -215,13 +216,13 @@ $$
                 <div class = "h5">反对称</div>
                 <div class = "normal">集合 $X$ 上的二元关系 $R$ 称为反对称的，如果 $xRy$，且 $yRx$ 则 $x = y$。</div>
                 <div class = "normal">意思为，只要 $x \neq y$，则 $xRy$ 和 $yRx$ 就不能同时存在。</div>
-                <div class = "normal" style = "margin: 10px 0px 10px 0px; padding-left: 35px; text-indent: -9px;"><i class = "fa fa-caret-right" style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55"></i>&nbsp整数集上的「整除」关系，实数集上的「小于等于」关系，集合间的「包含」关系是反对称的。</div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 35px; text-indent: -9px;"><i class = "fa fa-caret-right" style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55"></i>&nbsp恒等关系既是对称的又是反对称的，但反之非真，集合 $X$ 上的关系 R 既是对称的又是反对称的，当且仅当 $R \subseteq I_x$.</div>
+                <div class = "normal" style = "margin: 10px 0px 10px 0px; padding-left: 43px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55">▪</span>&nbsp整数集上的「整除」关系，实数集上的「小于等于」关系，集合间的「包含」关系是反对称的。</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 43px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55">▪</span>&nbsp恒等关系既是对称的又是反对称的，但反之非真，集合 $X$ 上的关系 R 既是对称的又是反对称的，当且仅当 $R \subseteq I_x$.</div>
                 <div class = "h5">关系的传递</div>
                 <div class = "normal">如果 $xRy$，$yRz$，则 $xRz$ 则这个二元关系具有传递性</div>
-                <div class = "normal" style = "margin: 10px 0px 10px 0px; padding-left: 35px; text-indent: -9px;"><i class = "fa fa-caret-right" style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55"></i>&nbsp定义在人的集合上的「朋友」关系，「相互认识」关系均不是传递关系，集合间的包含关系是传递的</div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 35px; text-indent: -9px;"><i class = "fa fa-caret-right" style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55"></i>&nbsp$R$ 反自反且对称，$R$ 不传递除非 $R$ 是空关系</div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 51px; text-indent: -9px;"><i class = "fa fa-caret-right" style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55"></i>&nbsp证明：因为对称，$(a, b) \in R$，$(b, a) \in R$，$\Rightarrow (a, a) \in R$ ，所以自反，矛盾</div>
+                <div class = "normal" style = "margin: 10px 0px 10px 0px; padding-left: 43px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55">▪</span>&nbsp定义在人的集合上的「朋友」关系，「相互认识」关系均不是传递关系，集合间的包含关系是传递的</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 43px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55">▪</span>&nbsp$R$ 反自反且对称，$R$ 不传递除非 $R$ 是空关系</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 59px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55">▪</span>&nbsp证明：因为对称，$(a, b) \in R$，$(b, a) \in R$，$\Rightarrow (a, a) \in R$ ，所以自反，矛盾</div>
                 <div class = "h5">相容的关系</div>
                 <div class = "normal">自反又对称则为相容（比如定义在人的集合上「朋友」，「相互认识」均是相容的）</div>
                 <div class = "h5">例：&nbsp&nbsp</div>
@@ -244,8 +245,8 @@ R_1 \circ (R_2 \cup R_3) = (R_1 \circ R_2) \cup (R_1 \circ R_3) \\
 R_1 \circ (R_2 \cap R_3) = (R_1 \circ R_2) \cap (R_1 \circ R_3)
 $$
                 <div class = "normal">定理：$R, S$ 为 $X$ 上的二元关系，则：</div>
-                <div class = "normal" style = "margin: 10px 0px 10px 0px; padding-left: 35px; text-indent: -9px;"><i class = "fa fa-caret-right" style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55"></i>&nbsp$(R \circ S)^{-1} = S^{-1} \circ R^{-1}$</div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 35px; text-indent: -9px;"><i class = "fa fa-caret-right" style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55"></i>&nbsp$R \circ R^{-1}$ 是对称的</div>
+                <div class = "normal" style = "margin: 10px 0px 10px 0px; padding-left: 43px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55">▪</span>&nbsp$(R \circ S)^{-1} = S^{-1} \circ R^{-1}$</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 43px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55">▪</span>&nbsp$R \circ R^{-1}$ 是对称的</div>
                 <div class = "h5">关系传递的充分必要条件</div>
                 <div class = "normal">传递，当且仅当 $R^2 \subseteq R$</div>
                 <div class = "h5">关系的幂的定义</div>
@@ -277,13 +278,13 @@ $$
 R^+ = \bigcup_{n = 1}^{\infty}R^n
 $$
                 <div class = "normal">证明：彼此互为子集：</div>
-                <div class = "normal" style = "margin: 10px 0px 10px 0px; padding-left: 40px; text-indent: -31px;"><span style = "color: #d94e55">1.&nbsp&nbsp</span>前者是子集</div>
+                <div class = "normal" style = "margin: 10px 0px 10px 0px; padding-left: 47px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">1.</span>前者是子集</div>
                 <div class = "normal"><span class = "emphasis">思考</span>：</div>
 $$
 R^+ = \bigcup_{n = 1}^{\infty }R^n \cap R' \Rightarrow R^+ \subseteq \bigcup_{n = 1}^{\infty }R^n （只需证明，后者具有传递性即可）
 $$
                 <div class = "normal">概要：$(x, y) \in R^{n_0}$，$(y, z) \in R_{n_1}$，则 $(x, z) \in R^{n_0 +n_1}$</div>
-                <div class = "normal" style = "margin: 10px 0px 10px 0px; padding-left: 40px; text-indent: -31px;"><span style = "color: #d94e55">2.&nbsp&nbsp</span>后者是子集</div>
+                <div class = "normal" style = "margin: 10px 0px 10px 0px; padding-left: 47px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">2.</span>后者是子集</div>
                 <div class = "normal">概要：$(x, y) \in R^n$，$(x, x_1), (x_1, x_2) \ldots (x_n - 1, y) \in R$，$R \subseteq R^+$，$R^+$ 具有传递性可证。</div>
                 <div class = "h5">定理</div>
                 <div class = "normal">关系 R，则 $R^+ = R \cup R^2 \cup \ldots \cup R^n$，此时 $n$  是有限的</div>
@@ -301,10 +302,10 @@ s.t. \quad x_i = x_j\\
 使得 (x, y) \in R^{n + k -  1 - j - i} \subseteq R^1 \cup R^2 \ldots R^n
 $$
                 <div class = "h5">定理</div>
-                <div class = "normal" style = "margin: 10px 0px 10px 0px; padding-left: 35px; text-indent: -9px;"><i class = "fa fa-caret-right" style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55"></i>&nbsp$\phi^+ = \phi$</div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 35px; text-indent: -9px;"><i class = "fa fa-caret-right" style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55"></i>&nbsp$R \subseteq R^+$</div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 35px; text-indent: -9px;"><i class = "fa fa-caret-right" style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55"></i>&nbsp$(R^+)^+ = R^+$</div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 35px; text-indent: -9px;"><i class = "fa fa-caret-right" style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55"></i>&nbsp$(R \cup S)^+ = R^+ \cup S^+$</div>
+                <div class = "normal" style = "margin: 10px 0px 10px 0px; padding-left: 43px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55">▪</span>&nbsp$\phi^+ = \phi$</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 43px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55">▪</span>&nbsp$R \subseteq R^+$</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 43px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55">▪</span>&nbsp$(R^+)^+ = R^+$</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 43px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55">▪</span>&nbsp$(R \cup S)^+ = R^+ \cup S^+$</div>
                 <div class = "normal">自反传递闭包定义，类似于传递闭包。</div>
                 <div class = "h5">定理</div>
                 <div class = "normal">$R$ 二元关系，则：</div>
@@ -328,12 +329,12 @@ b_{ij} =
 $$
                 <div class = "normal">为关系矩阵。</div>
                 <div class = "h5">定理：</div>
-                <div class = "normal" style = "margin: 10px 0px 10px 0px; padding-left: 35px; text-indent: -9px;"><i class = "fa fa-caret-right" style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55"></i>&nbsp自反，则对角线为 $1$</div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 35px; text-indent: -9px;"><i class = "fa fa-caret-right" style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55"></i>&nbsp反自反，对角线为 $0$</div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 35px; text-indent: -9px;"><i class = "fa fa-caret-right" style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55"></i>&nbsp对称，矩阵对称</div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 35px; text-indent: -9px;"><i class = "fa fa-caret-right" style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55"></i>&nbsp反对称，如果 $i \neq j$，则 $b_{ij} = b_{ji}$ 不能同时为 $1$</div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 35px; text-indent: -9px;"><i class = "fa fa-caret-right" style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55"></i>&nbsp传递，则 $b_{ij} = 1, b_{j, k} = 1$，则 $b_{i, k} = 1$</div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 35px; text-indent: -9px;"><i class = "fa fa-caret-right" style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55"></i>&nbsp$R^{-1}$ 的矩阵为 $B^T$</div>
+                <div class = "normal" style = "margin: 10px 0px 10px 0px; padding-left: 43px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55">▪</span>&nbsp自反，则对角线为 $1$</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 43px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55">▪</span>&nbsp反自反，对角线为 $0$</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 43px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55">▪</span>&nbsp对称，矩阵对称</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 43px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55">▪</span>&nbsp反对称，如果 $i \neq j$，则 $b_{ij} = b_{ji}$ 不能同时为 $1$</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 43px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55">▪</span>&nbsp传递，则 $b_{ij} = 1, b_{j, k} = 1$，则 $b_{i, k} = 1$</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 43px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55">▪</span>&nbsp$R^{-1}$ 的矩阵为 $B^T$</div>
                 <div class = "normal">关系矩阵是一个布尔矩阵，定义两个矩阵的逻辑，$B \lor C = b_{ij} \lor c_{ij}$，逻辑且 $\land$ 同样如此定义。</div>
                 <br>
                 <div class = "normal">定义一种布尔乘法运算 $\circ$：</div>
@@ -342,9 +343,9 @@ B \circ C = D \\
 d_{ij} = \bigvee_{k = 1}^{p}(b_{ik} \land c_{kj})
 $$
                 <div class = "h5">定理：</div>
-                <div class = "normal" style = "margin: 10px 0px 10px 0px; padding-left: 35px; text-indent: -9px;"><i class = "fa fa-caret-right" style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55"></i>&nbsp逻辑或和且满足交换律</div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 35px; text-indent: -9px;"><i class = "fa fa-caret-right" style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55"></i>&nbsp逻辑或、且，布尔乘法都满足结合律</div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 35px; text-indent: -9px;"><i class = "fa fa-caret-right" style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55"></i>&nbsp布尔乘法对于逻辑或（且）满足分配率</div>
+                <div class = "normal" style = "margin: 10px 0px 10px 0px; padding-left: 43px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55">▪</span>&nbsp逻辑或和且满足交换律</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 43px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55">▪</span>&nbsp逻辑或、且，布尔乘法都满足结合律</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 43px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55">▪</span>&nbsp布尔乘法对于逻辑或（且）满足分配率</div>
                 <div class = "h5">定理</div>
                 <div class = "normal">设 $R, S$ 是 $X$ 到 $Y$ 的二元关系，其矩阵 $B_R$ 和 $B_S$，$R \cup S$ 与 $R \cap S$ 的矩阵分别为 $B_{R \cup S}$，$B_{R \cap S}$，则：</div>
 $$
@@ -355,9 +356,9 @@ $$
                 <div class = "normal">$(x ,y) \in R$ 表示为 $x \to y$ 的一条有向线段。</div>
                 <div class = "h3" id = "14">等价关系与集合的划分</div>
                 <div class = "normal">$R$ 为等价关系 $\iff$</div>
-                <div class = "normal" style = "margin: 10px 0px 10px 0px; padding-left: 35px; text-indent: -9px;"><i class = "fa fa-caret-right" style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55"></i>&nbsp自反性</div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 35px; text-indent: -9px;"><i class = "fa fa-caret-right" style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55"></i>&nbsp对称性</div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 35px; text-indent: -9px;"><i class = "fa fa-caret-right" style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55"></i>&nbsp传递性</div>
+                <div class = "normal" style = "margin: 10px 0px 10px 0px; padding-left: 43px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55">▪</span>&nbsp自反性</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 43px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55">▪</span>&nbsp对称性</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 43px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55">▪</span>&nbsp传递性</div>
                 <div class = "normal">通常用 $\cong$ 表示全等关系</div>
                 <div class = "h5">例&nbsp&nbsp1：</div>
                 <div class = "normal">集合 $X$ 上的恒等关系（$I_x$）是等价关系</div>
@@ -374,10 +375,10 @@ $$
                 <div class = "h5">等价类的定义</div>
                 <div class = "normal">设 $\cong$ 是集合 $X$ 上的一个等价关系，$x \in X$，$X$ 的子集 $E_x = \{y | y \in X, y \cong x\}$ 称为 $x$ 关于 $\cong$ 所在的等价类。记为 $[x]$，即 $[x] = \{y | y \in x , y \cong x\}$</div>
                 <div class = "h5">命题</div>
-                <div class = "normal">$x' \in [x] \iff [x'] = [x]$</div>
+                <div class = "normal">$x' \in [x] \iff [x'] = [x]​$</div>
                 <div class = "normal"><span class = "emphasis">定义</span>：设 $X$ 是非空集合，$X$ 的一些非空子集构成的集族  $\mathscr{A}$ 称为 $X$ 的一个划分，如果 $\mathscr{A}$ 具有如下性质：</div>
-                <div class = "normal" style = "margin: 10px 0px 10px 0px; padding-left: 35px; text-indent: -9px;"><i class = "fa fa-caret-right" style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55"></i>&nbsp对 $\forall A, B \in \mathscr{A}$，若 $A = B$，则 $A \cap B = \phi$</div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 35px; text-indent: -9px;"><i class = "fa fa-caret-right" style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55"></i>&nbsp$\bigcup_{A \in \mathscr{A}} A = X$</div>
+                <div class = "normal" style = "margin: 10px 0px 10px 0px; padding-left: 43px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55">▪</span>&nbsp对 $\forall A, B \in \mathscr{A}$，若 $A = B$，则 $A \cap B = \phi$</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 43px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55">▪</span>&nbsp$\bigcup_{A \in \mathscr{A}} A = X$</div>
                 <div class = "h5">例如：</div>
                 <div class = "normal">模 $2$ 同余的等价关系，$\mathscr{A} = \{[1], [8]\}$ 就是 $Z$ 的划分。</div>
                 <div class = "h5">定理</div>

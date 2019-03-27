@@ -114,20 +114,20 @@ class makeHTML:
         else:
             listMargin = '10'
         if mLen > spaceLen + 2 and myStr[spaceLen : spaceLen + 2] == '- ':
-            newS += '''<div class = "normal" style = "margin: %spx 0px 10px 0px; padding-left: %spx; text-indent: -9px;">''' % (listMargin, str(spaceLen * 8 + 35))
+            newS += '''<div class = "normal" style = "margin: %spx 0px 10px 0px; padding-left: %spx; text-indent: -22px;">''' % (listMargin, str(spaceLen * 8 + 43))
             self.isEnterList = 1
             i = spaceLen + 2
-            newS += '''<i class = "fa fa-caret-right" style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55"></i>&nbsp'''
+            newS += '''<span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55">▪</span>&nbsp'''
         elif mLen > spaceLen + 3 and myStr[spaceLen + 1 : spaceLen + 3] == '. ':
-            newS += '''<div class = "normal" style = "margin: %spx 0px 10px 0px; padding-left: %spx; text-indent: -31px;">''' % (listMargin, str(spaceLen * 8 + 40))
+            newS += '''<div class = "normal" style = "margin: %spx 0px 10px 0px; padding-left: %spx; text-indent: -25px;">''' % (listMargin, str(spaceLen * 8 + 47))
             self.isEnterList = 1
             i = spaceLen + 3
-            newS += '''<span style = "color: #d94e55">%s.&nbsp&nbsp</span>''' % (myStr[spaceLen])
+            newS += '''<span class = "myList" style = "color: #d94e55">%s.</span>''' % (myStr[spaceLen])
         elif mLen > spaceLen + 4 and myStr[spaceLen + 2 : spaceLen + 4] == '. ':
-            newS += '''<div class = "normal" style = "margin: %spx 0px 10px 0px; padding-left: %spx; text-indent:-31px;">''' % (listMargin, str(spaceLen * 8 + 40))
+            newS += '''<div class = "normal" style = "margin: %spx 0px 10px 0px; padding-left: %spx; text-indent:-25px;">''' % (listMargin, str(spaceLen * 8 + 47))
             self.isEnterList = 1
             i = spaceLen + 4
-            newS += '''<span style = "color: #d94e55">%s.&nbsp&nbsp</span>''' % (myStr[spaceLen : spaceLen + 2])
+            newS += '''<span class = "myList" style = "color: #d94e55">%s.</span>''' % (myStr[spaceLen : spaceLen + 2])
         else:
             newS += '''<div class = "normal">'''
             self.isEnterList = 0
