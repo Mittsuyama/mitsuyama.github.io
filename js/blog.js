@@ -45,7 +45,7 @@ if($(window).width() >= 800) {
         shareBoxShow = 0;
         $('body').css("zoom", screenWidthRate);
         if($(window).scrollTop() > minScrollTop) {
-            $('.funButtonBox').show();
+            // $('.funButtonBox').show();
             $('.contentListOut').show();
         }
 
@@ -146,11 +146,11 @@ if($(window).width() >= 800) {
                     }, 0);
                     */
                     $('.contentListOut').show();
-                    $('.funButtonBox').show();
+                    // $('.funButtonBox').show();
                 }
                 else {
                     $('.contentListOut').hide();
-                    $('.funButtonBox').hide();
+                    // $('.funButtonBox').hide();
                     //$(".nevigation").slideDown(400);
                 }
             });

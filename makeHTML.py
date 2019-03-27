@@ -119,12 +119,12 @@ class makeHTML:
             i = spaceLen + 2
             newS += '''<i class = "fa fa-caret-right" style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55"></i>&nbsp'''
         elif mLen > spaceLen + 3 and myStr[spaceLen + 1 : spaceLen + 3] == '. ':
-            newS += '''<div class = "normal" style = "margin: %spx 0px 10px 0px; padding-left: %spx; text-indent: -24px;">''' % (listMargin, str(spaceLen * 8 + 40))
+            newS += '''<div class = "normal" style = "margin: %spx 0px 10px 0px; padding-left: %spx; text-indent: -31px;">''' % (listMargin, str(spaceLen * 8 + 40))
             self.isEnterList = 1
             i = spaceLen + 3
             newS += '''<span style = "color: #d94e55">%s.&nbsp&nbsp</span>''' % (myStr[spaceLen])
         elif mLen > spaceLen + 4 and myStr[spaceLen + 2 : spaceLen + 4] == '. ':
-            newS += '''<div class = "normal" style = "margin: %spx 0px 10px 0px; padding-left: %spx; text-indent:-24px;">''' % (listMargin, str(spaceLen * 8 + 40))
+            newS += '''<div class = "normal" style = "margin: %spx 0px 10px 0px; padding-left: %spx; text-indent:-31px;">''' % (listMargin, str(spaceLen * 8 + 40))
             self.isEnterList = 1
             i = spaceLen + 4
             newS += '''<span style = "color: #d94e55">%s.&nbsp&nbsp</span>''' % (myStr[spaceLen : spaceLen + 2])
