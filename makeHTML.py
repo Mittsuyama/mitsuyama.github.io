@@ -299,7 +299,7 @@ class makeHTML:
                 blogContent += '''                <div class = "h5">''' + line[6 : -1].replace(' ', '&nbsp&nbsp') + '''</div>''' + '\n'
             elif lLen > 4 and line[:4] == '####':
                 tempOrder += 1
-                blogContent += '''                <div class = "h4" id = "%s">''' % (tempOrder) + line[5 : -1].replace(' ', '&nbsp&nbsp') + '''<div class = "h4Underline"></div></div>''' + '\n'
+                blogContent += '''                <div class = "h4" id = "%s"><div class = "h4Underline"></div>''' % (tempOrder) + line[5 : -1].replace(' ', '&nbsp&nbsp') + '''</div>''' + '\n'
             elif lLen > 3 and line[:3] == '###':
                 tempOrder += 1
                 blogContent += '''                <div class = "h3" id = "%s">''' % (tempOrder) + line[4 : -1].replace(' ', '&nbsp&nbsp') + '''</div>''' + '\n'

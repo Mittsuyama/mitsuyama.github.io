@@ -11,7 +11,7 @@
         <link rel = "stylesheet" href = "../css/home.css">
         <link rel = "stylesheet" href = "../css/blog.css">
         <link rel = "stylesheet" href = "../css/index.css">
-        <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+        <!-- <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css"> -->
 
         <link rel = "icon" href = "../img/icon/favicon.ico" mce_href = "../img/icon/favicon.ico" type = "image/x-icon">
         <link rel = "shortcut icon" href = "../img/icon/favicon.ico" mce_href = "../img/icon/favicon.ico" type = "image/x-icon">
@@ -199,7 +199,7 @@ $$
                 <div class = "normal">定义「+」：$[i] = [j] = [i + j]$</div>
                 <div class = "normal">则 $(Z_n, +)$ 是个半群</div>
                 <div class = "h2" id = "4">幺半群</div><div id = "hUnderline"></div>
-                <div class = "h4" id = "5">幺半群的定义：<div class = "h4Underline"></div></div>
+                <div class = "h4" id = "5"><div class = "h4Underline"></div>幺半群的定义：</div>
                 <div class = "normal">一个半群有单位元 $e$，称 $(S, \circ e)$ 为幺半群，如果 $S$ 是有限集合，则称为有限幺半群，$S$ 的基数称为幺半群的阶，阶 $o(S) = |S|$.</div>
                 <div class = "h5">例题：</div>
                 <div class = "normal">设 $S$ 是一个非空集合，则 $(2^S, \cup, \phi)$ 和 $(2^S, \cap, S)$ 都是幺半群。</div>
@@ -226,7 +226,7 @@ $$
                 <div class = "normal">定理：$a^m \circ a^n = a^{m +n}$，$(a^m)^n = a^{mn}$</div>
                 <div class = "h5">&nbsp&nbsp逆元素定义：</div>
                 <div class = "normal">在幺半群中，对于 $a$，有 $b$ 使得 $b \circ a = e$，我们称 $b$ 为左逆元，同理定义右逆元，若 $\exists b$ 使得 $a \circ b = b \circ a = e$，称 $a$ 有逆元素，$b$ 为 $a$ 的逆元。</div>
-                <div class = "h4" id = "6">群的定义：<div class = "h4Underline"></div></div>
+                <div class = "h4" id = "6"><div class = "h4Underline"></div>群的定义：</div>
                 <div class = "normal">每个元素都有逆元素的幺半群，称为群。</div>
                 <div class = "normal">所以，群要满足以下要求：</div>
                 <div class = "normal" style = "margin: 10px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">1.</span>运算封闭（代数系统）</div>
@@ -279,10 +279,10 @@ $$
                 <div class = "normal">设序列为为 $b^{3^0}, b^{3^1}, b^{3^2}, \ldots, b^{3^n}$，同上方法即可证明，无需判断是否有 $m + 1 = n$。</div>
                 <div class = "normal">此定理可得：一个有限代数系不存在 $a$，使得$a \circ a = a$，那一定不是有限半群。</div>
                 <div class = "h2" id = "7">子半群和子幺半群</div><div id = "hUnderline"></div>
-                <div class = "h4" id = "8">子半群定义：<div class = "h4Underline"></div></div>
+                <div class = "h4" id = "8"><div class = "h4Underline"></div>子半群定义：</div>
                 <div class = "normal">设 $(S, \circ)$ 是一个半群，$B$ 是一个非空子集，对于 $\forall a, b \in B$，都有 $a \circ b \in B$，$(B, \circ)$ 是 $(S, \circ)$ 的子半群。（即子半群同样满足运算封闭。）</div>
                 <div class = "normal"><span class = "emphasis">注意</span>：子半群的乘法定义必须与原半群相同。</div>
-                <div class = "h4" id = "9">子幺半群定义：<div class = "h4Underline"></div></div>
+                <div class = "h4" id = "9"><div class = "h4Underline"></div>子幺半群定义：</div>
                 <div class = "normal">同理于子半群的定义，$P$ 是非空子集，且幺元 $e \in P$，$P$ 满足运算封闭，那么 $P$ 是子幺半群。</div>
                 <div class = "h5">例：</div>
                 <div class = "normal">$(Z, \cdot)$，$\cdot$ 是通常定义的乘法。</div>
@@ -301,7 +301,7 @@ $$
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">2.</span> 显然有幺元</div>
                 <div class = "h5">定理：</div>
                 <div class = "normal">$A$ 是半群 $S$ 的非空子集，则 $S$ 的一切包含 $A$ （避免交集为空）的子半群的交集 $Q$ 也是子半群，由 $A$ 生成（张成）的子半群，记为 $(A)$。子幺半群 $(A)$ 同理。</div>
-                <div class = "h4" id = "10">定义：<div class = "h4Underline"></div></div>
+                <div class = "h4" id = "10"><div class = "h4Underline"></div>定义：</div>
                 <div class = "normal">（幺）半群为循环（幺）半群，如果是由某个元素生成的，记为 $(a)$.</div>
                 <div class = "normal">$(a) = \{a^n | n \ge 1\}$.</div>
                 <div class = "h5">定理：</div>
@@ -310,7 +310,7 @@ $$
 x \circ y = a^m \circ a^n = a^{m + n} = a^{n + m} = a^n \circ a^m = y \circ x
 $$
                 <div class = "h2" id = "11">半群关系</div><div id = "hUnderline"></div>
-                <div class = "h4" id = "12">1.&nbsp&nbsp同构的的定义：<div class = "h4Underline"></div></div>
+                <div class = "h4" id = "12"><div class = "h4Underline"></div>1.&nbsp&nbsp同构的的定义：</div>
                 <div class = "normal">定义：$(S, \circ)$, $(T, *)$ 是个半群，若 $\exists \phi: S \to T$，是双射，使得 $\forall a, b \in S$ 有：</div>
 $$
 \varphi(a \circ b) = \varphi(a) * \varphi(b)
@@ -319,7 +319,7 @@ $$
                 <div class = "normal">同理定义：外加条件 $\varphi(e) = e'$，为同构幺半群。</div>
                 <div class = "h5">Cayley&nbsp&nbsp定理：</div>
                 <div class = "normal">任何幺半群 $(M, \circ, e)​$ 同构与变换幺半群 $(L(M), \circ, I_m)​$.</div>
-                <div class = "h4" id = "13">同态的定义：<div class = "h4Underline"></div></div>
+                <div class = "h4" id = "13"><div class = "h4Underline"></div>同态的定义：</div>
                 <div class = "normal"> 设 $(S, \circ)$ 和 $(T, *)$ 是半群，如果存在 $\varphi: S \to T$，使得 $\forall x, y \in S$ 有：</div>
 $$
 \varphi(x \circ y) = \varphi(x) *\varphi(y)
@@ -329,8 +329,8 @@ $$
                 <div class = "normal">与半群同构的群为半群。</div>
 
                 </div>
-                <!-- <div id = "disqus_thread"></div>   -->
-                <div id = "container"></div>
+                <div id = "disqus_thread"></div>  
+                <!-- <div id = "container"></div>
                 <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
                 <script>
                 var gitment = new Gitment({
@@ -343,7 +343,7 @@ $$
                 },
                 })
                 gitment.render('container')
-                </script>
+                </script> -->
             </div>
 
             <div id = "foot">
@@ -384,7 +384,7 @@ $$
                     <div class = "hit-brief">{{{_highlightResult.brief.value}}}</div>
                 </div>
             </div>
-        </script>        
+        </script>
         
         <script>
 
@@ -420,9 +420,5 @@ $$
                 }
             });
         </script>
-
-        <div style = "position: relative; width: 100%; height: 700px">
-            <img style = "width: 100%; height: 100%; object-fit: cover;" src = "图片地址">
-        </div>
     </body>
 </html>

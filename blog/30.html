@@ -11,7 +11,7 @@
         <link rel = "stylesheet" href = "../css/home.css">
         <link rel = "stylesheet" href = "../css/blog.css">
         <link rel = "stylesheet" href = "../css/index.css">
-        <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+        <!-- <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css"> -->
 
         <link rel = "icon" href = "../img/icon/favicon.ico" mce_href = "../img/icon/favicon.ico" type = "image/x-icon">
         <link rel = "shortcut icon" href = "../img/icon/favicon.ico" mce_href = "../img/icon/favicon.ico" type = "image/x-icon">
@@ -131,7 +131,7 @@
                 <div class = "normal">需要考虑的问题：编码的长度、数的符号、数的运算</div>
                 <br>
                 <div class = "normal">一般数据类型和运算（略）</div>
-                <div class = "h4" id = "2">浮点数的表示<div class = "h4Underline"></div></div>
+                <div class = "h4" id = "2"><div class = "h4Underline"></div>浮点数的表示</div>
                 <div class = "normal">表示有理数的形式：</div>
 $$
 (-1)^S \; 2^E \; M 
@@ -178,7 +178,7 @@ $$
                 <div class = "normal">复杂指令集计算机（Complex instruction set computer，CISC）</div>
                 <div class = "normal" style = "margin: 10px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">1.</span>指令多、指令格式多（Linux 程序设计只用到较小子集）</div>
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">2.</span>性能难与精简指令计算机（Reduced Instruction Set Computer，RISC）相比</div>
-                <div class = "h4" id = "5">CPU&nbsp&nbsp的功能结构与程序执行<div class = "h4Underline"></div></div>
+                <div class = "h4" id = "5"><div class = "h4Underline"></div>CPU&nbsp&nbsp的功能结构与程序执行</div>
                 <div class = "h5">8086/8</div>
                 <div class = "normal">8086/8 内部有两个功能模块，完成一条指令的取值和执行功能</div>
                 <div class = "normal" style = "margin: 10px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">1.</span>模块之一：总线结构单元 BIU，主要负责读取指令和操作数</div>
@@ -234,8 +234,8 @@ $$
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">9.</span>陷阱标志 TF（Trap Flag）：用于控制处理器进入但不操作方式（TF = 0：正常；1：单步）</div>
 
                 </div>
-                <!-- <div id = "disqus_thread"></div>   -->
-                <div id = "container"></div>
+                <div id = "disqus_thread"></div>  
+                <!-- <div id = "container"></div>
                 <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
                 <script>
                 var gitment = new Gitment({
@@ -248,7 +248,7 @@ $$
                 },
                 })
                 gitment.render('container')
-                </script>
+                </script> -->
             </div>
 
             <div id = "foot">
@@ -289,7 +289,7 @@ $$
                     <div class = "hit-brief">{{{_highlightResult.brief.value}}}</div>
                 </div>
             </div>
-        </script>        
+        </script>
         
         <script>
 
@@ -325,9 +325,5 @@ $$
                 }
             });
         </script>
-
-        <div style = "position: relative; width: 100%; height: 700px">
-            <img style = "width: 100%; height: 100%; object-fit: cover;" src = "图片地址">
-        </div>
     </body>
 </html>

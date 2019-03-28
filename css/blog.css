@@ -187,10 +187,6 @@ div.articleBorder {
     font-family: sans-serif;
 }
 
-div.articleBorder div {
-    position: relative;
-}
-
 div.h2 {
     font-size: 36px;
     color: #555;
@@ -220,6 +216,7 @@ div.h3 {
 }
 
 div.h4 {
+    position: relative;
     font-size: 30px;
     margin-top: 30px;
     margin-bottom: 20px;
@@ -234,7 +231,7 @@ div.h4 {
     position: absolute;
     width: 100%;
     height: 13px;
-    bottom: 10px;
+    bottom: -3px;
     background: #2ecc71;
     opacity: 0.4;
 }
