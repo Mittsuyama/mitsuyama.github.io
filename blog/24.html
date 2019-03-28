@@ -11,6 +11,7 @@
         <link rel = "stylesheet" href = "../css/home.css">
         <link rel = "stylesheet" href = "../css/blog.css">
         <link rel = "stylesheet" href = "../css/index.css">
+        <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
 
         <link rel = "icon" href = "../img/icon/favicon.ico" mce_href = "../img/icon/favicon.ico" type = "image/x-icon">
         <link rel = "shortcut icon" href = "../img/icon/favicon.ico" mce_href = "../img/icon/favicon.ico" type = "image/x-icon">
@@ -24,6 +25,14 @@
         <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css">
         <script src = "../highlight/highlight.pack.js"></script>
         <script>hljs.initHighlightingOnLoad();</script>
+
+        <!-- <script type="text/javascript" src="http://cdn.webfont.youziku.com/wwwroot/js/wf/youziku.api.min.js"></script>
+        <script type="text/javascript">
+            $youziku.load("body", "df2ce07dd7614d349931ab631ba1402e", "Source-Han-Light");
+            $youziku.load(".normal", "df2ce07dd7614d349931ab631ba1402e", "Source-Han-Light");
+            /*．．．*/
+            $youziku.draw();
+        </script> -->
 
         <title>MITSUYAMA | 静态网页小功能</title>
     </head>
@@ -113,9 +122,9 @@
 $$
 ^{（图一）}
 $$
-                <div class = "normal" style = "margin: 10px 0px 10px 0px; padding-left: 47px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">1.</span>Application ID，新建 Apps 时会随机给一个（新建的时候需要你选择一个 main region，中国选择香港即可，延迟比较低）</div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 47px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">2.</span>Apps 中一个 Index 的名字，这个 Index 也是你自己建立的</div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 47px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">3.</span>你上传的内容，上传以 object 为一个单位，每个 object 中都有你设定的键值对，启用搜索时，通过键值对来获得你需要的搜索结果。</div>
+                <div class = "normal" style = "margin: 10px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">1.</span>Application ID，新建 Apps 时会随机给一个（新建的时候需要你选择一个 main region，中国选择香港即可，延迟比较低）</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">2.</span>Apps 中一个 Index 的名字，这个 Index 也是你自己建立的</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">3.</span>你上传的内容，上传以 object 为一个单位，每个 object 中都有你设定的键值对，启用搜索时，通过键值对来获得你需要的搜索结果。</div>
                 <div class = "h4" id = "3">上传你的数据<div class = "h4Underline"></div></div>
                 <div class = "normal">我使用的 Python 来上传的数据（还可以手动添加数据，或者手动上传 json 文件添加数据）。</div>
                 <a href = "https://www.algolia.com/doc/api-reference/" class = "conncetion"><i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp&nbsp&nbsp你可以选择其他的语言来上传</a>
@@ -131,9 +140,9 @@ client = algoliasearch.Client("Application ID", 'Admin API Key')
 index = client.init_index('index_name')
                 </code></pre>
                 <div class = "normal">Dashboard 中点击 API keys 就能获得上面需要的信息。</div>
-                <div class = "normal" style = "margin: 10px 0px 10px 0px; padding-left: 47px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">1.</span>Application ID：每一个 Apps 的认证编码，This is your unique application identifier. It's used to identify you when using Algolia's API</div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 47px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">2.</span>Admin API Key：管理数据的秘钥，与 Search-Only API Key 不同，Search-Only 只能查询不能修改。</div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 47px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">3.</span>index_name：图一中的编号 2，就是 index_name。</div>
+                <div class = "normal" style = "margin: 10px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">1.</span>Application ID：每一个 Apps 的认证编码，This is your unique application identifier. It's used to identify you when using Algolia's API</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">2.</span>Admin API Key：管理数据的秘钥，与 Search-Only API Key 不同，Search-Only 只能查询不能修改。</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">3.</span>index_name：图一中的编号 2，就是 index_name。</div>
                 <div class = "h5">正式上传数据</div>
                 <a href = "https://www.algolia.com/doc/api-client/indexing/" class = "conncetion"><i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp&nbsp&nbsp上传数据的官方文档</a>
                 <div class = "normal">常用的 API 一共有三种，Add（增加），Delete（删除），Update（更新），由于 objectID 的存在，其实用不上 Update，接下来会解释。</div>
@@ -149,7 +158,21 @@ index.add_object({
                 <div class = "normal">在自己设定了 objectID 的情况下，如果 add 一个 object 而 objectID 之前添加过，就会进行更新操作（Update）而不是添加一个新的。</div>
 
                 </div>
-                <div id = "disqus_thread"></div>  
+                <!-- <div id = "disqus_thread"></div>   -->
+                <div id = "container"></div>
+                <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+                <script>
+                var gitment = new Gitment({
+                // id: '页面 ID', // 可选。默认为 location.href
+                owner: 'Mitsuyama',
+                repo: 'git@github.com:Mittsuyama/mittsuyama.github.io.git',
+                oauth: {
+                    client_id: '62e2f7957fce993ba7d6',
+                    client_secret: 'adc6550219b7d1f1afdf9679e6dce6e599e7bba0',
+                },
+                })
+                gitment.render('container')
+                </script>
             </div>
 
             <div id = "foot">
@@ -226,5 +249,9 @@ index.add_object({
                 }
             });
         </script>
+
+        <div style = "position: relative; width: 100%; height: 700px">
+            <img style = "width: 100%; height: 100%; object-fit: cover;" src = "图片地址">
+        </div>
     </body>
 </html>

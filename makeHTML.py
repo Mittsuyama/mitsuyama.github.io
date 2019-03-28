@@ -114,17 +114,17 @@ class makeHTML:
         else:
             listMargin = '10'
         if mLen > spaceLen + 2 and myStr[spaceLen : spaceLen + 2] == '- ':
-            newS += '''<div class = "normal" style = "margin: %spx 0px 10px 0px; padding-left: %spx; text-indent: -22px;">''' % (listMargin, str(spaceLen * 15 + 43))
+            newS += '''<div class = "normal" style = "margin: %spx 0px 10px 0px; padding-left: %spx; text-indent: -22px;">''' % (listMargin, str(spaceLen * 15 + 23))
             self.isEnterList = 1
             i = spaceLen + 2
             newS += '''<span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55">▪</span>&nbsp'''
         elif mLen > spaceLen + 3 and myStr[spaceLen + 1 : spaceLen + 3] == '. ':
-            newS += '''<div class = "normal" style = "margin: %spx 0px 10px 0px; padding-left: %spx; text-indent: -25px;">''' % (listMargin, str(spaceLen * 15 + 47))
+            newS += '''<div class = "normal" style = "margin: %spx 0px 10px 0px; padding-left: %spx; text-indent: -25px;">''' % (listMargin, str(spaceLen * 15 + 26))
             self.isEnterList = 1
             i = spaceLen + 3
             newS += '''<span class = "myList" style = "color: #d94e55">%s.</span>''' % (myStr[spaceLen])
         elif mLen > spaceLen + 4 and myStr[spaceLen + 2 : spaceLen + 4] == '. ':
-            newS += '''<div class = "normal" style = "margin: %spx 0px 10px 0px; padding-left: %spx; text-indent:-25px;">''' % (listMargin, str(spaceLen * 15 + 47))
+            newS += '''<div class = "normal" style = "margin: %spx 0px 10px 0px; padding-left: %spx; text-indent:-25px;">''' % (listMargin, str(spaceLen * 15 + 26))
             self.isEnterList = 1
             i = spaceLen + 4
             newS += '''<span class = "myList" style = "color: #d94e55">%s.</span>''' % (myStr[spaceLen : spaceLen + 2])

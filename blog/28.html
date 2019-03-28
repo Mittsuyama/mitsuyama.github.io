@@ -11,6 +11,7 @@
         <link rel = "stylesheet" href = "../css/home.css">
         <link rel = "stylesheet" href = "../css/blog.css">
         <link rel = "stylesheet" href = "../css/index.css">
+        <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
 
         <link rel = "icon" href = "../img/icon/favicon.ico" mce_href = "../img/icon/favicon.ico" type = "image/x-icon">
         <link rel = "shortcut icon" href = "../img/icon/favicon.ico" mce_href = "../img/icon/favicon.ico" type = "image/x-icon">
@@ -24,6 +25,14 @@
         <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css">
         <script src = "../highlight/highlight.pack.js"></script>
         <script>hljs.initHighlightingOnLoad();</script>
+
+        <!-- <script type="text/javascript" src="http://cdn.webfont.youziku.com/wwwroot/js/wf/youziku.api.min.js"></script>
+        <script type="text/javascript">
+            $youziku.load("body", "df2ce07dd7614d349931ab631ba1402e", "Source-Han-Light");
+            $youziku.load(".normal", "df2ce07dd7614d349931ab631ba1402e", "Source-Han-Light");
+            /*．．．*/
+            $youziku.draw();
+        </script> -->
 
         <title>MITSUYAMA | 离散数学 5 - 图论</title>
     </head>
@@ -112,31 +121,31 @@
                 <div class = "h4" id = "2">无向图<div class = "h4Underline"></div></div>
                 <div class = "normal">$E \subseteq P_2(V)$，二元组 $(V, E)$ 就被称为一个无向图。$V$ 是顶点集，$E$ 为边集，如果 $\{u, v\} \in E$ 则称 $u$ 与 $v$ 相邻接。</div>
                 <div class = "h5">其他定义</div>
-                <div class = "normal" style = "margin: 10px 0px 10px 0px; padding-left: 47px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">1.</span>无向图常记为 $G$，即 $G = (V, E)$。如果 $|V| = p$，$|E| = q$，也有时说 $G$ 是一个 $(p, q)$ 图，即具有 $p$ 个顶点 $q$ 条边的无向图。$(1, 0)$ 称为平凡图。</div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 47px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">2.</span>常用小写字母 $u, v, w, \ldots$ 表示顶点，而用 $x, y, z, \ldots$ 表示边。</div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 47px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">3.</span>联结：两点之间有边称为联结，简记 $x = uv$</div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 47px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">4.</span>邻接：联结两点即邻接两点；有一个共同顶点的边为联结边</div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 47px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">5.</span>无向图上的边集可以实际上是一个反自反对称的二元关系</div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 47px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">6.</span>边集为空称为零图</div>
+                <div class = "normal" style = "margin: 10px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">1.</span>无向图常记为 $G$，即 $G = (V, E)$。如果 $|V| = p$，$|E| = q$，也有时说 $G$ 是一个 $(p, q)$ 图，即具有 $p$ 个顶点 $q$ 条边的无向图。$(1, 0)$ 称为平凡图。</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">2.</span>常用小写字母 $u, v, w, \ldots$ 表示顶点，而用 $x, y, z, \ldots$ 表示边。</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">3.</span>联结：两点之间有边称为联结，简记 $x = uv$</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">4.</span>邻接：联结两点即邻接两点；有一个共同顶点的边为联结边</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">5.</span>无向图上的边集可以实际上是一个反自反对称的二元关系</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">6.</span>边集为空称为零图</div>
                 <div class = "h5">伪图</div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 47px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">1.</span>环：联结一个顶点与其自身的边称为环。</div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 47px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">2.</span>多重边：图中的两个顶点之间不值一条边，这些变称为多重边</div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 47px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">3.</span>有环或多重边的图称为伪图。（伪图不是图）</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">1.</span>环：联结一个顶点与其自身的边称为环。</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">2.</span>多重边：图中的两个顶点之间不值一条边，这些变称为多重边</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">3.</span>有环或多重边的图称为伪图。（伪图不是图）</div>
                 <div class = "h4" id = "3">有向图<div class = "h4Underline"></div></div>
                 <div class = "normal">$A \subseteq V \times V$，二元组 $(V, A)$ 称为一个有向图，常记为 $D = (V, A)$，有向图中的边称为有向边或弧。若 $x = (u, v)$ ，$y = (v, u)$，$x$ 和 $y$ 称为对称弧。</div>
                 <div class = "h5">其他定义</div>
-                <div class = "normal" style = "margin: 10px 0px 10px 0px; padding-left: 47px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">1.</span>$x = (u, v)$，$u$ 称为起点，$v$ 称为终点</div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 47px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">2.</span>不含对称弧的有向图称为定向图</div>
+                <div class = "normal" style = "margin: 10px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">1.</span>$x = (u, v)$，$u$ 称为起点，$v$ 称为终点</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">2.</span>不含对称弧的有向图称为定向图</div>
                 <div class = "h4" id = "4">子图<div class = "h4Underline"></div></div>
                 <div class = "normal">图 $G = (V, E)$，图 $H = (V_1, E_1)$ 为 $G$ 的子图，如果 $V_1 \subseteq V$ ，$E_1 \subseteq E$。</div>
                 <div class = "h5">其他基本定义</div>
-                <div class = "normal" style = "margin: 10px 0px 10px 0px; padding-left: 47px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">1.</span>生成图：若子图和原图的边集相等，则称子图为<span class = "emphasis">生成图</span>。</div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 47px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">2.</span>包含：若 $G$ 的两个子图 $G_1, G_2$，$G_2$ 又是 $G_1$ 的子图，我们称 $G_1$ 包含 $G_2$</div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 47px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">3.</span>真子图：包含不相等，称为真子图</div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 47px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">4.</span>极大子图：子图 $H$ 具有某种特征，原图中不存在满足此特征且真包含与此子图的子图 $S$，则称此子图 $H$ 为满足某种特征的极大子图</div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 47px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">5.</span>增减一点，同时减掉与之相连的边</div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 47px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">6.</span>增减一边</div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 47px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">7.</span>同构图，记为 $G \cong H$</div>
+                <div class = "normal" style = "margin: 10px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">1.</span>生成图：若子图和原图的边集相等，则称子图为<span class = "emphasis">生成图</span>。</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">2.</span>包含：若 $G$ 的两个子图 $G_1, G_2$，$G_2$ 又是 $G_1$ 的子图，我们称 $G_1$ 包含 $G_2$</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">3.</span>真子图：包含不相等，称为真子图</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">4.</span>极大子图：子图 $H$ 具有某种特征，原图中不存在满足此特征且真包含与此子图的子图 $S$，则称此子图 $H$ 为满足某种特征的极大子图</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">5.</span>增减一点，同时减掉与之相连的边</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">6.</span>增减一边</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">7.</span>同构图，记为 $G \cong H$</div>
                 <div class = "h5">从局部推全部&nbsp&nbsp——&nbsp&nbspUlam&nbsp&nbsp猜想</div>
                 <div class = "normal">设 $G = (V, E)$，$H = (U, F)$，对于每个 $i$，都有 $G_i - v_i \cong H - u_i$，则 $G \cong H$</div>
                 <div class = "h4" id = "5">度数<div class = "h4Underline"></div></div>
@@ -150,26 +159,26 @@ $$
                 <br>
                 <div class = "normal">推论：在任意图中，度为奇数的顶点的数目必须为偶数。</div>
                 <div class = "h5">其他定义</div>
-                <div class = "normal" style = "margin: 10px 0px 10px 0px; padding-left: 47px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">1.</span>顶点度的范围：$0 \le d(v) \le p - 1$</div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 47px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">2.</span>最大度：$\Delta(G) = max_{v \in V}\{d(v)\}$</div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 47px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">3.</span>最小度：$\delta(G) = min_{v \in V}\{d(v)\}$</div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 47px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">4.</span>正则图：称图 $G$ 为 $r$ 度正则图（也叫做 $r$ 次图），如果 $\delta (G) = \Delta (G)$。一个具有 $p$ 个顶点的 $p - 1$ 度正则图称为完全图，记为 $K_p$</div>
+                <div class = "normal" style = "margin: 10px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">1.</span>顶点度的范围：$0 \le d(v) \le p - 1$</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">2.</span>最大度：$\Delta(G) = max_{v \in V}\{d(v)\}$</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">3.</span>最小度：$\delta(G) = min_{v \in V}\{d(v)\}$</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">4.</span>正则图：称图 $G$ 为 $r$ 度正则图（也叫做 $r$ 次图），如果 $\delta (G) = \Delta (G)$。一个具有 $p$ 个顶点的 $p - 1$ 度正则图称为完全图，记为 $K_p$</div>
                 <div class = "normal">三次图有偶数个顶点</div>
                 <br>
-                <div class = "normal" style = "margin: 10px 0px 10px 0px; padding-left: 47px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">1.</span>度数为 $0$ 的顶点称为孤立顶点</div>
+                <div class = "normal" style = "margin: 10px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">1.</span>度数为 $0$ 的顶点称为孤立顶点</div>
                 <div class = "h2" id = "6">路，圈，连通图</div><div id = "hUnderline"></div>
                 <div class = "h4" id = "7">路，圈，连通图<div class = "h4Underline"></div></div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 47px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">1.</span>通道：图中的顶点和边的交错序列，称为通道，首尾相连的通道称为闭通道（通道的集合中去掉边也不会引起歧义）</div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 47px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">2.</span>迹：通到上的边不相同称为一条迹，收尾相连的为闭迹</div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 47px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">3.</span>路：顶点不同的通道称为路，首尾相连称为圈（有向图中称为贿赂）</div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 47px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">4.</span>连通图：图 $G$ 连通，如果 $G$ 中任意两个不同的顶点至少有一条路连接</div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 47px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">5.</span>分支：图 $G$ 的最大连通子图称为 $G$ 的一个分支（也称为支）</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">1.</span>通道：图中的顶点和边的交错序列，称为通道，首尾相连的通道称为闭通道（通道的集合中去掉边也不会引起歧义）</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">2.</span>迹：通到上的边不相同称为一条迹，收尾相连的为闭迹</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">3.</span>路：顶点不同的通道称为路，首尾相连称为圈（有向图中称为贿赂）</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">4.</span>连通图：图 $G$ 连通，如果 $G$ 中任意两个不同的顶点至少有一条路连接</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">5.</span>分支：图 $G$ 的最大连通子图称为 $G$ 的一个分支（也称为支）</div>
                 <div class = "h5">等价关系</div>
                 <div class = "normal">两点为等价关系 $u \cong v$ ，如果存在一条联结 $u$ 和 $v$ 的路</div>
                 <div class = "h5">定理</div>
-                <div class = "normal" style = "margin: 10px 0px 10px 0px; padding-left: 47px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">1.</span>若对于每对 $u$ 和 $v$ 都有 $d(u) + d(v) \ge p - 1$，则 $G$ 是连通的</div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 47px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">2.</span>如果图中每个顶点的度数均为偶数，且至少有一个顶点不是孤立点，则图中必有一个圈</div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 47px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">3.</span>如果 $u$ 与 $v$ 间有两条不同的路联结，则图中必有一个圈</div>
+                <div class = "normal" style = "margin: 10px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">1.</span>若对于每对 $u$ 和 $v$ 都有 $d(u) + d(v) \ge p - 1$，则 $G$ 是连通的</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">2.</span>如果图中每个顶点的度数均为偶数，且至少有一个顶点不是孤立点，则图中必有一个圈</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">3.</span>如果 $u$ 与 $v$ 间有两条不同的路联结，则图中必有一个圈</div>
                 <div class = "h2" id = "8">补图，偶图</div><div id = "hUnderline"></div>
                 <div class = "h4" id = "9">补图<div class = "h4Underline"></div></div>
                 <div class = "normal">设 $G = (V, E)$ 是一个无向图，中：</div>
@@ -193,8 +202,8 @@ $$
                 <div class = "h5">距离与最短路</div>
                 <div class = "normal">联结 $u, v$ 的最短路的长度称为 $u, v$ 距离，记为 $d(u, v)$，如果 $u, v$ 不想联结，则 $d(u, v) = \infty$</div>
                 <div class = "h5">定理</div>
-                <div class = "normal" style = "margin: 10px 0px 10px 0px; padding-left: 47px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">1.</span>图 $G$ 是偶图当且仅当它的所有圈的长度都是偶数</div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 47px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">2.</span>具有 $p$ 个顶点无三角形的图中最多有 $[p^2 / 4]$ 条边</div>
+                <div class = "normal" style = "margin: 10px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">1.</span>图 $G$ 是偶图当且仅当它的所有圈的长度都是偶数</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">2.</span>具有 $p$ 个顶点无三角形的图中最多有 $[p^2 / 4]$ 条边</div>
                 <div class = "h2" id = "11">欧拉图</div><div id = "hUnderline"></div>
                 <div class = "normal">欧拉闭迹：一条闭迹（边不能重复，点可以）包含所有的顶点和所有边，则称该闭迹为一条欧拉闭迹。</div>
                 <div class = "normal">欧拉图：存在欧拉闭迹的图称为欧拉图</div>
@@ -202,9 +211,9 @@ $$
                 <div class = "normal">图是欧拉图当且仅当图是连通且每个顶点的度都是偶数。</div>
                 <div class = "normal"><span class = "underline">推论</span>：</div>
                 <div class = "normal">$G$ 是一个连通图，下面的命题等价：</div>
-                <div class = "normal" style = "margin: 10px 0px 10px 0px; padding-left: 47px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">1.</span>$G$ 是一个欧拉图</div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 47px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">2.</span>$G$ 的每个点都度数都是偶数</div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 47px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">3.</span>$G$ 的边集能划分成若干边互不相交的圈</div>
+                <div class = "normal" style = "margin: 10px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">1.</span>$G$ 是一个欧拉图</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">2.</span>$G$ 的每个点都度数都是偶数</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">3.</span>$G$ 的边集能划分成若干边互不相交的圈</div>
                 <div class = "h5">欧拉迹定义</div>
                 <div class = "normal">包含图的所有顶点和边的迹称为一条欧拉迹（起终点未见得相同，欧拉迹 = 欧拉闭迹 + 欧拉开迹）</div>
                 <div class = "normal"><span class = "underline">推论</span>：</div>
@@ -262,11 +271,11 @@ $$
                 <div class = "normal">无圈图称为森林，连通的无圈图称为树</div>
                 <div class = "normal">森林的每个连通分支都是树，森林就是由若干棵树组成的图，仅有一个顶点的树称为平凡树。</div>
                 <div class = "normal">树与下面命题等价：</div>
-                <div class = "normal" style = "margin: 10px 0px 10px 0px; padding-left: 47px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">1.</span>$G$ 是树</div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 47px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">2.</span>任两个不同顶点间有唯一的一条路径相连</div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 47px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">3.</span>顶点 = 边 + 1</div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 47px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">4.</span>图无圈</div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 47px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">5.</span>不相邻两点间加一条边，形成唯一圈的图</div>
+                <div class = "normal" style = "margin: 10px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">1.</span>$G$ 是树</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">2.</span>任两个不同顶点间有唯一的一条路径相连</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">3.</span>顶点 = 边 + 1</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">4.</span>图无圈</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">5.</span>不相邻两点间加一条边，形成唯一圈的图</div>
                 <div class = "h5">推论</div>
                 <div class = "normal">任一非平凡树至少有两个 1 度顶点</div>
                 <div class = "h5">极小连通图</div>
@@ -287,16 +296,30 @@ $$
                 <div class = "h3" id = "17">生成树</div>
                 <div class = "normal">生成树的定义：略</div>
                 <div class = "normal">生成森林的定义：略</div>
-                <div class = "normal" style = "margin: 10px 0px 10px 0px; padding-left: 43px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55">▪</span>&nbsp$T_1$，$T_2$ 是 $G$ 的生成树，是 $T_1$ 的边而不是 $T_2$ 的边的条数称为 $T_1$ 到 $T_2$ 的距离，记为 $d(T_1, T_2)$</div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 43px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55">▪</span>&nbsp基本变换：$T_1 - e_1 + e_2$</div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 43px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55">▪</span>&nbsp$T_1$，$T_2$ 是 $G$ 的生成树，距离为 $k$，则从 $T_1$ 开始经过 $k$ 次基本变换就能得到 $T_2$.</div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 43px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55">▪</span>&nbsp最小生成树：略</div>
+                <div class = "normal" style = "margin: 10px 0px 10px 0px; padding-left: 23px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55">▪</span>&nbsp$T_1$，$T_2$ 是 $G$ 的生成树，是 $T_1$ 的边而不是 $T_2$ 的边的条数称为 $T_1$ 到 $T_2$ 的距离，记为 $d(T_1, T_2)$</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 23px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55">▪</span>&nbsp基本变换：$T_1 - e_1 + e_2$</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 23px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55">▪</span>&nbsp$T_1$，$T_2$ 是 $G$ 的生成树，距离为 $k$，则从 $T_1$ 开始经过 $k$ 次基本变换就能得到 $T_2$.</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 23px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55">▪</span>&nbsp最小生成树：略</div>
                 <div class = "h3" id = "18">割点、桥、割集</div>
                 <div class = "h5">定理</div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 43px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55">▪</span>&nbsp连通图至少有两个顶点不是割点（最长路的两个端点一定不是）</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 23px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55">▪</span>&nbsp连通图至少有两个顶点不是割点（最长路的两个端点一定不是）</div>
 
                 </div>
-                <div id = "disqus_thread"></div>  
+                <!-- <div id = "disqus_thread"></div>   -->
+                <div id = "container"></div>
+                <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+                <script>
+                var gitment = new Gitment({
+                // id: '页面 ID', // 可选。默认为 location.href
+                owner: 'Mitsuyama',
+                repo: 'git@github.com:Mittsuyama/mittsuyama.github.io.git',
+                oauth: {
+                    client_id: '62e2f7957fce993ba7d6',
+                    client_secret: 'adc6550219b7d1f1afdf9679e6dce6e599e7bba0',
+                },
+                })
+                gitment.render('container')
+                </script>
             </div>
 
             <div id = "foot">
@@ -373,5 +396,9 @@ $$
                 }
             });
         </script>
+
+        <div style = "position: relative; width: 100%; height: 700px">
+            <img style = "width: 100%; height: 100%; object-fit: cover;" src = "图片地址">
+        </div>
     </body>
 </html>

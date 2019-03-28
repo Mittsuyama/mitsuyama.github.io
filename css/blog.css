@@ -168,7 +168,6 @@ div.articleContext {
     width: 100%;
     margin: auto;
     background-color: rgba(255, 255, 255, 1);
-    font-size: 19px;
     min-height: 600px;
     padding-top: 80px;
     margin-bottom: 50px;
@@ -179,11 +178,12 @@ div.articleContext {
 div.articleBorder {
     /* box-shadow: 1px 1px 20px 5px rgba(0,0,0,0.03), 1px 1px 30px 7px rgba(0,0,0,0.02); */
     margin: auto;
-    width: 55%;
+    width: 60%;
     padding: 30px 60px 100px 60px;
     border-radius: 0px;
     background-color: white;
-    color: #333;
+    color: #555;
+    font-size: 19px;
     font-family: sans-serif;
 }
 
@@ -216,7 +216,7 @@ div.h3 {
     font-style: italic;
     text-align: center;
     width: 100%;
-    margin: 10px 0px 30px 0px;
+    margin: 30px 0px 20px 0px;
 }
 
 div.h4 {
@@ -235,13 +235,13 @@ div.h4 {
     width: 100%;
     height: 13px;
     bottom: 10px;
-    background: black;
-    opacity: 0.2;
+    background: #2ecc71;
+    opacity: 0.4;
 }
 
 div.h5 {
-    font-size: 21px;
-    color: #555;
+    font-size: 23px;
+    color: #666;
     margin-top: 25px;
     margin-bottom: 20px;
     padding: 5px 0px 2px 0px;
@@ -275,12 +275,13 @@ div.quoteAgain {
 }
 
 div.normal {
-    line-height: 27px;
+    line-height: 30px;
     letter-spacing: 0.5px;
-    margin-top: 4px;
+    /* margin-top: 2px; */
     padding: 2px 0px 2px 0px;
     width: 100%;
     font-family: 'Times New Roman', Times, serif;
+    font-weight: lighter;
     /* font-weight: lighter; */
 }
 
@@ -305,7 +306,7 @@ span.strike {
 span.emphasis {
     margin: 0px 3px 0px 3px;
     padding: 0px 5px 2px 5px;
-    border: 1px solid rgba(100, 100, 100, 0.5);
+    border: 1px solid rgba(100, 100, 100, 0.7);
     background-color: #fbfbfb;
     border-radius: 5px;
 }
@@ -341,7 +342,8 @@ img.blogImg {
     margin-left: auto;
     margin-right: auto;
     max-width: 60%;
-    margin-bottom: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
     /* padding-top: 30px; */
     cursor: url("../img/icon/bigger2.cur"), auto;
 }
@@ -465,5 +467,12 @@ div.callme {
     width: 55%;
     margin: auto;
     margin-top: 100px;
-    padding-bottom: 100px;
+    margin-bottom: 100px;
+}
+
+#container {
+    width: 55%;
+    margin: auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
 }
