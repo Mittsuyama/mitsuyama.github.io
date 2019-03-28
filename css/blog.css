@@ -171,7 +171,7 @@ div.articleContext {
     font-size: 19px;
     min-height: 600px;
     padding-top: 80px;
-    padding-bottom: 50px;
+    margin-bottom: 50px;
     /*word-wrap: break-all;*/
     text-align: left;
 }
@@ -179,21 +179,25 @@ div.articleContext {
 div.articleBorder {
     /* box-shadow: 1px 1px 20px 5px rgba(0,0,0,0.03), 1px 1px 30px 7px rgba(0,0,0,0.02); */
     margin: auto;
-    width: 60%;
+    width: 55%;
     padding: 30px 60px 100px 60px;
     border-radius: 0px;
     background-color: white;
-    color: #777;
+    color: #333;
     font-family: sans-serif;
+}
+
+div.articleBorder div {
+    position: relative;
 }
 
 div.h2 {
     font-size: 36px;
-    color: #333;
+    color: #555;
     text-align: center;
     margin: 0px;
     width: 100%;
-    margin-top: 80px;
+    margin-top: 30px;
 }
 
 #hUnderline {
@@ -202,33 +206,43 @@ div.h2 {
     width: 100px;
     border-top: 2px solid gray;
     margin-top: 7px;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
 
 div.h3 {
     font-family: 'Times New Roman', Times, serif;
     font-size: 32px;
-    color: #333;
+    color: #555;
     font-style: italic;
     text-align: center;
     width: 100%;
-    margin: 50px 0px 5px 0px;
+    margin: 10px 0px 30px 0px;
 }
 
 div.h4 {
     font-size: 30px;
     margin-top: 30px;
-    margin-bottom: 30px;
-    color: #333;
+    margin-bottom: 20px;
+    width: max-content;
+    color: #555;
     /* border-left: 5px solid #333; */
     border-radius: 0px 5px 5px 0px;
     /* padding: 0px 0px 0px 23px; */
 }
 
+.h4Underline {
+    position: absolute;
+    width: 100%;
+    height: 13px;
+    bottom: 10px;
+    background: black;
+    opacity: 0.2;
+}
+
 div.h5 {
     font-size: 21px;
     color: #555;
-    margin-top: 15px;
+    margin-top: 25px;
     margin-bottom: 20px;
     padding: 5px 0px 2px 0px;
     border-radius: 0px 5px 5px 0px;
@@ -261,11 +275,12 @@ div.quoteAgain {
 }
 
 div.normal {
-    /* line-height: 21px; */
+    line-height: 27px;
     letter-spacing: 0.5px;
     margin-top: 4px;
     padding: 2px 0px 2px 0px;
     width: 100%;
+    font-family: 'Times New Roman', Times, serif;
     /* font-weight: lighter; */
 }
 
@@ -275,7 +290,8 @@ span.strong {
 }
 
 span.italic {
-    font-style: italic;
+    color: #333;
+    font-weight: lighter;
 }
 
 span.underline {
@@ -288,7 +304,7 @@ span.strike {
 
 span.emphasis {
     margin: 0px 3px 0px 3px;
-    padding: 0px 5px 0px 5px;
+    padding: 0px 5px 2px 5px;
     border: 1px solid rgba(100, 100, 100, 0.5);
     background-color: #fbfbfb;
     border-radius: 5px;
@@ -326,7 +342,7 @@ img.blogImg {
     margin-right: auto;
     max-width: 60%;
     margin-bottom: 30px;
-    padding-top: 30px;
+    /* padding-top: 30px; */
     cursor: url("../img/icon/bigger2.cur"), auto;
 }
 
@@ -446,8 +462,8 @@ div.callme {
 }
 
 #disqus_thread {
-    padding-top: 50px;
     width: 55%;
     margin: auto;
     margin-top: 100px;
+    padding-bottom: 100px;
 }

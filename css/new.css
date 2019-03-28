@@ -706,9 +706,9 @@ img.cateImg {
     margin-bottom: 70px;
 }
 
-/* .cates:hover {
-    color: #000;
-} */
+.cates:hover {
+    color: #ccc;
+}
 
 .cates {
     float: left;
@@ -753,7 +753,7 @@ img.cateImg {
     /* font-weight: lighter; */
     position: relative;
     margin-top: 8px;
-    color: #999;
+    opacity: 0.7;
     font-weight: lighter;
     font-size: 20px;
 }

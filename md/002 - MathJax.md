@@ -5,76 +5,81 @@ Mathematic
 
 
 
-[如果想知道一些符号的书写这里却没有，点这里！！！](http://detexify.kirelabs.org/classify.html)
+[手绘你想输入的符号](http://detexify.kirelabs.org/classify.html)
 
 使用 `\$ xxx \$` 来书写行间数学公式，左右各两个 `\$` 表示行间数学公式
 
-## 简单的表达
+## 最常用的那些表达
 
-- 上标 ： `e^{x}` $e^{x}$
-- 下标： `a_{1}` $a_{1}$
-- 分数： `\frac{1}{x}` $\frac{1}{x}$
-- 换行： `\\`
-- `\alpha, \beta, …, \omega`：$\alpha, \beta, …, \omega$，`\Gamma, \Delta, …, \Omega`：$\Gamma, \Delta, …, \Omega$
-- 空格：`\, \; \quad \qquad`：$a \, b$，$a \; b$，$a \quad b$，$a \qquad b$
+- **上标** ：*e^{x}*：$e^{x}$
+- **下标**：*a{1}*：$a_{1}$
+- **分数**：*\frac{1}{x}*：$\frac{1}{x}$
+- **希腊字母**：首字母大小写即改变希腊字母大小写（注意一些希腊字母的大写就是英文字母）
+  - *\alpha*：$A$，$\alpha$
+  - *\beta*：$B$，$\beta$
+  - *\gamma*：$\Gamma$，$\gamma$
+- **不同长度的空格**（MathJax 会忽略掉空格）：*\, \; \quad \qquad*：$a \, b$，$a \; b$，$a \quad b$，$a \qquad b$
+
+![image-20190328115855058](/Users/macbookpro/Documents/GItHub/mittsuyama.github.io/img/image-20190328115855058.png)
 
 ## 符号
 
 ### 括号
 
-- 圆括号，绝对值，中括号键盘上
-- 花括号：`\{` ：$\{$
-- 双竖线：`\Vert` ：$\Vert$
-- 不同于键盘上的尖括号：`\langle x \rangle` ：$\langle x \rangle$ 
-- 向上取整：`\lceil x \rceil` ：$\lceil x \rceil$
-- 向下取整：`\lfloor x \rfloor`： $\lfloor x \rfloor$
-- 括号的自动调整：`\left(` ... \right)`
-  - 例如，`\frac{\sqrt x}{y^3}` $(\frac{\sqrt x}{y^3})$ ，括号看起来很奇怪，`\left(\frac{\sqrt x}{y^3}\right)`： $\left(\frac{\sqrt x}{y^3}\right)$
-  - 疯狂的括号套括号 `\Biggl(\biggl(\Bigl(\bigl((x)\bigr)\Bigr)\biggr)\Biggr)`：$\Biggl(\biggl(\Bigl(\bigl((x)\bigr)\Bigr)\biggr)\Biggr)$
+- **大括号**：*\{* ：$\{$
+- **双竖线**：*\Vert* ：$\Vert$
+- **更好看的尖括号**：*\langle x \rangle* ：$\langle x \rangle$ 
+- **向上取整**：*\lceil x \rceil* ：$\lceil x \rceil$
+- **向下取整**：*\lfloor x \rfloor*： $\lfloor x \rfloor$
+- **括号的自动调整**：*\left(  ... \right)*
+  - 例如，*\frac{\sqrt x}{y^3}* ：$(\frac{\sqrt x}{y^3})$ ，括号看起来很奇怪，*\left(\frac{\sqrt x}{y^3}\right)*： $\left(\frac{\sqrt x}{y^3}\right)$
+  - 疯狂的括号套括号 *\Biggl(\biggl(\Bigl(\bigl((x)\bigr)\Bigr)\biggr)\Biggr)*：$\Biggl(\biggl(\Bigl(\bigl((x)\bigr)\Bigr)\biggr)\Biggr)$
 
-### 运算符号
+### 常用运算运算符号
 
-- 大小关系：`\lt \gt \le \ge \neq`： $\lt \; \gt \; \le \; \ge \; \neq$
-  - 可以在前面添加 `\not`：`\not\lt` $\not\lt$，但并不优美
-- 四则运算：`\times \div \pm \mp \cdot`： $\times \; \div \; \pm \; \mp \; \cdot$
-- 集合：
-  - `\setminus \subset \subseteq \subsetneq \supset \supseteq` ： $\setminus \subset \subseteq \subsetneq \supset \supseteq$
-  - `\cup \cap` ： $\cup \cap $
-  - `\in \notin \emptyset \varnothing`：$\in \notin \emptyset \varnothing$
-- 组合数：\binom{n+1}{2k} ：$\binom{n+1}{2k}$
-- 和与积分：`\sum` $\sum$，`\prod` $\prod$，`\int` $\int$ `\iint` $\iint$，`\bigcup` $\bigcup$ `\bigcap` $\bigcap$
-- 根号：`\sqrt{x^3}`：$\sqrt{x^3}$
-  - `\sqrt[3]{\frac xy}`：$\sqrt[3]{\frac xy}$
-- 极限：`\lim_{x\to 0}`：$\lim_{x\to 0}$
+- **大小关系**：*\lt \gt \le \ge \neq*：$\lt \; \gt \; \le \; \ge \; \neq$
+  - 可以在前面添加 *\not*：*\not\lt*：$\not\lt$，但并不优美
+- **四则运算**：*\times \div \pm \mp \cdot*： $\times \; \div \; \pm \; \mp \; \cdot$
+- **集合**：
+  - *\setminus \subset \subseteq \subsetneq \supset \supseteq*： $\setminus  \; \subset \; \subseteq \; \subsetneq \; \supset \; \supseteq$
+  - *\cup \cap* ： $\cup \; \cap $
+  - *\in \notin \emptyset \varnothing*：$\in \; \notin \; \emptyset \; \varnothing$
+- **组合数**：*\binom{n+1}{2k}* ：$\binom{n+1}{2k}​$
+- **和与积分**：*\sum* $\sum$，*\prod* $\prod$，*\int* $\int$，*\iint* $\iint$，*\bigcup* $\bigcup$，*\bigcap* $\bigcap$
+- **根号**：*\sqrt{x^3}*：$\sqrt{x^3}$
+  - *\sqrt[3]{\frac xy}*：$\sqrt[3]{\frac xy}$
+- **极限**：*\lim{x\to 0}*：$\lim_{x\to 0}​$
 
 ### 表达式符号
 
-- 箭头：`\to \rightarrow \leftarrow \Rightarrow \Leftarrow \mapsto` ： $\to \rightarrow \leftarrow \Rightarrow \Leftarrow \mapsto$
-- `\land \lor \lnot \forall \exists \top \bot \vdash \vDash`：$\land \lor \lnot \forall \exists \top \bot \vdash \vDash$
-- `\star \ast \oplus \circ \bullet`：$\star \ast \oplus \circ \bullet$
-- 等号：`\approx \sim \simeq \cong \equiv \prec \lhd \therefore`：$\approx \sim \simeq \cong \equiv \prec \lhd \therefore$
-  - 取模恒等：`a \equiv b\pmod n`：$a \equiv b\pmod n$
+- **箭头**：*\to \rightarrow \leftarrow \Rightarrow \Leftarrow \mapsto*： $\to \rightarrow \leftarrow \Rightarrow \Leftarrow \mapsto$
+- *\land \lor \lnot \forall \exists \top \bot \vdash \vDash*：$\land \lor \lnot \forall \exists \top \bot \vdash \vDash$
+- *\star \ast \oplus \circ \bullet*：$\star \ast \oplus \circ \bullet$
+- **等号**：*\approx \sim \simeq \cong \equiv \prec \lhd \therefore*：$\approx \sim \simeq \cong \equiv \prec \lhd \therefore$
+  - 取模恒等：*a \equiv b\pmod n*：$a \equiv b\pmod n$
 
 ### 其他符号
 
-- `\chi \infty \aleph_0`：$\chi \; \infty \; \aleph_0​$
-- `\nabla \partial`：$\nabla \partial$
-- `\Im \Re`：$\Im \Re$
-- `\ldots`：$\ldots$
-  - 比如：`a_{1} + a_{2} + \ldots + a_{n}`：$a_{1} + a_{2} + \ldots + a_{n}$
-- Geek letters：`\epsilon \varepsilon`：$\epsilon \; \varepsilon$，`\phi \varphi`：$\phi \; \varphi$，`\ell` ：$\ell$
-- `LaTeX`：$\LaTeX$
-- `\hat{xx}`：$\hat{x}$，`\widehat{xy}`：$\widehat{xy}$，`\bar{}`，$\bar{x}$，，`\overline{xyz}`：$\overline{xyz}$，
-- `\vec{x}`：$\vec{x}$，`\overrightarrow{xy}`：$\overrightarrow{xy}$，`\overleftrightarrow{xy}`：$\overleftrightarrow{xy}$，`\dot{x}`：$\dot{x}$，`\ddot{x}`：$\ddot{x}$
-- `\flat \sharp`：$\flat \quad \sharp$
+- *\chi \infty \aleph_0*：$\chi \; \infty \; \aleph_0$
+- *\nabla \partial*：$\nabla \partial$
+- *\Im \Re*：$\Im \Re$
+- *\ldots*：$\ldots$
+  - 比如：*a{1} + a{2} + \ldots + a{n}*：$a_{1} + a_{2} + \ldots + a_{n}$
+- Geek letters：*\epsilon \varepsilon*：$\epsilon \; \varepsilon$，*\phi \varphi*：$\phi \; \varphi$，*\ell* ：$\ell$
+- *\LaTeX*：$\LaTeX$
+- *\hat{xx}*：$\hat{x}$，*\widehat{xy}*：$\widehat{xy}$，*\bar{}*，$\bar{x}$，，*\overline{xyz}*：$\overline{xyz}$，
+- *\vec{x}*：$\vec{x}$，*\overrightarrow{xy}*：$\overrightarrow{xy}$，*\overleftrightarrow{xy}*：$\overleftrightarrow{xy}$，*\dot{x}*：$\dot{x}$，*\ddot{x}*：$\ddot{x}$
+- *\flat \sharp*：$\flat \quad \sharp$
 
 ## 格式
 
 ### 常用表达格式
 
-- `\text{…}` 文字说明：$\{x \in s | \text{x is extra large}\}$
+- *\text{…}* 文字说明：$\{x \in s | \text{x is extra large}\}$
 
 ### 矩阵
+
+**注意**：块级公式记得用 `\\` 表示换行
 
 ```
 \begin{matrix}

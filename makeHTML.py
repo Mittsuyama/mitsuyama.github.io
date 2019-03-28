@@ -114,17 +114,17 @@ class makeHTML:
         else:
             listMargin = '10'
         if mLen > spaceLen + 2 and myStr[spaceLen : spaceLen + 2] == '- ':
-            newS += '''<div class = "normal" style = "margin: %spx 0px 10px 0px; padding-left: %spx; text-indent: -22px;">''' % (listMargin, str(spaceLen * 8 + 43))
+            newS += '''<div class = "normal" style = "margin: %spx 0px 10px 0px; padding-left: %spx; text-indent: -22px;">''' % (listMargin, str(spaceLen * 15 + 43))
             self.isEnterList = 1
             i = spaceLen + 2
             newS += '''<span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55">▪</span>&nbsp'''
         elif mLen > spaceLen + 3 and myStr[spaceLen + 1 : spaceLen + 3] == '. ':
-            newS += '''<div class = "normal" style = "margin: %spx 0px 10px 0px; padding-left: %spx; text-indent: -25px;">''' % (listMargin, str(spaceLen * 8 + 47))
+            newS += '''<div class = "normal" style = "margin: %spx 0px 10px 0px; padding-left: %spx; text-indent: -25px;">''' % (listMargin, str(spaceLen * 15 + 47))
             self.isEnterList = 1
             i = spaceLen + 3
             newS += '''<span class = "myList" style = "color: #d94e55">%s.</span>''' % (myStr[spaceLen])
         elif mLen > spaceLen + 4 and myStr[spaceLen + 2 : spaceLen + 4] == '. ':
-            newS += '''<div class = "normal" style = "margin: %spx 0px 10px 0px; padding-left: %spx; text-indent:-25px;">''' % (listMargin, str(spaceLen * 8 + 47))
+            newS += '''<div class = "normal" style = "margin: %spx 0px 10px 0px; padding-left: %spx; text-indent:-25px;">''' % (listMargin, str(spaceLen * 15 + 47))
             self.isEnterList = 1
             i = spaceLen + 4
             newS += '''<span class = "myList" style = "color: #d94e55">%s.</span>''' % (myStr[spaceLen : spaceLen + 2])
@@ -299,7 +299,7 @@ class makeHTML:
                 blogContent += '''                <div class = "h5">''' + line[6 : -1].replace(' ', '&nbsp&nbsp') + '''</div>''' + '\n'
             elif lLen > 4 and line[:4] == '####':
                 tempOrder += 1
-                blogContent += '''                <div class = "h4" id = "%s">''' % (tempOrder) + line[5 : -1].replace(' ', '&nbsp&nbsp') + '''</div>''' + '\n'
+                blogContent += '''                <div class = "h4" id = "%s">''' % (tempOrder) + line[5 : -1].replace(' ', '&nbsp&nbsp') + '''<div class = "h4Underline"></div></div>''' + '\n'
             elif lLen > 3 and line[:3] == '###':
                 tempOrder += 1
                 blogContent += '''                <div class = "h3" id = "%s">''' % (tempOrder) + line[4 : -1].replace(' ', '&nbsp&nbsp') + '''</div>''' + '\n'
