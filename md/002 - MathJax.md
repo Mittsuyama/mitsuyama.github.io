@@ -1,5 +1,5 @@
 MathJax 中的常用表达
-Mathematic
+Mathematic | Computer | Note
 粗略地列了一些常用的 MathJax 常用表达，文章摘自 http://meta.math.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference。 未完成。
 2018-10-6
 

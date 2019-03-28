@@ -92,6 +92,7 @@ a:hover {
 
 
 html {
+    margin: 0px;
     height: 100%;
 }
 
@@ -107,7 +108,12 @@ body::-webkit-scrollbar {
 } */
 
 body {
+    margin: 0px;
     height: 100%;
+}
+
+div {
+    box-sizing: border-box;
 }
 
 #loading {
@@ -168,7 +174,7 @@ img.slideImg {
     letter-spacing: 20px;
     color: #f0f0f0;
     position: absolute;;
-    top: 180px;
+    top: 200px;
     left: 40%;
     transform: scale(1, 1.3);
 }
@@ -493,7 +499,7 @@ img.srtImg {
     object-fit: cover;
     width: 27%;
     /* height: 70%; */
-    left: 53%;
+    left: 55%;
     top: 50%;
     transform: translate(-50%, -50%);
     opacity: 1;
@@ -510,6 +516,8 @@ img.srtImg {
 }
 
 #introTitleColor {
+    display: block;
+    margin-top: 8px;
     color: #222;
     opacity: 0.7;
 }
@@ -519,9 +527,11 @@ img.srtImg {
     letter-spacing: 1px;
     line-height: 23px;
     margin: auto;
-    margin-top: 5px;
+    margin-top: 20px;
     font-size: 19px;
-    color: #bbb;
+    font-family: sans-serif;
+    font-weight: lighter;
+    color: #555;
 }
 
 #introRight {

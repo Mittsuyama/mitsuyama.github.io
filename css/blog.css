@@ -29,8 +29,17 @@ img.biggerImg {
     width: 0px;
 }
 
+html {
+    margin: 0xp;
+}
+
 body {
+    margin: 0px;
     height: 100%;
+}
+
+div {
+    box-sizing: border-box;
 }
 
 div.funButtonBox{
@@ -231,9 +240,9 @@ div.h4 {
     position: absolute;
     width: 100%;
     height: 13px;
-    bottom: -3px;
-    background: #2ecc71;
-    opacity: 0.4;
+    bottom: 3px;
+    background: #2eac61;
+    opacity: 0.3;
 }
 
 div.h5 {
