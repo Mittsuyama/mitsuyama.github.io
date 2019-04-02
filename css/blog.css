@@ -42,6 +42,10 @@ div {
     box-sizing: border-box;
 }
 
+a {
+    box-sizing: border-box;
+}
+
 div.funButtonBox{
     display: none;
     position: fixed;
@@ -192,18 +196,26 @@ div.articleBorder {
     border-radius: 0px;
     background-color: white;
     color: #555;
-    font-size: 19px;
+    font-size: 20px;
     font-family: sans-serif;
 }
 
 div.h2 {
-    font-size: 36px;
-    color: #555;
+    font-size: 45px;
+    color: #333;
     text-align: center;
     margin: 0px;
     width: 100%;
-    margin-top: 30px;
+    font-weight: bold;
+    margin-top: 100px;
+    margin-bottom: 30px;
 }
+
+/* .h2::before {
+    content: "¶. ";
+    font-weight: normal;
+    color: #2eac61;
+} */
 
 #hUnderline {
     transform: translate(-50%, 0);
@@ -216,41 +228,55 @@ div.h2 {
 
 div.h3 {
     font-family: 'Times New Roman', Times, serif;
-    font-size: 32px;
-    color: #555;
+    font-size: 35px;
+    color: #444;
     font-style: italic;
     text-align: center;
+    font-weight: bold;
     width: 100%;
-    margin: 30px 0px 20px 0px;
+    margin: 60px 0px 30px 0px;
+}
+
+.h3::before {
+    content: "§. ";
+    color: #35b8b1;
 }
 
 div.h4 {
     position: relative;
     font-size: 30px;
     margin-top: 30px;
-    margin-bottom: 20px;
-    width: max-content;
+    margin-bottom: 15px;
+    font-weight: bold;
+    /* width: max-content; */
     color: #555;
     /* border-left: 5px solid #333; */
     border-radius: 0px 5px 5px 0px;
     /* padding: 0px 0px 0px 23px; */
 }
 
-.h4Underline {
-    position: absolute;
-    width: 100%;
-    height: 13px;
-    bottom: 3px;
-    background: #2eac61;
-    opacity: 0.3;
+.h4::before {
+    content: "¶ ";
+    font-size: 30px;
+    color: #38aaa4;
 }
 
+/* .h4Underline {
+    position: absolute;
+    width: 100%;
+    height: 10px;
+    bottom: 3px;
+    background: #38aaa4;
+    opacity: 0.3;
+} */
+
 div.h5 {
-    font-size: 23px;
-    color: #666;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 25px;
+    color: #555;
+    font-weight: bold;
     margin-top: 25px;
-    margin-bottom: 20px;
-    padding: 5px 0px 2px 0px;
+    margin-bottom: 5px;
     border-radius: 0px 5px 5px 0px;
     min-height: 25px; 
 }
@@ -282,8 +308,8 @@ div.quoteAgain {
 
 div.normal {
     line-height: 30px;
-    letter-spacing: 0.5px;
-    /* margin-top: 2px; */
+    letter-spacing: 0px;
+    margin-top: -3px;
     padding: 2px 0px 2px 0px;
     width: 100%;
     font-family: 'Times New Roman', Times, serif;
@@ -298,7 +324,10 @@ span.strong {
 
 span.italic {
     color: #333;
-    font-weight: lighter;
+    font-family: monospace;
+    background-color: #eee;
+    padding: 0px 5px 0px 5px;
+    border-radius: 5px;
 }
 
 span.underline {
@@ -311,28 +340,31 @@ span.strike {
 
 span.emphasis {
     margin: 0px 3px 0px 3px;
-    padding: 0px 5px 2px 5px;
+    padding: 0px 5px 0px 5px;
     border: 1px solid rgba(100, 100, 100, 0.7);
     background-color: #fbfbfb;
     border-radius: 5px;
 }
 
 a.conncetion {
-    padding: 20px;
-    display: block;
-    margin: 10px 0px 10px 0px;
-    font-size: 19px;
-    width: 100%;
-    color: rgba(100, 200, 230, 1);
-    min-height: 50px;
-    border-radius: 10px;
-    transition-duration: 0.2s;
-    -webkit-transition-duration: 0.2s;
+    padding: 3px 10px 3px 10px;
+    color: rgb(41, 144, 192);
+    border-radius: 5px;
+    font-family: sans-serif;
+    font-weight: normal;
+
+    transition-duration: 0.3s;
+    -webkit-transition-duration: 0.3s;
 }
 a.conncetion:hover {
     text-decoration: none;
-    background-color: rgba(100, 210, 250, 0.5);
+    background-color: rgb(41, 144, 192);
     color: white;
+}
+
+.fa-paper-plane {
+    margin-right: 10px;
+    font-size: 19px;
 }
 
 pre.codeBlock {
@@ -472,7 +504,7 @@ div.callme {
 #disqus_thread {
     width: 55%;
     margin: auto;
-    margin-top: 100px;
+    margin-top: 150px;
     margin-bottom: 100px;
 }
 

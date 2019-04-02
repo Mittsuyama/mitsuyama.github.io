@@ -151,6 +151,7 @@ div {
     height: 550px;
     top: 50%;
     left: 0%;
+    border-radius: 10px;
     background-color: white;
     transform: translate(100%, -50%);
     overflow: hidden;
@@ -242,6 +243,7 @@ img.slideImg {
 }
 
 .slideReadmore {
+    border-radius: 10px;
     position: relative;
     margin-top: 60px;
     width: 200px;
@@ -474,6 +476,7 @@ img.srtImg {
 }
 
 #introBox {
+    border-radius: 15px;
     width: 1000px;
     height: 560px;
     position: relative;
@@ -592,9 +595,10 @@ img.srtImg {
 }
 
 #aboutMe {
+    border-radius: 10px;
     cursor: pointer;
     text-align: center;
-    padding: 8px 0px 10px 0px;
+    padding: 10px 0px 10px 0px;
     border: 1px solid #555;
     color: #555;
     font-size: 20px;
@@ -616,6 +620,7 @@ img.srtImg {
 }
 
 #cateImgBox {
+    border-radius: 10px;
     position: absolute;
     width: 400px;
     height: 500px;

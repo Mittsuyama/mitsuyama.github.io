@@ -34,7 +34,7 @@
             $youziku.draw();
         </script> -->
 
-        <title>MITSUYAMA | 静态网页小功能</title>
+        <title>MITSUYAMA | 如何做一个背日语单词的软件</title>
     </head>
     
     <body>
@@ -68,13 +68,13 @@
             
         <div class = "imgBack"></div>
         <div class = "container-fluid" id = "blogBackground">
-            <img src = "../img/blog-image/24.jpg" class = "blogTitleImg">
+            <img src = "../img/blog-image/31.jpg" class = "blogTitleImg">
             <div class = "glass"></div>
             <div class = "blogTitle">
-                    静态网页小功能
+                    如何做一个背日语单词的软件
             </div>
             <div class = "tagContainer">
-                &nbspWebsite | Github | Computer | Design | Python&nbsp&nbsp|&nbsp&nbsp&nbsp拾贰月 8，2018
+                &nbspJapanese | Computer | Python | GitHub&nbsp&nbsp|&nbsp&nbsp&nbsp肆月 29，2019
             </div>
         </div>
         
@@ -82,7 +82,9 @@
             <div class = "contentList">
                 <div class = "contentBorder">
                     <div class = "contentTitile">┌─ 目录 ───────</div>
-                                <a href = "#1" class = "contentListCon" style = "color: rgba(0, 0, 0, 0.5); font-weight: bold;">Algolia&nbsp&nbsp实现搜索功能</a>
+                                <a href = "#1" class = "contentListCon" style = "color: rgba(0, 0, 0, 0.5); font-weight: bold;">寻找单词库</a>
+            <a href = "#2" class = "contentListCon" style = "color: rgba(0, 0, 0, 0.5); font-weight: bold;">爬数据</a>
+            <a href = "#3" class = "contentListCon" style = "color: rgba(0, 0, 0, 0.5); font-weight: bold;">软件制作</a>
 
                 </div>
             </div>
@@ -108,54 +110,104 @@
                         </div>
                     </div>
                 <div class = "articleBorder">
-                                    <div class = "quote"><i class = "fa fa-quote-left fa-1x fa-pull-left" aria-hidden = "true" id = "quoteIcon"></i>Github&nbsp&nbsp是一个静态网页，所以不能用例如&nbsp&nbspPython、PHP&nbsp&nbsp等动态语言。其实网上有很多优秀的静态网页生成器：Jekyll，Hugo，Hexo，Hitbook，Gatsby&nbsp&nbsp等等。但为了学习&nbsp&nbspHTML、CSS、JavaScript&nbsp&nbsp等前端语言，于是决定自动动手写写。以下总结了一些功能的实现。</div>
-                <div class = "h2" id = "1">Algolia&nbsp&nbsp实现搜索功能</div>
-                <div class = "normal">由于静态网页，无法使用动态语言进行对数据库内容的读取，直接搜索 HTML 文件似乎又不太方便，于是我选择了一个通过 SaaS 模式提供的搜索的 <span class = "emphasis">Algolia</span>.</div>
-                <a href = "https://www.algolia.com/" class = "conncetion"><i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp&nbsp&nbspAlgolia | Fast, Reliable and Modern Search and Discovery</a>
-                <div class = "normal">本地向 Algolia 的服务器提交数据，然后通过 JavaScript 获取你提交的数据，并且 Algolia 提供了一些默认 CSS 样式等功能，从而帮助你实现搜索功能。</div>
-                <div class = "normal">实现过程：</div>
-                <div class = "h4" id = "2">注册并登陆</div>
-                <div class = "normal">上面的链接，<span class = "strike">点击就送屠龙宝刀</span>，注册并登录。</div>
-                <br>
-                <div class = "normal">登陆后可能会有一些官方教程，最后进入 Dashboard，如下界面：</div>
-                <img src = "../img/website/1541685074182.png" class = "blogImg"><br>
-$$
-^{（图一）}
-$$
-                <div class = "normal" style = "margin: 10px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">1.</span>Application ID，新建 Apps 时会随机给一个（新建的时候需要你选择一个 main region，中国选择香港即可，延迟比较低）</div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">2.</span>Apps 中一个 Index 的名字，这个 Index 也是你自己建立的</div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">3.</span>你上传的内容，上传以 object 为一个单位，每个 object 中都有你设定的键值对，启用搜索时，通过键值对来获得你需要的搜索结果。</div>
-                <div class = "h4" id = "3">上传你的数据</div>
-                <div class = "normal">我使用的 Python 来上传的数据（还可以手动添加数据，或者手动上传 json 文件添加数据）。</div>
-                <a href = "https://www.algolia.com/doc/api-reference/" class = "conncetion"><i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp&nbsp&nbsp你可以选择其他的语言来上传</a>
-                <div class = "h5">下载&nbsp&nbspAlgolia&nbsp&nbsp客户端</div>
-                <pre><code class = "bash">
-$ pip install --upgrade algoliasearch
+                                    <div class = "normal">造好的 Repo：</div>
+                <a href = "https://github.com/Mittsuyama/Japanese_words_learning" class = "conncetion"><i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp&nbsp&nbspJapanese_words_learning</a>
+                <div class = "normal">数据库是手动建的，clone 下来不能直接用，需要手动 <span class = "emphasis">CREATE TABLE words</span></div>
+                <div class = "h2" id = "1">寻找单词库</div>
+                <div class = "normal">第一步，是要找到一个单词库，N1 - N5 一共接近两万个单词总不能一个一个打上去，其实主要是在这一步耽误了很久。（想找一个能分 JLPT 等级的词典）</div>
+                <div class = "normal">直到有一天发现了一个 Chrome 插件：</div>
+                <a href = "https://chrome.google.com/webstore/detail/%E8%A8%80%E8%91%89-%E3%81%AE-tab/lacmiiahoideajihiclkhmdkikkbjcnb" class = "conncetion"><i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp&nbsp&nbsp言葉 の Tab</a>
+                <div class = "normal">概述：A minimal Chrome / Firefox extension to help you learn Japanese words in each new tab.</div>
+                <div class = "normal">可以在 Chrome 新建 Tab 显示日语单词，敲空格显示下一个，右上角四个选项分别是 JLPT 级数、收藏此单词、查看收藏、皮肤</div>
+                <img src = "../img/kotoba.jpg" class = "blogImg"><br>
+                <div class = "normal">其实用这个就可以了，但是我希望它能实现选择不同类型词汇、显示更多单词信息（比如同音词，近义词，其他形式等）、能够记录我是否记住次单词，并且更高概率显示没有记住的单词等等功能。（要求有点多）</div>
+                <div class = "normal">然后点击单词发现进入寻找多日的电子词典：</div>
+                <a href = "https://jisho.org/" class = "conncetion"><i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp&nbsp&nbspjiso</a>
+                <div class = "normal">这个网站中能通过 JLPT 等级搜词，比如搜索 <span class = "emphasis">#jlpt-n3 #adjective</span>，一页能显示 20 个单词，有单词的基本信息（平假注音、词性、基本隐私、其他形式），一次 Request 能爬 20 个单词，效率还是比较高的（两万个单词也还是要爬一会）</div>
+                <div class = "h2" id = "2">爬数据</div>
+                <div class = "normal">需要准备：BeautifulSoup 库、pyMySQL 库、MySQL。</div>
+                <a href = "https://www.crummy.com/software/BeautifulSoup/bs4/doc/index.zh.html" class = "conncetion"><i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp&nbsp&nbspBeautiful Soup 4.2.0 文档</a>
+                <div class = "normal">熬一锅 Soup 然后爬数据。这个网站的 Request 也比较简单。</div>
+                <div class = "normal" style = "margin: 10px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">1.</span><span class = "emphasis">https://jisho.org/search/%23jlpt-n3%20%23words?page=2</span> 修改网址中的 JLPT 等级和页码就能获取页面。</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">2.</span>查看此页面是否有 <span class = "emphasis">&lt;div class = "more"&gt;&lt;/div&gt;</span> 来判断是否达到最后一页。</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">3.</span>标签也算是比较规范，爬起来比较放心，有一个特例，搜索一下 <span class = "emphasis">可愛い</span> ，这个词的注音的标签就有点区别</div>
+                <div class = "normal">建立数据库，新建 TABLE words</div>
+                <pre><code class = "mysql">
+CREATE TABLE words
+(
+  id int not null AUTO_INCREMENT,
+  kanji varchar(50) not null,
+  kana varchar(50) not null,
+  type tinytext not null,
+  meaning text not null,
+  grade int not null,
+  other text not null,
+  weight tinyint not null,
+  PRIMARY KEY (id),
+  CONSTRAINT kanji_kana UNIQUE (kanji, kana)
+);
                 </code></pre>
-                <div class = "h5">初始化你的客户端</div>
+                <div class = "normal">注意日语里面有很多多音词，需要用联合 UNIQUE 判重（汉字和平假注音）。</div>
+                <div class = "normal">意思有些单词很长，比如 <span class = "emphasis">掛ける</span> ，tinytext 可能不够。</div>
                 <pre><code class = "python">
-from algoliasearch import algoliasearch
+cursor.execute('''
+    INSERT IGNORE INTO words(kanji, kana, type, grade, meaning, other)
+    VALUES("%s", "%s", "%s", %d, "%s", "%s");
+    '''%(kanji, kana, wType, grade, meaning, other))
+connection.commit()
+                </code></pre>
+                <div class = "normal">然后就可以愉快的跟新数据库了，记得 <span class = "emphasis">INGORE</span> 去重。</div>
+                <div class = "h2" id = "3">软件制作</div>
+                <img src = "../img/image-20190329135618187.png" class = "blogImg"><br>
+                <div class = "normal">大概是这样的效果：空格显示单词信息，再按空格表示认识，F 表示不熟或不认识，Q 退出程序（不认识的单词权重会增加，认识的会减少，权重更大的单词更容易出现）</div>
+                <div class = "normal">为了做起来简单，选择 JLPT 等级和词性在终端中进行。</div>
+                <img src = "../img/image-20190329140112371.png" class = "blogImg"><br>
+                <img src = "../img/image-20190329140129239.png" class = "blogImg"><br>
+                <div class = "normal">需要准备：TKinter。这个 GUI 库 Python 内置，不需要再去获取。</div>
+                <div class = "normal">其中比较重要的几个点：</div>
+                <div class = "h5">如何使权重大的单词更容易出现</div>
+                <pre><code class = "python">
+self.data = self.cursor.fetchall()
+self.order = []
+self.allNum = len(self.data)
+for i in range(0, self.allNum):
+  self.order.append(i)
+  self.order.sort(key = functools.cmp_to_key(self.myCmp))
 
-client = algoliasearch.Client("Application ID", 'Admin API Key')
-index = client.init_index('index_name')
+def myCmp(self, x, y):
+  myRange = 0
+  if self.data[x][-1] > self.data[y][-1]:
+    myRange = 10
+    else:
+      myRange = 6
+      result = random.randint(1, myRange)
+      if result > 3:
+        return -1;
+      return 1;
                 </code></pre>
-                <div class = "normal">Dashboard 中点击 API keys 就能获得上面需要的信息。</div>
-                <div class = "normal" style = "margin: 10px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">1.</span>Application ID：每一个 Apps 的认证编码，This is your unique application identifier. It's used to identify you when using Algolia's API</div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">2.</span>Admin API Key：管理数据的秘钥，与 Search-Only API Key 不同，Search-Only 只能查询不能修改。</div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">3.</span>index_name：图一中的编号 2，就是 index_name。</div>
-                <div class = "h5">正式上传数据</div>
-                <a href = "https://www.algolia.com/doc/api-client/indexing/" class = "conncetion"><i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp&nbsp&nbsp上传数据的官方文档</a>
-                <div class = "normal">常用的 API 一共有三种，Add（增加），Delete（删除），Update（更新），由于 objectID 的存在，其实用不上 Update，接下来会解释。</div>
-                <div class = "normal">上传的每一个 object 都与一个 objectID 一一对应，如果没有设定 objectID，algolia 会自动给你随机一个 ID。</div>
+                <div class = "normal">根据 JLPT 等级和词性获得的单词放在 data 数组中，order 是一个顺序数组（长度和 data 相同），用 <span class = "emphasis">fechall()</span>  得到的是个 <span class = "emphasis">tuple</span> 无法修改，所以修改 order 的顺序，来改变 data 的顺序（调用方式：<span class = "emphasis">data[order[i]]</span>）。</div>
+                <br>
+                <div class = "normal"><span class = "emphasis">myCmp</span> 是一个半随机的排序比较函数（单词的权重信息我放在最后一个位置，也就是 data[x][-1]）。这样能使权重大（也就是记得越不熟）的单词<span class = "strong">更容易</span>出现在前面，但是权重小的单词<span class = "strong">也可能</span>出现。</div>
+                <div class = "h5">修改单词权重</div>
+                <div class = "normal">在获取单词信息的时候，请把 ID（也就是 PRIMARY KEY 约束的表头）也一并获取。</div>
+                <div class = "normal">然后根据唯一确定的 ID 来修改单词的权重</div>
                 <pre><code class = "python">
-index.add_object({
-	"Key1": "Value1",
-	"Key2": "Vaule2"
-	}, "objectID"
-)
+def changeWeight(self, order, value):
+  self.cursor.execute('''
+    SELECT weight from words
+    WHERE id = %d
+    ''' % (order))
+  now = self.cursor.fetchall()[0][0]
+  now += value
+  now = max(0, min(100, now))
+  self.cursor.execute('''
+  	UPDATE words
+  	SET weight = %d
+  	WHERE id = %d
+  	''' % (now, order))
+  self.connection.commit()
                 </code></pre>
-                <div class = "normal">这是添加单个 object。</div>
-                <div class = "normal">在自己设定了 objectID 的情况下，如果 add 一个 object 而 objectID 之前添加过，就会进行更新操作（Update）而不是添加一个新的。</div>
+                <div class = "normal">其他的逻辑和 UI 就是比较码农的东西，慢慢敲就行。</div>
 
                 </div>
                 <div id = "disqus_thread"></div>  
@@ -223,8 +275,8 @@ index.add_object({
 
                     //加载 disqus
                 var disqus_config = function () {
-                    this.page.url = 'http://www.mitsuyama.top/blog/24.html';  // Replace PAGE_URL with your page's canonical URL variable
-                    this.page.identifier = 'blog24'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                    this.page.url = 'http://www.mitsuyama.top/blog/31.html';  // Replace PAGE_URL with your page's canonical URL variable
+                    this.page.identifier = 'blog31'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
                     };
                     
         </script>

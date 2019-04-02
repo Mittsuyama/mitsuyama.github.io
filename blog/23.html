@@ -113,8 +113,8 @@
                         </div>
                     </div>
                 <div class = "articleBorder">
-                                    <div class = "h2" id = "1">群的定义和例子</div><div id = "hUnderline"></div>
-                <div class = "h4" id = "2"><div class = "h4Underline"></div>群的定义</div>
+                                    <div class = "h2" id = "1">群的定义和例子</div>
+                <div class = "h4" id = "2">群的定义</div>
                 <div class = "normal">代数系统，满足结合律，有左单位元，有左逆元，定义为群 $G$（$Group$）</div>
                 <div class = "quote"><i class = "fa fa-quote-left fa-1x fa-pull-left" aria-hidden = "true" id = "quoteIcon"></i>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp回顾定义：每个元素都有逆元素的幺半群称为群。</div>
                 <div class = "h5">定义&nbsp&nbsp1.2：</div>
@@ -122,7 +122,7 @@
                 <div class = "h5">定义&nbsp&nbsp1.3：</div>
                 <div class = "normal">有限群，$G$ 为有限集，$G$ 的基数 = $G$ 的阶，$o(G) = |G|$</div>
                 <div class = "normal">例：模 $n$ 剩余类定义加法 $[i] + [j] = [i +j]$，为 $n$ 阶阿贝尔群。</div>
-                <div class = "h2" id = "3">群的简单性质</div><div id = "hUnderline"></div>
+                <div class = "h2" id = "3">群的简单性质</div>
                 <div class = "h5">定理&nbsp&nbsp2.1：</div>
                 <div class = "normal">设 $(G, \circ)$ 是一个群，$\forall \in G$，$a$ 的左逆元也是 $a$ 的右逆元。</div>
                 <div class = "normal">证明：</div>
@@ -186,17 +186,17 @@ $$
                 <div class = "normal">有限群的每个元素的阶不超过有限群的阶</div>
                 <div class = "normal">例 1：3 阶群是交换群</div>
                 <div class = "normal">例 2；4 阶群中无 3 阶元素</div>
-                <div class = "h2" id = "4">子群&nbsp&nbsp生成子群</div><div id = "hUnderline"></div>
+                <div class = "h2" id = "4">子群&nbsp&nbsp生成子群</div>
                 <div class = "h5">定义&nbsp&nbsp3.1：</div>
-                <div class = "normal">设 $S$ 是群 $G$ 的非空子集，如果 $G$ 的乘法在 $S$ 中封闭（$S \circ S = S$）且对此乘法也构成一个群，则称 $S$ 是 $G$ 的子群（记为 $S < G$）</div>
+                <div class = "normal">设 $S$ 是群 $G$ 的非空子集，如果 $G$ 的乘法在 $S$ 中封闭（$S \circ S = S$）且对此乘法也构成一个群，则称 $S$ 是 $G$ 的子群（记为 $S &lt; G$）</div>
                 <div class = "h5">例&nbsp&nbsp1：</div>
                 <div class = "normal">任何一个至少含有两个元素的群 $G$，至少有两个不同的子群，一个是 $G$，一个是 $\{e\}$</div>
                 <div class = "h5">例&nbsp&nbsp2：</div>
-                <div class = "normal">$(Z, +) < (Q, +)$</div>
+                <div class = "normal">$(Z, +) &lt; (Q, +)$</div>
                 <div class = "h5">例&nbsp&nbsp3：</div>
-                <div class = "normal">偶数集合 $(2Z, +) < (Z, +)$</div>
+                <div class = "normal">偶数集合 $(2Z, +) &lt; (Z, +)$</div>
                 <div class = "h5">定理&nbsp&nbsp3.1：</div>
-                <div class = "normal">设 $G_1 < G$ ，那么 $G_1$ 中单位元是 $G$ 中的单位元，$a$ 在 $G_1$ 中的逆元素也是在 $G$ 中的逆元。</div>
+                <div class = "normal">设 $G_1 &lt; G$ ，那么 $G_1$ 中单位元是 $G$ 中的单位元，$a$ 在 $G_1$ 中的逆元素也是在 $G$ 中的逆元。</div>
                 <div class = "h5">定理&nbsp&nbsp3.2：</div>
                 <div class = "normal">群 $G$ 的非空子集 $S$ 是 $G$ 子群的充分必要条件：</div>
                 <div class = "normal" style = "margin: 10px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">1.</span>$\forall a, b \in S，ab \in S$</div>
@@ -212,7 +212,7 @@ $$
                 <div class = "normal">群 $G$ 的元素 $a$ 称为 $G$ 的中心元素，如果 $a$ 与 $G$ 的每个元素可交换，即对 $\forall x \in G$，$xa = ax$，$G$ 的所有种新元素的集合 $C$ 称为 $G$ 的中心。</div>
                 <div class = "h5">定理&nbsp&nbsp3.7：</div>
                 <div class = "normal">群 $G$ 的中心 $C$ 是 $G$ 的可交换子群。</div>
-                <div class = "h2" id = "5">变换群&nbsp&nbsp同构</div><div id = "hUnderline"></div>
+                <div class = "h2" id = "5">变换群&nbsp&nbsp同构</div>
                 <div class = "h5">定义&nbsp&nbsp4.1：</div>
                 <div class = "normal">设 $(G_1, \circ)$ $(G_2, *)$ 是群，如果存在一个一一对应 $\phi: G_1 \to G_2$，使得对 $\forall a, b \in G$，都有 $\phi(a \circ b) = \phi(a) * \phi(b)$，则称群 $G_1$与 $G_2$ 同构，记为 $G_1 \cong G_2$，此时 $\phi$ 称为 $G_1$ 到 $G_2$ 上的一个同构。</div>
                 <div class = "h5">定义&nbsp&nbsp4.2：</div>
@@ -227,7 +227,7 @@ $$
 \phi(a \circ b) = \phi(a) \circ \phi(b)
 $$
                 <div class = "normal">则称 $\phi$ 是 $G$ 的一个自同构。</div>
-                <div class = "h2" id = "6">循环群</div><div id = "hUnderline"></div>
+                <div class = "h2" id = "6">循环群</div>
                 <div class = "h5">定义&nbsp&nbsp5.1：</div>
                 <div class = "normal">群 $G$ 称为循环群，如果 $G$ 是由其中某个元素 $a$ 生成的，即 $(a)  = G$</div>
                 <div class = "normal">如：整数加法群 $(Z, +)$ 是循环群，其生成元为 1.</div>
@@ -257,33 +257,33 @@ $$
 H_0 = \{e\}，H_m = (a^m)， m | n
 $$
                 <div class = "normal">每个子群 $H_m$ 的阶为 $n / m$.</div>
-                <div class = "h2" id = "7">子集的陪集&nbsp&nbsp拉格朗日定理</div><div id = "hUnderline"></div>
+                <div class = "h2" id = "7">子集的陪集&nbsp&nbsp拉格朗日定理</div>
                 <div class = "h5">定义&nbsp&nbsp6.1：</div>
-                <div class = "normal">设 $H < G$，$\forall a \in G$，$aH$ 称为子群 $H$ 的一个左陪集，同理定义右陪集。</div>
+                <div class = "normal">设 $H &lt; G$，$\forall a \in G$，$aH$ 称为子群 $H$ 的一个左陪集，同理定义右陪集。</div>
                 <div class = "h5">定理&nbsp&nbsp6.1：</div>
-                <div class = "normal">子群 $H < G$，$aH = H \iff  a \in $H</div>
+                <div class = "normal">子群 $H &lt; G$，$aH = H \iff  a \in $H</div>
                 <div class = "normal">证明：</div>
                 <div class = "normal">$\Rightarrow$ 若 $aH = H$，则 $a = a \circ e \in aH = \ H$，所以 $a \in H$</div>
                 <div class = "normal">$\Leftarrow$ 已知 $a \in H$，</div>
-                <div class = "normal">①对 $\forall x \in aH$，有 $h \in H$，使 $x = aH$，由 $a \in H$，$h \in H$，因为 $H < G$，知 $x = a \circ h \in H$，从而 $aH \subseteq H$</div>
-                <div class = "normal">② 对 $\forall x \in H$，由 $a \in H$，因为 $H < G$，知 $a^{-1}  \in H$，从而 $a^{-1}x \in H$，从而 $x = a(a^{-1}x) \in aH$，有 $H \subseteq aH$。</div>
+                <div class = "normal">①对 $\forall x \in aH$，有 $h \in H$，使 $x = aH$，由 $a \in H$，$h \in H$，因为 $H &lt; G$，知 $x = a \circ h \in H$，从而 $aH \subseteq H$</div>
+                <div class = "normal">② 对 $\forall x \in H$，由 $a \in H$，因为 $H &lt; G$，知 $a^{-1}  \in H$，从而 $a^{-1}x \in H$，从而 $x = a(a^{-1}x) \in aH$，有 $H \subseteq aH$。</div>
                 <div class = "normal">从而 $aH = H$</div>
                 <div class = "h5">定理&nbsp&nbsp6.2：</div>
-                <div class = "normal">$H < G$，$a, b \in G$，则 $aH = bH \iff a^{-1}b \in H$，证明方法用上述定理即可</div>
+                <div class = "normal">$H &lt; G$，$a, b \in G$，则 $aH = bH \iff a^{-1}b \in H$，证明方法用上述定理即可</div>
                 <div class = "h5">定理&nbsp&nbsp6.3：</div>
-                <div class = "normal">$H < G$，$a, b \in G$，或者 $aH = bH$，或者 $aH \cap bH = \phi$</div>
+                <div class = "normal">$H &lt; G$，$a, b \in G$，或者 $aH = bH$，或者 $aH \cap bH = \phi$</div>
                 <div class = "h5">定理&nbsp&nbsp6.4：</div>
-                <div class = "normal">$H < G$，$\forall a, b \in G$，$|aH| = |bH|$</div>
+                <div class = "normal">$H &lt; G$，$\forall a, b \in G$，$|aH| = |bH|$</div>
                 <div class = "normal">证明；定义 $\phi(ah_1) = bh_2$，证明 $\phi$ 单射满射</div>
                 <div class = "h5">定理&nbsp&nbsp6.5：</div>
-                <div class = "normal">设 $H < G$，$H$ 的所有左陪集构成的集族是 $G$ 的一个划分。</div>
+                <div class = "normal">设 $H &lt; G$，$H$ 的所有左陪集构成的集族是 $G$ 的一个划分。</div>
                 <div class = "normal">证明：</div>
                 <div class = "normal">①不相交</div>
                 <div class = "normal">②$G = \bigcup_{a \in G}aH$ （证明互为子集）</div>
                 <div class = "h5">定理&nbsp&nbsp6.6：</div>
-                <div class = "normal">$H < G$，$S_l$，$S_r$ 分别是左右陪集构成的集族 $|S_l| = |S_r|$</div>
+                <div class = "normal">$H &lt; G$，$S_l$，$S_r$ 分别是左右陪集构成的集族 $|S_l| = |S_r|$</div>
                 <div class = "h5">定义&nbsp&nbsp6.2：</div>
-                <div class = "normal">$H < G$，$j = [G : H]$ 表示 $H$ 的所有不同的左陪集的个数为 $j$，称为 $j$ 为 $H$ 在 $G$ 中的指数，若 $j$ 不存在，$H$ 在 $G$ 中的指数无穷大</div>
+                <div class = "normal">$H &lt; G$，$j = [G : H]$ 表示 $H$ 的所有不同的左陪集的个数为 $j$，称为 $j$ 为 $H$ 在 $G$ 中的指数，若 $j$ 不存在，$H$ 在 $G$ 中的指数无穷大</div>
                 <div class = "h5">定理&nbsp&nbsp6.7&nbsp&nbsp拉格朗日定理：</div>
 $$
 |G| = |H| \cdot [G : H]

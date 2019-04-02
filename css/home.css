@@ -1,13 +1,13 @@
 ﻿::selection {
-    background:rgba(255, 230, 170, 0.6);
+    background:rgba(255, 245, 170, 0.5);
 }
 
 ::-moz-selection {
-    background:rgba(255, 230, 170, 0.6);
+    background:rgba(255, 245, 170, 0.5);
 }
 
 ::-webkit-selection {
-    background:rgba(255, 230, 170, 0.6);
+    background:rgba(255, 245, 170, 0.5);
 }
 
 #homeBackground {

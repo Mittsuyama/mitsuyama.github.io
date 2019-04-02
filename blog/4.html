@@ -115,7 +115,7 @@
                 <a href = "12.html" class = "conncetion"><i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp&nbsp&nbsp下一篇：离散数学 2 - 关系</a>
                 <br>
                 <div class = "normal">集合基础：略</div>
-                <div class = "h2" id = "1">映射</div><div id = "hUnderline"></div>
+                <div class = "h2" id = "1">映射</div>
                 <div class = "normal">$f：为一个法则，$$x \to y$，对于一个确定的 $x$，只有唯一的一个 $y$ 与之对应</div>
                 <div class = "normal">$y$ 为 $x$ 的象，$x$ 为原象，记为：$f : x \to y$</div>
                 <div class = "normal">值域记为 $Im(f)$</div>
@@ -132,7 +132,7 @@
                 <div class = "h5">例2：</div>
                 <div class = "normal">正偶数集 $E$, $e: E \to N$, $e(2m) = m$, $e$ 为双射，但 $e: N \to N $ 是部分映射</div>
                 <div class = "h5">例3：</div>
-                <div class = "normal">设 $X$ 为整数的一个有限集合，定义集合 $X - X = \{x_1 - x _2 | x_1, x_2 \in X\}$。试证明：若 $A, B \subset  \{1, 2, \ldots, n \}$ 并且 $|A| \cdot |B| \ge 2n - 1, n > 1$，则 $(A - A) \cap (B - B)$ 中有一个正整数</div>
+                <div class = "normal">设 $X$ 为整数的一个有限集合，定义集合 $X - X = \{x_1 - x _2 | x_1, x_2 \in X\}$。试证明：若 $A, B \subset  \{1, 2, \ldots, n \}$ 并且 $|A| \cdot |B| \ge 2n - 1, n &gt; 1$，则 $(A - A) \cap (B - B)$ 中有一个正整数</div>
                 <div class = "normal">证明概要：</div>
                 <div class = "normal" style = "margin: 10px 0px 10px 0px; padding-left: 23px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55">▪</span>&nbsp做一个映射</div>
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 53px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55">▪</span>&nbsp$f: A \times B \to \{2, 3, \ldots, 2n\}$，对 $\forall (a, b) \in A \times B$，令 $f(a, b) = a + b$</div>
@@ -156,8 +156,8 @@
                 <div class = "normal">将 $n$ 个物体放入 $n$ 个盒子，没有一个盒子多于一个物体，那么每个盒子恰有一个物体</div>
                 <div class = "h5">例（费马小定理证明）：</div>
                 <div class = "normal">证明：$(a, p) = 1$，则 $a^{p-1} \equiv 1 \pmod{p}$</div>
-                <div class = "normal">引理：<br>若 $(c, m) = 1$，当 $a \cdot c \equiv b \cdot c \pmod{m}$，则有 $a \equiv b \pmod{m}$</div>
-                <div class = "normal">证明：<br>$a \cdot c \equiv b \cdot c \pmod{m}$，则有 $(a - b) \cdot c \equiv 0 \pmod{m}$，因为 $(c, m) = 1$，所以 $a - b \equiv 0 \pmod{m}$，$a \equiv b \pmod{m}$</div>
+                <div class = "normal">引理：&lt;br&gt;若 $(c, m) = 1$，当 $a \cdot c \equiv b \cdot c \pmod{m}$，则有 $a \equiv b \pmod{m}$</div>
+                <div class = "normal">证明：&lt;br&gt;$a \cdot c \equiv b \cdot c \pmod{m}$，则有 $(a - b) \cdot c \equiv 0 \pmod{m}$，因为 $(c, m) = 1$，所以 $a - b \equiv 0 \pmod{m}$，$a \equiv b \pmod{m}$</div>
                 <div class = "normal">构造：</div>
 $$
 1 \cdot a \equiv b_{1} \pmod{p}\\
@@ -166,14 +166,14 @@ $$
 \vdots \\
 (p - 1) \cdot a \equiv b_{p - 1} \pmod{p}
 $$
-                <div class = "normal">假设 $\exists i, j(i \neq j)$，使得 $b_{i} = b_{j}$，由 <span class = "emphasis">引理</span>  知，因为 $b_{i} \equiv b_{j} \pmod{p}$ ，$i \cdot a \equiv j \cdot a \pmod p$，所以 $i = j$，假设矛盾，所以不存在 $b_{i} = b_{j}$；<br>由抽屉原理， p - 1 个 数，放进 p - 1 个 b 中，没有一个数被放了两次， 则 b 数组为 $\{1, 2, \ldots, p - 1\}$ 的重新排列</div>
-                <div class = "normal">等式左边之积 = 等式右边之积<br>$(p - 1)! \cdot a^{p - 1} \equiv (p - 1) \pmod p$<br>所以：$a^{p - 1} \equiv 1 \pmod p$</div>
+                <div class = "normal">假设 $\exists i, j(i \neq j)$，使得 $b_{i} = b_{j}$，由 <span class = "emphasis">引理</span>  知，因为 $b_{i} \equiv b_{j} \pmod{p}$ ，$i \cdot a \equiv j \cdot a \pmod p$，所以 $i = j$，假设矛盾，所以不存在 $b_{i} = b_{j}$；&lt;br&gt;由抽屉原理， p - 1 个 数，放进 p - 1 个 b 中，没有一个数被放了两次， 则 b 数组为 $\{1, 2, \ldots, p - 1\}$ 的重新排列</div>
+                <div class = "normal">等式左边之积 = 等式右边之积&lt;br&gt;$(p - 1)! \cdot a^{p - 1} \equiv (p - 1) \pmod p$&lt;br&gt;所以：$a^{p - 1} \equiv 1 \pmod p$</div>
                 <div class = "h5">加强：</div>
                 <div class = "normal">设 $q_{1}, q_{2} \ldots q_{n}$ 为 $n$ 个正整数，如果 $q_{1} + q_{2} + \ldots + q_{n}$ 个物体放到 $n$ 个盒子中，则或者第 $i$ 个盒子中至少有 $q_{i}$ 个物体</div>
                 <div class = "h5">推论&nbsp&nbsp1：</div>
                 <div class = "normal">如果把 $n(r - 1) + 1$ 个物体放到 $n$  个盒子中，则必有一个盒子至少有 $r$ 个物体</div>
                 <div class = "h5">推论&nbsp&nbsp2：</div>
-                <div class = "normal">如果 $n$ 个正整数平均数 $>  r - 1$，则至少有一个正整数不小于 $r$</div>
+                <div class = "normal">如果 $n$ 个正整数平均数 $&gt;  r - 1$，则至少有一个正整数不小于 $r$</div>
                 <div class = "h5">推论&nbsp&nbsp3：</div>
                 <div class = "normal">把 $m$  个物体放到 $n$  个盒子中，则必有一个盒子至少含有 $\lfloor \frac{m - 1}{n} \rfloor + 1$ 个物体</div>
                 <div class = "h5">例：&nbsp&nbsp</div>
@@ -184,9 +184,9 @@ $$
                 <div class = "normal">用 $m_{i}$ 表示以 $a_{i}$; 为首项的不减序列的长度，则 $1 \le m_{i} \le n$</div>
                 <div class = "normal">现有 $n$ 个盒子，$m_{i}$ 放入第 $k$ 个盒子，当且仅当 $m_{i}= k$</div>
                 <div class = "normal">由抽屉原理推论 $3$ 知，必有一个盒子里至少有 $n + 1$ 个数</div>
-                <div class = "normal">我们称盒子中的数为：$m_{j_{1}}, m_{j_{2}}, \ldots, m_{j_{p}}$，其中 $1 \le j_{1} \le j_{2} \le \ldots \le j_{p} \le n^{2} + 1，\;p > n$</div>
+                <div class = "normal">我们称盒子中的数为：$m_{j_{1}}, m_{j_{2}}, \ldots, m_{j_{p}}$，其中 $1 \le j_{1} \le j_{2} \le \ldots \le j_{p} \le n^{2} + 1，\;p &gt; n$</div>
                 <div class = "normal">进而得到一串序列：$a_{j_{1}}, a_{j_{2}}, \ldots, a_{j_{p}}$，而这一定是一个不增序</div>
-                <div class = "normal">如果 $a_{j_{s}} < a_{j_{t}}$，且 $j_{s} < j_{t}$，那么以 $a_{j_{s}}$为首的不减序列就能增加一个 $a_{j_{t}}$，长度变为 k + 1，与前面所述矛盾</div>
+                <div class = "normal">如果 $a_{j_{s}} &lt; a_{j_{t}}$，且 $j_{s} &lt; j_{t}$，那么以 $a_{j_{s}}$为首的不减序列就能增加一个 $a_{j_{t}}$，长度变为 k + 1，与前面所述矛盾</div>
                 <div class = "normal">所以假设不存在 $n + 1$ 长度不减序列，能得到至少 $n + 1$ 长度的不增序列，满足题意。</div>
                 <div class = "h5">象定义：</div>
                 <div class = "normal">$f(A) = \{f(x) | x \in A\}$，$f(x)$ 称为 $A$ 在 $f$ 下的象</div>
@@ -212,7 +212,7 @@ $$
                 <br>
                 <div class = "h3" id = "3">映射的合成</div>
                 <div class = "normal">$h = g \circ f$，简记：$h = gf$</div>
-                <div class = "normal"><span class = "strong"><span class = "underline">映射的合成满足结合律</span></span></div>
+                <div class = "normal"><span class = "strong">&lt;u&gt;映射的合成满足结合律&lt;/u&gt;</span></div>
                 <div class = "h5">定理&nbsp&nbsp2：</div>
                 <div class = "normal">$f: X \to Y$，则：$f = f \circ I_{x} = I_{y} \circ f$</div>
                 <div class = "h5">定理&nbsp&nbsp3：</div>
@@ -228,26 +228,26 @@ $$
 $$
                 <div class = "normal">试证明：$f(n) = n$</div>
                 <div class = "normal">证明概要：</div>
-                <div class = "normal" style = "margin: 10px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">1.</span>如果 $n > k$，则 $f(n) > k$；<br>2. 取 $k = n - 1$ 即知 $f(n) \le n$；<br>3. $f(n + 1) > f(n)$<br>4. 由上可知 $f$ 是严格单调上升<br>5. $f(n) = n$</div>
+                <div class = "normal" style = "margin: 10px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">1.</span>如果 $n &gt; k$，则 $f(n) &gt; k$；&lt;br&gt;2. 取 $k = n - 1$ 即知 $f(n) \le n$；&lt;br&gt;3. $f(n + 1) &gt; f(n)$&lt;br&gt;4. 由上可知 $f$ 是严格单调上升&lt;br&gt;5. $f(n) = n$</div>
                 <div class = "normal">证明：</div>
                 <div class = "normal">1.</div>
-                <div class = "normal">(1) 当 $k = 1$ 时，$n > 1$，$n \ge 1$，$n - 1 \in N$</div>
+                <div class = "normal">(1) 当 $k = 1$ 时，$n &gt; 1$，$n \ge 1$，$n - 1 \in N$</div>
 $$
 f(n) > f(f(n - 1)) \ge 1 \\
 \therefore n > 1，f(n) > 1
 $$
-                <div class = "normal">(2) 假设 $n > k$，则 $f(n) > k$</div>
+                <div class = "normal">(2) 假设 $n &gt; k$，则 $f(n) &gt; k$</div>
 $$
 设 \; n > k + 1，有 n - 1 > k \\
 由归纳假设 \; f(n - 1) > k\\
 有 \; f(f(n - 1)) > k \\
 n - 1 \; 代入原式，f(n) > f(f(n - 1))，从而 f(n) > k + 1
 $$
-                <div class = "normal" style = "margin: 10px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">2.</span>$n > n - 1\\f(n) > n - 1 \Rightarrow f(n) \ge n$</div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">3.</span>$由 \; f(n) \ge n\;知，f(f(n)) \ge f(n) \\ </div>
-                <div class = "normal">   由 \; f(n +1) > f(f(n))，知 \; f(n +1) > f(n)$</div>
-                <div class = "normal" style = "margin: 10px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">4.</span>$对 \; \forall m, k \in N，若 \; m < k \iff f(m) < f(k)$</div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">5.</span>$由 \; f(n + 1) > f(f(n))，且 \; f(n) \; 为严格递增函数，知\; n + 1 > f(n)\\</div>
+                <div class = "normal" style = "margin: 10px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">2.</span>$n &gt; n - 1\\f(n) &gt; n - 1 \Rightarrow f(n) \ge n$</div>
+                <div class = "normal" style = "margin: 10px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">3.</span>$由 \; f(n) \ge n\;知，f(f(n)) \ge f(n) \\ </div>
+                <div class = "normal">   由 \; f(n +1) &gt; f(f(n))，知 \; f(n +1) &gt; f(n)$</div>
+                <div class = "normal" style = "margin: 10px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">4.</span>$对 \; \forall m, k \in N，若 \; m &lt; k \iff f(m) &lt; f(k)$</div>
+                <div class = "normal" style = "margin: 10px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">5.</span>$由 \; f(n + 1) &gt; f(f(n))，且 \; f(n) \; 为严格递增函数，知\; n + 1 &gt; f(n)\\</div>
                 <div class = "normal">   从而 f(n) \le n，由于 \; f(n) \ge n，有 f(n) = n$</div>
                 <br>
                 <div class = "h3" id = "4">逆映射</div>

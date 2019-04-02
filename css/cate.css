@@ -1,0 +1,84 @@
+html {
+    margin: 0px;
+}
+
+body {
+    margin: 0px;
+}
+
+div {
+    box-sizing: border-box;
+}
+
+#BK {
+    width: 100%;
+    padding: 300px 0px 300px 0px;
+    /* background-color: #f9f9f9; */
+}
+
+#cateBox {
+    position: fixed;
+    top: 50%;
+    left: 3%;
+    width: 35%;
+    height: 70%;
+    border-radius: 5px;
+    box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.07);
+    background-color: white;
+    transform: translate(0, -50%);
+}
+
+#cateBoxTitle {
+    position: relative;
+    font-family: sans-serif;
+    font-weight: lighter;
+    font-size: 40px;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+#cates {
+    position: relative;;
+    width: 100%;
+    height: 350px;
+    padding: 0px 50px 0px 50px;
+    /* background-color: red; */
+}
+
+.cate:hover {
+    background-color: #555;
+    color: white;
+}
+
+.cate {
+    float: left;
+    font-size: 24px;
+    font-weight: lighter;
+    border-radius: 7px;
+    color: #000;
+    border: 1px solid #555;
+    background-color: white;
+    margin: 0px 5px 7px 5px;
+    padding: 3px 10px 3px 10px;
+    cursor: pointer;
+
+    transition-duration: 0.4s;
+    -webkit-transition-duration: 0.4s;
+}
+
+#blogBox {
+    position: relative;
+    width: 100%;
+    padding-left: 40%;
+}
+
+.blog {
+    position: relative;
+    width: 95%;
+    box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.07);
+    min-height: 300px;
+    border-radius: 5px;
+    background-color: white;
+    margin-bottom: 50px;
+}

@@ -34,7 +34,7 @@
             $youziku.draw();
         </script> -->
 
-        <title>MITSUYAMA | MathJax 中的常用表达</title>
+        <title>MITSUYAMA | MathJax 写公式</title>
     </head>
     
     <body>
@@ -71,7 +71,7 @@
             <img src = "../img/blog-image/2.jpg" class = "blogTitleImg">
             <div class = "glass"></div>
             <div class = "blogTitle">
-                    MathJax 中的常用表达
+                    MathJax 写公式
             </div>
             <div class = "tagContainer">
                 &nbspMathematic | Computer | Note&nbsp&nbsp|&nbsp&nbsp&nbsp拾壹月 6，2018
@@ -82,17 +82,22 @@
             <div class = "contentList">
                 <div class = "contentBorder">
                     <div class = "contentTitile">┌─ 目录 ───────</div>
-                                <a href = "#1" class = "contentListCon" style = "color: rgba(0, 0, 0, 0.5); font-weight: bold;">最常用的那些表达</a>
-            <a href = "#2" class = "contentListCon" style = "color: rgba(0, 0, 0, 0.5); font-weight: bold;">符号</a>
-            <a href = "#3" class = "contentListCon" style = "padding-left: 40px; color: rgba(0, 0, 0, 0.5);">括号</a>
-            <a href = "#4" class = "contentListCon" style = "padding-left: 40px; color: rgba(0, 0, 0, 0.5);">常用运算运算符号</a>
-            <a href = "#5" class = "contentListCon" style = "padding-left: 40px; color: rgba(0, 0, 0, 0.5);">表达式符号</a>
-            <a href = "#6" class = "contentListCon" style = "padding-left: 40px; color: rgba(0, 0, 0, 0.5);">其他符号</a>
-            <a href = "#7" class = "contentListCon" style = "color: rgba(0, 0, 0, 0.5); font-weight: bold;">格式</a>
-            <a href = "#8" class = "contentListCon" style = "padding-left: 40px; color: rgba(0, 0, 0, 0.5);">常用表达格式</a>
-            <a href = "#9" class = "contentListCon" style = "padding-left: 40px; color: rgba(0, 0, 0, 0.5);">矩阵</a>
-            <a href = "#10" class = "contentListCon" style = "padding-left: 40px; color: rgba(0, 0, 0, 0.5);">对齐</a>
-            <a href = "#11" class = "contentListCon" style = "color: rgba(0, 0, 0, 0.5); font-weight: bold;">体</a>
+                                <a href = "#1" class = "contentListCon" style = "color: rgba(0, 0, 0, 0.5); font-weight: bold;">快速入门</a>
+            <a href = "#2" class = "contentListCon" style = "padding-left: 40px; color: rgba(0, 0, 0, 0.5);">开始</a>
+            <a href = "#3" class = "contentListCon" style = "padding-left: 40px; color: rgba(0, 0, 0, 0.5);">求和</a>
+            <a href = "#5" class = "contentListCon" style = "padding-left: 40px; color: rgba(0, 0, 0, 0.5);">极限</a>
+            <a href = "#6" class = "contentListCon" style = "padding-left: 40px; color: rgba(0, 0, 0, 0.5);">开根、分数、希腊字母、括号</a>
+            <a href = "#8" class = "contentListCon" style = "color: rgba(0, 0, 0, 0.5); font-weight: bold;">最常用的那些表达</a>
+            <a href = "#9" class = "contentListCon" style = "color: rgba(0, 0, 0, 0.5); font-weight: bold;">符号</a>
+            <a href = "#10" class = "contentListCon" style = "padding-left: 40px; color: rgba(0, 0, 0, 0.5);">括号</a>
+            <a href = "#11" class = "contentListCon" style = "padding-left: 40px; color: rgba(0, 0, 0, 0.5);">常用运算运算符号</a>
+            <a href = "#12" class = "contentListCon" style = "padding-left: 40px; color: rgba(0, 0, 0, 0.5);">表达式符号</a>
+            <a href = "#13" class = "contentListCon" style = "padding-left: 40px; color: rgba(0, 0, 0, 0.5);">其他符号</a>
+            <a href = "#14" class = "contentListCon" style = "color: rgba(0, 0, 0, 0.5); font-weight: bold;">格式</a>
+            <a href = "#15" class = "contentListCon" style = "padding-left: 40px; color: rgba(0, 0, 0, 0.5);">常用表达格式</a>
+            <a href = "#16" class = "contentListCon" style = "padding-left: 40px; color: rgba(0, 0, 0, 0.5);">矩阵</a>
+            <a href = "#17" class = "contentListCon" style = "padding-left: 40px; color: rgba(0, 0, 0, 0.5);">对齐</a>
+            <a href = "#18" class = "contentListCon" style = "color: rgba(0, 0, 0, 0.5); font-weight: bold;">字体</a>
 
                 </div>
             </div>
@@ -119,30 +124,111 @@
                     </div>
                 <div class = "articleBorder">
                                     <br>
-                <a href = "http://detexify.kirelabs.org/classify.html" class = "conncetion"><i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp&nbsp&nbsp手绘你想输入的符号</a>
-                <div class = "normal">使用 <span class = "emphasis">\$ xxx \$</span> 来书写行间数学公式，左右各两个 <span class = "emphasis">\$` 表示行间数学公式</div>
-                <div class = "h2" id = "1">最常用的那些表达</div><div id = "hUnderline"></div>
+                <div class = "h2" id = "1">快速入门</div>
+                <div class = "normal">如何打出下面这个式子？</div>
+$$
+\sum_{y = 0}^{\infty}\lim_{x \to 0}\left(\sqrt{\frac{\alpha x}{\beta y}} + 1\right)^{e + 2} \left(\overrightarrow{AB} \cdot \overrightarrow{CD}\right)
+$$
+                <div class = "h3" id = "2">开始</div>
+                <div class = "normal">你需要有一个<span class = "strong">支持 MathJax 的软件</span>，这里推荐几个 Markdown 软件，它们都内置 MathJax。</div>
+                <div class = "normal"><a href = "https://typora.io" class = "conncetion"><i class="fa fa-paper-plane" aria-hidden="true" ></i>Typor</a>：Typora，所见即所得，全平台支持，最出名的免费的 Markdown 工具，功能完备，界面好看。</div>
+                <div class = "normal"><a href = "https://zybuluo.com" class = "conncetion"><i class="fa fa-paper-plane" aria-hidden="true" ></i>Cmd Markdow</a>：Cmd Markdown 编辑阅读器，同样全平台支持支持实时同步预览，区分写作和阅读模式，支持在线存储，分享文稿网址。</div>
+                <br>
+                <div class = "normal">首先你要<span class = "strong">告诉编辑器</span>你打的是数学公式。</div>
+                <div class = "normal"><span class = "strong">行间公式</span>，用四个 Dollar 符 <span class = "italic">\$</span> 框起来，像这样：</div>
+                <pre><code class = "mathematica">
+$$
+\sqrt{x + y} + 1
+$$
+                </code></pre>
+                <div class = "normal">效果:</div>
+$$
+\sqrt{x + y} + 1
+$$
+                <div class = "normal">如果想在一行之间打公式，请用<span class = "strong">行内公式</span>，两个 Dollar 符  <span class = "italic">\$</span> 把内容框起来。</div>
+                <div class = "normal">像这样：<span class = "italic">\$\sqrt{x + y} + 1\$</span>，效果：$\sqrt{x + y} + 1$，（typora 可能需要在设置中打开行内公式）</div>
+                <div class = "h3" id = "3">求和</div>
+                <div class = "h5">符号</div>
+                <div class = "normal">第一个是求和符号，MathJax 中各种符号都用<span class = "strong">反斜杠</span>开头 <span class = "italic">\</span>，求和则是 <span class = "italic">\sum</span>：</div>
+                <div class = "normal"><span class = "italic">\sum</span>，<span class = "italic">\prod</span>，<span class = "italic">\int</span>，<span class = "italic">\iint</span>，<span class = "italic">\bigcup</span>，<span class = "italic">\bigcap</span></div>
+                <div class = "normal">$\sum$，$\prod$，$\int$，$\iint$，$\bigcup$，$\bigcap$</div>
+                <div class = "h5">上下限</div>
+                <div class = "normal">MathJax 中上下限和角标的表示方法相同：</div>
+                <div class = "normal"><span class = "italic">X_0^2</span>：$X_0^2$</div>
+                <div class = "normal"><span class = "italic">\sum_0^2</span>：$\sum_0^2​$</div>
+                <div class = "normal">当输入的是行间公式时，求和等符号的角标就会挪到正上下方：</div>
+$$
+\sum_0^2 \quad \prod_0^2 \quad \bigcup_0^2 \quad \int_0^2
+$$
+                <div class = "h4" id = "4">请注意</div>
+                <div class = "normal" style = "margin: 10px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">1.</span>当角标的长度大于 $1$ 时，请用 <span class = "italic">{…}</span> 来表示它们是一组公式。</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 68px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55">▪</span>&nbsp比如，<span class = "italic">X_{i + j}^e</span>：$X_{i + j}^e$，否则，<span class = "italic">X_i + j^e</span>：$X_i + j^e$</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">2.</span>MathJax 会忽略你打的所有空格。</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 68px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55">▪</span>&nbsp想打空格怎么办，<span class = "italic">a\,b</span>， <span class = "italic">a\;b</span> ，<span class = "italic">a\quad b</span>， <span class = "italic">a\qquad b</span>：$a \, b$，$a \; b$，$a \quad b$，$a \qquad b$</div>
+                <div class = "h3" id = "5">极限</div>
+                <div class = "normal"><span class = "strong">极限符号</span>，<span class = "italic">\lim</span>：$\lim$</div>
+                <div class = "normal">$x$ <span class = "strong">趋近于</span> $0$：<span class = "italic">x \to 0</span>：$x \to 0$；用 <span class = "italic">\to</span> 来表示趋向箭头。</div>
+                <div class = "normal">所以组合：<span class = "italic">\lim_{x \to 0}</span>：$\lim_{x \to 0}$，类似的，如果是行间公式，$x \to 0$ 会挪到正下方。</div>
+                <div class = "h5">箭头符号</div>
+                <div class = "normal">介绍一些其他的常用箭头。</div>
+                <div class = "normal"><span class = "italic">\to</span>, <span class = "italic">\rightarrow</span>, <span class = "italic">\leftarrow</span>, <span class = "italic">\Rightarrow</span>, <span class = "italic">\Leftarrow</span>, <span class = "italic">\mapsto</span>, <span class = "italic">\iff</span></div>
+                <div class = "normal">$\to$, $\rightarrow$, $\leftarrow$, $\Rightarrow$, $\Leftarrow$, $\mapsto$, $\iff$</div>
+                <div class = "h3" id = "6">开根、分数、希腊字母、括号</div>
+                <div class = "normal">接下来是中间的一部分：</div>
+$$
+\left(\sqrt{\frac{\alpha x}{\beta y}} + 1\right)^{e + 2}
+$$
+                <div class = "normal">代码:</div>
+                <pre><code class = "markdown">
+\left(\sqrt{\frac{\alpha x}{\beta y}} + 1\right)^{e + 2}
+                </code></pre>
+                <div class = "normal">我们一个一个来看。</div>
+                <div class = "h5">算术平方根</div>
+                <div class = "normal"><span class = "italic">\sqrt{x^3}</span>：$\sqrt{x^3}$</div>
+                <div class = "normal">当然也能开其他次根，用 <span class = "italic">[…]</span> 表示：<span class = "italic">\sqrt[n]{x^3}</span>：$\sqrt[n]{x^3}​$</div>
+                <div class = "h5">分数</div>
+                <div class = "normal">分数也非常的简单，<span class = "italic">\frac{a}{b}</span>：$\frac{a}{b}$</div>
+                <div class = "normal">分数里面也能套分数，<span class = "italic">\frac{\frac{a}{b}}{c}</span>：$\frac{\frac{a}{b}}{c}​$，但是这样太不美观，建议 <span class = "italic">\frac{a / b}{c}</span>：$\frac{a / b}{c}​$</div>
+                <div class = "h5">希腊字母</div>
+                <div class = "normal">希腊字母同样用反斜杠 <span class = "italic">\</span> 开头表示，后接名称，比如，<span class = "italic">\alpha</span>：$\alpha$，<span class = "italic">\beta</span>，$\beta$，<span class = "italic">\sigma</span>：$\sigma​$</div>
+                <div class = "normal">首字母大写表示大写字母，比如，<span class = "italic">\Gamma</span>：$\Gamma$，<span class = "italic">\Delta</span>：$\Delta$</div>
+                <div class = "normal"><span class = "emphasis">请注意</span>：有些希腊字母就是<span class = "strong">英文大写字母</span>，比如不存在 <span class = "italic">\Alpha</span> 这样的语法，请用 <span class = "italic">A</span>。</div>
+                <div class = "normal">下面是希腊字母表：</div>
+                <img src = "/Users/macbookpro/Documents/GItHub/mittsuyama.github.io/img/image-20190328115855058.png" class = "blogImg"><br>
+                <div class = "h4" id = "7">括号</div>
+                <div class = "normal">普通的括号 <span class = "italic">()[]{}&lt;&gt;</span> 都在键盘上，这里讲的是一些特殊括号。</div>
+                <div class = "h5">自适应括号</div>
+                <div class = "normal">我们发现：<span class = "italic">(\sqrt{\frac{a}{b}})</span>：$(\sqrt{\frac{a}{b}})$ 并不是很美观。</div>
+                <div class = "normal">可以修改为自适应括号来优化，用 <span class = "italic">\left( … \right)</span> 将内容括起来，<span class = "italic">\left(\sqrt{\frac{a}{b}}\right)</span>：$\left( \sqrt{\frac{a}{b}} \right)$</div>
+                <div class = "normal">当然你也可以自己选择<span class = "strong">不同大小的括号</span>：</div>
+                <div class = "normal"><span class = "italic">\Biggl(\biggl(\Bigl(\bigl((x)\bigr)\Bigr)\biggr)\Biggr)</span>：$\Biggl(\biggl(\Bigl(\bigl((x)\bigr)\Bigr)\biggr)\Biggr)$</div>
+                <div class = "h5">其他特殊括号</div>
+                <div class = "normal">更好看的尖括号，<span class = "italic">\langle x \rangle</span>：$\langle x \rangle$</div>
+                <div class = "normal">向上取整：<span class = "italic">\lceil x \rceil</span> ：$\lceil x \rceil$</div>
+                <div class = "normal">向下取整：<span class = "italic">\lfloor x \rfloor</span>： $\lfloor x \rfloor$</div>
+                <br>
+                <div class = "h2" id = "8">最常用的那些表达</div>
                 <div class = "normal" style = "margin: 10px 0px 10px 0px; padding-left: 23px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55">▪</span>&nbsp<span class = "strong">上标</span> ：<span class = "italic">e^{x}</span>：$e^{x}$</div>
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 23px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55">▪</span>&nbsp<span class = "strong">下标</span>：<span class = "italic">a{1}</span>：$a_{1}$</div>
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 23px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55">▪</span>&nbsp<span class = "strong">分数</span>：<span class = "italic">\frac{1}{x}</span>：$\frac{1}{x}$</div>
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 23px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55">▪</span>&nbsp<span class = "strong">希腊字母</span>：首字母大小写即改变希腊字母大小写（注意一些希腊字母的大写就是英文字母）</div>
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 53px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55">▪</span>&nbsp<span class = "italic">\alpha</span>：$A$，$\alpha$</div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 53px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55">▪</span>&nbsp<span class = "italic">\beta</span>：$B$，$\beta$</div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 53px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55">▪</span>&nbsp<span class = "italic">\gamma</span>：$\Gamma$，$\gamma$</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 53px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55">▪</span>&nbsp<span class = "italic">\beta</span>：$B​$，$\beta​$</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 53px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55">▪</span>&nbsp<span class = "italic">\gamma</span>：$\Gamma​$，$\gamma​$</div>
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 23px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55">▪</span>&nbsp<span class = "strong">不同长度的空格</span>（MathJax 会忽略掉空格）：<span class = "italic">\, \; \quad \qquad</span>：$a \, b$，$a \; b$，$a \quad b$，$a \qquad b$</div>
-                <img src = "/Users/macbookpro/Documents/GItHub/mittsuyama.github.io/img/image-20190328115855058.png" class = "blogImg"><br>
-                <div class = "h2" id = "2">符号</div><div id = "hUnderline"></div>
-                <div class = "h3" id = "3">括号</div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 23px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55">▪</span>&nbsp<span class = "strong">大括号</span>：<span class = "italic">\{</span> ：$\{$</div>
+                <br>
+                <div class = "h2" id = "9">符号</div>
+                <div class = "h3" id = "10">括号</div>
+                <div class = "normal" style = "margin: 10px 0px 10px 0px; padding-left: 23px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55">▪</span>&nbsp<span class = "strong">大括号</span>：<span class = "italic">\{</span> ：$\{$</div>
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 23px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55">▪</span>&nbsp<span class = "strong">双竖线</span>：<span class = "italic">\Vert</span> ：$\Vert$</div>
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 23px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55">▪</span>&nbsp<span class = "strong">更好看的尖括号</span>：<span class = "italic">\langle x \rangle</span> ：$\langle x \rangle$ </div>
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 23px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55">▪</span>&nbsp<span class = "strong">向上取整</span>：<span class = "italic">\lceil x \rceil</span> ：$\lceil x \rceil$</div>
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 23px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55">▪</span>&nbsp<span class = "strong">向下取整</span>：<span class = "italic">\lfloor x \rfloor</span>： $\lfloor x \rfloor$</div>
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 23px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55">▪</span>&nbsp<span class = "strong">括号的自动调整</span>：<span class = "italic">\left(  ... \right)</span></div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 53px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55">▪</span>&nbsp例如，<span class = "italic">\frac{\sqrt x}{y^3}</span> ：$(\frac{\sqrt x}{y^3})$ ，括号看起来很奇怪，<span class = "italic">\left(\frac{\sqrt x}{y^3}\right)</span>： $\left(\frac{\sqrt x}{y^3}\right)$</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 53px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55">▪</span>&nbsp例如，<span class = "italic">\frac{\sqrt x}{y^3}</span> ：$(\frac{\sqrt x}{y^3})​$ ，括号看起来很奇怪，<span class = "italic">\left(\frac{\sqrt x}{y^3}\right)</span>： $\left(\frac{\sqrt x}{y^3}\right)​$</div>
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 53px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55">▪</span>&nbsp疯狂的括号套括号 <span class = "italic">\Biggl(\biggl(\Bigl(\bigl((x)\bigr)\Bigr)\biggr)\Biggr)</span>：$\Biggl(\biggl(\Bigl(\bigl((x)\bigr)\Bigr)\biggr)\Biggr)$</div>
-                <div class = "h3" id = "4">常用运算运算符号</div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 23px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55">▪</span>&nbsp<span class = "strong">大小关系</span>：<span class = "italic">\lt \gt \le \ge \neq</span>：$\lt \; \gt \; \le \; \ge \; \neq$</div>
+                <div class = "h3" id = "11">常用运算运算符号</div>
+                <div class = "normal" style = "margin: 10px 0px 10px 0px; padding-left: 23px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55">▪</span>&nbsp<span class = "strong">大小关系</span>：<span class = "italic">\lt \gt \le \ge \neq</span>：$\lt \; \gt \; \le \; \ge \; \neq$</div>
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 53px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55">▪</span>&nbsp可以在前面添加 <span class = "italic">\not</span>：<span class = "italic">\not\lt</span>：$\not\lt$，但并不优美</div>
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 23px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55">▪</span>&nbsp<span class = "strong">四则运算</span>：<span class = "italic">\times \div \pm \mp \cdot</span>： $\times \; \div \; \pm \; \mp \; \cdot$</div>
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 23px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55">▪</span>&nbsp<span class = "strong">集合</span>：</div>
@@ -154,14 +240,14 @@
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 23px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55">▪</span>&nbsp<span class = "strong">根号</span>：<span class = "italic">\sqrt{x^3}</span>：$\sqrt{x^3}$</div>
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 53px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55">▪</span>&nbsp<span class = "italic">\sqrt[3]{\frac xy}</span>：$\sqrt[3]{\frac xy}$</div>
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 23px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55">▪</span>&nbsp<span class = "strong">极限</span>：<span class = "italic">\lim{x\to 0}</span>：$\lim_{x\to 0}​$</div>
-                <div class = "h3" id = "5">表达式符号</div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 23px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55">▪</span>&nbsp<span class = "strong">箭头</span>：<span class = "italic">\to \rightarrow \leftarrow \Rightarrow \Leftarrow \mapsto</span>： $\to \rightarrow \leftarrow \Rightarrow \Leftarrow \mapsto$</div>
+                <div class = "h3" id = "12">表达式符号</div>
+                <div class = "normal" style = "margin: 10px 0px 10px 0px; padding-left: 23px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55">▪</span>&nbsp<span class = "strong">箭头</span>：<span class = "italic">\to \rightarrow \leftarrow \Rightarrow \Leftarrow \mapsto</span>： $\to \rightarrow \leftarrow \Rightarrow \Leftarrow \mapsto$</div>
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 23px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55">▪</span>&nbsp<span class = "italic">\land \lor \lnot \forall \exists \top \bot \vdash \vDash</span>：$\land \lor \lnot \forall \exists \top \bot \vdash \vDash$</div>
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 23px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55">▪</span>&nbsp<span class = "italic">\star \ast \oplus \circ \bullet</span>：$\star \ast \oplus \circ \bullet$</div>
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 23px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55">▪</span>&nbsp<span class = "strong">等号</span>：<span class = "italic">\approx \sim \simeq \cong \equiv \prec \lhd \therefore</span>：$\approx \sim \simeq \cong \equiv \prec \lhd \therefore$</div>
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 53px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55">▪</span>&nbsp取模恒等：<span class = "italic">a \equiv b\pmod n</span>：$a \equiv b\pmod n$</div>
-                <div class = "h3" id = "6">其他符号</div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 23px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55">▪</span>&nbsp<span class = "italic">\chi \infty \aleph_0</span>：$\chi \; \infty \; \aleph_0$</div>
+                <div class = "h3" id = "13">其他符号</div>
+                <div class = "normal" style = "margin: 10px 0px 10px 0px; padding-left: 23px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55">▪</span>&nbsp<span class = "italic">\chi \infty \aleph_0</span>：$\chi \; \infty \; \aleph_0$</div>
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 23px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55">▪</span>&nbsp<span class = "italic">\nabla \partial</span>：$\nabla \partial$</div>
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 23px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55">▪</span>&nbsp<span class = "italic">\Im \Re</span>：$\Im \Re$</div>
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 23px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55">▪</span>&nbsp<span class = "italic">\ldots</span>：$\ldots$</div>
@@ -171,10 +257,10 @@
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 23px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55">▪</span>&nbsp<span class = "italic">\hat{xx}</span>：$\hat{x}$，<span class = "italic">\widehat{xy}</span>：$\widehat{xy}$，<span class = "italic">\bar{}</span>，$\bar{x}$，，<span class = "italic">\overline{xyz}</span>：$\overline{xyz}$，</div>
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 23px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55">▪</span>&nbsp<span class = "italic">\vec{x}</span>：$\vec{x}$，<span class = "italic">\overrightarrow{xy}</span>：$\overrightarrow{xy}$，<span class = "italic">\overleftrightarrow{xy}</span>：$\overleftrightarrow{xy}$，<span class = "italic">\dot{x}</span>：$\dot{x}$，<span class = "italic">\ddot{x}</span>：$\ddot{x}$</div>
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 23px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55">▪</span>&nbsp<span class = "italic">\flat \sharp</span>：$\flat \quad \sharp$</div>
-                <div class = "h2" id = "7">格式</div><div id = "hUnderline"></div>
-                <div class = "h3" id = "8">常用表达格式</div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 23px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55">▪</span>&nbsp<span class = "italic">\text{…}</span> 文字说明：$\{x \in s | \text{x is extra large}\}$</div>
-                <div class = "h3" id = "9">矩阵</div>
+                <div class = "h2" id = "14">格式</div>
+                <div class = "h3" id = "15">常用表达格式</div>
+                <div class = "normal" style = "margin: 10px 0px 10px 0px; padding-left: 23px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55">▪</span>&nbsp<span class = "italic">\text{…}</span> 文字说明：$\{x \in s | \text{x is extra large}\}$</div>
+                <div class = "h3" id = "16">矩阵</div>
                 <div class = "normal"><span class = "strong">注意</span>：块级公式记得用 <span class = "emphasis">\\</span> 表示换行</div>
                 <pre><code class = "nohighlight">
 \begin{matrix}
@@ -191,7 +277,7 @@ $$
     1 & z & z^2 \\
 \end{matrix}
 $$
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 23px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55">▪</span>&nbsp还有跟多的括号形式：<span class = "emphasis">pmatrix</span>, <span class = "emphasis">bmatrix</span>, <span class = "emphasis">Bmatrix</span>, <span class = "emphasis">vmatrix</span>, <span class = "emphasis">Vmatrix</span></div>
+                <div class = "normal" style = "margin: 10px 0px 10px 0px; padding-left: 23px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55">▪</span>&nbsp还有跟多的括号形式：<span class = "emphasis">pmatrix</span>, <span class = "emphasis">bmatrix</span>, <span class = "emphasis">Bmatrix</span>, <span class = "emphasis">vmatrix</span>, <span class = "emphasis">Vmatrix</span></div>
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 53px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55">▪</span>&nbsp效果：$\begin{pmatrix}1 & x & x^2 \\1 & y & y^2 \\1 & z & z^2 \\\end{pmatrix}$, $\begin{bmatrix}1 & x & x^2 \\1 & y & y^2 \\1 & z & z^2 \\\end{bmatrix}$, $\begin{Bmatrix}1 & x & x^2 \\1 & y & y^2 \\1 & z & z^2 \\\end{Bmatrix}$, $\begin{vmatrix}1 & x & x^2 \\1 & y & y^2 \\1 & z & z^2 \\\end{vmatrix}$, $\begin{Vmatrix}1 & x & x^2 \\1 & y & y^2 \\1 & z & z^2 \\\end{Vmatrix}$</div>
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 23px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55">▪</span>&nbsp使用 <span class = "emphasis">cdots</span>, $\cdots$, <span class = "emphasis">\ddots</span>, $\ddots$, <span class = "emphasis">\vdots</span>, $\vdots$ 来表示省略内容：</div>
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 53px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55">▪</span>&nbsp效果：</div>
@@ -203,7 +289,7 @@ $$
     1 & a_{m} & a_{m}^{2} & \cdots & a_{m}^{n} \\
 \end{pmatrix}
 $$
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 23px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55">▪</span>&nbsp代码分块（垂直）：<span class = "emphasis">{cc | ccc}</span></div>
+                <div class = "normal" style = "margin: 10px 0px 10px 0px; padding-left: 23px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55">▪</span>&nbsp代码分块（垂直）：<span class = "emphasis">{cc | ccc}</span></div>
                 <pre><code class = "nohighlight">
 \left[
 \begin{array}{cc|c}
@@ -212,7 +298,7 @@ $$
 \end{array}
 \right]
                 </code></pre>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 23px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55">▪</span>&nbsp效果：</div>
+                <div class = "normal" style = "margin: 10px 0px 10px 0px; padding-left: 23px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55">▪</span>&nbsp效果：</div>
 $$
 \left[
 \begin{array}{cc|c}
@@ -222,7 +308,7 @@ $$
 \right]
 $$
                 <br>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 23px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55">▪</span>&nbsp代码分块（水平）</div>
+                <div class = "normal" style = "margin: 10px 0px 10px 0px; padding-left: 23px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55">▪</span>&nbsp代码分块（水平）</div>
                 <pre><code class = "nohighlight">
 \begin{pmatrix}
 a & b\\
@@ -232,7 +318,7 @@ c & d\\
 0 & 1
 \end{pmatrix}
                 </code></pre>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 23px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55">▪</span>&nbsp效果：</div>
+                <div class = "normal" style = "margin: 10px 0px 10px 0px; padding-left: 23px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55">▪</span>&nbsp效果：</div>
 $$
 \begin{pmatrix}
     a & b\\
@@ -243,12 +329,12 @@ $$
   \end{pmatrix}
 $$
                 <br>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 23px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55">▪</span>&nbsp小号矩阵：</div>
+                <div class = "normal" style = "margin: 10px 0px 10px 0px; padding-left: 23px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55">▪</span>&nbsp小号矩阵：</div>
                 <pre><code class = "nohighlight">
 $\bigl(\begin{smallmatrix} ... \end{smallmatrix}\bigr)$
                 </code></pre>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 23px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55">▪</span>&nbsp效果： $\bigl( \begin{smallmatrix} a & b \\ c & d \end{smallmatrix} \bigr)$</div>
-                <div class = "h3" id = "10">对齐</div>
+                <div class = "normal" style = "margin: 10px 0px 10px 0px; padding-left: 23px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55">▪</span>&nbsp效果： $\bigl( \begin{smallmatrix} a & b \\ c & d \end{smallmatrix} \bigr)$</div>
+                <div class = "h3" id = "17">对齐</div>
                 <pre><code class = "nohighlight">
 \begin{align}
 \sqrt{37} & = \sqrt{\frac{73^2-1}{12^2}} \\
@@ -259,7 +345,7 @@ $\bigl(\begin{smallmatrix} ... \end{smallmatrix}\bigr)$
 \end{align}
                 </code></pre>
                 <br>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 23px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55">▪</span>&nbsp效果：</div>
+                <div class = "normal" style = "margin: 10px 0px 10px 0px; padding-left: 23px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55">▪</span>&nbsp效果：</div>
 $$
 \begin{align}
 \sqrt{37} & = \sqrt{\frac{73^2-1}{12^2}} \\
@@ -296,7 +382,7 @@ $$
 =f(n)
                 </code></pre>
                 <br>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 23px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55">▪</span>&nbsp效果：</div>
+                <div class = "normal" style = "margin: 10px 0px 10px 0px; padding-left: 23px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55">▪</span>&nbsp效果：</div>
 $$
 \left.
 \begin{array}{l}
@@ -307,16 +393,16 @@ $$
 =f(n)
 $$
                 <br>
-                <div class = "h2" id = "11">体</div><div id = "hUnderline"></div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 23px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55">▪</span>&nbsp空心：<span class = "emphasis">\mathbb</span> $\mathbb{ABCDEFGHIJKLMNOPQRSTUVWXYZas}$</div>
+                <div class = "h2" id = "18">字体</div>
+                <div class = "normal" style = "margin: 10px 0px 10px 0px; padding-left: 23px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55">▪</span>&nbsp空心：<span class = "emphasis">\mathbb</span> $\mathbb{ABCDEFGHIJKLMNOPQRSTUVWXYZas}$</div>
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 23px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55">▪</span>&nbsp特技加粗：<span class = "emphasis">\mathbf</span> $\mathbf{ABCDEFGHIJKLMNOPQRSTUVWXYZ}$</div>
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 23px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55">▪</span>&nbsp老式打字机：<span class = "emphasis">\mathtt</span> $\mathtt{ABCDEFGHIJKLMNOPQRSTUVWXYZ}$</div>
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 23px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55">▪</span>&nbsp罗马文字：<span class = "emphasis">\mathrm</span> $\mathrm{ABCDEFGHIJKLMNOPQRSTUVWXYZ}$</div>
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 23px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55">▪</span>&nbsp无衬线：<span class = "emphasis">\mathsf</span> $\mathsf{ABCDEFGHIJKLMNOPQRSTUVWXYZ}$</div>
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 23px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55">▪</span>&nbsp书法：<span class = "emphasis">\mathcal</span> $\mathcal{ABCDEFGHIJKLMNOPQRSTUVWXYZ}$</div>
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 23px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55">▪</span>&nbsp花体：<span class = "emphasis">\mathscr</span> $\mathscr{ABCDEFGHIJKLMNOPQRSTUVWXYZ}$</div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 23px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55">▪</span>&nbsp老式德国字体：<span class = "emphasis">\mathfrak</span> $\mathfrak{ABCDEFGHIJKLMNOPQRSTUVWXYZ}$
-</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 23px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55">▪</span>&nbsp老式德国字体：<span class = "emphasis">\mathfrak</span> $\mathfrak{ABCDEFGHIJKLMNOPQRSTUVWXYZ}$</div>
+                <a href = "http://detexify.kirelabs.org/classify.html" class = "conncetion"><i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp&nbsp&nbsp手绘你想输入的符号</a>
 
                 </div>
                 <div id = "disqus_thread"></div>  

@@ -98,6 +98,8 @@ class makeHTML:
         isItalic = False
         isStrike = False
         isEmphasis = False
+        myStr = myStr.replace(">", "&gt;")
+        myStr = myStr.replace("<", "&lt;")
         newS = ''
         mLen = len(myStr)
         i = 0
@@ -114,6 +116,7 @@ class makeHTML:
             listMargin = '-12'
         else:
             listMargin = '10'
+        
         if mLen > spaceLen + 2 and myStr[spaceLen : spaceLen + 2] == '- ':
             newS += '''<div class = "normal" style = "margin: %spx 0px 10px 0px; padding-left: %spx; text-indent: -22px;">''' % (listMargin, str(spaceLen * 15 + 23))
             self.isEnterList = 1
@@ -134,12 +137,22 @@ class makeHTML:
             self.isEnterList = 0
 
         isMath = 0
+        strSearch = re.search(r'\[.+\]\(.+\)', myStr)
+        if strSearch != None:
+            temp = strSearch.group()
+            content = re.search(r'\[.+\]', temp).group()
+            href = re.search(r'\(.+\)', temp).group()
+            temp = '''<a href = "%s" class = "conncetion"><i class="fa fa-paper-plane" aria-hidden="true" ></i>%s</a>''' % (href[1 : -2], content[1 : -2])
+            myStr = re.sub(r'\[.+\]\(.+\)', temp, myStr)
+        
+        mLen = len(myStr)
         while i < mLen:
             ch = myStr[i]
             if ch == ' ':
                 newS += ' '
             elif ch == '$':
-                isMath = 1 - isMath
+                if myStr[i - 1] != '\\':
+                    isMath = 1 - isMath
                 newS += '$'
             elif ch == '*' and isMath == 0:
                 if i + 1 < mLen and myStr[i + 1] == '*':
@@ -271,6 +284,7 @@ class makeHTML:
         while i < pLen:
             line = self.Paragraph[i]
             lLen = len(line)
+            isNormal = 0
             if lLen > 3 and line[:3] == '```':
                 if(lLen > 4):
                     blogContent += '''                <pre><code class = "%s">''' % (line[3 : -1]).replace('<', '&lt;').replace('>', '&gt;') + '\n'
@@ -300,13 +314,13 @@ class makeHTML:
                 blogContent += '''                <div class = "h5">''' + line[6 : -1].replace(' ', '&nbsp&nbsp') + '''</div>''' + '\n'
             elif lLen > 4 and line[:4] == '####':
                 tempOrder += 1
-                blogContent += '''                <div class = "h4" id = "%s"><div class = "h4Underline"></div>''' % (tempOrder) + line[5 : -1].replace(' ', '&nbsp&nbsp') + '''</div>''' + '\n'
+                blogContent += '''                <div class = "h4" id = "%s">''' % (tempOrder) + line[5 : -1].replace(' ', '&nbsp&nbsp') + '''</div>''' + '\n'
             elif lLen > 3 and line[:3] == '###':
                 tempOrder += 1
                 blogContent += '''                <div class = "h3" id = "%s">''' % (tempOrder) + line[4 : -1].replace(' ', '&nbsp&nbsp') + '''</div>''' + '\n'
             elif lLen > 2 and line[:2] == '##':
                 tempOrder += 1
-                blogContent += '''                <div class = "h2" id = "%s">''' %(tempOrder) + line[3 : -1].replace(' ', '&nbsp&nbsp') + '''</div><div id = "hUnderline"></div>''' + '\n'
+                blogContent += '''                <div class = "h2" id = "%s">''' %(tempOrder) + line[3 : -1].replace(' ', '&nbsp&nbsp') + '''</div>''' + '\n'
             elif lLen > 1 and line[:1] == '#':
                 pass
                 #outFIle.write('''                <div class = "h1">''' + line[1 : -1] + '''</div>''' + '\n')
@@ -363,6 +377,9 @@ class makeHTML:
                 blogContent += '                ' + self.getInform(line[:-1]) + '\n'
                 #blogContent += '''                <br>''' + '\n'
                 isQuote = False
+                isNormal = 1
+            if isNormal == 0:
+                self.isEnterList = 0
             i += 1
         
         blogHtml = blogHtml.replace('((content))', blogContent)
