@@ -3,7 +3,7 @@
     width: 100%;
     background-color: rgba(0, 0, 0, 0.8);
     z-index: 9997;
-    cursor: url("../img/icon/bigger2.cur"), auto;
+    cursor: zoom-out;
 }
 
 @font-face {
@@ -189,24 +189,25 @@ div.articleContext {
 }
 
 div.articleBorder {
-    /* box-shadow: 1px 1px 20px 5px rgba(0,0,0,0.03), 1px 1px 30px 7px rgba(0,0,0,0.02); */
+    box-shadow: 0px 0px 30px 1px rgba(0,0,0,0.07);
     margin: auto;
-    width: 60%;
-    padding: 30px 60px 100px 60px;
+    width: 70%;
+    padding: 100px 150px 100px 150px;
     border-radius: 0px;
     background-color: white;
-    color: #555;
-    font-size: 20px;
+    color: #494949;
+    font-size: 19px;
     font-family: sans-serif;
 }
 
 div.h2 {
-    font-size: 45px;
+    font-size: 40px;
     color: #333;
     text-align: center;
     margin: 0px;
     width: 100%;
-    font-weight: bold;
+    font-family: 'Noto Sans SC', sans-serif;
+    font-weight: 500;
     margin-top: 100px;
     margin-bottom: 30px;
 }
@@ -228,7 +229,7 @@ div.h2 {
 
 div.h3 {
     font-family: 'Times New Roman', Times, serif;
-    font-size: 35px;
+    font-size: 33px;
     color: #444;
     font-style: italic;
     text-align: center;
@@ -238,27 +239,25 @@ div.h3 {
 }
 
 .h3::before {
-    content: "§. ";
-    color: #35b8b1;
+    content: "";
+    color: #BEA078;
 }
 
 div.h4 {
     position: relative;
     font-size: 30px;
-    margin-top: 30px;
+    margin-top: 35px;
     margin-bottom: 15px;
-    font-weight: bold;
-    /* width: max-content; */
-    color: #555;
-    /* border-left: 5px solid #333; */
+    font-family: 'Noto Sans SC', sans-serif;
+    font-weight: 500;
+    color: #333;
     border-radius: 0px 5px 5px 0px;
-    /* padding: 0px 0px 0px 23px; */
 }
 
-.h4::before {
-    content: "¶ ";
+.h4::after {
+    content: "";
     font-size: 30px;
-    color: #38aaa4;
+    color: #BEA078;
 }
 
 /* .h4Underline {
@@ -271,39 +270,32 @@ div.h4 {
 } */
 
 div.h5 {
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Noto Sans SC', sans-serif;
     font-size: 25px;
-    color: #555;
-    font-weight: bold;
-    margin-top: 25px;
-    margin-bottom: 5px;
+    color: #656565;
+    font-weight: 500;
+    margin-top: 30px;
+    margin-bottom: 15px;
     border-radius: 0px 5px 5px 0px;
     min-height: 25px; 
 }
 
 #quoteIcon {
-    margin-right: 30px;
+    margin-right: 40px;
+}
+
+.quote, .quoteAgain {
+    color: #555;
+    margin: 30px 0px 30px 0px;
+    padding: 0px 90px 0px 70px;
+    width: 100%;
+    font-family: 'Noto Sans SC', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
 }
 
 div.quote {
-    /*background-image: url("../img/icon/quote.png");
-    background-repeat: no-repeat;
-    background-position-x: 0px;
-    background-position-y: 0px;
-    background-size: 3%;
-    border-left: 2px solid #aaaaaa;*/
-    color: #888888;
-    margin: 30px 0px 30px 0px;
-    text-indent: -30px;
-    padding-left: 70px;
-    width: 100%;
-}
-
-div.quoteAgain {
-    color: #888888;
-    margin: 30px 0px 30px 0px;
-    padding-left: 70px;
-    width: 100%;
+    text-indent: -40px;
 }
 
 div.normal {
@@ -312,14 +304,18 @@ div.normal {
     margin-top: -3px;
     padding: 2px 0px 2px 0px;
     width: 100%;
-    font-family: 'Times New Roman', Times, serif;
-    font-weight: lighter;
+    font-weight: 300;
+    font-family: 'Noto Sans SC', sans-serif;
     /* font-weight: lighter; */
 }
 
 span.strong {
-    font-weight: bold;
-    color: #333;
+    font-weight: 500;
+    color: #555;
+}
+
+.mjx-chtml {
+    margin: 7px 0px 7px 0px!important;
 }
 
 span.italic {
@@ -341,13 +337,13 @@ span.strike {
 span.emphasis {
     margin: 0px 3px 0px 3px;
     padding: 0px 5px 0px 5px;
-    border: 1px solid rgba(100, 100, 100, 0.7);
+    border: 1px solid #ccc;
     background-color: #fbfbfb;
     border-radius: 5px;
 }
 
 a.conncetion {
-    padding: 3px 10px 3px 10px;
+    padding: 3px 10px 2px 10px;
     color: rgb(41, 144, 192);
     border-radius: 5px;
     font-family: sans-serif;
@@ -364,7 +360,7 @@ a.conncetion:hover {
 
 .fa-paper-plane {
     margin-right: 10px;
-    font-size: 19px;
+    font-size: 17px;
 }
 
 pre.codeBlock {
@@ -383,7 +379,7 @@ img.blogImg {
     margin-top: 20px;
     margin-bottom: 20px;
     /* padding-top: 30px; */
-    cursor: url("../img/icon/bigger2.cur"), auto;
+    cursor: zoom-in;
 }
 
 a.noStyle {

@@ -11,6 +11,7 @@
         <link rel = "stylesheet" href = "../css/home.css">
         <link rel = "stylesheet" href = "../css/blog.css">
         <link rel = "stylesheet" href = "../css/index.css">
+        <link href="https://fonts.googleapis.com/css?family=Noto+Sans+SC:300,500" rel="stylesheet">
         <!-- <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css"> -->
 
         <link rel = "icon" href = "../img/icon/favicon.ico" mce_href = "../img/icon/favicon.ico" type = "image/x-icon">
@@ -108,7 +109,7 @@
                         </div>
                     </div>
                 <div class = "articleBorder">
-                                    <div class = "quote"><i class = "fa fa-quote-left fa-1x fa-pull-left" aria-hidden = "true" id = "quoteIcon"></i>Github&nbsp&nbsp是一个静态网页，所以不能用例如&nbsp&nbspPython、PHP&nbsp&nbsp等动态语言。其实网上有很多优秀的静态网页生成器：Jekyll，Hugo，Hexo，Hitbook，Gatsby&nbsp&nbsp等等。但为了学习&nbsp&nbspHTML、CSS、JavaScript&nbsp&nbsp等前端语言，于是决定自动动手写写。以下总结了一些功能的实现。</div>
+                                    <div class = "quote"><i class = "fa fa-quote-left fa-1x fa-pull-left" aria-hidden = "true" id = "quoteIcon"></i>Github 是一个静态网页，所以不能用例如 Python、PHP 等动态语言。其实网上有很多优秀的静态网页生成器：Jekyll，Hugo，Hexo，Hitbook，Gatsby 等等。但为了学习 HTML、CSS、JavaScript 等前端语言，于是决定自动动手写写。以下总结了一些功能的实现。</div>
                 <div class = "h2" id = "1">Algolia&nbsp&nbsp实现搜索功能</div>
                 <div class = "normal">由于静态网页，无法使用动态语言进行对数据库内容的读取，直接搜索 HTML 文件似乎又不太方便，于是我选择了一个通过 SaaS 模式提供的搜索的 <span class = "emphasis">Algolia</span>.</div>
                 <a href = "https://www.algolia.com/" class = "conncetion"><i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp&nbsp&nbspAlgolia | Fast, Reliable and Modern Search and Discovery</a>
@@ -122,9 +123,9 @@
 $$
 ^{（图一）}
 $$
-                <div class = "normal" style = "margin: 10px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">1.</span>Application ID，新建 Apps 时会随机给一个（新建的时候需要你选择一个 main region，中国选择香港即可，延迟比较低）</div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">2.</span>Apps 中一个 Index 的名字，这个 Index 也是你自己建立的</div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">3.</span>你上传的内容，上传以 object 为一个单位，每个 object 中都有你设定的键值对，启用搜索时，通过键值对来获得你需要的搜索结果。</div>
+                <div class = "normal" style = "margin: 5px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">1.</span>Application ID，新建 Apps 时会随机给一个（新建的时候需要你选择一个 main region，中国选择香港即可，延迟比较低）</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">2.</span>Apps 中一个 Index 的名字，这个 Index 也是你自己建立的</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">3.</span>你上传的内容，上传以 object 为一个单位，每个 object 中都有你设定的键值对，启用搜索时，通过键值对来获得你需要的搜索结果。</div>
                 <div class = "h4" id = "3">上传你的数据</div>
                 <div class = "normal">我使用的 Python 来上传的数据（还可以手动添加数据，或者手动上传 json 文件添加数据）。</div>
                 <a href = "https://www.algolia.com/doc/api-reference/" class = "conncetion"><i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp&nbsp&nbsp你可以选择其他的语言来上传</a>
@@ -140,9 +141,9 @@ client = algoliasearch.Client("Application ID", 'Admin API Key')
 index = client.init_index('index_name')
                 </code></pre>
                 <div class = "normal">Dashboard 中点击 API keys 就能获得上面需要的信息。</div>
-                <div class = "normal" style = "margin: 10px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">1.</span>Application ID：每一个 Apps 的认证编码，This is your unique application identifier. It's used to identify you when using Algolia's API</div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">2.</span>Admin API Key：管理数据的秘钥，与 Search-Only API Key 不同，Search-Only 只能查询不能修改。</div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #d94e55">3.</span>index_name：图一中的编号 2，就是 index_name。</div>
+                <div class = "normal" style = "margin: 5px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">1.</span>Application ID：每一个 Apps 的认证编码，This is your unique application identifier. It's used to identify you when using Algolia's API</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">2.</span>Admin API Key：管理数据的秘钥，与 Search-Only API Key 不同，Search-Only 只能查询不能修改。</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">3.</span>index_name：图一中的编号 2，就是 index_name。</div>
                 <div class = "h5">正式上传数据</div>
                 <a href = "https://www.algolia.com/doc/api-client/indexing/" class = "conncetion"><i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp&nbsp&nbsp上传数据的官方文档</a>
                 <div class = "normal">常用的 API 一共有三种，Add（增加），Delete（删除），Update（更新），由于 objectID 的存在，其实用不上 Update，接下来会解释。</div>

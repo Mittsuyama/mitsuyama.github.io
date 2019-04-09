@@ -26,21 +26,6 @@ function cmp(a, b) {
 
 if($(window).width() >= 800) {
     $(document).ready(function() {
-        /*
-        var title2s = document.getElementsByClassName("h2");
-        var title3s = document.getElementsByClassName("h3");
-        for(var i = 0; i < title2s.length; i++) {
-            titleList.push($(title2s[i]).offset().top);
-        }
-        for(var i = 0; i < title3s.length; i++) {
-            titleList.push($(title3s[i]).offset().top);
-        }
-        titleList.sort(cmp);
-        for(var i = 0; i < titleList.length; i++) {
-            alert(titleList[i]);
-        }
-        */
-
         $('#shareBigBox').hide();
         shareBoxShow = 0;
         $('body').css("zoom", screenWidthRate);
@@ -131,20 +116,6 @@ if($(window).width() >= 800) {
             //监视滚动
             $(window).scroll(function(event){
                 if($(window).scrollTop() > minScrollTop) {
-                    /*
-                    var nowScroll = $(window).scrollTop();
-                    if(nowScroll > lastScroll + 20 && homeShow) {
-                        homeShow = false;
-                        $(".nevigation").slideUp(400);
-                    }
-                    if(nowScroll < lastScroll - 20 && !homeShow) {
-                        homeShow = true;
-                        $(".nevigation").slideDown(400);
-                    }
-                    setTimeout(function(){
-                        lastScroll = nowScroll;
-                    }, 0);
-                    */
                     $('.contentListOut').show();
                     // $('.funButtonBox').show();
                 }

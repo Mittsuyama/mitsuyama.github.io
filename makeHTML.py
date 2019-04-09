@@ -98,8 +98,8 @@ class makeHTML:
         isItalic = False
         isStrike = False
         isEmphasis = False
-        myStr = myStr.replace(">", "&gt;")
-        myStr = myStr.replace("<", "&lt;")
+        # myStr = myStr.replace(">", "&gt;")
+        # myStr = myStr.replace("<", "&lt;")
         newS = ''
         mLen = len(myStr)
         i = 0
@@ -115,35 +115,28 @@ class makeHTML:
         if self.isEnterList == 1:
             listMargin = '-12'
         else:
-            listMargin = '10'
+            listMargin = '5'
         
         if mLen > spaceLen + 2 and myStr[spaceLen : spaceLen + 2] == '- ':
             newS += '''<div class = "normal" style = "margin: %spx 0px 10px 0px; padding-left: %spx; text-indent: -22px;">''' % (listMargin, str(spaceLen * 15 + 23))
             self.isEnterList = 1
             i = spaceLen + 2
-            newS += '''<span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #d94e55">▪</span>&nbsp'''
+            newS += '''<span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #333">▪</span>&nbsp'''
         elif mLen > spaceLen + 3 and myStr[spaceLen + 1 : spaceLen + 3] == '. ':
             newS += '''<div class = "normal" style = "margin: %spx 0px 10px 0px; padding-left: %spx; text-indent: -25px;">''' % (listMargin, str(spaceLen * 15 + 26))
             self.isEnterList = 1
             i = spaceLen + 3
-            newS += '''<span class = "myList" style = "color: #d94e55">%s.</span>''' % (myStr[spaceLen])
+            newS += '''<span class = "myList" style = "color: #333">%s.</span>''' % (myStr[spaceLen])
         elif mLen > spaceLen + 4 and myStr[spaceLen + 2 : spaceLen + 4] == '. ':
             newS += '''<div class = "normal" style = "margin: %spx 0px 10px 0px; padding-left: %spx; text-indent:-25px;">''' % (listMargin, str(spaceLen * 15 + 26))
             self.isEnterList = 1
             i = spaceLen + 4
-            newS += '''<span class = "myList" style = "color: #d94e55">%s.</span>''' % (myStr[spaceLen : spaceLen + 2])
+            newS += '''<span class = "myList" style = "color: #333">%s.</span>''' % (myStr[spaceLen : spaceLen + 2])
         else:
             newS += '''<div class = "normal">'''
             self.isEnterList = 0
 
         isMath = 0
-        strSearch = re.search(r'\[.+\]\(.+\)', myStr)
-        if strSearch != None:
-            temp = strSearch.group()
-            content = re.search(r'\[.+\]', temp).group()
-            href = re.search(r'\(.+\)', temp).group()
-            temp = '''<a href = "%s" class = "conncetion"><i class="fa fa-paper-plane" aria-hidden="true" ></i>%s</a>''' % (href[1 : -2], content[1 : -2])
-            myStr = re.sub(r'\[.+\]\(.+\)', temp, myStr)
         
         mLen = len(myStr)
         while i < mLen:
@@ -193,10 +186,22 @@ class makeHTML:
                     newS += '''</span>'''
                     isStrike = False
                     i += 1
+            elif ch == '>':
+                newS += "&gt;"
+            elif ch == '<':
+                newS += "&lt;"
             else:
                 newS += ch
             i += 1
         
+        strSearch = re.search(r'\[.+\]\(.+\)', newS)
+        if strSearch != None:
+            temp = strSearch.group()
+            content = re.search(r'\[.+\]', temp).group()
+            href = re.search(r'\(.+\)', temp).group()
+            temp = '''<a href = "%s" class = "conncetion"><i class="fa fa-paper-plane" aria-hidden="true" ></i>%s</a>''' % (href[1 : -1], content[1 : -1])
+            newS = re.sub(r'\[.+\]\(.+\)', temp, newS)
+
         newS += '''</div>'''
         return newS
 
@@ -326,9 +331,9 @@ class makeHTML:
                 #outFIle.write('''                <div class = "h1">''' + line[1 : -1] + '''</div>''' + '\n')
             elif lLen > 1 and line[:1] == '>':
                 if isQuote:
-                    blogContent += '''                <div class = "quoteAgain">''' + line[2 : -1].replace(' ', '&nbsp&nbsp') + '''</div>''' + '\n'
+                    blogContent += '''                <div class = "quoteAgain">''' + line[2 : -1] + '''</div>''' + '\n'
                 else:
-                    blogContent += '''                <div class = "quote"><i class = "fa fa-quote-left fa-1x fa-pull-left" aria-hidden = "true" id = "quoteIcon"></i>''' + line[2 : -1].replace(' ', '&nbsp&nbsp') + '''</div>''' + '\n'
+                    blogContent += '''                <div class = "quote"><i class = "fa fa-quote-left fa-1x fa-pull-left" aria-hidden = "true" id = "quoteIcon"></i>''' + line[2 : -1] + '''</div>''' + '\n'
                     isQuote = True
             elif lLen > 3 and line[:3] == 'Tag':
                 if i + 1 < lLen and self.Paragraph[i + 1] == '\n':
