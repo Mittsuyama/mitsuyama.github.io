@@ -157,13 +157,15 @@ class makeHTML:
                         newS += '''</span>'''
                         isStrong = False
                         i += 1
-                else:
+                elif i + 1 < mLen and myStr[i + 1] != ' ':
                     if not isItalic:
                         newS += '''<span class = "italic">'''
                         isItalic = True
                     else:
                         newS += '''</span>'''
                         isItalic = False
+                else:
+                    newS += '*'
             elif isMath == 0 and ch == '<' and i + 2 < mLen and myStr[i + 1] == 'u' and myStr[i + 2] == '>':
                 newS += '''<span class = "underline">'''
                 i += 2

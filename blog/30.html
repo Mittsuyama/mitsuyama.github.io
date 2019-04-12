@@ -35,7 +35,7 @@
             $youziku.draw();
         </script> -->
 
-        <title>MITSUYAMA | 计算机系统基础</title>
+        <title>计算机系统基础</title>
     </head>
     
     <body>
@@ -314,8 +314,8 @@ $$
                 <div class = "h5">乘法指令</div>
                 <div class = "normal"><span class = "strong">MUL</span> SRC（unsigned Multiple）无符号乘法指令</div>
                 <div class = "normal">操作：</div>
-                <div class = "normal" style = "margin: 5px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">1.</span>字操作：AX = AL <span class = "italic"> SRC</div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">2.</span>字节操作：(DX, AX) = AX <span class = "italic"> SRC</div>
+                <div class = "normal" style = "margin: 5px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">1.</span>字操作：AX = AL * SRC</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">2.</span>字节操作：(DX, AX) = AX * SRC</div>
                 <div class = "normal">注：</div>
                 <div class = "normal" style = "margin: 5px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">1.</span>目的数必须是累加器 AX 或者 AL，指令中不需要写出</div>
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">2.</span>SRC 可以是通用寄存器和各种寻址方式的存储器操作数，不能是立即数和段寄存器</div>
@@ -372,8 +372,64 @@ $$
                 <div class = "normal"><span class = "strong">RET</span> 子程序返回指令</div>
                 <div class = "normal">RET EXP：带立即数返回</div>
                 <div class = "h5">转移指令</div>
-                <div class = "normal">JUMP </div>
-                <div class = "h4" id = "19">中断指令</div>
+                <div class = "normal"><span class = "strong">JUMP</span> 无条件转移指令</div>
+                <br>
+                <div class = "normal"><span class = "strong">JZ / JNZ</span> ORP（Jump if zero, or zero）：结果为零（或不为零）则转移，利用零标志 <span class = "strong">ZF</span></div>
+                <div class = "normal"><span class = "strong">JE / JNE</span> OPR（Jump if equal, or not equal）：结果相等（或者不相等）则转移，利用零标志 <span class = "strong">ZF</span></div>
+                <div class = "normal"><span class = "strong">JS / JNS</span> OPR（Jump if sign, or not sign）：结果为负（或正）则转移，利用符号标志 <span class = "strong">SF</span></div>
+                <div class = "normal"><span class = "strong">JO / JNO</span> OPR（Jump of overflow, or not overflow）：结果溢出（或不溢出）则转移，利用溢出标志 <span class = "strong">OF</span></div>
+                <div class = "normal"><span class = "strong">JP / JPE</span> OPR（Jump if parity, or parity even）：奇偶位为 1 则转移，利用奇偶标志 <span class = "strong">PF</span></div>
+                <div class = "normal"><span class = "strong">JNP / JPO</span> OPR（Jump if not parity, or parity odd）奇偶位为 0 则，转移，利用奇偶标志 <span class = "strong">PF</span></div>
+                <div class = "normal"><span class = "strong">JB / JNAE / JC</span> OPR（Jump if below, or not above equal, or carry）：低于，或者不高于或等于，或进位为 1 则转移，利用进位标志 <span class = "strong">CF</span>，判断结果是否进位或者借位</div>
+                <div class = "normal"><span class = "strong">JNB / JAE / JNC</span> OPR（Jump if not below, or above or equal, or not carry）：不低于，或者高于或等于，或者进位位为 0 则转移，利用进位标志 <span class = "strong">CF</span>，判断结果是否进位或者借位</div>
+                <div class = "h5">比较无符号的数</div>
+                <div class = "normal">无符号数的大小用高（Above）低（Below）表示</div>
+                <div class = "normal">利用 CF 确定高低、利用 ZF 标志确定想等（Equal）</div>
+                <div class = "normal" style = "margin: 5px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">1.</span>低于（不高于等于）：JB（JNAE）</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">2.</span>不低于（高于等于）：JNB（JAE）</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">3.</span>低于等于（不高于）：JBE（JNA）</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">4.</span>不低于等于（高于）：JNBE（JA）</div>
+                <div class = "h5">比较有符号数</div>
+                <div class = "normal">有符号数的大（Greater）小（Less）需要组合 OF、SF 标志，并利用 ZF 标志确定相等（Equal）</div>
+                <div class = "normal" style = "margin: 5px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">1.</span>小于（不大于等于）：JL（JNGE）</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">2.</span>不小于（大于等于）：JNL（JGE）</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">3.</span>小于等于（不大于）：JLE（JNG）</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">4.</span>不小于等于（大于）：JNLE（JG）</div>
+                <div class = "h5">其他控制转移指令</div>
+                <div class = "normal">LOOP：循环</div>
+                <div class = "normal">LOPPNE、LOOPE：条件循环</div>
+                <div class = "normal">JCXZ：寄存器 CX = 0 转移</div>
+                <div class = "normal">INT、INTO：中断</div>
+                <div class = "normal">IRET：中断返回</div>
+                <div class = "h4" id = "19">处理机控制指令</div>
+                <div class = "normal">CLC、CLD、CLI：清楚 CF、DF、IF 标志</div>
+                <div class = "normal">CMC：进位位 CF 求反</div>
+                <div class = "normal">STC、STD、STI：设置 CF、DF、IF 标志</div>
+                <div class = "normal">HLT：处理机暂停</div>
+                <div class = "normal">WAIT：等待状态</div>
+                <div class = "normal">ESC：将数据传送给协处理器（提供到地址 / 数据线上）</div>
+                <div class = "normal">LOCK：保证总线的控制</div>
+                <div class = "normal">NOP：无操作</div>
+                <div class = "h4" id = "20">操作数寻址方式</div>
+                <div class = "normal">指令由操作码和操作数组成，操作数是一个常数值 - 立即数，也可以在 CPU、内存、IO 端内（IN / OUT 指令）中</div>
+                <div class = "normal">操作数寻址方式有：</div>
+                <div class = "normal" style = "margin: 5px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">1.</span>立即数寻址：MOV EAX, 123456678H</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">2.</span>寄存器寻址：MOV EAX, EBX</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">3.</span>存储器寻址：MOV EAX, DS: [20000H]</div>
+                <div class = "normal">存储器寻址 SREG:D(Rb, Ri, S) 段寄存器可用默认，省略</div>
+                <div class = "normal" style = "margin: 5px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">1.</span>段址：[基地址 Rb + 变址 Ri * 比例因子 S + 偏移 D]，这三部分可以任意组合。32 位以上 CPU 才有比例因子（1 / 2 / 4 / 8）</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">2.</span>16 位 CPU：基址 BX / BP，变址 SI / DI。其他 CPU 变址不用 ESP 等。</div>
+                <div class = "h4" id = "21">存储器寻址</div>
+                <div class = "normal">其组合与我们高级语言编程时的各种类型与结构的全局变量、局部变量、参数的访问有关系。</div>
+                <div class = "normal" style = "margin: 5px 0px 10px 0px; padding-left: 23px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #333">▪</span>&nbsp直接寻址：MOV AX, [1000H]</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 23px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #333">▪</span>&nbsp寄存器间接寻址：MOV AX, [BX]</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 23px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #333">▪</span>&nbsp基址变址寻址：MOV AX, [BX + SI]</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 23px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #333">▪</span>&nbsp相对基址变址寻址：MOV AX, [BX + SI + 100]</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 23px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #333">▪</span>&nbsp比例寻址：32 / 64 位 CPU，变址不用 ESP / RSP：</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 53px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #333">▪</span>&nbsp[变址 * 比例因子]：MOV EAX, [EDI * 4]</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 53px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #333">▪</span>&nbsp[变址 * 比例因子 + 偏移]：MOV EAX, [EDI * 4 + 100]</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 53px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #333">▪</span>&nbsp[基址 + 变址 * 比例因子]：MOV EAX, [EBX + EDI * 4]</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 53px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #333">▪</span>&nbsp[基址 + 变址 * 比例因子 + 偏移]：MOV EAX, [EBX + EDI * 4 + 8]</div>
 
                 </div>
                 <div id = "disqus_thread"></div>  
