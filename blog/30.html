@@ -83,11 +83,15 @@
             <div class = "contentList">
                 <div class = "contentBorder">
                     <div class = "contentTitile">┌─ 目录 ───────</div>
-                                <a href = "#1" class = "contentListCon" style = "color: rgba(0, 0, 0, 0.5); font-weight: bold;">信息的标识和处理：位、整数</a>
-            <a href = "#3" class = "contentListCon" style = "color: rgba(0, 0, 0, 0.5); font-weight: bold;">程序的机器级表示</a>
-            <a href = "#4" class = "contentListCon" style = "padding-left: 40px; color: rgba(0, 0, 0, 0.5);">基础</a>
-            <a href = "#5" class = "contentListCon" style = "padding-left: 40px; color: rgba(0, 0, 0, 0.5);">8086&nbsp&nbsp的寄存器组</a>
-            <a href = "#10" class = "contentListCon" style = "padding-left: 40px; color: rgba(0, 0, 0, 0.5);">数据传送指令</a>
+                                <a href = "#1" class = "contentListCon" style = "color: rgba(0, 0, 0, 0.5); font-weight: bold;">计算机系统漫游</a>
+            <a href = "#2" class = "contentListCon" style = "color: rgba(0, 0, 0, 0.5); font-weight: bold;">程序结构和执行</a>
+            <a href = "#3" class = "contentListCon" style = "color: rgba(0, 0, 0, 0.5); font-weight: bold;">在系统上运行程序</a>
+            <a href = "#4" class = "contentListCon" style = "color: rgba(0, 0, 0, 0.5); font-weight: bold;">程序间的交互和通信</a>
+            <a href = "#5" class = "contentListCon" style = "color: rgba(0, 0, 0, 0.5); font-weight: bold;">信息的标识和处理：位、整数</a>
+            <a href = "#7" class = "contentListCon" style = "color: rgba(0, 0, 0, 0.5); font-weight: bold;">程序的机器级表示</a>
+            <a href = "#8" class = "contentListCon" style = "padding-left: 40px; color: rgba(0, 0, 0, 0.5);">基础</a>
+            <a href = "#9" class = "contentListCon" style = "padding-left: 40px; color: rgba(0, 0, 0, 0.5);">8086&nbsp&nbsp的寄存器组</a>
+            <a href = "#14" class = "contentListCon" style = "padding-left: 40px; color: rgba(0, 0, 0, 0.5);">数据传送指令</a>
 
                 </div>
             </div>
@@ -113,8 +117,22 @@
                         </div>
                     </div>
                 <div class = "articleBorder">
-                                    <br>
-                <div class = "h2" id = "1">信息的标识和处理：位、整数</div>
+                                    <div class = "h2" id = "1">计算机系统漫游</div>
+                <div class = "h5">程序编译</div>
+                <div class = "normal">GCC 编译器的如何将一个源程序文件 hello.c（输出 "hello world" 的程序） 翻译成一个可执行目标文件 hello。</div>
+                <img src = "../img/image-20190415184137204.png" class = "blogImg"><br>
+                <div class = "normal">了解 GCC：<a href = "https://zh.wikipedia.org/wiki/GCC" class = "conncetion"><i class="fa fa-paper-plane" aria-hidden="true" ></i>CNU Compile Collection</a></div>
+                <br>
+                <div class = "h5">位、字节、字</div>
+                <div class = "normal" style = "margin: 5px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">1.</span><span class = "strong">比特</span>：或称为「位」，<span class = "underline">最底层</span>的二进制数字（数码）称为位（bit，比特），值位 0 或 1；</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">2.</span><span class = "strong">位组合</span>：把位组合在一起，采用某种规则进行解读</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">3.</span><span class = "strong">字节</span>：8-bit 块（1bytes = 8bits）</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">4.</span><span class = "strong">字</span>：CPU 中 ALU（Arithmetic Logic Unit）的数据位数 = CPU 中<span class = "strong">通用寄存器的位数</span>（通常说计算机是 XX 位的，是指这台计算机 CPU 字的长度 OS 是 XX 位的，是指其 CPU 的工作模式，这与操作系统各 DLL [Dynamic Link Library] 库函数、编译连接环境有关）</div>
+                <br>
+                <div class = "h2" id = "2">程序结构和执行</div>
+                <div class = "h2" id = "3">在系统上运行程序</div>
+                <div class = "h2" id = "4">程序间的交互和通信</div>
+                <div class = "h2" id = "5">信息的标识和处理：位、整数</div>
                 <div class = "normal">主要内容：位、字节、整数型</div>
                 <div class = "normal">其他内容：信息的位标识、位级运算、整形数（标识，无符号与有符号数，扩展与截断，整数运算）、内存、指针、字符串表示</div>
                 <div class = "h5">位、字节、字</div>
@@ -134,7 +152,7 @@
                 <div class = "normal">需要考虑的问题：编码的长度、数的符号、数的运算</div>
                 <br>
                 <div class = "normal">一般数据类型和运算（略）</div>
-                <div class = "h4" id = "2">浮点数的表示</div>
+                <div class = "h4" id = "6">浮点数的表示</div>
                 <img src = "../img/image-20190331152753273.png" class = "blogImg"><br>
                 <div class = "normal">表示成有理数的形式：</div>
 $$
@@ -177,8 +195,8 @@ $$
                 <div class = "normal">5/8：10.10<span class = "strong">110</span> → 10.1<span class = "strong">0</span> → 2</div>
                 <div class = "h5">浮点的运算</div>
                 <div class = "normal">（看书）</div>
-                <div class = "h2" id = "3">程序的机器级表示</div>
-                <div class = "h3" id = "4">基础</div>
+                <div class = "h2" id = "7">程序的机器级表示</div>
+                <div class = "h3" id = "8">基础</div>
                 <div class = "h5">Intel&nbsp&nbspx86&nbsp&nbsp处理器</div>
                 <div class = "normal">复杂指令集计算机（Complex instruction set computer，CISC）</div>
                 <div class = "normal" style = "margin: 5px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">1.</span>指令多、指令格式多（Linux 程序设计只用到较小子集）</div>
@@ -187,14 +205,14 @@ $$
                 <div class = "normal">8086/8 内部有两个功能模块，完成一条指令的取值和执行功能</div>
                 <div class = "normal" style = "margin: 5px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">1.</span>模块之一：总线结构单元 BIU，主要负责读取指令和操作数</div>
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">2.</span>模块之二：执行单元 EU，主要负责指令译码和执行</div>
-                <div class = "h3" id = "5">8086&nbsp&nbsp的寄存器组</div>
+                <div class = "h3" id = "9">8086&nbsp&nbsp的寄存器组</div>
                 <div class = "normal">对于汇编语言程序来说，8086 内部结构就是可编程的寄存器组</div>
                 <div class = "normal" style = "margin: 5px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">1.</span>执行单元 EU 8 个通用寄存器</div>
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">2.</span>1 个指令指针寄存器</div>
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">3.</span>1 个标志寄存器</div>
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">4.</span>4 个段寄存器 / 64 位增加了 fs/gs 也成 16 位</div>
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">5.</span><span class = "emphasis">注意</span> 32 / 64 位 CPU 对通用寄存器记性了位扩展，64 位增加了 R8 - R15 共 8 个寄存器</div>
-                <div class = "h4" id = "6">8086&nbsp&nbsp的通用寄存器</div>
+                <div class = "h4" id = "10">8086&nbsp&nbsp的通用寄存器</div>
                 <div class = "normal">8086 的 16 位通用寄存器是：</div>
                 <div class = "normal" style = "margin: 5px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">1.</span>AX（Accumulator Register）：累加寄存器，使用频率最高，常用于运算；在乘除等指令中用来存放操作数，另外，所有的 I/O 指令都使用这一寄存器与外界设备传送数据。</div>
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">2.</span>BX（Base）：基址寄存器，常用于存放村粗器地址、地址索引，数组首地址</div>
@@ -218,7 +236,7 @@ $$
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">2.</span>它与代码段寄存器 CS 联用，确定下一条指令的物理地址</div>
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">3.</span>计算机通过 CS：IP 寄存器来控制指令序列的执行流程</div>
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">4.</span>IP 寄存器是一个专用寄存器</div>
-                <div class = "h4" id = "7">标志寄存器</div>
+                <div class = "h4" id = "11">标志寄存器</div>
                 <div class = "normal">标志（Flag）用于反映指令执行结果或控制指令执行形式，8086 处理器的各种标志形成了一个 16 位的标志寄存器 FLAGS（程序状态字 PSW 寄存器）</div>
                 <div class = "normal"><span class = "emphasis">程序设计需要利用标志的状态</span></div>
                 <br>
@@ -238,7 +256,7 @@ $$
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">9.</span>陷阱标志 TF（Trap Flag）：用于控制处理器进入但不操作方式（TF = 0：正常；1：单步）</div>
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 68px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #333">▪</span>&nbsp单步执行指令：处理器在每条指令执行结束时，便产生一个编号为 1 的内部中断，这种内部中断被称为<span class = "strong">单步中断</span></div>
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 68px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #333">▪</span>&nbsp所以 TF 也称为<span class = "strong">单步标志</span>，利用单步中断可以对程序进行逐条指令的调试，这种逐条指令调试程序的方法就是单步<span class = "strong">调试</span></div>
-                <div class = "h4" id = "8">段寄存器</div>
+                <div class = "h4" id = "12">段寄存器</div>
                 <div class = "normal">8086 有 4 个 16 位段寄存器（分别指明各段的起始地址）：CS（代码段）、SS（堆栈段）、DS（数据段）、ES（附加段）</div>
                 <div class = "normal">每个段寄存器用来确定一个逻辑段的起始地址，每种逻辑段均有各自的用途</div>
                 <div class = "normal">32 / 64 位 CPU 采用段选择子——数组下标 / 段表述符表 —— 数组（含段地址、范围、权限等）的形式来确定段地址</div>
@@ -250,15 +268,15 @@ $$
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">4.</span>然后把 CPU 的 CS 变成当前分配的代码段值，IP 位第一条指令的便宜，从而开始程序的执行</div>
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">5.</span>SP 位堆栈段的大小（最大值 -wB）</div>
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">6.</span>在汇编程序时，通过交叉文件可以看出各段的大小</div>
-                <div class = "h4" id = "9">8086&nbsp&nbsp的指令系统</div>
+                <div class = "h4" id = "13">8086&nbsp&nbsp的指令系统</div>
                 <div class = "normal">8086 / 8088 的指令系统包含了六种类型，其中数据传送指令 14 条，算术运算指令 20 条，逻辑运算指令 13 条，串操作指令 10 条，控制转移指令 28 条，处理器控制指令 12 条。</div>
-                <div class = "h3" id = "10">数据传送指令</div>
+                <div class = "h3" id = "14">数据传送指令</div>
                 <div class = "normal" style = "margin: 5px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">1.</span><span class = "strong">MOV</span> DST SRC：传送（Move）。目的数可以是通用寄存器、存储单元、段寄存器，CS 段寄存器除外；<span class = "underline">不允许两个存储单元或段寄存器直接传送</span>；</div>
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">2.</span><span class = "strong">PUSH</span> SRC，<span class = "strong">POP</span> DST：堆栈操作（Push onto / Pop from the stack）</div>
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 68px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #333">▪</span>&nbspPUSH 操作：SP = SP - 2；(SP, SP + 1) = SRC</div>
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 68px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #333">▪</span>&nbspPOP 操作：DST = (SP + 1, SP)；SP = SP + 2</div>
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">3.</span><span class = "strong">XCHG</span> OPR1,OPR2：交换（Exchange）。不能与段寄存器交换数据；存储器之间不能交换</div>
-                <div class = "h4" id = "11">累加器专用传送指令</div>
+                <div class = "h4" id = "15">累加器专用传送指令</div>
                 <div class = "normal" style = "margin: 5px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">1.</span><span class = "strong">IN</span>（Input）输入</div>
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 71px; text-indent: -25px;"><span class = "myList" style = "color: #333">1.</span>长格式：<span class = "strong">IN</span> AL,PORT（字节）；<span class = "strong">IN</span> AX, PORT（字）：执行的操作：AL = PORT（字节），AX = (wPORT + 1, PORT)（字）</div>
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 71px; text-indent: -25px;"><span class = "myList" style = "color: #333">2.</span>短格式：<span class = "strong">IN</span> AL, DX（字节）；<span class = "strong">IN</span> AX, DX（字）</div>
@@ -268,16 +286,16 @@ $$
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">3.</span><span class = "strong">XLAT</span>（TRANSLATE） 转码指令：把一种代码转换成另一种代码。</div>
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 71px; text-indent: -25px;"><span class = "myList" style = "color: #333">1.</span>格式：<span class = "strong">XLAR</span>  (OPR 可选)，自行操作：AL = (BX, AL)</div>
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 71px; text-indent: -25px;"><span class = "myList" style = "color: #333">2.</span>注意：指令执行时只是用预先已存入 BX 中的表格首地址，执行后，AL 中内容则是要转换的代码。</div>
-                <div class = "h4" id = "12">有效地址送寄存器指令</div>
+                <div class = "h4" id = "16">有效地址送寄存器指令</div>
                 <div class = "normal" style = "margin: 5px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">1.</span><span class = "strong">LEA</span> REG, SRC（Load effective address）有效地址送寄存器</div>
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">2.</span><span class = "strong">LDS</span> REG, SRC（Load DS with Pinter）指针送寄存器和 DS 指令</div>
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">3.</span><span class = "strong">LES</span> REG, SRC（Load ES with Pointer）指针送寄存器和 ES</div>
-                <div class = "h4" id = "13">标志寄存器传送指令</div>
+                <div class = "h4" id = "17">标志寄存器传送指令</div>
                 <div class = "normal" style = "margin: 5px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">1.</span>LAHF（Load AH with flags）标志送 AH</div>
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">2.</span>SAHF（Store AH into flags）AH 送标志寄存器</div>
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">3.</span>PUSHF（Push the flags）标志进栈</div>
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">4.</span>POPF（Pop the flags）标志出栈</div>
-                <div class = "h4" id = "14">算术指令</div>
+                <div class = "h4" id = "18">算术指令</div>
                 <div class = "h5">加法指令</div>
                 <div class = "normal"><span class = "strong">ADD</span> DST, SRC（Add）加法指令</div>
                 <div class = "normal">操作：DST = SRC + DST</div>
@@ -343,7 +361,7 @@ $$
                 <div class = "normal"><span class = "strong">CWD</span>（Convert Word to Double Word）字转换为双字指令</div>
                 <div class = "normal">AX 中的符号位（D15）扩展到 16 位 DX 中；</div>
                 <div class = "normal"><span class = "strong">注</span>：两条转换指令都不影响条件码</div>
-                <div class = "h4" id = "15">逻辑指令</div>
+                <div class = "h4" id = "19">逻辑指令</div>
                 <div class = "normal">AND，OR，NOT，XOR，TEST：</div>
                 <div class = "normal" style = "margin: 5px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">1.</span>AND，OR，XOR，TEST 都是双字节操作指令，操作数的寻址方式的规定与算法算术指令相同</div>
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">2.</span>NOT 是单字节操作指令，不允许使用立即数</div>
@@ -353,18 +371,18 @@ $$
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">2.</span><span class = "strong">XOR</span> 常用于使某个操作数清零，同时使 CF = 0，清除进位标志</div>
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">3.</span><span class = "strong">NOT</span> 不影响任何标志位</div>
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">4.</span><span class = "strong">TEST</span> 影响标志位 PF，SF 和 ZF，使 CF = OF = 0，而 AF 位无定义。</div>
-                <div class = "h4" id = "16">移位指令</div>
+                <div class = "h4" id = "20">移位指令</div>
                 <div class = "normal"><span class = "strong">SHL、SHR</span>（Shift Logical left / right）逻辑左右移，<span class = "strong">SAL，SAL</span>（A：arithmetic）算术左右移，执行操作和逻辑左右移相同（最高位移出到 CF，最低位补 0）。</div>
                 <div class = "normal"><span class = "strong">ROL、ROR</span>（Rotate left / right）：循环左右移，最高位同时移到 CF 和最低位。</div>
                 <div class = "normal"><span class = "strong">RCL、RCR</span>（Rotate right / left through carry），带进位循环左右移。</div>
-                <div class = "h4" id = "17">串处理指令</div>
+                <div class = "h4" id = "21">串处理指令</div>
                 <div class = "normal" style = "margin: 5px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">1.</span>MOVS、MOVSB、MOVSW：传送串</div>
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">2.</span>CMPS、CMPSB、CSMPSW：串比较</div>
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">3.</span>SCAS、SCASB、SCASW：串扫描</div>
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">4.</span>LODS、LODSB、LODSW：取字符串</div>
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">5.</span>STOS、STOSB、STOSW：存字符串</div>
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">6.</span>REP、REPZ、REPNZ：重复前缀</div>
-                <div class = "h4" id = "18">控制转移指令</div>
+                <div class = "h4" id = "22">控制转移指令</div>
                 <div class = "h5">过程调用以及返回指令</div>
                 <div class = "normal"><span class = "strong">CALL</span> DST：子程序调用（在程序中 DST 实际是子程序标号）</div>
                 <div class = "normal">执行操作：先将过程的返回地址（即子程序调用完后下一条的首地址）存如堆栈，然后转移到过程入口执行子程序。</div>
@@ -401,7 +419,7 @@ $$
                 <div class = "normal">JCXZ：寄存器 CX = 0 转移</div>
                 <div class = "normal">INT、INTO：中断</div>
                 <div class = "normal">IRET：中断返回</div>
-                <div class = "h4" id = "19">处理机控制指令</div>
+                <div class = "h4" id = "23">处理机控制指令</div>
                 <div class = "normal">CLC、CLD、CLI：清楚 CF、DF、IF 标志</div>
                 <div class = "normal">CMC：进位位 CF 求反</div>
                 <div class = "normal">STC、STD、STI：设置 CF、DF、IF 标志</div>
@@ -410,7 +428,7 @@ $$
                 <div class = "normal">ESC：将数据传送给协处理器（提供到地址 / 数据线上）</div>
                 <div class = "normal">LOCK：保证总线的控制</div>
                 <div class = "normal">NOP：无操作</div>
-                <div class = "h4" id = "20">操作数寻址方式</div>
+                <div class = "h4" id = "24">操作数寻址方式</div>
                 <div class = "normal">指令由操作码和操作数组成，操作数是一个常数值 - 立即数，也可以在 CPU、内存、IO 端内（IN / OUT 指令）中</div>
                 <div class = "normal">操作数寻址方式有：</div>
                 <div class = "normal" style = "margin: 5px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">1.</span>立即数寻址：MOV EAX, 123456678H</div>
@@ -419,7 +437,7 @@ $$
                 <div class = "normal">存储器寻址 SREG:D(Rb, Ri, S) 段寄存器可用默认，省略</div>
                 <div class = "normal" style = "margin: 5px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">1.</span>段址：[基地址 Rb + 变址 Ri * 比例因子 S + 偏移 D]，这三部分可以任意组合。32 位以上 CPU 才有比例因子（1 / 2 / 4 / 8）</div>
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">2.</span>16 位 CPU：基址 BX / BP，变址 SI / DI。其他 CPU 变址不用 ESP 等。</div>
-                <div class = "h4" id = "21">存储器寻址</div>
+                <div class = "h4" id = "25">存储器寻址</div>
                 <div class = "normal">其组合与我们高级语言编程时的各种类型与结构的全局变量、局部变量、参数的访问有关系。</div>
                 <div class = "normal" style = "margin: 5px 0px 10px 0px; padding-left: 23px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #333">▪</span>&nbsp直接寻址：MOV AX, [1000H]</div>
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 23px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #333">▪</span>&nbsp寄存器间接寻址：MOV AX, [BX]</div>
