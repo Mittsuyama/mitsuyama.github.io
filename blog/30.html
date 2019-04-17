@@ -122,14 +122,49 @@
                 <div class = "normal">GCC 编译器的如何将一个源程序文件 hello.c（输出 "hello world" 的程序） 翻译成一个可执行目标文件 hello。</div>
                 <img src = "../img/image-20190415184137204.png" class = "blogImg"><br>
                 <div class = "normal">了解 GCC：<a href = "https://zh.wikipedia.org/wiki/GCC" class = "conncetion"><i class="fa fa-paper-plane" aria-hidden="true" ></i>CNU Compile Collection</a></div>
-                <br>
-                <div class = "h5">位、字节、字</div>
-                <div class = "normal" style = "margin: 5px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">1.</span><span class = "strong">比特</span>：或称为「位」，<span class = "underline">最底层</span>的二进制数字（数码）称为位（bit，比特），值位 0 或 1；</div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">2.</span><span class = "strong">位组合</span>：把位组合在一起，采用某种规则进行解读</div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">3.</span><span class = "strong">字节</span>：8-bit 块（1bytes = 8bits）</div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">4.</span><span class = "strong">字</span>：CPU 中 ALU（Arithmetic Logic Unit）的数据位数 = CPU 中<span class = "strong">通用寄存器的位数</span>（通常说计算机是 XX 位的，是指这台计算机 CPU 字的长度 OS 是 XX 位的，是指其 CPU 的工作模式，这与操作系统各 DLL [Dynamic Link Library] 库函数、编译连接环境有关）</div>
-                <br>
                 <div class = "h2" id = "2">程序结构和执行</div>
+                <div class = "h5">位、字节、字</div>
+                <div class = "normal" style = "margin: 5px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">1.</span><span class = "emphasis">比特</span>：或称为「位」，<span class = "underline">最底层</span>的二进制数字（数码）称为位（bit，比特），值位 0 或 1；</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">2.</span><span class = "emphasis">位组合</span>：把位组合在一起，采用某种规则进行解读</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">3.</span><span class = "emphasis">字节</span>：8-bit 块（1bytes = 8bits）</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">4.</span><span class = "emphasis">字</span>：CPU 中 ALU（Arithmetic Logic Unit）的数据位数 = CPU 中<span class = "strong">通用寄存器的位数</span>（通常说计算机是 XX 位的，是指这台计算机 CPU 字的长度 OS 是 XX 位的，是指其 CPU 的工作模式，这与操作系统各 DLL [Dynamic Link Library] 库函数、编译连接环境有关）</div>
+                <div class = "h5">字数据大小</div>
+                <div class = "quote"><i class = "fa fa-quote-left fa-1x fa-pull-left quoteIcon" aria-hidden = "true"></i> 每台计算机都有一个字长（word size），指明指针数据的标称大小（normal size）。因为虚拟机是以这样的一个字来编码的，所以字长决定的最终的系统参数就是虚拟地址空间的大小。</div>
+                <div class = "normal"><span class = "emphasis">字长</span>和<span class = "emphasis">虚拟地址空间</span>我们常常称为<span class = "strong">系统位数</span>（或者说<span class = "strong">机器的字长</span>，64 位机器能装 32 位系统，反之不行）和<span class = "strong">内存大小</span>。</div>
+                <div class = "normal">32 位系统（32 位字长机器）虚拟地址的范围为 $0 \sim 2^{32} - 1​$，只能使用 4G 的内存（虚拟地址空间），而 64 位则能扩展到 16EB。</div>
+                <div class = "normal">大多数</div>
+                <br>
+                <div class = "normal">大多数 64 位机器是可以运行 32 位机器编译的程序，这是一种向后兼容。</div>
+                <div class = "normal">若程序 <span class = "emphasis">prog.c</span> 用如下伪指令编译后：</div>
+                <pre><code class = "bash">
+linux> gcc -m32 prog.c
+                </code></pre>
+                <div class = "normal">该程序就可以在 32 位或者 64 位机器上正确运行。</div>
+                <div class = "normal">但是如果用如下伪指令编译：</div>
+                <pre><code class = "bash">
+linux> gcc -m64 prog.c
+                </code></pre>
+                <div class = "normal">那就只能在 64 位机器上运行。</div>
+                <br>
+                <div class = "h5">数据大小</div>
+                <div class = "normal">基本 C 数据类型的典型大小（以字节为单位）</div>
+                <img src = "../img/image-20190416152929483.png" class = "blogImg"><br>
+                <div class = "normal">为了避免由于依赖「典型」大小和不同编译器设置带来的奇怪行为。ISO C99 引入了一类数据类型。其数据大小是固定的，不随编译器和机器设置而变化。其中就有数据类型 <span class = "italic">int32_t</span> 和 <span class = "italic">int64_t</span>，它们分别为 4 字节和 8 字节。</div>
+                <div class = "h5">寻址和字节顺序</div>
+                <div class = "normal">某些机器选择在内存中按照从最低有有效字节到最高有效字节的顺序存储对象，而另一些机器相反。最低有效字节在地址前面的方式，称为小端法；最高有效字节在最前面的方式，称为大端法。</div>
+                <div class = "normal">假设变量 x 的类型位 <span class = "italic">int</span>，位于地址 <span class = "italic">0x100</span> 处，它的十六进制值为 <span class = "italic">0x1234567</span>。地址范围 <span class = "italic">0x100 ~ 0x103</span> 的字节顺序依赖机器的类型：</div>
+                <img src = "../img/image-20190417110732550.png" class = "blogImg"><br>
+                <br>
+                <pre><code class = "c">
+int val = 12345;
+unsigned char *start = &val;
+int len = sizeof(val);
+int i = 0;
+for(i = 0; i < len; i++)
+    pritnf("%.2x ", *(start + i));
+                </code></pre>
+                <div class = "normal">代码中，把 <span class = "italic">int</span> 强制转换<span class = "emphasis">无符号字符指针</span>，<span class = "italic">start</span> 存放的这个 <span class = "italic">int</span> 变量的初始地址，<span class = "italic">sizeof</span> 获取 <span class = "italic">int</span> 数据长度，<span class = "italic">printf</span> 实现从数据低位向高位循环输出内容。</div>
+                <br>
                 <div class = "h2" id = "3">在系统上运行程序</div>
                 <div class = "h2" id = "4">程序间的交互和通信</div>
                 <div class = "h2" id = "5">信息的标识和处理：位、整数</div>

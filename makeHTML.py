@@ -157,7 +157,7 @@ class makeHTML:
                         newS += '''</span>'''
                         isStrong = False
                         i += 1
-                elif i + 1 < mLen and myStr[i + 1] != ' ':
+                elif i + 1 < mLen and not (myStr[i + 1] == ' ' and myStr[i - 1] == ' '):
                     if not isItalic:
                         newS += '''<span class = "italic">'''
                         isItalic = True
@@ -335,7 +335,7 @@ class makeHTML:
                 if isQuote:
                     blogContent += '''                <div class = "quoteAgain">''' + line[2 : -1] + '''</div>''' + '\n'
                 else:
-                    blogContent += '''                <div class = "quote"><i class = "fa fa-quote-left fa-1x fa-pull-left" aria-hidden = "true" id = "quoteIcon"></i>''' + line[2 : -1] + '''</div>''' + '\n'
+                    blogContent += '''                <div class = "quote"><i class = "fa fa-quote-left fa-1x fa-pull-left quoteIcon" aria-hidden = "true"></i>''' + line[2 : -1] + '''</div>''' + '\n'
                     isQuote = True
             elif lLen > 3 and line[:3] == 'Tag':
                 if i + 1 < lLen and self.Paragraph[i + 1] == '\n':
