@@ -124,7 +124,7 @@ $$
 
 下面是希腊字母表：
 
-![image-20190328115855058](/Users/macbookpro/Documents/GItHub/mittsuyama.github.io/img/image-20190328115855058.png)
+![image-20190328115855058](../img/mathjax/image-20190328115855058.png)
 
 #### 括号
 

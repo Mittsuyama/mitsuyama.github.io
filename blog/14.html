@@ -802,58 +802,40 @@ $$
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 23px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #333">▪</span>&nbsp利用 SQL，用户可以用相同的语句在不同的数据库系统上执行同样的操作</div>
                 <div class = "normal"><span class = "strong"><span class = "underline">数据表的创建</span></span></div>
                 <br>
-                <pre><code class = "sql">
-Create Table  表名 (字段 1 数据类型 1, ..., 字段 n 数据类型 n)
+                <pre><code class = "sql">Create Table  表名 (字段 1 数据类型 1, ..., 字段 n 数据类型 n)
 
 Create Table Student
-(stu_id varchar(8), stu_name varchar(8), stu_sex varchar(2), stu_birthday date)
-                </code></pre>
+(stu_id varchar(8), stu_name varchar(8), stu_sex varchar(2), stu_birthday date)                </code></pre>
                 <div class = "normal"><span class = "underline">数据表的删除</span> </div>
-                <pre><code class = "sql">
-Drop Table  表名
+                <pre><code class = "sql">Drop Table  表名
 
-Drop Table Student
-                </code></pre>
+Drop Table Student                </code></pre>
                 <div class = "normal"><span class = "strong"><span class = "underline">数据表的修改</span></span> </div>
                 <div class = "normal">在表名为「student」的数据表中增加 stu_depart 的字段。</div>
-                <pre><code class = "sql">
-Alter Table Student Add stu_depart varchar(8) 
-                </code></pre>
+                <pre><code class = "sql">Alter Table Student Add stu_depart varchar(8)                 </code></pre>
                 <div class = "normal">在表名为「student」的数据表中去掉 stu_birthday 的字段</div>
-                <pre><code class = "sql">
- Alter Table Student Drop stu_birthday date
-                </code></pre>
+                <pre><code class = "sql"> Alter Table Student Drop stu_birthday date                </code></pre>
                 <div class = "normal">将表名为「student」的数据表中的 stu_name 字符长度修改为 10</div>
-                <pre><code class = "sql">
-Alter Table Student Alter stu_name varchar(10)
-                </code></pre>
+                <pre><code class = "sql">Alter Table Student Alter stu_name varchar(10)                </code></pre>
                 <div class = "normal"><span class = "strong"><span class = "underline">数据的插入</span></span></div>
-                <pre><code class = "sql">
-INSERT INTO 表名 (字段 1, 字段 2, ...) VALUES(字段 1 的值, 字段 2 的值, ...)
+                <pre><code class = "sql">INSERT INTO 表名 (字段 1, 字段 2, ...) VALUES(字段 1 的值, 字段 2 的值, ...)
 
 INSERT INTO Student
-(stu_id, stu_name, stu_sex, stu_birthday) VALUES (‘1021001’, ‘Lei Wang’, ‘Male’, ‘19890210’)
-                </code></pre>
+(stu_id, stu_name, stu_sex, stu_birthday) VALUES (‘1021001’, ‘Lei Wang’, ‘Male’, ‘19890210’)                </code></pre>
                 <div class = "normal"><span class = "strong"><span class = "underline">数据的修改</span></span></div>
-                <pre><code class = "sql">
-UPDATE 表名 SET 字段 1 = 表达式 1， SET 字段 2 = 表达式 2
+                <pre><code class = "sql">UPDATE 表名 SET 字段 1 = 表达式 1， SET 字段 2 = 表达式 2
 WHERE 条件
 
 UPDATE  Student, stu_birthday = ‘20010210’
-WHERE stu_id = ‘1021001’
-                </code></pre>
+WHERE stu_id = ‘1021001’                </code></pre>
                 <div class = "normal"><span class = "strong"><span class = "underline">数据的删除</span></span></div>
-                <pre><code class = "sql">
-DELETE FROM 表名 WHERE 条件
+                <pre><code class = "sql">DELETE FROM 表名 WHERE 条件
 
-DELETE FROM Student WHERE stu_id = ‘1021001’
-                </code></pre>
+DELETE FROM Student WHERE stu_id = ‘1021001’                </code></pre>
                 <div class = "normal"><span class = "underline"><span class = "strong">数据的查询</span></span></div>
-                <pre><code class = "sql">
-Select 列 From 表 Where 条件
+                <pre><code class = "sql">Select 列 From 表 Where 条件
 
-SELECT stu_name FROM Student WHERE stu_sex = ‘Female’
-                </code></pre>
+SELECT stu_name FROM Student WHERE stu_sex = ‘Female’                </code></pre>
                 <div class = "h5">DBMS&nbsp&nbsp的第三个功能是管理数据库&nbsp&nbsp</div>
                 <div class = "normal" style = "margin: 5px 0px 10px 0px; padding-left: 23px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #333">▪</span>&nbspDBMS用来定期备份数据库、移除不再需要保存的数据</div>
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 23px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #333">▪</span>&nbspDBMS建立、管理并维护用户账号并设置密码</div>

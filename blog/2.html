@@ -137,11 +137,9 @@ $$
                 <br>
                 <div class = "normal">首先你要<span class = "strong">告诉编辑器</span>你打的是数学公式。</div>
                 <div class = "normal"><span class = "strong">行间公式</span>，用四个 Dollar 符 <span class = "italic">\$</span> 框起来，像这样：</div>
-                <pre><code class = "mathematica">
-$$
+                <pre><code class = "mathematica">$$
 \sqrt{x + y} + 1
-$$
-                </code></pre>
+$$                </code></pre>
                 <div class = "normal">效果:</div>
 $$
 \sqrt{x + y} + 1
@@ -151,7 +149,7 @@ $$
                 <div class = "h3" id = "3">求和</div>
                 <div class = "h5">符号</div>
                 <div class = "normal">第一个是求和符号，MathJax 中各种符号都用<span class = "strong">反斜杠</span>开头 <span class = "italic">\</span>，求和则是 <span class = "italic">\sum</span>：</div>
-                <div class = "normal"><span class = "italic">\sum</span>，<span class = "italic">\prod</span>，<span class = "italic">\int</span>，<span class = "italic">\iint</span>，<span class = "italic">\bigcup</span>，<span class = "italic">\bigcap*</div>
+                <div class = "normal"><span class = "italic">\sum</span>，<span class = "italic">\prod</span>，<span class = "italic">\int</span>，<span class = "italic">\iint</span>，<span class = "italic">\bigcup</span>，<span class = "italic">\bigcap</span></div>
                 <div class = "normal">$\sum$，$\prod$，$\int$，$\iint$，$\bigcup$，$\bigcap$</div>
                 <div class = "h5">上下限</div>
                 <div class = "normal">MathJax 中上下限和角标的表示方法相同：</div>
@@ -172,7 +170,7 @@ $$
                 <div class = "normal">所以组合：<span class = "italic">\lim_{x \to 0}</span>：$\lim_{x \to 0}$，类似的，如果是行间公式，$x \to 0$ 会挪到正下方。</div>
                 <div class = "h5">箭头符号</div>
                 <div class = "normal">介绍一些其他的常用箭头。</div>
-                <div class = "normal"><span class = "italic">\to</span>, <span class = "italic">\rightarrow</span>, <span class = "italic">\leftarrow</span>, <span class = "italic">\Rightarrow</span>, <span class = "italic">\Leftarrow</span>, <span class = "italic">\mapsto</span>, <span class = "italic">\iff*</div>
+                <div class = "normal"><span class = "italic">\to</span>, <span class = "italic">\rightarrow</span>, <span class = "italic">\leftarrow</span>, <span class = "italic">\Rightarrow</span>, <span class = "italic">\Leftarrow</span>, <span class = "italic">\mapsto</span>, <span class = "italic">\iff</span></div>
                 <div class = "normal">$\to$, $\rightarrow$, $\leftarrow$, $\Rightarrow$, $\Leftarrow$, $\mapsto$, $\iff$</div>
                 <div class = "h3" id = "6">开根、分数、希腊字母、括号</div>
                 <div class = "normal">接下来是中间的一部分：</div>
@@ -180,9 +178,7 @@ $$
 \left(\sqrt{\frac{\alpha x}{\beta y}} + 1\right)^{e + 2}
 $$
                 <div class = "normal">代码:</div>
-                <pre><code class = "markdown">
-\left(\sqrt{\frac{\alpha x}{\beta y}} + 1\right)^{e + 2}
-                </code></pre>
+                <pre><code class = "markdown">\left(\sqrt{\frac{\alpha x}{\beta y}} + 1\right)^{e + 2}                </code></pre>
                 <div class = "normal">我们一个一个来看。</div>
                 <div class = "h5">算术平方根</div>
                 <div class = "normal"><span class = "italic">\sqrt{x^3}</span>：$\sqrt{x^3}$</div>
@@ -225,7 +221,7 @@ $$
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 23px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #333">▪</span>&nbsp<span class = "strong">更好看的尖括号</span>：<span class = "italic">\langle x \rangle</span> ：$\langle x \rangle$ </div>
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 23px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #333">▪</span>&nbsp<span class = "strong">向上取整</span>：<span class = "italic">\lceil x \rceil</span> ：$\lceil x \rceil$</div>
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 23px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #333">▪</span>&nbsp<span class = "strong">向下取整</span>：<span class = "italic">\lfloor x \rfloor</span>： $\lfloor x \rfloor$</div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 23px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #333">▪</span>&nbsp<span class = "strong">括号的自动调整</span>：<span class = "italic">\left(  ... \right)*</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 23px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #333">▪</span>&nbsp<span class = "strong">括号的自动调整</span>：<span class = "italic">\left(  ... \right)</span></div>
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 53px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #333">▪</span>&nbsp例如，<span class = "italic">\frac{\sqrt x}{y^3}</span> ：$(\frac{\sqrt x}{y^3})​$ ，括号看起来很奇怪，<span class = "italic">\left(\frac{\sqrt x}{y^3}\right)</span>： $\left(\frac{\sqrt x}{y^3}\right)​$</div>
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 53px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #333">▪</span>&nbsp疯狂的括号套括号 <span class = "italic">\Biggl(\biggl(\Bigl(\bigl((x)\bigr)\Bigr)\biggr)\Biggr)</span>：$\Biggl(\biggl(\Bigl(\bigl((x)\bigr)\Bigr)\biggr)\Biggr)$</div>
                 <div class = "h3" id = "11">常用运算运算符号</div>
@@ -268,8 +264,7 @@ $$
 1 & x & x^2 \\
 1 & y & y^2 \\
 1 & z & z^2 \\
-\end{matrix}
-                </code></pre>
+\end{matrix}                </code></pre>
                 <div class = "normal" style = "margin: 5px 0px 10px 0px; padding-left: 23px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #333">▪</span>&nbsp效果：</div>
 $$
 \begin{matrix}
@@ -297,8 +292,7 @@ $$
   1&2&3\\
   4&5&6
 \end{array}
-\right]
-                </code></pre>
+\right]                </code></pre>
                 <div class = "normal" style = "margin: 5px 0px 10px 0px; padding-left: 23px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #333">▪</span>&nbsp效果：</div>
 $$
 \left[
@@ -317,8 +311,7 @@ c & d\\
 \hline
 1 & 0\\
 0 & 1
-\end{pmatrix}
-                </code></pre>
+\end{pmatrix}                </code></pre>
                 <div class = "normal" style = "margin: 5px 0px 10px 0px; padding-left: 23px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #333">▪</span>&nbsp效果：</div>
 $$
 \begin{pmatrix}
@@ -332,8 +325,7 @@ $$
                 <br>
                 <div class = "normal" style = "margin: 5px 0px 10px 0px; padding-left: 23px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #333">▪</span>&nbsp小号矩阵：</div>
                 <pre><code class = "nohighlight">
-$\bigl(\begin{smallmatrix} ... \end{smallmatrix}\bigr)$
-                </code></pre>
+$\bigl(\begin{smallmatrix} ... \end{smallmatrix}\bigr)$                </code></pre>
                 <div class = "normal" style = "margin: 5px 0px 10px 0px; padding-left: 23px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #333">▪</span>&nbsp效果： $\bigl( \begin{smallmatrix} a & b \\ c & d \end{smallmatrix} \bigr)$</div>
                 <div class = "h3" id = "17">对齐</div>
                 <pre><code class = "nohighlight">
@@ -343,8 +335,7 @@ $\bigl(\begin{smallmatrix} ... \end{smallmatrix}\bigr)$
  & = \sqrt{\frac{73^2}{12^2}}\sqrt{\frac{73^2-1}{73^2}} \\
  & = \frac{73}{12}\sqrt{1 - \frac{1}{73^2}} \\ 
  & \approx \frac{73}{12}\left(1 - \frac{1}{2\cdot73^2}\right)
-\end{align}
-                </code></pre>
+\end{align}                </code></pre>
                 <br>
                 <div class = "normal" style = "margin: 5px 0px 10px 0px; padding-left: 23px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #333">▪</span>&nbsp效果：</div>
 $$
@@ -362,8 +353,7 @@ f(n) =
 \begin{cases}
 n/2,  & \text{if $n$ is even} \\
 3n+1, & \text{if $n$ is odd}
-\end{cases}
-                </code></pre>
+\end{cases}                </code></pre>
                 <div class = "normal"> </div>
                 <div class = "normal" style = "margin: 5px 0px 10px 0px; padding-left: 23px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #333">▪</span>&nbsp效果：</div>
 $$
@@ -380,8 +370,7 @@ $$
 \text{if $n$ is odd:}&3n+1
 \end{array}
 \right\}
-=f(n)
-                </code></pre>
+=f(n)                </code></pre>
                 <br>
                 <div class = "normal" style = "margin: 5px 0px 10px 0px; padding-left: 23px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #333">▪</span>&nbsp效果：</div>
 $$
@@ -403,7 +392,7 @@ $$
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 23px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #333">▪</span>&nbsp书法：<span class = "emphasis">\mathcal</span> $\mathcal{ABCDEFGHIJKLMNOPQRSTUVWXYZ}$</div>
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 23px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #333">▪</span>&nbsp花体：<span class = "emphasis">\mathscr</span> $\mathscr{ABCDEFGHIJKLMNOPQRSTUVWXYZ}$</div>
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 23px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #333">▪</span>&nbsp老式德国字体：<span class = "emphasis">\mathfrak</span> $\mathfrak{ABCDEFGHIJKLMNOPQRSTUVWXYZ}$</div>
-                <a href = "http://detexify.kirelabs.org/classify.html" class = "conncetion"><i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp&nbsp&nbsp手绘你想输入的符号</a>
+                <div class = "normal"><a href = "http://detexify.kirelabs.org/classify.html" class = "conncetion"><i class="fa fa-paper-plane" aria-hidden="true" ></i>手绘你想输入的符号</a></div>
 
                 </div>
                 <div id = "disqus_thread"></div>  

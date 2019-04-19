@@ -83,15 +83,16 @@
             <div class = "contentList">
                 <div class = "contentBorder">
                     <div class = "contentTitile">┌─ 目录 ───────</div>
-                                <a href = "#1" class = "contentListCon" style = "color: rgba(0, 0, 0, 0.5); font-weight: bold;">计算机系统漫游</a>
+                                <a href = "#1" class = "contentListCon" style = "color: rgba(0, 0, 0, 0.5); font-weight: bold;">计算机系统漫游——绪论</a>
             <a href = "#2" class = "contentListCon" style = "color: rgba(0, 0, 0, 0.5); font-weight: bold;">程序结构和执行</a>
-            <a href = "#3" class = "contentListCon" style = "color: rgba(0, 0, 0, 0.5); font-weight: bold;">在系统上运行程序</a>
-            <a href = "#4" class = "contentListCon" style = "color: rgba(0, 0, 0, 0.5); font-weight: bold;">程序间的交互和通信</a>
-            <a href = "#5" class = "contentListCon" style = "color: rgba(0, 0, 0, 0.5); font-weight: bold;">信息的标识和处理：位、整数</a>
-            <a href = "#7" class = "contentListCon" style = "color: rgba(0, 0, 0, 0.5); font-weight: bold;">程序的机器级表示</a>
-            <a href = "#8" class = "contentListCon" style = "padding-left: 40px; color: rgba(0, 0, 0, 0.5);">基础</a>
-            <a href = "#9" class = "contentListCon" style = "padding-left: 40px; color: rgba(0, 0, 0, 0.5);">8086&nbsp&nbsp的寄存器组</a>
-            <a href = "#14" class = "contentListCon" style = "padding-left: 40px; color: rgba(0, 0, 0, 0.5);">数据传送指令</a>
+            <a href = "#3" class = "contentListCon" style = "padding-left: 40px; color: rgba(0, 0, 0, 0.5);">信息存储</a>
+            <a href = "#8" class = "contentListCon" style = "color: rgba(0, 0, 0, 0.5); font-weight: bold;">在系统上运行程序</a>
+            <a href = "#9" class = "contentListCon" style = "color: rgba(0, 0, 0, 0.5); font-weight: bold;">程序间的交互和通信</a>
+            <a href = "#10" class = "contentListCon" style = "color: rgba(0, 0, 0, 0.5); font-weight: bold;">信息的标识和处理：位、整数</a>
+            <a href = "#12" class = "contentListCon" style = "color: rgba(0, 0, 0, 0.5); font-weight: bold;">程序的机器级表示</a>
+            <a href = "#13" class = "contentListCon" style = "padding-left: 40px; color: rgba(0, 0, 0, 0.5);">基础</a>
+            <a href = "#14" class = "contentListCon" style = "padding-left: 40px; color: rgba(0, 0, 0, 0.5);">8086&nbsp&nbsp的寄存器组</a>
+            <a href = "#19" class = "contentListCon" style = "padding-left: 40px; color: rgba(0, 0, 0, 0.5);">数据传送指令</a>
 
                 </div>
             </div>
@@ -117,12 +118,19 @@
                         </div>
                     </div>
                 <div class = "articleBorder">
-                                    <div class = "h2" id = "1">计算机系统漫游</div>
+                                    <div class = "h2" id = "1">计算机系统漫游——绪论</div>
+                <div class = "normal">作者前言中，对读者应具备的背景知识的描述（节选）：</div>
+                <div class = "quote"><i class = "fa fa-quote-left fa-1x fa-pull-left quoteIcon" aria-hidden = "true"></i>中包含大量已在 Linux 系统上编译和运行过的程序示例。我们假设你能访间一台这样的机器,并且能够登录，做一些诸如切换目录之类的简单操作 ……</div>
+                <div class = "quoteAgain"></div>
+                <div class = "quoteAgain">们还假设你对 C 和 C++ 有一定的了解。如果你以前只有Java经验，那么你需要付出更多的努力来完成这种转换 …… 不过，有一些C语言的特性(特别是指针、显式的动态内存分配和格式化I/o)在Java中都是没有的 ……</div>
+                <div class = "normal">这篇博客的内容砍掉了大部分在学习 C 语言就应该掌握的内容（逻辑运算、位运算、各种数据类型表示范围等）</div>
                 <div class = "h5">程序编译</div>
                 <div class = "normal">GCC 编译器的如何将一个源程序文件 hello.c（输出 "hello world" 的程序） 翻译成一个可执行目标文件 hello。</div>
                 <img src = "../img/image-20190415184137204.png" class = "blogImg"><br>
                 <div class = "normal">了解 GCC：<a href = "https://zh.wikipedia.org/wiki/GCC" class = "conncetion"><i class="fa fa-paper-plane" aria-hidden="true" ></i>CNU Compile Collection</a></div>
                 <div class = "h2" id = "2">程序结构和执行</div>
+                <div class = "h3" id = "3">信息存储</div>
+                <div class = "h4" id = "4">字数据</div>
                 <div class = "h5">位、字节、字</div>
                 <div class = "normal" style = "margin: 5px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">1.</span><span class = "emphasis">比特</span>：或称为「位」，<span class = "underline">最底层</span>的二进制数字（数码）称为位（bit，比特），值位 0 或 1；</div>
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">2.</span><span class = "emphasis">位组合</span>：把位组合在一起，采用某种规则进行解读</div>
@@ -130,44 +138,142 @@
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">4.</span><span class = "emphasis">字</span>：CPU 中 ALU（Arithmetic Logic Unit）的数据位数 = CPU 中<span class = "strong">通用寄存器的位数</span>（通常说计算机是 XX 位的，是指这台计算机 CPU 字的长度 OS 是 XX 位的，是指其 CPU 的工作模式，这与操作系统各 DLL [Dynamic Link Library] 库函数、编译连接环境有关）</div>
                 <div class = "h5">字数据大小</div>
                 <div class = "quote"><i class = "fa fa-quote-left fa-1x fa-pull-left quoteIcon" aria-hidden = "true"></i> 每台计算机都有一个字长（word size），指明指针数据的标称大小（normal size）。因为虚拟机是以这样的一个字来编码的，所以字长决定的最终的系统参数就是虚拟地址空间的大小。</div>
-                <div class = "normal"><span class = "emphasis">字长</span>和<span class = "emphasis">虚拟地址空间</span>我们常常称为<span class = "strong">系统位数</span>（或者说<span class = "strong">机器的字长</span>，64 位机器能装 32 位系统，反之不行）和<span class = "strong">内存大小</span>。</div>
+                <div class = "normal"><span class = "emphasis">字长</span>和<span class = "emphasis">虚拟地址空间</span>我们常常称为<span class = "strong">系统位数</span>（或者说<span class = "strong">机器的字长</span>）和<span class = "strong">内存大小</span>。</div>
                 <div class = "normal">32 位系统（32 位字长机器）虚拟地址的范围为 $0 \sim 2^{32} - 1​$，只能使用 4G 的内存（虚拟地址空间），而 64 位则能扩展到 16EB。</div>
                 <div class = "normal">大多数</div>
                 <br>
                 <div class = "normal">大多数 64 位机器是可以运行 32 位机器编译的程序，这是一种向后兼容。</div>
                 <div class = "normal">若程序 <span class = "emphasis">prog.c</span> 用如下伪指令编译后：</div>
-                <pre><code class = "bash">
-linux> gcc -m32 prog.c
-                </code></pre>
+                <pre><code class = "bash">linux&gt; gcc -m32 prog.c                </code></pre>
                 <div class = "normal">该程序就可以在 32 位或者 64 位机器上正确运行。</div>
                 <div class = "normal">但是如果用如下伪指令编译：</div>
-                <pre><code class = "bash">
-linux> gcc -m64 prog.c
-                </code></pre>
+                <pre><code class = "bash">linux&gt; gcc -m64 prog.c                </code></pre>
                 <div class = "normal">那就只能在 64 位机器上运行。</div>
                 <br>
                 <div class = "h5">数据大小</div>
                 <div class = "normal">基本 C 数据类型的典型大小（以字节为单位）</div>
                 <img src = "../img/image-20190416152929483.png" class = "blogImg"><br>
                 <div class = "normal">为了避免由于依赖「典型」大小和不同编译器设置带来的奇怪行为。ISO C99 引入了一类数据类型。其数据大小是固定的，不随编译器和机器设置而变化。其中就有数据类型 <span class = "italic">int32_t</span> 和 <span class = "italic">int64_t</span>，它们分别为 4 字节和 8 字节。</div>
-                <div class = "h5">寻址和字节顺序</div>
+                <div class = "h4" id = "5">寻址和字节顺序</div>
+                <div class = "h5">概述</div>
                 <div class = "normal">某些机器选择在内存中按照从最低有有效字节到最高有效字节的顺序存储对象，而另一些机器相反。最低有效字节在地址前面的方式，称为小端法；最高有效字节在最前面的方式，称为大端法。</div>
                 <div class = "normal">假设变量 x 的类型位 <span class = "italic">int</span>，位于地址 <span class = "italic">0x100</span> 处，它的十六进制值为 <span class = "italic">0x1234567</span>。地址范围 <span class = "italic">0x100 ~ 0x103</span> 的字节顺序依赖机器的类型：</div>
                 <img src = "../img/image-20190417110732550.png" class = "blogImg"><br>
                 <br>
-                <pre><code class = "c">
-int val = 12345;
-unsigned char *start = &val;
-int len = sizeof(val);
-int i = 0;
-for(i = 0; i < len; i++)
-    pritnf("%.2x ", *(start + i));
-                </code></pre>
-                <div class = "normal">代码中，把 <span class = "italic">int</span> 强制转换<span class = "emphasis">无符号字符指针</span>，<span class = "italic">start</span> 存放的这个 <span class = "italic">int</span> 变量的初始地址，<span class = "italic">sizeof</span> 获取 <span class = "italic">int</span> 数据长度，<span class = "italic">printf</span> 实现从数据低位向高位循环输出内容。</div>
+                <div class = "h5">如何查看机器大小端</div>
                 <br>
-                <div class = "h2" id = "3">在系统上运行程序</div>
-                <div class = "h2" id = "4">程序间的交互和通信</div>
-                <div class = "h2" id = "5">信息的标识和处理：位、整数</div>
+                <pre><code class = "c">#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+int main() {
+    int val = 12345;
+    unsigned char *start = &val;
+    int len = sizeof(val);
+    int i = 0;
+    for(i = 0; i &lt; len; i++)
+        printf("%.2x ", *(start + i));
+    printf("\n");
+}                </code></pre>
+                <div class = "normal">代码中，把 <span class = "italic">int</span> 强制转换<span class = "emphasis">无符号字符指针</span>，<span class = "italic">start</span> 存放的这个 <span class = "italic">int</span> 变量的初始地址，<span class = "italic">sizeof</span> 获取 <span class = "italic">int</span> 数据长度，<span class = "italic">printf</span> 实现从数据低位向高位循环输出内容。</div>
+                <div class = "normal">我实在 MacOS 上进行的试验，结果是：</div>
+                <pre><code class = "bash">39 30 00 00                </code></pre>
+                <div class = "normal">教材上的结果：</div>
+                <img src = "../img/image-20190417190415272.png" class = "blogImg"><br>
+                <div class = "normal">参数 <span class = "italic">12345</span> 的十六进制表示为 <span class = "italic">0x00003039</span>。发现 Windows、Linux、MacOS 都是先输出 <span class = "italic">0x39</span>，说明它们都是小端法机器，而 Sun 则是大端法机器。</div>
+                <div class = "h4" id = "6">整数表示</div>
+                <div class = "h5">补码编码</div>
+                <div class = "normal">假如现在有一个钟表：</div>
+                <img src = "../img/image-20190417194349834.png" class = "blogImg"><br>
+                <div class = "normal">（现在所指时间：八点）</div>
+                <div class = "normal">如果我们要将时间拨到 4 点，我们可以将时针逆时针往回拨 4 个刻度到 4 点。</div>
+                <div class = "normal">但是，我们也可以将时针顺时针<span class = "strong">顺时针往前拨</span> 8 个刻度，利用时针的循环表示规则（我们称之为自然溢出，12 点 + 1 = 1 点）。</div>
+                <br>
+                <div class = "normal">补码编码则基于这个原理。</div>
+                <div class = "normal">我们假设一个数据类型：<span class = "italic">short short int</span>，只有 4 位（0 表示为 0000）。</div>
+                <div class = "normal" style = "margin: 5px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">1.</span>首先规定：最高位为 1 时时负数，0 为正数。那么最大的正数 0111 十进制下等于 7。</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">2.</span>我们设定：负数 x 的补码为：取绝对值，然后取反 + 1（0110 取反为 1001），比如 7（1111）表示为 0001。</div>
+                <div class = "normal">这就是补码编码，<span class = "emphasis">绝对值取反加一</span>。</div>
+                <div class = "normal">下面解释这样做的理由，计算 4 - 2：</div>
+                <div class = "normal" style = "margin: 5px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">1.</span>4 = <span class = "italic">0100</span></div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">2.</span>4 - 2 = 4 + (-2)</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">3.</span>-2 = <span class = "italic">1110</span></div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">4.</span>4 - 2 = <span class = "italic">0100 + 1110</span> = <span class = "italic">0010</span> = 2（最高位进位自然溢出）</div>
+                <div class = "h5">有符号数和无符号数之间的转换</div>
+                <pre><code class = "c">short int v = -12345;
+unsigned short uv = (unsigned short) v;                </code></pre>
+                <div class = "normal">结果：<span class = "italic">v = -12345, uv = 53191</span></div>
+                <div class = "normal">强制类型转换的结果保持位值不变（二进制下相同表示），只是改变了解释这些位的方式。</div>
+                <br>
+                <div class = "normal">C 语言在处理无符号和有符号的运算时，都是隐性地把有符号数转成无符号数来处理。比如小于操作 <span class = "italic">-1 &lt; 0U</span> 的结果（0U 指无符号数 0）为 <span class = "italic">TRUE</span>。</div>
+                <div class = "h5">扩展一个数字的位表示</div>
+                <div class = "normal">当我们把一个<span class = "strong">短字长数据类型</span>变量强制转换成一个<span class = "strong">长字长数据类型</span>时，如何表示：</div>
+                <div class = "normal" style = "margin: 5px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">1.</span>无符号数的扩展：高位填满 0</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">2.</span>有符号数的扩展，高位填符号位（即正数填 0，负数填 1）</div>
+                <div class = "h5">截断数字</div>
+                <div class = "normal">当我们把一个<span class = "strong">长字长数据类型</span>变量强制转换成一个<span class = "strong">短字长数据类型</span>时，如何表示：</div>
+                <div class = "normal" style = "margin: 5px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">1.</span>无符号数截断：直接截断，高位丢掉</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">2.</span>有符号数截断：同样直接截断，但是按照有符号数解释</div>
+                <pre><code class = "c">#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+int main() {
+    int x1 = 0b11111111111111110000000000000000;
+    int x2 = 0b00000000000000001000000000000000;
+    short y = x1;
+    short z = x2;
+    printf("%d, %d\n", y, z);
+    return 0;
+}
+                </code></pre>
+                <div class = "normal">结果：<span class = "italic">0, -32768</span></div>
+                <div class = "normal">有符号数截断同样是直接截断，不管符号位。</div>
+                <div class = "h4" id = "7">浮点数</div>
+                <div class = "h5">原理</div>
+                <div class = "normal">表示成有理数的形式：</div>
+$$
+FLOAT = (-1)^S \; 2^E \; M
+$$
+                <div class = "normal">其中：</div>
+                <div class = "normal" style = "margin: 5px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">1.</span>S（符号 Sign）：决定正负</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">2.</span>E（Exponent）：用 $2^E$ 将数值加权</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">3.</span>M（位数 Significant）：二进制小数</div>
+                <div class = "h5">计算机中浮点编码</div>
+                <div class = "normal" style = "margin: 5px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">1.</span>Sign 字段：符号位 S</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">2.</span>Exp 字段：编码 E（E 与 exp 不相等，后面会解释）</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">3.</span>Frac 字段：尾数 M</div>
+                <div class = "normal">32 位浮点数：</div>
+                <img src = "../img/image-20190331152753273.png" class = "blogImg"><br>
+                <div class = "normal">注：图中 Mantissa 等同于 Frac 字段</div>
+                <div class = "h5">阶码&nbsp&nbspExp</div>
+                <div class = "normal">阶码用<span class = "emphasis">移码</span>表示。举个例子，当 E = -126，Exp 如何表示：</div>
+                <div class = "normal" style = "margin: 5px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">1.</span>E 的真值：-126</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">2.</span>负数，先改为补码，正数不用此操作：10000010</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">3.</span>移码 + 127：00000001</div>
+                <div class = "normal">这么做，有两个原因：</div>
+                <div class = "normal"><span class = "strong">第一个原因</span>：负数和正数能够直接当做无符号数来进行比较，-126 移码后变成 1，-125 变成 2，-1 变成 126，0 变成 127，1 变成 128。</div>
+                <div class = "normal"><span class = "italic">-126 &lt; -125 &lt; -1 &lt; 0 &lt; 1</span>：<span class = "italic">1 &lt; 2 &lt; 126 &lt; 127 &lt; 128</span></div>
+                <div class = "normal"><span class = "strong">第二个原因</span>：空出 00000000 和 11111111</div>
+                <div class = "normal">为什么？为了表示非规格化数。</div>
+                <div class = "h5">非规格化数</div>
+                <div class = "normal" style = "margin: 5px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">1.</span>Exp = 000...0，Frac = 000...0：表示 0（<span class = "strong">注意</span>：有 <span class = "italic">+0</span>  和 <span class = "italic">-0</span> 之分）</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">2.</span>Exp = 000...0，Frac ≠ 000...0：表示最接近 0.0 的那些数，比如 32 位浮点数：$FLOAT = frac * 2^{-126}$</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">3.</span>Exp = 111…1，Frac = 000...0：表示正负无穷</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">4.</span>Exp = 111…1，Frac ≠ 000...0：表示这不是个数（比如除以 0 等）， Not a Number (NaN)</div>
+                <div class = "h5">规格化数</div>
+                <div class = "normal">条件：Exp ≠ 000…0 且 Exp ≠ 111…1</div>
+                <div class = "normal">阶码采用偏置值编码：E = Exp - Bias，比如 32 位浮点数，E = Exp - 127</div>
+                <div class = "normal">$FLOAT = (-1)^S \times 2^{E - Bias} \times M$</div>
+                <div class = "h5">默认的舍入模式</div>
+                <div class = "normal" style = "margin: 5px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">1.</span>恰好在两个可能数值中间时（中间值）：舍入后，最低有效位的数码位偶数</div>
+                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">2.</span>其他的时候，像最近的数值舍入（类似于四舍五入，比中间值小向下舍入，比中间值大向上舍入）</div>
+                <div class = "normal">举个例子：</div>
+                <div class = "normal">7/8：10.11<span class = "strong">110</span> → 11.0<span class = "strong">0</span> → 3</div>
+                <div class = "normal">5/8：10.10<span class = "strong">110</span> → 10.1<span class = "strong">0</span> → 2</div>
+                <div class = "h5">浮点的运算</div>
+                <div class = "normal">（看书）</div>
+                <div class = "h2" id = "8">在系统上运行程序</div>
+                <div class = "h2" id = "9">程序间的交互和通信</div>
+                <div class = "h2" id = "10">信息的标识和处理：位、整数</div>
                 <div class = "normal">主要内容：位、字节、整数型</div>
                 <div class = "normal">其他内容：信息的位标识、位级运算、整形数（标识，无符号与有符号数，扩展与截断，整数运算）、内存、指针、字符串表示</div>
                 <div class = "h5">位、字节、字</div>
@@ -187,51 +293,10 @@ for(i = 0; i < len; i++)
                 <div class = "normal">需要考虑的问题：编码的长度、数的符号、数的运算</div>
                 <br>
                 <div class = "normal">一般数据类型和运算（略）</div>
-                <div class = "h4" id = "6">浮点数的表示</div>
-                <img src = "../img/image-20190331152753273.png" class = "blogImg"><br>
-                <div class = "normal">表示成有理数的形式：</div>
-$$
-(-1)^S \; 2^E \; M
-$$
-                <div class = "normal">其中：</div>
-                <div class = "normal">S（符号 Sign）：决定正负</div>
-                <div class = "normal">E（Exponent）：用 $2^E$ 将数值加权</div>
-                <div class = "normal">M（位数 Significant）：二进制小数，数据范围 $[1.0, 2.0)$</div>
-                <div class = "h5">浮点编码</div>
-                <div class = "normal" style = "margin: 5px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">1.</span>最高有效位（MSB），最为符号位 s</div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">2.</span>exp 字段，编码 E（E 与 exp 不相等）</div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">3.</span>frac 字段编码尾数 M（与 M 也不一定相等）</div>
-                <div class = "h5">精度选项</div>
-                <div class = "normal">单精度：32 bits（1 + 8 + 23）</div>
-                <div class = "normal">双精度：64 bits（1 + 11 + 52）</div>
-                <div class = "normal">扩展精度：80 bits（1 + 15 + 63/64）</div>
-                <div class = "h5">阶码（移码）</div>
-                <div class = "normal">举个例子，exp 如何表示 -126</div>
-                <div class = "normal" style = "margin: 5px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">1.</span>真值：-126</div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">2.</span>补码：10000010</div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">3.</span>移码 + 128：00000010</div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">4.</span>移码 + 127：00000001</div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">5.</span>机器数：1</div>
-                <div class = "normal">没有 -127，-128，空出 0000000 和 1111111</div>
-                <div class = "h5">规格化数</div>
-                <div class = "normal">条件：exp ≠ 000…0 且 exp ≠ 111…1</div>
-                <div class = "normal">阶码采用偏置值编码：E = Exp - Bias</div>
-                <div class = "normal">$T = (-1)^S \times 2^{Bias + E} \times M$</div>
-                <div class = "h5">非规格化数</div>
-                <div class = "normal" style = "margin: 5px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">1.</span>exp = 000...0，frac = 000...0：表示 0（<span class = "emphasis">注意</span>：有 +0  和 -0 之分）</div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">2.</span>exp = 000...0，frac ≠ 000...0：表示最接近 0.0 的那些数（$frac * 2^{-126}$）</div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">3.</span>exp = 111…1，frac = 000...0：表示正负无穷</div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">4.</span>exp = 111…1，frac = 000...0：表示 Not a Number (NaN)</div>
-                <div class = "h5">默认的舍入模式</div>
-                <div class = "normal" style = "margin: 5px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">1.</span>恰好在两个可能数值中间时（中间值）：舍入后，最低有效位的数码位偶数</div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">2.</span>其他的时候，像最近的数值舍入（比中间值小向下舍入，比中间值大向上舍入）</div>
-                <div class = "normal">举例：</div>
-                <div class = "normal">7/8：10.11<span class = "strong">110</span> → 11.0<span class = "strong">0</span> → 3</div>
-                <div class = "normal">5/8：10.10<span class = "strong">110</span> → 10.1<span class = "strong">0</span> → 2</div>
-                <div class = "h5">浮点的运算</div>
-                <div class = "normal">（看书）</div>
-                <div class = "h2" id = "7">程序的机器级表示</div>
-                <div class = "h3" id = "8">基础</div>
+                <div class = "h4" id = "11">浮点数的表示</div>
+                <br>
+                <div class = "h2" id = "12">程序的机器级表示</div>
+                <div class = "h3" id = "13">基础</div>
                 <div class = "h5">Intel&nbsp&nbspx86&nbsp&nbsp处理器</div>
                 <div class = "normal">复杂指令集计算机（Complex instruction set computer，CISC）</div>
                 <div class = "normal" style = "margin: 5px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">1.</span>指令多、指令格式多（Linux 程序设计只用到较小子集）</div>
@@ -240,14 +305,14 @@ $$
                 <div class = "normal">8086/8 内部有两个功能模块，完成一条指令的取值和执行功能</div>
                 <div class = "normal" style = "margin: 5px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">1.</span>模块之一：总线结构单元 BIU，主要负责读取指令和操作数</div>
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">2.</span>模块之二：执行单元 EU，主要负责指令译码和执行</div>
-                <div class = "h3" id = "9">8086&nbsp&nbsp的寄存器组</div>
+                <div class = "h3" id = "14">8086&nbsp&nbsp的寄存器组</div>
                 <div class = "normal">对于汇编语言程序来说，8086 内部结构就是可编程的寄存器组</div>
                 <div class = "normal" style = "margin: 5px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">1.</span>执行单元 EU 8 个通用寄存器</div>
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">2.</span>1 个指令指针寄存器</div>
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">3.</span>1 个标志寄存器</div>
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">4.</span>4 个段寄存器 / 64 位增加了 fs/gs 也成 16 位</div>
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">5.</span><span class = "emphasis">注意</span> 32 / 64 位 CPU 对通用寄存器记性了位扩展，64 位增加了 R8 - R15 共 8 个寄存器</div>
-                <div class = "h4" id = "10">8086&nbsp&nbsp的通用寄存器</div>
+                <div class = "h4" id = "15">8086&nbsp&nbsp的通用寄存器</div>
                 <div class = "normal">8086 的 16 位通用寄存器是：</div>
                 <div class = "normal" style = "margin: 5px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">1.</span>AX（Accumulator Register）：累加寄存器，使用频率最高，常用于运算；在乘除等指令中用来存放操作数，另外，所有的 I/O 指令都使用这一寄存器与外界设备传送数据。</div>
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">2.</span>BX（Base）：基址寄存器，常用于存放村粗器地址、地址索引，数组首地址</div>
@@ -271,7 +336,7 @@ $$
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">2.</span>它与代码段寄存器 CS 联用，确定下一条指令的物理地址</div>
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">3.</span>计算机通过 CS：IP 寄存器来控制指令序列的执行流程</div>
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">4.</span>IP 寄存器是一个专用寄存器</div>
-                <div class = "h4" id = "11">标志寄存器</div>
+                <div class = "h4" id = "16">标志寄存器</div>
                 <div class = "normal">标志（Flag）用于反映指令执行结果或控制指令执行形式，8086 处理器的各种标志形成了一个 16 位的标志寄存器 FLAGS（程序状态字 PSW 寄存器）</div>
                 <div class = "normal"><span class = "emphasis">程序设计需要利用标志的状态</span></div>
                 <br>
@@ -291,7 +356,7 @@ $$
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">9.</span>陷阱标志 TF（Trap Flag）：用于控制处理器进入但不操作方式（TF = 0：正常；1：单步）</div>
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 68px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #333">▪</span>&nbsp单步执行指令：处理器在每条指令执行结束时，便产生一个编号为 1 的内部中断，这种内部中断被称为<span class = "strong">单步中断</span></div>
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 68px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #333">▪</span>&nbsp所以 TF 也称为<span class = "strong">单步标志</span>，利用单步中断可以对程序进行逐条指令的调试，这种逐条指令调试程序的方法就是单步<span class = "strong">调试</span></div>
-                <div class = "h4" id = "12">段寄存器</div>
+                <div class = "h4" id = "17">段寄存器</div>
                 <div class = "normal">8086 有 4 个 16 位段寄存器（分别指明各段的起始地址）：CS（代码段）、SS（堆栈段）、DS（数据段）、ES（附加段）</div>
                 <div class = "normal">每个段寄存器用来确定一个逻辑段的起始地址，每种逻辑段均有各自的用途</div>
                 <div class = "normal">32 / 64 位 CPU 采用段选择子——数组下标 / 段表述符表 —— 数组（含段地址、范围、权限等）的形式来确定段地址</div>
@@ -303,15 +368,15 @@ $$
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">4.</span>然后把 CPU 的 CS 变成当前分配的代码段值，IP 位第一条指令的便宜，从而开始程序的执行</div>
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">5.</span>SP 位堆栈段的大小（最大值 -wB）</div>
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">6.</span>在汇编程序时，通过交叉文件可以看出各段的大小</div>
-                <div class = "h4" id = "13">8086&nbsp&nbsp的指令系统</div>
+                <div class = "h4" id = "18">8086&nbsp&nbsp的指令系统</div>
                 <div class = "normal">8086 / 8088 的指令系统包含了六种类型，其中数据传送指令 14 条，算术运算指令 20 条，逻辑运算指令 13 条，串操作指令 10 条，控制转移指令 28 条，处理器控制指令 12 条。</div>
-                <div class = "h3" id = "14">数据传送指令</div>
+                <div class = "h3" id = "19">数据传送指令</div>
                 <div class = "normal" style = "margin: 5px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">1.</span><span class = "strong">MOV</span> DST SRC：传送（Move）。目的数可以是通用寄存器、存储单元、段寄存器，CS 段寄存器除外；<span class = "underline">不允许两个存储单元或段寄存器直接传送</span>；</div>
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">2.</span><span class = "strong">PUSH</span> SRC，<span class = "strong">POP</span> DST：堆栈操作（Push onto / Pop from the stack）</div>
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 68px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #333">▪</span>&nbspPUSH 操作：SP = SP - 2；(SP, SP + 1) = SRC</div>
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 68px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #333">▪</span>&nbspPOP 操作：DST = (SP + 1, SP)；SP = SP + 2</div>
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">3.</span><span class = "strong">XCHG</span> OPR1,OPR2：交换（Exchange）。不能与段寄存器交换数据；存储器之间不能交换</div>
-                <div class = "h4" id = "15">累加器专用传送指令</div>
+                <div class = "h4" id = "20">累加器专用传送指令</div>
                 <div class = "normal" style = "margin: 5px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">1.</span><span class = "strong">IN</span>（Input）输入</div>
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 71px; text-indent: -25px;"><span class = "myList" style = "color: #333">1.</span>长格式：<span class = "strong">IN</span> AL,PORT（字节）；<span class = "strong">IN</span> AX, PORT（字）：执行的操作：AL = PORT（字节），AX = (wPORT + 1, PORT)（字）</div>
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 71px; text-indent: -25px;"><span class = "myList" style = "color: #333">2.</span>短格式：<span class = "strong">IN</span> AL, DX（字节）；<span class = "strong">IN</span> AX, DX（字）</div>
@@ -321,16 +386,16 @@ $$
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">3.</span><span class = "strong">XLAT</span>（TRANSLATE） 转码指令：把一种代码转换成另一种代码。</div>
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 71px; text-indent: -25px;"><span class = "myList" style = "color: #333">1.</span>格式：<span class = "strong">XLAR</span>  (OPR 可选)，自行操作：AL = (BX, AL)</div>
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 71px; text-indent: -25px;"><span class = "myList" style = "color: #333">2.</span>注意：指令执行时只是用预先已存入 BX 中的表格首地址，执行后，AL 中内容则是要转换的代码。</div>
-                <div class = "h4" id = "16">有效地址送寄存器指令</div>
+                <div class = "h4" id = "21">有效地址送寄存器指令</div>
                 <div class = "normal" style = "margin: 5px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">1.</span><span class = "strong">LEA</span> REG, SRC（Load effective address）有效地址送寄存器</div>
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">2.</span><span class = "strong">LDS</span> REG, SRC（Load DS with Pinter）指针送寄存器和 DS 指令</div>
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">3.</span><span class = "strong">LES</span> REG, SRC（Load ES with Pointer）指针送寄存器和 ES</div>
-                <div class = "h4" id = "17">标志寄存器传送指令</div>
+                <div class = "h4" id = "22">标志寄存器传送指令</div>
                 <div class = "normal" style = "margin: 5px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">1.</span>LAHF（Load AH with flags）标志送 AH</div>
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">2.</span>SAHF（Store AH into flags）AH 送标志寄存器</div>
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">3.</span>PUSHF（Push the flags）标志进栈</div>
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">4.</span>POPF（Pop the flags）标志出栈</div>
-                <div class = "h4" id = "18">算术指令</div>
+                <div class = "h4" id = "23">算术指令</div>
                 <div class = "h5">加法指令</div>
                 <div class = "normal"><span class = "strong">ADD</span> DST, SRC（Add）加法指令</div>
                 <div class = "normal">操作：DST = SRC + DST</div>
@@ -396,7 +461,7 @@ $$
                 <div class = "normal"><span class = "strong">CWD</span>（Convert Word to Double Word）字转换为双字指令</div>
                 <div class = "normal">AX 中的符号位（D15）扩展到 16 位 DX 中；</div>
                 <div class = "normal"><span class = "strong">注</span>：两条转换指令都不影响条件码</div>
-                <div class = "h4" id = "19">逻辑指令</div>
+                <div class = "h4" id = "24">逻辑指令</div>
                 <div class = "normal">AND，OR，NOT，XOR，TEST：</div>
                 <div class = "normal" style = "margin: 5px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">1.</span>AND，OR，XOR，TEST 都是双字节操作指令，操作数的寻址方式的规定与算法算术指令相同</div>
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">2.</span>NOT 是单字节操作指令，不允许使用立即数</div>
@@ -406,18 +471,18 @@ $$
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">2.</span><span class = "strong">XOR</span> 常用于使某个操作数清零，同时使 CF = 0，清除进位标志</div>
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">3.</span><span class = "strong">NOT</span> 不影响任何标志位</div>
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">4.</span><span class = "strong">TEST</span> 影响标志位 PF，SF 和 ZF，使 CF = OF = 0，而 AF 位无定义。</div>
-                <div class = "h4" id = "20">移位指令</div>
+                <div class = "h4" id = "25">移位指令</div>
                 <div class = "normal"><span class = "strong">SHL、SHR</span>（Shift Logical left / right）逻辑左右移，<span class = "strong">SAL，SAL</span>（A：arithmetic）算术左右移，执行操作和逻辑左右移相同（最高位移出到 CF，最低位补 0）。</div>
                 <div class = "normal"><span class = "strong">ROL、ROR</span>（Rotate left / right）：循环左右移，最高位同时移到 CF 和最低位。</div>
                 <div class = "normal"><span class = "strong">RCL、RCR</span>（Rotate right / left through carry），带进位循环左右移。</div>
-                <div class = "h4" id = "21">串处理指令</div>
+                <div class = "h4" id = "26">串处理指令</div>
                 <div class = "normal" style = "margin: 5px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">1.</span>MOVS、MOVSB、MOVSW：传送串</div>
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">2.</span>CMPS、CMPSB、CSMPSW：串比较</div>
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">3.</span>SCAS、SCASB、SCASW：串扫描</div>
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">4.</span>LODS、LODSB、LODSW：取字符串</div>
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">5.</span>STOS、STOSB、STOSW：存字符串</div>
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">6.</span>REP、REPZ、REPNZ：重复前缀</div>
-                <div class = "h4" id = "22">控制转移指令</div>
+                <div class = "h4" id = "27">控制转移指令</div>
                 <div class = "h5">过程调用以及返回指令</div>
                 <div class = "normal"><span class = "strong">CALL</span> DST：子程序调用（在程序中 DST 实际是子程序标号）</div>
                 <div class = "normal">执行操作：先将过程的返回地址（即子程序调用完后下一条的首地址）存如堆栈，然后转移到过程入口执行子程序。</div>
@@ -454,7 +519,7 @@ $$
                 <div class = "normal">JCXZ：寄存器 CX = 0 转移</div>
                 <div class = "normal">INT、INTO：中断</div>
                 <div class = "normal">IRET：中断返回</div>
-                <div class = "h4" id = "23">处理机控制指令</div>
+                <div class = "h4" id = "28">处理机控制指令</div>
                 <div class = "normal">CLC、CLD、CLI：清楚 CF、DF、IF 标志</div>
                 <div class = "normal">CMC：进位位 CF 求反</div>
                 <div class = "normal">STC、STD、STI：设置 CF、DF、IF 标志</div>
@@ -463,7 +528,7 @@ $$
                 <div class = "normal">ESC：将数据传送给协处理器（提供到地址 / 数据线上）</div>
                 <div class = "normal">LOCK：保证总线的控制</div>
                 <div class = "normal">NOP：无操作</div>
-                <div class = "h4" id = "24">操作数寻址方式</div>
+                <div class = "h4" id = "29">操作数寻址方式</div>
                 <div class = "normal">指令由操作码和操作数组成，操作数是一个常数值 - 立即数，也可以在 CPU、内存、IO 端内（IN / OUT 指令）中</div>
                 <div class = "normal">操作数寻址方式有：</div>
                 <div class = "normal" style = "margin: 5px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">1.</span>立即数寻址：MOV EAX, 123456678H</div>
@@ -472,7 +537,7 @@ $$
                 <div class = "normal">存储器寻址 SREG:D(Rb, Ri, S) 段寄存器可用默认，省略</div>
                 <div class = "normal" style = "margin: 5px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">1.</span>段址：[基地址 Rb + 变址 Ri * 比例因子 S + 偏移 D]，这三部分可以任意组合。32 位以上 CPU 才有比例因子（1 / 2 / 4 / 8）</div>
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">2.</span>16 位 CPU：基址 BX / BP，变址 SI / DI。其他 CPU 变址不用 ESP 等。</div>
-                <div class = "h4" id = "25">存储器寻址</div>
+                <div class = "h4" id = "30">存储器寻址</div>
                 <div class = "normal">其组合与我们高级语言编程时的各种类型与结构的全局变量、局部变量、参数的访问有关系。</div>
                 <div class = "normal" style = "margin: 5px 0px 10px 0px; padding-left: 23px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #333">▪</span>&nbsp直接寻址：MOV AX, [1000H]</div>
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 23px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #333">▪</span>&nbsp寄存器间接寻址：MOV AX, [BX]</div>

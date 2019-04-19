@@ -131,8 +131,7 @@
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">2.</span>查看此页面是否有 <span class = "emphasis">&lt;div class = "more"&gt;&lt;/div&gt;</span> 来判断是否达到最后一页。</div>
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">3.</span>标签也算是比较规范，爬起来比较放心，有一个特例，搜索一下 <span class = "emphasis">可愛い</span> ，这个词的注音的标签就有点区别</div>
                 <div class = "normal">建立数据库，新建 TABLE words</div>
-                <pre><code class = "mysql">
-CREATE TABLE words
+                <pre><code class = "mysql">CREATE TABLE words
 (
     id int not null AUTO_INCREMENT,
   	kanji varchar(50) not null,
@@ -144,17 +143,14 @@ CREATE TABLE words
   	weight tinyint not null,
   	PRIMARY KEY (id),
   	CONSTRAINT kanji_kana UNIQUE (kanji, kana)
-);
-                </code></pre>
+);                </code></pre>
                 <div class = "normal">注意日语里面有很多多音词，需要用联合 UNIQUE 判重（汉字和平假注音）。</div>
                 <div class = "normal">意思有些单词很长，比如 <span class = "emphasis">掛ける</span> ，tinytext 可能不够。</div>
-                <pre><code class = "python">
-cursor.execute('''
+                <pre><code class = "python">cursor.execute('''
     INSERT IGNORE INTO words(kanji, kana, type, grade, meaning, other)
     VALUES("%s", "%s", "%s", %d, "%s", "%s");
     '''%(kanji, kana, wType, grade, meaning, other))
-connection.commit()
-                </code></pre>
+connection.commit()                </code></pre>
                 <div class = "normal">然后就可以愉快的跟新数据库了，记得 <span class = "emphasis">INGORE</span> 去重。</div>
                 <div class = "h2" id = "3">软件制作</div>
                 <div class = "normal">需要大概实现这些功能：空格显示单词信息，再按空格表示认识，F 表示不熟或不认识，Q 退出程序（不认识的单词权重会增加，认识的会减少，权重更大的单词更容易出现）</div>
@@ -166,8 +162,7 @@ connection.commit()
                 <div class = "normal">需要准备：TKinter。这个 GUI 库 Python 内置，不需要再去获取。</div>
                 <div class = "normal">其中比较重要的几个点：</div>
                 <div class = "h5">如何使权重大的单词更容易出现</div>
-                <pre><code class = "python">
-self.data = self.cursor.fetchall()
+                <pre><code class = "python">self.data = self.cursor.fetchall()
 self.order = []
 self.allNum = len(self.data)
 for i in range(0, self.allNum):
@@ -176,24 +171,22 @@ for i in range(0, self.allNum):
 
 def myCmp(self, x, y):
   	myRange = 0
-  	if self.data[x][-1] > self.data[y][-1]:
+  	if self.data[x][-1] &gt; self.data[y][-1]:
     	myRange = 10
     else:
       myRange = 6
       result = random.randint(1, myRange)
     
-    if result > 3:
+    if result &gt; 3:
         return -1;
-    return 1;
-                </code></pre>
+    return 1;                </code></pre>
                 <div class = "normal">根据 JLPT 等级和词性获得的单词放在 data 数组中，order 是一个顺序数组（长度和 data 相同），用 <span class = "emphasis">fechall()</span>  得到的是个 <span class = "emphasis">tuple</span> 无法修改，所以修改 order 的顺序，来改变 data 的顺序（调用方式：<span class = "emphasis">data[order[i]]</span>）。</div>
                 <br>
                 <div class = "normal"><span class = "emphasis">myCmp</span> 是一个半随机的排序比较函数（单词的权重信息我放在最后一个位置，也就是 data[x][-1]）。这样能使权重大（也就是记得越不熟）的单词<span class = "strong">更容易</span>出现在前面，但是权重小的单词<span class = "strong">也可能</span>出现。</div>
                 <div class = "h5">修改单词权重</div>
                 <div class = "normal">在获取单词信息的时候，请把 ID（也就是 PRIMARY KEY 约束的表头）也一并获取。</div>
                 <div class = "normal">然后根据唯一确定的 ID 来修改单词的权重</div>
-                <pre><code class = "python">
-def changeWeight(self, order, value):
+                <pre><code class = "python">def changeWeight(self, order, value):
     self.cursor.execute('''
       SELECT weight from words
       WHERE id = %d
@@ -206,8 +199,7 @@ def changeWeight(self, order, value):
   		SET weight = %d
   		WHERE id = %d
   		''' % (now, order))
-  	self.connection.commit()
-                </code></pre>
+  	self.connection.commit()                </code></pre>
                 <div class = "normal">其他的逻辑和 UI 就是比较码农的东西，慢慢敲就行。</div>
                 <br>
                 <div class = "normal">程序的编写非常简单，没啥建议。</div>

@@ -38,7 +38,7 @@ class makeHTML:
         path_list = os.listdir(path)
         path_list.sort() #对读取的路径进行排序
         for theName in path_list:
-        	self.fileName.append(os.path.join(path,theName))
+        self.fileName.append(os.path.join(path,theName))
         self.num = len(path_list)
         self.homeTemp = open('templates/newPageTest.html').read()
         self.blogTemp = open('templates/blog.html').read()
@@ -158,6 +158,13 @@ class makeHTML:
                         isStrong = False
                         i += 1
                 elif i + 1 < mLen and not (myStr[i + 1] == ' ' and myStr[i - 1] == ' '):
+                    if not isItalic:
+                        newS += '''<span class = "italic">'''
+                        isItalic = True
+                    else:
+                        newS += '''</span>'''
+                        isItalic = False
+                elif i + 1 == mLen:
                     if not isItalic:
                         newS += '''<span class = "italic">'''
                         isItalic = True
@@ -294,19 +301,17 @@ class makeHTML:
             isNormal = 0
             if lLen > 3 and line[:3] == '```':
                 if(lLen > 4):
-                    blogContent += '''                <pre><code class = "%s">''' % (line[3 : -1]).replace('<', '&lt;').replace('>', '&gt;') + '\n'
+                    blogContent += '''                <pre><code class = "%s">''' % (line[3 : -1])
                 else:
                     blogContent += '''                <pre><code class = "nohighlight">''' + '\n'
                 while True:
                     i += 1
                     if len(self.Paragraph[i]) > 3 and self.Paragraph[i][:3] == '```':
                         break
-                    blogContent += self.Paragraph[i]
+                    blogContent += self.Paragraph[i].replace('<', '&lt;').replace('>', '&gt;')
+                blogContent = blogContent[:-1]
                 blogContent += '''                </code></pre>''' + '\n'
             elif lLen > 2 and line[:2] == '$$':
-                #outFIle.write('''                <pre class = "codeBlock">''' + '\n')
-                # if self.Paragraph[i - 1][0] != '\n':
-                #     blogContent += '''<br>'''
                 blogContent += '$$\n'
                 while True:
                     i += 1
@@ -343,22 +348,6 @@ class makeHTML:
             elif lLen > 5 and line[:5] == '[TOC]':
                 if i + 1 < lLen and self.Paragraph[i + 1] == '\n':
                     i += 1
-            elif line[0] == '[' and line[-2] == ')':
-                context = ''
-                href = ''
-                tempPos = 1
-                while True:
-                    if line[tempPos] == ']':
-                        break
-                    context += line[tempPos]
-                    tempPos += 1
-                tempPos += 2
-                while True:
-                    if line[tempPos] == ')':
-                        break
-                    href += line[tempPos]
-                    tempPos += 1
-                blogContent += '''                <a href = "%s" class = "conncetion"><i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp&nbsp&nbsp''' % (href) + context + '''</a>''' + '\n'
             elif line[0:2] == '![' and line[-2] == ')':
                 context = ''
                 href = ''
