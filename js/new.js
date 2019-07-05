@@ -112,6 +112,8 @@ function disCcommingSoon() {
 //fun 要执行的函数
 //delay 延迟
 //time  在time时间内必须执行一次
+
+/*
 function throttle(fun, delay, time) {
     var timeout, startTime = new Date();
 
@@ -151,4 +153,6 @@ function lazyload(event) {
         }
     }
 }
+*/
+
 // 采用了节流函数
