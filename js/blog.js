@@ -96,7 +96,7 @@ if($(window).width() >= 800) {
             s.setAttribute('data-timestamp', + new Date());
             (d.head || d.body).appendChild(s);
             })();
-            
+
             //目录跳转
             $('.contentListCon').click(function() {
                 var pos = $($.attr(this, 'href')).offset().top;

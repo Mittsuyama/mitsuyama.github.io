@@ -11,17 +11,16 @@
         <link rel = "stylesheet" href = "../css/home.css">
         <link rel = "stylesheet" href = "../css/blog.css">
         <link rel = "stylesheet" href = "../css/index.css">
-
-        <!-- Google Font -->
-        <!-- <link href="https://fonts.googleapis.com/css?family=Noto+Sans+SC:300,500" rel="stylesheet"> -->
+        <link href="https://fonts.googleapis.com/css?family=Noto+Sans+SC:300,500" rel="stylesheet">
+        <!-- <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css"> -->
 
         <link rel = "icon" href = "../img/icon/favicon.ico" mce_href = "../img/icon/favicon.ico" type = "image/x-icon">
         <link rel = "shortcut icon" href = "../img/icon/favicon.ico" mce_href = "../img/icon/favicon.ico" type = "image/x-icon">
-
+        
         <link rel = "stylesheet" type = "text/css" href = "../css/search.css">
-
+        
         <link rel = "stylesheet" href = "../highlight/styles/atom-one-dark.css">
-
+        
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 
         <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css">
@@ -36,9 +35,9 @@
             $youziku.draw();
         </script> -->
 
-        <title>博客页面的重新设计</title>
+        <title>ア、秋</title>
     </head>
-
+    
     <body>
         <div class = "nevigation">
                 <div class = "nevigation_content1">
@@ -46,7 +45,7 @@
                     <div class = "nav_text_home">
                         MITSUYAMA
                     </div>
-                    </a>
+                    </a>        
                 </div>
                 <div class = "navigation_content2">
                     <div class = "nav_text" id = "searchButton">
@@ -58,7 +57,7 @@
                         </div>
                     </a>
                     <div class = "nav_text">
-                        BLOG
+                        BLOG    
                     </div>
                     <a href = "https://github.com/Mittsuyama">
                         <div class = "nav_text">
@@ -67,33 +66,29 @@
                     </a>
                 </div>
             </div>
-
+            
         <div class = "imgBack"></div>
         <div class = "container-fluid" id = "blogBackground">
-            <img src = "../img/blog-image/27.jpg" class = "blogTitleImg">
+            <img src = "../img/blog-image/33.jpg" class = "blogTitleImg">
             <div class = "glass"></div>
             <div class = "blogTitle">
-                    博客页面的重新设计
+                    ア、秋
             </div>
             <div class = "tagContainer">
-                &nbspWebsite | Github | Design&nbsp&nbsp|&nbsp&nbsp&nbsp拾贰月 16，2018
+                &nbspArticle | Notes | Japanese | Language&nbsp&nbsp|&nbsp&nbsp&nbsp伍月 9，2019
             </div>
         </div>
-
+        
         <div class = "contentListOut">
             <div class = "contentList">
                 <div class = "contentBorder">
                     <div class = "contentTitile">┌─ 目录 ───────</div>
-                                <a href = "#1" class = "contentListCon" style = "color: rgba(0, 0, 0, 0.5); font-weight: bold;">一点小想法</a>
-            <a href = "#2" class = "contentListCon" style = "color: rgba(0, 0, 0, 0.5); font-weight: bold;">奇思妙想</a>
-            <a href = "#3" class = "contentListCon" style = "color: rgba(0, 0, 0, 0.5); font-weight: bold;">几个喜欢的网页样式</a>
-            <a href = "#4" class = "contentListCon" style = "color: rgba(0, 0, 0, 0.5); font-weight: bold;">网页设计截图</a>
-            <a href = "#5" class = "contentListCon" style = "color: rgba(0, 0, 0, 0.5); font-weight: bold;">如何自己定义字体</a>
+                                <a href = "#1" class = "contentListCon" style = "color: rgba(0, 0, 0, 0.5); font-weight: bold;">ア、秋</a>
 
                 </div>
             </div>
         </div>
-
+        
         <div class = "blogMainBlock">
             <div class = "articleContext">
                     <div class = "funButtonBox">
@@ -114,63 +109,68 @@
                         </div>
                     </div>
                 <div class = "articleBorder">
-                                    <div class = "h2" id = "1">一点小想法</div>
-                <div class = "normal">轮播的样式必须得换，<span class = "underline">图片需要重新找，要和内容对上</span>，不然感觉很奇怪，文字和图片也需要配合，有几种样式可以尝试：文字与图片穿插，图片的部分截取等。</div>
-                <img src = "../img/website/1550245501798.png" class = "blogImg"><br>
-                <div class = "normal">↑ 这个是文字和图片穿插</div>
-                <img src = "../img/website/1550245575715.png" class = "blogImg"><br>
-                <div class = "normal">↑ 图片的部分截取</div>
-                <div class = "normal">轮播的切换方式，由于自己摸索出来的幻灯片的实现，有许多 BUG，样式还不易修改，什么时候学习一下比较好的构建方式。</div>
-                <div class = "normal">轮播部件后面的内容，除了最近上传的博客（注意是最近上传，所以不能一股脑全部放上去了，全部查看得想个办法），文章分类查看，文章搜索（应该还能加一些其他的东西，想起来在往上加）</div>
-                <div class = "normal">网页字体有点过于单调，我还在想，页面出博客内容外的其他文字用<span class = "underline">中文</span>好还是<span class = "underline">英文</span>好。</div>
-                <div class = "normal">文章页面，顶部的那张图可以去掉，非常的多余（除非有点关联）还影响加载速度（或者用单色调的背景来解决）。</div>
-                <div class = "normal">文章页面底部例如推荐阅读，下一篇，上一篇可以考虑考虑</div>
-                <div class = "normal">经验还不够，还需要再看看做得好的网页</div>
+                                    <div class = "h2" id = "1">ア、秋</div>
+                <div class = "quote"><i class = "fa fa-quote-left fa-1x fa-pull-left quoteIcon" aria-hidden = "true"></i>文 / 太宰治</div>
+                <div class = "normal">本職の詩人ともなれば、いつどんな注文があるか、わからないから、常に詩材の準備をして置くのである。</div>
                 <br>
-                <div class = "normal">（2019年2月16日22:13:34）想了一下，轮播用第一种解决方案，但是还是要改一下：</div>
-                <div class = "normal" style = "margin: 5px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">1.</span>自动轮播还是要加上。</div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">2.</span>由于是中文，字体需要好好考虑一下，图片也需要好好找找，如果暗色图片居多，则用黑色蒙版加白色字体，如果是浅色背景，则用黑色字体。</div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">3.</span>轮播的进度条位置改在下面（颜色）；进度条移动特效；hover 时的特效。</div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">4.</span>READ MORE 的按钮样式需要修改。</div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">5.</span>中文标题比较长，放在最上面，但是要和简介、时间等内容左对齐。</div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">6.</span>右下角的按钮样式，因为是循环播放，左右应该一直存在，所以考虑更换效果，按钮颜色根据找的图片风格需要跟换。</div>
+                <div class = "normal">「秋について」という注文が来れば、よし来た、と「ア」の部の引き出しを開いて、愛、青、赤、アキ、いろいろのノオトがあって、そのうちの、あきの部のノオトを選び出し、落ちついてそのノオトを調べるのである。</div>
                 <br>
-                <div class = "normal">（2019年2月17日21:41:59）</div>
-                <div class = "normal">轮播的大概样式做完了，还差一个轮播的定位条，右下角翻页按钮有待商榷，自动轮播不着急做；接下来是顶部的导航栏，和轮播之后的内容，最近跟新可以放上去，把之前的粘贴过来就行；然后还有文章分类。</div>
-                <div class = "h2" id = "2">奇思妙想</div>
-                <div class = "normal" style = "margin: 5px 0px 10px 0px; padding-left: 23px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #333">▪</span>&nbsp  浅色，粗线条下划线作为标题</div>
-                <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 23px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #333">▪</span>&nbsp  顶部网页滚动进度条</div>
-                <div class = "h2" id = "3">几个喜欢的网页样式</div>
-                <div class = "normal"><a href = "https://github.blog/2019-01-16-dashboard-ui-refresh/" class = "conncetion"><i class="fa fa-paper-plane" aria-hidden="true" ></i>GitHub Dashboard UI refresh</a></div>
-                <div class = "normal"><a href = "https://www.nationalgeographic.com/" class = "conncetion"><i class="fa fa-paper-plane" aria-hidden="true" ></i>National Geographic</a></div>
+                <div class = "normal">トンボ。スキトオル。と書いてある。</div>
                 <br>
-                <div class = "h2" id = "4">网页设计截图</div>
-                <img src = "../img/blogTheme/1542352073034.png" class = "blogImg"><br>
-                <img src = "../img/blogTheme/1542352105131.png" class = "blogImg"><br>
-                <img src = "../img/blogTheme/1542352128514.png" class = "blogImg"><br>
-                <img src = "../img/blogTheme/1542352137024.png" class = "blogImg"><br>
-                <img src = "../img/blogTheme/1542352163151.png" class = "blogImg"><br>
-                <img src = "../img/blogTheme/1542352169823.png" class = "blogImg"><br>
-                <img src = "../img/blogTheme/1542352182567.png" class = "blogImg"><br>
-                <img src = "../img/blogTheme/1542352206260.png" class = "blogImg"><br>
-                <img src = "../img/blogTheme/1542352213308.png" class = "blogImg"><br>
-                <div class = "normal">↑ 最喜欢的文章展示格式</div>
-                <img src = "../img/blogTheme/1542352218744.png" class = "blogImg"><br>
-                <img src = "../img/blogTheme/1542352281825.png" class = "blogImg"><br>
-                <img src = "../img/blogTheme/1542352309424.png" class = "blogImg"><br>
-                <img src = "../img/blogTheme/1542352439558.png" class = "blogImg"><br>
-                <img src = "../img/blogTheme/1542352468879.png" class = "blogImg"><br>
-                <img src = "../img/blogTheme/1542352475573.png" class = "blogImg"><br>
-                <div class = "normal">标签式：</div>
-                <img src = "../img/blogTheme/1542352505960.png" class = "blogImg"><br>
+                <div class = "normal">秋になると、蜻蛉も、ひ弱く、肉体は死んで、精神だけがふらふら飛んでいる様子を指して言っている言葉らしい。蜻蛉のからだが、秋の日ざしに、透きとおって見える。</div>
                 <br>
-                <img src = "../img/blogTheme/1546844461203.png" class = "blogImg"><br>
-                <img src = "../img/blogTheme/1546844472180.png" class = "blogImg"><br>
-                <div class = "h2" id = "5">如何自己定义字体</div>
-                <img src = "../img/blogTheme/1542352320090.png" class = "blogImg"><br>
+                <div class = "normal">秋ハ夏ノ焼ケ残リサ。と書いてある。焦土である。</div>
+                <br>
+                <div class = "normal">夏ハ、シャンデリヤ。秋ハ、燈籠。とも書いてある。</div>
+                <br>
+                <div class = "normal">コスモス、無残。と書いてある。</div>
+                <br>
+                <div class = "normal">いつか郊外のおそばやで、ざるそば待っている間に、食卓の上の古いグラフを開いて見て、そのなかに大震災の写真があった。一面の焼野原、市松の浴衣着た女が、たったひとり、疲れてしゃがんでいた。私は、胸が焼き焦げるほどにそのみじめな女を恋した。おそろしい情慾をさえ感じました。悲惨と情慾とはうらはらのものらしい。息がとまるほどに、苦しかった。枯野のコスモスに行き逢うと、私は、それと同じ痛苦を感じます。秋の朝顔も、コスモスと同じくらいに私を瞬時窒息させます。</div>
+                <br>
+                <div class = "normal">秋ハ夏ト同時ニヤッテ来ル。と書いてある。</div>
+                <br>
+                <div class = "normal">夏の中に、秋がこっそり隠れて、もはや来ているのであるが、人は、炎熱にだまされて、それを見破ることが出来ぬ。耳を澄まして注意をしていると、夏になると同時に、虫が鳴いているのだし、庭に気をくばって見ていると、桔梗の花も、夏になるとすぐ咲いているのを発見するし、蜻蛉だって、もともと夏の虫なんだし、柿も夏のうちにちゃんと実を結んでいるのだ。</div>
+                <br>
+                <div class = "normal">秋は、ずるい悪魔だ。夏のうちに全部、身支度をととのえて、せせら笑ってしゃがんでいる。僕くらいの炯眼の詩人になると、それを見破ることができる。家の者が、夏をよろこび海へ行こうか、山へ行こうかなど、はしゃいで言っているのを見ると、ふびんに思う。もう秋が夏と一緒に忍び込んで来ているのに。秋は、根強い曲者である。</div>
+                <br>
+                <div class = "normal">怪談ヨロシ。アンマ。モシ、モシ。</div>
+                <br>
+                <div class = "normal">マネク、ススキ。アノ裏ニハキット墓地ガアリマス。</div>
+                <br>
+                <div class = "normal">路問エバ、オンナ唖ナリ、枯野原。</div>
+                <br>
+                <div class = "normal">よく意味のわからぬことが、いろいろ書いてある。何かのメモのつもりであろうが、僕自身にも書いた動機が、よくわからぬ。</div>
+                <br>
+                <div class = "normal">窓外、庭ノ黒土ヲバサバサ這イズリマワッテイル醜キ秋ノ蝶ヲ見ル。並ハズレテ、タクマシキガ故ニ、死ナズ在リヌル。決シテ、ハカナキ態ニハ非ズ。と書かれてある。</div>
+                <br>
+                <div class = "normal">これを書きこんだときは、私は大へん苦しかった。いつ書きこんだか、私は決して忘れない。けれども、今は言わない。</div>
+                <br>
+                <div class = "normal">捨テラレタ海。と書かれてある。</div>
+                <br>
+                <div class = "normal">秋の海水浴場に行ってみたことがありますか。なぎさに破れた絵日傘が打ち寄せられ、歓楽の跡、日の丸の提灯も捨てられ、かんざし、紙屑、レコオドの破片、牛乳の空瓶、海は薄赤く濁って、どたりどたりと浪打っていた。</div>
+                <br>
+                <div class = "normal">緒方サンニハ、子供サンガアッタネ。</div>
+                <br>
+                <div class = "normal">秋ニナルト、肌ガカワイテ、ナツカシイワネ。</div>
+                <br>
+                <div class = "normal">飛行機ハ、秋ガ一バンイイノデスヨ。</div>
+                <br>
+                <div class = "normal">これもなんだか意味がよくわからぬが、秋の会話を盗み聞きして、そのまま書きとめて置いたものらしい。</div>
+                <br>
+                <div class = "normal">また、こんなのも、ある。</div>
+                <br>
+                <div class = "normal">芸術家ハ、イツモ、弱者ノ友デアッタ筈ナノニ。</div>
+                <br>
+                <div class = "normal">ちっとも秋に関係ない、そんな言葉まで、書かれてあるが、或いはこれも、「季節の思想」といったようなわけのものかも知れない。</div>
+                <br>
+                <div class = "normal">その他、</div>
+                <br>
+                <div class = "normal">農家。絵本。秋ト兵隊。秋ノ蚕。火事。ケムリ。オ寺。</div>
+                <br>
+                <div class = "normal">ごたごた一ぱい書かれてある。</div>
 
                 </div>
-                <div id = "disqus_thread"></div>
+                <div id = "disqus_thread"></div>  
                 <!-- <div id = "container"></div>
                 <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
                 <script>
@@ -195,7 +195,7 @@
                         UPDATED AT 2019/1/5
                 </div>
             </div>
-
+            
         <div id = "shareBigBox">
             <div class = "social-share" id = "shareBox"></div>
             <i class = "fa fa-times" aria-hidden = "true" id = "shareClose"></i>
@@ -226,7 +226,7 @@
                 </div>
             </div>
         </script>
-
+        
         <script>
 
             /**
@@ -235,10 +235,10 @@
 
                     //加载 disqus
                 var disqus_config = function () {
-                    this.page.url = 'http://www.mitsuyama.top/blog/27.html';  // Replace PAGE_URL with your page's canonical URL variable
-                    this.page.identifier = 'blog27'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                    this.page.url = 'http://www.mitsuyama.top/blog/33.html';  // Replace PAGE_URL with your page's canonical URL variable
+                    this.page.identifier = 'blog33'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
                     };
-
+                    
         </script>
         <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
@@ -248,7 +248,7 @@
 
         <script src = "https://cdn.jsdelivr.net/npm/instantsearch.js@2.3/dist/instantsearch.min.js"></script>
         <script src = "../js/app.js"></script>
-
+                
         <script src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
         <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.0.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>

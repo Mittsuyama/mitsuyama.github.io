@@ -11,16 +11,17 @@
         <link rel = "stylesheet" href = "../css/home.css">
         <link rel = "stylesheet" href = "../css/blog.css">
         <link rel = "stylesheet" href = "../css/index.css">
-        <link href="https://fonts.googleapis.com/css?family=Noto+Sans+SC:300,500" rel="stylesheet">
-        <!-- <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css"> -->
+
+        <!-- Google Font -->
+        <!-- <link href="https://fonts.googleapis.com/css?family=Noto+Sans+SC:300,500" rel="stylesheet"> -->
 
         <link rel = "icon" href = "../img/icon/favicon.ico" mce_href = "../img/icon/favicon.ico" type = "image/x-icon">
         <link rel = "shortcut icon" href = "../img/icon/favicon.ico" mce_href = "../img/icon/favicon.ico" type = "image/x-icon">
-        
+
         <link rel = "stylesheet" type = "text/css" href = "../css/search.css">
-        
+
         <link rel = "stylesheet" href = "../highlight/styles/atom-one-dark.css">
-        
+
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 
         <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css">
@@ -37,7 +38,7 @@
 
         <title>应用统计学</title>
     </head>
-    
+
     <body>
         <div class = "nevigation">
                 <div class = "nevigation_content1">
@@ -45,7 +46,7 @@
                     <div class = "nav_text_home">
                         MITSUYAMA
                     </div>
-                    </a>        
+                    </a>
                 </div>
                 <div class = "navigation_content2">
                     <div class = "nav_text" id = "searchButton">
@@ -57,7 +58,7 @@
                         </div>
                     </a>
                     <div class = "nav_text">
-                        BLOG    
+                        BLOG
                     </div>
                     <a href = "https://github.com/Mittsuyama">
                         <div class = "nav_text">
@@ -66,7 +67,7 @@
                     </a>
                 </div>
             </div>
-            
+
         <div class = "imgBack"></div>
         <div class = "container-fluid" id = "blogBackground">
             <img src = "../img/blog-image/29.jpg" class = "blogTitleImg">
@@ -78,7 +79,7 @@
                 &nbspNotes | Mathematics | Economics&nbsp&nbsp|&nbsp&nbsp&nbsp肆月 11，2019
             </div>
         </div>
-        
+
         <div class = "contentListOut">
             <div class = "contentList">
                 <div class = "contentBorder">
@@ -111,7 +112,7 @@
                 </div>
             </div>
         </div>
-        
+
         <div class = "blogMainBlock">
             <div class = "articleContext">
                     <div class = "funButtonBox">
@@ -348,7 +349,7 @@ $$
 Var(X) = np(1 - p)
 $$
                 <div class = "normal">$n$ 越大，p 越接近 0.5，二项分布越趋于对称：</div>
-                <img src = "/Users/macbookpro/Documents/GItHub/mittsuyama.github.io/img/image-20190328162329380.png" class = "blogImg"><br>
+                <img src = "../img/appst/image-20190328162329380.png" class = "blogImg"><br>
                 <div class = "normal">问题：二项分布中我们需要知道所有试验的次数；或者成功或者失败的次数。可有时候我们无法知道这些。</div>
                 <div class = "h5">泊松分布&nbsp&nbspPoisson&nbsp&nbspdistribution</div>
                 <div class = "normal" style = "margin: 5px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">1.</span>一个区间上成功次数的均值为 $\lambda$</div>
@@ -411,14 +412,14 @@ $$
 $$
                 <div class = "normal">服从自由度为 $n$ 的 $\chi^2$ 分布，记为 $\chi^2 \sim \chi^2(n)$</div>
                 <div class = "normal">$\chi^2$ 分布是非负的<span class = "strong">右偏分布</span>。</div>
-                <img src = "../img/Chi-square_distributionPDF.png" class = "blogImg"><br>
+                <img src = "../img/appst/Chi-square_distributionPDF.png" class = "blogImg"><br>
                 <div class = "h4" id = "25">t&nbsp&nbsp分布</div>
                 <div class = "normal">设 $X \sim N(0, 1)$，$Y \sim \chi^2(n)$，并且 $X$ 与 $Y$ 相互独立，则：</div>
 $$
 T = \frac{X}{\sqrt{\frac{Y}{n}}} \sim t(n)
 $$
                 <div class = "normal">$T$ 服从自由度位 $n$ 的 $t​$ 的分布</div>
-                <img src = "../img/image-20190402101459256.png" class = "blogImg"><br>
+                <img src = "../img/appst/image-20190402101459256.png" class = "blogImg"><br>
                 <div class = "h4" id = "26">F&nbsp&nbsp分布</div>
                 <div class = "normal">$X \sim \chi^2(n_1)$，$Y \sim \chi^2(n_2)$，且 $X$，$Y$ 相互独立，则：</div>
 $$
@@ -428,7 +429,7 @@ $$
 $$
 F_{1 - \alpha}(n_1, n_2) = \frac{1}{F_{\alpha}(n_2, n_1)}
 $$
-                <img src = "../img/image-20190402101912475.png" class = "blogImg"><br>
+                <img src = "../img/appst/image-20190402101912475.png" class = "blogImg"><br>
                 <div class = "h2" id = "27">第六章&nbsp&nbsp参数估计</div>
                 <div class = "h3" id = "28">点估计</div>
                 <div class = "normal" style = "margin: 5px 0px 10px 0px; padding-left: 23px; text-indent: -22px;"><span style = "top: 3px; margin-right: 3px; font-size: 20px; color: #333">▪</span>&nbsp矩估计法（moment method）</div>
@@ -563,7 +564,7 @@ $$
                 <div class = "normal" style = "margin: 5px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">1.</span>单侧假设检验</div>
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">2.</span>双侧假设检验</div>
                 <div class = "normal">可能产生的错误：</div>
-                <img src = "../img/image-20190402160928829.png" class = "blogImg"><br>
+                <img src = "../img/appst/image-20190402160928829.png" class = "blogImg"><br>
                 <div class = "h3" id = "40">显著水平与临界值</div>
                 <div class = "normal">假设我们用样本均值 $\bar{x}$ 来做判断：</div>
 $$
@@ -581,7 +582,7 @@ $$
                 <div class = "normal" style = "margin: -12px 0px 10px 0px; padding-left: 26px; text-indent: -25px;"><span class = "myList" style = "color: #333">3.</span>计算 P 值（或临界值），进行判别，得出结论。</div>
 
                 </div>
-                <div id = "disqus_thread"></div>  
+                <div id = "disqus_thread"></div>
                 <!-- <div id = "container"></div>
                 <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
                 <script>
@@ -606,7 +607,7 @@ $$
                         UPDATED AT 2019/1/5
                 </div>
             </div>
-            
+
         <div id = "shareBigBox">
             <div class = "social-share" id = "shareBox"></div>
             <i class = "fa fa-times" aria-hidden = "true" id = "shareClose"></i>
@@ -637,7 +638,7 @@ $$
                 </div>
             </div>
         </script>
-        
+
         <script>
 
             /**
@@ -649,7 +650,7 @@ $$
                     this.page.url = 'http://www.mitsuyama.top/blog/29.html';  // Replace PAGE_URL with your page's canonical URL variable
                     this.page.identifier = 'blog29'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
                     };
-                    
+
         </script>
         <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
@@ -659,7 +660,7 @@ $$
 
         <script src = "https://cdn.jsdelivr.net/npm/instantsearch.js@2.3/dist/instantsearch.min.js"></script>
         <script src = "../js/app.js"></script>
-                
+
         <script src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
         <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.0.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>

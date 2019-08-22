@@ -31,14 +31,14 @@ class makeHTML:
     articleLength = 0
     isEnterList = 0
     monthName = ['壹月', '贰月', '叁月', '肆月', '伍月', '陆月', '柒月', '捌月', '玖月', '拾月', '拾壹月', '拾贰月']
-    
+
     def __init__(self):
         self.blogsFile = open('articles.html', 'w')
         path = 'md/'  #待读取的文件夹
         path_list = os.listdir(path)
         path_list.sort() #对读取的路径进行排序
         for theName in path_list:
-        self.fileName.append(os.path.join(path,theName))
+            self.fileName.append(os.path.join(path,theName))
         self.num = len(path_list)
         self.homeTemp = open('templates/newPageTest.html').read()
         self.blogTemp = open('templates/blog.html').read()
@@ -65,9 +65,9 @@ class makeHTML:
                 self.Paragraph.append(line)
             else:
                 self.Paragraph.append(line)
-        
+
         self.Paragraph[-1] += ' '
-               
+
         for i in range(0, 4):
             self.blogInfo.append(self.Paragraph[i])
 
@@ -90,9 +90,9 @@ class makeHTML:
             tempTime += self.blogTime[8:]
             tempTime += '，'
             tempTime += self.blogTime[:4]
-        
+
         self.blogTime = tempTime
-    
+
     def getInform(self, myStr):
         isStrong = False
         isItalic = False
@@ -110,13 +110,13 @@ class makeHTML:
                 spaceLen += 1
             else:
                 break
-        
+
         listMargin = '';
         if self.isEnterList == 1:
             listMargin = '-12'
         else:
             listMargin = '5'
-        
+
         if mLen > spaceLen + 2 and myStr[spaceLen : spaceLen + 2] == '- ':
             newS += '''<div class = "normal" style = "margin: %spx 0px 10px 0px; padding-left: %spx; text-indent: -22px;">''' % (listMargin, str(spaceLen * 15 + 23))
             self.isEnterList = 1
@@ -137,7 +137,7 @@ class makeHTML:
             self.isEnterList = 0
 
         isMath = 0
-        
+
         mLen = len(myStr)
         while i < mLen:
             ch = myStr[i]
@@ -202,7 +202,7 @@ class makeHTML:
             else:
                 newS += ch
             i += 1
-        
+
         strSearch = re.search(r'\[.+\]\(.+\)', newS)
         if strSearch != None:
             temp = strSearch.group()
@@ -214,7 +214,7 @@ class makeHTML:
         newS += '''</div>'''
         return newS
 
-            
+
 
     def pHtml(self, order):
         self.getTitle(order)
@@ -377,13 +377,13 @@ class makeHTML:
             if isNormal == 0:
                 self.isEnterList = 0
             i += 1
-        
+
         blogHtml = blogHtml.replace('((content))', blogContent)
         outFIle.write(blogHtml)
 
     def main(self):
         self.indexFile = open('index.html', 'w')
-        
+
         homePage = self.homeTemp
         content = ''
 
@@ -410,7 +410,7 @@ class makeHTML:
                         </div>
                     </div>
                 </a>
-        
+
                 <div class = "cuttingLine"></div>
         '''
         blogBoxs = ''
@@ -431,7 +431,7 @@ class makeHTML:
             buttonTemp = buttonTemp.replace('((brief))', self.blogBrief)
             buttonTemp = buttonTemp.replace('((number))', str(self.articleLength))
             buttonTemp = buttonTemp.replace('((tag))', str(self.blogClass))
-            
+
             #if self.num - i <= 3:
             content += buttonTemp
 
@@ -443,7 +443,7 @@ class makeHTML:
             tempBlogBox = tempBlogBox.replace('((tag))', self.blogClass)
             blogBoxs += tempBlogBox
         #end
-        
+
         self.blogs = self.blogs.replace('((allBLogs))', blogBoxs)
         homePage = homePage.replace('((articleBoxs))', content)
         self.indexFile.write(homePage)

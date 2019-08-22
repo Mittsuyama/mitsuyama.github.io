@@ -19,7 +19,7 @@ function mainFunction() {
     $('#funSearch').click(function() {
         if(isSearchBox == 0) {
             if(searchStart == 0) {
-                //search.start();   
+                //search.start();
                 searchStart = 1;
             }
             $('#searchImg').fadeIn();
@@ -28,7 +28,7 @@ function mainFunction() {
         else {
             $('#searchImg').fadeOut();
             isSearchBox = 0;
-        }        
+        }
     });
 
     $('#searchButton').click(function() {

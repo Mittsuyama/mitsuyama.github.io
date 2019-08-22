@@ -11,16 +11,17 @@
         <link rel = "stylesheet" href = "../css/home.css">
         <link rel = "stylesheet" href = "../css/blog.css">
         <link rel = "stylesheet" href = "../css/index.css">
-        <link href="https://fonts.googleapis.com/css?family=Noto+Sans+SC:300,500" rel="stylesheet">
-        <!-- <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css"> -->
+
+        <!-- Google Font -->
+        <!-- <link href="https://fonts.googleapis.com/css?family=Noto+Sans+SC:300,500" rel="stylesheet"> -->
 
         <link rel = "icon" href = "../img/icon/favicon.ico" mce_href = "../img/icon/favicon.ico" type = "image/x-icon">
         <link rel = "shortcut icon" href = "../img/icon/favicon.ico" mce_href = "../img/icon/favicon.ico" type = "image/x-icon">
-        
+
         <link rel = "stylesheet" type = "text/css" href = "../css/search.css">
-        
+
         <link rel = "stylesheet" href = "../highlight/styles/atom-one-dark.css">
-        
+
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 
         <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css">
@@ -37,7 +38,7 @@
 
         <title>日语单词复习程序</title>
     </head>
-    
+
     <body>
         <div class = "nevigation">
                 <div class = "nevigation_content1">
@@ -45,7 +46,7 @@
                     <div class = "nav_text_home">
                         MITSUYAMA
                     </div>
-                    </a>        
+                    </a>
                 </div>
                 <div class = "navigation_content2">
                     <div class = "nav_text" id = "searchButton">
@@ -57,7 +58,7 @@
                         </div>
                     </a>
                     <div class = "nav_text">
-                        BLOG    
+                        BLOG
                     </div>
                     <a href = "https://github.com/Mittsuyama">
                         <div class = "nav_text">
@@ -66,7 +67,7 @@
                     </a>
                 </div>
             </div>
-            
+
         <div class = "imgBack"></div>
         <div class = "container-fluid" id = "blogBackground">
             <img src = "../img/blog-image/31.jpg" class = "blogTitleImg">
@@ -78,7 +79,7 @@
                 &nbspJapanese | Computer | Python | GitHub&nbsp&nbsp|&nbsp&nbsp&nbsp肆月 29，2019
             </div>
         </div>
-        
+
         <div class = "contentListOut">
             <div class = "contentList">
                 <div class = "contentBorder">
@@ -90,7 +91,7 @@
                 </div>
             </div>
         </div>
-        
+
         <div class = "blogMainBlock">
             <div class = "articleContext">
                     <div class = "funButtonBox">
@@ -120,7 +121,7 @@
                 <div class = "normal">直到有一天发现了一个 Chrome 插件：<a href = "https://chrome.google.com/webstore/detail/%E8%A8%80%E8%91%89-%E3%81%AE-tab/lacmiiahoideajihiclkhmdkikkbjcnb" class = "conncetion"><i class="fa fa-paper-plane" aria-hidden="true" ></i>言葉 の Tab</a></div>
                 <div class = "quote"><i class = "fa fa-quote-left fa-1x fa-pull-left quoteIcon" aria-hidden = "true"></i>概述：A minimal Chrome / Firefox extension to help you learn Japanese words in each new tab.</div>
                 <div class = "normal">可以在 Chrome 新建 Tab 显示日语单词，敲空格显示下一个，右上角四个选项分别是 JLPT 级数、收藏此单词、查看收藏、皮肤</div>
-                <img src = "../img/kotoba.jpg" class = "blogImg"><br>
+                <img src = "../img/jpapp/kotoba.jpg" class = "blogImg"><br>
                 <div class = "normal">其实用这个就可以了，但是我希望它能实现选择不同类型词汇、显示更多单词信息（比如同音词，近义词，其他形式等）、能够记录是否记住次单词，并且更高概率显示没有记住的单词等等功能。（要求有点多）</div>
                 <div class = "normal">点击单词就能查看详细信息，然后就找到了非常贴合要求的电子词典：<a href = "https://jisho.org/" class = "conncetion"><i class="fa fa-paper-plane" aria-hidden="true" ></i>jisho.org</a></div>
                 <div class = "normal">这个网站中能通过 JLPT 等级搜词，比如搜索 <span class = "emphasis">#jlpt-n3 #adjective</span>，一页能显示 20 个单词，有单词的基本信息（平假注音、词性、基本隐私、其他形式），一次 Request 能爬 20 个单词，效率还是比较高的（两万个单词也还是要爬一会）</div>
@@ -155,10 +156,10 @@ connection.commit()                </code></pre>
                 <div class = "h2" id = "3">软件制作</div>
                 <div class = "normal">需要大概实现这些功能：空格显示单词信息，再按空格表示认识，F 表示不熟或不认识，Q 退出程序（不认识的单词权重会增加，认识的会减少，权重更大的单词更容易出现）</div>
                 <div class = "normal">为了做起来简单，选择 JLPT 等级和词性在终端中进行。</div>
-                <img src = "../img/image-20190329140112371.png" class = "blogImg"><br>
-                <img src = "../img/image-20190329140129239.png" class = "blogImg"><br>
+                <img src = "../img/jpapp/image-20190329140112371.png" class = "blogImg"><br>
+                <img src = "../img/jpapp/image-20190329140129239.png" class = "blogImg"><br>
                 <div class = "normal">用 Python 的 input 读入，获取信息后，使用 TKinter 来做 UI 界面。</div>
-                <img src = "../img/image-20190329135618187.png" class = "blogImg"><br>
+                <img src = "../img/jpapp/image-20190329135618187.png" class = "blogImg"><br>
                 <div class = "normal">需要准备：TKinter。这个 GUI 库 Python 内置，不需要再去获取。</div>
                 <div class = "normal">其中比较重要的几个点：</div>
                 <div class = "h5">如何使权重大的单词更容易出现</div>
@@ -207,7 +208,7 @@ def myCmp(self, x, y):
                 <div class = "normal">当你差不多记住某一个阶段的单词，用作复习的话，效果会非常好，用来检查哪些单词还不太熟。</div>
 
                 </div>
-                <div id = "disqus_thread"></div>  
+                <div id = "disqus_thread"></div>
                 <!-- <div id = "container"></div>
                 <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
                 <script>
@@ -232,7 +233,7 @@ def myCmp(self, x, y):
                         UPDATED AT 2019/1/5
                 </div>
             </div>
-            
+
         <div id = "shareBigBox">
             <div class = "social-share" id = "shareBox"></div>
             <i class = "fa fa-times" aria-hidden = "true" id = "shareClose"></i>
@@ -263,7 +264,7 @@ def myCmp(self, x, y):
                 </div>
             </div>
         </script>
-        
+
         <script>
 
             /**
@@ -275,7 +276,7 @@ def myCmp(self, x, y):
                     this.page.url = 'http://www.mitsuyama.top/blog/31.html';  // Replace PAGE_URL with your page's canonical URL variable
                     this.page.identifier = 'blog31'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
                     };
-                    
+
         </script>
         <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
@@ -285,7 +286,7 @@ def myCmp(self, x, y):
 
         <script src = "https://cdn.jsdelivr.net/npm/instantsearch.js@2.3/dist/instantsearch.min.js"></script>
         <script src = "../js/app.js"></script>
-                
+
         <script src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
         <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.0.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>

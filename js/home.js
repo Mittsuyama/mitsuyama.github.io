@@ -66,7 +66,7 @@ function pageLoading() {
             iterms[i].style.height = randHeight + "px";
         }
     }
- 
+
     var boxDownHeight = 110;
     var boxInterHeight = 1;
     for(var i = 0; i < boxDown.length; i++) {
