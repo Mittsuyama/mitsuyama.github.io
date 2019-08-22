@@ -17,7 +17,7 @@ $(document).ready(function() {
     var screenWidthRate = parseFloat($(document).width()) / 1920.0;
     $("body").css("zoom", screenWidthRate + "");
 
-    $(window).load(function() {
+    $(function() {
         $("#slideContainer").fadeIn();
         $("#afterSlider").fadeIn();
         $("#commingSoon").fadeIn();
@@ -60,8 +60,8 @@ $(document).ready(function() {
         });
         sliderTimer = setInterval(nextSlide, slideTime);
         
-        window.addEventListener('scroll', throttle(lazyload, 500, 1000));
-        lazyload();
+        // window.addEventListener('scroll', throttle(lazyload, 500, 1000));
+        // lazyload();
     });
 });
 
